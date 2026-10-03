@@ -1,0 +1,202 @@
+{
+  "id": "std_pirate_mirror_forest",
+  "save": "scenario_std_pirate_mirror_forest",
+  "spec": {
+    "id": "std_pirate_mirror_forest",
+    "tier": "standard",
+    "note": "Ranged vs ranged, equal points, cover available.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Shinichi Alumivein",
+      "weapon": "Doomsday rocket launcher",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51233",
+      "name": "Callie 'Grump' Proctor",
+      "weapon": "Minigun (good)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51238",
+      "name": "Mushinto Takamu",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51244",
+      "name": "Winnie Bates",
+      "weapon": "Biocoded triple rocket launcher",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51249",
+      "name": "Marie-Eve 'Dodo' Nepveu",
+      "weapon": "Biocoded triple rocket launcher (88%)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51255",
+      "name": "Ryan Wilson",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51263",
+      "name": "Yuuta Maxwell",
+      "weapon": "Minigun (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51268",
+      "name": "Erisen Irioth",
+      "weapon": "Assault rifle (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51275",
+      "name": "Sally Rhodovine",
+      "weapon": "Triple rocket launcher",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51280",
+      "name": "Velius 'Veli' Ayalp",
+      "weapon": "LMG (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51287",
+      "name": "Lenka Malikova",
+      "weapon": "Molotov cocktails",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51293",
+      "name": "Kelly 'Medic' Harnish",
+      "weapon": "Frag grenades (72%)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human51305",
+      "def": "Human",
+      "x": 246,
+      "z": 242
+    },
+    {
+      "id": "Human51311",
+      "def": "Human",
+      "x": 242,
+      "z": 246
+    },
+    {
+      "id": "Human51316",
+      "def": "Human",
+      "x": 246,
+      "z": 245
+    },
+    {
+      "id": "Human51322",
+      "def": "Human",
+      "x": 242,
+      "z": 244
+    },
+    {
+      "id": "Human51329",
+      "def": "Human",
+      "x": 240,
+      "z": 247
+    },
+    {
+      "id": "Human51336",
+      "def": "Human",
+      "x": 241,
+      "z": 247
+    },
+    {
+      "id": "Human51342",
+      "def": "Human",
+      "x": 241,
+      "z": 244
+    },
+    {
+      "id": "Human51348",
+      "def": "Human",
+      "x": 242,
+      "z": 244
+    },
+    {
+      "id": "Human51355",
+      "def": "Human",
+      "x": 246,
+      "z": 246
+    },
+    {
+      "id": "Human51363",
+      "def": "Human",
+      "x": 246,
+      "z": 245
+    },
+    {
+      "id": "Human51370",
+      "def": "Human",
+      "x": 242,
+      "z": 243
+    },
+    {
+      "id": "Human51378",
+      "def": "Human",
+      "x": 245,
+      "z": 241
+    },
+    {
+      "id": "Human51385",
+      "def": "Human",
+      "x": 243,
+      "z": 245
+    }
+  ]
+}

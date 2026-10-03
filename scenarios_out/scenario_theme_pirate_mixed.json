@@ -1,0 +1,253 @@
+{
+  "id": "theme_pirate_mixed",
+  "save": "scenario_theme_pirate_mixed",
+  "spec": {
+    "id": "theme_pirate_mixed",
+    "tier": "theme",
+    "note": "Pirate raid, no weapon class >= 50%",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Sabrina 'Mausi' Janacki",
+      "weapon": "Chain shotgun (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51236",
+      "name": "Xai Xevion",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51241",
+      "name": "Alex Tincteur",
+      "weapon": "Assault rifle (good)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Xina Kramer",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51253",
+      "name": "Rakool Murphy",
+      "weapon": "Revolver (normal 67%)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51258",
+      "name": "Jose Michael",
+      "weapon": "Steel longsword (normal 92%)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51262",
+      "name": "Ruslan McClain",
+      "weapon": "Heavy SMG (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51271",
+      "name": "Kaito Gutierrez",
+      "weapon": "LMG (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51277",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Dorian 'Dee' Nijdam",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51292",
+      "name": "Mitchell 'Mitch' Everson",
+      "weapon": "Heavy SMG (normal)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51299",
+      "name": "Jeff 'Arc' Johnson",
+      "weapon": "LMG (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51306",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Revolver (good)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51313",
+      "name": "Sienna Harris",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 127,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human56910",
+      "def": "Mercenary_Gunner",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 241,
+      "z": 140
+    },
+    {
+      "id": "Human56916",
+      "def": "Mercenary_Slasher",
+      "weapon": "Steel warhammer",
+      "class": "melee",
+      "x": 246,
+      "z": 139
+    },
+    {
+      "id": "Human56920",
+      "def": "Mercenary_Elite",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 245,
+      "z": 140
+    },
+    {
+      "id": "Human56929",
+      "def": "Mercenary_Sniper",
+      "weapon": "Sniper rifle",
+      "class": "long",
+      "x": 244,
+      "z": 145
+    },
+    {
+      "id": "Human56935",
+      "def": "PirateBoss",
+      "weapon": "assault rifle",
+      "class": "medium",
+      "x": 243,
+      "z": 143
+    },
+    {
+      "id": "Human56944",
+      "def": "Pirate",
+      "weapon": "machine pistol",
+      "class": "short",
+      "x": 247,
+      "z": 136
+    },
+    {
+      "id": "Human56949",
+      "def": "Mercenary_Elite",
+      "weapon": "hellcat rifle",
+      "class": "medium",
+      "x": 248,
+      "z": 137
+    },
+    {
+      "id": "Human56958",
+      "def": "Mercenary_Elite",
+      "weapon": "Assault rifle",
+      "class": "medium",
+      "x": 247,
+      "z": 142
+    },
+    {
+      "id": "Human56966",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 244,
+      "z": 143
+    },
+    {
+      "id": "Human56972",
+      "def": "Mercenary_Elite",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 242,
+      "z": 138
+    },
+    {
+      "id": "Human56978",
+      "def": "Mercenary_Gunner",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 247,
+      "z": 148
+    },
+    {
+      "id": "Human56984",
+      "def": "Mercenary_Heavy",
+      "weapon": "Doomsday rocket launcher",
+      "class": "explosive",
+      "x": 242,
+      "z": 137
+    },
+    {
+      "id": "Human56988",
+      "def": "Pirate",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 246,
+      "z": 150
+    },
+    {
+      "id": "Human56992",
+      "def": "Pirate",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 245,
+      "z": 144
+    }
+  ]
+}

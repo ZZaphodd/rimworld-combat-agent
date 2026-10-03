@@ -1,0 +1,320 @@
+{
+  "id": "fort_tribe_rush",
+  "save": "scenario_fort_tribe_rush",
+  "spec": {
+    "id": "fort_tribe_rush",
+    "tier": "fort",
+    "note": "A/B with std_tribe_rush_open: same matchup, walled compound with one east choke.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1000,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51406",
+      "name": "Joshua Marjot",
+      "weapon": "Sniper rifle (normal)",
+      "x": 116,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51413",
+      "name": "Henry Hopkins",
+      "weapon": "LMG (poor)",
+      "x": 118,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51421",
+      "name": "Dmitry Gallagher",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 120,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51427",
+      "name": "John Salamon",
+      "weapon": "LMG (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51434",
+      "name": "Vernest 'Vern' Girvin",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51456",
+      "name": "Raymond 'Raywolfen' Wolfen",
+      "weapon": "Slate club (55%)",
+      "x": 116,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51461",
+      "name": "Orion 'Chops' Fritz",
+      "weapon": "Biocoded sniper rifle (normal 73%)",
+      "x": 118,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51467",
+      "name": "Willow Xanate",
+      "weapon": "Sniper rifle (normal)",
+      "x": 120,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51475",
+      "name": "Valery Vazquez",
+      "weapon": "Machine pistol (normal)",
+      "x": 122,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51481",
+      "name": "Kayley Mason",
+      "weapon": "Biocoded heavy SMG (poor)",
+      "x": 124,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51488",
+      "name": "Woog 'Gomp' Wowoub",
+      "weapon": "Machine pistol (good)",
+      "x": 116,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human51500",
+      "def": "Human",
+      "x": 48,
+      "z": 3
+    },
+    {
+      "id": "Human51504",
+      "def": "Human",
+      "x": 47,
+      "z": 6
+    },
+    {
+      "id": "Human51507",
+      "def": "Human",
+      "x": 49,
+      "z": 7
+    },
+    {
+      "id": "Human51511",
+      "def": "Human",
+      "x": 54,
+      "z": 7
+    },
+    {
+      "id": "Human51514",
+      "def": "Human",
+      "x": 58,
+      "z": 4
+    },
+    {
+      "id": "Human51518",
+      "def": "Human",
+      "x": 54,
+      "z": 5
+    },
+    {
+      "id": "Human51521",
+      "def": "Human",
+      "x": 50,
+      "z": 5
+    },
+    {
+      "id": "Human51525",
+      "def": "Human",
+      "x": 44,
+      "z": 4
+    },
+    {
+      "id": "Human51530",
+      "def": "Human",
+      "x": 48,
+      "z": 7
+    },
+    {
+      "id": "Human51535",
+      "def": "Human",
+      "x": 57,
+      "z": 5
+    },
+    {
+      "id": "Human51539",
+      "def": "Human",
+      "x": 49,
+      "z": 3
+    },
+    {
+      "id": "Human51543",
+      "def": "Human",
+      "x": 57,
+      "z": 5
+    },
+    {
+      "id": "Human51546",
+      "def": "Human",
+      "x": 48,
+      "z": 7
+    },
+    {
+      "id": "Human51561",
+      "def": "Human",
+      "x": 56,
+      "z": 4
+    },
+    {
+      "id": "Human51565",
+      "def": "Human",
+      "x": 52,
+      "z": 11
+    },
+    {
+      "id": "Human51569",
+      "def": "Human",
+      "x": 51,
+      "z": 7
+    },
+    {
+      "id": "Human51573",
+      "def": "Human",
+      "x": 55,
+      "z": 6
+    },
+    {
+      "id": "Human51577",
+      "def": "Human",
+      "x": 58,
+      "z": 4
+    },
+    {
+      "id": "Human51582",
+      "def": "Human",
+      "x": 48,
+      "z": 6
+    },
+    {
+      "id": "Human51585",
+      "def": "Human",
+      "x": 49,
+      "z": 7
+    },
+    {
+      "id": "Human51588",
+      "def": "Human",
+      "x": 50,
+      "z": 5
+    },
+    {
+      "id": "Human51592",
+      "def": "Human",
+      "x": 58,
+      "z": 4
+    },
+    {
+      "id": "Human51596",
+      "def": "Human",
+      "x": 49,
+      "z": 4
+    },
+    {
+      "id": "Human51599",
+      "def": "Human",
+      "x": 56,
+      "z": 4
+    },
+    {
+      "id": "Human51603",
+      "def": "Human",
+      "x": 53,
+      "z": 4
+    },
+    {
+      "id": "Human51608",
+      "def": "Human",
+      "x": 57,
+      "z": 8
+    },
+    {
+      "id": "Human51552",
+      "def": "Human",
+      "x": 45,
+      "z": 5
+    },
+    {
+      "id": "Human51617",
+      "def": "Human",
+      "x": 48,
+      "z": 6
+    },
+    {
+      "id": "Human51621",
+      "def": "Human",
+      "x": 50,
+      "z": 9
+    },
+    {
+      "id": "Human51625",
+      "def": "Human",
+      "x": 54,
+      "z": 6
+    },
+    {
+      "id": "Human51628",
+      "def": "Human",
+      "x": 43,
+      "z": 6
+    },
+    {
+      "id": "Human51632",
+      "def": "Human",
+      "x": 58,
+      "z": 4
+    },
+    {
+      "id": "Human51637",
+      "def": "Human",
+      "x": 48,
+      "z": 3
+    },
+    {
+      "id": "Human51641",
+      "def": "Human",
+      "x": 46,
+      "z": 4
+    }
+  ]
+}

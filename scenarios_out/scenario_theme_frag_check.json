@@ -1,0 +1,182 @@
+{
+  "id": "theme_frag_check",
+  "save": "scenario_theme_frag_check",
+  "spec": {
+    "id": "theme_frag_check",
+    "tier": "check",
+    "note": "Reflex check: 5 Grenadier_Destructive (4 with frag grenades) spawned ~27 cells east of the theme squad (debug Spawn Pawn, no raid lord: no fleeing/satisfied message).",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "method": "spawn_pawn",
+      "kind": "Grenadier_Destructive",
+      "count": 5,
+      "distance": 27,
+      "min_frag_share": 0.6
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Sabrina 'Mausi' Janacki",
+      "weapon": "Chain shotgun (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51236",
+      "name": "Xai Xevion",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51241",
+      "name": "Alex Tincteur",
+      "weapon": "Assault rifle (good)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Xina Kramer",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51253",
+      "name": "Rakool Murphy",
+      "weapon": "Revolver (normal 67%)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51258",
+      "name": "Jose Michael",
+      "weapon": "Steel longsword (normal 92%)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51262",
+      "name": "Ruslan McClain",
+      "weapon": "Heavy SMG (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51271",
+      "name": "Kaito Gutierrez",
+      "weapon": "LMG (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51277",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Dorian 'Dee' Nijdam",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51292",
+      "name": "Mitchell 'Mitch' Everson",
+      "weapon": "Heavy SMG (normal)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51299",
+      "name": "Jeff 'Arc' Johnson",
+      "weapon": "LMG (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51306",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Revolver (good)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51313",
+      "name": "Sienna Harris",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 127,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human56910",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 152,
+      "z": 117
+    },
+    {
+      "id": "Human56918",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 152,
+      "z": 120
+    },
+    {
+      "id": "Human56923",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 152,
+      "z": 123
+    },
+    {
+      "id": "Human56926",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 152,
+      "z": 126
+    },
+    {
+      "id": "Human56932",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 152,
+      "z": 129
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "id": "fort_mechs_mid",
+  "save": "scenario_fort_mechs_mid",
+  "spec": {
+    "id": "fort_mechs_mid",
+    "tier": "fort",
+    "note": "A/B with hard_mechs_mid_open.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 2000,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 4000,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51406",
+      "name": "Yiyang 'Mitsuya' Jiang",
+      "weapon": "Heavy SMG (good)",
+      "x": 116,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51414",
+      "name": "Unkow 'Schlitzer' Manus",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 118,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51421",
+      "name": "Lev Arias",
+      "weapon": "Steel longsword (normal)",
+      "x": 120,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51425",
+      "name": "Toby 'Sir' Pittman",
+      "weapon": "Steel axe (good 75%)",
+      "x": 122,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51432",
+      "name": "Byoungsu Jang",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51440",
+      "name": "Chantal Olsen",
+      "weapon": "Hellcat rifle (normal)",
+      "x": 116,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51446",
+      "name": "Cristina Cook",
+      "weapon": "Assault rifle (normal)",
+      "x": 118,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51455",
+      "name": "Naoki McCoy",
+      "weapon": "Wooden warhammer (normal)",
+      "x": 120,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51460",
+      "name": "Ryoko 'Onesan' Minese",
+      "weapon": "Steel knife (poor 50%)",
+      "x": 122,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51465",
+      "name": "Matthew 'Matt' McGough",
+      "weapon": "Biocoded bolt-action rifle (normal)",
+      "x": 124,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51471",
+      "name": "Rose Webster",
+      "weapon": "Chain shotgun (normal)",
+      "x": 116,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51487",
+      "name": "Alenka Backer",
+      "weapon": "Machine pistol (poor 83%)",
+      "x": 118,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51493",
+      "name": "Wanda Deleon",
+      "weapon": "Sniper rifle (normal)",
+      "x": 120,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51500",
+      "name": "Kyle Harris",
+      "weapon": "Sniper rifle (poor)",
+      "x": 122,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51506",
+      "name": "Freja Ulfwin",
+      "weapon": "Steel knife (poor 25%)",
+      "x": 124,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51510",
+      "name": "Tobias Delacruz",
+      "weapon": "Biocoded assault rifle (normal)",
+      "x": 116,
+      "z": 119,
+      "health": 100
+    },
+    {
+      "id": "Human51518",
+      "name": "Greg Tetradrite",
+      "weapon": "Biocoded minigun (poor)",
+      "x": 118,
+      "z": 119,
+      "health": 100
+    },
+    {
+      "id": "Human51523",
+      "name": "Robert 'Robin' Weber",
+      "weapon": "Smoke launcher",
+      "x": 120,
+      "z": 119,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Termite51536",
+      "def": "Mech_Termite",
+      "x": 76,
+      "z": 244
+    },
+    {
+      "id": "Mech_Pikeman51538",
+      "def": "Mech_Pikeman",
+      "x": 71,
+      "z": 243
+    },
+    {
+      "id": "Mech_CentipedeBlaster51540",
+      "def": "Mech_CentipedeBlaster",
+      "x": 72,
+      "z": 247
+    },
+    {
+      "id": "Mech_CentipedeBlaster51542",
+      "def": "Mech_CentipedeBlaster",
+      "x": 73,
+      "z": 246
+    },
+    {
+      "id": "Mech_CentipedeBlaster51544",
+      "def": "Mech_CentipedeBlaster",
+      "x": 74,
+      "z": 244
+    },
+    {
+      "id": "Mech_CentipedeBlaster51546",
+      "def": "Mech_CentipedeBlaster",
+      "x": 73,
+      "z": 246
+    },
+    {
+      "id": "Mech_Pikeman51548",
+      "def": "Mech_Pikeman",
+      "x": 74,
+      "z": 243
+    },
+    {
+      "id": "Mech_Scyther51550",
+      "def": "Mech_Scyther",
+      "x": 76,
+      "z": 248
+    },
+    {
+      "id": "Mech_Termite51551",
+      "def": "Mech_Termite",
+      "x": 73,
+      "z": 241
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "id": "theme_pirate_melee",
+  "save": "scenario_theme_pirate_melee",
+  "spec": {
+    "id": "theme_pirate_melee",
+    "tier": "theme",
+    "note": "Pirate raid, >=60% melee",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Sabrina 'Mausi' Janacki",
+      "weapon": "Chain shotgun (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51236",
+      "name": "Xai Xevion",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51241",
+      "name": "Alex Tincteur",
+      "weapon": "Assault rifle (good)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Xina Kramer",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51253",
+      "name": "Rakool Murphy",
+      "weapon": "Revolver (normal 67%)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51258",
+      "name": "Jose Michael",
+      "weapon": "Steel longsword (normal 92%)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51262",
+      "name": "Ruslan McClain",
+      "weapon": "Heavy SMG (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51271",
+      "name": "Kaito Gutierrez",
+      "weapon": "LMG (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51277",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Dorian 'Dee' Nijdam",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51292",
+      "name": "Mitchell 'Mitch' Everson",
+      "weapon": "Heavy SMG (normal)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51299",
+      "name": "Jeff 'Arc' Johnson",
+      "weapon": "LMG (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51306",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Revolver (good)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51313",
+      "name": "Sienna Harris",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 127,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human56910",
+      "def": "PirateBoss",
+      "weapon": "Hellcat rifle",
+      "class": "medium",
+      "x": 76,
+      "z": 245
+    },
+    {
+      "id": "Human56917",
+      "def": "Mercenary_Slasher",
+      "weapon": "Wooden warhammer",
+      "class": "melee",
+      "x": 75,
+      "z": 243
+    },
+    {
+      "id": "Human56922",
+      "def": "Mercenary_Slasher",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 76,
+      "z": 242
+    },
+    {
+      "id": "Human56929",
+      "def": "Mercenary_Slasher",
+      "weapon": "Steel longsword",
+      "class": "melee",
+      "x": 70,
+      "z": 241
+    },
+    {
+      "id": "Human56934",
+      "def": "Mercenary_Slasher",
+      "weapon": "Wooden warhammer",
+      "class": "melee",
+      "x": 77,
+      "z": 243
+    },
+    {
+      "id": "Human56939",
+      "def": "Thrasher",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 75,
+      "z": 243
+    },
+    {
+      "id": "Human56945",
+      "def": "Mercenary_Slasher",
+      "weapon": "Steel axe",
+      "class": "melee",
+      "x": 79,
+      "z": 246
+    },
+    {
+      "id": "Human56949",
+      "def": "Mercenary_Slasher",
+      "weapon": "Steel gladius",
+      "class": "melee",
+      "x": 75,
+      "z": 249
+    },
+    {
+      "id": "Human56956",
+      "def": "Mercenary_Slasher",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 79,
+      "z": 246
+    },
+    {
+      "id": "Human56961",
+      "def": "Thrasher",
+      "weapon": "Steel mace",
+      "class": "melee",
+      "x": 75,
+      "z": 240
+    },
+    {
+      "id": "Human56966",
+      "def": "Thrasher",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 77,
+      "z": 241
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+[
+  {
+    "id": "smoke_pirates_vs_savage_open",
+    "tier": "smoke",
+    "note": "Regression check: even doing nothing should win.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1000,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeSavage",
+      "points": 400,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "std_pirate_mirror_forest",
+    "tier": "standard",
+    "note": "Ranged vs ranged, equal points, cover available.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "std_tribe_rush_open",
+    "tier": "standard",
+    "note": "Mass tribal ARCHER raid in the open, not a melee horde (the id is historical): the built save has 32 raiders, 27 bows/greatbows + 5 pila throwers, 0 melee. A ranged standoff where a 10-pawn squad is outnumbered ~3:1.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1000,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "std_outlander_smart_forest",
+    "tier": "standard",
+    "note": "Smart attackers that use cover and flank.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "strategy": "ImmediateAttackSmart",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "std_pirates_centerdrop_open",
+    "tier": "standard",
+    "note": "Drop pods land on top of the squad: no approach phase.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1200,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "CenterDrop"
+    }
+  },
+  {
+    "id": "std_yttakin_groups_forest",
+    "tier": "standard",
+    "note": "Several groups from different edges: split attention, xenotype melee.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 1800,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkInGroups"
+    }
+  },
+  {
+    "id": "hard_mechs_mid_open",
+    "tier": "hard",
+    "note": "Mid-size mech raid in the open: no cover for either side.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 2000,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 4000,
+      "method": "faction"
+    }
+  },
+  {
+    "id": "hard_pirates_vs_mechs_forest",
+    "tier": "hard",
+    "note": "Large mech raid; survival and damage limitation.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 2000,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 6000,
+      "method": "faction"
+    }
+  },
+  {
+    "id": "fort_tribe_rush",
+    "tier": "fort",
+    "note": "A/B with std_tribe_rush_open, walled compound with one east choke. The built raid is 34 tribal archers (33 bows/greatbows + 1 pila, 0 melee), not a melee horde: tests whether walls beat massed bow fire.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1000,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "fort_pirate_mirror",
+    "tier": "fort",
+    "note": "Ranged mirror defending the fort.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "fort_mechs_mid",
+    "tier": "fort",
+    "note": "A/B with hard_mechs_mid_open.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 2000,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 4000,
+      "method": "faction"
+    }
+  },
+  {
+    "id": "fort_centerdrop",
+    "tier": "fort",
+    "note": "Counter-case: pods land inside the walls, the choke is useless.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1200,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "CenterDrop"
+    }
+  },
+  {
+    "id": "theme_pirate_mixed",
+    "tier": "theme",
+    "note": "Pirate raid, no weapon class >= 50%",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "theme_pirate_melee",
+    "tier": "theme",
+    "note": "Pirate raid, >=60% melee",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "theme_pirate_grenadier",
+    "tier": "theme",
+    "note": "Pirate raid, >=60% explosive weapons (grenades, launchers)",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "theme_pirate_sniper",
+    "tier": "theme",
+    "note": "Pirate raid, >=60% long-range weapons (snipers)",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "theme_tribal_archers",
+    "tier": "theme",
+    "note": "Tribal raid, >=60% bows/greatbows",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeSavage",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "theme_tribal_melee",
+    "tier": "theme",
+    "note": "Tribal raid, >=70% melee",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeSavage",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "theme_mechs",
+    "tier": "theme",
+    "note": "Mechanoid raid (game-chosen strategy/arrival), must pass the assault check",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1500,
+      "method": "faction"
+    }
+  },
+  {
+    "id": "theme_frag_check",
+    "tier": "check",
+    "note": "Reflex check: 5 Grenadier_Destructive (4 with frag grenades) spawned ~27 cells east of the theme squad (debug Spawn Pawn, no raid lord: no fleeing/satisfied message).",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "method": "spawn_pawn",
+      "kind": "Grenadier_Destructive",
+      "count": 5,
+      "distance": 27,
+      "min_frag_share": 0.6
+    }
+  }
+]

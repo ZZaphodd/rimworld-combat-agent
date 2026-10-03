@@ -1,0 +1,204 @@
+{
+  "id": "theme_mechs",
+  "save": "scenario_theme_mechs",
+  "spec": {
+    "id": "theme_mechs",
+    "tier": "theme",
+    "note": "Mechanoid raid (game-chosen strategy/arrival), must pass the assault check",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Sabrina 'Mausi' Janacki",
+      "weapon": "Chain shotgun (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51236",
+      "name": "Xai Xevion",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51241",
+      "name": "Alex Tincteur",
+      "weapon": "Assault rifle (good)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Xina Kramer",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51253",
+      "name": "Rakool Murphy",
+      "weapon": "Revolver (normal 67%)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51258",
+      "name": "Jose Michael",
+      "weapon": "Steel longsword (normal 92%)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51262",
+      "name": "Ruslan McClain",
+      "weapon": "Heavy SMG (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51271",
+      "name": "Kaito Gutierrez",
+      "weapon": "LMG (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51277",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Dorian 'Dee' Nijdam",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51292",
+      "name": "Mitchell 'Mitch' Everson",
+      "weapon": "Heavy SMG (normal)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51299",
+      "name": "Jeff 'Arc' Johnson",
+      "weapon": "LMG (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51306",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Revolver (good)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51313",
+      "name": "Sienna Harris",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 127,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Termite56910",
+      "def": "Mech_Termite_Breach",
+      "weapon": "Thump cannon",
+      "class": "explosive",
+      "x": 247,
+      "z": 19
+    },
+    {
+      "id": "Mech_Pikeman56912",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 248,
+      "z": 10
+    },
+    {
+      "id": "Mech_Scyther56914",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 245,
+      "z": 11
+    },
+    {
+      "id": "Mech_Scyther56915",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 245,
+      "z": 12
+    },
+    {
+      "id": "Mech_Scyther56916",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 246,
+      "z": 17
+    },
+    {
+      "id": "Mech_Pikeman56917",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 249,
+      "z": 5
+    },
+    {
+      "id": "Mech_Pikeman56919",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 246,
+      "z": 18
+    },
+    {
+      "id": "Mech_Pikeman56921",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 245,
+      "z": 19
+    }
+  ]
+}

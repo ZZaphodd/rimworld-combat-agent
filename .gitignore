@@ -1,0 +1,9 @@
+__pycache__/
+.DS_Store
+# run logs and batch markers are environment-specific
+results/*.log
+results/*.done
+results/*.errors.jsonl
+*.log
+# personal colony saves never enter the repo (WORKFLOW.md); only saves/*.rws.gz are versioned
+*.rws

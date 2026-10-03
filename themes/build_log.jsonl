@@ -1,0 +1,7 @@
+{"theme": "pirate_mixed", "accepted_at_attempt": 1, "faction": "Pirate", "points": 1500, "size": 14, "group_attempts": 39, "tried": {"Pirate": 38}}
+{"theme": "pirate_melee", "accepted_at_attempt": 4, "faction": "Pirate", "points": 1500, "size": 11, "group_attempts": 39, "tried": {"Pirate": 38}}
+{"theme": "pirate_grenadier", "accepted_at_attempt": 26, "faction": "Pirate", "points": 1500, "size": 13, "group_attempts": 39, "tried": {"Pirate": 38}}
+{"theme": "pirate_sniper", "accepted_at_attempt": 38, "faction": "Pirate", "points": 1500, "size": 13, "group_attempts": 39, "tried": {"Pirate": 38}}
+{"theme": "tribal_archers", "accepted_at_attempt": 2, "faction": "TribeSavage", "points": 1500, "size": 26, "group_attempts": 7, "tried": {"TribeRough": 3, "TribeSavage": 3}}
+{"theme": "tribal_melee", "accepted_at_attempt": 6, "faction": "TribeSavage", "points": 1500, "size": 27, "group_attempts": 7, "tried": {"TribeRough": 3, "TribeSavage": 3}}
+{"theme": "mechs", "accepted_at_attempt": 1, "faction": "Mechanoid", "points": 1500, "size": 8, "group_attempts": 2, "tried": {"Mechanoid": 1}}

@@ -1,0 +1,300 @@
+{
+  "id": "std_tribe_rush_open",
+  "save": "scenario_std_tribe_rush_open",
+  "spec": {
+    "id": "std_tribe_rush_open",
+    "tier": "standard",
+    "note": "Melee horde charging across open ground: kiting and focus fire.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1000,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human47536",
+      "name": "Kryss 'Krystal' Storm",
+      "weapon": "Sniper rifle (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47543",
+      "name": "Gerald 'Freckles' Lester",
+      "weapon": "Biocoded revolver (poor 51%)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47548",
+      "name": "Lenka Malikova",
+      "weapon": "Biocoded bolt-action rifle (normal 93%)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47554",
+      "name": "Kumiko Garrett",
+      "weapon": "Sniper rifle (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47562",
+      "name": "Ryan 'Noob' Torrijos",
+      "weapon": "Sniper rifle (good)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47568",
+      "name": "Shakla Radornah",
+      "weapon": "Sniper rifle (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47574",
+      "name": "Meredith 'Latch' Abernathy",
+      "weapon": "Sniper rifle (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47582",
+      "name": "Ida Painstingle",
+      "weapon": "Chain shotgun (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47585",
+      "name": "Kena Réveil",
+      "weapon": "Revolver (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47591",
+      "name": "Lawrence 'Scuncer' Wagemann",
+      "weapon": "Bolt-action rifle (normal 87%)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human47617",
+      "def": "Human",
+      "x": 226,
+      "z": 242
+    },
+    {
+      "id": "Human47621",
+      "def": "Human",
+      "x": 210,
+      "z": 246
+    },
+    {
+      "id": "Human47626",
+      "def": "Human",
+      "x": 213,
+      "z": 243
+    },
+    {
+      "id": "Human47631",
+      "def": "Human",
+      "x": 219,
+      "z": 239
+    },
+    {
+      "id": "Human47636",
+      "def": "Human",
+      "x": 217,
+      "z": 246
+    },
+    {
+      "id": "Human47639",
+      "def": "Human",
+      "x": 213,
+      "z": 245
+    },
+    {
+      "id": "Human47644",
+      "def": "Human",
+      "x": 221,
+      "z": 244
+    },
+    {
+      "id": "Human47648",
+      "def": "Human",
+      "x": 225,
+      "z": 245
+    },
+    {
+      "id": "Human47652",
+      "def": "Human",
+      "x": 213,
+      "z": 242
+    },
+    {
+      "id": "Human47655",
+      "def": "Human",
+      "x": 213,
+      "z": 242
+    },
+    {
+      "id": "Human47659",
+      "def": "Human",
+      "x": 222,
+      "z": 241
+    },
+    {
+      "id": "Human47662",
+      "def": "Human",
+      "x": 213,
+      "z": 245
+    },
+    {
+      "id": "Human47667",
+      "def": "Human",
+      "x": 215,
+      "z": 242
+    },
+    {
+      "id": "Human47672",
+      "def": "Human",
+      "x": 225,
+      "z": 245
+    },
+    {
+      "id": "Human47676",
+      "def": "Human",
+      "x": 224,
+      "z": 246
+    },
+    {
+      "id": "Human47681",
+      "def": "Human",
+      "x": 225,
+      "z": 246
+    },
+    {
+      "id": "Human47686",
+      "def": "Human",
+      "x": 211,
+      "z": 246
+    },
+    {
+      "id": "Human47689",
+      "def": "Human",
+      "x": 223,
+      "z": 242
+    },
+    {
+      "id": "Human47693",
+      "def": "Human",
+      "x": 221,
+      "z": 243
+    },
+    {
+      "id": "Human47697",
+      "def": "Human",
+      "x": 225,
+      "z": 246
+    },
+    {
+      "id": "Human47701",
+      "def": "Human",
+      "x": 224,
+      "z": 241
+    },
+    {
+      "id": "Human47706",
+      "def": "Human",
+      "x": 222,
+      "z": 244
+    },
+    {
+      "id": "Human47710",
+      "def": "Human",
+      "x": 212,
+      "z": 241
+    },
+    {
+      "id": "Human47715",
+      "def": "Human",
+      "x": 226,
+      "z": 246
+    },
+    {
+      "id": "Human47719",
+      "def": "Human",
+      "x": 220,
+      "z": 242
+    },
+    {
+      "id": "Human47724",
+      "def": "Human",
+      "x": 213,
+      "z": 242
+    },
+    {
+      "id": "Human47728",
+      "def": "Human",
+      "x": 218,
+      "z": 241
+    },
+    {
+      "id": "Human47732",
+      "def": "Human",
+      "x": 213,
+      "z": 243
+    },
+    {
+      "id": "Human47736",
+      "def": "Human",
+      "x": 225,
+      "z": 242
+    },
+    {
+      "id": "Human47740",
+      "def": "Human",
+      "x": 213,
+      "z": 244
+    },
+    {
+      "id": "Human47745",
+      "def": "Human",
+      "x": 225,
+      "z": 245
+    },
+    {
+      "id": "Human47749",
+      "def": "Human",
+      "x": 225,
+      "z": 246
+    }
+  ]
+}

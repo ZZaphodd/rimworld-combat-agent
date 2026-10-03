@@ -1,0 +1,144 @@
+{
+  "id": "fort_centerdrop",
+  "save": "scenario_fort_centerdrop",
+  "spec": {
+    "id": "fort_centerdrop",
+    "tier": "fort",
+    "note": "Counter-case: pods land inside the walls, the choke is useless.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1200,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "CenterDrop"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51406",
+      "name": "Sjoerd 'Bowman' Lukas",
+      "weapon": "Biocoded sniper rifle (normal)",
+      "x": 127,
+      "z": 124,
+      "health": 100
+    },
+    {
+      "id": "Human51413",
+      "name": "Sirota Nice",
+      "weapon": "Sniper rifle (good)",
+      "x": 123,
+      "z": 127,
+      "health": 100
+    },
+    {
+      "id": "Human51419",
+      "name": "John 'Blitz' Kriegsler",
+      "weapon": "Sniper rifle (normal)",
+      "x": 113,
+      "z": 116,
+      "health": 100
+    },
+    {
+      "id": "Human51427",
+      "name": "Rozsonaz Hakvin",
+      "weapon": "Biocoded sniper rifle (normal 92%)",
+      "x": 117,
+      "z": 118,
+      "health": 100
+    },
+    {
+      "id": "Human51436",
+      "name": "Ivo Leonard",
+      "weapon": "Sniper rifle (good)",
+      "x": 136,
+      "z": 124,
+      "health": 100
+    },
+    {
+      "id": "Human51443",
+      "name": "Jenniferium 'Jenni' Chenni",
+      "weapon": "Biocoded sniper rifle (normal)",
+      "x": 113,
+      "z": 114,
+      "health": 100
+    },
+    {
+      "id": "Human51449",
+      "name": "Sera 'Kaleun' Steiner",
+      "weapon": "Sniper rifle (poor)",
+      "x": 118,
+      "z": 126,
+      "health": 100
+    },
+    {
+      "id": "Human51456",
+      "name": "Maria Jennings",
+      "weapon": "Biocoded sniper rifle (normal)",
+      "x": 120,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51462",
+      "name": "Durwoen Wushya",
+      "weapon": "Sniper rifle (normal)",
+      "x": 133,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51468",
+      "name": "Levia Draconia",
+      "weapon": "Sniper rifle (normal)",
+      "x": 133,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human51480",
+      "def": "Human",
+      "x": 129,
+      "z": 132
+    },
+    {
+      "id": "Human51496",
+      "def": "Human",
+      "x": 129,
+      "z": 131
+    },
+    {
+      "id": "Human51502",
+      "def": "Human",
+      "x": 123,
+      "z": 130
+    },
+    {
+      "id": "Human51491",
+      "def": "Human",
+      "x": 128,
+      "z": 127
+    },
+    {
+      "id": "Human51508",
+      "def": "Human",
+      "x": 123,
+      "z": 136
+    },
+    {
+      "id": "Human51485",
+      "def": "Human",
+      "x": 125,
+      "z": 130
+    }
+  ]
+}

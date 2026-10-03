@@ -1,0 +1,198 @@
+{
+  "id": "std_yttakin_groups_forest",
+  "save": "scenario_std_yttakin_groups_forest",
+  "spec": {
+    "id": "std_yttakin_groups_forest",
+    "tier": "standard",
+    "note": "Several groups from different edges: split attention, xenotype melee.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 1800,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkInGroups"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Dovnaz Thenav",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51235",
+      "name": "Vlad Crosby",
+      "weapon": "Biocoded sniper rifle (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51241",
+      "name": "Tomoko Friedman",
+      "weapon": "Autopistol (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Sjoerd 'Bowman' Lukas",
+      "weapon": "Incinerator",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51256",
+      "name": "Gerasim Calderon",
+      "weapon": "LMG (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51264",
+      "name": "Gideon Coleman",
+      "weapon": "Biocoded doomsday rocket launcher",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51270",
+      "name": "Benjamin Jallet",
+      "weapon": "Revolver (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51277",
+      "name": "Foceizz Zeich",
+      "weapon": "Incendiary launcher (poor 89%)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Ryan 'Noob' Torrijos",
+      "weapon": "Chain shotgun (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51291",
+      "name": "Gabby Yu",
+      "weapon": "Doomsday rocket launcher",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51295",
+      "name": "Robert 'Gnugfur' Krondorfer",
+      "weapon": "LMG (normal)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51300",
+      "name": "Jesse Collier",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51308",
+      "name": "Kyle Harris",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human51318",
+      "def": "Human",
+      "x": 51,
+      "z": 4
+    },
+    {
+      "id": "Warg51325",
+      "def": "Warg",
+      "x": 49,
+      "z": 9
+    },
+    {
+      "id": "Human51332",
+      "def": "Human",
+      "x": 36,
+      "z": 3
+    },
+    {
+      "id": "Human51347",
+      "def": "Human",
+      "x": 45,
+      "z": 5
+    },
+    {
+      "id": "Human51354",
+      "def": "Human",
+      "x": 49,
+      "z": 4
+    },
+    {
+      "id": "Human51322",
+      "def": "Human",
+      "x": 19,
+      "z": 244
+    },
+    {
+      "id": "Human51326",
+      "def": "Human",
+      "x": 16,
+      "z": 247
+    },
+    {
+      "id": "Warg51337",
+      "def": "Warg",
+      "x": 9,
+      "z": 241
+    },
+    {
+      "id": "Human51338",
+      "def": "Human",
+      "x": 11,
+      "z": 245
+    },
+    {
+      "id": "Warg51350",
+      "def": "Warg",
+      "x": 16,
+      "z": 242
+    },
+    {
+      "id": "Human51351",
+      "def": "Human",
+      "x": 15,
+      "z": 243
+    }
+  ]
+}

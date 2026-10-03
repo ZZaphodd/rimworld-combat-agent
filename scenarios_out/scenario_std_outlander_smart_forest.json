@@ -1,0 +1,202 @@
+{
+  "id": "std_outlander_smart_forest",
+  "save": "scenario_std_outlander_smart_forest",
+  "spec": {
+    "id": "std_outlander_smart_forest",
+    "tier": "standard",
+    "note": "Smart attackers that use cover and flank.",
+    "arena": "arena_forest",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "strategy": "ImmediateAttackSmart",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Holly 'Kit' Kettu",
+      "weapon": "Biocoded heavy SMG (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51234",
+      "name": "William Cochran",
+      "weapon": "Hellcat rifle (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51240",
+      "name": "Valentina Malone",
+      "weapon": "Heavy SMG (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Romartha 'Blythe' Dacasin",
+      "weapon": "Molotov cocktails (84%)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51253",
+      "name": "Poiow 'Prickle' Pigmoilogg",
+      "weapon": "Triple rocket launcher",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51257",
+      "name": "Narda 'Jumper' Roth",
+      "weapon": "Minigun (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51262",
+      "name": "Yancey Stafford",
+      "weapon": "Assault rifle (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51268",
+      "name": "Whitney Werner",
+      "weapon": "Biocoded hellcat rifle (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51276",
+      "name": "Jenniferium 'Jenni' Chenni",
+      "weapon": "Biocoded heavy SMG (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Laura Freeman",
+      "weapon": "LMG (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51292",
+      "name": "Metroa Hermerez",
+      "weapon": "Molotov cocktails",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51297",
+      "name": "Ryoko 'Onesan' Minese",
+      "weapon": "Wooden mace (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human51340",
+      "def": "Human",
+      "x": 248,
+      "z": 184
+    },
+    {
+      "id": "Human51348",
+      "def": "Human",
+      "x": 243,
+      "z": 165
+    },
+    {
+      "id": "Human51362",
+      "def": "Human",
+      "x": 241,
+      "z": 165
+    },
+    {
+      "id": "Human51368",
+      "def": "Human",
+      "x": 242,
+      "z": 173
+    },
+    {
+      "id": "Human51372",
+      "def": "Human",
+      "x": 245,
+      "z": 177
+    },
+    {
+      "id": "Human51380",
+      "def": "Human",
+      "x": 246,
+      "z": 166
+    },
+    {
+      "id": "Human51389",
+      "def": "Human",
+      "x": 247,
+      "z": 182
+    },
+    {
+      "id": "Human51397",
+      "def": "Human",
+      "x": 246,
+      "z": 163
+    },
+    {
+      "id": "Human51406",
+      "def": "Human",
+      "x": 243,
+      "z": 165
+    },
+    {
+      "id": "Human51412",
+      "def": "Human",
+      "x": 242,
+      "z": 177
+    },
+    {
+      "id": "Human51419",
+      "def": "Human",
+      "x": 246,
+      "z": 182
+    },
+    {
+      "id": "Human51426",
+      "def": "Human",
+      "x": 245,
+      "z": 179
+    },
+    {
+      "id": "Human51432",
+      "def": "Human",
+      "x": 246,
+      "z": 163
+    }
+  ]
+}

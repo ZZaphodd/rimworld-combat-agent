@@ -1,0 +1,237 @@
+{
+  "id": "hard_mechs_mid_open",
+  "save": "scenario_hard_mechs_mid_open",
+  "spec": {
+    "id": "hard_mechs_mid_open",
+    "tier": "hard",
+    "note": "Mid-size mech raid in the open: no cover for either side.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 2000,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 4000,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human47536",
+      "name": "Skye Lorne",
+      "weapon": "Assault rifle (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47543",
+      "name": "Paul Paulson",
+      "weapon": "Chain shotgun (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47552",
+      "name": "Sanna Carrie",
+      "weapon": "Hellcat rifle (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47559",
+      "name": "Syttysh Wushdeuk",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47568",
+      "name": "Yulian 'Shorty' Daniel",
+      "weapon": "Pump shotgun (good)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47575",
+      "name": "Don Umamine",
+      "weapon": "Biocoded bolt-action rifle (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47580",
+      "name": "Rodion Hoffman",
+      "weapon": "Doomsday rocket launcher",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47585",
+      "name": "Yuuma Potter",
+      "weapon": "Hellcat rifle (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47594",
+      "name": "Eugene Griffith",
+      "weapon": "Biocoded revolver (normal 79%)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47600",
+      "name": "Albert Goesalt",
+      "weapon": "Sniper rifle (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47607",
+      "name": "Aoi Chlorotite",
+      "weapon": "LMG (good)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human47617",
+      "name": "Kimiko 'Kimmy' Asano",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human47623",
+      "name": "Ian Braddock",
+      "weapon": "Assault rifle (normal)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human47630",
+      "name": "Sadako Maddox",
+      "weapon": "Minigun (normal)",
+      "x": 127,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human47634",
+      "name": "Clement 'Kitty' Silvers",
+      "weapon": "LMG (normal)",
+      "x": 129,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human47642",
+      "name": "Taras Krueger",
+      "weapon": "Sniper rifle (poor)",
+      "x": 121,
+      "z": 119,
+      "health": 100
+    },
+    {
+      "id": "Human47648",
+      "name": "Inessa Lucero",
+      "weapon": "Machine pistol (normal)",
+      "x": 123,
+      "z": 119,
+      "health": 100
+    },
+    {
+      "id": "Human47656",
+      "name": "Ryan Jung",
+      "weapon": "Autopistol (normal)",
+      "x": 125,
+      "z": 119,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Termite47667",
+      "def": "Mech_Termite",
+      "x": 245,
+      "z": 84
+    },
+    {
+      "id": "Mech_Scyther47669",
+      "def": "Mech_Scyther",
+      "x": 248,
+      "z": 71
+    },
+    {
+      "id": "Mech_Scyther47670",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 72
+    },
+    {
+      "id": "Mech_Lancer47671",
+      "def": "Mech_Lancer",
+      "x": 249,
+      "z": 72
+    },
+    {
+      "id": "Mech_Lancer47673",
+      "def": "Mech_Lancer",
+      "x": 248,
+      "z": 84
+    },
+    {
+      "id": "Mech_CentipedeBlaster47675",
+      "def": "Mech_CentipedeBlaster",
+      "x": 248,
+      "z": 71
+    },
+    {
+      "id": "Mech_CentipedeBlaster47677",
+      "def": "Mech_CentipedeBlaster",
+      "x": 242,
+      "z": 80
+    },
+    {
+      "id": "Mech_Lancer47679",
+      "def": "Mech_Lancer",
+      "x": 249,
+      "z": 81
+    },
+    {
+      "id": "Mech_Scyther47681",
+      "def": "Mech_Scyther",
+      "x": 248,
+      "z": 85
+    },
+    {
+      "id": "Mech_Lancer47682",
+      "def": "Mech_Lancer",
+      "x": 249,
+      "z": 72
+    },
+    {
+      "id": "Mech_Militor47684",
+      "def": "Mech_Militor",
+      "x": 247,
+      "z": 81
+    }
+  ]
+}

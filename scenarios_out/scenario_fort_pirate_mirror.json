@@ -1,0 +1,202 @@
+{
+  "id": "fort_pirate_mirror",
+  "save": "scenario_fort_pirate_mirror",
+  "spec": {
+    "id": "fort_pirate_mirror",
+    "tier": "fort",
+    "note": "Ranged mirror defending the fort.",
+    "arena": "arena_fort",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1500,
+      "place": [
+        120,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51406",
+      "name": "Chris Draper",
+      "weapon": "Biocoded sniper rifle (normal)",
+      "x": 116,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51426",
+      "name": "German Ferguson",
+      "weapon": "Biocoded assault rifle (good)",
+      "x": 118,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51433",
+      "name": "Trevor 'Trev' Austin",
+      "weapon": "Biocoded LMG (good)",
+      "x": 120,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51441",
+      "name": "Larry Magnerit",
+      "weapon": "Biocoded triple rocket launcher",
+      "x": 122,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51445",
+      "name": "Pamela 'Pam' Morgan",
+      "weapon": "Biocoded triple rocket launcher",
+      "x": 124,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51449",
+      "name": "Joseph 'Joe' Hinen",
+      "weapon": "Machine pistol (normal)",
+      "x": 116,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51455",
+      "name": "Lucia Xilirift",
+      "weapon": "Sniper rifle (normal)",
+      "x": 118,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51461",
+      "name": "Norret Gantier",
+      "weapon": "Biocoded LMG (normal)",
+      "x": 120,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51469",
+      "name": "Linda 'Happy' Sanford",
+      "weapon": "Minigun (normal)",
+      "x": 122,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51474",
+      "name": "David Chaney",
+      "weapon": "Heavy SMG (normal)",
+      "x": 124,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51476",
+      "name": "Jaz-Michael 'Jaz' King",
+      "weapon": "Biocoded triple rocket launcher",
+      "x": 116,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51481",
+      "name": "Ashleigh 'Ash' Caldwell",
+      "weapon": "Sniper rifle (good)",
+      "x": 118,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human51493",
+      "def": "Human",
+      "x": 246,
+      "z": 141
+    },
+    {
+      "id": "Human51499",
+      "def": "Human",
+      "x": 247,
+      "z": 130
+    },
+    {
+      "id": "Human51505",
+      "def": "Human",
+      "x": 246,
+      "z": 128
+    },
+    {
+      "id": "Human51511",
+      "def": "Human",
+      "x": 240,
+      "z": 128
+    },
+    {
+      "id": "Human51518",
+      "def": "Human",
+      "x": 246,
+      "z": 141
+    },
+    {
+      "id": "Human51524",
+      "def": "Human",
+      "x": 240,
+      "z": 137
+    },
+    {
+      "id": "Human51531",
+      "def": "Human",
+      "x": 246,
+      "z": 141
+    },
+    {
+      "id": "Human51536",
+      "def": "Human",
+      "x": 246,
+      "z": 141
+    },
+    {
+      "id": "Human51543",
+      "def": "Human",
+      "x": 246,
+      "z": 141
+    },
+    {
+      "id": "Human51550",
+      "def": "Human",
+      "x": 241,
+      "z": 128
+    },
+    {
+      "id": "Human51557",
+      "def": "Human",
+      "x": 246,
+      "z": 146
+    },
+    {
+      "id": "Human51565",
+      "def": "Human",
+      "x": 247,
+      "z": 139
+    },
+    {
+      "id": "Human51572",
+      "def": "Human",
+      "x": 246,
+      "z": 126
+    }
+  ]
+}

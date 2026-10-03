@@ -1,0 +1,156 @@
+{
+  "id": "std_pirates_centerdrop_open",
+  "save": "scenario_std_pirates_centerdrop_open",
+  "spec": {
+    "id": "std_pirates_centerdrop_open",
+    "tier": "standard",
+    "note": "Drop pods land on top of the squad: no approach phase.",
+    "arena": "arena_open",
+    "squad": {
+      "faction": "Pirate",
+      "points": 1200,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "CenterDrop"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human47536",
+      "name": "Ryyn Kyshersh",
+      "weapon": "Triple rocket launcher",
+      "x": 127,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human47541",
+      "name": "Madeline Magnefide",
+      "weapon": "Sniper rifle (normal)",
+      "x": 130,
+      "z": 119,
+      "health": 100
+    },
+    {
+      "id": "Human47548",
+      "name": "Holly 'Kit' Kettu",
+      "weapon": "Heavy SMG (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human47552",
+      "name": "Manuel Doyle",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 124,
+      "z": 133,
+      "health": 100
+    },
+    {
+      "id": "Human47562",
+      "name": "Liam 'Hawk' Kelly",
+      "weapon": "Machine pistol (normal 79%)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47570",
+      "name": "Jered 'Jay' Martin",
+      "weapon": "Chain shotgun (normal)",
+      "x": 126,
+      "z": 119,
+      "health": 100
+    },
+    {
+      "id": "Human47577",
+      "name": "Ivy Aguilar",
+      "weapon": "Pump shotgun (normal)",
+      "x": 130,
+      "z": 122,
+      "health": 100
+    },
+    {
+      "id": "Human47583",
+      "name": "Maisie 'Smarty' McConnell",
+      "weapon": "Assault rifle (normal)",
+      "x": 131,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human47589",
+      "name": "Samuel 'Yosef' Yeet",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 118,
+      "z": 136,
+      "health": 100
+    },
+    {
+      "id": "Human47595",
+      "name": "Lorentz Vulcachite",
+      "weapon": "Pump shotgun (poor 85%)",
+      "x": 126,
+      "z": 124,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human47632",
+      "def": "Human",
+      "x": 115,
+      "z": 127
+    },
+    {
+      "id": "Human47639",
+      "def": "Human",
+      "x": 118,
+      "z": 121
+    },
+    {
+      "id": "Human47615",
+      "def": "Human",
+      "x": 114,
+      "z": 125
+    },
+    {
+      "id": "Human47627",
+      "def": "Human",
+      "x": 117,
+      "z": 124
+    },
+    {
+      "id": "Human47604",
+      "def": "Human",
+      "x": 114,
+      "z": 124
+    },
+    {
+      "id": "Human47625",
+      "def": "Human",
+      "x": 118,
+      "z": 130
+    },
+    {
+      "id": "Human47620",
+      "def": "Human",
+      "x": 114,
+      "z": 124
+    },
+    {
+      "id": "Human47609",
+      "def": "Human",
+      "x": 111,
+      "z": 124
+    }
+  ]
+}

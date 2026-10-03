@@ -1,0 +1,245 @@
+{
+  "id": "theme_pirate_grenadier",
+  "save": "scenario_theme_pirate_grenadier",
+  "spec": {
+    "id": "theme_pirate_grenadier",
+    "tier": "theme",
+    "note": "Pirate raid, >=60% explosive weapons (grenades, launchers)",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base",
+      "faction": "OutlanderRough",
+      "points": 1500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human51228",
+      "name": "Sabrina 'Mausi' Janacki",
+      "weapon": "Chain shotgun (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51236",
+      "name": "Xai Xevion",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51241",
+      "name": "Alex Tincteur",
+      "weapon": "Assault rifle (good)",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51248",
+      "name": "Xina Kramer",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51253",
+      "name": "Rakool Murphy",
+      "weapon": "Revolver (normal 67%)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human51258",
+      "name": "Jose Michael",
+      "weapon": "Steel longsword (normal 92%)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51262",
+      "name": "Ruslan McClain",
+      "weapon": "Heavy SMG (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51271",
+      "name": "Kaito Gutierrez",
+      "weapon": "LMG (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51277",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51284",
+      "name": "Dorian 'Dee' Nijdam",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human51292",
+      "name": "Mitchell 'Mitch' Everson",
+      "weapon": "Heavy SMG (normal)",
+      "x": 121,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51299",
+      "name": "Jeff 'Arc' Johnson",
+      "weapon": "LMG (normal)",
+      "x": 123,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51306",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Revolver (good)",
+      "x": 125,
+      "z": 121,
+      "health": 100
+    },
+    {
+      "id": "Human51313",
+      "name": "Sienna Harris",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 127,
+      "z": 121,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human56910",
+      "def": "Mercenary_Heavy",
+      "weapon": "triple rocket launcher",
+      "class": "explosive",
+      "x": 120,
+      "z": 246
+    },
+    {
+      "id": "Human56914",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 119,
+      "z": 244
+    },
+    {
+      "id": "Human56919",
+      "def": "Mercenary_Heavy",
+      "weapon": "Doomsday rocket launcher",
+      "class": "explosive",
+      "x": 120,
+      "z": 245
+    },
+    {
+      "id": "Human56924",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 121,
+      "z": 244
+    },
+    {
+      "id": "Human56930",
+      "def": "Mercenary_Heavy",
+      "weapon": "Minigun",
+      "class": "support",
+      "x": 114,
+      "z": 245
+    },
+    {
+      "id": "Human56934",
+      "def": "Mercenary_Heavy",
+      "weapon": "Doomsday rocket launcher",
+      "class": "explosive",
+      "x": 123,
+      "z": 240
+    },
+    {
+      "id": "Human56938",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 121,
+      "z": 243
+    },
+    {
+      "id": "Human56943",
+      "def": "Mercenary_Heavy",
+      "weapon": "Doomsday rocket launcher",
+      "class": "explosive",
+      "x": 121,
+      "z": 240
+    },
+    {
+      "id": "Human56948",
+      "def": "PirateBoss",
+      "weapon": "Assault rifle",
+      "class": "medium",
+      "x": 115,
+      "z": 243
+    },
+    {
+      "id": "Human56966",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 122,
+      "z": 243
+    },
+    {
+      "id": "Human56972",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 121,
+      "z": 244
+    },
+    {
+      "id": "Human56978",
+      "def": "Mercenary_Elite",
+      "weapon": "LMG",
+      "class": "support",
+      "x": 116,
+      "z": 245
+    },
+    {
+      "id": "Human56985",
+      "def": "Grenadier_Smoke",
+      "weapon": "Smoke launcher",
+      "class": "explosive",
+      "x": 123,
+      "z": 245
+    }
+  ]
+}
