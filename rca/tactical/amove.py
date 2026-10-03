@@ -38,6 +38,7 @@ class Amove(Doctrine):
             return
         every = rm.call("list_colonists")["colonists"]
         cols = [c for c in every if able(c)]
+        self.drafted -= {c["id"] for c in every if not able(c)}   # downed -> undrafted by the game
         new = [c["id"] for c in cols if c["id"] not in self.drafted]
         if new:
             rm.call("draft", action="draft", ids=",".join(new))

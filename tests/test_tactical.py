@@ -366,6 +366,28 @@ class FakeGame:
         raise AssertionError(tool)
 
 
+class DraftingGame(FakeGame):
+    """FakeGame that tracks draft state like the game: Go here needs a drafted
+    pawn ("No order matched 'Go here'." otherwise) and downing undrafts."""
+
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.drafted = set()
+
+    def down(self, pid):
+        self.squad[pid]["downed"] = True
+        self.drafted.discard(pid)
+
+    def call(self, tool, _timeout=None, **a):
+        if tool == "draft":
+            ids = set(a["ids"].split(","))
+            self.drafted = self.drafted | ids if a["action"] == "draft" else self.drafted - ids
+        if tool == "order_pawn" and a.get("command") == "Go here" and a["id"] not in self.drafted:
+            self.orders.append((tool, a))
+            return {"ok": False, "error": "No order matched 'Go here'.", "available": []}
+        return super().call(tool, _timeout, **a)
+
+
 def run(name, game, steps=4, options=None):
     d = make(name)
     d.terrain = Terrain(game, size=60, tile=30)
@@ -419,6 +441,36 @@ class DoctrineSmoke(unittest.TestCase):
             g2 = FakeGame()
             d2 = run(name, g2)
             self.assertEqual(d2.k["wounded_pullbacks"], 1, name)     # S1 is at 30%
+
+    def test_pawn_that_stood_up_is_redrafted(self):
+        """LESSONS §4 'Turtle Go here failures': the game undrafts a downed
+        pawn; when it stands up again Go here has no option until re-drafted."""
+        g = DraftingGame()
+        d = make("turtle")
+        d.terrain = Terrain(g, size=60, tile=30)
+        d.options = {}
+        d.reset(g, {"squad": [{"id": i, "x": p["x"], "z": p["z"]} for i, p in g.squad.items()]})
+        for k in range(8):
+            if k == 2:
+                g.down("S1")
+            if k == 4:
+                g.squad["S1"]["downed"] = False                 # stands up, undrafted
+            d.now, d.step_ticks = k * 30, 30
+            d.step(g)
+        self.assertIn("S1", g.drafted)
+        self.assertEqual(d.k["redrafts"], 1)
+        self.assertEqual(d.k["orders_failed"], 0)
+
+    def test_goto_redrafts_on_no_order_matched(self):
+        g = DraftingGame()
+        d = make("turtle")
+        d.terrain = Terrain(g, size=60, tile=30)
+        d.options = {}
+        d.reset(g, {"squad": [{"id": i, "x": p["x"], "z": p["z"]} for i, p in g.squad.items()]})
+        d.drafted = set(g.squad)                    # stale belief: S0 was undrafted behind our back
+        self.assertIsNotNone(d.goto("S0", (25, 30)))
+        self.assertEqual((d.k["redraft_on_error"], d.k["orders_failed"]), (1, 0))
+        self.assertIn("S0", g.drafted)
 
     def test_stand_off_moves_out_of_throw_range(self):
         g = FakeGame(raid_x=30)

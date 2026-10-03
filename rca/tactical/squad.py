@@ -100,7 +100,9 @@ class SquadDoctrine(Doctrine):
         self.owned, self.all_fighters, self.downed = set(), [], {}
         self.k = {k: 0 for k in ("rescue_started", "rescue_carried", "rescue_unavailable",
                                  "rescue_failed", "wounded_pullbacks", "thrower_moves",
-                                 "thrower_attacks", "orders_failed")}
+                                 "thrower_attacks", "orders_failed", "redrafts",
+                                 "redraft_on_error")}
+        self.lapsed = set()
         self.pre = self.precheck(rm)
 
     # ------------------------------------------------------------ observe
@@ -172,6 +174,13 @@ class SquadDoctrine(Doctrine):
         hs = list_hostiles(rm)
         for h in hs:
             h["pos"] = pos(h)
+        # The game undrafts a pawn when it goes down (or breaks); when it stands
+        # up again it is undrafted and has no "Go here" (verified 2026-10-03,
+        # LESSONS §4 "Turtle Go here failures"). Forget it, so it is re-drafted.
+        lapsed = {c["id"] for c in cols if not able(c)} & self.drafted
+        self.drafted -= lapsed
+        self.k["redrafts"] += len({c["id"] for c in fighters} & self.lapsed)
+        self.lapsed = (self.lapsed | lapsed) - {c["id"] for c in fighters}
         new = [c["id"] for c in fighters if c["id"] not in self.drafted]
         if new and hs:
             rm.call("draft", action="draft", ids=",".join(new))
@@ -197,10 +206,17 @@ class SquadDoctrine(Doctrine):
 
     # ------------------------------------------------------------ orders
     def goto(self, pid, cell):
-        """Go here; on an unwalkable/taken cell try the neighbours. Drops any attack order."""
+        """Go here; on an error try the neighbours. Drops any attack order.
+        "No order matched 'Go here'" means the pawn is undrafted (an occupied
+        or impassable cell still succeeds: the game picks a cell nearby;
+        verified 2026-10-03): draft it and retry once instead."""
         self.target.pop(pid, None)
-        r = None
-        for dx, dz in ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (2, 0), (0, 2)):
+        r, redrafted = None, False
+        cells = ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (2, 0), (0, 2))
+        i = 0
+        while i < len(cells):
+            dx, dz = cells[i]
+            i += 1
             x, z = clip((cell[0] + dx, cell[1] + dz))
             if self.terrain is not None and not self.terrain.passable(x, z):
                 continue
@@ -211,6 +227,13 @@ class SquadDoctrine(Doctrine):
                 continue
             if r.get("ok", True) and "error" not in r:
                 return (x, z)
+            if "No order matched" in str(r.get("error")):
+                if redrafted:
+                    break                        # still no Go here: not a cell problem
+                self.rm.call("draft", action="draft", ids=pid)
+                self.drafted.add(pid)
+                self.k["redraft_on_error"] += 1
+                redrafted, i = True, i - 1       # same cell again
         self.fail("goto", r)
         return None
 
