@@ -6,6 +6,12 @@ evaluates them on a Context (terrain + squad + enemy composition) without
 moving anybody: a few terrain tiles and arithmetic, no planner run. Each result
 is {"ok": bool | None, "value": x, "need": threshold}; None = no data.
 
+A check whose params carry "soft": True is recorded (its result gets
+"soft": true) but never makes the doctrine unattainable: all_ok() ignores it.
+Use it for checks that could not be calibrated (e.g. turtle's
+defensible_terrain is 0.02 on every theme of the one baseline arena, and turtle
+still won on open forest when the enemy came; results/baseline/calibration.md).
+
 The thresholds are first guesses (UNVERIFIED): rows store the values, so they
 can be calibrated against outcomes later. Runtime breaks (e.g. turtle's enemy
 never comes) are raised by the doctrine itself as signals.
@@ -65,6 +71,16 @@ def enemy_melee_heavy(ctx, min_share=0.4):
     return _share(ctx.enemies, lambda e: e["cls"] == "melee"), min_share
 
 
+def enemy_splash_heavy(ctx, min_share=0.45):
+    """Raiders with explosive/splash weapons (census class 'explosive':
+    launchers, grenades, molotovs, rockets, thump cannon, ...; DATA.md §4).
+    Spread only beats amove against such a raid. Threshold fitted on
+    baseline-v1 (calibration.md): grenadier 0.77 vs mechs 0.13, mixed 0.07,
+    the other themes 0; 0.45 is the middle of that gap. Caveat: the class
+    counts a smoke launcher as explosive."""
+    return _share(ctx.enemies, lambda e: e["cls"] == "explosive"), min_share
+
+
 def room_to_spread(ctx, radius=10, min_passable=0.7):
     if ctx.terrain is None or not ctx.squad:
         return None, min_passable
@@ -103,19 +119,24 @@ def approach_cover(ctx, band=2, min_cover=0.05):
 
 
 CHECKS = {f.__name__: f for f in (ranged_squad, defensible_terrain, enemy_approaches,
-                                  enemy_melee_heavy, room_to_spread, enemy_outranges,
-                                  approach_cover)}
+                                  enemy_melee_heavy, enemy_splash_heavy, room_to_spread,
+                                  enemy_outranges, approach_cover)}
 
 
 def check(doctrine, ctx):
-    """{name: {ok, value, need}} for a doctrine class or instance."""
+    """{name: {ok, value, need[, soft]}} for a doctrine class or instance."""
     out = {}
     for name, params in doctrine.preconditions.items():
-        value, need = CHECKS[name](ctx, **(params or {}))
+        params = dict(params or {})
+        soft = params.pop("soft", False)
+        value, need = CHECKS[name](ctx, **params)
         out[name] = {"ok": None if value is None else value >= need, "value": value, "need": need}
+        if soft:
+            out[name]["soft"] = True
     return out
 
 
 def all_ok(report):
-    """False if any check failed; None-valued checks don't count."""
-    return all(r["ok"] is not False for r in report.values())
+    """False if any hard check failed; None-valued and soft checks don't count."""
+    return all(r.get("ok") is not False or r.get("soft") for r in report.values()
+               if isinstance(r, dict))

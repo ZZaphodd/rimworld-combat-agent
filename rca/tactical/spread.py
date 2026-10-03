@@ -1,9 +1,12 @@
-"""spread v5: keep spacing so one blast hits one pawn (anti-splash).
+"""spread v6: keep spacing so one blast hits one pawn (anti-splash).
 
 Win condition: trade at full engagement surface while splash (frags, rockets,
 inferno) can't hit more than one pawn per blast.
-Preconditions (thresholds UNVERIFIED): room to spread around the squad
-(room_to_spread).
+Preconditions: a splash-heavy raid (enemy_splash_heavy >= 0.45, v6: share of
+raiders with census class 'explosive'; fitted on baseline-v1, where spread beat
+amove only vs grenadiers: grenadier 0.77 vs <= 0.13 elsewhere) and room to
+spread around the squad (room_to_spread >= 0.7, UNVERIFIED: 1.00 on every
+theme of the one baseline arena, so it is uninformative until a 2nd arena).
 Phases:
   setup   draft;
   hold    any pawn with a squadmate closer than MIN_GAP steps STEP_OUT cells
@@ -14,7 +17,9 @@ Phases:
           carriers within 35 first): no shared focus target, which would pull
           everyone onto one line. Hold and commit run per pawn at once;
   reset   none (spacing is re-checked every step).
-Signal: no_progress. vs_throwers: accept_dodge (natural) / stand_off / close_in.
+Signals: no_progress, losing_trade (report-only).
+v6: report-only (losing_trade, enemy_splash_heavy recorded); behaviour
+identical to v5, bumped so rows never mix. vs_throwers: accept_dodge (natural) / stand_off / close_in.
 No wounded pull-back and no rescue (legacy spread had neither).
 Evidence (LESSONS §2): gap5_share 0.71-0.79 vs 0.1-0.4 for the others; best vs
 grenadiers (P 0.76 vs amove). Spread + threat map v3 looked worse (two owners
@@ -27,9 +32,10 @@ from .squad import SquadDoctrine, clip, unit
 
 class Spread(SquadDoctrine):
     name = "spread"
-    version = 5                  # legacy v1-v4
+    version = 6                  # v6 = v5 + losing_trade, enemy_splash_heavy (report-only); legacy v1-v4
     win_condition = "splash hits one pawn per blast; trade at full surface"
-    preconditions = {"room_to_spread": {"radius": 10, "min_passable": 0.7}}
+    preconditions = {"enemy_splash_heavy": {"min_share": 0.45},
+                     "room_to_spread": {"radius": 10, "min_passable": 0.7}}
     phases_spec = {"setup": "draft", "hold": "step out of < 5-cell clumps, hold 600 ticks",
                    "commit": "Auto attack the raider nearest to each pawn", "reset": "none"}
     option_choices = {"vs_throwers": ("accept_dodge", "stand_off", "close_in")}

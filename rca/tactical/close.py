@@ -1,9 +1,14 @@
-"""close v3: close the distance fast, cover to cover (anti-poke).
+"""close v4: close the distance fast, cover to cover (anti-poke).
 
 Win condition: snipers and archers out-range most of the squad, so trading at
 their range loses; inside CLOSE_DIST our short guns out-trade them.
 Preconditions (thresholds UNVERIFIED): the raid out-ranges us (enemy_outranges)
 and there is cover on the way (approach_cover).
+  Inversion note (baseline-v1, calibration.md): for THIS close the
+  enemy_outranges check points the wrong way: it loses where the enemy
+  outranges (sniper, value 1.00) and wins where it doesn't (mixed, tribal
+  melee); the approach is too costly without bounding overwatch (TODO). The
+  preconditions are deliberately unchanged until overwatch exists.
 Phases:
   setup   draft;
   commit  every pawn farther than CLOSE_DIST from its nearest raider bounds
@@ -12,7 +17,9 @@ Phases:
           hop = min(ADVANCE, d - CLOSE_DIST + 2);
   hold    inside CLOSE_DIST: Auto attack for good (rocket carriers first);
   reset   none (losses come during the approach; bounding overwatch is TODO).
-Signal: no_progress. No vs_throwers option: closing in is its nature.
+Signals: no_progress, losing_trade (report-only).
+v4: report-only (losing_trade); behaviour identical to v3, bumped so rows
+never mix. No vs_throwers option: closing in is its nature.
 Evidence (LESSONS §2): home 4/5 sniper, 5/5 mechs; all 14 inside 14 cells by
 tick ~1380; best overall win count in the theme matrix.
 """
@@ -26,7 +33,7 @@ COVER = set("*#%")               # get_area ascii: tree, wall, rock (sandbags do
 
 class Close(SquadDoctrine):
     name = "close"
-    version = 3                  # legacy v1-v2
+    version = 4                  # v4 = v3 + losing_trade (report-only); legacy v1-v2
     win_condition = "get inside 14 cells of the pokers, then out-trade them at short range"
     preconditions = {"enemy_outranges": {"min_share": 0.4, "margin": 5},
                      "approach_cover": {"band": 2, "min_cover": 0.05}}

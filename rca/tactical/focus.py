@@ -1,4 +1,4 @@
-"""The `doctrine` agent (focus fire), v4 — port of legacy combat_agent v1-v3.
+"""The `doctrine` agent (focus fire), v6 — port of legacy combat_agent v1-v3.
 
 Win condition: concentrate fire. Each enemy is shot by at most MAX_PER_TARGET
 guns, in kill-priority order (rocket carriers, then lancers/pikemen, ...), so
@@ -25,7 +25,9 @@ Baseline (results/baseline, 771c66a): rescue on 1.43 lost/battle vs off 0.91 (of
 theme; grenadier 3.7 -> 1.6): carrying a downed pawn stops a gun and bunches pawns up.
 vs_throwers: accept_dodge (natural) / stand_off / close_in.
 Signal: no_progress after NO_PROGRESS_TICKS of contested time (we take damage or
-are in a raider's reach) without enemy points lost (EVAL_SPEC §2).
+are in a raider's reach) without enemy points lost (EVAL_SPEC §2); losing_trade
+(report-only). v6: report-only (losing_trade); behaviour identical to v5,
+bumped so rows never mix.
 Evidence (LESSONS §2): v2 tied amove on its home themes; guns per target
 barely moved (2.6 -> 2.7); catastrophic vs grenadiers (5.2 lost).
 """
@@ -42,7 +44,7 @@ MELEE_FALLBACK_R = 20
 
 class Focus(SquadDoctrine):
     name = "doctrine"
-    version = 5                  # v5: rescue off by default (baseline); legacy v1-v3 (combat_agent)
+    version = 6                  # v6 = v5 + losing_trade (report-only); v5: rescue off by default (baseline); legacy v1-v3 (combat_agent)
     win_condition = "focus fire: kill raiders one at a time, <= 4 guns each, by priority"
     preconditions = {"ranged_squad": {"min_share": 0.5}}
     phases_spec = {"setup": "rally", "hold": "rally cells, fire at will",
