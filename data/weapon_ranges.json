@@ -1,0 +1,972 @@
+{
+ "weapons": {
+  "Artillery_AutoMortar": {
+   "label": "auto-mortar",
+   "range": 500.0,
+   "min_range": 29.9,
+   "warmup": 4.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Artillery",
+    "Artillery_BaseDestroyer"
+   ]
+  },
+  "Artillery_Mortar": {
+   "label": "mortar",
+   "range": 500.0,
+   "min_range": 29.9,
+   "warmup": 4.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Artillery",
+    "Artillery_BaseDestroyer"
+   ]
+  },
+  "Bow_Great": {
+   "label": "greatbow",
+   "range": 29.9,
+   "min_range": 0.0,
+   "warmup": 2.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Neolithic",
+    "NeolithicRangedHeavy",
+    "NeolithicRangedChief"
+   ]
+  },
+  "Bow_Great_Unique": {
+   "label": "unique greatbow",
+   "range": 29.9,
+   "min_range": 0.0,
+   "warmup": 2.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Neolithic",
+    "NeolithicRangedHeavy",
+    "NeolithicRangedChief"
+   ]
+  },
+  "Bow_Recurve": {
+   "label": "recurve bow",
+   "range": 25.9,
+   "min_range": 0.0,
+   "warmup": 1.45,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Neolithic",
+    "NeolithicRangedDecent"
+   ]
+  },
+  "Bow_Short": {
+   "label": "short bow",
+   "range": 22.9,
+   "min_range": 0.0,
+   "warmup": 1.35,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Neolithic",
+    "NeolithicRangedBasic"
+   ]
+  },
+  "Flamebow": {
+   "label": "flamebow",
+   "range": 22.9,
+   "min_range": 0.0,
+   "warmup": 1.35,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Neolithic",
+    "NeolithicRangedFlame"
+   ]
+  },
+  "Gun_AncientArmoredTurret": {
+   "label": "ancient defender turret gun",
+   "range": 36.9,
+   "min_range": 0.0,
+   "warmup": 0.0,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_AssaultRifle": {
+   "label": "assault rifle",
+   "range": 30.9,
+   "min_range": 0.0,
+   "warmup": 1.0,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "AssaultRifle"
+   ]
+  },
+  "Gun_AssaultRifle_Unique": {
+   "label": "unique assault rifle",
+   "range": 30.9,
+   "min_range": 0.0,
+   "warmup": 1.0,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "AssaultRifle"
+   ]
+  },
+  "Gun_AutocannonTurret": {
+   "label": "autocannon",
+   "range": 32.9,
+   "min_range": 8.9,
+   "warmup": 0.0,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_Autopistol": {
+   "label": "autopistol",
+   "range": 25.9,
+   "min_range": 0.0,
+   "warmup": 0.3,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "SimpleGun",
+    "Autopistol"
+   ]
+  },
+  "Gun_BeamGraser": {
+   "label": "beam graser",
+   "range": 24.9,
+   "min_range": 3.9,
+   "warmup": 1.0,
+   "burst": 5,
+   "verb": "Verb_ShootBeam",
+   "tags": [
+    "BeamGraserGun"
+   ]
+  },
+  "Gun_BeamRepeater": {
+   "label": "beam repeater",
+   "range": 21.9,
+   "min_range": 0.0,
+   "warmup": 4.0,
+   "burst": 30,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "GunHeavy",
+    "WeaponBeamRepeater"
+   ]
+  },
+  "Gun_BeamRepeater_Unique": {
+   "label": "unique beam repeater",
+   "range": 21.9,
+   "min_range": 0.0,
+   "warmup": 4.0,
+   "burst": 30,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "GunHeavy",
+    "WeaponBeamRepeater"
+   ]
+  },
+  "Gun_BoltActionRifle": {
+   "label": "bolt-action rifle",
+   "range": 36.9,
+   "min_range": 0.0,
+   "warmup": 1.7,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun"
+   ]
+  },
+  "Gun_BoltActionRifle_Unique": {
+   "label": "unique bolt-action rifle",
+   "range": 36.9,
+   "min_range": 0.0,
+   "warmup": 1.7,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun"
+   ]
+  },
+  "Gun_ChainShotgun": {
+   "label": "chain shotgun",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.2,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "ShortShots"
+   ]
+  },
+  "Gun_ChainShotgun_Unique": {
+   "label": "unique chain shotgun",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.2,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "ShortShots"
+   ]
+  },
+  "Gun_ChargeBlasterHeavy": {
+   "label": "heavy charge blaster",
+   "range": 26.9,
+   "min_range": 0.0,
+   "warmup": 1.25,
+   "burst": 24,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunHeavy",
+    "ChargeBlasterHeavyGun"
+   ]
+  },
+  "Gun_ChargeBlasterHeavyTurret": {
+   "label": "light charge blaster",
+   "range": 45.9,
+   "min_range": 3.9,
+   "warmup": 1.25,
+   "burst": 9,
+   "verb": "Verb_Shoot",
+   "tags": []
+  },
+  "Gun_ChargeBlasterTurret": {
+   "label": "charge blaster turret",
+   "range": 44.9,
+   "min_range": 0.0,
+   "warmup": null,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_ChargeLance": {
+   "label": "charge lance",
+   "range": 32.9,
+   "min_range": 0.0,
+   "warmup": 1.7,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "MechanoidGunMedium",
+    "SpacerGun"
+   ]
+  },
+  "Gun_ChargeLance_Unique": {
+   "label": "unique charge lance",
+   "range": 32.9,
+   "min_range": 0.0,
+   "warmup": 1.7,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "MechanoidGunMedium",
+    "SpacerGun"
+   ]
+  },
+  "Gun_ChargeRifle": {
+   "label": "charge rifle",
+   "range": 27.9,
+   "min_range": 0.0,
+   "warmup": 1.0,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "SpacerGun"
+   ]
+  },
+  "Gun_ChargeRifle_Unique": {
+   "label": "unique charge rifle",
+   "range": 27.9,
+   "min_range": 0.0,
+   "warmup": 1.0,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "SpacerGun"
+   ]
+  },
+  "Gun_DoomsdayRocket": {
+   "label": "doomsday rocket launcher",
+   "range": 35.9,
+   "min_range": 0.0,
+   "warmup": 4.5,
+   "burst": 1,
+   "verb": "Verb_ShootOneUse",
+   "tags": [
+    "Gun",
+    "GunSingleUse"
+   ]
+  },
+  "Gun_EmpLauncher": {
+   "label": "EMP launcher",
+   "range": 23.9,
+   "min_range": 0.0,
+   "warmup": 3.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "GrenadeEMP"
+   ]
+  },
+  "Gun_HeavySMG": {
+   "label": "heavy SMG",
+   "range": 22.9,
+   "min_range": 0.0,
+   "warmup": 0.9,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "ShortShots"
+   ]
+  },
+  "Gun_HeavySMG_Unique": {
+   "label": "unique heavy SMG",
+   "range": 22.9,
+   "min_range": 0.0,
+   "warmup": 0.9,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "ShortShots"
+   ]
+  },
+  "Gun_HellcatRifle": {
+   "label": "hellcat rifle",
+   "range": 26.9,
+   "min_range": 0.0,
+   "warmup": 1.1,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "AssaultRifle"
+   ]
+  },
+  "Gun_HellcatRifle_Unique": {
+   "label": "unique hellcat rifle",
+   "range": 26.9,
+   "min_range": 0.0,
+   "warmup": 1.1,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced",
+    "AssaultRifle"
+   ]
+  },
+  "Gun_HellsphereCannon": {
+   "label": "hellsphere cannon",
+   "range": 18.9,
+   "min_range": 5.9,
+   "warmup": 7.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "HellsphereCannonGun"
+   ]
+  },
+  "Gun_IncendiaryLauncher": {
+   "label": "incendiary launcher",
+   "range": 23.9,
+   "min_range": 0.0,
+   "warmup": 3.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun"
+   ]
+  },
+  "Gun_Incinerator": {
+   "label": "incinerator",
+   "range": 15.9,
+   "min_range": 5.9,
+   "warmup": 0.5,
+   "burst": 20,
+   "verb": "Verb_ArcSprayIncinerator",
+   "tags": [
+    "Gun",
+    "Flamethrower"
+   ]
+  },
+  "Gun_InfernoCannon": {
+   "label": "inferno cannon",
+   "range": 26.9,
+   "min_range": 0.0,
+   "warmup": 1.25,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunHeavy",
+    "InfernoCannonGun"
+   ]
+  },
+  "Gun_InfernoCannonTurret": {
+   "label": "inferno cannon",
+   "range": 45.9,
+   "min_range": 3.9,
+   "warmup": 1.25,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_LMG": {
+   "label": "LMG",
+   "range": 25.9,
+   "min_range": 0.0,
+   "warmup": 1.8,
+   "burst": 6,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced"
+   ]
+  },
+  "Gun_LMG_Unique": {
+   "label": "unique LMG",
+   "range": 25.9,
+   "min_range": 0.0,
+   "warmup": 1.8,
+   "burst": 6,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "IndustrialGunAdvanced"
+   ]
+  },
+  "Gun_MachinePistol": {
+   "label": "machine pistol",
+   "range": 19.9,
+   "min_range": 0.0,
+   "warmup": 0.5,
+   "burst": 3,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "ShortShots"
+   ]
+  },
+  "Gun_MiniFlameblaster": {
+   "label": "mini-flameblaster",
+   "range": 4.9,
+   "min_range": 0.0,
+   "warmup": 0.0,
+   "burst": 10,
+   "verb": "Verb_SpewFire",
+   "tags": [
+    "MechanoidGunMiniFlameblaster"
+   ]
+  },
+  "Gun_MiniShotgun": {
+   "label": "mini-shotgun",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.2,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunShortRange"
+   ]
+  },
+  "Gun_MiniTurret": {
+   "label": "mini-turret gun",
+   "range": 28.9,
+   "min_range": 0.0,
+   "warmup": 0.0,
+   "burst": 2,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_MiniTurretMech": {
+   "label": "mini-slugger",
+   "range": 45.9,
+   "min_range": 0.0,
+   "warmup": null,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_Minigun": {
+   "label": "minigun",
+   "range": 30.9,
+   "min_range": 0.0,
+   "warmup": 2.5,
+   "burst": 25,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "GunHeavy",
+    "Minigun"
+   ]
+  },
+  "Gun_Minigun_Unique": {
+   "label": "unique minigun",
+   "range": 30.9,
+   "min_range": 0.0,
+   "warmup": 2.5,
+   "burst": 25,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "GunHeavy",
+    "Minigun"
+   ]
+  },
+  "Gun_Needle": {
+   "label": "needle gun",
+   "range": 44.9,
+   "min_range": 0.0,
+   "warmup": 2.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunLongRange"
+   ]
+  },
+  "Gun_NeedleLauncher": {
+   "label": "needle launcher",
+   "range": 24.9,
+   "min_range": 0.0,
+   "warmup": 2.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunNeedleLauncher"
+   ]
+  },
+  "Gun_PumpShotgun": {
+   "label": "pump shotgun",
+   "range": 15.9,
+   "min_range": 0.0,
+   "warmup": 0.9,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "ShortShots",
+    "PumpShotgun"
+   ]
+  },
+  "Gun_Revolver": {
+   "label": "revolver",
+   "range": 25.9,
+   "min_range": 0.0,
+   "warmup": 0.3,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "SimpleGun",
+    "Revolver"
+   ]
+  },
+  "Gun_Revolver_Unique": {
+   "label": "unique revolver",
+   "range": 25.9,
+   "min_range": 0.0,
+   "warmup": 0.3,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Gun",
+    "SimpleGun",
+    "Revolver"
+   ]
+  },
+  "Gun_RocketswarmLauncher": {
+   "label": "rocketswarm tube",
+   "range": 29.9,
+   "min_range": 0.0,
+   "warmup": null,
+   "burst": 12,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_Scattergun": {
+   "label": "scattergun",
+   "range": 19.9,
+   "min_range": 0.0,
+   "warmup": 0.55,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "SentryDroneGunShortRange"
+   ]
+  },
+  "Gun_Slugthrower": {
+   "label": "slugthrower",
+   "range": 19.9,
+   "min_range": 0.0,
+   "warmup": 0.3,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunSlugthrower"
+   ]
+  },
+  "Gun_SmokeLauncher": {
+   "label": "smoke launcher",
+   "range": 23.9,
+   "min_range": 0.0,
+   "warmup": 3.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "GrenadeSmoke"
+   ]
+  },
+  "Gun_SniperRifle": {
+   "label": "sniper rifle",
+   "range": 44.9,
+   "min_range": 0.0,
+   "warmup": 3.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "SniperRifle"
+   ]
+  },
+  "Gun_SniperRifle_Unique": {
+   "label": "unique sniper rifle",
+   "range": 44.9,
+   "min_range": 0.0,
+   "warmup": 3.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "SniperRifle"
+   ]
+  },
+  "Gun_Spiner": {
+   "label": "spiner",
+   "range": 6.9,
+   "min_range": 0.0,
+   "warmup": 0.3,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunSpiner"
+   ]
+  },
+  "Gun_TacticalTurret": {
+   "label": "tactical turret gun",
+   "range": 19.9,
+   "min_range": 0.0,
+   "warmup": 0.0,
+   "burst": 2,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_ThumpCannon": {
+   "label": "thump cannon",
+   "range": 24.9,
+   "min_range": 0.0,
+   "warmup": 1.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunBreach"
+   ]
+  },
+  "Gun_ToxbombLauncher": {
+   "label": "toxbomb launcher",
+   "range": 23.9,
+   "min_range": 0.0,
+   "warmup": 3.5,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "HeavyTox"
+   ]
+  },
+  "Gun_ToxicNeedle": {
+   "label": "toxic needle gun",
+   "range": 44.9,
+   "min_range": 0.0,
+   "warmup": 2.35,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "MechanoidGunToxicNeedle"
+   ]
+  },
+  "Gun_TripleRocket": {
+   "label": "triple rocket launcher",
+   "range": 35.9,
+   "min_range": 0.0,
+   "warmup": 4.5,
+   "burst": 3,
+   "verb": "Verb_ShootOneUse",
+   "tags": [
+    "Gun",
+    "GunSingleUse"
+   ]
+  },
+  "Gun_TurretFoam": {
+   "label": "foam sprayer",
+   "range": 19.9,
+   "min_range": 0.0,
+   "warmup": 0.0,
+   "burst": 41,
+   "verb": "Verb_ArcSprayProjectile",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "Gun_TurretSniper": {
+   "label": "uranium slug cannon",
+   "range": 45.9,
+   "min_range": 11.9,
+   "warmup": 0.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "TurretGun"
+   ]
+  },
+  "NerveSpiker": {
+   "label": "nerve spiker",
+   "range": 29.9,
+   "min_range": 0.0,
+   "warmup": 1.45,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "NerveSpiker"
+   ]
+  },
+  "Pila": {
+   "label": "pila",
+   "range": 18.9,
+   "min_range": 0.0,
+   "warmup": 4.0,
+   "burst": 1,
+   "verb": "Verb_Shoot",
+   "tags": [
+    "Neolithic",
+    "NeolithicRangedHeavy",
+    "NoRelic"
+   ]
+  },
+  "Weapon_GrenadeEMP": {
+   "label": "EMP grenades",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.5,
+   "burst": 1,
+   "verb": "Verb_LaunchProjectile",
+   "tags": [
+    "GrenadeEMP"
+   ]
+  },
+  "Weapon_GrenadeFrag": {
+   "label": "frag grenades",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.5,
+   "burst": 1,
+   "verb": "Verb_LaunchProjectile",
+   "tags": [
+    "GrenadeDestructive",
+    "EmpireGrenadeDestructive"
+   ]
+  },
+  "Weapon_GrenadeMolotov": {
+   "label": "molotov cocktails",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.5,
+   "burst": 1,
+   "verb": "Verb_LaunchProjectile",
+   "tags": [
+    "GrenadeDestructive",
+    "GrenadeFlame"
+   ]
+  },
+  "Weapon_GrenadeTox": {
+   "label": "tox grenades",
+   "range": 12.9,
+   "min_range": 0.0,
+   "warmup": 1.5,
+   "burst": 1,
+   "verb": "Verb_LaunchProjectile",
+   "tags": [
+    "GrenadeTox"
+   ]
+  }
+ },
+ "mech_kinds": {
+  "Mech_Agrihand": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Apocriton": {
+   "weapons": [
+    "Gun_ToxicNeedle"
+   ],
+   "range": 44.9
+  },
+  "Mech_CentipedeBlaster": {
+   "weapons": [
+    "Gun_ChargeBlasterHeavy"
+   ],
+   "range": 26.9
+  },
+  "Mech_CentipedeBurner": {
+   "weapons": [
+    "Gun_InfernoCannon"
+   ],
+   "range": 26.9
+  },
+  "Mech_CentipedeGunner": {
+   "weapons": [
+    "Gun_Minigun",
+    "Gun_Minigun_Unique"
+   ],
+   "range": 30.9
+  },
+  "Mech_Centurion": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Cleansweeper": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Constructoid": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Cyclops": {
+   "weapons": [
+    "Gun_BeamRepeater",
+    "Gun_BeamRepeater_Unique"
+   ],
+   "range": 21.9
+  },
+  "Mech_Diabolus": {
+   "weapons": [
+    "Gun_HellsphereCannon"
+   ],
+   "range": 18.9
+  },
+  "Mech_Fabricor": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Lancer": {
+   "weapons": [
+    "Gun_ChargeLance",
+    "Gun_ChargeLance_Unique"
+   ],
+   "range": 32.9
+  },
+  "Mech_Legionary": {
+   "weapons": [
+    "Gun_NeedleLauncher"
+   ],
+   "range": 24.9
+  },
+  "Mech_Lifter": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Militor": {
+   "weapons": [
+    "Gun_MiniShotgun"
+   ],
+   "range": 12.9
+  },
+  "Mech_Paramedic": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Pikeman": {
+   "weapons": [
+    "Gun_Needle"
+   ],
+   "range": 44.9
+  },
+  "Mech_Scorcher": {
+   "weapons": [
+    "Gun_MiniFlameblaster"
+   ],
+   "range": 4.9
+  },
+  "Mech_Scyther": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_Termite_Breach": {
+   "weapons": [
+    "Gun_ThumpCannon"
+   ],
+   "range": 24.9
+  },
+  "Mech_Tesseron": {
+   "weapons": [
+    "Gun_BeamGraser"
+   ],
+   "range": 24.9
+  },
+  "Mech_Tunneler": {
+   "weapons": [],
+   "range": null
+  },
+  "Mech_WarUrchin": {
+   "weapons": [
+    "Gun_Spiner"
+   ],
+   "range": 6.9
+  },
+  "Mech_Warqueen": {
+   "weapons": [],
+   "range": null
+  }
+ }
+}

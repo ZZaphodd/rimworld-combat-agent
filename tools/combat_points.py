@@ -1,4 +1,5 @@
-"""Re-extract data/combat_power.json (PawnKindDef combatPower) from the game XML.
+"""Re-extract the XML tables: data/combat_power.json (PawnKindDef combatPower)
+and data/weapon_ranges.json (weapon verb ranges, mech kind -> weapons).
 
   python3 tools/combat_points.py [--game /path/to/RimWorldMac.app]
 """
@@ -15,3 +16,6 @@ a = ap.parse_args()
 t = defs.extract(a.game)
 defs.TABLE.write_text(json.dumps(t, indent=1) + "\n")
 print(f"{len(t)} kinds -> {defs.TABLE}")
+w = defs.extract_weapons(a.game)
+defs.RANGES.write_text(json.dumps(w, indent=1) + "\n")
+print(f"{len(w['weapons'])} weapons, {len(w['mech_kinds'])} mech kinds -> {defs.RANGES}")
