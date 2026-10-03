@@ -115,3 +115,12 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
 - [ ] After the baseline is frozen (WORKFLOW.md): gate.py (re-run the baseline suite on a branch and
       judge non-inferiority vs the tagged baseline). Commit hash in every result row: done (rca
       rows carry `commit`).
+- [ ] Phase 2 requirements from the stalemate clarification (WORKFLOW layer contracts):
+      1. Progress-rate KPI (enemy combat points lost per 1,000 ticks) + longest no-progress stretch;
+         tactical doctrines raise "win condition unattainable" after a no-progress stretch.
+      2. Doctrine specs carry preconditions (turtle: defensible terrain + an enemy that comes to us);
+         the router (roadmap 5) checks them first.
+      3. Positioning vs throwers as an explicit tactical option (accept-and-dodge / stand off /
+         close in), tested on grenadier themes with the doctrine fixed and micro pinned.
+      4. ENEMY_AI hypothesis (roadmap 3): what raiders do when our pawns are out of their range
+         (hold? advance? wait for targets?).

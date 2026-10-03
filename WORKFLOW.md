@@ -17,6 +17,17 @@ Three layers, tested separately; a change touches one layer and the others are h
 | tactical | Does a given doctrine win locally? | Theme battles | trade ratio, time to resolve, engagement surface, high-threat time, melee-locked time | doctrine choice; micro at its verified version |
 | strategic | Right doctrine/asset at the right time? | Scenario-distribution suite | regret vs oracle, outcome grade, colonist losses | tactical implementations (versions) |
 
+Layer contracts (who owns what):
+
+| Layer | Owns | Must not | Reports upward |
+|---|---|---|---|
+| micro | Short-lived moves for one hazard event (temporary ownership of a pawn) | Change where the doctrine stands pawns; keep a pawn after its event | Cost KPIs: moves, false-alarm share, time not firing |
+| tactical | Positioning, targeting, fire control, the doctrine's own phases (setup → hold → commit → reset), stalemate detection | Switch to another doctrine | "Win condition unattainable" (no progress for T ticks, preconditions broken) |
+| strategic | Doctrine/asset choice (METT-T), checking doctrine **preconditions**, switching between doctrines | Control individual pawns | — |
+
+Boundary rule: a phase change inside a doctrine (turtle's commit, a sally) is tactical; moving to a
+different doctrine (turtle → close) is strategic. Tactical raises the signal, strategic decides.
+
 Pyramid: many cheap micro drills, a moderate number of tactical battles, a costly strategic suite.
 The baseline suite measures tactical + strategic; micro is pinned to its drill-verified version.
 Tools: micro = `tools/run_drill.py` (frag drill, PROCEDURES §12); tactical/strategic =

@@ -12,6 +12,8 @@ RimWorld enemy AI, not other players (see TODO.md, scope principle).
 | **micro** | Battle drills and reflexes: dodging a skillshot, stepping out of fire, not re-entering a fled cell. Judged per event, not per battle | RTS |
 | **tactical** | Doctrine execution: positioning (concave, choke, standoff), fire control, focus, commit/reset timing. Judged per battle with the doctrine fixed | military |
 | **strategic / decision** | Choosing doctrine and assets for this raid, terrain and squad, and when to transition (the router). Judged over a scenario distribution | RTS/military |
+| **precondition** | What a doctrine needs to be able to win (turtle: defensible terrain — choke/concave — and an enemy that will come to it). Checked by the router before choosing | ours |
+| **stalemate / progress rate** | Progress rate = enemy combat points lost per 1,000 ticks; a stalemate is a long stretch with no progress. Tactical KPI and the trigger for commit/reset | ours |
 | **layer discipline** | Change and test one layer at a time with the others held fixed; a micro win must not be judged by tactical outcomes | ours |
 | **doctrine** | A posture with a **win condition**, plus **commit** and **reset** criteria | ours + MOBA |
 | **win condition** | How a doctrine wins, e.g. turtle: "they come through our choke" | MOBA |

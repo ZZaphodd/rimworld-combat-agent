@@ -12,6 +12,17 @@ significant.
   (standing outside throw range) together and was judged by battle losses, so neither effect could
   be read (threatmap_report; WORKFLOW).* → Micro gets drills judged per event. Tactical is
   judged with micro pinned to a drill-verified version.
+- **The "turtle + grenade" stalemate was three problems, not one.** *Threat map v3: pawns stood
+  outside the 13-cell throw range, raiders stopped throwing, fights took 2–5x longer and gave
+  rockets more volleys (threatmap_report).* Split by layer:
+  micro — dodging a resting frag: solved (97.9% escape in the frag drill), cost = false-alarm moves;
+  tactical — where to stand vs throwers (accept-and-dodge / stand off / close in) was slipped in
+  as "avoidance", and nothing detected the lack of progress;
+  strategic — turtle's preconditions were not met (forest arena, no choke; our 25–31 range vs their
+  13 gives raiders no reason to come in);
+  enemy AI — why raiders out of range didn't advance is unknown.
+  → Layer contracts in WORKFLOW; preconditions in doctrine specs; progress-rate KPI; positioning
+  vs throwers is an explicit tactical option; ENEMY_AI hypothesis "raiders out of range".
 - **Timers in ticks, not steps.** *Cutting the step from 120 to 30 ticks shrank every step-counted
   rule 4x (a 360-tick stall would have triggered a sally) (execution_report §5).* → Every duration
   is a tick constant, and agents get `now` and `step_ticks`.
