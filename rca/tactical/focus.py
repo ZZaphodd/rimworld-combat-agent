@@ -20,8 +20,9 @@ Phases:
 Casualties: wounded (< 45%) stay drafted and fall back (v1-v3 undrafted them:
 they fled, LESSONS bug 6); downed squadmates are carried to a safe cell when
 "Carry" is enabled, never reserved for a disabled "Rescue" (bug 5). Both are
-options: rescue=on|off, wounded_pullback=on|off (natural on; to be compared in
-the baseline).
+options: rescue=off|on (default off since v5), wounded_pullback=on|off.
+Baseline (results/baseline, 771c66a): rescue on 1.43 lost/battle vs off 0.91 (off n=5 per
+theme; grenadier 3.7 -> 1.6): carrying a downed pawn stops a gun and bunches pawns up.
 vs_throwers: accept_dodge (natural) / stand_off / close_in.
 Signal: no_progress after NO_PROGRESS_TICKS of contested time (we take damage or
 are in a raider's reach) without enemy points lost (EVAL_SPEC §2).
@@ -41,14 +42,14 @@ MELEE_FALLBACK_R = 20
 
 class Focus(SquadDoctrine):
     name = "doctrine"
-    version = 4                  # legacy v1-v3 (combat_agent)
+    version = 5                  # v5: rescue off by default (baseline); legacy v1-v3 (combat_agent)
     win_condition = "focus fire: kill raiders one at a time, <= 4 guns each, by priority"
     preconditions = {"ranged_squad": {"min_share": 0.5}}
     phases_spec = {"setup": "rally", "hold": "rally cells, fire at will",
                    "commit": "raider within 45 of the anchor: focus fire",
                    "reset": "no raider within 60 for 1200 ticks: back to rally"}
     option_choices = {"vs_throwers": ("accept_dodge", "stand_off", "close_in"),
-                      "rescue": ("on", "off"), "wounded_pullback": ("on", "off")}
+                      "rescue": ("off", "on"), "wounded_pullback": ("on", "off")}
     RETREAT_HP = 45
     RESCUE = True
     ENGAGE_R, SPLIT_R = 45, 15

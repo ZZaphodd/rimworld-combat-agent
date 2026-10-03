@@ -299,11 +299,12 @@ class Options(unittest.TestCase):
         self.assertEqual(n[("s", "turtle")], 2)
 
     def test_rescue_and_pullback_options(self):
-        self.assertEqual(options_of("doctrine"), {"vs_throwers": "accept_dodge", "rescue": "on",
+        self.assertEqual(options_of("doctrine"), {"vs_throwers": "accept_dodge", "rescue": "off",
                                                   "wounded_pullback": "on"})
         self.assertEqual(options_of("turtle", {"rescue": "off"}),
                          {"vs_throwers": "accept_dodge", "wounded_pullback": "on"})
-        # rows written before the options existed read as the natural value (on)
+        # rows written before an option existed read as what agents did then (rescue on),
+        # not as today's natural value (doctrine v5: rescue off)
         cfg = ("adaptive:30/120@40", True, 4)
         old = {"scenario": "s", "agent": "doctrine", "agent_version": 4, "cycle": cfg[0],
                "reflex": True, "reflex_version": 4, "options": {"vs_throwers": "accept_dodge"}}
@@ -313,8 +314,8 @@ class Options(unittest.TestCase):
                             lambda a: options_of(a))
             self.assertEqual(n[("s", "doctrine")], want, req)
         from rca.eval.report import option_tag
-        self.assertEqual(option_tag(old, options_of), "")
-        self.assertEqual(option_tag(off, options_of), "[rescue=off]")
+        self.assertEqual(option_tag(old, options_of), "[rescue=on]")   # differs from v5's natural off
+        self.assertEqual(option_tag(off, options_of), "")
 
 
 # ------------------------------------------------------------------ fake game
@@ -421,7 +422,7 @@ class DoctrineSmoke(unittest.TestCase):
 
     def test_downed_pawn_is_carried_not_rescued(self):
         g = FakeGame(downed=(2,))
-        d = run("doctrine", g, steps=3)
+        d = run("doctrine", g, steps=3, options={"rescue": "on"})   # default is off since v5
         idx = [a for t, a in g.orders if t == "order_pawn" and a.get("targetId") == "S2"
                and "index" in a]
         self.assertEqual([a["index"] for a in idx], [1])            # Carry, never the disabled one

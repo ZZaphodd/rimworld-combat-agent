@@ -44,12 +44,22 @@ def read_rows(path):
     return rows
 
 
+# What a row did for an option it doesn't record (written before the option
+# existed). Not the current natural value: doctrine v5 flipped rescue to off,
+# but rows from before the option carried pawns (rescue on).
+PRE_OPTION_BEHAVIOUR = {"rescue": "on", "wounded_pullback": "on"}
+
+
 def row_options(r, natural_of=None):
     """A row's effective options. natural_of(agent) -> the doctrine's natural
-    options: a key the row lacks (an option added after the row was written)
-    reads as its natural value, which is what that agent version did then."""
+    options. A key the row lacks reads as what agents did before that option
+    existed (PRE_OPTION_BEHAVIOUR), else as the natural value."""
     stored = r.get("options") or {}
-    return {**natural_of(r["agent"]), **stored} if natural_of else dict(stored)
+    if not natural_of:
+        return dict(stored)
+    natural = natural_of(r["agent"])
+    missing = {k: PRE_OPTION_BEHAVIOUR.get(k, v) for k, v in natural.items() if k not in stored}
+    return {**natural, **missing, **stored}
 
 
 def done_counts(rows, version_of, config, options_of=None, natural_of=None):
