@@ -286,6 +286,7 @@ def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max
                     f"pts {res['trade_enemy_points']}/{res.get('enemy_seen_points')} "
                     f"rate={res['progress_rate']} stall={res['longest_no_progress_ticks']} "
                     f"fire={res['fire_share']}/{res['enemy_fire_share']} "
+                    f"contested={(res.get('kpis') or {}).get('longest_contested_ticks')} "
                     f"signal={res['unattainable_reason']} "
                     f"ticks={res['ticks']} wall={res['wall_s']}s")
     return row_config({"cycle": cycle.policy, "reflex": reflex, "reflex_version": config[2]})

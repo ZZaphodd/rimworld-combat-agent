@@ -5,10 +5,10 @@ import math
 import unittest
 
 from rca.eval import firelog
-from rca.eval.progress import ProgressMeter, lost_points
+from rca.eval.progress import ProgressMeter, lost_points, pressure
 from rca.eval.results import done_counts
 from rca.game.weapons import range_source, weapon_range
-from rca.tactical import AGENTS, make, options_of, planner
+from rca.tactical import AGENTS, Doctrine, make, options_of, planner
 from rca.tactical.preconditions import Context, all_ok, check
 from rca.tactical.squad import rescue_choice
 from rca.terrain import Terrain
@@ -162,17 +162,95 @@ class Progress(unittest.TestCase):
     def test_lost_points_doctrine_view(self):
         self.assertEqual(lost_points({"a": 85, "b": 110, "c": None}, {"b"}), 85)
 
-    def test_signal_rearms_after_progress(self):
-        d = AGENTS["amove"]()
+    @staticmethod
+    def doctrine(reach=25.0):
+        d = Doctrine()
         d.init_tactical()
+        d.enemy_reach = lambda h: (reach, False)
+        return d
+
+    SQ = {"s1": {"pos": (90, 100), "health": 100, "downed": False}}      # 10 cells from r1/r2
+
+    def test_signal_rearms_after_progress(self):
+        d = self.doctrine()
         d.no_progress_ticks = 1000
         h = [{"id": "r1", "kind": "Mercenary_Gunner", "x": 100, "z": 100},
              {"id": "r2", "kind": "Mercenary_Gunner", "x": 100, "z": 100}]
         for now, hs in ((0, h), (600, h), (1200, h), (1500, h[1:]), (2700, h[1:])):
             d.now = now
-            d.note_progress(hs, True)
+            d.note_progress(hs, True, self.SQ)               # in their range: under threat
         self.assertEqual([(s["tick"], s["reason"]) for s in d.signals],
                          [(1200, "no_progress"), (2700, "no_progress")])
+        self.assertEqual((d.signals[0]["pause"], d.signals[0]["contested"]), (1200, 1200))
+
+    def test_quiet_pause_is_not_a_stalemate(self):
+        """Smoke case: raiders out of reach (fleeing / far), nobody hurt -> no signal."""
+        d = self.doctrine(reach=25.0)
+        h = [{"id": "r1", "kind": "Tribal_Warrior", "x": 150, "z": 100}]   # 60 cells away
+        for now in range(0, 6001, 120):
+            d.now = now
+            d.note_progress(h, True, self.SQ)
+        self.assertEqual(d.signals, [])
+        k = d.kpis()
+        self.assertEqual((k["longest_pause_ticks"], k["longest_contested_ticks"]), (6000, 0))
+        self.assertEqual(k["no_progress_rule"], 2)
+
+    def test_contested_time_counts_only_pressed_steps(self):
+        """Threat every other 1000-tick block: 3000 contested ticks need 5000 of pause."""
+        d = self.doctrine(reach=12.0)
+        near = [{"id": "r1", "kind": "Mercenary_Gunner", "x": 100, "z": 100}]   # 10 cells
+        far = [{"id": "r1", "kind": "Mercenary_Gunner", "x": 130, "z": 100}]    # 40 cells
+        for now in range(0, 6001, 100):
+            d.now = now
+            d.note_progress(near if (now - 1) // 1000 % 2 == 0 else far, True, self.SQ)
+        self.assertEqual([s["tick"] for s in d.signals], [5000])
+        self.assertEqual(d.signals[0]["pause"], 5000)
+        self.assertGreaterEqual(d.signals[0]["contested"], 3000)
+
+    def test_no_squad_no_signal(self):
+        d = self.doctrine()
+        for now in (0, 5000):
+            d.now = now
+            d.note_progress([{"id": "r1", "kind": "x", "x": 100, "z": 100}], True)
+        self.assertEqual(d.signals, [])
+
+    def test_meter_contested_resets_on_progress(self):
+        m = ProgressMeter()
+        m.update(0, 0, True, (False, True))
+        m.update(1000, 0, True, (True, False))
+        m.update(2000, 50, True, (False, False))       # progress: contested -> 0
+        m.update(2500, 50, True, (False, True))
+        self.assertEqual((m.contested, m.longest_contested, m.longest), (500, 1000, 2000))
+        self.assertEqual(m.pressure_ticks, {"cost": 1000, "threat": 500, "either": 1500,
+                                            "total": 2500})
+
+
+class Pressure(unittest.TestCase):
+    def sq(self, **kw):
+        return {"a": {"pos": (0, 0), "health": 100, "downed": False, **kw}}
+
+    def test_cost(self):
+        self.assertEqual(pressure(self.sq(health=90), self.sq(), []), (True, False))
+        self.assertEqual(pressure(self.sq(downed=True), self.sq(), []), (True, False))
+        self.assertEqual(pressure({}, self.sq(), []), (True, False))         # dead / carried off
+        self.assertEqual(pressure(self.sq(health=99.8), self.sq(), []), (False, False))
+        self.assertEqual(pressure(self.sq(), None, []), (False, False))      # first observation
+
+    def test_threat_by_weapon_range(self):
+        gun = {"pos": (20, 0), "range": 24.9, "thrower": False}
+        self.assertEqual(pressure(self.sq(), self.sq(), [gun]), (False, True))
+        self.assertEqual(pressure(self.sq(), self.sq(), [{**gun, "range": 19.9}]), (False, False))
+        club = {"pos": (1, 1), "range": 1.5, "thrower": False}
+        self.assertTrue(pressure(self.sq(), None, [club])[1])                 # adjacent melee
+        self.assertFalse(pressure(self.sq(), None, [{**club, "pos": (3, 0)}])[1])
+
+    def test_throw_zone_and_downed_pawns(self):
+        frag = {"pos": (14, 0), "range": 12.9, "thrower": True}             # 12.9 + 1.9 blast
+        self.assertTrue(pressure(self.sq(), None, [frag])[1])
+        self.assertFalse(pressure(self.sq(), None, [{**frag, "pos": (15, 0)}])[1])
+        self.assertTrue(pressure(self.sq(downed=True), None, [{**frag, "pos": (5, 0)}])[1])
+        self.assertFalse(pressure({"a": {"pos": None, "health": 50, "downed": True}}, None,
+                                  [frag])[1])                                # carried: no position
 
 
 class FireLog(unittest.TestCase):
@@ -218,6 +296,7 @@ class Options(unittest.TestCase):
                 for o in ("accept_dodge", "stand_off", "stand_off")]
         n = done_counts(rows, lambda a: 8, cfg, lambda a: options_of(a, {"vs_throwers": "stand_off"}))
         self.assertEqual(n[("s", "turtle")], 2)
+
 
 
 # ------------------------------------------------------------------ fake game

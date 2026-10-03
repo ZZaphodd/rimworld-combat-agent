@@ -28,6 +28,7 @@ class Amove(Doctrine):
 
     def reset(self, rm, manifest):
         super().reset(rm, manifest)
+        self.squad_ids = {p["id"] for p in manifest["squad"]}
         self.target, self.weapon, self.drafted = {}, {}, set()
         self.tally = Tally()
 
@@ -35,7 +36,8 @@ class Amove(Doctrine):
         hs = hostiles(rm)
         if not hs:
             return
-        cols = [c for c in rm.call("list_colonists")["colonists"] if able(c)]
+        every = rm.call("list_colonists")["colonists"]
+        cols = [c for c in every if able(c)]
         new = [c["id"] for c in cols if c["id"] not in self.drafted]
         if new:
             rm.call("draft", action="draft", ids=",".join(new))
@@ -63,7 +65,10 @@ class Amove(Doctrine):
         contact = bool(fighters) and in_contact(fighters, hs)
         if contact:
             add_spacing(self.tally, fighters)
-        self.note_progress(hs, contact)
+        squad = {c["id"]: {"pos": pos.get(c["id"]), "health": c.get("health", 100),
+                           "downed": bool(c.get("downed"))}
+                 for c in every if c["id"] in self.squad_ids}
+        self.note_progress(hs, contact, squad)
 
     def kpis(self):
         return self.tally.summary() | super().kpis()

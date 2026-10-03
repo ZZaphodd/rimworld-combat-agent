@@ -20,7 +20,8 @@ Casualties: wounded (< 45%) stay drafted and fall back (v1-v3 undrafted them:
 they fled, LESSONS bug 6); downed squadmates are carried to a safe cell when
 "Carry" is enabled, never reserved for a disabled "Rescue" (bug 5).
 vs_throwers: accept_dodge (natural) / stand_off / close_in.
-Signal: no_progress after NO_PROGRESS_TICKS without enemy points lost.
+Signal: no_progress after NO_PROGRESS_TICKS of contested time (we take damage or
+are in a raider's reach) without enemy points lost (EVAL_SPEC §2).
 Evidence (LESSONS §2): v2 tied amove on its home themes; guns per target
 barely moved (2.6 -> 2.7); catastrophic vs grenadiers (5.2 lost).
 """

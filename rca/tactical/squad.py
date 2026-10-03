@@ -114,6 +114,10 @@ class SquadDoctrine(Doctrine):
                 "carrier": any(w in low for w in CARRIER_WORDS)}
         return e
 
+    def enemy_reach(self, h):
+        e = self.enemy_info(h)
+        return e["range"], e["thrower"]
+
     def precheck(self, rm):
         """Preconditions on the starting position (stored in kpis as pre_*)."""
         if not self.preconditions:
@@ -146,6 +150,9 @@ class SquadDoctrine(Doctrine):
                       for i, t in mine.items()}
         self.downed = {c["id"]: pos(mine[c["id"]]) for c in cols
                        if c.get("downed") and c["id"] in mine}
+        sq = {c["id"]: {"pos": pos(mine[c["id"]]) if c["id"] in mine else None,
+                        "health": c.get("health", 100), "downed": bool(c.get("downed"))}
+              for c in cols}
         fighters = []
         for c in cols:
             if c["id"] not in mine or not able(c):
@@ -166,7 +173,7 @@ class SquadDoctrine(Doctrine):
             self.drafted |= set(new)
         self.all_fighters = fighters
         if not hs or not fighters:
-            self.note_progress(hs, False)
+            self.note_progress(hs, False, sq)
             return [], hs
         owned = self.micro.step(fighters, hs, self.now, self.step_ticks)
         for pid in owned:
@@ -174,7 +181,7 @@ class SquadDoctrine(Doctrine):
         self.contact = in_contact(fighters, hs)
         if self.contact:
             add_spacing(self.tally, fighters)
-        self.note_progress(hs, self.contact)
+        self.note_progress(hs, self.contact, sq)
         busy = set(owned)
         busy |= self.rescue_step(fighters, hs, busy)
         busy |= self.wounded_step(fighters, hs, busy)

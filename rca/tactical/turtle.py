@@ -21,7 +21,8 @@ Phases:
           is not inside a live hazard (cell_ok).
 Signals: precondition:no_approach (raid already inside at planning: nothing to
 hold), precondition:enemy_approaches (the idle sally fired: they don't come),
-no_progress (NO_PROGRESS_TICKS without enemy points lost, also after a sally).
+no_progress (NO_PROGRESS_TICKS of contested time without enemy points lost,
+also after a sally; EVAL_SPEC §2).
 Casualties: < 45% health steps off the line to a fallback cell, drafted
 (unless the fight is inside). vs_throwers: accept_dodge (natural; micro
 dodges, viscosity 0.8) / stand_off / close_in.
