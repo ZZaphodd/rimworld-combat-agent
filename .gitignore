@@ -7,3 +7,5 @@ results/*.errors.jsonl
 *.log
 # personal colony saves never enter the repo (WORKFLOW.md); only saves/*.rws.gz are versioned
 *.rws
+# legacy console logs (moved out of the root, environment-specific)
+legacy/logs/
