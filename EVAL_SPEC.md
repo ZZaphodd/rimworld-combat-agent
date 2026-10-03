@@ -40,7 +40,7 @@ class Doctrine:                         # rca/tactical/doctrine.py
     preconditions: dict       # {check name: params}, rca/tactical/preconditions.py
     phases_spec: dict         # setup / hold / commit / reset, prose
     option_choices: dict      # {option: (natural value, alternatives...)}, e.g. vs_throwers
-    no_progress_ticks: int    # 3000: stretch that raises the no_progress signal
+    no_progress_ticks: int    # 3000 contested ticks raise the no_progress signal (UNVERIFIED)
     # set by the harness before reset():
     reflex: bool              # micro layer may act (False: observe and count only)
     rx_version: int           # micro version, stored as reflex_version (rca micro = 4)
@@ -59,22 +59,53 @@ class Doctrine:                         # rca/tactical/doctrine.py
 - **Layer contract (WORKFLOW):** a doctrine owns positioning, targeting, fire control and its own
   phases (setup → hold → commit → reset; a commit such as turtle's sally is a phase, tactical).
   It never switches to another doctrine. It raises **"win condition unattainable"** into
-  `signals` — `{tick, reason, phase}` with reason `no_progress` (no enemy points lost for
-  `no_progress_ticks` since first contact or the last progress; re-arms after progress; raiders
-  last seen near the edge are not progress) or `precondition:<name>` (a runtime break, e.g.
-  turtle `precondition:enemy_approaches` when its idle sally fires, `precondition:no_approach`
-  when the raid is already inside). The harness only records it; the strategic layer will
-  consume it (roadmap 5).
+  `signals` — `{tick, reason, phase}` (+ `pause, contested` for no_progress) with reason
+  `no_progress` (below) or `precondition:<name>` (a runtime break, e.g. turtle
+  `precondition:enemy_approaches` when its idle sally fires, `precondition:no_approach` when the
+  raid is already inside). The harness only records it; the strategic layer will consume it
+  (roadmap 5).
+- **no_progress, rule 2 (contested time; `kpis.no_progress_rule = 2`, from commit 6c041e6).**
+  A stalemate is "we are not taking them down **while** we pay for it or are exposed", not a
+  quiet pause. Per doctrine, from the first contact step (a live raider within 30 cells of a
+  fighter):
+  1. *Progress* = the doctrine-side enemy points lost increase (raiders once seen live that are
+     no longer live; `data/combat_power.json`; raiders last seen within 12 cells of the map edge
+     count 0: walking off is not progress).
+  2. Each observation (once per agent step) is *pressed* if **cost** or **threat** holds
+     (`rca/eval/progress.pressure`):
+     - cost: since the previous observation a squad pawn's summary health (list_colonists
+       `health`, %) fell by more than 0.5, a squad pawn became downed, or a squad pawn present
+       before is no longer listed (dead or carried off);
+     - threat: a live, non-downed raider is within its own weapon range of a squad pawn on the map
+       (standing or downed). Range = the XML verb range of its weapon (`rca/game/weapons`; melee
+       1.5, unknown 25); a frag/molotov carrier counts within max(range, 12.9 throw + 1.9 blast)
+       = 14.8. Distance only: no line of sight.
+  3. *Contested time* = the sum of the lengths of pressed steps (the step that ended at the
+     observation) since the last progress. Progress resets it to 0 and re-arms the signal.
+  4. The signal fires once per stretch when contested time ≥ `no_progress_ticks` = **3000
+     (UNVERIFIED; to be fitted on baseline data)**. The raw pause (time since the last progress)
+     is still measured, but only as a KPI.
+  Rule 1 (rows before 6c041e6, `no_progress_rule` absent) fired on the raw pause alone: in the
+  phase-2 smoke it fired in 2 of 20 battles (turtle and kite on tribal_melee), both won; in the
+  pre-baseline re-check (results/prebaseline/signal_check.jsonl) the same two cells had pauses of
+  3164 and 3122 ticks (rule 1 would fire) with 1500 and 418 contested ticks (rule 2: no signal).
+  KPIs: `longest_pause_ticks`, `longest_contested_ticks`, `pressure_ticks {cost, threat, either,
+  total}` (ticks after first contact). Known limits: no LOS (a raider behind a wall counts as a
+  threat); a carried pawn stays in `list_things` (GAME_FACTS §7) but whether `list_colonists`
+  keeps it is UNVERIFIED (if not, it reads as a cost for one step); whether blood loss lowers
+  summary health is UNVERIFIED.
 - **Preconditions** are data on the class, checked by `preconditions.check(doctrine, Context)`
   (terrain + squad `{pos, range, melee}` + enemies `{pos, cls, range}`; a few terrain tiles, no
   planner run). Each result is `{ok, value, need}`. Squad doctrines evaluate them once at reset
-  and store them as `kpis.pre_<name>`. Thresholds are first guesses (UNVERIFIED), calibrated
-  later from the stored values. Checks: `ranged_squad`, `defensible_terrain` (wall/rock + ½ tree
+  and store them as `kpis.pre_<name>`. **Every threshold below is UNVERIFIED**: first guesses,
+  kept unchanged until they are fitted on baseline data from the stored values (phase-2 smoke:
+  `defensible_terrain` failed on every theme, 0.02 vs 0.10, while turtle won 4/4 on melee
+  themes). Checks: `ranged_squad`, `defensible_terrain` (wall/rock + ½ tree
   share within 14 of the anchor), `enemy_approaches` (melee/short/thrown share), `enemy_melee_heavy`,
   `room_to_spread` (passable share within 10), `enemy_outranges` (raiders with range ≥ our median
   + 5), `approach_cover` (cover cells along the line to the raid).
 
-  | Doctrine | Preconditions |
+  | Doctrine | Preconditions (thresholds UNVERIFIED) |
   |---|---|
   | amove, b0 | – |
   | doctrine | ranged_squad ≥ 0.5 |
@@ -88,6 +119,16 @@ class Doctrine:                         # rca/tactical/doctrine.py
   15.5 cells from it and holds 300 ticks), `close_in` (a shooter within 25 Auto-attacks the
   thrower for 300 ticks). CLI `--option vs_throwers=stand_off`; rows store `options` (the
   effective values; `{}` for doctrines without options). Not evaluated yet.
+- **Casualty options** (to be compared in the baseline; both take shooters out of the fight):
+  `rescue=on|off` (doctrine agent: Carry downed squadmates to a fallback cell) and
+  `wounded_pullback=on|off` (doctrine agent and turtle: pawns below 45% health walk to the
+  fallback cell). Natural value **on** (the phase-2 behaviour, so no version bump). `off` = no
+  rescuer is sent / the wounded pawn stays where the doctrine puts it. CLI
+  `--option rescue=off`. Resume and reports: a key missing from an older row reads as its
+  natural value; reports label non-natural variants, e.g. `doctrine@v4[rescue=off]`, so they
+  never pool with the natural cell. Checked once each in game (results/prebaseline/
+  options_check.jsonl): rescue=off → 0 rescues started (4 pull-backs); wounded_pullback=off →
+  0 pull-backs (doctrine, turtle).
 - `viscosity` (the micro threshold) is `rca.micro.VISCOSITY[name]` (amove/close 0.15, spread /
   doctrine / kite 0.3, turtle 0.8). The micro layer returns the pawns it owns each step; the
   doctrine skips them and re-issues its order on release, and asks `micro.cell_ok(pid, cell)`
@@ -100,8 +141,10 @@ class Doctrine:                         # rca/tactical/doctrine.py
   `focus` → doctrine. Specs: module docstrings of `rca/tactical/{focus,turtle,spread,kite,close}.py`.
 - Casualties (`rca/tactical/squad.py`): wounded fighters are **never undrafted** (LESSONS bug 6);
   doctrine and turtle pull pawns below 45% health back to a fallback cell 10 behind the squad,
-  drafted. The doctrine agent carries downed squadmates to that cell when `Carry` is enabled and
-  never reserves a pawn for a disabled option (bug 5).
+  drafted (option `wounded_pullback`). The doctrine agent carries downed squadmates to that cell
+  when `Carry` is enabled (option `rescue`) and never reserves a pawn for a disabled option
+  (bug 5). The game undrafts a pawn that goes down; when it stands up again every doctrine
+  re-drafts it (`kpis.redrafts`; LESSONS §4 "Turtle Go here failures").
 - Legacy agents had a `versions` map per reflex version (LESSONS bug 12: doctrine, kite and close
   lacked it). In rca the agent version and the micro version are separate row fields, and the
   resume key requires both, so the map is gone.
@@ -273,9 +316,10 @@ Legacy KPIs below the rca rows were produced by legacy/reflexes.py and threatmap
 |---|---|---|
 | engagement (row level) | `engaged_steps, engaged_ours, engaged_theirs, engagement_ratio` | ours = squad pawns with a job starting `attacking`/`melee attacking`; theirs = raiders with `targeting` starting `targeting colonist`/`attacking colonist`. **Biased:** drafted pawns firing at will show "watching for targets" and are not counted (turtle ≈ 0). Don't compare doctrines with it |
 | **progress** (row level, rca) | `progress_rate, progress_points, first_contact_tick, longest_no_progress_ticks` | rate = enemy combat points lost (killed, killed_inferred, downed; tracker fates × data/combat_power.json) per 1,000 ticks from first contact (a live raider within 30 of a standing squad pawn) to the end; longest stretch without an increase, from first contact, in or out of contact, up to and including the step that saw the progress (overestimates by ≤ one step). Null before contact |
-| **fire share** (row level, rca; replaces engagement for comparisons) | `fire_share, enemy_fire_share, surface_ours, surface_theirs, fire_window_ticks, fire_names_ambiguous, log_entries` | Battle-log based (rca/eval/firelog.py): a pawn *fires* in a 300-tick window if a combat entry in it names the pawn as attacker (shot, shot at, hit, missed, threw, stabbed, beat …); *available* = standing (no fate, not downed) during a contact step in that window. fire_share = fired / available pawn-windows per side; surface = mean firing pawns per contact window. Entries are pooled over all harvested logs (every 600 ticks + at the end; an attack is in the victim's log too). Log ticks are TicksAbs: offset = running max of (newest entry − episode tick at harvest), a lower bound, tight in a fight. Names shared by both sides are dropped (listed); names shared within a side (mechs: every pikeman is "Pikeman") are counted per name. Matching is case-insensitive and ignores a leading "the". Caveats: a pawn that died loses its own log, but its shots survive in victims' logs; per-pawn log length is capped by the game (cap UNVERIFIED) |
-| signal (row level, rca) | `signals[{tick, reason, phase}], unattainable_tick, unattainable_reason` | §2; first entry copied to the two flat fields |
-| tactical (all rca squad doctrines) | `phase_log [[tick, phase]], pre_<check> {ok, value, need}, rescue_{started,carried,unavailable,failed}, wounded_pullbacks, thrower_moves, thrower_attacks, orders_failed, order_errors, no_progress_ticks` | phase changes (≤ 30); precondition values at reset; casualty handling; vs_throwers moves |
+| **fire share** (row level, rca; replaces engagement for comparisons) | `fire_share, enemy_fire_share, surface_ours, surface_theirs, fire_window_ticks, fire_names_ambiguous, log_entries` | Battle-log based (rca/eval/firelog.py): a pawn *fires* in a 300-tick window if a combat entry in it names the pawn as attacker (shot, shot at, hit, missed, threw, stabbed, beat …); *available* = standing (no fate, not downed) during a contact step in that window. fire_share = fired / available pawn-windows per side; surface = mean firing pawns per contact window. Entries are pooled over all harvested logs (every 600 ticks + at the end; an attack is in the victim's log too). Log ticks are TicksAbs: offset = running max of (newest entry − episode tick at harvest), a lower bound, tight in a fight. Names shared by both sides are dropped (listed); names shared within a side (mechs: every pikeman is "Pikeman") are counted per name. Matching is case-insensitive and ignores a leading "the". Mechs, checked after the fix (results/prebaseline/mech_recheck.jsonl): enemy_fire_share 0.64, 0.59 (doctrine) and 0.63, 0.73 (close) where the smoke had 0.0. Caveats: a pawn that died loses its own log, but its shots survive in victims' logs; per-pawn log length is capped by the game (cap UNVERIFIED) |
+| signal (row level, rca) | `signals[{tick, reason, phase, pause?, contested?}], unattainable_tick, unattainable_reason` | §2; first entry copied to the two flat fields |
+| no_progress rule (kpis, every rca doctrine) | `no_progress_rule, longest_pause_ticks, longest_contested_ticks, pressure_ticks {cost, threat, either, total}` | §2 rule 2. `longest_pause_ticks` is the doctrine-side twin of the row's `longest_no_progress_ticks` (doctrine view of points lost; it can differ by a step or a late fate) |
+| tactical (all rca squad doctrines) | `phase_log [[tick, phase]], pre_<check> {ok, value, need}, rescue_{started,carried,unavailable,failed}, wounded_pullbacks, thrower_moves, thrower_attacks, orders_failed, order_errors, redrafts, redraft_on_error, no_progress_ticks` | phase changes (≤ 30); precondition values at reset; casualty handling; vs_throwers moves; re-drafts of pawns that stood up again / after a "No order matched 'Go here'" |
 | spacing (all doctrines) | `gap5_share` | share of fighter-steps whose nearest squadmate is ≥ 5 cells away |
 | spread | `mean_gap, step_outs` | nearest-ally distance, capped at 15; spacing moves |
 | kite | `shooter_melee_dist, melee_adjacent_share (≤ 1.5), retreat_share` | |
@@ -312,7 +356,7 @@ Schema 2 (rca rows carry `"schema": 2`; legacy rows have no `schema`):
 | messages | `raid_fled_tick, raid_satisfied_tick, game_messages[{tick, text}]` (≤ 60, text ≤ 160 chars), `building_deltas` (counts of steps whose `_delta` had new/removed buildings) |
 | engagement | `engaged_steps, engaged_ours, engaged_theirs, engagement_ratio` — biased (fire at will is not counted; kept for continuity only); use `fire_share, enemy_fire_share, surface_ours, surface_theirs` (+ `fire_window_ticks, fire_names_ambiguous, log_entries`) |
 | progress / signal (rca, phase 2) | `progress_rate, progress_points, first_contact_tick, longest_no_progress_ticks, signals, unattainable_tick, unattainable_reason` |
-| options (rca, phase 2) | `options` (effective tactical options, e.g. `{"vs_throwers": "accept_dodge"}`; `{}` if none) |
+| options (rca, phase 2) | `options` (effective tactical options, e.g. `{"vs_throwers": "accept_dodge", "rescue": "on", "wounded_pullback": "on"}`; `{}` if none; rows before 1403042 lack `rescue`/`wounded_pullback` = on) |
 | debug | `debug_kidnap_targets, debug_kidnap_ambiguous, debug_dead_names, debug_squad, debug_leaving_jobs` |
 | behaviour | `kpis` (dict, §8; rca adds `terrain_*` cache counters) or `{"error": ...}` |
 
@@ -322,6 +366,7 @@ canonical names. Legacy rows store `score` (old formula) instead of `score_v1`; 
 
 **Resume key** (PROCEDURES.md §11): (scenario, canonical agent) counts only rows with the current
 `agent_version`, the same (cycle, reflex, reflex_version) and the same effective `options`
-(rows without the field count as `{}`). Both the stored and the requested
+(rows without the field count as `{}`; an option key missing from a row counts as its natural
+value). Both the stored and the requested
 agent name are canonicalised, so `--agents hold` and `--agents turtle` count the same rows
 (LESSONS bug 8, fixed).

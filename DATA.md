@@ -123,6 +123,10 @@ hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike) → o
 | `phase2/options.jsonl` | 4 | **rca** one episode per `vs_throwers` option (stand_off, close_in) for spread on pirate_grenadier and turtle on frag_check: exercises the option, not an evaluation. Mech rows in smoke.jsonl have enemy_fire_share 0.0 (parser gap, fixed later) |
 | `phase2/shakeout.jsonl` | 1 | first doctrine v4 episode (before the rescue retry cap) |
 | `phase2/mech_firelog_check.jsonl` | 1 | doctrine v4 on theme_mechs after the mech-name firelog fix (enemy fire share 0.72) |
+| `prebaseline/mech_recheck.jsonl` | 4 | **rca** doctrine and close on theme_mechs, 2 each, after the firelog fix: enemy_fire_share 0.59–0.73 (smoke rows: 0.0). `prebaseline/checks.sh` + `.log` |
+| `prebaseline/signal_check.jsonl` | 4 | turtle and kite on theme_tribal_melee, 2 each, with no_progress rule 2 (kpis `longest_pause_ticks`, `longest_contested_ticks`, `pressure_ticks`) |
+| `prebaseline/options_check.jsonl` | 3 | one episode each: doctrine rescue=off, doctrine wounded_pullback=off (pirate_mixed), turtle wounded_pullback=off (pirate_melee); exercises the options, not an evaluation |
+| `prebaseline/restart_check.jsonl` | 3 | amove on frag_check: planned restart (`--restart-every 1`) before run 2, crash relaunch (game killed) before run 3. `prebaseline/restart.sh` + `.log` |
 | `rca_smoke.jsonl` | 2 | **rca** schema 2: amove v5, adaptive + micro v4, on theme_pirate_mixed and theme_frag_check (smoke test of the new harness) |
 | `drills/frag_drill*.jsonl` | – | **rca** micro frag drill: one `event` row per exploded frag (`session, dodge, frag, cell, landed_seen, gone_seen, in_blast, in_zone, escaped, stayed, lost_track, hit_pawns, hit_entries, hit_in_blast, moves, false_alarm_moves, fuse_left_at_move[], latency[]`) and one `session` row (`ticks, throwers, standing_end, returns, names_unique, kpis, moves[]`). `_trial` = first shake-out run |
 | `rescored/<file>.jsonl` | = source | per-row verdicts recomputed by `tools/rescore.py`: `grade_stored, grade_v1, grade, score_v1, enemy_lost_points, our_lost_points, ler, ler_basis` (+ identity/config). Raw files untouched |

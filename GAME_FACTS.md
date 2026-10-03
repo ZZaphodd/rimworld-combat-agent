@@ -211,7 +211,11 @@ See results/hazards.md (reaction windows) and results/reflex_report.md. Addition
   ordered to carry walks to the downed squadmate, picks it up (~150 ticks for 3 cells), keeps it
   while it walks under `Go here` (the victim's position follows), and `do_thing_action("Drop
   <name>")` puts it down. A carried pawn stays in `list_things(faction=player)` (downed=true),
-  so the fate tracker does not mistake it for a missing pawn. Walking while carrying looked
+  so the fate tracker does not mistake it for a missing pawn.
+- **Going down undrafts a pawn, and it stands up undrafted** [obs 2026-10-03, theme_tribal_melee:
+  `T: Damage Until Down` on a drafted pawn → Draft gizmo inactive; healed until it stood → job
+  "wandering", `Go here` → "No order matched"]. An agent that tracks drafted pawns in its own set
+  must forget a pawn once it is downed (rca/tactical/squad.py). Walking while carrying looked
   slow (~1 cell per 30 ticks in that probe; one sample, UNVERIFIED).
 - Equal raid points ≠ equal headcount: tribal raids at 1500 pt are ~26 pawns vs our 14 (theme_report).
 

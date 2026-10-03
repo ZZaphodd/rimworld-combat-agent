@@ -5,8 +5,8 @@ Win condition: melee raiders cross open ground under the fire of the whole
 squad; the one shooter they reach is peeled through the group, dragging its
 chaser past everyone else's guns; shooting time and cohesion, not distance
 (LESSONS §2: 5/5 on both melee themes; retreat_share 0.14-0.27).
-Preconditions: a melee-heavy raid (enemy_melee_heavy) and a ranged squad
-(ranged_squad). Compact by design: never route it against explosives.
+Preconditions (thresholds UNVERIFIED): a melee-heavy raid (enemy_melee_heavy)
+and a ranged squad (ranged_squad). Compact by design: never route it against explosives.
 Phases:
   setup   draft, nobody advances (v1 doubled the closing speed);
   hold    stand, fire at will; a shooter runs only if a melee raider that is

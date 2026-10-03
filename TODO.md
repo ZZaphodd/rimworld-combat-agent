@@ -49,11 +49,21 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
         stay drafted (bug 6); XML weapon ranges (bug 3); battle-log fire share (bug 9);
       * phases + commit/reset criteria per doctrine; "win condition unattainable" signal;
       * planned game restart every 100 episodes (`--restart-every`).
-- [ ] Before the baseline matrix (roadmap 2), from the phase-2 smoke (LESSONS §2):
-      * calibrate the precondition thresholds against outcomes (values are in every row);
-      * decide whether rescue (doctrine agent only) and wounded pull-back stay on: both take
-        shooters out of the fight; no evidence yet that they pay;
-      * the planned restart and crash relaunch paths have not run in rca (UNVERIFIED).
+- [x] Pre-baseline cleanup (2026-10-03, LESSONS §2 / §4):
+      * no_progress rule 2: only contested time (cost or threat) counts (EVAL_SPEC §2);
+      * rescue / wounded pull-back are options (`rescue=on|off`, `wounded_pullback=on|off`,
+        natural on), in rows, resume key and report labels;
+      * mech fire share re-checked (0.59–0.73 enemy side);
+      * planned restart and crash relaunch ran once each in rca;
+      * turtle's "No order matched 'Go here'": undrafted after going down; re-draft fix.
+- [ ] Open before / with the baseline matrix (roadmap 2):
+      * calibrate the precondition thresholds against outcomes (values are in every row;
+        UNVERIFIED, `defensible_terrain` failed on every theme while turtle won on melee);
+      * fit T for no_progress rule 2 (3000 contested ticks, UNVERIFIED) and check that it fires
+        on a real stalemate (e.g. turtle vs pirate_sniper), not only that it stays quiet in wins;
+      * put the casualty options in the matrix (doctrine × rescue on/off × pull-back on/off on the
+        themes where pawns go down; turtle × pull-back on/off) — decide the natural value after;
+      * a planned restart after 100 real loads (the default) has not happened yet.
 - [ ] Micro drills beyond frags: fire step-out drill (molotov carriers), re-entry under Auto
       attack (amove walking a released pawn back into a live zone).
 - [ ] "Cheese" track = an asset-use layer next to doctrine (maneuver); the router also picks assets.
@@ -118,8 +128,8 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       rows carry `commit`).
 - [ ] Phase 2 requirements from the stalemate clarification (WORKFLOW layer contracts):
       1. [x] Progress-rate KPI + longest no-progress stretch (EVAL_SPEC §8); every doctrine raises
-         "win condition unattainable" (`signals`) after 3000 ticks without progress or on a runtime
-         precondition break.
+         "win condition unattainable" (`signals`) after 3000 *contested* ticks without progress
+         (rule 2, EVAL_SPEC §2) or on a runtime precondition break.
       2. [x] Preconditions as data on each doctrine + `rca/tactical/preconditions.check` (EVAL_SPEC
          §2); the router (roadmap 5) will call it. Thresholds UNVERIFIED.
       3. [~] Positioning vs throwers is selectable (`--option vs_throwers=...`, recorded in rows);

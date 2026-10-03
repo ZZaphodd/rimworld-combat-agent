@@ -14,7 +14,7 @@ RimWorld enemy AI, not other players (see TODO.md, scope principle).
 | **strategic / decision** | Choosing doctrine and assets for this raid, terrain and squad, and when to transition (the router). Judged over a scenario distribution | RTS/military |
 | **precondition** | What a doctrine needs to be able to win (turtle: defensible terrain — choke/concave — and an enemy that will come to it). Checked by the router before choosing | ours |
 | **win condition unattainable** | The signal a doctrine raises (no progress for 3000 ticks, or a precondition broken at runtime); the strategic layer decides what to do with it | ours |
-| **stalemate / progress rate** | Progress rate = enemy combat points lost per 1,000 ticks; a stalemate is a long stretch with no progress. Tactical KPI and the trigger for commit/reset | ours |
+| **stalemate / progress rate** | Progress rate = enemy combat points lost per 1,000 ticks. A **pause** is any stretch with no progress; a **stalemate** is a stretch with no progress while we pay a cost (damage, downed, lost pawns) or are under threat (a raider in its weapon range of us): only that *contested* time raises "win condition unattainable" (EVAL_SPEC §2). Tactical KPI and the trigger for commit/reset | ours |
 | **layer discipline** | Change and test one layer at a time with the others held fixed; a micro win must not be judged by tactical outcomes | ours |
 | **doctrine** | A posture with a **win condition**, plus **commit** and **reset** criteria | ours + MOBA |
 | **win condition** | How a doctrine wins, e.g. turtle: "they come through our choke" | MOBA |

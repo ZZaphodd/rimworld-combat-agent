@@ -165,8 +165,11 @@ Theme predicates and acceptance rates: DATA.md §3.
    `agent.reset`, then the loop (EVAL_SPEC.md).
 5. `--scenarios all` excludes check-tier scenarios (frag_check): name them explicitly.
 6. Tactical options: `--option vs_throwers=accept_dodge|stand_off|close_in` (doctrine, turtle,
-   spread; ignored by the others). Rows store the effective `options`; `--resume` counts only rows
-   with the same options. Example (phase-2 smoke): `results/phase2/smoke.sh`.
+   spread), `--option rescue=on|off` (doctrine), `--option wounded_pullback=on|off` (doctrine,
+   turtle); natural values first; ignored by doctrines that don't offer them. Rows store the
+   effective `options`; `--resume` counts only rows with the same options (a key missing from an
+   older row counts as its natural value). Example (phase-2 smoke): `results/phase2/smoke.sh`;
+   one run per casualty option: `results/prebaseline/checks.sh`.
 
 ## 10. Crash watchdog and planned restarts (legacy/results/threatmap_check*.sh; rca: `session.Watchdog`)
 
@@ -182,8 +185,16 @@ game (`pkill -f "RimWorld by Ludeon Studios"`, SIGKILL after 60 s if it is still
 until the process is gone, relaunches it as above and resets the counter. Planned restarts don't
 count against the 2-relaunch limit; a crash relaunch also resets the counter. Why: NullReference
 errors grow after ~100 loads and a native crash came at ~150 loads in one session (RIMMOLT_API
-§4). Episodes never save, so nothing is lost. The relaunch path itself is UNVERIFIED in rca (no
-crash and no 100-episode batch since phase 1). Legacy shell version:
+§4). Episodes never save, so nothing is lost.
+
+**Verified once in rca (2026-10-03, `results/prebaseline/restart.sh`, amove on frag_check):**
+planned restart with `--restart-every 1` (log: "watchdog: planned restart after 1 episodes";
+the game quit, relaunched and loaded the next scenario; ~45 s between episodes, load included),
+and crash relaunch (game killed with `pkill`, then a new batch: "watchdog: relaunching RimWorld
+(restart 1)", ~42 s). Both episodes completed normally; one game process afterwards. Not yet
+seen: a real crash mid-episode, and a planned restart after 100 loads (the default).
+`tools/run_eval.py` passes its flushing logger to the watchdog, so these lines reach a detached
+log as they happen. Legacy shell version:
 
 ```
 alive(): POST get_status (curl -m 10); ok if the reply contains "result"

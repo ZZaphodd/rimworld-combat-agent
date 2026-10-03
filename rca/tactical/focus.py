@@ -4,7 +4,8 @@ Win condition: concentrate fire. Each enemy is shot by at most MAX_PER_TARGET
 guns, in kill-priority order (rocket carriers, then lancers/pikemen, ...), so
 raiders drop one at a time and their fire shrinks faster than ours
 (Lanchester square law); no overkill.
-Preconditions: a mostly ranged squad (ranged_squad >= 0.5).
+Preconditions (thresholds UNVERIFIED): a mostly ranged squad (ranged_squad >=
+0.5).
 Phases:
   setup   draft, take rally cells RALLY_GAP apart around the anchor;
   hold    on the rally cells (drafted, fire at will) while no raider is within

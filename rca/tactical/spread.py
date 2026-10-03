@@ -2,7 +2,8 @@
 
 Win condition: trade at full engagement surface while splash (frags, rockets,
 inferno) can't hit more than one pawn per blast.
-Preconditions: room to spread around the squad (room_to_spread).
+Preconditions (thresholds UNVERIFIED): room to spread around the squad
+(room_to_spread).
 Phases:
   setup   draft;
   hold    any pawn with a squadmate closer than MIN_GAP steps STEP_OUT cells

@@ -41,7 +41,7 @@ Coordinates are map cells `(x, z)`, with z pointing north. Pawn and thing ids ar
 | `get_pawn` | `id`, optional `tab` | Default: `name, x, z, weapon` (label, e.g. `Heavy SMG (good)`, `Biocoded heavy SMG (normal)`), `health, downed, dead, job`; `error` if the pawn is gone. Dead or carried-off pawns have no `x` | Tabs used: `health` → `hediffs[]` of `{label, part, permanent}`; `log` → `entries[]` of `{tick, type, text, battle}` (`type` `combat`/`social`; `tick` is **TicksAbs**, not `ticksGame` [obs 2026-10-03]; short, and it vanishes with a dead pawn); `records` → `records[]` of `{record, value}` (we read `Kills`). Other tabs: UNVERIFIED |
 | `get_area` | `minX, minZ, maxX, maxZ, render="ascii"` | `grid`: list of strings, **north row (max z) first**; also `legend` and `orientation` | One call is capped at about 55×55 cells, so tile in 50×50 [code]. Legend below. Other layers (`layer=roof/buildings/things...`) unused |
 | `get_info_card` | `id`, or `x, z`, or `def` (+ `stuff`), or `stat` | `stats[]` of `{category, stats[{label, value}]}` | `def` takes **ThingDefs only** (`Unknown ThingDef: Mercenary_Gunner` for a PawnKindDef) [obs 2026-10-03]. A pawn's card has no combat power; see EVAL_SPEC §6 for where points come from |
-| `inspect_thing` | `id` or `x, z` | `actions[]` with `toggle`, `active` for toggle gizmos | Used to read a drafted pawn's `Fire at will` state before toggling it (micro drill) |
+| `inspect_thing` | `id` or `x, z` | `actions[]` with `toggle`, `active` for toggle gizmos | Used to read a drafted pawn's `Fire at will` state before toggling it (micro drill). Draft state: an undrafted pawn shows `Draft` (toggle, active false), a drafted one `Undraft` (active true) [obs 2026-10-03]; `list_colonists` and `get_pawn` have no drafted field |
 | `list_fires` | – | `fireCount`, `bounds`, `fires[{x, z, size}]` | Not used by rca yet (we query `Fire` things); probe only |
 | `get_world` | – | `factions[]`: `{def, relation}` | |
 | `list_windows` / `get_window_ui` / `window_action` | `index`, `option` | `windows[]`: `{type, index}`; `labels[]` | Planet page: `Page_CreateWorldParams`; the faction list is the labels between `"Factions"` and `"Add..."`. Intro letter: `Dialog_NodeTree`, close with `option="OK"` |
@@ -172,7 +172,7 @@ settings `Never Force Normal Speed`. Probes only: `T: Attach Fire` (map tool, `c
 | Native crash (`Verse.SectionLayer_Sand:Regenerate` in `Map.FinalizeInit` while loading) | About 150 loads in one session (theme_report) | Restart RimWorld every ~100 episodes; watchdog (PROCEDURES.md) |
 | `ConnectionRefusedError` | Game process gone (57 failed episode attempts across logs) [log] | Watchdog relaunch; `--resume` |
 | `largeOutput` without `things` | `list_things` without `confirm=True` and many results | Always pass `confirm=True` |
-| Empty `order_pawn` options | Undrafted pawn | Draft first |
+| Empty `order_pawn` options; direct `Go here` → `{ok: false, error: "No order matched 'Go here'.", available: []}` | Undrafted pawn, including one the game undrafted when it went down and that stood up again [obs 2026-10-03]. Occupied, impassable and far cells still accept `Go here` (the game picks a cell nearby) | Draft first; rca re-drafts pawns that were downed and retries once on this error |
 | Planet page `Add...` menu closes | Any scripted click | Manual faction edit |
 
 ## 5. RimMolt's own messages (strings we match)

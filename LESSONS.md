@@ -265,8 +265,9 @@ Smoke runs check that each doctrine does what its spec says, not which doctrine 
 | close v3 | pirate_sniper | defeat ×2 | 5, 5 | 0.35, 0.30 | 137, 103 | 0.56/0.45, 0.51/0.46 | all 14 closed, mean tick 1134, 1228 |
 | close v3 | mechs | decisive ×2 | 2, 1 | 1.0, 2.0 | 379, 319 | 0.60, 0.63 | all 14 closed, mean tick ~1700 |
 
-(Mech-side enemy fire share was 0.0 in these rows: a parser gap, fixed afterwards; a re-run gave
-0.53/0.72, results/phase2/mech_firelog_check.jsonl.)
+(Mech-side enemy fire share was 0.0 in these rows: a parser gap, fixed afterwards. Re-run of both
+cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire share 0.64, 0.59
+(doctrine) and 0.63, 0.73 (close); ours 0.53, 0.49 / 0.68, 0.64; all 4 decisive.)
 - **Turtle and kite still win their home themes** (8/8 decisive or repelled, 1 colonist lost in
   8 battles); turtle's concave shows as engagement surface 9–10 of ours vs 3.6–4.3 of theirs.
   → The ports keep the v3/v4 behaviour; the baseline matrix can measure them.
@@ -277,15 +278,27 @@ Smoke runs check that each doctrine does what its spec says, not which doctrine 
 - **The doctrine agent lost both pirate_mixed battles** (one with 0 dead but 11 downed and a
   satisfied raid, one with 5 kidnapped) while rescuing 13–19 times per battle; on mechs it won
   both. Carrying works mechanically, but a carrier walks ~1 cell per 30 ticks (one probe) and stops shooting.
-  → Rescue is not shown to pay; keep it doctrine-agent-only and test it as an option before the
-  baseline (TODO).
+  → Rescue is not shown to pay; keep it doctrine-agent-only. It is now an option
+  (`rescue=on|off`, and `wounded_pullback=on|off` for doctrine and turtle; natural on); the
+  baseline compares them. One episode each ran as designed (rescue=off: 0 rescues; pull-back off:
+  0 pull-backs), n=1, no verdict.
 - **close loses to snipers in this squad** (5 lost per battle, all 14 closed by tick ~1200): the
   losses come during the approach, as in v2. → Bounding overwatch (TODO) before reading close's
   sniper cell as a doctrine verdict.
 - **The no_progress signal fired twice, both in won battles** (kite tribal_melee: stall 5159
-  ticks while the last raiders were slow to die/leave; turtle tribal_melee after its sally). The
-  signal says "no points lost for 3000 ticks", not "losing". → The strategic layer must read it
-  with the force ratio; 3000 ticks is a first value.
+  ticks while the last raiders were slow to die/leave; turtle tribal_melee after its sally; plus
+  one `precondition:no_approach` in the same turtle row, so 3 signal entries in 2 of 20 rows).
+  Rule 1 said "no points lost for 3000 ticks": a pause, not a stalemate. → **Rule 2** (EVAL_SPEC
+  §2): count only *contested* time, i.e. steps in which we took damage / lost or downed a pawn, or
+  a raider had one of us in its weapon range (throw zone for grenadiers). Offline, the smoke rows
+  only bound it (contested ≤ pause, so the 18 rows with a pause < 3000 cannot fire; the per-step
+  data needed for the 2 others is not stored). Re-run of the two cells (results/prebaseline/
+  signal_check.jsonl, n=2 each, all won): pauses 3164 (turtle) and 3122 (kite) ticks, so rule 1
+  would have fired twice again; contested 1500 and 418 ticks, rule 2 fired 0 times. Threat
+  dominates the pressure: in the 14 rule-2 rows so far, 31–100% of post-contact time was
+  pressed (100% in all 4 mech battles: Pikemen reach 44.9 cells). Whether rule 2 fires when it should (a real stalemate: snipers out-ranging a turtle)
+  is untested. → T = 3000 contested ticks stays a first value (UNVERIFIED), to be fitted on
+  baseline data.
 - **vs_throwers options run** (results/phase2/options.jsonl, 1 episode each, not an evaluation):
   stand_off made 15 thrower moves (spread, grenadier) and close_in 24 thrower attacks; on
   frag_check turtle's on_slot_share fell from ~1.0 to 0.64 (stand_off) and 0.14 (close_in), as
@@ -394,8 +407,19 @@ New in phase 2 (found while porting):
   anything that joins log entries to episode time needs an offset (firelog estimates it).
 - **Mech names in the log are lowercase with "the"** ("the termite's head") and several mechs
   share one label, so log KPIs are per name for mechs (EVAL_SPEC §8).
-- **Turtle Go here failures:** 11 failed orders ("No order matched 'Go here'") in one
-  tribal_melee episode after the sally (cause UNVERIFIED; counted in `order_errors`).
+- **[fixed] Turtle Go here failures:** 11 failed orders ("No order matched 'Go here'") in one
+  tribal_melee episode after the sally. Cause, reproduced in game on theme_tribal_melee
+  (2026-10-03): the error (with an empty option list) means the pawn is **undrafted**; occupied,
+  impassable and far cells still accept Go here. The game undrafts a pawn when it goes down, and
+  it stands up undrafted; the doctrine kept it in its own `drafted` set and never drafted it
+  again (that row has "McClain ... is no longer incapable of walking" at tick 7912, and the
+  wounded pull-back retried the failed Go here every step; an undrafted pawn also follows the
+  flee response — bug 6 by another road). Fix: squad doctrines and amove forget the draft of a
+  downed/broken pawn and re-draft it when it is able (`kpis.redrafts`); goto() drafts and retries
+  once on this error (`redraft_on_error`). Tests: tests/test_tactical.py (DraftingGame). In the
+  11 squad-doctrine episodes since: 0 failed orders, 1 re-draft (close on mechs), 0 retries on
+  the error. The 2 turtle tribal_melee re-runs had no pawn standing up again, so the original
+  episode was not reproduced end to end; the cause was reproduced with a direct probe.
 
 New in phase 1 (found while porting):
 - **Kidnapper check lagged one step**: the squad's downed state was read from the previous

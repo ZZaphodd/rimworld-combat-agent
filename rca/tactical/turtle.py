@@ -3,8 +3,8 @@
 Win condition: raiders come through our choke/approach into a packed concave
 and die crossing open ground under the fire of every shooter at once
 (engagement surface ours > theirs).
-Preconditions: defensible terrain near the anchor (defensible_terrain) and an
-enemy that comes to us (enemy_approaches). The "turtle + grenade" stalemate
+Preconditions (thresholds UNVERIFIED): defensible terrain near the anchor
+(defensible_terrain) and an enemy that comes to us (enemy_approaches). The "turtle + grenade" stalemate
 (LESSONS §0) was a turtle without either.
 Phases:
   setup   plan (rca/tactical/planner.py v4, per-pawn XML ranges), draft, walk

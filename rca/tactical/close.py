@@ -2,8 +2,8 @@
 
 Win condition: snipers and archers out-range most of the squad, so trading at
 their range loses; inside CLOSE_DIST our short guns out-trade them.
-Preconditions: the raid out-ranges us (enemy_outranges) and there is cover on
-the way (approach_cover).
+Preconditions (thresholds UNVERIFIED): the raid out-ranges us (enemy_outranges)
+and there is cover on the way (approach_cover).
 Phases:
   setup   draft;
   commit  every pawn farther than CLOSE_DIST from its nearest raider bounds
