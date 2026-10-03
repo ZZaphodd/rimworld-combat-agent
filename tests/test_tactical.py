@@ -177,7 +177,7 @@ class Progress(unittest.TestCase):
 
 class FireLog(unittest.TestCase):
     NAMES = {"Osborn", "Mausi", "Opa", "Xevion", "Minoru", "Bellerose", "Rakool", "Hamster",
-             "Mitch"}
+             "Mitch", "Pikeman", "Termite"}
 
     def test_attackers(self):
         cases = {
@@ -191,6 +191,9 @@ class FireLog(unittest.TestCase):
             "Opa's shot narrowly missed Xevion and hit Mitch.": "Opa",
             "Burn in the right shoulder made Xevion drop.": None,
             "Xevion was downed.": None,
+            "The pikeman's needle gun bullet hit Mitch.": "Pikeman",
+            "Mitch's shot damaged the termite's head.": "Mitch",
+            "The blast of the termite's thump cannon damaged Mitch's torso.": "Termite",
         }
         for text, who in cases.items():
             self.assertEqual(firelog.attacker(text, self.NAMES), who, text)

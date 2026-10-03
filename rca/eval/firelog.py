@@ -15,6 +15,10 @@ Attacker phrasing (seen 2026-10-03, scenario_theme_pirate_mixed):
   "The blast of Minoru's doomsday rocket damaged Xevion's torso" -> Minoru
   "Bellerose, using her left fist aptly, beat Xevion ..."        -> Bellerose
   "Rakool missed while trying to beat Hamster."                  -> Rakool
+Names shared by several pawns of one side (mechs are all "Pikeman",
+"Scyther" ...) are counted per name, not per pawn: a window counts once per
+name, so the enemy side of a mech raid is a lower bound. Mech attacker
+phrasing beyond "the <kind>'s ..." is UNVERIFIED.
 Log ticks are absolute (TicksAbs), not ticksGame: the offset is estimated as
 the running max of (newest entry tick - episode tick at harvest), a lower bound
 that is tight while the fight is on (error <= the gap since the newest entry).
@@ -28,18 +32,26 @@ BY_RE = re.compile(r"\bby (.+?)'s\b")
 POSS_RE = re.compile(r"^(?:The \w+ (?:of|from) )?(.+?)'s ")
 
 
+def _the(n):
+    n = n.strip()
+    return n[4:] if n.lower().startswith("the ") else n
+
+
 def attacker(text, names):
-    """The known name that attacks in this entry, or None."""
+    """The known name that attacks in this entry, or None. Case-insensitive,
+    a leading "the " is ignored (mechs: "the termite's head")."""
+    low = {n.lower(): n for n in names}
     m = BY_RE.search(text)
     if m:
-        return m.group(1) if m.group(1) in names else None
+        return low.get(_the(m.group(1)).lower())
     m = POSS_RE.match(text)
-    if m and m.group(1) in names:
-        return m.group(1)
-    for n in sorted(names, key=len, reverse=True):
-        if text.startswith(n + ",") or text.startswith(n + " "):
-            nxt = text[len(n):].lstrip(", ").split(" ", 1)[0].lower()
-            return None if nxt in PASSIVE else n
+    if m and _the(m.group(1)).lower() in low:
+        return low[_the(m.group(1)).lower()]
+    t = _the(text).lower()
+    for n in sorted(low, key=len, reverse=True):
+        if t.startswith(n + ",") or t.startswith(n + " "):
+            nxt = t[len(n):].lstrip(", ").split(" ", 1)[0]
+            return None if nxt in PASSIVE else low[n]
     return None
 
 
