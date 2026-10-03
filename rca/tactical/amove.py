@@ -3,6 +3,8 @@ retarget when the target is gone. No positioning, no focus: the baseline every
 doctrine is compared with. Micro (frag dodge, fire step-out) owns pawns while
 it acts; amove re-attacks once they are released.
 
+It raises no_progress like every doctrine (information only; behaviour is
+unchanged from phase 1, so the version stays 5).
 Unlike legacy b1 v2 it does not shoot rocket carriers first (that was part of
 reflex v2, not of amove); targeting is plain nearest-first.
 """
@@ -22,6 +24,7 @@ class Amove(Doctrine):
     name = "amove"
     version = 5                # legacy b1 rows are v1-v4
     win_condition = "trade fire at full engagement surface; no win condition beyond that"
+    phases_spec = {"hold": "none: Auto attack from the first step"}
 
     def reset(self, rm, manifest):
         super().reset(rm, manifest)
@@ -57,8 +60,10 @@ class Amove(Doctrine):
             r = rm.call("do_thing_action", id=pid, label="Auto attack (AI)", targetId=near["id"])
             if r.get("ok"):
                 self.target[pid] = near["id"]
-        if fighters and in_contact(fighters, hs):
+        contact = bool(fighters) and in_contact(fighters, hs)
+        if contact:
             add_spacing(self.tally, fighters)
+        self.note_progress(hs, contact)
 
     def kpis(self):
         return self.tally.summary() | super().kpis()
