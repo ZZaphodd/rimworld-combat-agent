@@ -14,6 +14,9 @@ stands, or at `max_ticks`; then the base is reloaded.
 Per event (one exploded frag): pawns in the blast reach at landing, escaped,
 stayed, battle-log hits, moves with fuse left at the order, false-alarm moves
 (the pawn was not inside 1.9 of the frag's final cell when ordered).
+The fair denominator across modes is 'threatened': pawns within 1.9 of the
+frag's final cell at its FIRST sighting. 'In blast at landing' is kept but
+shrinks with the dodge on (pawns leave on in-flight sightings).
 """
 import json
 import math
@@ -125,12 +128,15 @@ def event_rows(res, dodge, session_id):
             "frag": e["frag"], "cell": e["cell"], "landed_seen": e["landed_seen"],
             "gone_seen": e["gone_seen"], "in_blast": len(e["in_blast"]),
             "in_zone": len(e["in_zone"]), "escaped": len(e["escaped"]), "stayed": len(e["stayed"]),
+            "threatened": len(e["threatened"]), "threatened_escaped": len(e["threatened_escaped"]),
+            "hit_threatened": sum(p in e["hit"] for p in e["threatened"]),
             "lost_track": len(e["lost_track"]), "hit_pawns": len(e["hit"]),
             "hit_entries": sum(e["hit"].values()),
             "hit_in_blast": sum(p in e["hit"] for p in e["in_blast"]),
             "moves": len(e["moves"]), "false_alarm_moves": false_alarm,
             "fuse_left_at_move": [m["left"] for m in e["moves"]],
-            "latency": [m["tick"] - e["landed_seen"] for m in e["moves"]]})
+            "latency": [m["tick"] - e["first_seen"] for m in e["moves"]],
+            "before_landing": sum(m["tick"] < e["landed_seen"] for m in e["moves"])})
     return out
 
 
@@ -178,11 +184,23 @@ def summarize(rows):
         ev = [r for r in rows if r.get("kind") == "event" and r["dodge"] == dodge]
         hot = [r for r in ev if r["in_blast"]]
         inb = sum(r["in_blast"] for r in hot)
+        thr = [r for r in ev if r.get("threatened")]
+        nthr = sum(r["threatened"] for r in thr)
         moves = sum(r["moves"] for r in ev)
         lat = [x for r in ev for x in r["latency"]]
         left = [x for r in ev for x in r["fuse_left_at_move"] if x is not None]
         out["on" if dodge else "off"] = {
-            "frags": len(ev), "events_in_blast": len(hot), "pawns_in_blast": inb,
+            "frags": len(ev),
+            "events_threatened": len(thr), "pawns_threatened": nthr,
+            "threatened_escaped": sum(r["threatened_escaped"] for r in thr),
+            "threatened_escape_rate": round(sum(r["threatened_escaped"] for r in thr) / nthr, 3)
+            if nthr else None,
+            "hit_threatened": sum(r["hit_threatened"] for r in thr),
+            "hit_rate_threatened": round(sum(r["hit_threatened"] for r in thr) / nthr, 3)
+            if nthr else None,
+            "events_threatened_all_escaped": sum(r["threatened_escaped"] == r["threatened"]
+                                                 for r in thr),
+            "events_in_blast": len(hot), "pawns_in_blast": inb,
             "escaped": sum(r["escaped"] for r in hot), "stayed": sum(r["stayed"] for r in hot),
             "lost_track": sum(r["lost_track"] for r in hot),
             "escape_rate": round(sum(r["escaped"] for r in hot) / inb, 3) if inb else None,
@@ -192,6 +210,7 @@ def summarize(rows):
             "hits_per_frag": round(sum(r["hit_pawns"] for r in ev) / len(ev), 3) if ev else None,
             "events_all_escaped": sum(r["escaped"] == r["in_blast"] for r in hot),
             "moves": moves, "false_alarm_moves": sum(r["false_alarm_moves"] for r in ev),
+            "moves_before_landing": sum(r.get("before_landing", 0) for r in ev),
             "latency_median": sorted(lat)[len(lat) // 2] if lat else None,
             "fuse_left_median": sorted(left)[len(left) // 2] if left else None}
     return out

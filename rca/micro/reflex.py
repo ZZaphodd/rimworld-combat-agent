@@ -88,7 +88,7 @@ class MicroLayer:
             "observe_steps", "frags_seen", "frags_exploded", "in_zone_at_landing",
             "in_blast_at_landing", "escaped", "stayed_in_blast", "lost_track", "moves",
             "moves_frag", "moves_fire", "too_late", "trapped", "ignored_viscous", "reentries",
-            "goto_failed")}
+            "goto_failed", "threatened", "threatened_escaped")}
 
     # ------------------------------------------------------------ episode
     def start(self, squad):
@@ -140,7 +140,7 @@ class MicroLayer:
             if rec is None or p != rec["pos"]:
                 if rec is None:
                     self.k["frags_seen"] += 1
-                    rec = self.nades[fid] = {"first": now, "moves": []}
+                    rec = self.nades[fid] = {"first": now, "pos_first": dict(pos)}
                 rec.update(pos=p, here=now, blast_first=self._within(pos, p, HIT_R),
                            zone_first=self._within(pos, p, DANGER_R))
             rec["half_step"] = step_ticks / 2
@@ -162,6 +162,12 @@ class MicroLayer:
         escaped = (blast & rec["present"]) - rec["hit_last"]
         stayed = blast & rec["hit_last"]
         lost = blast - rec["present"]
+        # Mode-independent denominator: where pawns stood when the frag was first
+        # seen (any cell) vs where it came to rest. A dodging squad leaves on
+        # in-flight sightings, so 'in blast at landing' shrinks with the dodge.
+        threatened = self._within(rec["pos_first"], rec["pos"], HIT_R)
+        self.k["threatened"] += len(threatened)
+        self.k["threatened_escaped"] += len((threatened & rec["present"]) - rec["hit_last"])
         self.k["in_zone_at_landing"] += len(rec["zone_first"])
         self.k["in_blast_at_landing"] += len(blast)
         self.k["escaped"] += len(escaped)
@@ -179,6 +185,8 @@ class MicroLayer:
             "frag": fid, "cell": list(rec["pos"]), "first_seen": rec["first"],
             "landed_seen": rec["here"], "landing_est": landing, "gone_seen": now,
             "in_blast": sorted(blast), "in_zone": sorted(rec["zone_first"]),
+            "threatened": sorted(threatened),
+            "threatened_escaped": sorted((threatened & rec["present"]) - rec["hit_last"]),
             "escaped": sorted(escaped), "stayed": sorted(stayed), "lost_track": sorted(lost),
             "hit": hit,
             "moves": [m for m in self.moves if m["hazard"] == fid]})
@@ -225,11 +233,13 @@ class MicroLayer:
             if not self.enabled:
                 continue
             deadline = min(h["deadline"] for h in hz if severity(p, h) > 0)
-            cell, why = self.safe_cell(pid, p, pos, hz, hostiles, deadline - now)
-            if cell is None:
+            cells, why = self.safe_cells(pid, p, pos, hz, hostiles, deadline - now)
+            if not cells:
                 self.k[why] += 1
                 continue
-            if not self._goto(pid, cell):
+            # A Go here can fail (cell taken or unwalkable for the pawn): try the next best.
+            cell = next((c for c in cells[:3] if self._goto(pid, c)), None)
+            if cell is None:
                 self.k["goto_failed"] += 1
                 continue
             walk = START + math.dist(cell, p) / SPEED
@@ -245,39 +255,41 @@ class MicroLayer:
         self._last_pos = pos
         return set(self.until)
 
-    def safe_cell(self, pid, p, pos, hz, hostiles, budget):
+    def safe_cells(self, pid, p, pos, hz, hostiles, budget):
+        """Safe cells reachable in time, best first -> (cells, None) or ([], reason)."""
         taken = {q for o, q in pos.items() if o != pid} | {q for o, q in self.dest.items()
                                                            if o != pid}
 
         def enemy_d(c):
             return min((math.dist(c, (h["x"], h["z"])) for h in hostiles), default=99.0)
         here = enemy_d(p)
-        best, best_key, any_safe = None, None, False
+        found, any_safe = [], False
         seen, q = {p}, deque([(p, 0)])
         while q:
             c, n = q.popleft()
             if n and c not in taken and not any(in_hazard(c, h) for h in hz):
                 any_safe = True
                 if START + math.dist(c, p) / SPEED <= budget:
-                    key = (enemy_d(c) < here - 0.5, math.dist(c, p), -enemy_d(c))
-                    if best_key is None or key < best_key:
-                        best, best_key = c, key
+                    found.append(((enemy_d(c) < here - 0.5, math.dist(c, p), -enemy_d(c)), c))
             if n >= SEARCH:
                 continue
             for nb in (self.terrain.neighbours(c) if self.terrain else ()):
                 if nb not in seen:
                     seen.add(nb)
                     q.append((nb, n + 1))
-        if best:
-            return best, None
-        return None, ("too_late" if any_safe else "trapped")
+        if found:
+            return [c for _, c in sorted(found)], None
+        return [], ("too_late" if any_safe else "trapped")
 
     def _goto(self, pid, cell):
         try:
             r = self.rm.call("order_pawn", id=pid, x=cell[0], z=cell[1], command="Go here")
-        except Exception:
-            return False
-        return r.get("ok", True) and "error" not in r
+        except Exception as e:
+            r = {"error": repr(e)}
+        ok = r.get("ok", True) and "error" not in r
+        if not ok:
+            self.goto_errors = (getattr(self, "goto_errors", []) + [str(r.get("error"))[:100]])[-5:]
+        return ok
 
     # ------------------------------------------------------------ KPIs
     def kpis(self):
@@ -286,5 +298,6 @@ class MicroLayer:
         return ({f"rx_{k}": v for k, v in self.k.items()}
                 | {"rx_version": MICRO_VERSION, "rx_enabled": self.enabled,
                    "rx_threshold": self.threshold,
+                   "rx_goto_errors": getattr(self, "goto_errors", []),
                    "rx_frag_hit_pawns": sum(bool(v) for v in self.hits.values()),
                    "rx_frag_hit_entries": sum(len(v) for v in self.hits.values())})
