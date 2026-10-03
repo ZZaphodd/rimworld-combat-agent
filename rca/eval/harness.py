@@ -16,7 +16,9 @@ from .. import ROOT
 from ..game import session
 from ..rimmolt import RimMoltError
 from ..terrain import Terrain
-from . import scoring
+from . import firelog, scoring
+from .kpis import CONTACT
+from .progress import ProgressMeter
 from .results import SCHEMA, append_row, git_commit, row_config
 from .tracker import BattleTracker
 
@@ -111,7 +113,22 @@ def verdict(m, mean_points=None, colonist_enemies=scoring.COLONIST_ENEMIES):
             "colonist_enemies": colonist_enemies}
 
 
-def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print):
+def engagement_kpis(tracker, avail_ours, avail_theirs):
+    """fire_share / surface per side from the pooled battle log (firelog)."""
+    ours = {s["name"] for s in tracker.squad.values() if s["name"]}
+    theirs = {e["name"] for e in tracker.enemy.values()}
+    both = ours & theirs                       # same short name on both sides: unattributable
+    names = (ours | theirs) - both
+    off = tracker.log_offset or 0
+    fired = firelog.fired_windows(sorted(tracker.combat), off, names)
+    fs_o, surf_o = firelog.share(fired, {n: w for n, w in avail_ours.items() if n not in both})
+    fs_t, surf_t = firelog.share(fired, {n: w for n, w in avail_theirs.items() if n not in both})
+    return {"fire_share": fs_o, "enemy_fire_share": fs_t, "surface_ours": surf_o,
+            "surface_theirs": surf_t, "fire_window_ticks": firelog.WINDOW,
+            "fire_names_ambiguous": sorted(both), "log_entries": len(tracker.combat)}
+
+
+def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, options=None):
     session.start_episode(rm, manifest["save"])
     ids = [p["id"] for p in manifest["squad"]]
     before = squad_state(rm, ids)
@@ -120,6 +137,7 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print):
     terrain = Terrain(rm)                       # per episode: never shared (LESSONS §4.2)
     client, errors = Sandbox(rm), 0
     agent.reflex, agent.terrain, agent.now = reflex, terrain, 0
+    agent.options = dict(options or {})
     try:
         agent.reset(client, manifest)
     except Exception as e:
@@ -128,6 +146,7 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print):
     t0 = rm.call("get_status")["ticksGame"]
     wall0, think, steps, fast_steps, ticks, outcome = time.time(), 0.0, 0, 0, 0, "timeout"
     eng = Counter()
+    progress, avail_o, avail_t = ProgressMeter(), {}, {}
     messages, fled, satisfied, deltas = {}, None, None, Counter()
     while True:
         step = cycle.next(live, tracker.squad.values())
@@ -159,6 +178,18 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print):
         squad_pos = [(s["x"], s["z"]) for s in tracker.squad.values()
                      if s.get("x") is not None and not s["fate"]]
         terrain.update(ticks, delta=delta, squad=squad_pos, contact=step < cycle.calm)
+        standing = [(s_["x"], s_["z"]) for s_ in tracker.squad.values()
+                    if s_.get("x") is not None and not s_["fate"] and not s_["downed"]]
+        contact = any(math.dist(p, (h["x"], h["z"])) <= CONTACT for p in standing for h in live)
+        progress.update(ticks, tracker.lost_points(), contact)
+        if contact:
+            w = ticks // firelog.WINDOW
+            for s_ in tracker.squad.values():
+                if s_["name"] and not s_["fate"] and not s_["downed"]:
+                    avail_o.setdefault(s_["name"], set()).add(w)
+            for e in tracker.enemy.values():
+                if e["fate"] is None and not e.get("downed"):
+                    avail_t.setdefault(e["name"], set()).add(w)
         theirs = sum((t.get("targeting") or "").startswith(("targeting colonist", "attacking colonist"))
                      for t in live)
         squad = [c for c in rm.call("list_colonists")["colonists"] if c["id"] in ids]
@@ -180,6 +211,7 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print):
     except Exception as e:
         kpis = {"error": repr(e)[:120]}
     m = measure(before, squad_state(rm, ids), tracker.finish())
+    signals = list(getattr(agent, "signals", []) or [])
     if m["squad_kidnapped"]:
         outcome = "raid_left_with_captives"
     m.update({
@@ -197,22 +229,31 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print):
         "engaged_steps": eng["steps"], "engaged_ours": eng["ours"],
         "engaged_theirs": eng["theirs"],
         "engagement_ratio": round(eng["ours"] / max(1, eng["theirs"]), 3),
+        **engagement_kpis(tracker, avail_o, avail_t),
+        **progress.summary(),
+        "options": agent.effective_options() if hasattr(agent, "effective_options") else {},
+        "signals": signals[:10],
+        "unattainable_tick": signals[0]["tick"] if signals else None,
+        "unattainable_reason": signals[0]["reason"] if signals else None,
         "kpis": kpis})
     m.update(verdict(m, scoring.manifest_mean_points(manifest)))
     return m
 
 
 def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max_ticks=15000,
-              resume=False, watchdog=None, log=print):
+              resume=False, watchdog=None, log=print, options=None):
     """Run each (scenario, agent) up to `runs` rows in `results`; failed
-    episodes go to <results>.errors.jsonl and are retried by the next --resume."""
-    from ..tactical import make, version_of
+    episodes go to <results>.errors.jsonl and are retried by the next --resume.
+    options (e.g. {"vs_throwers": "stand_off"}) apply to agents that offer them
+    and are part of the resume key."""
+    from ..tactical import make, options_of, version_of
     from .results import canonical, done_counts, read_rows
     names = [canonical(a) for a in agent_names]
     config = (cycle.policy, reflex, make(names[0]).rx_version if reflex else None)
     done = Counter()
     if resume and results.exists():
-        done = done_counts(read_rows(results), version_of, config)
+        done = done_counts(read_rows(results), version_of, config,
+                           lambda a: options_of(a, options))
     for m in manifests:
         for name in names:
             for run in range(done[(m["id"], name)], runs):
@@ -223,11 +264,14 @@ def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max
                     try:
                         if watchdog:
                             watchdog.ensure()
-                        res = run_episode(rm, m, make(name), max_ticks, cycle, reflex, log)
+                        res = run_episode(rm, m, make(name), max_ticks, cycle, reflex, log, options)
                         break
                     except Exception as e:
                         log(f"   episode error (attempt {attempt + 1}): {e!r}")
                         time.sleep(5)
+                    finally:
+                        if watchdog:
+                            watchdog.episode_done()
                 if res is None:
                     append_row(results.with_suffix(".errors.jsonl"), {
                         "scenario": m["id"], "agent": name, "run": run + 1, "cycle": cycle.policy,
@@ -240,5 +284,8 @@ def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max
                     f"{res['enemies_killed_inferred']}? downed {res['enemies_downed_end']} "
                     f"escaped {res['enemies_escaped']} active {res['enemies_active_end']} "
                     f"pts {res['trade_enemy_points']}/{res.get('enemy_seen_points')} "
+                    f"rate={res['progress_rate']} stall={res['longest_no_progress_ticks']} "
+                    f"fire={res['fire_share']}/{res['enemy_fire_share']} "
+                    f"signal={res['unattainable_reason']} "
                     f"ticks={res['ticks']} wall={res['wall_s']}s")
     return row_config({"cycle": cycle.policy, "reflex": reflex, "reflex_version": config[2]})

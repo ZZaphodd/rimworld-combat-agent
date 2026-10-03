@@ -30,11 +30,17 @@ def main():
                     help="micro layer observes and counts but never moves anybody")
     ap.add_argument("--results", type=Path, default=ROOT / "results/rca.jsonl")
     ap.add_argument("--resume", action="store_true")
+    ap.add_argument("--option", action="append", default=[], metavar="KEY=VALUE",
+                    help="tactical option, e.g. vs_throwers=stand_off (doctrines that offer it)")
+    ap.add_argument("--restart-every", type=int, default=100,
+                    help="planned game restart after this many episodes (0 = never)")
     a = ap.parse_args()
+    options = dict(o.split("=", 1) for o in a.option)
     rm = RimMolt()
     cycle = Cycle(a.step_ticks, a.fast_ticks, a.fast_radius, a.cycle == "adaptive")
     run_batch(rm, load_manifests(a.scenarios), a.agents.split(","), a.runs, a.results, cycle,
-              a.reflex, a.max_ticks, a.resume, Watchdog(rm), log=lambda s: print(s, flush=True))
+              a.reflex, a.max_ticks, a.resume, Watchdog(rm, restart_every=a.restart_every),
+              log=lambda s: print(s, flush=True), options=options)
     print(f"done -> {a.results}", flush=True)
 
 

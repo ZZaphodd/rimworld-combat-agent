@@ -57,6 +57,9 @@ class BattleTracker:
         self.squad = {i: {"name": None, "downed": False, "fate": None} for i in squad_ids}
         self.dead_names, self.kidnap_targets = set(), set()
         self.kills0, self.kills = {}, {}
+        # Combat log entries of every harvested pawn, pooled: an attack shows in
+        # the victim's log too, so a dead shooter's earlier shots survive (firelog).
+        self.combat, self.log_offset = set(), None
         self._read_kills(initial=True)
 
     def observe(self, now=None):
@@ -100,11 +103,25 @@ class BattleTracker:
         return [t for t in cur.values() if not t.get("downed")]
 
     def harvest(self, pawn_ids):
+        newest = None
         for pid in pawn_ids:
             for entry in self.rm.call("get_pawn", id=pid, tab="log").get("entries", []):
                 m = DEATH_RE.match(entry.get("text", ""))
                 if m:
                     self.dead_names.add(m.group("name"))
+                if entry.get("type", "combat") == "combat" and entry.get("tick") is not None:
+                    self.combat.add((entry["tick"], entry.get("text", "")))
+                    newest = max(newest or entry["tick"], entry["tick"])
+        if newest is not None:          # log ticks are TicksAbs: lower bound on the offset
+            off = newest - self.now
+            self.log_offset = off if self.log_offset is None else max(self.log_offset, off)
+
+    def lost_points(self):
+        """Enemy points lost so far: killed/destroyed/inferred or downed now
+        (unknown kinds count 0). Feeds the progress-rate KPI."""
+        return sum(e["points"] or 0 for e in self.enemy.values()
+                   if e["fate"] in ("killed", "destroyed", "killed_inferred")
+                   or (e["fate"] is None and e.get("downed")))
 
     def _read_kills(self, initial=False):
         for sid in self.squad:

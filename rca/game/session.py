@@ -5,6 +5,8 @@ import time
 from ..rimmolt import RimMoltError
 
 STEAM_URL = "steam://rungameid/294100"
+PROCESS = "RimWorld by Ludeon Studios"     # macOS process name (pgrep -f)
+RESTART_EVERY = 100        # episodes; loads degrade the game (~150 loads -> native crash)
 # Only these saves may be written: personal colony saves must never be touched.
 WRITABLE = ("arena_", "scenario_", "theme_base", "drill_")
 
@@ -64,22 +66,59 @@ def start_episode(rm, save_name):
 
 def game_process():
     try:
-        return subprocess.run(["pgrep", "-f", "RimWorldMac.app/Contents/MacOS/RimWorld"],
-                              capture_output=True, text=True).stdout.strip()
+        return subprocess.run(["pgrep", "-f", PROCESS], capture_output=True, text=True).stdout.strip()
     except OSError:
         return ""
 
 
 class Watchdog:
     """Relaunch a dead game (PROCEDURES §10). A live but busy process gets 60 s
-    first; more than `max_restarts` relaunches stop the batch (two failures ->
-    report, never a second game instance)."""
+    first; more than `max_restarts` crash relaunches stop the batch (two
+    failures -> report, never a second game instance). Planned restarts every
+    `restart_every` episodes (NullReferenceExceptions grow after ~100 loads, a
+    native crash came at ~150) quit the game, wait until the process is gone,
+    and relaunch; they don't count against max_restarts."""
 
-    def __init__(self, rm, max_restarts=2, boot_timeout=300, log=print):
+    def __init__(self, rm, max_restarts=2, boot_timeout=300, restart_every=RESTART_EVERY,
+                 log=print):
         self.rm, self.max_restarts, self.boot_timeout, self.log = rm, max_restarts, boot_timeout, log
-        self.restarts = 0
+        self.restart_every = restart_every
+        self.restarts, self.planned, self.episodes = 0, 0, 0
+
+    def episode_done(self):
+        self.episodes += 1
+
+    def planned_restart(self):
+        """Quit (SIGTERM, then SIGKILL after 60 s) and relaunch. Episodes never
+        save, so nothing is lost."""
+        self.log(f"   watchdog: planned restart after {self.episodes} episodes")
+        subprocess.run(["pkill", "-f", PROCESS], check=False)
+        for i in range(24):
+            time.sleep(5)
+            if not game_process():
+                break
+            if i == 11:
+                subprocess.run(["pkill", "-9", "-f", PROCESS], check=False)
+        else:
+            raise RimMoltError("game process did not exit for the planned restart")
+        self.planned += 1
+        self.episodes = 0
+        self._launch()
+
+    def _launch(self):
+        subprocess.run(["open", STEAM_URL], check=False)
+        t0 = time.time()
+        while time.time() - t0 < self.boot_timeout:
+            time.sleep(5)
+            if self.rm.alive():
+                time.sleep(20)             # main menu up; let mods finish
+                return
+        raise RimMoltError("game did not come back within the boot timeout")
 
     def ensure(self):
+        if self.restart_every and self.episodes >= self.restart_every and self.rm.alive():
+            self.planned_restart()
+            return
         if self.rm.alive():
             return
         if game_process():
@@ -91,12 +130,6 @@ class Watchdog:
         if self.restarts >= self.max_restarts:
             raise RimMoltError(f"game down after {self.restarts} restarts; giving up")
         self.restarts += 1
+        self.episodes = 0
         self.log(f"   watchdog: relaunching RimWorld (restart {self.restarts})")
-        subprocess.run(["open", STEAM_URL], check=False)
-        t0 = time.time()
-        while time.time() - t0 < self.boot_timeout:
-            time.sleep(5)
-            if self.rm.alive():
-                time.sleep(20)             # main menu up; let mods finish
-                return
-        raise RimMoltError("game did not come back within the boot timeout")
+        self._launch()

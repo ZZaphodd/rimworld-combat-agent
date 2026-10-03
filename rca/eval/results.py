@@ -44,12 +44,14 @@ def read_rows(path):
     return rows
 
 
-def done_counts(rows, version_of, config):
+def done_counts(rows, version_of, config, options_of=None):
     """Rows per (scenario, canonical agent) that count for --resume: same agent
-    version (version_of(agent) for the current code) and same config."""
+    version (version_of(agent) for the current code), same config and, when
+    options_of is given, the same tactical options (rows without any = {})."""
     return Counter((r["scenario"], r["agent"]) for r in rows
                    if r.get("agent_version") == version_of(r["agent"])
-                   and row_config(r) == config)
+                   and row_config(r) == config
+                   and (options_of is None or (r.get("options") or {}) == options_of(r["agent"])))
 
 
 def git_commit():
