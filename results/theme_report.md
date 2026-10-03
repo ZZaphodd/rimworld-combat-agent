@@ -1,5 +1,9 @@
 # Theme x doctrine matrix
 
+> **Outdated (2026-10-03):** this report covers the first 113 of the 210 rows in
+> `results/theme.jsonl` and uses the legacy score. The full matrix, rescored by trade ratio and
+> grade v2, is [rescored/theme.md](rescored/theme.md) (summary in DATA.md §7).
+
 Same frozen OutlanderRough squad (arena_forest) against one raid per enemy theme,
 every doctrine x every theme x 5 runs, max 15000 ticks. Results: `results/theme.jsonl`.
 

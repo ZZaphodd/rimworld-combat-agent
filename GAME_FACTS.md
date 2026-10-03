@@ -50,6 +50,7 @@ its rules are things to learn and exploit. Section 8 collects them and is the se
 |---|---|---|
 | Pawn label in `list_things` | `"<Short name>, <more>"` or `"<name> <...>"`; short name = text before the first `,` or `<` | [code] |
 | Weapon label in `get_pawn` | `"<Weapon> (<quality> [hp%])"`, possibly prefixed `Biocoded `; mechs carry none (`weapon` empty) | [code] |
+| Pawn kind | `list_things` verbose `kind` = PawnKindDef (e.g. `Mercenary_Gunner`, `Grenadier_Destructive`, `Mech_Scyther`); `def` is the race (`Human`, `Mech_Scyther`) | [obs 2026-10-03] |
 | Death (battle log) | `"<Name> perished\|expired\|died\|was killed\|succumbed\|bled out ..."` at the start of an entry | [code] |
 | Leaving / special jobs | job text starting with `kidnapping <name>.`, `fleeing`, `exiting`, `stealing`, `leaving` | [code]; full list UNVERIFIED |
 | Raider targeting | `targeting` field: `"targeting colonist <name>"` (aiming) / `"attacking colonist <name>"` | [code] |
@@ -150,8 +151,31 @@ See results/hazards.md (reaction windows) and results/reflex_report.md. Addition
   act on it.
 - **Frags first seen with < ~55–60 ticks of fuse left** cannot be escaped (15 + ~40 ticks to walk
   3 cells). That is ~1 in 4 in-blast cases at a 30-tick cycle.
-- Fire and explosions **change terrain** (trees burn). Cached terrain goes stale (LESSONS.md).
+- Fire and explosions **change terrain**, but less than assumed. Verified 2026-10-03 on
+  arena_forest (12 trees set alight with `T: Attach Fire`, a debug bomb on a ruin wall, then
+  25×300 + 40×600 ticks):
+  - A **burning tree becomes a `BurnedTree` stump** ("burned stump", `StumpBase`), which still
+    renders as **`*`** in get_area ascii. Only 1 of the 12 ignited cells became `.` (stump
+    destroyed). Stump fillPercent 0.20 vs tree 0.25 (XML), both PassThroughOnly: cover changes
+    slightly, passability and LOS (by our legend) do not.
+  - Trees burn slowly: after 7,500 ticks every ignited tree was still `*` and burning; the fire
+    kept spreading through grass (17 → 113 Fire things over 31,500 ticks, outside any home area).
+  - **Burned trees never appear in `wait_for_event`'s `_delta`** (no `_delta` at all during the
+    fire). A destroyed wall does: `removedBuildings: [{def: Wall, count: 2}]`, without cells
+    (RIMMOLT_API §2). So fire cells are the only signal for plant changes, and building deltas need
+    a cell guess (rca/terrain.py marks every fetched tile with a structure char).
+  - Plants also grow: 3 cells went `.` → `*` over the same time (saplings). Terrain is not static
+    even without combat.
 - Mech boss telegraphed attacks: not measured (TODO).
+
+## 6b. Combat points
+
+| Fact | Value | Evidence |
+|---|---|---|
+| Source | `combatPower` of the PawnKindDef (XML, with `ParentName` inheritance); not exposed by RimMolt | `rca/game/defs.py` → `data/combat_power.json` (290 kinds, game 1.6.4871 rev595) |
+| Examples | Mercenary_Gunner 85, Mercenary_Sniper 110, Grenadier_Destructive 70, Tribal_Warrior 50, Town_Guard 60, Mech_Militor 45, Mech_Pikeman 110, Mech_Termite_Breach 110, Mech_Scyther 150, Mech_Lancer 190, Mech_CentipedeBlaster 400, Mech_Warqueen 600, Warg 160 | XML |
+| Raid points vs kind points | theme raids spawned at 1500 pt sum to 1260–1485 points of kinds (pirate_mixed 1455, tribal_archers 1485); theme_mechs 1000 (4 Pikeman, 3 Scyther, 1 Termite_Breach) | manifests × table |
+| Mean points per raider | tribal 54–59, pirates 104–115, frag_check grenadiers 70, mechs 125–248 by scenario | `scoring.manifest_mean_points` |
 
 ## 7. Arena facts
 

@@ -4,10 +4,24 @@ Research on combat agents for RimWorld, driven through the [RimMolt](https://ste
 mod's MCP server. The agents fight RimWorld's built-in raid AI (not other players) and are
 evaluated on generated test scenarios.
 
-Status: **pre-baseline** — the docs are the source of truth; the Python code is being
-rebuilt on a three-layer architecture (micro / tactical / strategic). See [DOCS.md](DOCS.md)
-for the document index, [TODO.md](TODO.md) for the roadmap and [WORKFLOW.md](WORKFLOW.md) for
-how changes are tested.
+Status: **pre-baseline** — the docs are the source of truth. The code is being rebuilt on a
+three-layer architecture (micro / tactical / strategic) in `rca/`; phase 1 (foundation: game
+layer, terrain, harness, trade-ratio scoring, verified reflexes, amove) is in, the other
+doctrines follow in phase 2. The exploration code is kept in `legacy/` for reference. See
+[DOCS.md](DOCS.md) for the document index and code layout, [TODO.md](TODO.md) for the roadmap and
+[WORKFLOW.md](WORKFLOW.md) for how changes are tested.
+
+## Usage
+
+```
+./restore_saves.sh                                    # scenario saves -> RimWorld's Saves folder
+python3 -m unittest discover -s tests -t .            # offline tests
+python3 tools/run_eval.py --agents amove --scenarios theme_pirate_mixed --runs 5 \
+    --results results/my_batch.jsonl --resume          # episodes (one game instance only)
+python3 tools/report.py results/my_batch.jsonl         # trade ratio, grades, P vs amove
+python3 tools/run_drill.py --sessions 3 --events 12   # micro frag drill, dodge off vs on
+python3 tools/rescore.py                               # rescore every results file
+```
 
 ## Requirements
 - RimWorld with the RimMolt mod (MCP server at `http://localhost:8787/mcp`); dev mode allowed for

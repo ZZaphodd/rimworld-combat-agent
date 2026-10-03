@@ -50,6 +50,35 @@ significant.
   155 frag_check moves were prediction moves, mostly false alarms.* → Score predictions only.
   Molotovs get no pre-impact reflex; their fire does.
 
+- **Drill-verified (rca micro v4, 2026-10-03, results/drills/frag_drill.jsonl).** Frag drill
+  (PROCEDURES §12): theme squad frozen on its slots, fire at will off, 1–3 frag-only
+  `Grenadier_Destructive` at 12 cells, fixed 30-tick cycle, 5 sessions per mode, alternating.
+  Judged per event:
+
+  | | dodge off | dodge on |
+  |---|---|---|
+  | frags exploded | 75 | 76 |
+  | pawns threatened (≤ 1.9 of the final cell at first sighting) | 120 | 145 |
+  | … escaped (outside 1.9 at the last sighting) | 0 (0%) | 142 (97.9%) |
+  | … hit (battle log) | 43 (35.8%) | 1 (0.7%) |
+  | events where every threatened pawn escaped | 0 / 73 | 69 / 72 |
+  | pawns in blast at landing / escaped | 117 / 0 | 96 / 93 (96.9%) |
+  | squad pawns hit, all frags | 44 (0.59 per frag) | 1 (0.01 per frag) |
+  | squad standing at session end | 6–8 / 14 | 14 / 14 (all 5) |
+  | moves / false alarms (not inside 1.9 of the final cell when ordered) | 0 | 377 / 205 (54%) |
+  | moves ordered before the frag's landing sighting | – | 168 |
+  | too_late / trapped | – | 1 / 0 |
+  | fuse left at the order (median) | – | 75 ticks |
+
+  → The frag dodge works as a reflex when nothing else moves the pawn: ~36% of threatened pawns
+  are hit without it, ~1% with it. Its price is movement: ~5 moves per frag, half of them false
+  alarms (in-flight sightings and the 1.9–2.5 margin). In a battle every move costs shooting time
+  (§0), so the tactical layer must be judged with this micro version pinned, not this drill
+  number. Compare legacy reflex v2 in frag_check battles: 32/60 escaped, because Auto attack and
+  the doctrine move pawns too.
+- The 2.5 margin and the in-flight trigger are now the tunable part (false-alarm rate); the
+  next drill should vary them one at a time.
+
 **Fire and rockets**
 - **Fire step-outs and spacing nudges cost more than they save.** *Grenadier theme, reflex v2 vs
   cycle-only: amove 0/5 vs 3/5 wins, 4.6 vs 3.2 lost/ep; turtle 5.4 vs 3.2. Each move replaced Auto
@@ -233,51 +262,69 @@ that see it. Then filter, pick the best cell, and pack with ≥ 1.5-cell gaps. R
 
 ## 4. Known bugs and inconsistencies to fix in the rewrite
 
-1. **Space `" "` passability disagrees.** `battleground.Grid` and `reflexes.TiledGrid` treat it as
-   passable; `threatmap.Terrain` treats it as impassable. `Grid.from_rimmolt` also fills cells it
-   never fetched with `" "`. The meaning of `" "` in ascii is UNVERIFIED. Use one terrain module
-   with one legend.
-2. **Terrain caches go stale.** Fires burn trees and explosions change the map, but turtle builds
-   its grid once per episode, close once, and `threatmap.Terrain` is cached **per save per
-   process**: tiles fetched mid-episode (possibly after burning) are reused in later episodes of
-   the same save. **Design for the rewrite (decided):** keep a cache, but make it correct:
-   - Never cache across episodes (at most per episode) — fixes the leak.
-   - Event-driven invalidation: re-fetch only the tiles touched by fire cells (already queried),
-     `Explosion` things, and buildings added/removed in `wait_for_event`'s `_delta` (destroyed
-     walls). UNVERIFIED: whether burned trees (plants) appear in `_delta`; if not, fire cells are
-     the signal (trees only burn where there is fire).
-   - While in contact, refresh the 2–4 tiles within ~30 cells of the squad every ~600 ticks to
-     catch what events miss; keep far tiles cached.
-   - Why not drop the cache: a 50×50 ascii tile costs ~17 ms (measured); re-fetching the threat
-     map's box (~16 tiles, ~270 ms) every step would make steps 2–3× slower, ~+80–130 s per
-     episode at the 30-tick cycle, ~+5–7 h per 210-run matrix. The design above costs ~0.
-3. **The weapon range table is guesses** (GAME_FACTS.md §5): "bolt" 30 < "rifle" 35, greatbow =
-   bow, no mech weapons (default 25). The planner uses a fixed 25. Read ranges from
-   `get_info_card` or the XML.
-4. **Two melee classifiers** (`is_melee` keywords vs census `weapon_class`) disagree, e.g. on blade,
-   scythe, pike. Use a single classifier.
-5. **Rescue reserves a pawn for a disabled option** (§2 doctrine agent).
-6. **The doctrine agent undrafts wounded fighters**, who then flee, and may re-draft them as
-   "evacuees" in the same step (combat_live logs).
-7. **grade() "decisive" ignores our losses** (EVAL_SPEC §5). Stored grade/win fields are stale in
-   old rows.
-8. **`--resume --agents hold` counts nothing** (canonical-name mismatch; PROCEDURES §11).
-9. **engagement_ratio undercounts fire at will.** Replace it with damage-log or attack-verb based
-   KPIs.
-10. **Kidnap matching is by lowercased short name** from the job text. Two pawns with the same
-    short name, or a job naming the pawn differently, would mis-attribute (UNVERIFIED in practice).
-11. **Frag-hit KPI** matches `"<short name>'s"`, so short-name collisions are possible. Hits on a
-    pawn that dies before a harvest are lost.
-12. **The doctrine agent, kite and close have no `versions` map**: their agent_version doesn't change
-    with the reflex version. Under reflex v3 they get the threat-map reflex but never call `place`.
-    Untested.
-13. **frag_check is in scenarios_out/**, so `--scenarios all` includes it. List scenarios
-    explicitly.
-14. **The `Fire at will` toggle is blind**: the measurement scripts toggle it without reading the
-    state back.
-15. **theme_report.md is outdated**: it says 113/210 episodes, but theme.jsonl has 210 rows. The
-    final table exists only in theme_analysis_final.log (older grade) and DATA.md §7.
-16. **The census code comment** blames the 133-pawn mech "raid" on pod leaks, but all-Militor raids
-    of 120–133 still appear after the fix (GAME_FACTS.md §2).
-17. Two v3b grenadier rows have 9 and 28 lost agent steps (list_things guard, fixed afterwards) and
-    were **not re-run**.
+Status after rewrite phase 1 (2026-10-03): **[fixed]** = done in rca with the fix named;
+**[partly]** = mitigated, rest open; **[phase 2]** = belongs to a module not ported yet;
+**[data]** = a fact about old data, nothing to fix in code.
+
+1. **[fixed] Space `" "` passability disagreed** (`battleground.Grid` / `reflexes.TiledGrid`:
+   passable; `threatmap.Terrain`: impassable; `Grid.from_rimmolt` filled unfetched cells with
+   `" "`). Verified in game: get_area never returns `" "` (0 of 62,500 cells of a whole forest map);
+   its legend is `# % + * ~ . V ?`. One module, `rca/terrain.py`, with that legend; every cell is
+   fetched on first use, so `" "` cannot occur. Tests: tests/test_terrain.py.
+2. **[fixed] Terrain caches went stale** (turtle/close cached per episode, `threatmap.Terrain` per
+   save per process). `rca/terrain.py` implements the decided design: one `Terrain` per episode
+   (the harness creates it; nothing is module-level), stale tiles re-fetched lazily on
+   `Explosion` things (radius 6), building `_delta`s (every fetched tile with a structure char,
+   since `_delta` gives no cells), fire cells and contact refresh (tiles within 30 cells of the
+   squad, both when older than 600 ticks). **Verified: burned trees do not appear in `_delta`**;
+   a burned tree becomes a `BurnedTree` stump that still renders `*` (GAME_FACTS §6), so fire
+   barely changes the ascii terrain; destroyed walls do appear (`removedBuildings`). In the smoke
+   episode the cache made 1 fetch and 2 re-fetches on pirate_mixed (cost ≈ 0).
+3. **[phase 2] The weapon range table is guesses.** Still in `rca/game/weapons.RANGE_GUESS` for the
+   doctrines that need it; read verb ranges from the XML (the XML reader exists now:
+   `rca/game/defs.py`) when the planner is ported.
+4. **[fixed] Two melee classifiers.** `rca/game/weapons.py` is the only classifier; `is_melee` =
+   class `melee` (so blade, scythe, pike, lance, bite count as melee everywhere). The class
+   keyword lists themselves are still UNVERIFIED against the full weapon set.
+5. **[phase 2] Rescue reserves a pawn for a disabled option** (no beds in the arenas). The doctrine
+   agent is not ported yet; TODO "Phase 2" has the fix (check `disabled`, carry to a safe cell).
+6. **[phase 2] The doctrine agent undrafts wounded fighters**, who then flee. Fix with the port.
+7. **[fixed] grade() "decisive" ignored our losses.** grade v2: a clean sweep with standing < 0.5
+   is `pyrrhic`; `grade_v1` kept for comparisons. Changes 2 of the legacy rows (exec_v1, exec_v2).
+   Stored grade/win fields stay stale in old rows: reports recompute (EVAL_SPEC §5).
+8. **[fixed] `--resume --agents hold` counted nothing.** `rca/eval/results.read_rows` canonicalises
+   stored names and `run_batch` canonicalises CLI names (`b1`→amove, `hold`→turtle,
+   `focus`→doctrine); tests/test_results.py.
+9. **[partly] engagement_ratio undercounts fire at will.** Still recorded (for continuity) and
+   flagged as biased in EVAL_SPEC §8/§9; the damage-log / attack-verb KPI is phase 2.
+10. **[partly] Kidnap matching by lowercased short name.** The tracker now updates the squad before
+    the kidnapper check (a kidnapping is caught one step earlier) and lists ambiguous names
+    (`debug_kidnap_ambiguous`) instead of guessing; matching itself is still by short name
+    (UNVERIFIED whether job text ever names a pawn differently).
+11. **[partly] Frag-hit KPI by `"<short name>'s"`.** The drill records whether squad short names are
+    unique (`names_unique`, true for theme_base) and harvests logs right after each blast, per
+    event; collisions in other squads remain possible.
+12. **[fixed] No `versions` map for doctrine/kite/close.** The map is gone: agent version and micro
+    (reflex) version are separate row fields and the resume key needs both. amove starts at v5 so
+    its rows never pool with legacy b1 v1–v4.
+13. **[fixed] frag_check in `--scenarios all`.** `load_manifests("all")` excludes tier `check`.
+14. **[fixed] The `Fire at will` toggle was blind.** The drill reads `inspect_thing`
+    (`actions[label="Fire at will"].active`) before and after toggling and aborts the session if
+    a pawn is still on.
+15. **[fixed, docs] theme_report.md is outdated** (113 of 210 rows). The full 210-row matrix,
+    rescored, is results/rescored/theme.md and DATA.md §7; theme_report.md now says so.
+16. **[fixed] The census comment** blaming the Militor swarms on pod leaks is gone with
+    legacy/raid_census.py; GAME_FACTS §2 has the right statement.
+17. **[data] Two v3b grenadier rows** have 9 and 28 lost agent steps and were not re-run. Legacy
+    data; ignore those two rows when reading threatmap_check v3b.
+
+New in phase 1 (found while porting):
+- **Kidnapper check lagged one step**: the squad's downed state was read from the previous
+  observation (fixed, item 10).
+- **A failed Go here cost the dodge**: 1 failed order in each smoke episode (fire step-outs). The
+  micro layer now tries the next two best safe cells and keeps the last errors in
+  `rx_goto_errors`.
+- **"In blast at landing" is not a fair denominator across dodge on/off**: a dodging squad leaves
+  on in-flight sightings, so fewer pawns are in the blast when the frag lands (trial drill: 4 vs
+  12). The drill also scores the frag's final cell against pawn positions at its first sighting
+  (`threatened`), which does not depend on the mode.

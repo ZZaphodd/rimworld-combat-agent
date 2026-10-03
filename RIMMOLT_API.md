@@ -39,8 +39,10 @@ Coordinates are map cells `(x, z)`, with z pointing north. Pawn and thing ids ar
 | `list_colonists` | – | `colonists[]`: `id, name, downed, mentalState, incapableOf` (string, e.g. contains `Violent`), `job` (text), `health` (%), `inCaravan` | No positions: get them from `list_things` |
 | `list_things` | `category` (`pawn`/`item`/`all`), `faction` (`player`/`hostile`), `defName`, `verbose=True`, `summary=True`, `confirm=True`, `limit` | `things[]`: `id, def, kind, label, x, z, downed, dead, targeting, category`; with `summary`: `groups[]` of `{def, count}` | **Output guard:** a large result comes back as a `largeOutput` notice with **no `things` key** unless `confirm=True`. 65 Fire things were enough to trip it (37 agent steps lost, threatmap_report §1.5), and census samples were lost to `KeyError 'things'` the same way [log]. Always pass `confirm=True`. `category="all"` on the forest map is flooded by plants: query projectile defs by name (hazards.md) |
 | `get_pawn` | `id`, optional `tab` | Default: `name, x, z, weapon` (label, e.g. `Heavy SMG (good)`, `Biocoded heavy SMG (normal)`), `health, downed, dead, job`; `error` if the pawn is gone. Dead or carried-off pawns have no `x` | Tabs used: `health` → `hediffs[]` of `{label, part, permanent}`; `log` → `entries[]` of `{tick, text}` (battle log, short, and it vanishes with a dead pawn); `records` → `records[]` of `{record, value}` (we read `Kills`). Other tabs: UNVERIFIED |
-| `get_area` | `minX, minZ, maxX, maxZ, render="ascii"` | `grid`: list of strings, **north row (max z) first** | One call is capped at about 55×55 cells, so tile in 50×50 [code]. Legend below |
-| `get_info_card` | thing/def | static stats (aiming time, range, ...) | Used by hand for hazards.md (aiming times). Argument shape UNVERIFIED |
+| `get_area` | `minX, minZ, maxX, maxZ, render="ascii"` | `grid`: list of strings, **north row (max z) first**; also `legend` and `orientation` | One call is capped at about 55×55 cells, so tile in 50×50 [code]. Legend below. Other layers (`layer=roof/buildings/things...`) unused |
+| `get_info_card` | `id`, or `x, z`, or `def` (+ `stuff`), or `stat` | `stats[]` of `{category, stats[{label, value}]}` | `def` takes **ThingDefs only** (`Unknown ThingDef: Mercenary_Gunner` for a PawnKindDef) [obs 2026-10-03]. A pawn's card has no combat power; see EVAL_SPEC §6 for where points come from |
+| `inspect_thing` | `id` or `x, z` | `actions[]` with `toggle`, `active` for toggle gizmos | Used to read a drafted pawn's `Fire at will` state before toggling it (micro drill) |
+| `list_fires` | – | `fireCount`, `bounds`, `fires[{x, z, size}]` | Not used by rca yet (we query `Fire` things); probe only |
 | `get_world` | – | `factions[]`: `{def, relation}` | |
 | `list_windows` / `get_window_ui` / `window_action` | `index`, `option` | `windows[]`: `{type, index}`; `labels[]` | Planet page: `Page_CreateWorldParams`; the faction list is the labels between `"Factions"` and `"Add..."`. Intro letter: `Dialog_NodeTree`, close with `option="OK"` |
 | `set_hostility_response` | none (query) | `colonists[]`: `{response}` | Read-only use in trace.py |
@@ -53,11 +55,18 @@ Coordinates are map cells `(x, z)`, with z pointing north. Pawn and thing ids ar
 | `%` | natural rock | no | yes | [code] |
 | `~` | deep water / marsh | treated as no | no | [code]; whether marsh is really impassable is UNVERIFIED |
 | `*` | tree | yes | no (counted as half cover) | [code] |
-| ` ` (space) | **UNVERIFIED** (unknown / unrendered?) | inconsistent in code (see LESSONS.md) | no | – |
+| `+` | door or gate | yes | yes in rca (closed doors block; open-door state not checked) | legend |
+| `.` | open ground (grass and low plants render as ground) | yes | no | legend |
+| `V` | steam geyser | yes | no | legend |
+| `?` | fogged / unknown | treated as yes | no | legend; arenas are fog-free |
+| ` ` (space) | **never returned** | – | – | [obs 2026-10-03]: 0 of 62,500 cells on a whole arena_forest map (all 25 tiles). It was only the legacy canvas fill for unfetched cells |
 | sandbags | **do not render** in ascii | – | – | [obs] (threatmap_report §2) |
 
-Every other character was treated as passable open ground. A full legend still has to be
-collected (UNVERIFIED).
+The reply carries the full legend (`#` "constructed wall / impassable building", `%` "natural rock",
+`+` "door or gate", `*` "tree", `~` "water, marsh or terrain you cannot build on (slow/blocked
+movement)", `.` open ground, `V` geyser, `?` fogged). Whole forest map counts: `.` 54,874,
+`%` 4,103, `*` 2,531, `~` 630, `#` 348, `+` 14. Burned trees (`BurnedTree` stumps) still render
+as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend.
 
 ### Orders
 
@@ -87,7 +96,7 @@ collected (UNVERIFIED).
 
 | Tool | Arguments | Returns | Quirks |
 |---|---|---|---|
-| `wait_for_event` | `maxGameTicks, maxSeconds, pause="always", force=True` | `_notifications[]`, `cause` | Advances game time and pauses again afterwards. **15-tick quanta**: a 6-tick request advanced 14–16 ticks (hazards.md), so 15 is the finest step. `cause="threatsCleared"` ends a fight early (standalone agent). `_notifications` carry the game's messages and letters (`{kind, text, label}`); raid fled/satisfied messages are read from here. Exact semantics of `force` are UNVERIFIED (assumed: advance even when paused) |
+| `wait_for_event` | `maxGameTicks, maxSeconds, pause="always", force=True` | `_notifications[]`, `cause`, `ticksWaited`, `_delta` | Advances game time and pauses again afterwards. **15-tick quanta**: a 6-tick request advanced 14–16 ticks (hazards.md), 300-tick requests advanced 300–316 [obs]. A letter or notable message, or `threatAppeared`/`threatsCleared`, **ends the wait early**, so read the clock from `get_status`. **`force`** (tool schema): bypasses the crisis cap; without it a wait that starts with hostiles on the map, fire in the home area or a dying colonist is capped at 2500 ticks. `_notifications` carry the game's messages and letters (`{kind, text, label}`); raid fled/satisfied messages are read from here. **`_delta`**: `newItems/removedItems`, `newBuildings/removedBuildings` (`[{def, label, count}]`, **no cells**), `pawnDamage`; keys absent when nothing changed. Verified 2026-10-03: a debug bomb on a ruin wall gave `removedBuildings: [{def: Wall, count: 2}]`; 31,500 ticks of forest fire (trees burning down to stumps, some destroyed) gave **no** `_delta` at all: plants are not reported |
 | `set_speed` | `action="pause"` | – | Always pause before teleports and saves: teleport misses walking pawns [obs] |
 
 ### Game lifecycle
@@ -149,7 +158,8 @@ Every reply has `ok`, and on failure `error`. It may also carry `_notifications`
 Entries used: `Execute raid with specifics...`, `Execute raid with faction...`, `Spawn Pawn... > <Kind>`,
 `T: Recruit`, `T: Teleport`, `T: Destroy`, `Clear area (rect)`, `Clear All Fog`,
 `Destroy factionless animals`, `Destroy player animals`, `Destroy non-colonists` (about 1 s),
-settings `Never Force Normal Speed`.
+settings `Never Force Normal Speed`. Probes only: `T: Attach Fire` (map tool, `cells` works),
+`Explosion... > Bomb|Flame|...` (map tools). `action="list"` with `search` finds entries.
 
 ## 4. Known failure modes
 

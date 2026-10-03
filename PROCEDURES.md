@@ -2,7 +2,24 @@
 
 How each kind of save, scenario and episode was built and run. Tool details are in
 RIMMOLT_API.md, game constants in GAME_FACTS.md. Every step here worked in practice unless it is
-marked UNVERIFIED.
+marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind the CLIs in
+`tools/` (README.md); legacy/ holds the scripts these runbooks were first written for.
+
+| Runbook | CLI | Code |
+|---|---|---|
+| §1–2 arenas | `tools/make_arena.py [--resume\|--fort]` | `rca/game/builders/arena.py` |
+| §3 load + ready wait | – | `rca/game/session.load` |
+| §4 raid spawning | – | `rca/game/debug.py` |
+| §5–6 squad, scenarios, assault check | `tools/build_scenarios.py` | `rca/game/builders/scenario.py` |
+| §7 themes, frag_check | `tools/build_themes.py` | `rca/game/builders/theme.py` |
+| §8 census | `tools/census.py` | `rca/game/census.py` |
+| §9 episodes | `tools/run_eval.py` | `rca/eval/harness.py` |
+| §10 watchdog | (in-process) | `rca/game/session.Watchdog` |
+| §12 micro drills | `tools/run_drill.py` | `rca/micro/drills.py` |
+| combat points | `tools/combat_points.py` | `rca/game/defs.py` |
+
+**Save guard:** `session.save` refuses any name not starting with `arena_`, `scenario_`,
+`theme_base` or `drill_`, so a builder can never overwrite a personal colony save.
 
 ## 1. Arena creation (`arena_forest`, `arena_open`)
 
@@ -37,7 +54,7 @@ marked UNVERIFIED.
   z 110–123 and z 127–140).
 - `Sandbags` line inside at **x = 128, z 118–132** facing the gap.
 - God mode off, pause, print the ascii area as a check, then `save_game("arena_fort")`.
-- Fort scenarios place the squad at (120, 125). trace.py uses gate = (140, 125).
+- Fort scenarios place the squad at (120, 125). legacy/trace.py uses gate = (140, 125).
 
 ## 3. Load and ready wait (every load)
 
@@ -134,15 +151,21 @@ Theme predicates and acceptance rates: DATA.md §3.
 - Up to 2 × per_config attempts; failures are counted and printed. One JSON line per raid.
 - About 2.6 s per sample.
 
-## 9. Episode start (eval run_episode)
+## 9. Episode start (`session.start_episode`, `harness.run_episode`)
 
 1. Load + ready wait (§3). This leaves dev mode on.
 2. `debug_menu run tab=settings path="Never Force Normal Speed" value=True`, then `close`.
-3. `dev_mode(devMode=False)`. The agent runs with no dev mode and a sandboxed client.
-4. Read the squad state, create the tracker, `observe(0)`, `agent.reset`, then the loop
-   (EVAL_SPEC.md).
+3. `dev_mode(devMode=False, godMode=False)`. The agent runs with no dev mode and a sandboxed client.
+4. Read the squad state, create the tracker, `observe(0)`, create the episode's `Terrain`,
+   `agent.reset`, then the loop (EVAL_SPEC.md).
+5. `--scenarios all` excludes check-tier scenarios (frag_check): name them explicitly.
 
-## 10. Crash watchdog (results/threatmap_check*.sh)
+## 10. Crash watchdog (legacy/results/threatmap_check*.sh; rca: `session.Watchdog`)
+
+rca runs the same logic in-process before every episode attempt (`run_batch`) and drill
+session: alive → go; process exists but silent → wait 60 s, then **stop** (never launch a second
+instance); no process → `open steam://rungameid/294100`, poll every 5 s for up to 5 min, then
+20 s grace; more than 2 relaunches in a batch → stop. Legacy shell version:
 
 ```
 alive(): POST get_status (curl -m 10); ok if the reply contains "result"
@@ -158,8 +181,9 @@ touch <batch>.done
 ```
 
 - The 2nd `--resume` pass fills episodes lost to a crash. Run batches detached:
-  `nohup sh results/<batch>.sh > results/<batch>.log 2>&1 &`. A `.done` / `.failed` marker file
-  signals the end.
+  `nohup python3 tools/run_eval.py ... --resume > results/<batch>.log 2>&1 &` and wait with an
+  until-loop (a single background tool call dies after ~1 h). Legacy batches wrote a `.done` /
+  `.failed` marker file.
 - The watchdog does not restart a game that is alive but degraded (NullReferenceException streak).
   Plan restarts every ~100 episodes (TODO roadmap 2).
 
@@ -172,8 +196,27 @@ touch <batch>.done
 - It then runs runs [done, runs) for each cell.
 - An episode that fails twice is written to `<results>.errors.jsonl` and skipped; `--resume`
   ignores that file, so the next pass retries it.
-- Old command lines with `hold` still run (alias → `turtle`), **but `--resume --agents hold`
-  counts nothing**: done rows are keyed by the canonical name `turtle` and looked up by the CLI
-  name `hold`, so every run is repeated. Use `turtle` (a bug to avoid in the rewrite). Old rows without a `cycle` field
-  read as `fixed:<step_ticks>` with the reflex off, and rows with reflex on but no `reflex_version`
-  read as v1.
+- Aliases (`b1`, `hold`, ...) work on both sides: stored names and CLI names are canonicalised
+  before counting (`rca/eval/results.py`; tests/test_results.py). Legacy eval.py counted nothing for
+  `--resume --agents hold` (rows keyed `turtle`, looked up as `hold`), fixed in rca. Old rows
+  without a `cycle` field read as `fixed:<step_ticks>` with the reflex off, and rows with reflex
+  on but no `reflex_version` read as v1.
+- The agent version is per class (no per-reflex-version map any more): the resume key needs the
+  agent version **and** the reflex version, separately.
+
+## 12. Micro drills (frag drill)
+
+Per WORKFLOW test layers: micro is judged per event, with positioning and targeting held fixed.
+
+1. Load `theme_base` (Never Force Normal Speed, dev mode on only for spawning).
+2. Spawn `count` (3) `Grenadier_Destructive` at `range` (12) cells east of the squad centroid,
+   3 cells apart (passable cell nearest the wanted one); destroy every one without a frag grenade.
+   Dev mode off.
+3. Draft the squad and set **fire at will off**, reading the toggle state with `inspect_thing`
+   (`actions[label="Fire at will"].active`) before and after toggling (fails the session if any
+   pawn is still on).
+4. Fixed 30-tick steps. Each step the micro layer observes and (mode `on`) dodges; a released pawn
+   walks back to its slot unless the slot is inside a live hazard (`cell_ok`).
+5. A session ends after `events` exploded frags, when fewer than half the squad stands, or at
+   `max_ticks` (6000); the next session reloads the base. Modes alternate per session.
+6. Output: `results/drills/<name>.jsonl`, one `event` row per exploded frag + one `session` row.

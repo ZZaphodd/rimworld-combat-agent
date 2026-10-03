@@ -1,7 +1,12 @@
 # TODO
 
 ## Roadmap (chosen: long-term quality)
-1. LER scoring switch + rescore all results (no new runs).
+0. **Rewrite, phase 1 — done (2026-10-03):** `rca/` foundation (game layer, one terrain module,
+   harness, tracker, results, report), micro layer with only the verified reflexes + frag drill,
+   amove. **Phase 2 (next):** port doctrine, turtle, spread, kite, close onto the doctrine
+   interface (see "Phase 2" below), then roadmap 2.
+1. ~~LER scoring switch + rescore all results (no new runs).~~ Done: EVAL_SPEC §6,
+   results/rescored/, DATA.md §7.
 2. Baseline checkpoint: full 210-run matrix at current versions + adaptive cycle (+ heatmap if it
    helped), overnight, with auto game restart every ~100 episodes.
 3. Enemy-AI hypothesis traces + start ENEMY_AI.md (LOS-break relocation, directional cover,
@@ -31,10 +36,25 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       pirate_sniper / pirate_mixed (turtle 0/5 there). Risk: a downed bait can be kidnapped and
       the raid leaves "satisfied" (graded defeat) — revisit whether "lost one, saved the rest"
       should really be a defeat.
-- [ ] Scoring: make LER (point-weighted loss-exchange ratio) the primary development metric;
-      colonist value as an explicit parameter (default 1 colonist = 4 enemies by points); show
-      colonist losses + outcome grade separately. Rescore existing rows (raw metrics are stored).
-      Reason: the current 1:9 weight filters out high-variance, high-payoff tactics (local minimum).
+- [x] Scoring: LER (point-weighted loss-exchange ratio) is the primary development metric;
+      colonist value is a parameter (default 1 colonist = 4 enemies by points); colonist losses +
+      grade shown separately; every results file rescored (EVAL_SPEC §6, results/rescored/).
+      Legacy rows are count-based (no per-raider kinds); new rows are point-weighted.
+- [ ] Phase 2 of the rewrite (onto `rca.tactical.Doctrine`):
+      * port doctrine (focus), turtle (battleground planner v3 + hold v4 rules), spread, kite v3,
+        close; bump versions (new rows must not pool with legacy ones);
+      * rescue in beds-free arenas: check `disabled` before reserving a pawn (LESSONS bug 5) and
+        carry the downed pawn to a safe cell instead of Rescue; never undraft wounded fighters
+        (bug 6);
+      * weapon ranges from the XML verbs instead of the guess table (bug 3), now that
+        `rca/game/defs.py` reads the XML;
+      * replace the biased engagement KPI with battle-log / attack-verb counts (bug 9);
+      * the doctrine hooks (win_progress / wants_commit / wants_reset) get real criteria
+        (turtle's sally = a reset/commit rule);
+      * planned game restart every ~100 episodes in run_batch (watchdog only relaunches a dead
+        game today).
+- [ ] Micro drills beyond frags: fire step-out drill (molotov carriers), re-entry under Auto
+      attack (amove walking a released pawn back into a live zone).
 - [ ] "Cheese" track = an asset-use layer next to doctrine (maneuver); the router also picks assets.
       Priority (user's play experience):
       1. Lances (psychic insanity/berserk lance, shock lance) — tactical-weapon class, on par with
@@ -93,4 +113,5 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       script, relative paths in scripts/logs, .gitignore (personal saves), noreply commit email,
       public GitHub repo (read-only for others), optional license.
 - [ ] After the baseline is frozen (WORKFLOW.md): gate.py (re-run the baseline suite on a branch and
-      judge non-inferiority vs the tagged baseline), commit hash in every result row.
+      judge non-inferiority vs the tagged baseline). Commit hash in every result row: done (rca
+      rows carry `commit`).

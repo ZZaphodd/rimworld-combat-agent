@@ -19,6 +19,9 @@ Three layers, tested separately; a change touches one layer and the others are h
 
 Pyramid: many cheap micro drills, a moderate number of tactical battles, a costly strategic suite.
 The baseline suite measures tactical + strategic; micro is pinned to its drill-verified version.
+Tools: micro = `tools/run_drill.py` (frag drill, PROCEDURES §12); tactical/strategic =
+`tools/run_eval.py` + `tools/report.py`. Unit tests (`python3 -m unittest discover -s tests -t .`)
+cover the offline logic of every layer and run before any game batch.
 Lesson that motivated this: threat map v3 changed micro (dodging, hysteresis) and tactical
 (standing outside throw range) at once and was judged by battle losses, so neither effect could be
 read (results/threatmap_report.md).

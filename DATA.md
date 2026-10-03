@@ -1,8 +1,10 @@
 # Data files, schemas and summaries
 
-Summaries in §6–§7 were produced on 2026-10-03 with read-only commands (no game):
-`python3 raid_census.py --report`, `python3 eval.py --summary --results results/results.jsonl`,
-`python3 theme_analysis.py results/theme.jsonl`, plus counts over themes/*.jsonl.
+Summaries in §6–§7 were produced on 2026-10-03 with read-only commands (no game): first with the
+legacy scripts (`legacy/raid_census.py --report`, `legacy/eval.py --summary`,
+`legacy/theme_analysis.py`), then rescored with `python3 tools/rescore.py` (trade ratio + grade v2,
+EVAL_SPEC §5–§6) and `python3 tools/census.py --report`. Data files stay where they were; the only
+new data directory is `data/` (derived game tables).
 
 **Irreproducible data:** raids are generated randomly, so a scenario can't be rebuilt by script,
 only re-rolled. **Keep the .rws saves** (RimWorld Saves folder, ~13.5 MB each, ~1.4 MB gzipped;
@@ -79,13 +81,19 @@ that faction group meeting the predicate, from samples.jsonl):
 Every accepted theme passed the assault check on the first try. frag_check: 2nd roll, 4/5 frag
 carriers.
 
+## 3b. data/
+
+| File | Content |
+|---|---|
+| `combat_power.json` | `{PawnKindDef: combatPower}` for 290 kinds, read from the game XML (RimWorld 1.6.4871 rev595, all DLC folders under Data/) by `tools/combat_points.py`. Used for point-weighted trade ratios (EVAL_SPEC §6). Re-extract after a game update |
+
 ## 4. census/
 
 | File | Content |
 |---|---|
 | `raids.jsonl` | current census, 998 raids: `{faction, points, route: "faction", raiders[] {kind, weapon, class}, t (s per sample)}` |
 | `raids.before_recollect.jsonl` | first pass (936). TribeRough:3000 had only 99 samples (lost to the `largeOutput` bug) and Mechanoid:6000 89 (pod leaks). Both configs were re-collected into raids.jsonl |
-| `census_run.log`, `census_recollect.log` (project root) | console logs incl. failures |
+| `legacy/logs/census_run.log`, `legacy/logs/census_recollect.log` | console logs incl. failures (git-ignored, local only) |
 
 **Weapon classes** (first match wins, label substring, lowercase): explosive (launcher, grenade,
 molotov, emp, inferno, toxbomb, rocket, doomsday, thump cannon, incinerator) → long (sniper,
@@ -110,18 +118,23 @@ hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike) → o
 | `exec_v2.jsonl` | 31 | kite v3, doctrine v2, hold v4 home-theme checks (execution_report) |
 | `reflex_check.jsonl` | 165 | b1/turtle/spread × frag_check/pirate_grenadier × {fixed:120 no reflex, adaptive no reflex, adaptive + reflex v1 (no `reflex_version`), adaptive + reflex v2} |
 | `threatmap_check.jsonl` | 135 | reflex v2 vs v3a vs v3b (agent versions b1 2/3/4, spread 2/3/4, turtle 5/6/7) |
+| `rca_smoke.jsonl` | 2 | **rca** schema 2: amove v5, adaptive + micro v4, on theme_pirate_mixed and theme_frag_check (smoke test of the new harness) |
+| `drills/frag_drill*.jsonl` | – | **rca** micro frag drill: one `event` row per exploded frag (`session, dodge, frag, cell, landed_seen, gone_seen, in_blast, in_zone, escaped, stayed, lost_track, hit_pawns, hit_entries, hit_in_blast, moves, false_alarm_moves, fuse_left_at_move[], latency[]`) and one `session` row (`ticks, throwers, standing_end, returns, names_unique, kpis, moves[]`). `_trial` = first shake-out run |
+| `rescored/<file>.jsonl` | = source | per-row verdicts recomputed by `tools/rescore.py`: `grade_stored, grade_v1, grade, score_v1, enemy_lost_points, our_lost_points, ler, ler_basis` (+ identity/config). Raw files untouched |
+| `rescored/<file>.md`, `rescored/README.md` | – | summary tables per config: grades, lost/battle, pooled/median LER, P vs amove, old vs new ranking |
 | `hazards.jsonl` | 7 | measure_hazards: `{kind, tick, weapons, projectiles[] {def, life, moving, resting}, blasts[]}`; measure_blast: `{kind: "frag_blast_radius", rows[] {d, hit}}` |
 | `*.sh / *.log / *.done / *.failed` | – | batch scripts, console logs and end markers |
 | `*_report.md`, `hazards.md` | – | reports (DOCS.md) |
 
-Root logs (`eval_*.log`, `combat_live*.log`) are console logs of early runs. `combat_live*` is the
+Early console logs (`eval_*.log`, `combat_live*.log`) moved from the root to `legacy/logs/`
+(git-ignored, local only). `combat_live*` is the
 standalone doctrine agent on a real colony (with beds).
 
 **Legacy reading rules:** a missing `agent_version` means pre-versioning. A missing `cycle` means
 `fixed:<step_ticks>`. Reflex on without `reflex_version` means v1. Agent `hold` = turtle. Always
 recompute `grade/win/score`.
 
-## 6. Census summary (raid_census --report; faction route, arena_open)
+## 6. Census summary (`tools/census.py --report`; faction route, arena_open)
 
 | Config | Raids | Size median (min–max) | Class shares | Dominant class ≥ 60% / ≥ 80% of raid | Melee-heavy (≥ 50%) | Any explosive | Spawn failures |
 |---|---|---|---|---|---|---|---|
@@ -147,52 +160,82 @@ Readings:
 
 ## 7. Results summaries
 
-**results.jsonl (fixed 120, mostly pre-tracker, n=5–11 per cell)**: headline over 12 scenarios:
+**Rescored 2026-10-03 (`tools/rescore.py`; full tables in results/rescored/).** Primary metric:
+trade ratio (LER, EVAL_SPEC §6), colonist = 4 raiders by points. All legacy rows have only fate
+counts, so their LER is count-based (enemy lost × scenario mean points / colonists lost × 4 ×
+mean). Grade v2 (decisive needs standing ≥ 0.5) changed the grade of 2 rows across all files
+(exec_v1, exec_v2). The legacy score columns below reproduce the old tables exactly, which checks
+the port.
 
-| Agent | P>amove | Deaths/battle | Win | eng |
-|---|---|---|---|---|
-| b0 (do nothing) | 0.35 | 4.03 | 0.47 | 0.00 |
-| amove (b1) | – | 2.88 | 0.67 | 0.95 |
-| doctrine agent | 0.57 | 2.47 | 0.61 | 0.26 |
-| turtle (hold v1–v3) | 0.53 | 2.92 | 0.46 | 0.15 |
+**theme.jsonl (theme matrix v1, fixed 120, n=5 per cell)**:
 
-Notable cells:
+| Doctrine | P(LER)>amove | LER pooled | Lost/battle | Win | legacy P>amove | legacy mean score |
+|---|---|---|---|---|---|---|
+| amove | – | 2.00 | 1.31 | 20/35 | 0.50 | −98 |
+| doctrine agent | 0.46 | 1.58 | 1.54 | 19/35 | 0.46 | −129 |
+| turtle | 0.48 | 1.59 | 1.17 | 19/35 | 0.57 | −104 |
+| spread | 0.38 | 1.19 | 1.97 | 16/35 | 0.41 | −187 |
+| kite | 0.33 | 1.00 | 1.89 | 13/35 | 0.39 | −203 |
+| close | 0.50 | 1.84 | 1.31 | 25/35 | 0.54 | −87 |
+
+Ranking per theme, best first (new = pooled LER, old = median legacy score):
+
+| Theme | New (LER) | Old (score) | Top changed |
+|---|---|---|---|
+| mechs | doctrine agent (∞) > close (10.0) > amove > kite > spread > turtle | close > spread > kite > doctrine > amove > turtle | yes |
+| pirate_grenadier | spread (1.66) > amove (0.90) > turtle > close > doctrine > kite | same | no |
+| pirate_melee | turtle (∞) > close (∞) > doctrine > spread > amove > kite | same | no |
+| pirate_mixed | amove (0.95) > doctrine (0.92) > close > kite > spread > turtle | doctrine > amove > close > turtle > kite > spread | yes |
+| pirate_sniper | amove (2.80) > doctrine (2.00) > close > kite > spread > turtle | doctrine > amove > close > kite > turtle > spread | yes |
+| tribal_archers | kite (24.5) > turtle (12.1) > doctrine > close > amove > spread | turtle > kite > doctrine > amove > close > spread | yes |
+| tribal_melee | turtle (∞) > close (27.8) > amove > doctrine > kite > spread | turtle > close > kite > amove > doctrine > spread | no |
+
+Readings:
+- The bottom of every theme is unchanged and the winners of the decision-relevant themes
+  (grenadier → spread, melee → turtle) stand. The top changes on mechs, pirate_mixed,
+  pirate_sniper and tribal_archers are between near-ties (P within 0.4–0.6 of each other at n=5).
+- Under LER, **nothing beats amove on pirate_mixed or pirate_sniper**: the doctrine agent's old
+  edge came from grade bonuses and lower HP loss, not from the exchange.
+- Turtle drops from the best legacy headline (0.57) to a tie (0.48): its clean wins are already
+  clean under both, but its sniper (8% neutralized, LER 0.08) and mixed (0.44) cells are worse
+  trades than the legacy score said.
+- Kite's tribal_archers cell (1 colonist lost in 5 battles) is now the top trade of that theme.
+- These are the old doctrine versions (kite v1, doctrine v1, turtle v3): stale for routing.
+
+**results.jsonl (fixed 120, mostly pre-tracker, n=5–11 per cell, 12 scenarios)**:
+
+| Agent | P(LER)>amove | LER pooled | Deaths/battle | Win | legacy P>amove |
+|---|---|---|---|---|---|
+| b0 (do nothing) | 0.24 | 0.30 | 4.03 | 0.47 | 0.35 |
+| amove (b1) | – | 0.76 | 2.88 | 0.67 | – |
+| doctrine agent | 0.49 | 0.89 | 2.47 | 0.61 | 0.57 |
+| turtle (hold v1–v3) | 0.59 | 0.73 | 2.92 | 0.46 | 0.53 |
+
+`win` here is the legacy definition for 236/241 rows.
+
+### Legacy summaries (legacy score; kept for reference)
+
+**results.jsonl** notable cells:
 - fort_mechs_mid: amove lost 5.0 per battle vs 0.2 for the doctrine agent and 0.0 for b0.
 - hard_mechs_mid_open: the doctrine agent had the top median (38.6) at 70% wins vs amove 91%.
 - fort_pirate_mirror: the doctrine agent P = 0.96.
 - fort_tribe_rush: every agent 0% wins.
 
-`win` here is the legacy definition for 236/241 rows.
+**theme.jsonl** under the legacy score: best / worst per theme (median score): mechs close /
+turtle (P 0.72); pirate_grenadier spread / kite (0.88); pirate_melee turtle / kite (1.00);
+pirate_mixed doctrine agent / spread (0.76); pirate_sniper doctrine agent / spread (0.92);
+tribal_archers turtle / spread (0.88); tribal_melee turtle / spread (1.00).
 
-**theme.jsonl (theme matrix v1, fixed 120, n=5 per cell, rescored with the current grade):**
-
-| Doctrine | P>amove | Mean score | Win | Lost/battle |
-|---|---|---|---|---|
-| amove | 0.50 | −98 | 20/35 | 1.31 |
-| doctrine agent | 0.46 | −129 | 19/35 | 1.54 |
-| turtle | 0.57 | −104 | 19/35 | 1.17 |
-| spread | 0.41 | −187 | 16/35 | 1.97 |
-| kite | 0.39 | −203 | 13/35 | 1.89 |
-| close | 0.54 | −87 | 25/35 | 1.31 |
-
-Best / worst per theme (median score):
-
-| Theme | Best | Worst | P(best > worst) |
-|---|---|---|---|
-| mechs | close | turtle | 0.72 |
-| pirate_grenadier | spread | kite | 0.88 |
-| pirate_melee | turtle | kite | 1.00 |
-| pirate_mixed | doctrine agent | spread | 0.76 |
-| pirate_sniper | doctrine agent | spread | 0.92 |
-| tribal_archers | turtle | spread | 0.88 |
-| tribal_melee | turtle | spread | 1.00 |
-
-- results/theme_analysis_final.log has the same matrix under the *older* grade (wins 33/35,
-  34/35, ...). The difference comes from the newer no-message fallback: broken < 0.5 → defeat.
-- The theme rows are stale for kite, the doctrine agent and turtle, whose versions have changed
-  since (execution_report).
-- pirate_sniper: turtle neutralized 8% (it never engages raiders that outrange it), and every
-  doctrine had P = 0.00 vs amove except the doctrine agent (0.36).
+- results/theme_analysis_final.log has the same matrix under the *older* grade
+  (wins 33/35, 34/35, ...). The difference comes from the newer no-message fallback: broken < 0.5
+  → defeat.
+- pirate_sniper: turtle neutralized 8% (it never engages raiders that outrange it).
 
 Other batches are summarised in their reports: execution_report.md (exec_v1/v2),
-reflex_report.md (reflex_check), threatmap_report.md (threatmap_check).
+reflex_report.md (reflex_check), threatmap_report.md (threatmap_check); rescored tables for all
+of them are in results/rescored/.
+
+**rca rows (schema 2):** `rca_smoke.jsonl` (2 smoke episodes, results/rescored/rca_smoke.md:
+frag_check decisive in 555 ticks with 0 lost, legacy b1 adaptive median 556 ticks and 0 lost;
+pirate_mixed defeat with captives, 5 lost, LER 0.52 by points) and the frag drill
+(`drills/frag_drill.jsonl`, per-event table in LESSONS.md §1).
