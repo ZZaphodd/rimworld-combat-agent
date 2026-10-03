@@ -55,6 +55,9 @@ its rules are things to learn and exploit. Section 8 collects them and is the se
 | Leaving / special jobs | job text starting with `kidnapping <name>.`, `fleeing`, `exiting`, `stealing`, `leaving` | [code]; full list UNVERIFIED |
 | Raider targeting | `targeting` field: `"targeting colonist <name>"` (aiming) / `"attacking colonist <name>"` | [code] |
 | Our jobs | `"attacking ..."`, `"melee attacking ..."`, `"moving."`; drafted fire-at-will shows `"watching for targets"` | [code, execution_report] |
+| Attack entries (battle log, `type: combat`) | attacker first (`"Osborn tried to shoot at Mausi with her assault rifle."`, `"McKinney hit Tincteur with a heavy SMG bullet."`, `"Rakool missed while trying to beat Hamster."`, `"Bellerose, using her left fist aptly, beat ..."`), possessive (`"Opa's machine pistol bullet shot Xevion's left leg."`, `"The blast of Minoru's doomsday rocket ..."`) or passive with `by` (`"Xevion's torso was damaged by Opa's shot."`). An attack shows in the victim's log too. Parser: `rca/eval/firelog.attacker` | [obs 2026-10-03] |
+| Battle log tick | `entries[].tick` is **absolute** (TicksAbs: 318,941 while `get_status.ticksGame` read ~2,300 in the same scenario), so it needs an offset to episode time | [obs 2026-10-03] |
+| Downed carrier states | victim job `"downed, cannot crawl."` → `"being carried by <carrier>."`; carrier job `"carrying <name>."` while walking to it | [obs 2026-10-03] |
 | Raid broken | notification containing `" are fleeing"` (e.g. `Pirates from The Lance Leopards are fleeing.`) | grade_check.jsonl |
 | Raid won | notification containing `"satisfied with the damage"` (`... are satisfied with the damage done and are leaving`) | grade_check.jsonl |
 | Frag throw | `"X flung her frag grenade at Y"`; throw verbs `launched, flung, threw, tossed, lobbed, hurled` | hazards.md, [code] |
@@ -75,28 +78,44 @@ its rules are things to learn and exploit. Section 8 collects them and is the se
 
 ## 5. Weapons
 
-**Range table: UNVERIFIED.** These are guesses written into code, not read from the XML. Check
-them against `Data/Core/Defs` before reuse. Keys are matched by substring of the weapon label, in
-this order:
+**Weapon ranges: read from the XML** (`data/weapon_ranges.json`, `rca/game/defs.extract_weapons`,
+game 1.6.4871; LESSONS bug 3). First verb `<range>` of every weapon ThingDef (71), with
+`ParentName` inheritance. Lookup (`rca/game/weapons.range_source`): weapon label from `get_pawn`
+(stripped of quality and `Biocoded`) = ThingDef label; else the longest ThingDef label contained
+in it; mechs (no label) by PawnKindDef → weapons whose `weaponTags` meet the kind's; melee 1.5;
+anything else 25 (`default`). Turret and mortar guns are left out of the label index
+(`inferno cannon` is both a centipede gun, 26.9, and a turret, 45.9).
 
-| Key | Range (cells) | Suspicion |
-|---|---|---|
-| sniper | 44 | |
-| charge lance | 30 | |
-| bolt | 30 | lower than generic "rifle" (35)? |
-| assault | 31 | |
-| charge rifle | 27 | |
-| rifle | 35 | also catches every other "... rifle" |
-| lmg | 26 | |
-| minigun | 30 | |
-| heavy smg / smg | 23 | |
-| machine pistol | 19 | |
-| chain shotgun | 15 | |
-| shotgun | 16 | |
-| autopistol / revolver / pistol | 26 | |
-| bow | 25 | greatbow gets the same value |
-| launcher | 23 | |
-| (anything else, incl. all mech weapons) | 25 | pikeman needle gun, lancer charge blaster missing |
+| Weapon | XML range | Old guess | |
+|---|---|---|---|
+| sniper rifle / needle gun (Pikeman) / toxic needle gun (Apocriton) | 44.9 | 44 / 25 / 25 | Pikeman was 20 cells short |
+| bolt-action rifle | 36.9 | 30 | |
+| doomsday / triple rocket launcher | 35.9 | 23 (matched "launcher") | carriers out-range most of our squad |
+| charge lance (also the Lancer's gun) | 32.9 | 30 / 25 | |
+| assault rifle | 30.9 | 31 | |
+| minigun (also Centipede gunner) | 30.9 | 30 | |
+| greatbow / recurve bow / short bow | 29.9 / 25.9 / 22.9 | 25 for all bows | |
+| charge rifle | 27.9 | 27 | |
+| hellcat rifle | 26.9 | 35 ("rifle") | |
+| heavy charge blaster (Centipede blaster), inferno cannon (Centipede burner) | 26.9 | 25 | |
+| LMG, autopistol, revolver | 25.9 | 26 | |
+| thump cannon (Termite), beam graser (Tesseron), needle launcher (Legionary) | 24.9 | 25 | |
+| incendiary / EMP / smoke / toxbomb launcher | 23.9 | 23 | |
+| heavy SMG | 22.9 | 23 | |
+| beam repeater (Cyclops) | 21.9 | 25 | |
+| machine pistol, scattergun | 19.9 | 19 | |
+| pila | 18.9 | 25 | |
+| hellsphere cannon (Diabolus) | 18.9 (min 5.9) | 25 | |
+| pump shotgun | 15.9 | 16 | |
+| incinerator | 15.9 (min 5.9) | 25 | |
+| chain shotgun, mini-shotgun (Militor), frag/molotov/EMP/tox grenades | 12.9 | 15 / 25 | |
+| spiner (War urchin), mini-flameblaster (Scorcher) | 6.9 / 4.9 | 25 | |
+
+Mech kinds with no weapon in the XML tags: Scyther (melee), Centurion and Warqueen (no
+`weaponTags`; the Centurion's turret gun is not linked by tags; range falls back to 25,
+UNVERIFIED), plus the work mechs. Theme squad (theme_base): chain shotgun 12.9, heavy SMG 22.9
+(×4), assault rifle 30.9, autopistol 25.9, revolvers 25.9 (×2), LMG 25.9 (×2), machine pistol
+19.9, incendiary launcher 23.9, longsword (melee): median ≈ 24.
 
 Measured or read from the XML (more reliable):
 
@@ -188,6 +207,12 @@ See results/hazards.md (reaction windows) and results/reflex_report.md. Addition
   world objects within 5 tiles.
 - `arena_open` = `arena_forest` with the rect (50,50)–(200,200) cleared (no trees, no cover).
 - Arenas have **no beds**: "Rescue" is always disabled ("Cannot rescue: No reachable ... bed") [log].
+  **"Carry <name>" is enabled** [obs 2026-10-03, scenario_theme_pirate_mixed]: a drafted pawn
+  ordered to carry walks to the downed squadmate, picks it up (~150 ticks for 3 cells), keeps it
+  while it walks under `Go here` (the victim's position follows), and `do_thing_action("Drop
+  <name>")` puts it down. A carried pawn stays in `list_things(faction=player)` (downed=true),
+  so the fate tracker does not mistake it for a missing pawn. Walking while carrying looked
+  slow (~1 cell per 30 ticks in that probe; one sample, UNVERIFIED).
 - Equal raid points ≠ equal headcount: tribal raids at 1500 pt are ~26 pawns vs our 14 (theme_report).
 
 ## 8. Built-in enemy AI behaviour (becomes / merges into ENEMY_AI.md)

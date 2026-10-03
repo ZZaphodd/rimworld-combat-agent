@@ -3,8 +3,10 @@
 ## Roadmap (chosen: long-term quality)
 0. **Rewrite, phase 1 — done (2026-10-03):** `rca/` foundation (game layer, one terrain module,
    harness, tracker, results, report), micro layer with only the verified reflexes + frag drill,
-   amove. **Phase 2 (next):** port doctrine, turtle, spread, kite, close onto the doctrine
-   interface (see "Phase 2" below), then roadmap 2.
+   amove. **Phase 2 — done (2026-10-03):** doctrine v4, turtle v8, spread v5, kite v5, close v3 on
+   the doctrine interface with preconditions, phases, the "win condition unattainable" signal and
+   the `vs_throwers` option; progress-rate and battle-log KPIs; bugs 3/5/6/9 fixed; planned game
+   restarts (see "Phase 2" below). Next: roadmap 2.
 1. ~~LER scoring switch + rescore all results (no new runs).~~ Done: EVAL_SPEC §6,
    results/rescored/, DATA.md §7.
 2. Baseline checkpoint: full 210-run matrix at current versions + adaptive cycle (+ heatmap if it
@@ -40,19 +42,18 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       colonist value is a parameter (default 1 colonist = 4 enemies by points); colonist losses +
       grade shown separately; every results file rescored (EVAL_SPEC §6, results/rescored/).
       Legacy rows are count-based (no per-raider kinds); new rows are point-weighted.
-- [ ] Phase 2 of the rewrite (onto `rca.tactical.Doctrine`):
-      * port doctrine (focus), turtle (battleground planner v3 + hold v4 rules), spread, kite v3,
-        close; bump versions (new rows must not pool with legacy ones);
-      * rescue in beds-free arenas: check `disabled` before reserving a pawn (LESSONS bug 5) and
-        carry the downed pawn to a safe cell instead of Rescue; never undraft wounded fighters
-        (bug 6);
-      * weapon ranges from the XML verbs instead of the guess table (bug 3), now that
-        `rca/game/defs.py` reads the XML;
-      * replace the biased engagement KPI with battle-log / attack-verb counts (bug 9);
-      * the doctrine hooks (win_progress / wants_commit / wants_reset) get real criteria
-        (turtle's sally = a reset/commit rule);
-      * planned game restart every ~100 episodes in run_batch (watchdog only relaunches a dead
-        game today).
+- [x] Phase 2 of the rewrite (onto `rca.tactical.Doctrine`), done 2026-10-03:
+      * doctrine v4, turtle v8 (planner v4 + hold v4 rules), spread v5, kite v5, close v3;
+        specs in the module docstrings; smoke results in LESSONS §2 ("Phase-2 smoke");
+      * rescue in beds-free arenas: Carry to a safe cell, never a disabled option (bug 5); wounded
+        stay drafted (bug 6); XML weapon ranges (bug 3); battle-log fire share (bug 9);
+      * phases + commit/reset criteria per doctrine; "win condition unattainable" signal;
+      * planned game restart every 100 episodes (`--restart-every`).
+- [ ] Before the baseline matrix (roadmap 2), from the phase-2 smoke (LESSONS §2):
+      * calibrate the precondition thresholds against outcomes (values are in every row);
+      * decide whether rescue (doctrine agent only) and wounded pull-back stay on: both take
+        shooters out of the fight; no evidence yet that they pay;
+      * the planned restart and crash relaunch paths have not run in rca (UNVERIFIED).
 - [ ] Micro drills beyond frags: fire step-out drill (molotov carriers), re-entry under Auto
       attack (amove walking a released pawn back into a live zone).
 - [ ] "Cheese" track = an asset-use layer next to doctrine (maneuver); the router also picks assets.
@@ -116,11 +117,12 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       judge non-inferiority vs the tagged baseline). Commit hash in every result row: done (rca
       rows carry `commit`).
 - [ ] Phase 2 requirements from the stalemate clarification (WORKFLOW layer contracts):
-      1. Progress-rate KPI (enemy combat points lost per 1,000 ticks) + longest no-progress stretch;
-         tactical doctrines raise "win condition unattainable" after a no-progress stretch.
-      2. Doctrine specs carry preconditions (turtle: defensible terrain + an enemy that comes to us);
-         the router (roadmap 5) checks them first.
-      3. Positioning vs throwers as an explicit tactical option (accept-and-dodge / stand off /
-         close in), tested on grenadier themes with the doctrine fixed and micro pinned.
-      4. ENEMY_AI hypothesis (roadmap 3): what raiders do when our pawns are out of their range
+      1. [x] Progress-rate KPI + longest no-progress stretch (EVAL_SPEC §8); every doctrine raises
+         "win condition unattainable" (`signals`) after 3000 ticks without progress or on a runtime
+         precondition break.
+      2. [x] Preconditions as data on each doctrine + `rca/tactical/preconditions.check` (EVAL_SPEC
+         §2); the router (roadmap 5) will call it. Thresholds UNVERIFIED.
+      3. [~] Positioning vs throwers is selectable (`--option vs_throwers=...`, recorded in rows);
+         still to test on grenadier themes with the doctrine fixed and micro pinned.
+      4. [ ] ENEMY_AI hypothesis (roadmap 3): what raiders do when our pawns are out of their range
          (hold? advance? wait for targets?).

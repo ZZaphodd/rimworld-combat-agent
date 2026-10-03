@@ -147,13 +147,17 @@ significant.
 | v2 | Cluster radius capped at 5, which left 8/18 shooters without a cell | Widen the radius by 2 until every shooter has a cell (fall back to any scored cell beyond 2 × search radius) |
 | v2 | Raid already inside (drop pods): picked a corner with window 1 | Approach < 3 cells → `no_approach`: don't hold, fight |
 | v3 | – | Cells < 8 from the funnel exit are excluded (standoff), so raiders cross open ground under fire |
+| v4 | One guessed range (25) for every gun, while the theme squad spans 12.9 (chain shotgun) to 30.9 (assault rifle) | Per-pawn XML ranges; shortest range picks first (rca/tactical/planner.py) |
 
 Planner algorithm (v3): approach = shortest walkable path from the enemy centre to the anchor.
 Enter at the first path cell within 14 of the anchor; the exit = the 8 path cells before it.
 enemy_ground = passable cells within range of the exit but > 14 from the anchor. For each cell
 reachable within 14: window = approach cells within range with LOS; exposure = enemy_ground cells
-that see it. Then filter, pick the best cell, and pack with ≥ 1.5-cell gaps. Range is fixed at 25
-(not per weapon).
+that see it. Then filter, pick the best cell, and pack with ≥ 1.5-cell gaps. Range was fixed at
+25 (not per weapon). **v4 (rca, phase 2):** same rules on rca/terrain.py (8-neighbour paths);
+site chosen with the shooters' median XML range, exposure with the raid's median range (every 2nd
+enemy-ground cell), and each shooter, shortest range first, takes the free cell with the largest
+window for its own range.
 
 **Turtle (hold) parameters and why**
 
@@ -291,23 +295,35 @@ Status after rewrite phase 1 (2026-10-03): **[fixed]** = done in rca with the fi
    a burned tree becomes a `BurnedTree` stump that still renders `*` (GAME_FACTS §6), so fire
    barely changes the ascii terrain; destroyed walls do appear (`removedBuildings`). In the smoke
    episode the cache made 1 fetch and 2 re-fetches on pirate_mixed (cost ≈ 0).
-3. **[phase 2] The weapon range table is guesses.** Still in `rca/game/weapons.RANGE_GUESS` for the
-   doctrines that need it; read verb ranges from the XML (the XML reader exists now:
-   `rca/game/defs.py`) when the planner is ported.
+3. **[fixed, phase 2] The weapon range table was guesses.** `data/weapon_ranges.json` holds the
+   XML verb ranges of 71 weapons and the weapons of 24 mech kinds (`rca/game/defs.extract_weapons`);
+   `rca/game/weapons.range_source` looks them up by label or mech kind. The guesses were off where
+   it mattered: rocket launchers 23 → 35.9 (matched "launcher"), Pikeman 25 → 44.9, Lancer
+   25 → 32.9, hellcat rifle 35 → 26.9, bolt-action 30 → 36.9, chain shotgun 15 → 12.9, every
+   bow 25 → 22.9–29.9 (GAME_FACTS §5). Turtle's planner v4 uses per-pawn ranges.
 4. **[fixed] Two melee classifiers.** `rca/game/weapons.py` is the only classifier; `is_melee` =
    class `melee` (so blade, scythe, pike, lance, bite count as melee everywhere). The class
    keyword lists themselves are still UNVERIFIED against the full weapon set.
-5. **[phase 2] Rescue reserves a pawn for a disabled option** (no beds in the arenas). The doctrine
-   agent is not ported yet; TODO "Phase 2" has the fix (check `disabled`, carry to a safe cell).
-6. **[phase 2] The doctrine agent undrafts wounded fighters**, who then flee. Fix with the port.
+5. **[fixed, phase 2] Rescue reserved a pawn for a disabled option** (no beds in the arenas).
+   `rca/tactical/squad.rescue_choice` takes only enabled options: Rescue if a bed exists, else
+   **Carry** (verified in game: enabled in the arenas; the carrier keeps the pawn under Go here,
+   `Drop <name>` puts it down), carried to a fallback cell 10 behind the squad. No enabled option
+   → nobody reserved. Shake-out: a flat 300-tick pickup budget timed out and the same victim was
+   retried every step (21 starts for 8 downed); now the budget is 60 + distance / 0.06 ticks and
+   2 tries per victim.
+6. **[fixed, phase 2] The doctrine agent undrafted wounded fighters**, who then fled. rca never
+   undrafts: below 45% health the doctrine agent and turtle walk the pawn, drafted, to a fallback
+   cell behind the squad (it still fires at will from there); test: tests/test_tactical.py.
 7. **[fixed] grade() "decisive" ignored our losses.** grade v2: a clean sweep with standing < 0.5
    is `pyrrhic`; `grade_v1` kept for comparisons. Changes 2 of the legacy rows (exec_v1, exec_v2).
    Stored grade/win fields stay stale in old rows: reports recompute (EVAL_SPEC §5).
 8. **[fixed] `--resume --agents hold` counted nothing.** `rca/eval/results.read_rows` canonicalises
    stored names and `run_batch` canonicalises CLI names (`b1`→amove, `hold`→turtle,
    `focus`→doctrine); tests/test_results.py.
-9. **[partly] engagement_ratio undercounts fire at will.** Still recorded (for continuity) and
-   flagged as biased in EVAL_SPEC §8/§9; the damage-log / attack-verb KPI is phase 2.
+9. **[fixed, phase 2] engagement_ratio undercounted fire at will.** Replaced for comparisons by
+   `fire_share` / `enemy_fire_share` / `surface_*` from the pooled battle log (rca/eval/firelog.py,
+   EVAL_SPEC §8): attack entries per pawn per 300-tick contact window, so a drafted pawn firing at
+   will counts like one under Fire at. The old fields stay in rows for continuity.
 10. **[partly] Kidnap matching by lowercased short name.** The tracker now updates the squad before
     the kidnapper check (a kidnapping is caught one step earlier) and lists ambiguous names
     (`debug_kidnap_ambiguous`) instead of guessing; matching itself is still by short name

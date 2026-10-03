@@ -13,6 +13,7 @@ RimWorld enemy AI, not other players (see TODO.md, scope principle).
 | **tactical** | Doctrine execution: positioning (concave, choke, standoff), fire control, focus, commit/reset timing. Judged per battle with the doctrine fixed | military |
 | **strategic / decision** | Choosing doctrine and assets for this raid, terrain and squad, and when to transition (the router). Judged over a scenario distribution | RTS/military |
 | **precondition** | What a doctrine needs to be able to win (turtle: defensible terrain — choke/concave — and an enemy that will come to it). Checked by the router before choosing | ours |
+| **win condition unattainable** | The signal a doctrine raises (no progress for 3000 ticks, or a precondition broken at runtime); the strategic layer decides what to do with it | ours |
 | **stalemate / progress rate** | Progress rate = enemy combat points lost per 1,000 ticks; a stalemate is a long stretch with no progress. Tactical KPI and the trigger for commit/reset | ours |
 | **layer discipline** | Change and test one layer at a time with the others held fixed; a micro win must not be judged by tactical outcomes | ours |
 | **doctrine** | A posture with a **win condition**, plus **commit** and **reset** criteria | ours + MOBA |
@@ -69,6 +70,7 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **snipe (priority)** | Remove key enemy units first (rocket carriers; kill order by DPS ÷ TTK) | RTS |
 | **scout** | Read the raid early (composition, gear); router input | RTS |
 | **dodge** | Step out of a skillshot's area (reflex layer) | RTS/MOBA |
+| **vs throwers: accept-and-dodge / stand off / close in** | The tactical option `vs_throwers` (doctrine, turtle, spread): stay put and let micro dodge frags / step back out of throw range (12.9) while staying in gun range / go kill the thrower. Positioning, so tactical, not micro | ours |
 | **melee lock / melee-locked time** | An enemy (or ours) adjacent to a ranged pawn blocks its ranged attack; KPI name `melee_locked_time_share`. Value is set by what gets locked, not by the attacker (a manhunter guinea pig on our minigunner) | ours |
 | **cooldown trading** | Engage when the enemy's key weapon has just fired | MOBA |
 

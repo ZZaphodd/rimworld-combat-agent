@@ -159,13 +159,26 @@ Theme predicates and acceptance rates: DATA.md §3.
 4. Read the squad state, create the tracker, `observe(0)`, create the episode's `Terrain`,
    `agent.reset`, then the loop (EVAL_SPEC.md).
 5. `--scenarios all` excludes check-tier scenarios (frag_check): name them explicitly.
+6. Tactical options: `--option vs_throwers=accept_dodge|stand_off|close_in` (doctrine, turtle,
+   spread; ignored by the others). Rows store the effective `options`; `--resume` counts only rows
+   with the same options. Example (phase-2 smoke): `results/phase2/smoke.sh`.
 
-## 10. Crash watchdog (legacy/results/threatmap_check*.sh; rca: `session.Watchdog`)
+## 10. Crash watchdog and planned restarts (legacy/results/threatmap_check*.sh; rca: `session.Watchdog`)
 
 rca runs the same logic in-process before every episode attempt (`run_batch`) and drill
 session: alive → go; process exists but silent → wait 60 s, then **stop** (never launch a second
 instance); no process → `open steam://rungameid/294100`, poll every 5 s for up to 5 min, then
-20 s grace; more than 2 relaunches in a batch → stop. Legacy shell version:
+20 s grace; more than 2 crash relaunches in a batch → stop. The process is found with
+`pgrep -f "RimWorld by Ludeon Studios"` (the macOS process name).
+
+**Planned restart cadence** (TODO roadmap 2): `run_batch` counts episode attempts (each is a
+load); after `--restart-every` attempts (default **100**; 0 = never) the next `ensure()` quits the
+game (`pkill -f "RimWorld by Ludeon Studios"`, SIGKILL after 60 s if it is still there), waits
+until the process is gone, relaunches it as above and resets the counter. Planned restarts don't
+count against the 2-relaunch limit; a crash relaunch also resets the counter. Why: NullReference
+errors grow after ~100 loads and a native crash came at ~150 loads in one session (RIMMOLT_API
+§4). Episodes never save, so nothing is lost. The relaunch path itself is UNVERIFIED in rca (no
+crash and no 100-episode batch since phase 1). Legacy shell version:
 
 ```
 alive(): POST get_status (curl -m 10); ok if the reply contains "result"
@@ -184,14 +197,15 @@ touch <batch>.done
   `nohup python3 tools/run_eval.py ... --resume > results/<batch>.log 2>&1 &` and wait with an
   until-loop (a single background tool call dies after ~1 h). Legacy batches wrote a `.done` /
   `.failed` marker file.
-- The watchdog does not restart a game that is alive but degraded (NullReferenceException streak).
-  Plan restarts every ~100 episodes (TODO roadmap 2).
+- The watchdog does not restart a game that is alive but degraded (NullReferenceException streak);
+  the planned restart every 100 episodes is the mitigation.
 
 ## 11. Resume rules
 
 - `--resume` counts the existing rows per (scenario, canonical agent). A row counts only if
   **agent_version equals the current class's version for this reflex version**, **and**
-  (cycle policy, reflex on/off, reflex version) equal the current run's settings. Rows from other
+  (cycle policy, reflex on/off, reflex version) equal the current run's settings, **and** its
+  effective `options` equal the requested ones (missing = `{}`). Rows from other
   versions or settings are kept in the file but ignored.
 - It then runs runs [done, runs) for each cell.
 - An episode that fails twice is written to `<results>.errors.jsonl` and skipped; `--resume`

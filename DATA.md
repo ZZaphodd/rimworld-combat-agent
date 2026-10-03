@@ -86,6 +86,7 @@ carriers.
 | File | Content |
 |---|---|
 | `combat_power.json` | `{PawnKindDef: combatPower}` for 290 kinds, read from the game XML (RimWorld 1.6.4871 rev595, all DLC folders under Data/) by `tools/combat_points.py`. Used for point-weighted trade ratios (EVAL_SPEC §6). Re-extract after a game update |
+| `weapon_ranges.json` | `{"weapons": {ThingDef: {label, range, min_range, warmup, burst, verb, tags}}, "mech_kinds": {PawnKindDef: {weapons[], range}}}`: 71 weapon ThingDefs (first verb with a `<range>`, `ParentName` inheritance, `weaponTags` appended along the chain) and 24 `Mech_*` kinds (weapons whose tags meet the kind's `weaponTags`; range = the longest). Same game version and tool (`tools/combat_points.py` writes both). Read by `rca/game/weapons.range_source` (GAME_FACTS §5). Mechs without weapons: Scyther, Centurion, Warqueen, work mechs |
 
 ## 4. census/
 
@@ -118,6 +119,9 @@ hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike) → o
 | `exec_v2.jsonl` | 31 | kite v3, doctrine v2, hold v4 home-theme checks (execution_report) |
 | `reflex_check.jsonl` | 165 | b1/turtle/spread × frag_check/pirate_grenadier × {fixed:120 no reflex, adaptive no reflex, adaptive + reflex v1 (no `reflex_version`), adaptive + reflex v2} |
 | `threatmap_check.jsonl` | 135 | reflex v2 vs v3a vs v3b (agent versions b1 2/3/4, spread 2/3/4, turtle 5/6/7) |
+| `phase2/smoke.jsonl` | 20 | **rca** phase-2 doctrine smoke (doctrine v4, turtle v8, spread v5, kite v5, close v3; 2 episodes per doctrine on 2 home themes; adaptive + micro v4), `phase2/smoke.sh` + `.log`. Adds progress, fire-share, signal and options fields (EVAL_SPEC §9). Not a baseline |
+| `phase2/options.jsonl` | 4 | **rca** one episode per `vs_throwers` option (stand_off, close_in) for spread on pirate_grenadier and turtle on frag_check: exercises the option, not an evaluation |
+| `phase2/shakeout.jsonl` | 1 | first doctrine v4 episode (before the rescue retry cap) |
 | `rca_smoke.jsonl` | 2 | **rca** schema 2: amove v5, adaptive + micro v4, on theme_pirate_mixed and theme_frag_check (smoke test of the new harness) |
 | `drills/frag_drill*.jsonl` | – | **rca** micro frag drill: one `event` row per exploded frag (`session, dodge, frag, cell, landed_seen, gone_seen, in_blast, in_zone, escaped, stayed, lost_track, hit_pawns, hit_entries, hit_in_blast, moves, false_alarm_moves, fuse_left_at_move[], latency[]`) and one `session` row (`ticks, throwers, standing_end, returns, names_unique, kpis, moves[]`). `_trial` = first shake-out run |
 | `rescored/<file>.jsonl` | = source | per-row verdicts recomputed by `tools/rescore.py`: `grade_stored, grade_v1, grade, score_v1, enemy_lost_points, our_lost_points, ler, ler_basis` (+ identity/config). Raw files untouched |

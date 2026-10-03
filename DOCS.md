@@ -25,12 +25,12 @@
 | Path | Layer / role |
 |---|---|
 | `rca/rimmolt.py` | RimMolt client (RIMMOLT_API.md) |
-| `rca/game/` | owning the game: `session` (load, episode start, save guard, watchdog), `debug` (debug-menu helpers), `builders/` (arena, scenario, theme, frag_check), `census`, `weapons` (one classifier), `defs` (combat points from the XML) |
+| `rca/game/` | owning the game: `session` (load, episode start, save guard, watchdog), `debug` (debug-menu helpers), `builders/` (arena, scenario, theme, frag_check), `census`, `weapons` (one classifier, XML ranges), `defs` (combat points and weapon ranges from the XML) |
 | `rca/terrain.py` | the one terrain model: legend, LOS, BFS, per-episode cache with event invalidation |
 | `rca/micro/` | micro layer: `reflex` (frag dodge, fire step-out, viscosity, ownership, re-entry hysteresis), `drills` (per-event frag drill) |
-| `rca/tactical/` | doctrine interface, `b0`, `amove` (phase 2: doctrine, turtle, spread, kite, close) |
+| `rca/tactical/` | doctrine interface (`doctrine`: phases, signal, options), `preconditions` (cheap checks), `squad` (shared plumbing: casualties, vs-throwers option), `planner` (battleground v4), doctrines `b0`, `amove`, `focus` (code name `doctrine`), `turtle`, `spread`, `kite`, `close`; each spec is its module docstring |
 | `rca/strategic/` | placeholder for the router |
-| `rca/eval/` | `harness`, `tracker` (fates), `scoring` (grade, trade ratio), `results` (schema, aliases, resume), `report`, `kpis` |
+| `rca/eval/` | `harness`, `tracker` (fates, pooled battle log), `scoring` (grade, trade ratio), `results` (schema, aliases, resume), `report`, `kpis`, `progress` (progress rate, no-progress stretch), `firelog` (battle-log fire share) |
 | `tools/` | CLIs: make_arena, build_scenarios, build_themes, census, combat_points, run_eval, run_drill, report, rescore |
 | `tests/` | `python3 -m unittest discover -s tests -t .` (offline, no game) |
 | `legacy/` | the exploration code and batch scripts (reference only; rca never imports it) |

@@ -38,7 +38,7 @@ Coordinates are map cells `(x, z)`, with z pointing north. Pawn and thing ids ar
 | `game_setup_status` | – | `stage` (`planet`, `starting_site`, ...), `programState` (`Playing` once a map runs) | Raises or times out while the world or map is generating: poll and swallow errors [code] |
 | `list_colonists` | – | `colonists[]`: `id, name, downed, mentalState, incapableOf` (string, e.g. contains `Violent`), `job` (text), `health` (%), `inCaravan` | No positions: get them from `list_things` |
 | `list_things` | `category` (`pawn`/`item`/`all`), `faction` (`player`/`hostile`), `defName`, `verbose=True`, `summary=True`, `confirm=True`, `limit` | `things[]`: `id, def, kind, label, x, z, downed, dead, targeting, category`; with `summary`: `groups[]` of `{def, count}` | **Output guard:** a large result comes back as a `largeOutput` notice with **no `things` key** unless `confirm=True`. 65 Fire things were enough to trip it (37 agent steps lost, threatmap_report §1.5), and census samples were lost to `KeyError 'things'` the same way [log]. Always pass `confirm=True`. `category="all"` on the forest map is flooded by plants: query projectile defs by name (hazards.md) |
-| `get_pawn` | `id`, optional `tab` | Default: `name, x, z, weapon` (label, e.g. `Heavy SMG (good)`, `Biocoded heavy SMG (normal)`), `health, downed, dead, job`; `error` if the pawn is gone. Dead or carried-off pawns have no `x` | Tabs used: `health` → `hediffs[]` of `{label, part, permanent}`; `log` → `entries[]` of `{tick, text}` (battle log, short, and it vanishes with a dead pawn); `records` → `records[]` of `{record, value}` (we read `Kills`). Other tabs: UNVERIFIED |
+| `get_pawn` | `id`, optional `tab` | Default: `name, x, z, weapon` (label, e.g. `Heavy SMG (good)`, `Biocoded heavy SMG (normal)`), `health, downed, dead, job`; `error` if the pawn is gone. Dead or carried-off pawns have no `x` | Tabs used: `health` → `hediffs[]` of `{label, part, permanent}`; `log` → `entries[]` of `{tick, type, text, battle}` (`type` `combat`/`social`; `tick` is **TicksAbs**, not `ticksGame` [obs 2026-10-03]; short, and it vanishes with a dead pawn); `records` → `records[]` of `{record, value}` (we read `Kills`). Other tabs: UNVERIFIED |
 | `get_area` | `minX, minZ, maxX, maxZ, render="ascii"` | `grid`: list of strings, **north row (max z) first**; also `legend` and `orientation` | One call is capped at about 55×55 cells, so tile in 50×50 [code]. Legend below. Other layers (`layer=roof/buildings/things...`) unused |
 | `get_info_card` | `id`, or `x, z`, or `def` (+ `stuff`), or `stat` | `stats[]` of `{category, stats[{label, value}]}` | `def` takes **ThingDefs only** (`Unknown ThingDef: Mercenary_Gunner` for a PawnKindDef) [obs 2026-10-03]. A pawn's card has no combat power; see EVAL_SPEC §6 for where points come from |
 | `inspect_thing` | `id` or `x, z` | `actions[]` with `toggle`, `active` for toggle gizmos | Used to read a drafted pawn's `Fire at will` state before toggling it (micro drill) |
@@ -76,7 +76,7 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 | `order_pawn` (list) | `id` plus a target: `targetId` or `x, z` | `options[]` of `{label, disabled}` | Float-menu labels, see below. **An undrafted pawn gets an empty option list** (no "Go here") [log] |
 | `order_pawn` (by index) | same target + `index` | `ok` | The index refers to the list just fetched for the same target |
 | `order_pawn` (direct) | `id, x, z, command="Go here"` / `id, targetId, command="Fire at"` | `ok` / `error` | No list round trip needed. A Go here onto an unwalkable cell fails, so retry the neighbours [code] |
-| `do_thing_action` | `id, label, targetId?` | `ok` | `label="Auto attack (AI)"` + `targetId`: RimMolt's own combat AI for that pawn. It picks its own cover cell and can't see our data (it walks pawns back into danger: threatmap_report). `label="Fire at will"` **toggles** a drafted pawn's fire-at-will (used to make the squad hold fire in measurements; the state is not read back, UNVERIFIED) |
+| `do_thing_action` | `id, label, targetId?` | `ok` | `label="Drop <name>"` on a pawn carrying a downed squadmate puts it down [obs 2026-10-03]. `label="Auto attack (AI)"` + `targetId`: RimMolt's own combat AI for that pawn. It picks its own cover cell and can't see our data (it walks pawns back into danger: threatmap_report). `label="Fire at will"` **toggles** a drafted pawn's fire-at-will (used to make the squad hold fire in measurements; the state is not read back, UNVERIFIED) |
 | `say` | `text` | – | On-screen message panel (standalone agent only) |
 
 `order_pawn` option label formats seen [log]:
@@ -86,6 +86,9 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 - `Melee attack <target>`
 - On a downed colonist: `Rescue <name>`, `Carry <name>`, `Tend <name> (without medicine)`, `Strip <name>`,
   `Try to arrest <name> (100% chance)`
+  In the bed-less arenas `Rescue` is disabled and **`Carry <name>` is enabled**: executing it makes a
+  drafted pawn pick the victim up and carry it under later `Go here` orders until `Drop <name>`
+  [obs 2026-10-03; rca/tactical/squad.py].
 - Disabled options keep their text with a reason, e.g.
   `Cannot rescue: No reachable, un-reserved non-prisoner bed in safe temperature.` (no beds in the arenas),
   `Cannot tend X: Will never do doctoring`, `Cannot capture: ...`.
