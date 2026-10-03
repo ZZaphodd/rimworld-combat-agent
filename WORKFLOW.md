@@ -2,7 +2,8 @@
 
 ## Current stage: baseline-v1 frozen (local tag; see results/baseline/README.md)
 
-The rules under "After the baseline is frozen" now apply. Until the remote repo exists, branches
+The rules under "After the baseline is frozen" now apply; the merge gate is `tools/gate.py`
+(rule below). Until the remote repo exists, branches
 and the tag are local. Threshold fitting (preconditions, no_progress) on baseline data is analysis
 only and does not change agent behaviour; changing a threshold in code is a branch + gate.
 
@@ -46,8 +47,44 @@ read (results/threatmap_report.md).
   the branch and compare with the tagged baseline; merge only if it passes.
 - **Gate per layer.** Run the suites of the layer the branch changed plus the layers above it.
 - **Pass criterion: no regression (non-inferiority), not "proven better".** Per doctrine × scenario
-  cell, P(branch > baseline) must not fall below the noise band, and trade ratio and colonist losses
-  must not get worse beyond noise. The gate runs overnight (one game instance).
+  cell, trade ratio and colonist losses must not get worse beyond noise; exact rule below
+  (`tools/gate.py`). The gate runs overnight (one game instance).
+- **Version bumps.** Any change an agent's rows could show (behaviour, or report-only signals and
+  precondition data) bumps that agent's version, so rows never mix; the gate re-runs every agent
+  whose version changed. After a report-only bump the gate is an A/A run (same behaviour on
+  both sides), which also checks the gate's own false-alarm rate (feat/signals-preconditions).
+
+### Gate rule (`tools/gate.py`)
+
+```
+python3 tools/gate.py results/gate/<branch>.jsonl          # vs results/baseline/core.jsonl
+python3 tools/gate.py --simulate                           # false-alarm rate / power
+```
+
+- **Rows.** Cells = agent × scenario. Each side: one version per agent (highest in the file, or
+  `--base-version` / `--branch-version`), natural options only, the branch's config (cycle,
+  reflex) on both sides. A cell with < 5 battles on a side is INCOMPLETE (→ FAIL).
+- **Per battle:** `lost` = colonists lost (dead + kidnapped); `trade` = trade share
+  E / (E + O) (enemy points lost, our points lost = lost × colonist value; 1 = clean, 0.5 =
+  even or nothing lost) — the bounded twin of LER = trade / (1 − trade), so a mean exists when
+  LER = ∞.
+- **Worsening** d per cell: d_lost = mean(branch) − mean(baseline), d_trade = mean(baseline) −
+  mean(branch). Uncertainty: percentile bootstrap, each side resampled on its own, 4000 draws,
+  fixed seed.
+- **Cell regression:** the 98% interval of d lies wholly above the margin
+  (**0.5 colonists per battle**, **0.10 trade share**).
+- **Agent regression:** pooled over the agent's scenarios (d = mean of its cells' d, stratified
+  bootstrap), the 95% interval lies wholly above a quarter of the margin (0.125 colonists per
+  battle, 0.025 trade share).
+- **PASS** = no cell regression, no agent regression, no incomplete cell. `watch` cells (90%
+  interval above 0 and d > margin) are printed but do not fail the gate.
+- **Why these widths** (`--simulate`: A/A resampling of baseline-v1 cells, 60 trials): with 42
+  cells × 2 metrics a per-cell "90% interval above 0" rule fails an unchanged branch ~93% of the
+  time. This rule: unchanged branch FAILs ~8% (cell rule 5%, agent rule 3%); +0.5 colonists per
+  battle in every cell of an agent → FAIL ~100% (agent rule); +1 colonist per battle in one
+  median-noise cell only → ~18%. **Limit:** at n = 10 a regression confined to one cell is
+  caught only when it is large relative to that cell's noise; a change aimed at one theme
+  should add runs for that theme on both sides.
 - **Saves.** Scenario saves (.rws) are versioned too, gzipped in plain git (~13.5 MB -> ~1.4 MB each;
   a restore script unpacks them into RimWorld's Saves folder; switch to LFS only if saves pile up):
   raids are generated randomly, so scripts alone can't reproduce a scenario. Personal colony saves are used on branches only; adding
