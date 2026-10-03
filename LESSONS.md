@@ -249,6 +249,50 @@ window for its own range.
   zones drift onto destinations while pawns walk.* → Set W_THROW slightly below HIGH, and use a
   path-aware return check (transits count as returns today).
 
+**Phase-2 smoke (rca, 2026-10-03; results/phase2/smoke.jsonl, n=2 per cell, adaptive + micro v4).**
+Smoke runs check that each doctrine does what its spec says, not which doctrine is better.
+
+| Doctrine | Theme | Grades | Lost (dead+kidn.) | LER | progress_rate | fire_share ours/theirs | Spec KPIs |
+|---|---|---|---|---|---|---|---|
+| doctrine v4 | pirate_mixed | defeat, defeat | 0, 8 (5 kidnapped) | ∞, 0.23 | 120, 107 | 0.44/0.58, 0.42/0.45 | guns/target 2.4, 1.8; rescues started 19, 13 (carried 10, 6) |
+| doctrine v4 | mechs | decisive ×2 | 1, 0 | 2.0, ∞ | 266, 333 | 0.47, 0.50 | guns/target 3.3 ×2 |
+| turtle v8 | pirate_melee | decisive ×2 | 1, 0 | 2.5, ∞ | 303, 309 | 0.69/0.41, 0.66/0.49 | on_slot 1.0; surface 9.0 vs 3.6–4.3; no sally |
+| turtle v8 | tribal_melee | repelled, decisive | 0, 0 | ∞, ∞ | 182, 677 | 0.53/0.31, 0.73/0.24 | run 1: replan → raid centre inside → no_approach sally |
+| spread v5 | pirate_grenadier | repelled ×2 | 2, 1 | 1.3, 2.6 | 176, 201 | 0.34/0.39, 0.19/0.27 | gap5 0.81, 0.87; 80–88 step-outs |
+| spread v5 | frag_check | decisive ×2 | 0, 0 | ∞ | 646, 554 | 0.64, 0.43 | gap5 0.0–0.03 (fight over in ~600 ticks) |
+| kite v5 | pirate_melee | decisive ×2 | 0, 0 | ∞ | 306, 347 | 0.68/0.43, 0.67/0.27 | retreat_share 0.09, 0.04; adjacent 0.04, 0.0 |
+| kite v5 | tribal_melee | decisive ×2 | 0, 0 | ∞ | 309, 178 | 0.62/0.18, 0.50/0.22 | retreat 0.17; run 2 raised no_progress (stall 5159) |
+| close v3 | pirate_sniper | defeat ×2 | 5, 5 | 0.35, 0.30 | 137, 103 | 0.56/0.45, 0.51/0.46 | all 14 closed, mean tick 1134, 1228 |
+| close v3 | mechs | decisive ×2 | 2, 1 | 1.0, 2.0 | 379, 319 | 0.60, 0.63 | all 14 closed, mean tick ~1700 |
+
+(Mech-side enemy fire share was 0.0 in these rows: a parser gap, fixed afterwards; a re-run gave
+0.53/0.72, results/phase2/mech_firelog_check.jsonl.)
+- **Turtle and kite still win their home themes** (8/8 decisive or repelled, 1 colonist lost in
+  8 battles); turtle's concave shows as engagement surface 9–10 of ours vs 3.6–4.3 of theirs.
+  → The ports keep the v3/v4 behaviour; the baseline matrix can measure them.
+- **The `defensible_terrain` check failed on every theme (0.02 vs 0.10) while turtle won 4/4 on
+  melee themes.** Against raiders that charge, turtle's edge was the standing line, not cover.
+  → The precondition "defensible terrain" is either miscalibrated or not needed against melee;
+  calibrate against outcomes before the router uses it (UNVERIFIED either way, n=4).
+- **The doctrine agent lost both pirate_mixed battles** (one with 0 dead but 11 downed and a
+  satisfied raid, one with 5 kidnapped) while rescuing 13–19 times per battle; on mechs it won
+  both. Carrying works mechanically, but a carrier walks ~1 cell per 30 ticks (one probe) and stops shooting.
+  → Rescue is not shown to pay; keep it doctrine-agent-only and test it as an option before the
+  baseline (TODO).
+- **close loses to snipers in this squad** (5 lost per battle, all 14 closed by tick ~1200): the
+  losses come during the approach, as in v2. → Bounding overwatch (TODO) before reading close's
+  sniper cell as a doctrine verdict.
+- **The no_progress signal fired twice, both in won battles** (kite tribal_melee: stall 5159
+  ticks while the last raiders were slow to die/leave; turtle tribal_melee after its sally). The
+  signal says "no points lost for 3000 ticks", not "losing". → The strategic layer must read it
+  with the force ratio; 3000 ticks is a first value.
+- **vs_throwers options run** (results/phase2/options.jsonl, 1 episode each, not an evaluation):
+  stand_off made 15 thrower moves (spread, grenadier) and close_in 24 thrower attacks; on
+  frag_check turtle's on_slot_share fell from ~1.0 to 0.64 (stand_off) and 0.14 (close_in), as
+  designed.
+- Spread on frag_check never spread (gap5 ≤ 0.03): the fight ends in ~600 ticks, before 5-cell
+  step-outs complete. Not a defect, but frag_check says nothing about spread's spacing.
+
 ## 3. Strategic (selection / router)
 
 - **Provisional routing** (theme matrix v1, fixed 120, n=5, current grade; DATA.md §7):
@@ -344,6 +388,14 @@ Status after rewrite phase 1 (2026-10-03): **[fixed]** = done in rca with the fi
     legacy/raid_census.py; GAME_FACTS §2 has the right statement.
 17. **[data] Two v3b grenadier rows** have 9 and 28 lost agent steps and were not re-run. Legacy
     data; ignore those two rows when reading threatmap_check v3b.
+
+New in phase 2 (found while porting):
+- **Battle-log ticks are TicksAbs**, not `ticksGame` (318,941 vs ~2,300 in the same scenario):
+  anything that joins log entries to episode time needs an offset (firelog estimates it).
+- **Mech names in the log are lowercase with "the"** ("the termite's head") and several mechs
+  share one label, so log KPIs are per name for mechs (EVAL_SPEC §8).
+- **Turtle Go here failures:** 11 failed orders ("No order matched 'Go here'") in one
+  tribal_melee episode after the sally (cause UNVERIFIED; counted in `order_errors`).
 
 New in phase 1 (found while porting):
 - **Kidnapper check lagged one step**: the squad's downed state was read from the previous

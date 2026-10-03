@@ -16,8 +16,8 @@ Attacker phrasing (seen 2026-10-03, scenario_theme_pirate_mixed):
   "Bellerose, using her left fist aptly, beat Xevion ..."        -> Bellerose
   "Rakool missed while trying to beat Hamster."                  -> Rakool
 Names shared by several pawns of one side (mechs are all "Pikeman",
-"Scyther" ...) are counted per name, not per pawn: a window counts once per
-name, so the enemy side of a mech raid is a lower bound. Mech attacker
+"Scyther" ...) are counted per name, not per pawn: fire_share then means "any
+pawn of that name fired" (biased up) and surface counts names (biased down). Mech attacker
 phrasing beyond "the <kind>'s ..." is UNVERIFIED.
 Log ticks are absolute (TicksAbs), not ticksGame: the offset is estimated as
 the running max of (newest entry tick - episode tick at harvest), a lower bound

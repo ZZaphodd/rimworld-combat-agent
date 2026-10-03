@@ -117,6 +117,11 @@ Per spec in scenarios.json:
    pawn is dead/downed/gone, **or** d1 ≤ 0.7 × d0. Otherwise the raid is loitering: rebuild, up to
    3 builds.
 
+rca check (2026-10-03): `tools/build_scenarios.py --specs <tmp spec> --out <scratch dir>` built
+the throwaway `scenario_tmp_phase2_check` (Pirate 1000 squad of 11 vs TribeSavage 400, 8
+raiders, arena_open) and passed the assault check (gap 131 → 19). The save is left in the Saves
+folder (saves are never deleted).
+
 ## 7. Theme building (theme_builder)
 
 1. **Frozen base** (`--base`): load `arena_forest` and spawn OutlanderRough 1500 pt until the raid
