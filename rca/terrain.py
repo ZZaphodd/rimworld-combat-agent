@@ -2,7 +2,7 @@
 LOS and BFS. Replaces battleground.Grid, reflexes.TiledGrid and threatmap.Terrain
 (LESSONS bug 1: they disagreed on what " " means).
 
-Legend (verified in game 2026-10-03, GAME_FACTS §9): get_area's own legend is
+Legend (verified in game 2026-10-03, RIMMOLT_API §2, GAME_FACTS §6): get_area's own legend is
   # wall/impassable building, % natural rock, + door, * tree, ~ water/marsh,
   . open ground, V steam geyser, ? fogged/unknown.
 " " never occurs in a fetched grid (0 of 62,500 cells on a whole forest map);

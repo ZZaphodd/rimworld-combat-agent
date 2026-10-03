@@ -23,6 +23,7 @@ import math
 import time
 
 from .. import ROOT
+from ..eval.results import git_commit
 from ..eval.tracker import short_name
 from ..game import session
 from ..game.builders.theme import load_base
@@ -167,7 +168,7 @@ def run(rm, sessions=3, events=12, out=None, modes=(False, True), log=print, wat
                        "standing_end": res["standing_end"], "squad": res["squad"],
                        "returns": res["returns"], "names_unique": res["names_unique"],
                        "faw_unknown": res["faw_unknown"], "kpis": res["micro"].kpis(),
-                       "moves": res["micro"].moves, "time": time.time()}
+                       "moves": res["micro"].moves, "commit": git_commit(), "time": time.time()}
             with out.open("a") as f:
                 for r in rows + [summary]:
                     f.write(json.dumps(r) + "\n")
