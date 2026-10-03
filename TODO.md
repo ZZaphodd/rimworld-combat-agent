@@ -136,3 +136,8 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
          still to test on grenadier themes with the doctrine fixed and micro pinned.
       4. [ ] ENEMY_AI hypothesis (roadmap 3): what raiders do when our pawns are out of their range
          (hold? advance? wait for targets?).
+- [ ] From the baseline calibration (results/baseline/calibration.md): second signal "losing trade"
+      for fast defeats (no_progress catches only 12% of bad battles); turtle defensible_terrain →
+      soft; spread gets an enemy splash-heavy precondition; close's enemy_outranges is inverted for
+      the current close (revisit after bounding overwatch); holdout (2nd squad + 2nd arena) needed to
+      fit squad/terrain-based preconditions — do it before the router. Code changes = branch + gate.
