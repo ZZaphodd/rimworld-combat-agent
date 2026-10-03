@@ -1,11 +1,10 @@
 # Workflow
 
-## Current stage: pre-baseline (exploration)
+## Current stage: baseline-v1 frozen (local tag; see results/baseline/README.md)
 
-The baseline is not stable yet: doctrines, harness, grading and scoring still change, and results
-from different agent versions / cycle policies are kept apart by version fields rather than by
-branches. The rules below take effect once the baseline checkpoint (TODO roadmap step 2) is frozen
-and tagged.
+The rules under "After the baseline is frozen" now apply. Until the remote repo exists, branches
+and the tag are local. Threshold fitting (preconditions, no_progress) on baseline data is analysis
+only and does not change agent behaviour; changing a threshold in code is a branch + gate.
 
 ## Test layers (applies now)
 
