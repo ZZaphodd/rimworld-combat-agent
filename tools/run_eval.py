@@ -37,10 +37,11 @@ def main():
     a = ap.parse_args()
     options = dict(o.split("=", 1) for o in a.option)
     rm = RimMolt()
+    log = lambda s: print(s, flush=True)          # noqa: E731  (detached runs log to a file)
     cycle = Cycle(a.step_ticks, a.fast_ticks, a.fast_radius, a.cycle == "adaptive")
     run_batch(rm, load_manifests(a.scenarios), a.agents.split(","), a.runs, a.results, cycle,
-              a.reflex, a.max_ticks, a.resume, Watchdog(rm, restart_every=a.restart_every),
-              log=lambda s: print(s, flush=True), options=options)
+              a.reflex, a.max_ticks, a.resume,
+              Watchdog(rm, restart_every=a.restart_every, log=log), log=log, options=options)
     print(f"done -> {a.results}", flush=True)
 
 
