@@ -11,7 +11,7 @@ import statistics
 from collections import Counter, defaultdict
 
 from . import scoring
-from .results import config_label, row_config
+from .results import config_label, row_config, row_options
 
 GRADES = ("decisive", "repelled", "pyrrhic", "unresolved", "defeat")
 
@@ -31,12 +31,22 @@ def enrich(r, mean_points, colonist_enemies=scoring.COLONIST_ENEMIES):
             "key": scoring.ler_key(t)}
 
 
+def option_tag(r, options_of):
+    """'[rescue=off]': options that differ from the agent's natural ones, so
+    option variants never pool in a cell (natural rows keep the plain label)."""
+    natural = options_of(r["agent"])
+    eff = row_options(r, lambda a: natural)
+    diff = [f"{k}={v}" for k, v in sorted(eff.items()) if natural.get(k) != v]
+    return f"[{','.join(diff)}]" if diff else ""
+
+
 def cells(rows, mean_points, colonist_enemies=scoring.COLONIST_ENEMIES):
     """{config label: {(scenario, agent label): [enriched rows]}}."""
+    from ..tactical import options_of           # lazy: tactical imports eval
     out = defaultdict(lambda: defaultdict(list))
     for r in rows:
         v = r.get("agent_version")
-        label = r["agent"] + (f"@v{v}" if v is not None else "")
+        label = r["agent"] + (f"@v{v}" if v is not None else "") + option_tag(r, options_of)
         e = enrich(r, mean_points.get(r["scenario"]), colonist_enemies)
         out[config_label(row_config(r))][(r["scenario"], label)].append({**r, **e})
     return out

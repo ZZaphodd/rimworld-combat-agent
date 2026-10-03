@@ -18,7 +18,9 @@ Phases:
           remain: back to the rally cells (hold).
 Casualties: wounded (< 45%) stay drafted and fall back (v1-v3 undrafted them:
 they fled, LESSONS bug 6); downed squadmates are carried to a safe cell when
-"Carry" is enabled, never reserved for a disabled "Rescue" (bug 5).
+"Carry" is enabled, never reserved for a disabled "Rescue" (bug 5). Both are
+options: rescue=on|off, wounded_pullback=on|off (natural on; to be compared in
+the baseline).
 vs_throwers: accept_dodge (natural) / stand_off / close_in.
 Signal: no_progress after NO_PROGRESS_TICKS of contested time (we take damage or
 are in a raider's reach) without enemy points lost (EVAL_SPEC §2).
@@ -44,7 +46,8 @@ class Focus(SquadDoctrine):
     phases_spec = {"setup": "rally", "hold": "rally cells, fire at will",
                    "commit": "raider within 45 of the anchor: focus fire",
                    "reset": "no raider within 60 for 1200 ticks: back to rally"}
-    option_choices = {"vs_throwers": ("accept_dodge", "stand_off", "close_in")}
+    option_choices = {"vs_throwers": ("accept_dodge", "stand_off", "close_in"),
+                      "rescue": ("on", "off"), "wounded_pullback": ("on", "off")}
     RETREAT_HP = 45
     RESCUE = True
     ENGAGE_R, SPLIT_R = 45, 15

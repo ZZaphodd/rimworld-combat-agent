@@ -13,6 +13,11 @@ Casualties (LESSONS §4 bugs 5 and 6):
     pawn while it walks under Go here, and the "Drop <name>" gizmo puts it
     down). The carried pawn is walked to a safe cell behind the squad and
     dropped. No enabled option -> nobody is reserved (count rescue_unavailable).
+  * Both take shooters out of the fight and are not shown to pay (LESSONS §2
+    phase-2 smoke), so they are options: `rescue` (doctrine agent) and
+    `wounded_pullback` (doctrine agent, turtle), each on|off, natural = on;
+    off = the pawn keeps fighting where it is (wounded) / nobody is sent to
+    a downed squadmate. Recorded in rows and the resume key.
 Positioning vs throwers (TODO phase-2 requirement 3) is an explicit option
 `vs_throwers` on doctrines that list it in option_choices:
   accept_dodge  stay where the doctrine puts the pawn; micro dodges frags;
@@ -266,9 +271,17 @@ class SquadDoctrine(Doctrine):
         return want
 
     # ------------------------------------------------------------ casualties
+    def rescue_on(self):
+        """RESCUE class flag and the `rescue` option (doctrine agent; on/off)."""
+        return self.RESCUE and self.opt.get("rescue", "on") == "on"
+
+    def pullback_on(self):
+        """RETREAT_HP class value and the `wounded_pullback` option (on/off)."""
+        return self.RETREAT_HP is not None and self.opt.get("wounded_pullback", "on") == "on"
+
     def rescue_step(self, fighters, hs, busy):
         """Carry downed squadmates out (see module docstring). Returns rescuers."""
-        if not self.RESCUE:
+        if not self.rescue_on():
             return set()
         byid = {c["id"]: c for c in fighters}
         out = set()
@@ -337,7 +350,7 @@ class SquadDoctrine(Doctrine):
 
     def wounded_step(self, fighters, hs, busy):
         """Bug 6: stay drafted, walk to a fallback cell, fire at will from there."""
-        if self.RETREAT_HP is None:
+        if not self.pullback_on():
             return set()
         out = set()
         for c in fighters:

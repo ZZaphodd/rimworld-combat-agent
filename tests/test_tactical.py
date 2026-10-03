@@ -284,19 +284,37 @@ class FireLog(unittest.TestCase):
 
 class Options(unittest.TestCase):
     def test_effective_options_and_resume(self):
-        self.assertEqual(options_of("hold"), {"vs_throwers": "accept_dodge"})
+        nat = {"vs_throwers": "accept_dodge", "wounded_pullback": "on"}
+        self.assertEqual(options_of("hold"), nat)
         self.assertEqual(options_of("turtle", {"vs_throwers": "stand_off"}),
-                         {"vs_throwers": "stand_off"})
-        self.assertEqual(options_of("turtle", {"vs_throwers": "bogus"}),
-                         {"vs_throwers": "accept_dodge"})
+                         nat | {"vs_throwers": "stand_off"})
+        self.assertEqual(options_of("turtle", {"vs_throwers": "bogus"}), nat)
         self.assertEqual(options_of("kite", {"vs_throwers": "stand_off"}), {})
         cfg = ("adaptive:30/120@40", True, 4)
         rows = [{"scenario": "s", "agent": "turtle", "agent_version": 8, "cycle": cfg[0],
                  "reflex": True, "reflex_version": 4, "options": {"vs_throwers": o}}
                 for o in ("accept_dodge", "stand_off", "stand_off")]
-        n = done_counts(rows, lambda a: 8, cfg, lambda a: options_of(a, {"vs_throwers": "stand_off"}))
+        n = done_counts(rows, lambda a: 8, cfg, lambda a: options_of(a, {"vs_throwers": "stand_off"}),
+                        lambda a: options_of(a))
         self.assertEqual(n[("s", "turtle")], 2)
 
+    def test_rescue_and_pullback_options(self):
+        self.assertEqual(options_of("doctrine"), {"vs_throwers": "accept_dodge", "rescue": "on",
+                                                  "wounded_pullback": "on"})
+        self.assertEqual(options_of("turtle", {"rescue": "off"}),
+                         {"vs_throwers": "accept_dodge", "wounded_pullback": "on"})
+        # rows written before the options existed read as the natural value (on)
+        cfg = ("adaptive:30/120@40", True, 4)
+        old = {"scenario": "s", "agent": "doctrine", "agent_version": 4, "cycle": cfg[0],
+               "reflex": True, "reflex_version": 4, "options": {"vs_throwers": "accept_dodge"}}
+        off = {**old, "options": {**options_of("doctrine"), "rescue": "off"}}
+        for req, want in (({}, 1), ({"rescue": "off"}, 1), ({"wounded_pullback": "off"}, 0)):
+            n = done_counts([old, off], lambda a: 4, cfg, lambda a: options_of(a, req),
+                            lambda a: options_of(a))
+            self.assertEqual(n[("s", "doctrine")], want, req)
+        from rca.eval.report import option_tag
+        self.assertEqual(option_tag(old, options_of), "")
+        self.assertEqual(option_tag(off, options_of), "[rescue=off]")
 
 
 # ------------------------------------------------------------------ fake game
@@ -386,6 +404,21 @@ class DoctrineSmoke(unittest.TestCase):
                and "index" in a]
         self.assertEqual([a["index"] for a in idx], [1])            # Carry, never the disabled one
         self.assertEqual(d.k["rescue_carried"], 1)
+
+    def test_rescue_off_sends_nobody(self):
+        g = FakeGame(downed=(2,))
+        d = run("doctrine", g, steps=3, options={"rescue": "off"})
+        self.assertFalse([a for t, a in g.orders if t == "order_pawn" and a.get("targetId") == "S2"])
+        self.assertEqual(d.k["rescue_started"], 0)
+
+    def test_pullback_off_keeps_the_wounded_fighting(self):
+        for name in ("doctrine", "turtle"):
+            g = FakeGame()
+            d = run(name, g, options={"wounded_pullback": "off"})
+            self.assertEqual(d.k["wounded_pullbacks"], 0, name)
+            g2 = FakeGame()
+            d2 = run(name, g2)
+            self.assertEqual(d2.k["wounded_pullbacks"], 1, name)     # S1 is at 30%
 
     def test_stand_off_moves_out_of_throw_range(self):
         g = FakeGame(raid_x=30)

@@ -253,7 +253,7 @@ def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max
     done = Counter()
     if resume and results.exists():
         done = done_counts(read_rows(results), version_of, config,
-                           lambda a: options_of(a, options))
+                           lambda a: options_of(a, options), lambda a: options_of(a))
     for m in manifests:
         for name in names:
             for run in range(done[(m["id"], name)], runs):

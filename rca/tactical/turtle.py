@@ -24,8 +24,9 @@ hold), precondition:enemy_approaches (the idle sally fired: they don't come),
 no_progress (NO_PROGRESS_TICKS of contested time without enemy points lost,
 also after a sally; EVAL_SPEC §2).
 Casualties: < 45% health steps off the line to a fallback cell, drafted
-(unless the fight is inside). vs_throwers: accept_dodge (natural; micro
-dodges, viscosity 0.8) / stand_off / close_in.
+(unless the fight is inside); option wounded_pullback=on|off (natural on).
+vs_throwers: accept_dodge (natural; micro dodges, viscosity 0.8) / stand_off /
+close_in.
 Dropped from legacy v6/v7: threat-map slot swaps and map placement (micro v4
 has no threat map; LESSONS §1: untested as a tactical option).
 """
@@ -53,7 +54,8 @@ class Turtle(SquadDoctrine):
     phases_spec = {"setup": "plan + walk to slots", "hold": "line, fire at will",
                    "commit": "inside (local) or sally (idle 4800 / stall 1440 ticks)",
                    "reset": "inside fight over: back to the slots"}
-    option_choices = {"vs_throwers": ("accept_dodge", "stand_off", "close_in")}
+    option_choices = {"vs_throwers": ("accept_dodge", "stand_off", "close_in"),
+                      "wounded_pullback": ("on", "off")}
     RETREAT_HP = 45
 
     def reset(self, rm, manifest):

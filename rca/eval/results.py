@@ -44,14 +44,24 @@ def read_rows(path):
     return rows
 
 
-def done_counts(rows, version_of, config, options_of=None):
+def row_options(r, natural_of=None):
+    """A row's effective options. natural_of(agent) -> the doctrine's natural
+    options: a key the row lacks (an option added after the row was written)
+    reads as its natural value, which is what that agent version did then."""
+    stored = r.get("options") or {}
+    return {**natural_of(r["agent"]), **stored} if natural_of else dict(stored)
+
+
+def done_counts(rows, version_of, config, options_of=None, natural_of=None):
     """Rows per (scenario, canonical agent) that count for --resume: same agent
     version (version_of(agent) for the current code), same config and, when
-    options_of is given, the same tactical options (rows without any = {})."""
+    options_of is given, the same tactical options (row_options; rows without
+    any = {} or, with natural_of, the natural values)."""
     return Counter((r["scenario"], r["agent"]) for r in rows
                    if r.get("agent_version") == version_of(r["agent"])
                    and row_config(r) == config
-                   and (options_of is None or (r.get("options") or {}) == options_of(r["agent"])))
+                   and (options_of is None
+                        or row_options(r, natural_of) == options_of(r["agent"])))
 
 
 def git_commit():
