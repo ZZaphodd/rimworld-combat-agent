@@ -13,7 +13,7 @@ layer reads the signal (later). Preconditions are data on the class
 can test them without running the doctrine.
 """
 from ..eval.progress import ProgressMeter, lost_points
-from ..eval.tracker import short_name
+from ..eval.tracker import EDGE, near_edge, short_name
 from ..game.defs import combat_power
 from ..micro import MICRO_VERSION, VISCOSITY, MicroLayer
 from ..rimmolt import player_pawns
@@ -56,8 +56,12 @@ class Doctrine:
         self.micro.start({t["id"]: short_name(t.get("label")) for t in player_pawns(rm)
                           if t["id"] in squad})
         self.opt = self.effective_options()
+        self.init_tactical()
+
+    def init_tactical(self):
+        """Phase log, signal history and the doctrine-side progress meter."""
         self.signals, self._seen_pts, self.meter = [], {}, ProgressMeter()
-        self._np_armed = True
+        self._np_armed, self._last_xz = True, {}
         self.phase, self.phase_log = None, []
 
     def step(self, rm):
@@ -85,13 +89,18 @@ class Doctrine:
 
     def note_progress(self, hostiles, contact):
         """Doctrine-side progress: points of raiders once seen live that are no
-        longer live. Raises no_progress after `no_progress_ticks`."""
+        longer live, except those last seen near the map edge (walked off: not
+        progress). Raises no_progress after `no_progress_ticks`."""
+        live = {h["id"] for h in hostiles}
         for h in hostiles:
             if h["id"] not in self._seen_pts:
                 self._seen_pts[h["id"]] = combat_power(h.get("kind") or "", 0) or 0
+            self._last_xz[h["id"]] = (h["x"], h["z"])
+        for i, p in self._last_xz.items():
+            if i not in live and near_edge(*p, EDGE):
+                self._seen_pts[i] = 0
         before = self.meter.points
-        self.meter.update(self.now, lost_points(self._seen_pts, {h["id"] for h in hostiles}),
-                          contact)
+        self.meter.update(self.now, lost_points(self._seen_pts, live), contact)
         if self.meter.points > before:
             self._np_armed = True
         if self.meter.stretch() >= self.no_progress_ticks:

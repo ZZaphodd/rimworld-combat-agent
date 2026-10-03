@@ -150,14 +150,24 @@ class Progress(unittest.TestCase):
         self.assertIsNone(m.rate())
         self.assertEqual(m.stretch(), 0)
 
+    def test_edge_escape_is_not_progress(self):
+        d = AGENTS["amove"]()
+        d.init_tactical()
+        d.now = 0
+        d.note_progress([{"id": "r1", "kind": "Mercenary_Gunner", "x": 2, "z": 100}], True)
+        d.now = 30
+        d.note_progress([], True)
+        self.assertEqual(d.meter.points, 0)
+
     def test_lost_points_doctrine_view(self):
         self.assertEqual(lost_points({"a": 85, "b": 110, "c": None}, {"b"}), 85)
 
     def test_signal_rearms_after_progress(self):
         d = AGENTS["amove"]()
-        d.signals, d._seen_pts, d.meter, d._np_armed, d.phase = [], {}, ProgressMeter(), True, None
+        d.init_tactical()
         d.no_progress_ticks = 1000
-        h = [{"id": "r1", "kind": "Mercenary_Gunner"}, {"id": "r2", "kind": "Mercenary_Gunner"}]
+        h = [{"id": "r1", "kind": "Mercenary_Gunner", "x": 100, "z": 100},
+             {"id": "r2", "kind": "Mercenary_Gunner", "x": 100, "z": 100}]
         for now, hs in ((0, h), (600, h), (1200, h), (1500, h[1:]), (2700, h[1:])):
             d.now = now
             d.note_progress(hs, True)

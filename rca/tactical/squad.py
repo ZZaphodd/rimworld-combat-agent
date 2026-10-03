@@ -40,7 +40,8 @@ OVERRIDE_TICKS = 300
 CARRIER_R = 35                # rocket carriers first within this range (doctrine agent priority 6)
 RESCUE_R = 30
 CARRY_TICKS = 1500            # give up a carry that takes longer
-PICKUP_TICKS = 300
+PICKUP_SPEED = 0.06          # cells/tick walking to the victim (GAME_FACTS §4: ~0.07)
+MAX_RESCUE_TRIES = 2
 FALLBACK_R = 10
 REISSUE_TICKS = 600
 
@@ -88,7 +89,8 @@ class SquadDoctrine(Doctrine):
                        round(statistics.median(p["z"] for p in sq)))
         self.weapons, self.enemy = {}, {}
         self.drafted, self.target, self.override = set(), {}, {}
-        self.rescues, self.dropped, self.wounded = {}, set(), {}
+        self.rescues, self.dropped, self.wounded, self.tries = {}, set(), {}, {}
+        self.errors = []
         self.tally, self.contact, self.short = Tally(), False, {}
         self.owned, self.all_fighters, self.downed = set(), [], {}
         self.k = {k: 0 for k in ("rescue_started", "rescue_carried", "rescue_unavailable",
@@ -185,18 +187,24 @@ class SquadDoctrine(Doctrine):
     def goto(self, pid, cell):
         """Go here; on an unwalkable/taken cell try the neighbours. Drops any attack order."""
         self.target.pop(pid, None)
+        r = None
         for dx, dz in ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1), (1, 1), (-1, -1), (2, 0), (0, 2)):
             x, z = clip((cell[0] + dx, cell[1] + dz))
             if self.terrain is not None and not self.terrain.passable(x, z):
                 continue
             try:
                 r = self.rm.call("order_pawn", id=pid, x=x, z=z, command="Go here")
-            except Exception:
+            except Exception as e:
+                r = {"error": repr(e)}
                 continue
             if r.get("ok", True) and "error" not in r:
                 return (x, z)
-        self.k["orders_failed"] += 1
+        self.fail("goto", r)
         return None
+
+    def fail(self, what, r):
+        self.k["orders_failed"] += 1
+        self.errors = (self.errors + [f"{what}: {str((r or {}).get('error', r))[:80]}"])[-6:]
 
     def auto_attack(self, pid, h, force=False):
         if self.target.get(pid) == h["id"] and not force:
@@ -205,7 +213,7 @@ class SquadDoctrine(Doctrine):
         if r.get("ok"):
             self.target[pid] = h["id"]
             return True
-        self.k["orders_failed"] += 1
+        self.fail("auto_attack", r)
         return False
 
     def fire_at(self, pid, h):
@@ -270,7 +278,7 @@ class SquadDoctrine(Doctrine):
                     self.goto(rid, r["dest"])
                     r.update(state="carry", at=self.now)
                     self.k["rescue_carried"] += 1
-                elif self.now - r["at"] > PICKUP_TICKS:
+                elif self.now - r["at"] > r["pickup_ticks"]:
                     self.rescues.pop(vid)
                     self.k["rescue_failed"] += 1
                     continue
@@ -286,7 +294,8 @@ class SquadDoctrine(Doctrine):
                 continue
             out.add(rid)
         for vid, vpos in self.downed.items():
-            if vid in self.rescues or vid in self.dropped:
+            if vid in self.rescues or vid in self.dropped \
+                    or self.tries.get(vid, 0) >= MAX_RESCUE_TRIES:
                 continue
             if any(math.dist(pos(h), vpos) <= 2 for h in hs):
                 continue                         # still in melee: dragging it out costs two
@@ -304,11 +313,13 @@ class SquadDoctrine(Doctrine):
             kind, idx, name = choice
             r = self.rm.call("order_pawn", id=rc["id"], targetId=vid, index=idx)
             if not r.get("ok", True) or "error" in r:
-                self.k["orders_failed"] += 1
+                self.fail("rescue", r)
                 continue
             self.target.pop(rc["id"], None)
+            self.tries[vid] = self.tries.get(vid, 0) + 1
             self.rescues[vid] = {"by": rc["id"], "state": "pickup" if kind == "carry" else "rescue",
-                                 "name": name, "at": self.now}
+                                 "name": name, "at": self.now,
+                                 "pickup_ticks": 60 + math.dist(rc["pos"], vpos) / PICKUP_SPEED}
             self.k["rescue_started"] += 1
             out.add(rc["id"])
         return out
@@ -369,4 +380,4 @@ class SquadDoctrine(Doctrine):
     def kpis(self):
         pre = {f"pre_{k}": v for k, v in (self.pre or {}).items()}
         return (super().kpis() | self.tally.summary() | dict(self.k) | pre
-                | {"no_progress_ticks": self.no_progress_ticks})
+                | {"no_progress_ticks": self.no_progress_ticks, "order_errors": self.errors})
