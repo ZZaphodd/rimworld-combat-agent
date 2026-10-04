@@ -19,13 +19,13 @@ from collections import Counter
 
 from .. import ROOT
 from ..game import session
-from ..rimmolt import RimMoltError
+from ..rimmolt import RimMoltError, player_pawns
 from ..terrain import Terrain
 from . import firelog, scoring
 from .kpis import CONTACT
 from .progress import ProgressMeter
 from .results import INVALID, SCHEMA, append_row, git_commit, row_config
-from .tracker import BattleTracker
+from .tracker import BattleTracker, short_name
 
 SCENARIO_DIR = ROOT / "scenarios_out"
 FORBIDDEN = {
@@ -46,6 +46,59 @@ def unexpected_hostiles(start_ids, enemies):
     """Hostiles the tracker has seen that were not on the map at the episode
     start: a storyteller threat (raid, manhunter, mech cluster), not the scenario."""
     return {eid: e for eid, e in enemies.items() if eid not in start_ids}
+
+
+STRANGER_KINDS = ("StrangerInBlack",)       # the man in black: help once every colonist is down
+AFTER_DOWN_TICKS = 6000      # a beaten squad is watched until the raid is gone (user, 2026-10-05)
+
+
+def squad_down_state(tracker, live, ticks):
+    """The episode at the moment the whole squad is down: what the old rule (stop here) scored."""
+    sq = list(tracker.squad.values())
+    return {"tick": ticks, "missing": sum(1 for s in sq if s["fate"]),
+            "downed": sum(1 for s in sq if not s["fate"] and s["downed"]),
+            "enemies_standing": len(live),
+            "enemies_out": sum(1 for e in tracker.enemy.values() if e["fate"] or e.get("downed"))}
+
+
+def watch_after_down(squad, tracker, live, ticks, squad_down, log=print):
+    """Rule since 2026-10-05: squad down no longer ends the episode; it is recorded and the
+    episode runs on until the raid is gone (kidnappings, comebacks) or AFTER_DOWN_TICKS pass.
+    Returns (squad_down, stop)."""
+    if squad_down is None and not any(not c.get("downed") for c in squad):
+        squad_down = squad_down_state(tracker, live, ticks)
+        log(f"   squad down at tick {ticks}: watching until the raid is gone")
+    return squad_down, bool(squad_down) and ticks - squad_down["tick"] >= AFTER_DOWN_TICKS
+
+
+def remove_strangers(rm, squad_ids, log=print):
+    """User rule (2026-10-05): the man in black never takes part. Destroys every player pawn
+    of a STRANGER_KINDS kind (dev mode on only for the destroy), never on a squad pawn's cell
+    (then the next check gets it). Returns [(name, kind)] removed."""
+    from ..game.debug import Debug
+    pawns = player_pawns(rm)
+    taken = {(p["x"], p["z"]) for p in pawns if p["id"] in squad_ids}
+    out = [p for p in pawns if p["id"] not in squad_ids and p.get("kind") in STRANGER_KINDS
+           and (p["x"], p["z"]) not in taken]
+    if out:
+        rm.call("dev_mode", devMode=True)
+        try:
+            d = Debug(rm, log)
+            for p in out:
+                d.destroy_at(p["x"], p["z"])
+            d.close()
+        finally:
+            rm.call("dev_mode", devMode=False, godMode=False)
+    gone = [(short_name(p.get("label")), p.get("kind")) for p in out]
+    for name, kind in gone:
+        log(f"   removed {kind} {name} (man in black rule)")
+    return gone
+
+
+def check_strangers(rm, ids, colonists, ticks, removed, log=print):
+    """Cheap per-step check: only a colonist outside the squad triggers the removal."""
+    if any(c["id"] not in ids for c in colonists):
+        removed += [{"tick": ticks, "name": n, "kind": k} for n, k in remove_strangers(rm, ids, log)]
 
 
 class Sandbox:
@@ -158,6 +211,8 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
     before = squad_state(rm, ids)
     tracker = BattleTracker(rm, ids)
     live = tracker.observe(0)
+    strangers = []                                # man-in-black pawns removed (tick, name, kind)
+    squad_down = None                             # state when the whole squad first went down
     start_ids, intruders = set(tracker.enemy), {}
     terrain = Terrain(rm)                       # per episode: never shared (LESSONS §4.2)
     client, errors = Sandbox(rm), 0
@@ -223,7 +278,9 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
                     avail_t.setdefault(e["name"], set()).add(w)
         theirs = sum((t.get("targeting") or "").startswith(("targeting colonist", "attacking colonist"))
                      for t in live)
-        squad = [c for c in rm.call("list_colonists")["colonists"] if c["id"] in ids]
+        cols = rm.call("list_colonists")["colonists"]
+        check_strangers(rm, ids, cols, ticks, strangers, log)
+        squad = [c for c in cols if c["id"] in ids]
         ours = sum((c.get("job") or "").startswith(("attacking", "melee attacking"))
                    for c in squad if not c.get("downed"))
         if ours or theirs:
@@ -231,12 +288,17 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
         if not live:
             outcome = "enemies_cleared"
             break
-        if not any(not c.get("downed") for c in squad):
-            outcome = "squad_down"
+        squad_down, stop = watch_after_down(squad, tracker, live, ticks, squad_down, log)
+        if stop:
             break
         if ticks >= max_ticks:
             break
     rm.call("set_speed", action="pause")
+    cols = rm.call("list_colonists")["colonists"]
+    check_strangers(rm, ids, cols, ticks, strangers, log)
+    if squad_down and outcome != INVALID and not any(
+            not c.get("downed") for c in cols if c["id"] in ids):
+        outcome = "squad_down"
     try:
         kpis = agent.kpis()
     except Exception as e:
@@ -259,6 +321,7 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
         "wall_s": round(time.time() - wall0, 1),
         "raid_fled_tick": fled, "raid_satisfied_tick": satisfied,
         "game_messages": [{"tick": t, "text": x} for x, t in list(messages.items())[:60]],
+        "strangers_removed": strangers, "end_rule": "raid_gone", "squad_down": squad_down,
         "building_deltas": dict(deltas),
         # Biased: fire at will shows 'watching for targets' (EVAL_SPEC §8, LESSONS bug 9).
         "engaged_steps": eng["steps"], "engaged_ours": eng["ours"],
@@ -292,6 +355,8 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
     before = squad_state(rm, ids)
     tracker = BattleTracker(rm, ids)
     live = tracker.observe(0)
+    strangers = []                                # man-in-black pawns removed (tick, name, kind)
+    squad_down = None                             # state when the whole squad first went down
     start_ids, intruders = set(tracker.enemy), {}
     t0 = rm.call("get_status")["ticksGame"]
     wall0, polls, ticks, last, outcome = time.time(), 0, 0, -1, "timeout"
@@ -344,16 +409,23 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
             for e in tracker.enemy.values():
                 if e["fate"] is None and not e.get("downed"):
                     avail_t.setdefault(e["name"], set()).add(w)
-        squad = [c for c in rm.call("list_colonists")["colonists"] if c["id"] in ids]
+        cols = rm.call("list_colonists")["colonists"]
+        check_strangers(rm, ids, cols, ticks, strangers, log)
+        squad = [c for c in cols if c["id"] in ids]
         if not live:
             outcome = "enemies_cleared"
             break
-        if not any(not c.get("downed") for c in squad):
-            outcome = "squad_down"
+        squad_down, stop = watch_after_down(squad, tracker, live, ticks, squad_down, log)
+        if stop:
             break
         if ticks >= max_ticks:
             break
     rm.call("set_speed", action="pause")
+    cols = rm.call("list_colonists")["colonists"]
+    check_strangers(rm, ids, cols, ticks, strangers, log)
+    if squad_down and outcome != INVALID and not any(
+            not c.get("downed") for c in cols if c["id"] in ids):
+        outcome = "squad_down"
     m = measure(before, squad_state(rm, ids), tracker.finish())
     if m["squad_kidnapped"] and outcome != INVALID:
         outcome = "raid_left_with_captives"
@@ -369,6 +441,7 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         "wall_s": round(time.time() - wall0, 1),
         "raid_fled_tick": fled, "raid_satisfied_tick": satisfied,
         "game_messages": [{"tick": t, "text": x} for x, t in list(messages.items())[:60]],
+        "strangers_removed": strangers, "end_rule": "raid_gone", "squad_down": squad_down,
         "building_deltas": {}, "engaged_steps": 0, "engaged_ours": 0, "engaged_theirs": 0,
         "engagement_ratio": None,
         **engagement_kpis(tracker, avail_o, avail_t),
