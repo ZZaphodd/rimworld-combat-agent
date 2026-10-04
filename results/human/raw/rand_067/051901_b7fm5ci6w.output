@@ -1,0 +1,11 @@
+   rand_067 loaded and paused: play when ready (the harness only watches) | tick 8194 | battles done finished:    raid_left_with_captives grade=defeat LER=1.264 lost=1 downed=4 | enemy seen 7 killed 3+1? escaped 2 | ticks=7750 wall
+ours: 7 standing 3 | enemies: Grenadier_Destructive(down) 5c
+other pawns: [('Rat', 243, 161)]
+rect x190-230 z3-51
+fires 59 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-051900-838.png
+[('Ape', 209, 8, ''), ('Stork', 211, 44, 'D'), ('Camlavexa', 204, 7, ''), ('Banve', 217, 12, ''), ('Huntsman', 209, 46, 'D'), ('Val', 212, 48, 'D'), ('Mole', 213, 8, 'D')]
+jobs: [('Hadyott', 212, 20, 'D', 'Crawling to safety.')]
+   raid_left_with_captives grade=defeat LER=1.264 lost=1 downed=4 | enemy seen 7 killed 3+1? escaped 2 | ticks=7750 wall=767.3s -> ~/code/rimworld-combat-agent/results/human/play.jsonl
+
+[exited with code 0]

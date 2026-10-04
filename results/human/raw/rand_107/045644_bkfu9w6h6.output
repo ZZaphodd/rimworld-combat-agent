@@ -1,0 +1,11 @@
+   rand_107 loaded and paused: play when ready (the harness only watches) | tick 5391 | battles done playing
+ours: 8 standing 7 | enemies: Grenadier_Destructive 6c, Town_Guard_Pig 9c, Grenadier_Destructive 12c, Town_Guard_Pig 13c, Town_Councilman_Pig 16c, Town_Guard_Pig 19c
+other pawns: [('Megasloth', 153, 4), ('Wolf_Timber', 245, 207)]
+rect x18-58 z103-144
+fires 11 | frags/molotovs in play 0 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-045644-092.png
+[('Gracite', 50, 110, ''), ('Diatite', 46, 114, 'D'), ('Pete', 30, 122, ''), ('Thirock', 28, 137, ''), ('Yolanda', 44, 119, ''), ('Waltz', 35, 114, ''), ('Hickman', 28, 114, ''), ('Trev', 26, 114, '')]
+jobs: [('Pik-Gologg', 'watching for targets.'), ('Nostil', 'melee attacking Pete.'), ('Mushinto', 'watching for targets.'), ('Poimoppug', 'watching for targets.'), ('Piglet', 'watching for targets.'), ('Dumpy', 'watching for targets.')]
+['Critical alert: Colonist needs rescue', 'Diatite is no longer confused.', "Kin'roys: Auto-attack target is down or gone; standing by (still drafted).", 'Mechanoids from Murdkil Mechhive are beginning their assault.', 'Squap: Auto-attack target is down or gone; standing by (still drafted).']
+
+[exited with code 0]

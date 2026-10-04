@@ -1,0 +1,17 @@
+   rand_030 loaded and paused: play when ready (the harness only watches) | tick 866 | battles done playing
+ours: 8 standing 8 | enemies: Villager 96c, Town_Guard 97c, Town_Guard 98c, Town_Councilman 99c, Town_Guard 101c, Villager 101c, Grenadier_Destructive 101c, Town_Guard 103c
+rect x104-144 z109-139
+fires 0 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-053059-992.png
+Butters 128 125  ['Machine pistol (normal)'] ['Neutroamine x48']
+Roller 123 125  ['Pump shotgun (poor 93%)'] []
+Bog 125 125  [] []
+Booug 124 123  ['Machine pistol (poor)'] []
+Pwuis 126 125  ['Revolver (good)'] []
+Slop 121 123  ['Molotov cocktails'] []
+Polork 123 123  [] []
+Trough 125 123  ['Revolver (normal)'] []
+enemies: [('Ryorai', 134, 28, ''), ('May', 132, 26, ''), ('Manuel', 141, 22, ''), ('Hawk', 134, 25, ''), ('Lang', 138, 24, ''), ('Grub', 138, 24, ''), ('Jake', 142, 22, ''), ('Smarty', 134, 23, ''), ('Mushinto', 130, 27, '')]
+   rand_030 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

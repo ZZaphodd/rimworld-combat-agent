@@ -1,0 +1,8 @@
+33:log = open("~/code/rimworld-combat-agent/results/human/run_107.log").read().splitlines()
+   rand_107 loaded and paused: play when ready (the harness only watches) | tick 754 | battles done playing
+ours: 9 standing 9 | enemies: Town_Guard_Pig 117c, Town_Guard_Pig 117c, Town_Councilman_Pig 120c, Grenadier_Destructive 122c, Town_Guard_Pig 123c, Town_Guard_Pig 123c, Grenadier_Destructive 124c, Grenadier_Destructive 133c
+rect x84-124 z116-148
+fires 0 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-044344-691.png
+
+[exited with code 0]

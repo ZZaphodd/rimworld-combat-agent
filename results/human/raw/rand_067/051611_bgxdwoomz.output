@@ -1,0 +1,11 @@
+   rand_067 loaded and paused: play when ready (the harness only watches) | tick 5086 | battles done playing
+ours: 8 standing 3 | enemies: WildBoar 2c, Grenadier_Destructive 6c, Scavenger_Yttakin 8c, Scavenger_Yttakin 10c, Pirate_Yttakin 11c
+other pawns: [('Rat', 248, 155)]
+rect x193-233 z13-52
+fires 17 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-051611-520.png
+[('Ape', 211, 25, ''), ('Ambbaigoboa', 214, 38, 'D'), ('Stork', 213, 40, 'D'), ('Camlavexa', 211, 25, ''), ('Banve', 210, 20, ''), ('Huntsman', 214, 39, 'D'), ('Mole', 217, 32, 'D'), ('Val', 212, 45, 'D')]
+jobs: [('Hadyott', 215, 39, '', 'watching for targets.'), ('Ryan', 212, 41, '', 'watching for targets.'), ('Duen', 211, 43, '', 'watching for targets.'), ("Kin'kovysh", 211, 44, '', 'watching for targets.'), ('Wild boar', 214, 31, '', 'wandering.')]
+   rand_067 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

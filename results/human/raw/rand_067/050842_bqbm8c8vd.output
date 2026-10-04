@@ -1,0 +1,8 @@
+   rand_067 loaded and paused: play when ready (the harness only watches) | tick 837 | battles done playing
+ours: 8 standing 8 | enemies: Drifter_Yttakin 81c, Scavenger_Yttakin 82c, Scavenger_Yttakin 83c, Drifter_Yttakin 83c, Grenadier_Destructive 83c, Pirate_Yttakin 84c, WildBoar 84c
+rect x120-160 z87-117
+fires 0 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-050841-784.png
+[('Ape', 141, 103, ''), ('Ambbaigoboa', 140, 104, ''), ('Stork', 141, 103, ''), ('Camlavexa', 141, 103, ''), ('Banve', 148, 104, ''), ('Huntsman', 141, 103, ''), ('Mole', 132, 101, ''), ('Val', 140, 104, '')]
+
+[exited with code 0]

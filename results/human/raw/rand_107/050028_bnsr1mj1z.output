@@ -1,0 +1,15 @@
+Pik-Gologg 26 131  watching for targets.
+Mushinto 31 135  kidnapping Thirock.
+Poimoppug 27 140  moving.
+Piglet 36 128  kidnapping Yolanda.
+   rand_107 loaded and paused: play when ready (the harness only watches) | tick 7722 | battles done playing
+ours: 7 standing 4 | enemies: Town_Guard_Pig 9c, Town_Guard_Pig 12c, Grenadier_Destructive 12c, Town_Councilman_Pig 15c
+other pawns: [('Megasloth', 154, 3), ('Wolf_Timber', 235, 213), ('Boomrat', 229, 249)]
+rect x13-54 z97-142
+fires 17 | frags/molotovs in play 0 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-050028-166.png
+[('Gracite', 48, 105, ''), ('Pete', 26, 121, 'D'), ('Waltz', 37, 122, ''), ('Hickman', 30, 114, ''), ('Trev', 20, 115, ''), ('Thirock', 29, 135, 'D'), ('Yolanda', 31, 129, 'D')]
+jobs: [('Pik-Gologg', 26, 131, 'watching for targets.'), ('Mushinto', 29, 135, 'kidnapping Thirock.'), ('Poimoppug', 27, 131, 'watching for targets.'), ('Piglet', 31, 129, 'kidnapping Yolanda.')]
+   rand_107 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

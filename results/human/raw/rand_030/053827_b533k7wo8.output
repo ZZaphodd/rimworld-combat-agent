@@ -1,0 +1,10 @@
+   rand_030 loaded and paused: play when ready (the harness only watches) | tick 4014 | battles done playing
+ours: 7 standing 7 | enemies: Villager 10c, Town_Guard(down) 12c, Grenadier_Destructive 14c, Town_Guard 20c, Town_Guard 21c
+rect x163-208 z83-127
+fires 17 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-053827-462.png
+[('Butters', 191, 102, ''), ('Bog', 176, 90, ''), ('Booug', 195, 105, ''), ('Pwuis', 201, 120, ''), ('Slop', 181, 101, ''), ('Polork', 185, 103, ''), ('Trough', 201, 113, '')]
+enemies: [('Ryorai', 198, 110, '', 'watching for targets.'), ('May', 170, 104, '', 'watching for targets.'), ('Manuel', 178, 108, 'D', 'downed, unconscious.'), ('Jake', 169, 103, '', 'watching for targets.'), ('Smarty', 179, 113, '', 'watching for targets.')]
+   rand_030 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

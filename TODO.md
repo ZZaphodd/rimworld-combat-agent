@@ -33,7 +33,11 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
    * the briefing should show weapon quality (awful / poor squads lost hard, rand_094: 0 kills);
    * kite stalls against melee mechs that loiter (rand_004 timeout);
    * human demonstrations on the losing types (bows vs guns, all-thrower squads, guns vs Empire,
-     savage squads) from results/night/worst.md.
+     savage squads) from results/night/worst.md; played so far: #1–#3 with battle reports
+     (results/human/README.md: kidnap response, no isolated pawns, ambush for short-range
+     squads, loadout swap);
+   * measure whether shooting skill changes frag/molotov accuracy (drill: same thrower spot,
+     shooting 0 vs 10, landing spread around the target) before the loadout step relies on it.
 3. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted
    (WIP commit; usage limit).** Measurement-only, so it may merge on passing tests before v2.
    Status:
@@ -61,10 +65,11 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
    2. Failure miner: every agent once per problem; rank by loss, HP lost, permanent injuries
       and downed; group by cause (fire, melee rush, out-ranged, flank) — spend human time only
       where all agents fail and the cause is unclear (a human battle costs ~8 min).
-   3. Human demonstrations in observe-only mode (`tools/run_human.py`, branch
-      feat/human-observe; merge after baseline-v2), plus a trace (every pawn's position, job
-      and target each second) so "what the human did differently" can be measured: distance
-      to the enemy, cover use, group spacing, when to pull back, who stands where (roster).
+   3. Human demonstrations in observe-only mode (`tools/run_human.py`), plus a trace (every
+      pawn's position, health, weapon and job each second: `rca/eval/trace.py`, since
+      2026-10-05) so "what the human did differently" can be measured: distance to the enemy,
+      cover use, group spacing, when to pull back, who stands where (roster). Each battle also
+      gets a report with a route map and labelled frames (results/human/reports/).
    4. Distil into rules the agents can observe (not the human's pausing or whole-screen view),
       as a doctrine change or tactical option on a branch; the gate (branch vs baseline-v2)
       decides. One demonstration is a hypothesis: human rounds 1 and 2 differed completely.
@@ -209,6 +214,11 @@ Alongside: push only decision-relevant cells to n = 10–20.
       should really be a defeat.
 
 ### Strategic
+- [ ] **Loadout step** (human rand_030): before contact, when the raid is far enough (the swap
+      took ~1000 ticks), redistribute weapons by skill: guns to the best shooters, throwables to
+      the worst, melee weapons to the best melee. The router picks it with the doctrine (the
+      doctrine depends on the result). Needs skills in the briefing and the grenade-accuracy
+      measurement (Now 2). Picking up a fallen ally's weapon mid-fight is tactical, not this.
 - [ ] Router input structure = METT-T (Enemy: composition + threat profile; Terrain: arena/fort/OAKOC;
       Troops: our squad composition; Time: prep time before contact; Mission). Roadmap 6.
 - [ ] ENEMY_AI.md: knowledge base of built-in enemy behaviour with evidence (raid flee vs

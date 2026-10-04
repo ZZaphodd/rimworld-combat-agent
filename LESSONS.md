@@ -364,6 +364,20 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
 - **Census:** pirate raids are often single-class (27% are ≥ 80% one class at 1000 pt) and tribes
   are ~40% melee-heavy, so a router that reads composition has real variety to exploit. Outlanders
   are almost never single-class (DATA.md §6).
+- **The router can't choose well without skills.** *rand_107 (night run): the briefing showed
+  only weapons and ranges; "we outrange them" → doctrine (focus fire) with shooting 0–4 in 8 of 9
+  pawns; lost 6 of 9 (results/human/reports/rand_107.md).* → Shooting/melee skill and weapon
+  quality go into the briefing (TODO Now 2).
+- **Loadout is a strategic choice, made with the doctrine.** *rand_030, human: guns moved to the
+  two best shooters (9, 6), frags to the two who can't shoot (0, 0), at the start with the raid
+  100 cells away (~1000 ticks); then an ambush behind a hill: decisive, 1 lost, 9 of 9 raiders out,
+  vs close (agent): 7 lost, 3 out. n = 1 and two changes at once (reports/rand_030.md).* → A
+  pre-contact weapon redistribution step chosen by the router (TODO Strategic); the grenade
+  accuracy vs shooting skill assumption is unmeasured (GAME_FACTS TODO).
+- **A short-range squad should not advance into the open.** *rand_030: the agent's close met the
+  raid's rifle and revolvers at t887 in the open; the human waited behind sight-blocking terrain
+  until the raid came round the corner inside 13–16 cells.* → Router rule candidate: throwers +
+  short guns vs a raid that outranges us → ambush (turtle variant with a corner), not close.
 
 ## 4. Known bugs and inconsistencies to fix in the rewrite
 

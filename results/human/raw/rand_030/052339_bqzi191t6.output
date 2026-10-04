@@ -1,0 +1,10 @@
+33:log = open("~/code/rimworld-combat-agent/results/human/run_030.log").read().splitlines()
+   rand_030 loaded and paused: play when ready (the harness only watches) | tick 1186 | battles done playing
+ours: 8 standing 8 | enemies: Town_Guard 104c, Villager 106c, Town_Guard 108c, Grenadier_Destructive 109c, Town_Councilman 110c, Town_Guard 113c, Villager 115c, Town_Guard 118c
+rect x58-98 z120-150
+fires 0 | frags/molotovs in play 0 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-052339-639.png
+[('Butters', 72, 134, ''), ('Roller', 74, 133, ''), ('Bog', 76, 134, ''), ('Booug', 79, 132, ''), ('Pwuis', 82, 132, ''), ('Slop', 74, 133, ''), ('Polork', 77, 132, ''), ('Trough', 77, 139, '')]
+enemies: [('Ryorai', 124, 38), ('May', 125, 37), ('Manuel', 133, 30), ('Hawk', 127, 35), ('Lang', 130, 33), ('Grub', 131, 32), ('Jake', 133, 30), ('Smarty', 123, 35), ('Mushinto', 120, 40)]
+
+[exited with code 0]
