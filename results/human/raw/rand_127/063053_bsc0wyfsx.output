@@ -1,0 +1,10 @@
+   rand_127 loaded and paused: play when ready (the harness only watches) | tick 2556 | battles done playing
+ours: 10 standing 10 | enemies: Tribal_Penitent 21c, Tribal_Penitent 22c, Tribal_Berserker 23c, Tribal_Penitent 25c, Tribal_Penitent 27c, Tribal_Penitent 28c, Tribal_Archer 29c
+rect x92-133 z103-147
+fires 0 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-063052-860.png
+[('Barracuda', 106, 119, ''), ('Laque', 101, 120, ''), ('Crica', 107, 111, ''), ('Ñala', 126, 122, ''), ('Tol', 120, 121, ''), ('Mabe', 99, 111, ''), ('Raraguatas', 107, 114, ''), ('Trout', 103, 110, ''), ('Grasshoppe', 114, 116, ''), ('Owl', 113, 120, '')]
+enemies: [('Dragonfly', 102, 136, '', 'melee attacking Laque.'), ('Lándoa', 96, 142, '', 'moving.'), ('Gabobrei', 102, 138, '', 'melee attacking Laque.'), ('Weasel', 104, 143, '', 'melee attacking Laque.'), ('Bargodue', 102, 143, '', 'melee attacking Laque.'), ('Bacchus', 101, 140, '', 'melee attacking Laque.'), ('Iguabust', 104, 138, '', 'melee attacking Barracuda.')]
+   rand_127 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

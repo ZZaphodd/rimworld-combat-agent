@@ -70,7 +70,24 @@ def add(path, c, label):
         path.append((*c, label))
 
 
-def build(bid, picks, notes=(), since="", gamma=1.25):
+def trace_paths(path, picks, every=3):
+    """Squad and raid centres from a trace (standing pawns), every few polls; the polls
+    nearest to the picked frames carry the frame numbers."""
+    from rca.eval import trace
+    polls = [p for p in trace.read(ROOT / path) if "t" in p and "ours" in p]
+    want = {min(range(len(polls)), key=lambda k: abs(polls[k]["t"] - (tick - T0))): i
+            for i, (tick, _) in enumerate(picks, 1)}
+    out = {"ours": [], "them": []}
+    for k, p in enumerate(polls):
+        if k % every and k not in want:
+            continue
+        for side in out:
+            if c := centre([(e["n"], e["x"], e["z"], e.get("d")) for e in p[side]]):
+                out[side].append((*c, want.get(k, "")))
+    return out
+
+
+def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None):
     fr = load(bid, since)
     man = json.load(open(ROOT / f"scenarios_rand/scenario_{bid}.json"))
     rows = []
@@ -89,17 +106,43 @@ def build(bid, picks, notes=(), since="", gamma=1.25):
     png, rect = OVERVIEW[bid[-3:]]
     png = Path(png).expanduser()
     route = IMG / f"{bid}_route.jpg"
+    if trace_file:                                # the trace has every second, not 7 frames
+        tp = trace_paths(trace_file, picks)
+        ours_path, them_path = ours_path[:1] + tp["ours"], them_path[:1] + tp["them"]
     frames.annotate(png, frames.parse_rect(rect), route, notes=notes,
                     paths=[("them", them_path, len(them_path) < 4), ("ours", ours_path)],
-                    caption="route: squad centre (blue) and raid centre (red); S = start, "
-                            "numbers = frames", gamma=1.8)
+                    caption="route: squad (blue), raid (red); S start, numbers = frames",
+                    gamma=1.8)
     print(f"== {bid}: {route.name}")
     for r in rows:
         print(r)
 
 
 if __name__ == "__main__":
-    which = sys.argv[1:] or ["rand_030", "rand_067", "rand_107"]
+    which = sys.argv[1:] or ["rand_030", "rand_067", "rand_107", "rand_084", "rand_127"]
+    if "rand_084" in which:                      # attempt 2 (attempt 1 abandoned at ~t3900)
+        build("rand_084", [
+            (3156, "squad in a notch of the west rock mass; raid comes in one line"),
+            (3783, "Claula leads; Carlson (rifle, shooting 16) 18 cells: in revolver range"),
+            (4141, "Claula dead; both grenadiers within 13; Carlson swings north"),
+            (4340, "squad slips through the gap to the south side: rock blocks the throws"),
+            (4786, "raid comes round both ends: Lia and McMahon west, Rusty and Maris east"),
+            (5101, "Choppy (knife) ties Rusty (shooting 11) in melee; McMahon dead"),
+            (5438, "Lia, Rusty, Maris dead; Lelya and Carlson leave; 9 of 9 standing"),
+        ], notes=[(28, 150, "west rock"), (125, 175, "cleared ground")], since="0615",
+            trace_file="results/human/traces/rand_084_human_loadout_20261005-061330.jsonl.gz")
+    if "rand_127" in which:                      # attempt 3 (1 abandoned, 2 discarded)
+        build("rand_127", [
+            (1607, "squad goes south-east past the rock hill"),
+            (3358, "all ten in a nook between a ruin wall and rock; two raiders 15 cells ahead"),
+            (3604, "Gabobrei 5 cells from the entrance, the raid's body 20-28 behind"),
+            (4085, "the raid piles up at the entrance: only the front pawns touch"),
+            (4754, "Gabobrei and Iguabust dead; Trout at 37% under two attackers"),
+            (5186, "Dragonfly and Bargodue out; Trout pulled back; 9 standing against 3"),
+            (5672, "Bacchus down; the last two flee (t5258)"),
+        ], notes=[(178, 97, "rock hill"), (147, 110, "small ruin"), (213, 92, "nook")],
+            since="0643",
+            trace_file="results/human/traces/rand_127_human_loadout_20261005-064050.jsonl.gz")
     if "rand_030" in which:
         build("rand_030", [
             (866, "weapon swap: guns to Pwuis and Butters, Bog and Polork fetch the frags"),

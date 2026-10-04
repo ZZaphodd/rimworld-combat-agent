@@ -1,0 +1,10 @@
+   rand_084 loaded and paused: play when ready (the harness only watches) | tick 3156 | battles done playing
+ours: 9 standing 9 | enemies: Drifter 50c, Pirate 53c, Scavenger 61c, Scavenger 66c, Scavenger 69c, Grenadier_Destructive 72c, Grenadier_Destructive 75c, Pirate 78c
+rect x10-50 z127-157
+fires 0 | frags/molotovs in play 0 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-061603-176.png
+[('Alo', 32, 142, ''), ('Choppy', 32, 143, ''), ('Pikliag', 31, 143, ''), ('Guker', 29, 141, ''), ('Keap', 30, 143, ''), ('Slab', 31, 142, ''), ('Weluobb', 31, 141, ''), ('Wien', 30, 141, ''), ('Polobb', 30, 142, '')]
+enemies: [('Carlson', 90, 144, '', 'moving.'), ('McMahon', 108, 144, '', 'moving.'), ('Claula', 80, 144, '', 'moving.'), ('Yuna', 82, 144, '', 'moving.'), ('Lia', 105, 144, '', 'moving.'), ('Lelya', 102, 142, '', 'moving.'), ('Rusty', 99, 144, '', 'moving.'), ('Maris', 95, 144, '', 'moving.')]
+   rand_084 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

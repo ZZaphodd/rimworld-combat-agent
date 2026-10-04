@@ -13,8 +13,10 @@ A person plays a scenario; the harness only watches and grades it like an agent 
   (`rca/eval/trace.py`, read with `trace.read()`). This is the demonstration itself.
 - `reports/<id>.md`: a battle report a person can read later: result vs the agent, a route map,
   labelled frames (`rca/eval/frames.py`), what worked and the lessons with frame references.
-- `raw/<id>/`: watcher records from the battles played before traces existed (positions and
-  jobs at each screenshot), and `raw/build_reports.py`, which drew their frames.
+- `raw/<id>/`: watcher records (positions and jobs at each screenshot; the only record of the
+  battles before traces) and notes; `raw/build_reports.py` draws every report's frames and route
+  maps (from the trace when there is one).
+- `discarded.jsonl`: rows the player chose not to count, with `discarded.why`.
 
 ## Battles
 
@@ -24,6 +26,12 @@ A person plays a scenario; the harness only watches and grades it like an agent 
 | rand_107 (#1) | human | defeat (captives) | 4 | 4 | doctrine: lost 6, 3 out | [rand_107](reports/rand_107.md) |
 | rand_067 (#2) | human | defeat (captives) | 1 | 5 | kite: lost 6, 2 out | [rand_067](reports/rand_067.md) |
 | rand_030 (#3) | human_swap | **decisive** | 1 | 9 of 9 | close: lost 7, 3 out | [rand_030](reports/rand_030.md) |
+| rand_084 (#4) | human_loadout | **repelled**, nobody downed | 0 | 6 of 8 | doctrine: lost 6, 3 out | [rand_084](reports/rand_084.md) |
+| rand_127 (#5) | human_loadout | **repelled** | 0 (1 downed) | 5 of 7 | amove: all 10 downed, 0 out | [rand_127](reports/rand_127.md) |
+
+`human_loadout`: Claude redistributed the weapons at the start (`manage_gear` drop + equip,
+~100–150 ticks, before the player drafted), the player fought. Attempts the player abandoned or
+discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discarded.jsonl`.
 
 "Lost (actual)": the rows count a kidnapped pawn twice (TODO Now 2); the reports correct it.
 
@@ -34,9 +42,17 @@ A person plays a scenario; the harness only watches and grades it like an agent 
    and standing pawns move onto its path to the edge (rand_067 frames 7–8, rand_107 frames 6–7).
 2. **Isolated pawns go down first** (rand_107 frame 4; rand_067 frame 5).
 3. **Short-range squads ambush instead of advancing:** wait behind sight-blocking terrain where
-   the raid must come round a corner inside our range (rand_030 frames 3–5).
-4. **Loadout is a strategic decision:** guns to the best shooters, throwables to the worst,
-   while the raid is still far (rand_030 frame 1).
+   the raid must come round a corner inside our range (rand_030 frames 3–5; rand_084: a notch
+   cancelled a 37-cell sniper).
+4. **Loadout is a strategic decision:** guns to the best shooters, melee weapons to the best
+   melee, throwables to the worst shooters, while the raid is still far (rand_030 frame 1;
+   done by Claude in rand_084 and rand_127, both won).
 5. **Bows against melee closers:** kiting stretches the raid, but once the melee arrives the
    archers lose; kill the closers before contact, never charge alone (rand_067 frames 3–6).
 6. **The briefing needs skills and weapon quality** (rand_107: the router chose blind).
+7. **The site decides, through a play** (user: "you need a tactical repertoire before
+   battlefield selection works"). Every win used a named play that needs a terrain feature:
+   corner ambush (rand_030), notch hold + gap slip to break the throwers' sight (rand_084),
+   narrow mouth with rotation against stronger melee (rand_127; the same squad lost in the open).
+8. **Points don't price xenotypes:** 7 Neanderthals beat 10 tribals in the open at 500 v 500
+   (agent and human, rand_127).
