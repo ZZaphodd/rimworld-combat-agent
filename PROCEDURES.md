@@ -16,6 +16,7 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 | §9 episodes | `tools/run_eval.py` | `rca/eval/harness.py` |
 | §10 watchdog | (in-process) | `rca/game/session.Watchdog` |
 | §12 micro drills | `tools/run_drill.py` | `rca/micro/drills.py` |
+| §14 threat montage | `tools/build_montage.py` | `rca/game/builders/montage.py` |
 | combat points | `tools/combat_points.py` | `rca/game/defs.py` |
 
 **Save guard:** `session.save` refuses any name not starting with `arena_`, `scenario_`,
@@ -48,7 +49,7 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 10. `save_game("arena_forest")`.
 11. `Clear area (rect)` over (50,50)–(200,200), then `save_game("arena_open")`.
 
-## 1b. Difficulty conversion (planned, TODO Now 1; UNVERIFIED)
+## 1b. Difficulty conversion (superseded 2026-10-04: the saves are rebuilt instead; UNVERIFIED)
 
 No RimMolt tool changes the difficulty of a loaded game: `select_storyteller` works only on the
 new-game page (RIMMOLT_API §2). Candidate route, keeping every raid exactly as saved:
@@ -268,3 +269,35 @@ Per WORKFLOW test layers: micro is judged per event, with positioning and target
 5. A session ends after `events` exploded frags, when fewer than half the squad stands, or at
    `max_ticks` (6000); the next session reloads the base. Modes alternate per session.
 6. Output: `results/drills/<name>.jsonl`, one `event` row per exploded frag + one `session` row.
+
+## 14. Threat montage (`montage_threats`, 2026-10-04)
+
+A save to look at raid sizes in game: one raid per (type, points) cell in a 2D grid of walled
+pens (results/montage/legend.md for the counts).
+
+1. **New game, all automated except two clicks:** `return_to_title(confirm=True)` →
+   `main_menu(new_colony)` → `select_scenario("The Rich Explorer")` →
+   `select_storyteller(Phoebe, Rough, reloadAnytime=True)` (Rough = Strive to Survive).
+   By hand on the planet page: add Pirate gang, Rough outlander union, Fierce tribe, Savage
+   tribe (`Add...` still closes without the real mouse). Map size: the planet page's Advanced
+   settings → `Edit...` opens `Dialog_AdvancedGameConfig` (radios `200x200` … `325x325`,
+   readable with `get_window_ui`; the site page itself is not scriptable). Then
+   `create_world`, tile by `arena.pick_tile` (tile 55, flat temperate forest), confirm,
+   classic ideoligion, `start_game`. 300×300 map.
+2. Map prep as §1 steps 6–9 (observer to (292, 292)).
+3. `python3 tools/build_montage.py --samples 3`: for each of 4 types × 7 point levels,
+   3 sample raids (spawn, record, `Destroy non-colonists`); then `Clear area` over the
+   montage (it removes natural rock too), god mode: floors `GoldTile` / `SilverTile` in a
+   checkerboard per pen and a granite `Wall` outline (`build fill=outline`); one raid per
+   pen, raiders in rows sorted by weapon class; mech cells first (pods need settle waits);
+   human raids are placed with no time passing (`spawn_raid(instant=True)`: EdgeWalkIn
+   raiders exist as soon as the last pick returns, even paused); a final pass re-places
+   raiders that moved.
+4. Layout: pens 14×12 inside, pitch 18 × 16, south-west corner (114, 94); columns west →
+   east pirates, outlanders, tribe (fierce), mechanoids; rows south → north 100, 200, 300,
+   500, 700, 1000, 1500 points.
+
+Found while building: raid generation fails now and then even for humans (Pirate 100 once:
+retry, up to 3 tries); Mechanoid 700 failed 4 tries in a row before one worked. Settle waits
+cost the observer (gone after the mech fill; a "Game Over" letter remains): view the save
+paused. Dismiss raid letters with `read_letter(id, dismiss=True)` (117 had piled up).

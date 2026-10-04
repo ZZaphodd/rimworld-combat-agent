@@ -10,8 +10,10 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
 
 1. [ ] **Switch the evaluation standard to Strive to Survive and build baseline-v2** (WORKFLOW
    "Evaluation standard"). baseline-v1 and the first gate ran on Peaceful → exploration data.
-   * convert arena_/scenario_/theme_ saves to Strive to Survive (raids unchanged); candidate
-     route found: a one-line edit of the save (PROCEDURES §1b) — try it on one save first;
+   * **rebuild instead of converting** (2026-10-04): the old saves are archived (outside the
+     Saves folder; repo copies stay at tag baseline-v1). First choose the threat size from the
+     montage (`montage_threats`, results/montage/legend.md: fewer pawns per battle = faster
+     evals), then a new evaluation world, squad and scenarios on Strive to Survive;
    * harness guard: Strive allows storyteller threats — detect unexpected raids mid-episode
      and mark the episode invalid (EVAL_SPEC §3; manhunter animals: later, Evaluation / harness);
    * record the difficulty in every result row (WORKFLOW traceability);
@@ -202,3 +204,6 @@ Alongside: push only decision-relevant cells to n = 10–20.
 - 2026-10-04 — **Docs review** for the Strive to Survive standard (every doc; RIMMOLT_API checked
   against the live tool list) and **`tools/rm.py`**: compact game probe for hand checks (status
   ~120 bytes vs ~7 KB raw; `rca/probe.py`, tests/test_probe.py).
+- 2026-10-04 — **Threat montage** (`montage_threats`, PROCEDURES §14): new Strive to Survive
+  world (300×300), 4 raid types × 7 point levels (100–1500) in walled gold/silver pens, plus
+  3 sample draws per cell (results/montage/legend.md). Old project saves archived.

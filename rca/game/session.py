@@ -8,7 +8,7 @@ STEAM_URL = "steam://rungameid/294100"
 PROCESS = "RimWorld by Ludeon Studios"     # macOS process name (pgrep -f)
 RESTART_EVERY = 100        # episodes; loads degrade the game (~150 loads -> native crash)
 # Only these saves may be written: personal colony saves must never be touched.
-WRITABLE = ("arena_", "scenario_", "theme_base", "drill_")
+WRITABLE = ("arena_", "scenario_", "theme_base", "drill_", "montage_")
 
 
 def load(rm, save, dev=True):

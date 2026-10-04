@@ -43,8 +43,12 @@ class Debug:
         opts = [o for o in r["optionList"]["options"] if o.endswith(" points")]
         return min(opts, key=lambda o: abs(int(o.split()[0]) - points))
 
-    def spawn_raid(self, faction, points, strategy="ImmediateAttack", arrival="EdgeWalkIn"):
-        """'Execute raid with specifics': we choose strategy and arrival."""
+    def spawn_raid(self, faction, points, strategy="ImmediateAttack", arrival="EdgeWalkIn",
+                   instant=False):
+        """'Execute raid with specifics': we choose strategy and arrival.
+        instant: EdgeWalkIn raiders exist as soon as the last pick returns, even
+        while paused, so return them without letting time run (the settle waits
+        would let raiders already on the map move)."""
         before = self.hostile_ids()
         r = self.run("Execute raid with specifics...")
         r = self.dbg(action="pick", option=self._match(
@@ -54,6 +58,11 @@ class Debug:
         r = self.dbg(action="pick", option=self._match(r, lambda o: o == arrival, arrival))
         while r.get("optionList", {}).get("options"):         # trailing extras (age, ...)
             r = self.dbg(action="pick", option=self._match(r, lambda o: o == "-Random-", "-Random-"))
+        if instant:
+            new = [t for k, t in self.hostile_ids().items() if k not in before]
+            if not new:            # generation failed; waiting would not bring anyone
+                raise RimMoltError(f"raid {faction}/{points} spawned nobody")
+            return new
         return self.settle(before, f"{faction}/{points}")
 
     def spawn_raid_by_faction(self, faction, points, max_steps=20):

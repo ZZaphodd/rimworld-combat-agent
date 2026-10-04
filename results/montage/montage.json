@@ -1,0 +1,3965 @@
+{
+ "save": "montage_threats",
+ "types": [
+  "pirates",
+  "outlanders",
+  "tribe (fierce)",
+  "mechanoids"
+ ],
+ "points": [
+  100,
+  200,
+  300,
+  500,
+  700,
+  1000,
+  1500
+ ],
+ "origin": [
+  114,
+  94
+ ],
+ "pitch": [
+  18,
+  16
+ ],
+ "inner": [
+  14,
+  12
+ ],
+ "samples": {
+  "Pirate:100": [
+   {
+    "n": 1,
+    "classes": {
+     "short": 1
+    },
+    "kind_points": 50.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "melee": 1,
+     "short": 1
+    },
+    "kind_points": 85.0
+   },
+   {
+    "n": 1,
+    "classes": {
+     "short": 1
+    },
+    "kind_points": 50.0
+   }
+  ],
+  "Pirate:200": [
+   {
+    "n": 3,
+    "classes": {
+     "melee": 3
+    },
+    "kind_points": 135.0
+   },
+   {
+    "n": 4,
+    "classes": {
+     "melee": 3,
+     "short": 1
+    },
+    "kind_points": 155.0
+   },
+   {
+    "n": 4,
+    "classes": {
+     "melee": 1,
+     "short": 3
+    },
+    "kind_points": 200.0
+   }
+  ],
+  "Pirate:300": [
+   {
+    "n": 5,
+    "classes": {
+     "explosive": 5
+    },
+    "kind_points": 275.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "melee": 1,
+     "short": 4
+    },
+    "kind_points": 280.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "melee": 1,
+     "short": 3,
+     "long": 1
+    },
+    "kind_points": 250.0
+   }
+  ],
+  "Pirate:500": [
+   {
+    "n": 9,
+    "classes": {
+     "melee": 9
+    },
+    "kind_points": 450.0
+   },
+   {
+    "n": 8,
+    "classes": {
+     "melee": 1,
+     "short": 4,
+     "long": 1,
+     "explosive": 2
+    },
+    "kind_points": 440.0
+   },
+   {
+    "n": 9,
+    "classes": {
+     "melee": 4,
+     "short": 4,
+     "long": 1
+    },
+    "kind_points": 495.0
+   }
+  ],
+  "Pirate:700": [
+   {
+    "n": 10,
+    "classes": {
+     "short": 8,
+     "long": 2
+    },
+    "kind_points": 635.0
+   },
+   {
+    "n": 10,
+    "classes": {
+     "melee": 3,
+     "short": 2,
+     "long": 2,
+     "explosive": 3
+    },
+    "kind_points": 665.0
+   },
+   {
+    "n": 9,
+    "classes": {
+     "explosive": 9
+    },
+    "kind_points": 615.0
+   }
+  ],
+  "Pirate:1000": [
+   {
+    "n": 19,
+    "classes": {
+     "melee": 19
+    },
+    "kind_points": 950.0
+   },
+   {
+    "n": 11,
+    "classes": {
+     "short": 4,
+     "long": 5,
+     "explosive": 2
+    },
+    "kind_points": 895.0
+   },
+   {
+    "n": 19,
+    "classes": {
+     "melee": 19
+    },
+    "kind_points": 950.0
+   }
+  ],
+  "Pirate:1500": [
+   {
+    "n": 12,
+    "classes": {
+     "melee": 2,
+     "medium": 3,
+     "support": 3,
+     "long": 2,
+     "explosive": 2
+    },
+    "kind_points": 1420.0
+   },
+   {
+    "n": 14,
+    "classes": {
+     "short": 3,
+     "medium": 2,
+     "support": 6,
+     "long": 2,
+     "explosive": 1
+    },
+    "kind_points": 1485.0
+   },
+   {
+    "n": 14,
+    "classes": {
+     "short": 5,
+     "medium": 1,
+     "support": 3,
+     "long": 1,
+     "explosive": 4
+    },
+    "kind_points": 1380.0
+   }
+  ],
+  "OutlanderRough:100": [
+   {
+    "n": 1,
+    "classes": {
+     "short": 1
+    },
+    "kind_points": 40.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "short": 2
+    },
+    "kind_points": 90.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "short": 1,
+     "long": 1
+    },
+    "kind_points": 100.0
+   }
+  ],
+  "OutlanderRough:200": [
+   {
+    "n": 3,
+    "classes": {
+     "short": 1,
+     "support": 1,
+     "long": 1
+    },
+    "kind_points": 160.0
+   },
+   {
+    "n": 3,
+    "classes": {
+     "melee": 1,
+     "long": 2
+    },
+    "kind_points": 165.0
+   },
+   {
+    "n": 3,
+    "classes": {
+     "melee": 1,
+     "short": 2
+    },
+    "kind_points": 145.0
+   }
+  ],
+  "OutlanderRough:300": [
+   {
+    "n": 5,
+    "classes": {
+     "short": 3,
+     "long": 2
+    },
+    "kind_points": 265.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "melee": 1,
+     "short": 3,
+     "explosive": 1
+    },
+    "kind_points": 275.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "short": 4,
+     "long": 1
+    },
+    "kind_points": 280.0
+   }
+  ],
+  "OutlanderRough:500": [
+   {
+    "n": 9,
+    "classes": {
+     "melee": 2,
+     "short": 6,
+     "explosive": 1
+    },
+    "kind_points": 460.0
+   },
+   {
+    "n": 8,
+    "classes": {
+     "short": 7,
+     "long": 1
+    },
+    "kind_points": 445.0
+   },
+   {
+    "n": 8,
+    "classes": {
+     "short": 7,
+     "explosive": 1
+    },
+    "kind_points": 470.0
+   }
+  ],
+  "OutlanderRough:700": [
+   {
+    "n": 11,
+    "classes": {
+     "melee": 2,
+     "short": 5,
+     "medium": 1,
+     "support": 1,
+     "explosive": 2
+    },
+    "kind_points": 690.0
+   },
+   {
+    "n": 10,
+    "classes": {
+     "short": 8,
+     "support": 1,
+     "explosive": 1
+    },
+    "kind_points": 625.0
+   },
+   {
+    "n": 9,
+    "classes": {
+     "short": 5,
+     "medium": 1,
+     "long": 1,
+     "explosive": 2
+    },
+    "kind_points": 640.0
+   }
+  ],
+  "OutlanderRough:1000": [
+   {
+    "n": 14,
+    "classes": {
+     "short": 8,
+     "medium": 2,
+     "support": 1,
+     "long": 2,
+     "explosive": 1
+    },
+    "kind_points": 990.0
+   },
+   {
+    "n": 13,
+    "classes": {
+     "short": 7,
+     "support": 4,
+     "long": 2
+    },
+    "kind_points": 935.0
+   },
+   {
+    "n": 13,
+    "classes": {
+     "short": 5,
+     "medium": 1,
+     "support": 2,
+     "long": 3,
+     "explosive": 2
+    },
+    "kind_points": 970.0
+   }
+  ],
+  "OutlanderRough:1500": [
+   {
+    "n": 14,
+    "classes": {
+     "melee": 3,
+     "short": 6,
+     "medium": 1,
+     "support": 2,
+     "long": 2
+    },
+    "kind_points": 1320.0
+   },
+   {
+    "n": 13,
+    "classes": {
+     "melee": 3,
+     "short": 4,
+     "medium": 2,
+     "support": 2,
+     "long": 2
+    },
+    "kind_points": 1405.0
+   },
+   {
+    "n": 13,
+    "classes": {
+     "melee": 3,
+     "short": 1,
+     "medium": 3,
+     "support": 5,
+     "explosive": 1
+    },
+    "kind_points": 1490.0
+   }
+  ],
+  "TribeRough:100": [
+   {
+    "n": 2,
+    "classes": {
+     "melee": 2
+    },
+    "kind_points": 90.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "bow": 2
+    },
+    "kind_points": 90.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "melee": 1,
+     "bow": 1
+    },
+    "kind_points": 85.0
+   }
+  ],
+  "TribeRough:200": [
+   {
+    "n": 4,
+    "classes": {
+     "melee": 1,
+     "bow": 3
+    },
+    "kind_points": 185.0
+   },
+   {
+    "n": 4,
+    "classes": {
+     "melee": 2,
+     "bow": 2
+    },
+    "kind_points": 190.0
+   },
+   {
+    "n": 4,
+    "classes": {
+     "melee": 4
+    },
+    "kind_points": 180.0
+   }
+  ],
+  "TribeRough:300": [
+   {
+    "n": 5,
+    "classes": {
+     "melee": 3,
+     "bow": 2
+    },
+    "kind_points": 270.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "melee": 2,
+     "bow": 3
+    },
+    "kind_points": 265.0
+   },
+   {
+    "n": 6,
+    "classes": {
+     "melee": 2,
+     "bow": 4
+    },
+    "kind_points": 280.0
+   }
+  ],
+  "TribeRough:500": [
+   {
+    "n": 8,
+    "classes": {
+     "melee": 1,
+     "bow": 5,
+     "thrown": 2
+    },
+    "kind_points": 485.0
+   },
+   {
+    "n": 10,
+    "classes": {
+     "melee": 4,
+     "bow": 6
+    },
+    "kind_points": 480.0
+   },
+   {
+    "n": 8,
+    "classes": {
+     "melee": 2,
+     "long": 1,
+     "bow": 3,
+     "thrown": 2
+    },
+    "kind_points": 495.0
+   }
+  ],
+  "TribeRough:700": [
+   {
+    "n": 12,
+    "classes": {
+     "melee": 12
+    },
+    "kind_points": 665.0
+   },
+   {
+    "n": 12,
+    "classes": {
+     "melee": 5,
+     "long": 1,
+     "bow": 3,
+     "thrown": 3
+    },
+    "kind_points": 695.0
+   },
+   {
+    "n": 12,
+    "classes": {
+     "melee": 12
+    },
+    "kind_points": 670.0
+   }
+  ],
+  "TribeRough:1000": [
+   {
+    "n": 18,
+    "classes": {
+     "melee": 8,
+     "long": 1,
+     "bow": 9
+    },
+    "kind_points": 1000.0
+   },
+   {
+    "n": 18,
+    "classes": {
+     "melee": 18
+    },
+    "kind_points": 995.0
+   },
+   {
+    "n": 18,
+    "classes": {
+     "melee": 18
+    },
+    "kind_points": 970.0
+   }
+  ],
+  "TribeRough:1500": [
+   {
+    "n": 25,
+    "classes": {
+     "melee": 10,
+     "long": 5,
+     "bow": 8,
+     "thrown": 2
+    },
+    "kind_points": 1490.0
+   },
+   {
+    "n": 25,
+    "classes": {
+     "melee": 4,
+     "long": 1,
+     "bow": 15,
+     "thrown": 5
+    },
+    "kind_points": 1475.0
+   },
+   {
+    "n": 29,
+    "classes": {
+     "melee": 29
+    },
+    "kind_points": 1475.0
+   }
+  ],
+  "Mechanoid:100": [
+   {
+    "n": 1,
+    "classes": {
+     "medium": 1
+    },
+    "kind_points": 75.0
+   },
+   {
+    "n": 1,
+    "classes": {
+     "medium": 1
+    },
+    "kind_points": 75.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "short": 2
+    },
+    "kind_points": 90.0
+   }
+  ],
+  "Mechanoid:200": [
+   {
+    "n": 2,
+    "classes": {
+     "medium": 1,
+     "long": 1
+    },
+    "kind_points": 185.0
+   },
+   {
+    "n": 1,
+    "classes": {
+     "melee": 1
+    },
+    "kind_points": 150.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "melee": 1,
+     "short": 1
+    },
+    "kind_points": 195.0
+   }
+  ],
+  "Mechanoid:300": [
+   {
+    "n": 3,
+    "classes": {
+     "short": 1,
+     "long": 2
+    },
+    "kind_points": 265.0
+   },
+   {
+    "n": 3,
+    "classes": {
+     "short": 1,
+     "long": 2
+    },
+    "kind_points": 265.0
+   },
+   {
+    "n": 2,
+    "classes": {
+     "long": 2
+    },
+    "kind_points": 300.0
+   }
+  ],
+  "Mechanoid:500": [
+   {
+    "n": 3,
+    "classes": {
+     "melee": 1,
+     "long": 2
+    },
+    "kind_points": 450.0
+   },
+   {
+    "n": 4,
+    "classes": {
+     "melee": 3,
+     "short": 1
+    },
+    "kind_points": 495.0
+   },
+   {
+    "n": 11,
+    "classes": {
+     "short": 11
+    },
+    "kind_points": 495.0
+   }
+  ],
+  "Mechanoid:700": [
+   {
+    "n": 4,
+    "classes": {
+     "medium": 1,
+     "long": 3
+    },
+    "kind_points": 560.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "medium": 3,
+     "long": 2
+    },
+    "kind_points": 675.0
+   },
+   {
+    "n": 4,
+    "classes": {
+     "melee": 1,
+     "medium": 1,
+     "long": 2
+    },
+    "kind_points": 605.0
+   }
+  ],
+  "Mechanoid:1000": [
+   {
+    "n": 5,
+    "classes": {
+     "melee": 1,
+     "short": 1,
+     "long": 2,
+     "explosive": 1
+    },
+    "kind_points": 685.0
+   },
+   {
+    "n": 6,
+    "classes": {
+     "melee": 6
+    },
+    "kind_points": 900.0
+   },
+   {
+    "n": 5,
+    "classes": {
+     "melee": 1,
+     "long": 3,
+     "explosive": 1
+    },
+    "kind_points": 670.0
+   }
+  ],
+  "Mechanoid:1500": [
+   {
+    "n": 8,
+    "classes": {
+     "melee": 2,
+     "short": 1,
+     "long": 3,
+     "explosive": 2
+    },
+    "kind_points": 975.0
+   },
+   {
+    "n": 6,
+    "classes": {
+     "melee": 2,
+     "long": 3,
+     "explosive": 1
+    },
+    "kind_points": 980.0
+   },
+   {
+    "n": 11,
+    "classes": {
+     "medium": 4,
+     "long": 5,
+     "explosive": 2
+    },
+    "kind_points": 1490.0
+   }
+  ]
+ },
+ "cells": [
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 100,
+   "col": 3,
+   "row": 0,
+   "pen": [
+    168,
+    94,
+    183,
+    107
+   ],
+   "floor": "SilverTile",
+   "n": 1,
+   "classes": {
+    "medium": 1
+   },
+   "kind_points": 75.0,
+   "pawns": [
+    {
+     "id": "Mech_Scorcher59770",
+     "name": "Scorcher",
+     "kind": "Mech_Scorcher",
+     "weapon": "Mini-flameblaster",
+     "class": "medium",
+     "points": 75.0,
+     "slot": [
+      170,
+      105
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 200,
+   "col": 3,
+   "row": 1,
+   "pen": [
+    168,
+    110,
+    183,
+    123
+   ],
+   "floor": "GoldTile",
+   "n": 1,
+   "classes": {
+    "melee": 1
+   },
+   "kind_points": 150.0,
+   "pawns": [
+    {
+     "id": "Mech_Scyther59779",
+     "name": "Scyther",
+     "kind": "Mech_Scyther",
+     "weapon": "none",
+     "class": "melee",
+     "points": 150.0,
+     "slot": [
+      170,
+      121
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 300,
+   "col": 3,
+   "row": 2,
+   "pen": [
+    168,
+    126,
+    183,
+    139
+   ],
+   "floor": "SilverTile",
+   "n": 2,
+   "classes": {
+    "medium": 1,
+    "long": 1
+   },
+   "kind_points": 265.0,
+   "pawns": [
+    {
+     "id": "Mech_Scorcher59784",
+     "name": "Scorcher",
+     "kind": "Mech_Scorcher",
+     "weapon": "Mini-flameblaster",
+     "class": "medium",
+     "points": 75.0,
+     "slot": [
+      170,
+      137
+     ]
+    },
+    {
+     "id": "Mech_Lancer59782",
+     "name": "Lancer",
+     "kind": "Mech_Lancer",
+     "weapon": "Charge lance",
+     "class": "long",
+     "points": 190.0,
+     "slot": [
+      172,
+      137
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 500,
+   "col": 3,
+   "row": 3,
+   "pen": [
+    168,
+    142,
+    183,
+    155
+   ],
+   "floor": "GoldTile",
+   "n": 4,
+   "classes": {
+    "medium": 2,
+    "long": 1,
+    "explosive": 1
+   },
+   "kind_points": 445.0,
+   "pawns": [
+    {
+     "id": "Mech_Cyclops59801",
+     "name": "Cyclops",
+     "kind": "Mech_Cyclops",
+     "weapon": "Beam repeater",
+     "class": "medium",
+     "points": 110.0,
+     "slot": [
+      170,
+      153
+     ]
+    },
+    {
+     "id": "Mech_Scorcher59807",
+     "name": "Scorcher",
+     "kind": "Mech_Scorcher",
+     "weapon": "Mini-flameblaster",
+     "class": "medium",
+     "points": 75.0,
+     "slot": [
+      172,
+      153
+     ]
+    },
+    {
+     "id": "Mech_Pikeman59805",
+     "name": "Pikeman",
+     "kind": "Mech_Pikeman",
+     "weapon": "Needle gun",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      174,
+      153
+     ]
+    },
+    {
+     "id": "Mech_Legionary59803",
+     "name": "Legionary",
+     "kind": "Mech_Legionary",
+     "weapon": "Needle launcher",
+     "class": "explosive",
+     "points": 150.0,
+     "slot": [
+      176,
+      153
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 700,
+   "col": 3,
+   "row": 4,
+   "pen": [
+    168,
+    158,
+    183,
+    171
+   ],
+   "floor": "SilverTile",
+   "n": 5,
+   "classes": {
+    "melee": 2,
+    "medium": 1,
+    "long": 2
+   },
+   "kind_points": 595.0,
+   "pawns": [
+    {
+     "id": "Mech_Scyther61389",
+     "name": "Scyther",
+     "kind": "Mech_Scyther",
+     "weapon": "none",
+     "class": "melee",
+     "points": 150.0,
+     "slot": [
+      170,
+      169
+     ]
+    },
+    {
+     "id": "Mech_Scyther61382",
+     "name": "Scyther",
+     "kind": "Mech_Scyther",
+     "weapon": "none",
+     "class": "melee",
+     "points": 150.0,
+     "slot": [
+      172,
+      169
+     ]
+    },
+    {
+     "id": "Mech_Scorcher61383",
+     "name": "Scorcher",
+     "kind": "Mech_Scorcher",
+     "weapon": "Mini-flameblaster",
+     "class": "medium",
+     "points": 75.0,
+     "slot": [
+      174,
+      169
+     ]
+    },
+    {
+     "id": "Mech_Pikeman61387",
+     "name": "Pikeman",
+     "kind": "Mech_Pikeman",
+     "weapon": "Needle gun",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      176,
+      169
+     ]
+    },
+    {
+     "id": "Mech_Pikeman61385",
+     "name": "Pikeman",
+     "kind": "Mech_Pikeman",
+     "weapon": "Needle gun",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      178,
+      169
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 1000,
+   "col": 3,
+   "row": 5,
+   "pen": [
+    168,
+    174,
+    183,
+    187
+   ],
+   "floor": "GoldTile",
+   "n": 5,
+   "classes": {
+    "melee": 1,
+    "short": 1,
+    "long": 2,
+    "explosive": 1
+   },
+   "kind_points": 685.0,
+   "pawns": [
+    {
+     "id": "Mech_Scyther59837",
+     "name": "Scyther",
+     "kind": "Mech_Scyther",
+     "weapon": "none",
+     "class": "melee",
+     "points": 150.0,
+     "slot": [
+      170,
+      185
+     ]
+    },
+    {
+     "id": "Mech_Militor59838",
+     "name": "Militor",
+     "kind": "Mech_Militor",
+     "weapon": "Mini-shotgun",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      172,
+      185
+     ]
+    },
+    {
+     "id": "Mech_Lancer59833",
+     "name": "Lancer",
+     "kind": "Mech_Lancer",
+     "weapon": "Charge lance",
+     "class": "long",
+     "points": 190.0,
+     "slot": [
+      174,
+      185
+     ]
+    },
+    {
+     "id": "Mech_Lancer59835",
+     "name": "Lancer",
+     "kind": "Mech_Lancer",
+     "weapon": "Charge lance",
+     "class": "long",
+     "points": 190.0,
+     "slot": [
+      176,
+      185
+     ]
+    },
+    {
+     "id": "Mech_Termite59831",
+     "name": "Termite",
+     "kind": "Mech_Termite_Breach",
+     "weapon": "Thump cannon",
+     "class": "explosive",
+     "points": 110.0,
+     "slot": [
+      178,
+      185
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mechanoids",
+   "faction": "Mechanoid",
+   "points": 1500,
+   "col": 3,
+   "row": 6,
+   "pen": [
+    168,
+    190,
+    183,
+    203
+   ],
+   "floor": "SilverTile",
+   "n": 6,
+   "classes": {
+    "melee": 2,
+    "long": 3,
+    "explosive": 1
+   },
+   "kind_points": 980.0,
+   "pawns": [
+    {
+     "id": "Mech_Scyther59848",
+     "name": "Scyther",
+     "kind": "Mech_Scyther",
+     "weapon": "none",
+     "class": "melee",
+     "points": 150.0,
+     "slot": [
+      170,
+      201
+     ]
+    },
+    {
+     "id": "Mech_Scyther59851",
+     "name": "Scyther",
+     "kind": "Mech_Scyther",
+     "weapon": "none",
+     "class": "melee",
+     "points": 150.0,
+     "slot": [
+      172,
+      201
+     ]
+    },
+    {
+     "id": "Mech_Lancer59844",
+     "name": "Lancer",
+     "kind": "Mech_Lancer",
+     "weapon": "Charge lance",
+     "class": "long",
+     "points": 190.0,
+     "slot": [
+      174,
+      201
+     ]
+    },
+    {
+     "id": "Mech_Lancer59846",
+     "name": "Lancer",
+     "kind": "Mech_Lancer",
+     "weapon": "Charge lance",
+     "class": "long",
+     "points": 190.0,
+     "slot": [
+      176,
+      201
+     ]
+    },
+    {
+     "id": "Mech_Lancer59849",
+     "name": "Lancer",
+     "kind": "Mech_Lancer",
+     "weapon": "Charge lance",
+     "class": "long",
+     "points": 190.0,
+     "slot": [
+      178,
+      201
+     ]
+    },
+    {
+     "id": "Mech_Termite59842",
+     "name": "Termite",
+     "kind": "Mech_Termite_Breach",
+     "weapon": "Thump cannon",
+     "class": "explosive",
+     "points": 110.0,
+     "slot": [
+      180,
+      201
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 100,
+   "col": 0,
+   "row": 0,
+   "pen": [
+    114,
+    94,
+    129,
+    107
+   ],
+   "floor": "GoldTile",
+   "n": 2,
+   "classes": {
+    "melee": 1,
+    "short": 1
+   },
+   "kind_points": 85.0,
+   "pawns": [
+    {
+     "id": "Human59862",
+     "name": "Tetsuya",
+     "kind": "Drifter",
+     "weapon": "Steel club",
+     "class": "melee",
+     "points": 35.0,
+     "slot": [
+      116,
+      105
+     ]
+    },
+    {
+     "id": "Human59858",
+     "name": "Kazuya",
+     "kind": "Scavenger",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 50.0,
+     "slot": [
+      118,
+      105
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 200,
+   "col": 0,
+   "row": 1,
+   "pen": [
+    114,
+    110,
+    129,
+    123
+   ],
+   "floor": "SilverTile",
+   "n": 4,
+   "classes": {
+    "melee": 4
+   },
+   "kind_points": 200.0,
+   "pawns": [
+    {
+     "id": "Human59872",
+     "name": "Engie",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      116,
+      121
+     ]
+    },
+    {
+     "id": "Human54515",
+     "name": "Julia",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      118,
+      121
+     ]
+    },
+    {
+     "id": "Human59867",
+     "name": "Shigeko",
+     "kind": "Thrasher",
+     "weapon": "Steel mace",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      120,
+      121
+     ]
+    },
+    {
+     "id": "Human59892",
+     "name": "Talbot",
+     "kind": "Thrasher",
+     "weapon": "Steel mace",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      122,
+      121
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 300,
+   "col": 0,
+   "row": 2,
+   "pen": [
+    114,
+    126,
+    129,
+    139
+   ],
+   "floor": "GoldTile",
+   "n": 4,
+   "classes": {
+    "melee": 1,
+    "short": 1,
+    "long": 1,
+    "explosive": 1
+   },
+   "kind_points": 220.0,
+   "pawns": [
+    {
+     "id": "Human59908",
+     "name": "Blair",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      116,
+      137
+     ]
+    },
+    {
+     "id": "Human59913",
+     "name": "Brett",
+     "kind": "Pirate",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 65.0,
+     "slot": [
+      118,
+      137
+     ]
+    },
+    {
+     "id": "Human59939",
+     "name": "Diver",
+     "kind": "Scavenger",
+     "weapon": "Bolt-action rifle",
+     "class": "long",
+     "points": 50.0,
+     "slot": [
+      120,
+      137
+     ]
+    },
+    {
+     "id": "Human59919",
+     "name": "Collier",
+     "kind": "Grenadier_Smoke",
+     "weapon": "Smoke launcher",
+     "class": "explosive",
+     "points": 55.0,
+     "slot": [
+      122,
+      137
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 500,
+   "col": 0,
+   "row": 3,
+   "pen": [
+    114,
+    142,
+    129,
+    155
+   ],
+   "floor": "SilverTile",
+   "n": 8,
+   "classes": {
+    "melee": 1,
+    "short": 4,
+    "long": 1,
+    "explosive": 2
+   },
+   "kind_points": 485.0,
+   "pawns": [
+    {
+     "id": "Human56201",
+     "name": "Sener",
+     "kind": "Thrasher",
+     "weapon": "Wooden club",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      116,
+      153
+     ]
+    },
+    {
+     "id": "Human59964",
+     "name": "Eu",
+     "kind": "Pirate",
+     "weapon": "Autopistol",
+     "class": "short",
+     "points": 65.0,
+     "slot": [
+      118,
+      153
+     ]
+    },
+    {
+     "id": "Human59970",
+     "name": "Gus",
+     "kind": "Pirate",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 65.0,
+     "slot": [
+      120,
+      153
+     ]
+    },
+    {
+     "id": "Human55433",
+     "name": "Hinton",
+     "kind": "Scavenger",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 50.0,
+     "slot": [
+      122,
+      153
+     ]
+    },
+    {
+     "id": "Human55255",
+     "name": "Squint",
+     "kind": "Scavenger",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 50.0,
+     "slot": [
+      124,
+      153
+     ]
+    },
+    {
+     "id": "Human59949",
+     "name": "Moore",
+     "kind": "Pirate",
+     "weapon": "Bolt-action rifle",
+     "class": "long",
+     "points": 65.0,
+     "slot": [
+      126,
+      153
+     ]
+    },
+    {
+     "id": "Human54853",
+     "name": "Sean",
+     "kind": "Grenadier_Destructive",
+     "weapon": "Molotov cocktails",
+     "class": "explosive",
+     "points": 70.0,
+     "slot": [
+      128,
+      153
+     ]
+    },
+    {
+     "id": "Human54946",
+     "name": "Fred",
+     "kind": "Grenadier_Destructive",
+     "weapon": "Molotov cocktails",
+     "class": "explosive",
+     "points": 70.0,
+     "slot": [
+      116,
+      151
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 700,
+   "col": 0,
+   "row": 4,
+   "pen": [
+    114,
+    158,
+    129,
+    171
+   ],
+   "floor": "GoldTile",
+   "n": 13,
+   "classes": {
+    "melee": 13
+   },
+   "kind_points": 650.0,
+   "pawns": [
+    {
+     "id": "Human59927",
+     "name": "Russell",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      116,
+      169
+     ]
+    },
+    {
+     "id": "Human54756",
+     "name": "Woodward",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      118,
+      169
+     ]
+    },
+    {
+     "id": "Human60034",
+     "name": "Heskkin",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      120,
+      169
+     ]
+    },
+    {
+     "id": "Human60055",
+     "name": "McKenzie",
+     "kind": "Thrasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      122,
+      169
+     ]
+    },
+    {
+     "id": "Human54916",
+     "name": "Holder",
+     "kind": "Thrasher",
+     "weapon": "Steel gladius",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      124,
+      169
+     ]
+    },
+    {
+     "id": "Human59985",
+     "name": "Fokavrach",
+     "kind": "Thrasher",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      126,
+      169
+     ]
+    },
+    {
+     "id": "Human59999",
+     "name": "Rumore",
+     "kind": "Thrasher",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      128,
+      169
+     ]
+    },
+    {
+     "id": "Human60004",
+     "name": "Garcia",
+     "kind": "Thrasher",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      116,
+      167
+     ]
+    },
+    {
+     "id": "Human60029",
+     "name": "Braggite",
+     "kind": "Thrasher",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      118,
+      167
+     ]
+    },
+    {
+     "id": "Human60039",
+     "name": "Krand",
+     "kind": "Thrasher",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      120,
+      167
+     ]
+    },
+    {
+     "id": "Human60008",
+     "name": "Flebe",
+     "kind": "Thrasher",
+     "weapon": "Steel mace",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      122,
+      167
+     ]
+    },
+    {
+     "id": "Human60014",
+     "name": "Lowe",
+     "kind": "Thrasher",
+     "weapon": "Steel mace",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      124,
+      167
+     ]
+    },
+    {
+     "id": "Human60045",
+     "name": "Rika",
+     "kind": "Thrasher",
+     "weapon": "Steel mace",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      126,
+      167
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 1000,
+   "col": 0,
+   "row": 5,
+   "pen": [
+    114,
+    174,
+    129,
+    187
+   ],
+   "floor": "SilverTile",
+   "n": 13,
+   "classes": {
+    "melee": 1,
+    "short": 4,
+    "medium": 1,
+    "long": 4,
+    "explosive": 3
+   },
+   "kind_points": 960.0,
+   "pawns": [
+    {
+     "id": "Human60202",
+     "name": "Ketzhoov",
+     "kind": "Drifter",
+     "weapon": "Sandstone club",
+     "class": "melee",
+     "points": 35.0,
+     "slot": [
+      116,
+      185
+     ]
+    },
+    {
+     "id": "Human60062",
+     "name": "Syd",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Chain shotgun",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      118,
+      185
+     ]
+    },
+    {
+     "id": "Human60141",
+     "name": "Grigory",
+     "kind": "Pirate",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 65.0,
+     "slot": [
+      120,
+      185
+     ]
+    },
+    {
+     "id": "Human60121",
+     "name": "Urist",
+     "kind": "Pirate",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 65.0,
+     "slot": [
+      122,
+      185
+     ]
+    },
+    {
+     "id": "Human60160",
+     "name": "Hernan",
+     "kind": "Pirate",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 65.0,
+     "slot": [
+      124,
+      185
+     ]
+    },
+    {
+     "id": "Human53705",
+     "name": "Brown",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Assault rifle",
+     "class": "medium",
+     "points": 85.0,
+     "slot": [
+      126,
+      185
+     ]
+    },
+    {
+     "id": "Human60095",
+     "name": "Anatoly",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      128,
+      185
+     ]
+    },
+    {
+     "id": "Human60167",
+     "name": "Athena",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      116,
+      183
+     ]
+    },
+    {
+     "id": "Human60197",
+     "name": "Flea",
+     "kind": "Pirate",
+     "weapon": "Bolt-action rifle",
+     "class": "long",
+     "points": 65.0,
+     "slot": [
+      118,
+      183
+     ]
+    },
+    {
+     "id": "Human60192",
+     "name": "Selvi",
+     "kind": "Pirate",
+     "weapon": "bolt-action rifle",
+     "class": "long",
+     "points": 65.0,
+     "slot": [
+      120,
+      183
+     ]
+    },
+    {
+     "id": "Human60187",
+     "name": "Jimothy",
+     "kind": "Grenadier_Destructive",
+     "weapon": "Frag grenades",
+     "class": "explosive",
+     "points": 70.0,
+     "slot": [
+      122,
+      183
+     ]
+    },
+    {
+     "id": "Human60101",
+     "name": "Haruka",
+     "kind": "Grenadier_Smoke",
+     "weapon": "Smoke launcher",
+     "class": "explosive",
+     "points": 55.0,
+     "slot": [
+      124,
+      183
+     ]
+    },
+    {
+     "id": "Human60070",
+     "name": "Rozalina",
+     "kind": "Mercenary_Gunner",
+     "weapon": "incinerator",
+     "class": "explosive",
+     "points": 85.0,
+     "slot": [
+      126,
+      183
+     ]
+    }
+   ]
+  },
+  {
+   "type": "pirates",
+   "faction": "Pirate",
+   "points": 1500,
+   "col": 0,
+   "row": 6,
+   "pen": [
+    114,
+    190,
+    129,
+    203
+   ],
+   "floor": "GoldTile",
+   "n": 13,
+   "classes": {
+    "long": 13
+   },
+   "kind_points": 1430.0,
+   "pawns": [
+    {
+     "id": "Human56285",
+     "name": "Josephine",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      116,
+      201
+     ]
+    },
+    {
+     "id": "Human60215",
+     "name": "Pats",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      118,
+      201
+     ]
+    },
+    {
+     "id": "Human60223",
+     "name": "Merandil",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      120,
+      201
+     ]
+    },
+    {
+     "id": "Human60231",
+     "name": "Faux",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      122,
+      201
+     ]
+    },
+    {
+     "id": "Human55173",
+     "name": "Verbregghe",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      124,
+      201
+     ]
+    },
+    {
+     "id": "Human60242",
+     "name": "Lenka",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      126,
+      201
+     ]
+    },
+    {
+     "id": "Human60261",
+     "name": "Sillen",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      128,
+      201
+     ]
+    },
+    {
+     "id": "Human60284",
+     "name": "Sellavine",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      116,
+      199
+     ]
+    },
+    {
+     "id": "Human54626",
+     "name": "Kramer",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      118,
+      199
+     ]
+    },
+    {
+     "id": "Human60296",
+     "name": "Szilard",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      120,
+      199
+     ]
+    },
+    {
+     "id": "Human60318",
+     "name": "Shun",
+     "kind": "Mercenary_Sniper",
+     "weapon": "Sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      122,
+      199
+     ]
+    },
+    {
+     "id": "Human60255",
+     "name": "Mispy",
+     "kind": "Mercenary_Sniper",
+     "weapon": "sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      124,
+      199
+     ]
+    },
+    {
+     "id": "Human60341",
+     "name": "Kaori",
+     "kind": "Mercenary_Sniper",
+     "weapon": "sniper rifle",
+     "class": "long",
+     "points": 110.0,
+     "slot": [
+      126,
+      199
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 100,
+   "col": 1,
+   "row": 0,
+   "pen": [
+    132,
+    94,
+    147,
+    107
+   ],
+   "floor": "SilverTile",
+   "n": 2,
+   "classes": {
+    "short": 2
+   },
+   "kind_points": 90.0,
+   "pawns": [
+    {
+     "id": "Human55621",
+     "name": "Edouard",
+     "kind": "Villager",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      134,
+      105
+     ]
+    },
+    {
+     "id": "Human60354",
+     "name": "Deacon",
+     "kind": "Villager",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      136,
+      105
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 200,
+   "col": 1,
+   "row": 1,
+   "pen": [
+    132,
+    110,
+    147,
+    123
+   ],
+   "floor": "GoldTile",
+   "n": 3,
+   "classes": {
+    "short": 2,
+    "explosive": 1
+   },
+   "kind_points": 170.0,
+   "pawns": [
+    {
+     "id": "Human60360",
+     "name": "Robles",
+     "kind": "Town_Councilman",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 40.0,
+     "slot": [
+      134,
+      121
+     ]
+    },
+    {
+     "id": "Human60367",
+     "name": "Amaryllis",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      136,
+      121
+     ]
+    },
+    {
+     "id": "Human60372",
+     "name": "Azusite",
+     "kind": "Grenadier_Destructive",
+     "weapon": "Molotov cocktails",
+     "class": "explosive",
+     "points": 70.0,
+     "slot": [
+      138,
+      121
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 300,
+   "col": 1,
+   "row": 2,
+   "pen": [
+    132,
+    126,
+    147,
+    139
+   ],
+   "floor": "SilverTile",
+   "n": 5,
+   "classes": {
+    "melee": 2,
+    "short": 3
+   },
+   "kind_points": 250.0,
+   "pawns": [
+    {
+     "id": "Human60393",
+     "name": "Cholaky",
+     "kind": "Villager",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 45.0,
+     "slot": [
+      134,
+      137
+     ]
+    },
+    {
+     "id": "Human60402",
+     "name": "Ramon",
+     "kind": "Villager",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 45.0,
+     "slot": [
+      136,
+      137
+     ]
+    },
+    {
+     "id": "Human60379",
+     "name": "Trevino",
+     "kind": "Town_Councilman",
+     "weapon": "Autopistol",
+     "class": "short",
+     "points": 40.0,
+     "slot": [
+      138,
+      137
+     ]
+    },
+    {
+     "id": "Human60413",
+     "name": "Norton",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      140,
+      137
+     ]
+    },
+    {
+     "id": "Human60398",
+     "name": "Weatherwax",
+     "kind": "Town_Guard",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      142,
+      137
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 500,
+   "col": 1,
+   "row": 3,
+   "pen": [
+    132,
+    142,
+    147,
+    155
+   ],
+   "floor": "GoldTile",
+   "n": 9,
+   "classes": {
+    "short": 9
+   },
+   "kind_points": 475.0,
+   "pawns": [
+    {
+     "id": "Human60468",
+     "name": "Alla",
+     "kind": "Town_Councilman",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 40.0,
+     "slot": [
+      134,
+      153
+     ]
+    },
+    {
+     "id": "Human60419",
+     "name": "Fugly",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      136,
+      153
+     ]
+    },
+    {
+     "id": "Human60480",
+     "name": "Varvara",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      138,
+      153
+     ]
+    },
+    {
+     "id": "Human60498",
+     "name": "Fluff",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      140,
+      153
+     ]
+    },
+    {
+     "id": "Human60430",
+     "name": "Nelson",
+     "kind": "Town_Guard",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      142,
+      153
+     ]
+    },
+    {
+     "id": "Human60444",
+     "name": "Minoru",
+     "kind": "Town_Guard",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      144,
+      153
+     ]
+    },
+    {
+     "id": "Human60425",
+     "name": "Laser",
+     "kind": "Villager",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      146,
+      153
+     ]
+    },
+    {
+     "id": "Human60450",
+     "name": "Gillespie",
+     "kind": "Villager",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      134,
+      151
+     ]
+    },
+    {
+     "id": "Human56518",
+     "name": "Beatriz",
+     "kind": "Villager",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      136,
+      151
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 700,
+   "col": 1,
+   "row": 4,
+   "pen": [
+    132,
+    158,
+    147,
+    171
+   ],
+   "floor": "SilverTile",
+   "n": 8,
+   "classes": {
+    "short": 4,
+    "medium": 1,
+    "support": 2,
+    "explosive": 1
+   },
+   "kind_points": 620.0,
+   "pawns": [
+    {
+     "id": "Human60531",
+     "name": "Simon",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      134,
+      169
+     ]
+    },
+    {
+     "id": "Human60537",
+     "name": "Mother",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      136,
+      169
+     ]
+    },
+    {
+     "id": "Human60583",
+     "name": "Esme",
+     "kind": "Mercenary_Gunner",
+     "weapon": "machine pistol",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      138,
+      169
+     ]
+    },
+    {
+     "id": "Human60558",
+     "name": "Barker",
+     "kind": "Town_Councilman",
+     "weapon": "Autopistol",
+     "class": "short",
+     "points": 40.0,
+     "slot": [
+      140,
+      169
+     ]
+    },
+    {
+     "id": "Human60545",
+     "name": "Felix",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Assault rifle",
+     "class": "medium",
+     "points": 85.0,
+     "slot": [
+      142,
+      169
+     ]
+    },
+    {
+     "id": "Human60565",
+     "name": "Nemo",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Heavy SMG",
+     "class": "support",
+     "points": 85.0,
+     "slot": [
+      144,
+      169
+     ]
+    },
+    {
+     "id": "Human60575",
+     "name": "Rubio",
+     "kind": "Mercenary_Gunner",
+     "weapon": "LMG",
+     "class": "support",
+     "points": 85.0,
+     "slot": [
+      146,
+      169
+     ]
+    },
+    {
+     "id": "Human60553",
+     "name": "Lottie",
+     "kind": "Grenadier_Destructive",
+     "weapon": "Molotov cocktails",
+     "class": "explosive",
+     "points": 70.0,
+     "slot": [
+      134,
+      167
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 1000,
+   "col": 1,
+   "row": 5,
+   "pen": [
+    132,
+    174,
+    147,
+    187
+   ],
+   "floor": "GoldTile",
+   "n": 14,
+   "classes": {
+    "short": 10,
+    "medium": 2,
+    "support": 1,
+    "long": 1
+   },
+   "kind_points": 980.0,
+   "pawns": [
+    {
+     "id": "Human60605",
+     "name": "Hitomi",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Chain shotgun",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      134,
+      185
+     ]
+    },
+    {
+     "id": "Human60731",
+     "name": "Sir",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Chain shotgun",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      136,
+      185
+     ]
+    },
+    {
+     "id": "Human60591",
+     "name": "Violet",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      138,
+      185
+     ]
+    },
+    {
+     "id": "Human60650",
+     "name": "Kat",
+     "kind": "Mercenary_Gunner",
+     "weapon": "revolver",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      140,
+      185
+     ]
+    },
+    {
+     "id": "Human60643",
+     "name": "Aletta",
+     "kind": "Town_Councilman",
+     "weapon": "Revolver",
+     "class": "short",
+     "points": 40.0,
+     "slot": [
+      142,
+      185
+     ]
+    },
+    {
+     "id": "Human60696",
+     "name": "Alan",
+     "kind": "Town_Guard",
+     "weapon": "Autopistol",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      144,
+      185
+     ]
+    },
+    {
+     "id": "Human60625",
+     "name": "Stench",
+     "kind": "Town_Guard",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      146,
+      185
+     ]
+    },
+    {
+     "id": "Human60487",
+     "name": "Jonah",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      134,
+      183
+     ]
+    },
+    {
+     "id": "Human60750",
+     "name": "Stomp",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      136,
+      183
+     ]
+    },
+    {
+     "id": "Human60715",
+     "name": "Moo",
+     "kind": "Villager",
+     "weapon": "Autopistol",
+     "class": "short",
+     "points": 45.0,
+     "slot": [
+      138,
+      183
+     ]
+    },
+    {
+     "id": "Human60669",
+     "name": "Scarlett",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Assault rifle",
+     "class": "medium",
+     "points": 85.0,
+     "slot": [
+      140,
+      183
+     ]
+    },
+    {
+     "id": "Human60662",
+     "name": "Gypsy",
+     "kind": "Mercenary_Gunner",
+     "weapon": "assault rifle",
+     "class": "medium",
+     "points": 85.0,
+     "slot": [
+      142,
+      183
+     ]
+    },
+    {
+     "id": "Human60677",
+     "name": "Rise",
+     "kind": "Mercenary_Gunner",
+     "weapon": "LMG",
+     "class": "support",
+     "points": 85.0,
+     "slot": [
+      144,
+      183
+     ]
+    },
+    {
+     "id": "Human60656",
+     "name": "Wobbles",
+     "kind": "Town_Guard",
+     "weapon": "Bolt-action rifle",
+     "class": "long",
+     "points": 60.0,
+     "slot": [
+      146,
+      183
+     ]
+    }
+   ]
+  },
+  {
+   "type": "outlanders",
+   "faction": "OutlanderRough",
+   "points": 1500,
+   "col": 1,
+   "row": 6,
+   "pen": [
+    132,
+    190,
+    147,
+    203
+   ],
+   "floor": "SilverTile",
+   "n": 12,
+   "classes": {
+    "melee": 3,
+    "short": 5,
+    "medium": 2,
+    "support": 2
+   },
+   "kind_points": 1335.0,
+   "pawns": [
+    {
+     "id": "Human60817",
+     "name": "Taras",
+     "kind": "Mercenary_Slasher",
+     "weapon": "Steel axe",
+     "class": "melee",
+     "points": 140.0,
+     "slot": [
+      134,
+      201
+     ]
+    },
+    {
+     "id": "Human60803",
+     "name": "Jason",
+     "kind": "Mercenary_Slasher",
+     "weapon": "Steel mace",
+     "class": "melee",
+     "points": 140.0,
+     "slot": [
+      136,
+      201
+     ]
+    },
+    {
+     "id": "Human60779",
+     "name": "Christopher",
+     "kind": "Mercenary_Slasher",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 140.0,
+     "slot": [
+      138,
+      201
+     ]
+    },
+    {
+     "id": "Human60845",
+     "name": "Schroder",
+     "kind": "Mercenary_Elite",
+     "weapon": "Chain shotgun",
+     "class": "short",
+     "points": 130.0,
+     "slot": [
+      140,
+      201
+     ]
+    },
+    {
+     "id": "Human60771",
+     "name": "Eminent",
+     "kind": "Mercenary_Elite",
+     "weapon": "chain shotgun",
+     "class": "short",
+     "points": 130.0,
+     "slot": [
+      142,
+      201
+     ]
+    },
+    {
+     "id": "Human60451",
+     "name": "Lover",
+     "kind": "Mercenary_Gunner",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 85.0,
+     "slot": [
+      144,
+      201
+     ]
+    },
+    {
+     "id": "Human60793",
+     "name": "Flanker",
+     "kind": "Town_Guard",
+     "weapon": "Machine pistol",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      146,
+      201
+     ]
+    },
+    {
+     "id": "Human60866",
+     "name": "Reece",
+     "kind": "Town_Guard",
+     "weapon": "Pump shotgun",
+     "class": "short",
+     "points": 60.0,
+     "slot": [
+      134,
+      199
+     ]
+    },
+    {
+     "id": "Human60824",
+     "name": "Nebulys",
+     "kind": "Mercenary_Elite",
+     "weapon": "Assault rifle",
+     "class": "medium",
+     "points": 130.0,
+     "slot": [
+      136,
+      199
+     ]
+    },
+    {
+     "id": "Human60592",
+     "name": "Nelly",
+     "kind": "Mercenary_Elite",
+     "weapon": "Assault rifle",
+     "class": "medium",
+     "points": 130.0,
+     "slot": [
+      138,
+      199
+     ]
+    },
+    {
+     "id": "Human60786",
+     "name": "Shane",
+     "kind": "Mercenary_Elite",
+     "weapon": "LMG",
+     "class": "support",
+     "points": 130.0,
+     "slot": [
+      140,
+      199
+     ]
+    },
+    {
+     "id": "Human60840",
+     "name": "Rocha",
+     "kind": "Town_Guard",
+     "weapon": "Heavy SMG",
+     "class": "support",
+     "points": 60.0,
+     "slot": [
+      142,
+      199
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 100,
+   "col": 2,
+   "row": 0,
+   "pen": [
+    150,
+    94,
+    165,
+    107
+   ],
+   "floor": "GoldTile",
+   "n": 2,
+   "classes": {
+    "bow": 2
+   },
+   "kind_points": 90.0,
+   "pawns": [
+    {
+     "id": "Human60889",
+     "name": "Bozo",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      152,
+      105
+     ]
+    },
+    {
+     "id": "Human60903",
+     "name": "Xena",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      154,
+      105
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 200,
+   "col": 2,
+   "row": 1,
+   "pen": [
+    150,
+    110,
+    165,
+    123
+   ],
+   "floor": "SilverTile",
+   "n": 4,
+   "classes": {
+    "melee": 3,
+    "bow": 1
+   },
+   "kind_points": 175.0,
+   "pawns": [
+    {
+     "id": "Human57374",
+     "name": "Osea",
+     "kind": "Tribal_Penitent",
+     "weapon": "Sandstone club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      152,
+      121
+     ]
+    },
+    {
+     "id": "Human60908",
+     "name": "Hyena",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      154,
+      121
+     ]
+    },
+    {
+     "id": "Human60924",
+     "name": "Cai",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      156,
+      121
+     ]
+    },
+    {
+     "id": "Human60939",
+     "name": "Neo",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      158,
+      121
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 300,
+   "col": 2,
+   "row": 2,
+   "pen": [
+    150,
+    126,
+    165,
+    139
+   ],
+   "floor": "GoldTile",
+   "n": 6,
+   "classes": {
+    "melee": 3,
+    "bow": 3
+   },
+   "kind_points": 295.0,
+   "pawns": [
+    {
+     "id": "Human57635",
+     "name": "Squid",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      152,
+      137
+     ]
+    },
+    {
+     "id": "Human60945",
+     "name": "Loabru",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      154,
+      137
+     ]
+    },
+    {
+     "id": "Human60983",
+     "name": "Dorna",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      156,
+      137
+     ]
+    },
+    {
+     "id": "Human60976",
+     "name": "L\u00e9gua",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      158,
+      137
+     ]
+    },
+    {
+     "id": "Human60102",
+     "name": "Cockroach",
+     "kind": "Tribal_Hunter",
+     "weapon": "Recurve bow",
+     "class": "bow",
+     "points": 60.0,
+     "slot": [
+      160,
+      137
+     ]
+    },
+    {
+     "id": "Human60979",
+     "name": "Xomi",
+     "kind": "Tribal_Hunter",
+     "weapon": "Recurve bow",
+     "class": "bow",
+     "points": 60.0,
+     "slot": [
+      162,
+      137
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 500,
+   "col": 2,
+   "row": 3,
+   "pen": [
+    150,
+    142,
+    165,
+    155
+   ],
+   "floor": "SilverTile",
+   "n": 9,
+   "classes": {
+    "melee": 9
+   },
+   "kind_points": 465.0,
+   "pawns": [
+    {
+     "id": "Human60990",
+     "name": "Oma",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      152,
+      153
+     ]
+    },
+    {
+     "id": "Human61019",
+     "name": "Rarcan",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      154,
+      153
+     ]
+    },
+    {
+     "id": "Human61024",
+     "name": "Rodaballo",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      156,
+      153
+     ]
+    },
+    {
+     "id": "Human61036",
+     "name": "Xecam",
+     "kind": "Tribal_Penitent",
+     "weapon": "Granite club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      158,
+      153
+     ]
+    },
+    {
+     "id": "Human61030",
+     "name": "Turtle",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      160,
+      153
+     ]
+    },
+    {
+     "id": "Human61033",
+     "name": "Wasp",
+     "kind": "Tribal_Penitent",
+     "weapon": "Wooden club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      162,
+      153
+     ]
+    },
+    {
+     "id": "Human60994",
+     "name": "Ibi",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      164,
+      153
+     ]
+    },
+    {
+     "id": "Human61010",
+     "name": "Cerol\u00e9",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      152,
+      151
+     ]
+    },
+    {
+     "id": "Human61015",
+     "name": "Hawk",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      154,
+      151
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 700,
+   "col": 2,
+   "row": 4,
+   "pen": [
+    150,
+    158,
+    165,
+    171
+   ],
+   "floor": "GoldTile",
+   "n": 12,
+   "classes": {
+    "melee": 12
+   },
+   "kind_points": 680.0,
+   "pawns": [
+    {
+     "id": "Human61057",
+     "name": "Dinosaur",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      152,
+      169
+     ]
+    },
+    {
+     "id": "Human61062",
+     "name": "Cago\u00f1ago",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      154,
+      169
+     ]
+    },
+    {
+     "id": "Human57705",
+     "name": "Mitocaico",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      156,
+      169
+     ]
+    },
+    {
+     "id": "Human61072",
+     "name": "Muffalo",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      158,
+      169
+     ]
+    },
+    {
+     "id": "Human61096",
+     "name": "Raca",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      160,
+      169
+     ]
+    },
+    {
+     "id": "Human61087",
+     "name": "Gagaabru",
+     "kind": "Tribal_ChiefMelee",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 85.0,
+     "slot": [
+      162,
+      169
+     ]
+    },
+    {
+     "id": "Human57354",
+     "name": "Duebil",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      164,
+      169
+     ]
+    },
+    {
+     "id": "Human61085",
+     "name": "Carcaca",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      152,
+      167
+     ]
+    },
+    {
+     "id": "Human61102",
+     "name": "Beaver",
+     "kind": "Tribal_Penitent",
+     "weapon": "Wooden club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      154,
+      167
+     ]
+    },
+    {
+     "id": "Human61078",
+     "name": "Rarban",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      156,
+      167
+     ]
+    },
+    {
+     "id": "Human61092",
+     "name": "Caraga",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      158,
+      167
+     ]
+    },
+    {
+     "id": "Human57479",
+     "name": "Stingray",
+     "kind": "Tribal_Warrior",
+     "weapon": "Wooden ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      160,
+      167
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 1000,
+   "col": 2,
+   "row": 5,
+   "pen": [
+    150,
+    174,
+    165,
+    187
+   ],
+   "floor": "SilverTile",
+   "n": 18,
+   "classes": {
+    "melee": 9,
+    "long": 2,
+    "bow": 5,
+    "thrown": 2
+   },
+   "kind_points": 990.0,
+   "pawns": [
+    {
+     "id": "Human61137",
+     "name": "Comcam",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      152,
+      185
+     ]
+    },
+    {
+     "id": "Human61169",
+     "name": "Toira",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      154,
+      185
+     ]
+    },
+    {
+     "id": "Human61187",
+     "name": "Miguaol",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      156,
+      185
+     ]
+    },
+    {
+     "id": "Human61184",
+     "name": "Whale",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      158,
+      185
+     ]
+    },
+    {
+     "id": "Human61192",
+     "name": "Camlal\u00e1n",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      160,
+      185
+     ]
+    },
+    {
+     "id": "Human61108",
+     "name": "Rocol",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      162,
+      185
+     ]
+    },
+    {
+     "id": "Human61159",
+     "name": "Ca\u00f1a",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      164,
+      185
+     ]
+    },
+    {
+     "id": "Human57310",
+     "name": "Curro",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      152,
+      183
+     ]
+    },
+    {
+     "id": "Human61195",
+     "name": "Cerrararque",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      154,
+      183
+     ]
+    },
+    {
+     "id": "Human60108",
+     "name": "Mencolemro",
+     "kind": "Tribal_HeavyArcher",
+     "weapon": "Greatbow",
+     "class": "long",
+     "points": 75.0,
+     "slot": [
+      156,
+      183
+     ]
+    },
+    {
+     "id": "Human57187",
+     "name": "Seal",
+     "kind": "Tribal_HeavyArcher",
+     "weapon": "Greatbow",
+     "class": "long",
+     "points": 75.0,
+     "slot": [
+      158,
+      183
+     ]
+    },
+    {
+     "id": "Human61134",
+     "name": "Galga",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      160,
+      183
+     ]
+    },
+    {
+     "id": "Human61162",
+     "name": "Trosxos",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      162,
+      183
+     ]
+    },
+    {
+     "id": "Human61199",
+     "name": "Armadillo",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      164,
+      183
+     ]
+    },
+    {
+     "id": "Human61203",
+     "name": "Gobrindo",
+     "kind": "Tribal_Archer",
+     "weapon": "Short bow",
+     "class": "bow",
+     "points": 45.0,
+     "slot": [
+      152,
+      181
+     ]
+    },
+    {
+     "id": "Human61130",
+     "name": "Reindeer",
+     "kind": "Tribal_Hunter",
+     "weapon": "Recurve bow",
+     "class": "bow",
+     "points": 60.0,
+     "slot": [
+      154,
+      181
+     ]
+    },
+    {
+     "id": "Human57368",
+     "name": "Sardine",
+     "kind": "Tribal_HeavyArcher",
+     "weapon": "Pila",
+     "class": "thrown",
+     "points": 75.0,
+     "slot": [
+      156,
+      181
+     ]
+    },
+    {
+     "id": "Human61150",
+     "name": "Saio",
+     "kind": "Tribal_HeavyArcher",
+     "weapon": "Pila",
+     "class": "thrown",
+     "points": 75.0,
+     "slot": [
+      158,
+      181
+     ]
+    }
+   ]
+  },
+  {
+   "type": "tribe (fierce)",
+   "faction": "TribeRough",
+   "points": 1500,
+   "col": 2,
+   "row": 6,
+   "pen": [
+    150,
+    190,
+    165,
+    203
+   ],
+   "floor": "GoldTile",
+   "n": 27,
+   "classes": {
+    "melee": 27
+   },
+   "kind_points": 1475.0,
+   "pawns": [
+    {
+     "id": "Human61220",
+     "name": "Laxe",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      152,
+      201
+     ]
+    },
+    {
+     "id": "Human61224",
+     "name": "Bar\u00f1o",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      154,
+      201
+     ]
+    },
+    {
+     "id": "Human61234",
+     "name": "Croio",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      156,
+      201
+     ]
+    },
+    {
+     "id": "Human57699",
+     "name": "Tranca",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      158,
+      201
+     ]
+    },
+    {
+     "id": "Human57629",
+     "name": "Duck",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      160,
+      201
+     ]
+    },
+    {
+     "id": "Human57829",
+     "name": "Bantro",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      162,
+      201
+     ]
+    },
+    {
+     "id": "Human61296",
+     "name": "Chicken",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      164,
+      201
+     ]
+    },
+    {
+     "id": "Human61329",
+     "name": "Mongoose",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      152,
+      199
+     ]
+    },
+    {
+     "id": "Human60969",
+     "name": "Curton",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      154,
+      199
+     ]
+    },
+    {
+     "id": "Human61372",
+     "name": "Trocerba",
+     "kind": "Tribal_Berserker",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 65.0,
+     "slot": [
+      156,
+      199
+     ]
+    },
+    {
+     "id": "Human61229",
+     "name": "Galco",
+     "kind": "Tribal_ChiefMelee",
+     "weapon": "Steel spear",
+     "class": "melee",
+     "points": 85.0,
+     "slot": [
+      158,
+      199
+     ]
+    },
+    {
+     "id": "Human61277",
+     "name": "Queirodorca",
+     "kind": "Tribal_Penitent",
+     "weapon": "Sandstone club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      160,
+      199
+     ]
+    },
+    {
+     "id": "Human57595",
+     "name": "Curbargaen",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel club",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      162,
+      199
+     ]
+    },
+    {
+     "id": "Human61249",
+     "name": "Marroche",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      164,
+      199
+     ]
+    },
+    {
+     "id": "Human61276",
+     "name": "Crane",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      152,
+      197
+     ]
+    },
+    {
+     "id": "Human61300",
+     "name": "Negotro",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      154,
+      197
+     ]
+    },
+    {
+     "id": "Human61344",
+     "name": "Gocalourar",
+     "kind": "Tribal_Penitent",
+     "weapon": "Steel knife",
+     "class": "melee",
+     "points": 40.0,
+     "slot": [
+      156,
+      197
+     ]
+    },
+    {
+     "id": "Human57734",
+     "name": "Iroduedoa",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      158,
+      197
+     ]
+    },
+    {
+     "id": "Human61251",
+     "name": "Brinca",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      160,
+      197
+     ]
+    },
+    {
+     "id": "Human61262",
+     "name": "Cac\u00f3",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      162,
+      197
+     ]
+    },
+    {
+     "id": "Human61288",
+     "name": "Comareiro",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      164,
+      197
+     ]
+    },
+    {
+     "id": "Human61292",
+     "name": "Ibis",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      152,
+      195
+     ]
+    },
+    {
+     "id": "Human61305",
+     "name": "Vasalo",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      154,
+      195
+     ]
+    },
+    {
+     "id": "Human61309",
+     "name": "Goabanca",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      156,
+      195
+     ]
+    },
+    {
+     "id": "Human61313",
+     "name": "Abantro",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      158,
+      195
+     ]
+    },
+    {
+     "id": "Human61347",
+     "name": "Crigo",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      160,
+      195
+     ]
+    },
+    {
+     "id": "Human61362",
+     "name": "Rabbit",
+     "kind": "Tribal_Warrior",
+     "weapon": "Steel ikwa",
+     "class": "melee",
+     "points": 50.0,
+     "slot": [
+      162,
+      195
+     ]
+    }
+   ]
+  }
+ ]
+}
