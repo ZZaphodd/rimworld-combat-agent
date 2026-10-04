@@ -151,3 +151,35 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       overwatch (fire control item 3). Docstring note only for now.
 - [ ] Holdout (2nd squad composition + 2nd arena, e.g. arena_fort) to fit squad/terrain-based
       preconditions (ranged_squad, defensible_terrain, room_to_spread) — before the router.
+- [ ] Friendly fire (fratricide) — not modelled or measured yet. HIGH priority.
+      User observation: the biggest friendly-fire damage comes from short-range shooters (shotguns,
+      SMGs) walking into the main fire lanes of our long guns. Melee has to close in; short-range
+      shooters have far more freedom of position.
+      1. Measure first (report-only KPIs from the pooled battle log): friendly hits (our shooter →
+         our pawn) with weapon, damage, victim weapon class, victim in melee or not; "lane intrusion"
+         share = time a short-range pawn stands inside another ally's line of fire (beyond the
+         shooter's safe distance). One pass: 6 doctrines × 7 themes × 2.
+      2. Friendly-fire drill (fix the mechanic for GAME_FACTS): shooter / ally / target, hit rate by
+         the ally's distance from the shooter (belief: pawns close to the shooter are rarely hit —
+         UNVERIFIED).
+      3. Model (tactical, shared by all doctrines — positioning by weapon range):
+         - short-range roles: wings of the concave, choke-exit ambush from cover beside the exit,
+           backline peel, flanking along side lanes — never inside a main fire lane; wait for the
+           enemy to come into range instead of walking out to it;
+         - fire-lane deconfliction: a long gun with an ally in its lane (beyond the safe distance)
+           retargets or checks fire briefly;
+         - shooting into melee: weigh friendly-fire risk vs leaving a melee-locking enemy alone;
+         - danger close: no splash (incendiary launcher, grenades) near our own pawns.
+      4. Zone map as a shared PERCEPTION layer (answers queries, decides nothing): enemy zones
+         (exposure, throw/rocket reach — reuse legacy threatmap components), hazard zones (resting
+         frags, fire — moved out of micro so it's shared), own fire lanes (segment test shooter→target
+         beyond the shooter's safe distance; targets from "Fire at" orders, job "attacking X", or the
+         last log entry). Each layer/doctrine weighs the answers (turtle: slot viscosity high, ally
+         lanes hard). Lessons from threatmap v3: map ≠ policy, change one layer at a time, finish
+         pressure belongs to tactics.
+      5. Formation hypothesis (intuition, to test): short-range on the wings (horns of the concave,
+         short angled lanes, point-blank on raiders entering the pocket), long-range centre-back
+         (straight lanes, max standoff). Exception: raids that don't come in (snipers) — short-range
+         held in reserve behind the centre, sent to a wing when raiders enter. Test: short-wings /
+         long-wings / current, metrics friendly hits, lane intrusion, trade ratio, split by
+         approaching vs non-approaching themes.

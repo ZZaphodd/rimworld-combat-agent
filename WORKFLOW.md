@@ -1,10 +1,10 @@
 # Workflow
 
-## Current stage: baseline-v1 frozen (local tag; see results/baseline/README.md)
+## Current stage: baseline-v1 frozen (tag on GitHub; see results/baseline/README.md)
 
 The rules under "After the baseline is frozen" now apply; the merge gate is `tools/gate.py`
-(rule below). Until the remote repo exists, branches
-and the tag are local. Threshold fitting (preconditions, no_progress) on baseline data is analysis
+(rule below). The repo is public on GitHub (origin); main and tags are pushed after a
+passing gate, feature branches may stay local. Threshold fitting (preconditions, no_progress) on baseline data is analysis
 only and does not change agent behaviour; changing a threshold in code is a branch + gate.
 
 ## Test layers (applies now)

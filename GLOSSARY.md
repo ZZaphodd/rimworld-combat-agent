@@ -101,7 +101,8 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **enfilade / defilade** | Fire along the long axis of an enemy line / a position out of enemy direct fire (a zone-map cell category) | military |
 | **cover vs concealment** | Cover protects (walls, sandbags); concealment only hides (smoke lowers accuracy) | military |
 | **dead space** | Area a position cannot cover with fire (planner blind spots) | military |
-| **fratricide / danger close** | Friendly fire / using splash near our own pawns (shooting into a melee, our grenades/lances) | military |
+| **friendly fire (아군 오사) / fratricide** | Our own shot or splash hitting our own pawn (shooting into a melee, a short-range shooter inside a long gun's lane, our grenades/incendiary). Korean term kept on purpose: precise nuance, cheap as a single word | military/ours |
+| **danger close** | Using splash near our own pawns | military |
 | **battle drill** | Trained immediate response: the reflex layer ("react to contact", "break contact" = disengage) | military |
 | **bounding overwatch / fire and maneuver** | One element moves while the other covers it; how `close` should advance | military |
 | **overwatch** | A position waiting to fire on whatever appears (turtle's line, the bait's kill zone) | military |
@@ -124,4 +125,5 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **center of gravity** | Too abstract to operationalise | snipe priority |
 | **split** | In MOBA it means splitting the team (side-lane push vs main teamfight); too strong a "divide in two" sense for small-area splash mitigation | spread |
 | **pin** | Concise but open to interpretation (suppression? root? melee contact?) | melee lock |
+| **친선 사격** | Reads as a 'friendly exchange of fire'; too open to interpretation | friendly fire (아군 오사) |
 | **split push, vision/ward, last hit** | Lanes, minimap and economy are out of scope | — |
