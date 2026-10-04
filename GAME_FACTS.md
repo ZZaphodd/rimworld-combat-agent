@@ -137,6 +137,7 @@ Measured or read from the XML (more reliable):
 | Frag fuse (wiki) | 100 ticks after landing (we measured 88–91 at rest) | wiki: Frag grenades |
 | Low-shield pack | deploys at once where the wearer stands (does not follow), radius 4.9, lasts 1800 ticks; stops incoming ground-level fire crossing the edge, explosives burst at the edge (the blast still reaches 1.9 inside); shots from inside go out; melee walks in; mortars pass | [wiki: Low-shield pack](https://rimworldwiki.com/wiki/Low-shield_pack) |
 | Neanderthal (xenotype) | strong melee damage, robust (~×1.33 effective health), reduced pain (hard to down), 96% move speed, slow learning | [wiki: Neanderthal](https://rimworldwiki.com/wiki/Neanderthal); rand_127 |
+| Man in black | when every colonist is down, the storyteller sends a `StrangerInBlack` colonist (rand_065: "Howard" at the map edge); the harness destroys him (EVAL_SPEC §3) | rand_065, user |
 | Weapon swap by order | `manage_gear` drop (instant, also while paused) + equip (a walk-over job, runs when unpaused; drafting cancels it): 8 swaps in ~140 ticks with pawns 2 cells apart | rand_084, rand_127 |
 
 Projectile defs: `Proj_GrenadeFrag` (rests, then blows), `Proj_GrenadeMolotov` (bursts on impact,

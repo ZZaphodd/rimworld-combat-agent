@@ -1,0 +1,11 @@
+   rand_029 loaded and paused: play when ready (the harness only watches) | tick 4109 | battles done playing
+ours: 8 standing 7 | enemies: Grenadier_Destructive 6c, Grenadier_Destructive 10c, Villager_Pig 15c, Grenadier_Destructive 17c, Town_Councilman_Pig 25c, Grenadier_Destructive 27c, Villager_Pig 35c
+other pawns: [('Cougar', 1, 138)]
+rect x121-161 z107-153
+fires 4 | frags/molotovs in play 2 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-073148-272.png
+[('Purple', 153, 128, '', 100), ('Rodaballo', 148, 122, '', 100), ('Uloma', 145, 114, '', 100), ('Chicken', 141, 146, 'D', 36), ('Mosquito', 148, 141, '', 68), ('Komodo', 148, 117, '', 100), ('Croulerem', 143, 144, '', 76), ('Sparrow', 141, 140, '', 100)]
+enemies: [('Poorg', 140, 145, '', 41, 'melee attacking Croulerem.'), ('Teat', 121, 126, '', 100, 'watching for targets.'), ('Pikpolup', 129, 111, '', 100, 'watching for targets.'), ('Keopp', 140, 129, '', 72, 'watching for targets.'), ('Sowbelly', 116, 114, '', 100, 'watching for targets.'), ('Stamper', 136, 128, '', 46, 'watching for targets.'), ('Porker', 130, 126, '', 59, 'moving.')]
+   rand_029 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

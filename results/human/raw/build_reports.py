@@ -119,7 +119,42 @@ def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None):
 
 
 if __name__ == "__main__":
-    which = sys.argv[1:] or ["rand_030", "rand_067", "rand_107", "rand_084", "rand_127"]
+    which = sys.argv[1:] or ["rand_030", "rand_067", "rand_107", "rand_084", "rand_127",
+                             "rand_065", "rand_029", "rand_039"]
+    if "rand_039" in which:
+        build("rand_039", [
+            (2401, "Elsie inside the small ruin, Powo at its corner, six behind it"),
+            (3501, "Takuya dead; Blake (frags) inside 13 cells, Pratt (incendiary) at 19"),
+            (3855, "the squad steps back 15 cells east; Elsie trails, Cynapse chases her"),
+            (4865, "Cynapse dead; a line at x 183; Blake follows into range again"),
+            (5261, "the raid's body stops at 22-45 cells; the forest burns behind it"),
+            (5737, "packed by the rock hill with Blake at 13 cells: the risky moment"),
+            (6243, "Blake dead; Elsie down and left north, 11 cells from two raiders"),
+        ], notes=[(147, 110, "small ruin"), (178, 97, "rock hill")], since="0744",
+            trace_file="results/human/traces/rand_039_human_loadout_20261005-074437.jsonl.gz")
+    if "rand_065" in which:                      # attempt 2 (attempt 1 abandoned at ~t3600)
+        build("rand_065", [
+            (1595, "the squad heads south for the big ruin"),
+            (3377, "eight in a walled room, Jess in the north-west part; raid 50-60 cells"),
+            (3984, "no line of sight, so the Empire keeps walking into the ruin"),
+            (4182, "the squad slips out south of the wall; Jess still inside"),
+            (4627, "raid split: three at the south-east corner 4-6 cells away (9 v 3 there)"),
+            (4936, "Eulogia dead; Hermine and Stomp down; Philip alone to the north"),
+            (5379, "melee everywhere: armoured, melee-capable troopers win the exchanges"),
+        ], notes=[(102, 58, "big ruin"), (125, 190, "cleared ground")], since="0703",
+            trace_file="results/human/traces/rand_065_human_loadout_20261005-070306.jsonl.gz")
+    if "rand_029" in which:                      # attempt 2 (attempt 1: a control mistake)
+        build("rand_029", [
+            (2102, "diagonal skirmish line, 4-5 cells apart, facing the raid's two groups"),
+            (2973, "three throwers come inside 13 cells, already wounded"),
+            (3304, "the north end steps back; the south three stay too close"),
+            (4109, "Moopp dead; Rabaizo dead and Chicken down on the exposed ends"),
+            (6298, "Mosquito dead; Uloma down near Pikpolup; Sparrow alone against two"),
+            (7675, "two carriers: Pikpolup with Uloma, Sowbelly with Sparrow; the chase"),
+            (10219, "Purple (greatbow) kills Pikpolup: Uloma dropped; Komodo on Sowbelly"),
+            (12157, "Sowbelly drops Sparrow and flees; raid gone, both captives back"),
+        ], notes=[(125, 190, "cleared ground")], since="0727",
+            trace_file="results/human/traces/rand_029_human_loadout_20261005-072437.jsonl.gz")
     if "rand_084" in which:                      # attempt 2 (attempt 1 abandoned at ~t3900)
         build("rand_084", [
             (3156, "squad in a notch of the west rock mass; raid comes in one line"),

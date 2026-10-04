@@ -390,6 +390,16 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
   reduced pain) at 500 pt downed all 10 tribals at 500 pt in the open, for the agent and for
   the human.* → Before reading a worst-list problem as a doctrine failure, check whether the
   pairing is fair (TODO Now 2).
+- **The loadout must fit the play, not skill alone.** *rand_065: Jess (shooting 16, melee 14)
+  got the 37-cell rifle; the fight that came was at 4–6 cells in a ruin, where a blade or the
+  shotgun would have used Jess better; squad down. rand_029 and rand_039, where the loadout
+  matched a ranged play, both won.* → (play, site, loadout) is one router decision.
+- **Human batch 1 plays (worst list #1–#8, results/human/README.md):** corner ambush, notch hold
+  + gap slip against throwers, narrow mouth + rotation against stronger melee, kite to stretch
+  the raid, stepped withdrawal against a raid that holds at range, cut line of sight to make
+  Empire troopers advance, kidnap response (chase the carrier, stop, shoot; carry the downed
+  along). The human beat the agent on all eight by badness; every loss had an isolated pawn or
+  an exposed downed pawn. → The play library (TODO roadmap 6) starts from these.
 - **A short-range squad should not advance into the open.** *rand_030: the agent's close met the
   raid's rifle and revolvers at t887 in the open; the human waited behind sight-blocking terrain
   until the raid came round the corner inside 13–16 cells.* → Router rule candidate: throwers +
