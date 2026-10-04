@@ -10,10 +10,11 @@ from .close import Close
 from .doctrine import Doctrine, Idle
 from .focus import Focus
 from .kite import Kite
+from .replay import Replay
 from .spread import Spread
 from .turtle import Turtle
 
-AGENTS = {a.name: a for a in (Idle, Amove, Focus, Turtle, Spread, Kite, Close)}
+AGENTS = {a.name: a for a in (Idle, Amove, Focus, Turtle, Spread, Kite, Close, Replay)}
 
 
 def make(name):

@@ -9,3 +9,4 @@ results/*.errors.jsonl
 *.rws
 # legacy console logs (moved out of the root, environment-specific)
 legacy/logs/
+results/human/hands_*.jpg

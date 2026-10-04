@@ -45,6 +45,32 @@ def weapon_name(label):
     return re.sub(r"\s*\(.*?\)\s*", "", label or "").replace("Biocoded ", "").strip() or "none"
 
 
+# Melee weapons have no ranged verb, so they are not in weapon_ranges.json: label word -> defName.
+MELEE_DEFS = {"knife": "MeleeWeapon_Knife", "ikwa": "MeleeWeapon_Ikwa", "club": "MeleeWeapon_Club",
+              "spear": "MeleeWeapon_Spear", "longsword": "MeleeWeapon_LongSword",
+              "gladius": "MeleeWeapon_Gladius", "mace": "MeleeWeapon_Mace",
+              "breach axe": "MeleeWeapon_BreachAxe", "axe": "MeleeWeapon_Axe",
+              "warhammer": "MeleeWeapon_Warhammer"}
+
+
+def weapon_def(label):
+    """'Steel ikwa (poor)' -> 'MeleeWeapon_Ikwa', 'Short bow (poor 67%)' -> 'Bow_Short'
+    (manage_gear takes a defName, the gear readout only labels); None if unknown."""
+    low = weapon_name(label).lower()
+    if low == "none":
+        return None
+    d = json.loads(RANGES.read_text())["weapons"] if RANGES.exists() else {}
+    exact = [k for k, w in d.items() if w["label"].lower() == low]
+    if exact:
+        return exact[0]
+    sub = max(((k, w["label"].lower()) for k, w in d.items() if w["label"].lower() in low),
+              key=lambda kw: len(kw[1]), default=None)
+    if sub:
+        return sub[0]
+    word = max((w for w in MELEE_DEFS if w in low), key=len, default=None)
+    return MELEE_DEFS.get(word)
+
+
 def weapon_class(label, kind=""):
     name = weapon_name(label)
     if name == "none":
