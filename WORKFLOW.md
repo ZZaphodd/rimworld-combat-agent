@@ -1,11 +1,28 @@
 # Workflow
 
-## Current stage: baseline-v1 frozen (tag on GitHub; see results/baseline/README.md)
+## Current stage: evaluation standard changed — baseline-v2 pending
 
-The rules under "After the baseline is frozen" now apply; the merge gate is `tools/gate.py`
-(rule below). The repo is public on GitHub (origin); main and tags are pushed after a
-passing gate, feature branches may stay local. Threshold fitting (preconditions, no_progress) on baseline data is analysis
-only and does not change agent behaviour; changing a threshold in code is a branch + gate.
+baseline-v1 (tag on GitHub, results/baseline/README.md) was measured on the **Peaceful** difficulty.
+The evaluation standard is now **Strive to Survive** (below), so baseline-v1 and every gate run
+against it are **exploration data**. Until baseline-v2 exists there is no valid reference:
+**no gate verdicts and no behaviour-changing merges**. Measurement-only work (KPIs, drills,
+analysis) may continue and merge on passing unit tests. The repo is public on GitHub (origin);
+main and tags are pushed after a passing gate (or, for measurement-only work, passing tests);
+feature branches may stay local.
+
+## Evaluation standard
+
+Every evaluation battle (baseline, gate, theme batches) uses the same environment. Changing any
+item means a new baseline.
+
+| Item | Value |
+|---|---|
+| Difficulty | **Strive to Survive** (threat scale 100%; the user's normal play). Raids are spawned with explicit points, so threat scale doesn't size them; what differs from Peaceful is enemy death-on-downed (×1.0 vs ×0.5) and colonist mood offset (0 vs +10, mental breaks). Strive allows storyteller threats: the harness must detect unexpected raids and invalidate the episode |
+| Scenarios | the 7 theme scenarios (frozen squad of 14, arena_forest, 1500 pt raids) |
+| Decision cycle | adaptive 30/120@40 |
+| Episode cap | 15000 ticks |
+| Game restart | every 100 episodes |
+| Runs per cell | 10 |
 
 ## Test layers (applies now)
 
@@ -54,6 +71,17 @@ read (results/threatmap_report.md).
   whose version changed. After a report-only bump the gate is an A/A run (same behaviour on
   both sides), which also checks the gate's own false-alarm rate (feat/signals-preconditions).
 
+- **Saves.** Scenario saves (.rws) are versioned too, gzipped in plain git (~13.5 MB -> ~1.4 MB each;
+  a restore script unpacks them into RimWorld's Saves folder; switch to LFS only if saves pile up):
+  raids are generated randomly, so scripts alone can't reproduce a scenario. Personal colony saves are used on branches only; adding
+  one to the baseline suite is a separate decision.
+- **Personal branches stay local (the repo is public, read-only for others).** Branches built on a
+  personal colony save (`exp/<save>-...`) are never pushed; personal saves are git-ignored. Only
+  what passed the merge gate reaches main, without the personal save. Commits use the GitHub
+  noreply email.
+- **Traceability.** Result rows record agent version, cycle policy, reflex version, difficulty and
+  the commit hash.
+
 ### Gate rule (`tools/gate.py`)
 
 ```
@@ -85,13 +113,3 @@ python3 tools/gate.py --simulate                           # false-alarm rate / 
   median-noise cell only → ~18%. **Limit:** at n = 10 a regression confined to one cell is
   caught only when it is large relative to that cell's noise; a change aimed at one theme
   should add runs for that theme on both sides.
-- **Saves.** Scenario saves (.rws) are versioned too, gzipped in plain git (~13.5 MB -> ~1.4 MB each;
-  a restore script unpacks them into RimWorld's Saves folder; switch to LFS only if saves pile up):
-  raids are generated randomly, so scripts alone can't reproduce a scenario. Personal colony saves are used on branches only; adding
-  one to the baseline suite is a separate decision.
-- **Personal branches stay local (the repo is public, read-only for others).** Branches built on a
-  personal colony save (`exp/<save>-...`) are never pushed; personal saves are git-ignored. Only
-  what passed the merge gate reaches main, without the personal save. Commits use the GitHub
-  noreply email.
-- **Traceability.** Result rows record agent version, cycle policy and reflex version, plus the
-  commit hash.

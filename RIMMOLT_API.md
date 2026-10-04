@@ -3,7 +3,8 @@
 RimMolt is the RimWorld mod that exposes the game as MCP tools. This file is the spec a
 client port is checked against. Evidence key: **[code]** = the old client relied on it and it
 worked over hundreds of episodes; **[log]** = seen in run logs; **[obs]** = observed during
-development; **UNVERIFIED** = assumed, never checked directly.
+development; **UNVERIFIED** = assumed, never checked directly. Checked against RimMolt's own
+tool list (117 tools) and live replies on 2026-10-04: argument names below match the schemas.
 
 ## 1. Transport
 
@@ -34,16 +35,17 @@ Coordinates are map cells `(x, z)`, with z pointing north. Pawn and thing ids ar
 
 | Tool | Arguments we pass | Returns (fields we read) | Quirks |
 |---|---|---|---|
-| `get_status` | – | `ticksGame`, `loaded` | Game time source for episodes. Throws NullReferenceException while a load is still settling [log] |
+| `get_status` | – | `ticksGame`, `loaded`, `paused`, `storyteller` (label, e.g. `Phoebe Chillax`), `difficulty` (label, e.g. `peaceful`) | Game time source for episodes. Throws NullReferenceException while a load is still settling [log]. **Bundle:** by default every reply also carries the full output of `list_colonists` and `get_alerts` under `bundled` (6.3 of 7 KB with 14 colonists); `bundle_set=""` clears it, and the bundle list is saved with the save game [obs 2026-10-04] |
 | `game_setup_status` | – | `stage` (`planet`, `starting_site`, ...), `programState` (`Playing` once a map runs) | Raises or times out while the world or map is generating: poll and swallow errors [code] |
-| `list_colonists` | – | `colonists[]`: `id, name, downed, mentalState, incapableOf` (string, e.g. contains `Violent`), `job` (text), `health` (%), `inCaravan` | No positions: get them from `list_things` |
-| `list_things` | `category` (`pawn`/`item`/`all`), `faction` (`player`/`hostile`), `defName`, `verbose=True`, `summary=True`, `confirm=True`, `limit` | `things[]`: `id, def, kind, label, x, z, downed, dead, targeting, category`; with `summary`: `groups[]` of `{def, count}` | **Output guard:** a large result comes back as a `largeOutput` notice with **no `things` key** unless `confirm=True`. 65 Fire things were enough to trip it (37 agent steps lost, threatmap_report §1.5), and census samples were lost to `KeyError 'things'` the same way [log]. Always pass `confirm=True`. `category="all"` on the forest map is flooded by plants: query projectile defs by name (hazards.md) |
-| `get_pawn` | `id`, optional `tab` | Default: `name, x, z, weapon` (label, e.g. `Heavy SMG (good)`, `Biocoded heavy SMG (normal)`), `health, downed, dead, job`; `error` if the pawn is gone. Dead or carried-off pawns have no `x` | Tabs used: `health` → `hediffs[]` of `{label, part, permanent}`; `log` → `entries[]` of `{tick, type, text, battle}` (`type` `combat`/`social`; `tick` is **TicksAbs**, not `ticksGame` [obs 2026-10-03]; short, and it vanishes with a dead pawn); `records` → `records[]` of `{record, value}` (we read `Kills`). Other tabs: UNVERIFIED |
+| `list_colonists` | – | `colonists[]`: `id, name, health` (%), `mood, downed, job` (text), `topSkills, mapIndex`; only when present: `mentalState, incapableOf` (string, e.g. contains `Violent`), `inCaravan, hint` | No positions: get them from `list_things` |
+| `list_things` | `category` (`pawn`/`item`/`all`), `faction` (`player`/`hostile`), `defName`, `verbose=True`, `summary=True`, `confirm=True`, `limit` (default 300); unused: anchor `nearId` or `nearX, nearZ` (+ `radius`) sorts nearest-first with `distance` | `things[]`: `id, label, def, kind, x, z, category, faction, hostile, rotation, downed, dead`, `drafted` (player pawns), `targeting` (live hostiles; shown only while the mod setting "Reveal hostile targeting" is on, the default); the compact form (no `verbose`) drops default-valued fields; with `summary`: `groups[]` of `{def, count}` | **Output guard:** a large result comes back as a `largeOutput` notice with **no `things` key** unless `confirm=True`. 65 Fire things were enough to trip it (37 agent steps lost, threatmap_report §1.5), and census samples were lost to `KeyError 'things'` the same way [log]. Always pass `confirm=True`. `category="all"` on the forest map is flooded by plants: query projectile defs by name (hazards.md) |
+| `get_pawn` | `id`, optional `tab` | Default: `name, x, z, weapon` (label, e.g. `Heavy SMG (good)`, `Biocoded heavy SMG (normal)`), `health, downed, dead, job`; `error` if the pawn is gone. Dead or carried-off pawns have no `x`. Also `mood, hostilityResponse`; `name=` works instead of `id` | Tabs used: `health` → `hediffs[]` of `{label, part, permanent}`; `log` → `entries[]` of `{tick, type, text, battle}` (`type` `combat`/`social`; `tick` is **TicksAbs**, not `ticksGame` [obs 2026-10-03]; short, and it vanishes with a dead pawn); `records` → `records[]` of `{record, value}` (we read `Kills`). Other tabs (`needs, gear, bio, social, training, all`; `detail=true` adds tooltip text): unused |
 | `get_area` | `minX, minZ, maxX, maxZ, render="ascii"` | `grid`: list of strings, **north row (max z) first**; also `legend` and `orientation` | One call is capped at about 55×55 cells, so tile in 50×50 [code]. Legend below. Other layers (`layer=roof/buildings/things...`) unused |
 | `get_info_card` | `id`, or `x, z`, or `def` (+ `stuff`), or `stat` | `stats[]` of `{category, stats[{label, value}]}` | `def` takes **ThingDefs only** (`Unknown ThingDef: Mercenary_Gunner` for a PawnKindDef) [obs 2026-10-03]. A pawn's card has no combat power; see EVAL_SPEC §6 for where points come from |
-| `inspect_thing` | `id` or `x, z` | `actions[]` with `toggle`, `active` for toggle gizmos | Used to read a drafted pawn's `Fire at will` state before toggling it (micro drill). Draft state: an undrafted pawn shows `Draft` (toggle, active false), a drafted one `Undraft` (active true) [obs 2026-10-03]; `list_colonists` and `get_pawn` have no drafted field |
+| `inspect_thing` | `id` or `x, z` | `actions[]` with `toggle`, `active` for toggle gizmos | Used to read a drafted pawn's `Fire at will` state before toggling it (micro drill). Draft state: an undrafted pawn shows `Draft` (toggle, active false), a drafted one `Undraft` (active true) [obs 2026-10-03]. The reply also has `drafted` directly, and so does `list_things` (cheaper: one call for the squad); `list_colonists` and `get_pawn` have none [obs 2026-10-04] |
 | `list_fires` | – | `fireCount`, `bounds`, `fires[{x, z, size}]` | Not used by rca yet (we query `Fire` things); probe only |
 | `get_world` | – | `factions[]`: `{def, relation}` | |
+| `list_wildlife` | – | `count, kinds[], animals[]` (id, kind, position; `mentalState` = manhunter; `revengeOnHarmPercent`) | Unused; the tool for the manhunter check (TODO). A loaded theme map had 0 wild animals [obs 2026-10-04] |
 | `list_windows` / `get_window_ui` / `window_action` | `index`, `option` | `windows[]`: `{type, index}`; `labels[]` | Planet page: `Page_CreateWorldParams`; the faction list is the labels between `"Factions"` and `"Add..."`. Intro letter: `Dialog_NodeTree`, close with `option="OK"` |
 | `set_hostility_response` | none (query) | `colonists[]`: `{response}` | Read-only use in trace.py |
 
@@ -76,7 +78,7 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 | `order_pawn` (list) | `id` plus a target: `targetId` or `x, z` | `options[]` of `{label, disabled}` | Float-menu labels, see below. **An undrafted pawn gets an empty option list** (no "Go here") [log] |
 | `order_pawn` (by index) | same target + `index` | `ok` | The index refers to the list just fetched for the same target |
 | `order_pawn` (direct) | `id, x, z, command="Go here"` / `id, targetId, command="Fire at"` | `ok` / `error` | No list round trip needed. A Go here onto an unwalkable cell fails, so retry the neighbours [code] |
-| `do_thing_action` | `id, label, targetId?` | `ok` | `label="Drop <name>"` on a pawn carrying a downed squadmate puts it down [obs 2026-10-03]. `label="Auto attack (AI)"` + `targetId`: RimMolt's own combat AI for that pawn. It picks its own cover cell and can't see our data (it walks pawns back into danger: threatmap_report). `label="Fire at will"` **toggles** a drafted pawn's fire-at-will (used to make the squad hold fire in measurements; the state is not read back, UNVERIFIED) |
+| `do_thing_action` | `id, label, targetId?` | `ok` | `label="Drop <name>"` on a pawn carrying a downed squadmate puts it down [obs 2026-10-03]. `label="Auto attack (AI)"` + `targetId`: RimMolt's own combat AI for that pawn. It picks its own cover cell and can't see our data (it walks pawns back into danger: threatmap_report). `label="Fire at will"` **toggles** a drafted pawn's fire-at-will (used to make the squad hold fire in measurements). The reply's `nowActive` is the state after the click; `inspect_thing` reads it before (micro drill, PROCEDURES §12) |
 | `say` | `text` | – | On-screen message panel (standalone agent only) |
 
 `order_pawn` option label formats seen [log]:
@@ -99,7 +101,7 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 
 | Tool | Arguments | Returns | Quirks |
 |---|---|---|---|
-| `wait_for_event` | `maxGameTicks, maxSeconds, pause="always", force=True` | `_notifications[]`, `cause`, `ticksWaited`, `_delta` | Advances game time and pauses again afterwards. **15-tick quanta**: a 6-tick request advanced 14–16 ticks (hazards.md), 300-tick requests advanced 300–316 [obs]. A letter or notable message, or `threatAppeared`/`threatsCleared`, **ends the wait early**, so read the clock from `get_status`. **`force`** (tool schema): bypasses the crisis cap; without it a wait that starts with hostiles on the map, fire in the home area or a dying colonist is capped at 2500 ticks. `_notifications` carry the game's messages and letters (`{kind, text, label}`); raid fled/satisfied messages are read from here. **`_delta`**: `newItems/removedItems`, `newBuildings/removedBuildings` (`[{def, label, count}]`, **no cells**), `pawnDamage`; keys absent when nothing changed. Verified 2026-10-03: a debug bomb on a ruin wall gave `removedBuildings: [{def: Wall, count: 2}]`; 31,500 ticks of forest fire (trees burning down to stumps, some destroyed) gave **no** `_delta` at all: plants are not reported |
+| `wait_for_event` | `maxGameTicks, maxSeconds, pause="always", force=True` | `_notifications[]`, `cause`, `ticksWaited`, `_delta` | Advances game time and pauses again afterwards. **15-tick quanta**: a 6-tick request advanced 14–16 ticks (hazards.md), 300-tick requests advanced 300–316 [obs]. A letter or notable message, or `threatAppeared`/`threatsCleared`, **ends the wait early**, so read the clock from `get_status`. **`force`** (tool schema): bypasses the crisis cap; without it a wait that starts with hostiles on the map, fire in the home area or a dying colonist is capped at 2500 ticks. `_notifications` carry the game's messages and letters (`{kind, text, label}`); raid fled/satisfied messages are read from here. Also returns `event, cause, ticksWaited, time` and `pausedAfter` (what really happened: a mod setting can override `pause`); `crisisCap` says why a wait was capped. **`_delta`**: `newItems/removedItems`, `newBuildings/removedBuildings` (`[{def, label, count}]`, **no cells**), `pawnDamage`; keys absent when nothing changed. Verified 2026-10-03: a debug bomb on a ruin wall gave `removedBuildings: [{def: Wall, count: 2}]`; 31,500 ticks of forest fire (trees burning down to stumps, some destroyed) gave **no** `_delta` at all: plants are not reported |
 | `set_speed` | `action="pause"` | – | Always pause before teleports and saves: teleport misses walking pawns [obs] |
 
 ### Game lifecycle
@@ -115,6 +117,7 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 | `select_starting_site` | `tile`, `confirm` | `surroundings`: `nearbyObjects`, `biomes[]` of `{biome}` | Without `confirm` it only previews |
 | `choose_ideoligion` | `mode="classic"` | | |
 | `edit_starting_pawn` | `action="rename", index, first, nick, last` | | |
+| `select_storyteller` | `storyteller, difficulty, reloadAnytime` (all required) | | **New-game page only.** No tool changes the difficulty of a loaded game; a save stores it as `<difficulty>Peaceful</difficulty>` in its storyteller block (conversion: PROCEDURES §1b). Refused to agents (§6) |
 | `start_game` | – | | |
 
 ## 3. Debug menu (`debug_menu`)
@@ -162,7 +165,11 @@ Entries used: `Execute raid with specifics...`, `Execute raid with faction...`, 
 `T: Recruit`, `T: Teleport`, `T: Destroy`, `Clear area (rect)`, `Clear All Fog`,
 `Destroy factionless animals`, `Destroy player animals`, `Destroy non-colonists` (about 1 s),
 settings `Never Force Normal Speed`. Probes only: `T: Attach Fire` (map tool, `cells` works),
-`Explosion... > Bomb|Flame|...` (map tools). `action="list"` with `search` finds entries.
+`Explosion... > Bomb|Flame|...` (map tools), `T: Damage Until Down` (GAME_FACTS §7). `action="list"` with
+`search` finds entries.
+
+Unused tools that may help later: `get_alerts`, `read_debug_log` (game log, e.g. to spot a
+NullReferenceException streak), `get_map` (coarse whole-map ascii), `screenshot`, `list_wildlife`.
 
 ## 4. Known failure modes
 

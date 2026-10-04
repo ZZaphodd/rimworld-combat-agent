@@ -10,7 +10,10 @@ new data directory is `data/` (derived game tables).
 only re-rolled. **Keep the .rws saves** (RimWorld Saves folder, ~13.5 MB each, ~1.4 MB gzipped;
 WORKFLOW.md). The census and theme samples are also one-off draws.
 
-## 1. Saves (in RimWorld's Saves folder, not in the project)
+## 1. Saves (`saves/*.rws.gz` in the repo; `restore_saves.sh` unpacks them into RimWorld's Saves folder)
+
+All 24 saves are on the **Peaceful** difficulty; the evaluation standard is Strive to Survive
+(WORKFLOW), so they are to be converted (PROCEDURES §1b, TODO Now 1).
 
 | Save | Built by | Content |
 |---|---|---|
@@ -104,6 +107,7 @@ smg, machine pistol, autopistol, revolver, pistol, chain shotgun, spiner) → me
 charge rifle, rifle, beam, blaster, gun, cannon) → melee (sword, knife, club, mace, spear, axe,
 hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike) → other. Weapon `none`
 → class by mech kind (GAME_FACTS.md §5). Weapon names are stripped of `(…)` and `Biocoded `.
+This is the same classifier rca uses everywhere (`rca/game/weapons.weapon_class`).
 
 ## 5. results/
 
@@ -127,8 +131,8 @@ hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike) → o
 | `prebaseline/signal_check.jsonl` | 4 | turtle and kite on theme_tribal_melee, 2 each, with no_progress rule 2 (kpis `longest_pause_ticks`, `longest_contested_ticks`, `pressure_ticks`) |
 | `prebaseline/options_check.jsonl` | 3 | one episode each: doctrine rescue=off, doctrine wounded_pullback=off (pirate_mixed), turtle wounded_pullback=off (pirate_melee); exercises the options, not an evaluation |
 | `prebaseline/restart_check.jsonl` | 3 | amove on frag_check: planned restart (`--restart-every 1`) before run 2, crash relaunch (game killed) before run 3. `prebaseline/restart.sh` + `.log` |
-| `baseline/core.jsonl` | 490 | **baseline-v1** (tag): amove v5, doctrine v4 + v5, turtle v8, spread v5, kite v5, close v3 × 7 themes × 10; adaptive + micro v4, max 15000 (results/baseline/README.md). `baseline/options.jsonl`: casualty options × 5 |
-| `gate/signals-preconditions.jsonl` | 420 | **gate run** of feat/signals-preconditions: amove v6, doctrine v6, turtle v9, spread v6, kite v6, close v4 × 7 themes × 10, baseline settings. Behaviour = baseline-v1 (report-only bump), adds `losing_trade` signals and `kpis.trade_curve` / `losing_trade_rule`, `pre_enemy_splash_heavy`, soft `pre_defensible_terrain`. `gate/run_signals_preconditions.sh` + `.log`; verdict `gate/signals-preconditions_gate.md` (`tools/gate.py`) |
+| `baseline/core.jsonl` | 490 | **baseline-v1** (tag; Peaceful, exploration data since the switch to Strive to Survive): amove v5, doctrine v4 + v5, turtle v8, spread v5, kite v5, close v3 × 7 themes × 10; adaptive + micro v4, max 15000 (results/baseline/README.md). `baseline/options.jsonl`: casualty options × 5 |
+| `gate/signals-preconditions.jsonl` | 420 | **gate run** of feat/signals-preconditions (Peaceful, exploration data): amove v6, doctrine v6, turtle v9, spread v6, kite v6, close v4 × 7 themes × 10, baseline settings. Behaviour = baseline-v1 (report-only bump), adds `losing_trade` signals and `kpis.trade_curve` / `losing_trade_rule`, `pre_enemy_splash_heavy`, soft `pre_defensible_terrain`. `gate/run_signals_preconditions.sh` + `.log`; verdict `gate/signals-preconditions_gate.md` (`tools/gate.py`) |
 | `rca_smoke.jsonl` | 2 | **rca** schema 2: amove v5, adaptive + micro v4, on theme_pirate_mixed and theme_frag_check (smoke test of the new harness) |
 | `drills/frag_drill*.jsonl` | – | **rca** micro frag drill: one `event` row per exploded frag (`session, dodge, frag, cell, landed_seen, gone_seen, in_blast, in_zone, escaped, stayed, lost_track, hit_pawns, hit_entries, hit_in_blast, moves, false_alarm_moves, fuse_left_at_move[], latency[]`) and one `session` row (`ticks, throwers, standing_end, returns, names_unique, kpis, moves[]`). `_trial` = first shake-out run |
 | `rescored/<file>.jsonl` | = source | per-row verdicts recomputed by `tools/rescore.py`: `grade_stored, grade_v1, grade, score_v1, enemy_lost_points, our_lost_points, ler, ler_basis` (+ identity/config). Raw files untouched |
@@ -142,8 +146,10 @@ Early console logs (`eval_*.log`, `combat_live*.log`) moved from the root to `le
 standalone doctrine agent on a real colony (with beds).
 
 **Legacy reading rules:** a missing `agent_version` means pre-versioning. A missing `cycle` means
-`fixed:<step_ticks>`. Reflex on without `reflex_version` means v1. Agent `hold` = turtle. Always
-recompute `grade/win/score`.
+`fixed:<step_ticks>`. Reflex on without `reflex_version` means v1. Agent `hold` = turtle. A
+missing `difficulty` means Peaceful (every row so far). An option key missing from `options`
+means the behaviour before the option existed (`PRE_OPTION_BEHAVIOUR`: on). Always recompute
+`grade/win/score`.
 
 ## 6. Census summary (`tools/census.py --report`; faction route, arena_open)
 
@@ -225,7 +231,8 @@ Readings:
 `win` here is the legacy definition for 236/241 rows.
 
 **Gate feat/signals-preconditions vs baseline-v1 (2026-10-04; `tools/gate.py`, rule in
-WORKFLOW.md; full table results/gate/signals-preconditions_gate.md).** A/A run (report-only
+WORKFLOW.md; full table results/gate/signals-preconditions_gate.md; Peaceful, so exploration
+data).** A/A run (report-only
 version bump, behaviour unchanged): **PASS** — 42 cells: 40 ok, 2 watch (amove × mechs: 0.0 →
 0.5 lost/battle, trade share 1.00 → 0.83; doctrine × grenadier: trade share 0.43 → 0.27), 0
 regress; agents pooled (d lost/battle, + = worse): amove +0.04, close −0.01, doctrine −0.06,

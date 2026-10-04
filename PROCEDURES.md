@@ -23,8 +23,9 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 
 ## 1. Arena creation (`arena_forest`, `arena_open`)
 
-1. **By hand:** new colony → scenario **The Rich Explorer** → storyteller Phoebe, Peaceful → open
-   "Create world".
+1. **By hand:** new colony → scenario **The Rich Explorer** → storyteller Phoebe, **Strive to
+   Survive** (the evaluation standard, WORKFLOW) → open "Create world". The existing arenas were
+   built on Peaceful; they are converted by §1b, not rebuilt.
 2. **By hand:** on the planet page, make sure the factions **Pirate gang, Rough outlander union,
    Fierce tribe, Savage tribe, Mechanoid hive** are listed. Biotech swaps the first four for
    xenotype variants, and the `Add...` float menu vanishes unless the real mouse is over it.
@@ -46,6 +47,20 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
    `T: Destroy`.
 10. `save_game("arena_forest")`.
 11. `Clear area (rect)` over (50,50)–(200,200), then `save_game("arena_open")`.
+
+## 1b. Difficulty conversion (planned, TODO Now 1; UNVERIFIED)
+
+No RimMolt tool changes the difficulty of a loaded game: `select_storyteller` works only on the
+new-game page (RIMMOLT_API §2). Candidate route, keeping every raid exactly as saved:
+
+1. A save stores only the difficulty's name, in the storyteller block:
+   `<storyteller><def>Phoebe</def><difficulty>Peaceful</difficulty>…` (theme_base.rws; no
+   per-value block for a preset difficulty, so the values come from the DifficultyDef).
+2. Back up the save, replace that one line with `<difficulty>Rough</difficulty>` (Rough = Strive
+   to Survive), load it, and check `get_status.difficulty` reads `strive to survive`.
+3. Same edit for every `arena_*`, `scenario_*` and `theme_base` save, then refresh the gzipped
+   copies in `saves/` (`restore_saves.sh` unpacks them). The block also holds a Peaceful-only
+   `studyEfficiencyFactor` 2 (Anomaly research, no effect on battles).
 
 ## 2. `arena_fort` layout (derived from `arena_open`, god mode)
 
@@ -158,17 +173,20 @@ Theme predicates and acceptance rates: DATA.md §3.
 
 ## 9. Episode start (`session.start_episode`, `harness.run_episode`)
 
-1. Load + ready wait (§3). This leaves dev mode on.
+1. Load + ready wait (§3). This leaves dev mode on. Planned (TODO Now 1): read
+   `get_status.difficulty`, refuse to run unless it is the evaluation standard, and store it
+   in the row.
 2. `debug_menu run tab=settings path="Never Force Normal Speed" value=True`, then `close`.
 3. `dev_mode(devMode=False, godMode=False)`. The agent runs with no dev mode and a sandboxed client.
 4. Read the squad state, create the tracker, `observe(0)`, create the episode's `Terrain`,
    `agent.reset`, then the loop (EVAL_SPEC.md).
 5. `--scenarios all` excludes check-tier scenarios (frag_check): name them explicitly.
 6. Tactical options: `--option vs_throwers=accept_dodge|stand_off|close_in` (doctrine, turtle,
-   spread), `--option rescue=on|off` (doctrine), `--option wounded_pullback=on|off` (doctrine,
-   turtle); natural values first; ignored by doctrines that don't offer them. Rows store the
-   effective `options`; `--resume` counts only rows with the same options (a key missing from an
-   older row counts as its natural value). Example (phase-2 smoke): `results/phase2/smoke.sh`;
+   spread), `--option rescue=off|on` (doctrine; off from doctrine v5), `--option
+   wounded_pullback=on|off` (doctrine, turtle); natural values first; ignored by doctrines that
+   don't offer them. Rows store the effective `options`; `--resume` counts only rows with the
+   same options (a key missing from an older row counts as what agents did before the option
+   existed, `PRE_OPTION_BEHAVIOUR`: on). Example (phase-2 smoke): `results/phase2/smoke.sh`;
    one run per casualty option: `results/prebaseline/checks.sh`.
 
 ## 10. Crash watchdog and planned restarts (legacy/results/threatmap_check*.sh; rca: `session.Watchdog`)
@@ -179,7 +197,7 @@ instance); no process → `open steam://rungameid/294100`, poll every 5 s for up
 20 s grace; more than 2 crash relaunches in a batch → stop. The process is found with
 `pgrep -f "RimWorld by Ludeon Studios"` (the macOS process name).
 
-**Planned restart cadence** (TODO roadmap 2): `run_batch` counts episode attempts (each is a
+**Planned restart cadence** (WORKFLOW evaluation standard: every 100 episodes): `run_batch` counts episode attempts (each is a
 load); after `--restart-every` attempts (default **100**; 0 = never) the next `ensure()` quits the
 game (`pkill -f "RimWorld by Ludeon Studios"`, SIGKILL after 60 s if it is still there), waits
 until the process is gone, relaunches it as above and resets the counter. Planned restarts don't
@@ -219,10 +237,10 @@ touch <batch>.done
 ## 11. Resume rules
 
 - `--resume` counts the existing rows per (scenario, canonical agent). A row counts only if
-  **agent_version equals the current class's version for this reflex version**, **and**
-  (cycle policy, reflex on/off, reflex version) equal the current run's settings, **and** its
-  effective `options` equal the requested ones (missing = `{}`). Rows from other
-  versions or settings are kept in the file but ignored.
+  **agent_version equals the current class's version**, **and** (cycle policy, reflex on/off,
+  reflex version) equal the current run's settings, **and** its effective `options` equal the
+  requested ones (no field = `{}`; a missing key = its pre-option behaviour, §9). Planned: the
+  same `difficulty`. Rows from other versions or settings are kept in the file but ignored.
 - It then runs runs [done, runs) for each cell.
 - An episode that fails twice is written to `<results>.errors.jsonl` and skipped; `--resume`
   ignores that file, so the next pass retries it.

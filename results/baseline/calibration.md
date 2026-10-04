@@ -1,5 +1,8 @@
 # Calibration on baseline-v1 (analysis only — no agent behaviour changed)
 
+> Fitted on Peaceful data (baseline-v1 is exploration data since the switch to Strive to
+> Survive); every threshold here is refit on baseline-v2 (TODO Now 1).
+
 Data: results/baseline/core.jsonl, current agent versions (doctrine v5), 420 battles.
 "bad" = grade defeat or pyrrhic (189/420).
 

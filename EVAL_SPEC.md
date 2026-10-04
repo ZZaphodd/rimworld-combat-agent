@@ -23,6 +23,9 @@ read through `rca/eval/results.read_rows`, which maps every alias to its canonic
 - Episode limit `--max-ticks` (rca CLI default 15000, as every legacy batch used; legacy CLI
   default was 20000). 2500 ticks = 1 in-game hour.
 - Episode start: see PROCEDURES.md §9 (load, Never Force Normal Speed, dev mode off).
+- **Environment:** every evaluation battle uses the evaluation standard (WORKFLOW.md: difficulty
+  Strive to Survive, the theme scenarios, this cycle and cap). baseline-v1 and the calibration
+  fits in §2 ran on Peaceful: exploration data, refit on baseline-v2.
 - An agent exception costs it that step (`agent_errors += 1`), never the episode. A harness or game
   exception retries the episode once (after the watchdog has checked the game, PROCEDURES §10),
   then logs it to `<results>.errors.jsonl`.
@@ -40,7 +43,7 @@ class Doctrine:                         # rca/tactical/doctrine.py
     preconditions: dict       # {check name: params}, rca/tactical/preconditions.py
     phases_spec: dict         # setup / hold / commit / reset, prose
     option_choices: dict      # {option: (natural value, alternatives...)}, e.g. vs_throwers
-    no_progress_ticks: int    # 3000 contested ticks raise the no_progress signal (fitted on baseline-v1)
+    no_progress_ticks: int    # 3000 contested ticks raise the no_progress signal (baseline-v1 fit; refit on v2)
     # set by the harness before reset():
     reflex: bool              # micro layer may act (False: observe and count only)
     rx_version: int           # micro version, stored as reflex_version (rca micro = 4)
@@ -84,14 +87,14 @@ class Doctrine:                         # rca/tactical/doctrine.py
   3. *Contested time* = the sum of the lengths of pressed steps (the step that ended at the
      observation) since the last progress. Progress resets it to 0 and re-arms the signal.
   4. The signal fires once per stretch when contested time ≥ `no_progress_ticks` = **3000
-     (fitted on baseline-v1 and kept; see the KPIs paragraph below)**. The raw pause (time since the last progress)
+     (fitted on baseline-v1 and kept; refit on baseline-v2; see the KPIs paragraph below)**. The raw pause (time since the last progress)
      is still measured, but only as a KPI.
   Rule 1 (rows before 6c041e6, `no_progress_rule` absent) fired on the raw pause alone: in the
   phase-2 smoke it fired in 2 of 20 battles (turtle and kite on tribal_melee), both won; in the
   pre-baseline re-check (results/prebaseline/signal_check.jsonl) the same two cells had pauses of
   3164 and 3122 ticks (rule 1 would fire) with 1500 and 418 contested ticks (rule 2: no signal).
   KPIs: `longest_pause_ticks`, `longest_contested_ticks`, `pressure_ticks {cost, threat, either,
-  total}` (ticks after first contact). **Fitted on baseline-v1** (results/baseline/
+  total}` (ticks after first contact). **Fitted on baseline-v1** (Peaceful; refit on baseline-v2; results/baseline/
   calibration.md): at 3000, 82% of fires are in bad battles (defeat/pyrrhic), median lead ~1,800
   ticks, but only 12% of bad battles are caught. Kept at 3000. Known limits: no LOS (a raider behind a wall counts as a
   threat); a carried pawn stays in `list_things` (GAME_FACTS §7) but whether `list_colonists`
@@ -108,7 +111,7 @@ class Doctrine:                         # rca/tactical/doctrine.py
      edge walk-offs 0);
   3. window: cumulative since first contact; fires **once** when pawns gone ≥ **2** and enemy
      points < **1.0** × our points (running LER < 1).
-  Fitted offline on baseline-v1 (calibration.md, `tools/fit_signals.py`): 87–94% of fires in bad
+  Fitted offline on baseline-v1 (Peaceful; refit on baseline-v2; calibration.md, `tools/fit_signals.py`): 87–94% of fires in bad
   battles, 50–56% of bad battles caught (no_progress: 12%), median lead ~2,800–3,100 ticks; the
   enemy curve is a proxy there (baseline rows store only final points). Rows carry
   `kpis.trade_curve` `[[tick, pawns gone, enemy points], ...]` (each change, ≤ 60) and
@@ -120,7 +123,7 @@ class Doctrine:                         # rca/tactical/doctrine.py
   and store them as `kpis.pre_<name>`. A check with `"soft": True` in its params is recorded
   (result `{ok, value, need, soft: true}`) but never makes the doctrine unattainable
   (`preconditions.all_ok` ignores it). Status after the baseline-v1 calibration
-  (results/baseline/calibration.md): only enemy-based checks vary in baseline-v1 (one squad,
+  (results/baseline/calibration.md; Peaceful, refit on baseline-v2): only enemy-based checks vary in baseline-v1 (one squad,
   one arena), so squad- and terrain-based thresholds stay UNVERIFIED until the holdout. Checks:
   `ranged_squad`, `defensible_terrain` (wall/rock + ½ tree
   share within 14 of the anchor), `enemy_approaches` (melee/short/thrown share), `enemy_melee_heavy`,
@@ -142,14 +145,17 @@ class Doctrine:                         # rca/tactical/doctrine.py
   15.5 cells from it and holds 300 ticks), `close_in` (a shooter within 25 Auto-attacks the
   thrower for 300 ticks). CLI `--option vs_throwers=stand_off`; rows store `options` (the
   effective values; `{}` for doctrines without options). Not evaluated yet.
-- **Casualty options** (to be compared in the baseline; both take shooters out of the fight):
-  `rescue=on|off` (doctrine agent: Carry downed squadmates to a fallback cell) and
-  `wounded_pullback=on|off` (doctrine agent and turtle: pawns below 45% health walk to the
-  fallback cell). Natural value **on** (the phase-2 behaviour, so no version bump). `off` = no
-  rescuer is sent / the wounded pawn stays where the doctrine puts it. CLI
-  `--option rescue=off`. Resume and reports: a key missing from an older row reads as its
-  natural value; reports label non-natural variants, e.g. `doctrine@v4[rescue=off]`, so they
-  never pool with the natural cell. Checked once each in game (results/prebaseline/
+- **Casualty options** (both take shooters out of the fight): `rescue=on|off` (doctrine agent:
+  Carry downed squadmates to a fallback cell) and `wounded_pullback=on|off` (doctrine agent and
+  turtle: pawns below 45% health walk to the fallback cell). `off` = no rescuer is sent / the
+  wounded pawn stays where the doctrine puts it. CLI `--option rescue=on`. Compared in
+  baseline-v1 (results/baseline/README.md): the doctrine agent lost 1.43 colonists per battle
+  with rescue on (v4) vs 1.20 with it off (v5), so its natural value is **off** from doctrine
+  v5; wounded_pullback=off showed no effect, so it stays **on** (natural). Resume and reports:
+  a key missing from an older row reads as what agents did before the option existed
+  (`PRE_OPTION_BEHAVIOUR` in `rca/eval/results.py`: both on), not as today's natural value;
+  reports label non-natural variants, e.g. `doctrine@v5[rescue=on]`, so they never pool with
+  the natural cell. Checked once each in game (results/prebaseline/
   options_check.jsonl): rescue=off → 0 rescues started (4 pull-backs); wounded_pullback=off →
   0 pull-backs (doctrine, turtle).
 - `viscosity` (the micro threshold) is `rca.micro.VISCOSITY[name]` (amove/close 0.15, spread /
@@ -167,7 +173,7 @@ class Doctrine:                         # rca/tactical/doctrine.py
 - Casualties (`rca/tactical/squad.py`): wounded fighters are **never undrafted** (LESSONS bug 6);
   doctrine and turtle pull pawns below 45% health back to a fallback cell 10 behind the squad,
   drafted (option `wounded_pullback`). The doctrine agent carries downed squadmates to that cell
-  when `Carry` is enabled (option `rescue`) and never reserves a pawn for a disabled option
+  when `Carry` is enabled (option `rescue`, off by default from doctrine v5) and never reserves a pawn for a disabled option
   (bug 5). The game undrafts a pawn that goes down; when it stands up again every doctrine
   re-drafts it (`kpis.redrafts`; LESSONS §4 "Turtle Go here failures").
 - Legacy agents had a `versions` map per reflex version (LESSONS bug 12: doctrine, kite and close
@@ -192,6 +198,11 @@ if squad_kidnapped > 0: outcome = "raid_left_with_captives"
 
 `enemies_cleared` also covers a raid that walked off the map. Use the **grade**, not the outcome
 or `win`.
+
+**Planned (TODO Now 1): outcome `invalid`.** Strive to Survive lets the storyteller send its own
+threats during an episode (Peaceful blocked them). The harness will detect hostiles that are not
+part of the scenario's raid, end the episode as `invalid`, and re-run it; invalid rows never count
+in a cell. Manhunter animals (more likely on Strive, GAME_FACTS §6c) are a later item (TODO).
 
 ## 4. Fate classification (battle_tracker)
 
@@ -365,7 +376,9 @@ step's map was ≥ HIGH and higher than the old cell's.
 
 **Planned (TODO):** `melee_locked_time_share` for our shooters and carries, and
 `enemy_melee_locked_time_share`. Melee-lock rules are UNVERIFIED (GAME_FACTS.md §8). Also
-first-volley share, overkill shots.
+first-volley share, overkill shots. Friendly fire (아군 오사): friendly hits (our shot on our
+pawn, from the battle log) and lane intrusion (time a pawn stands in an ally's line of fire
+beyond the safe radius) — branch `feat/friendly-fire-kpi`, report-only (TODO Now 2).
 
 ## 9. Result row schema
 
@@ -374,7 +387,7 @@ Schema 2 (rca rows carry `"schema": 2`; legacy rows have no `schema`):
 | Group | Fields |
 |---|---|
 | identity | `schema, scenario, agent` (canonical), `agent_version, commit` (git HEAD, `+dirty` if rca/ had uncommitted changes), `time` (unix) |
-| config | `cycle, step_ticks` (= calm cycle), `reflex, reflex_version` (rca micro = 4; legacy reflexes 1–3), `max_ticks` |
+| config | `cycle, step_ticks` (= calm cycle), `reflex, reflex_version` (rca micro = 4; legacy reflexes 1–3), `max_ticks`; planned `difficulty` (DifficultyDef name, `Rough` = Strive to Survive; rows without it ran on Peaceful; TODO Now 1) |
 | run | `outcome, ticks, steps, fast_steps, agent_errors, agent_think_s, wall_s` |
 | squad | `squad_size, deaths, squad_dead, squad_kidnapped, downed_at_end, hp_lost_pct, new_permanent_injuries` |
 | enemy | `enemies_seen, enemies_active_end, enemies_downed_end, enemies_killed, enemies_killed_inferred, enemies_escaped, enemy_neutralized_frac, kills_record`; rca: `enemy_seen_points, enemy_lost_points, enemy_escaped_points, enemy_kinds` |
@@ -382,7 +395,7 @@ Schema 2 (rca rows carry `"schema": 2`; legacy rows have no `schema`):
 | messages | `raid_fled_tick, raid_satisfied_tick, game_messages[{tick, text}]` (≤ 60, text ≤ 160 chars), `building_deltas` (counts of steps whose `_delta` had new/removed buildings) |
 | engagement | `engaged_steps, engaged_ours, engaged_theirs, engagement_ratio` — biased (fire at will is not counted; kept for continuity only); use `fire_share, enemy_fire_share, surface_ours, surface_theirs` (+ `fire_window_ticks, fire_names_ambiguous, log_entries`) |
 | progress / signal (rca, phase 2) | `progress_rate, progress_points, first_contact_tick, longest_no_progress_ticks, signals, unattainable_tick, unattainable_reason` |
-| options (rca, phase 2) | `options` (effective tactical options, e.g. `{"vs_throwers": "accept_dodge", "rescue": "on", "wounded_pullback": "on"}`; `{}` if none; rows before 1403042 lack `rescue`/`wounded_pullback` = on) |
+| options (rca, phase 2) | `options` (effective tactical options, e.g. `{"vs_throwers": "accept_dodge", "rescue": "off", "wounded_pullback": "on"}`; `{}` if none; rows before 1403042 lack `rescue`/`wounded_pullback` and read as on, `PRE_OPTION_BEHAVIOUR`) |
 | debug | `debug_kidnap_targets, debug_kidnap_ambiguous, debug_dead_names, debug_squad, debug_leaving_jobs` |
 | behaviour | `kpis` (dict, §8; rca adds `terrain_*` cache counters) or `{"error": ...}` |
 
@@ -392,7 +405,8 @@ canonical names. Legacy rows store `score` (old formula) instead of `score_v1`; 
 
 **Resume key** (PROCEDURES.md §11): (scenario, canonical agent) counts only rows with the current
 `agent_version`, the same (cycle, reflex, reflex_version) and the same effective `options`
-(rows without the field count as `{}`; an option key missing from a row counts as its natural
-value). Both the stored and the requested
+(rows without the field count as `{}`; an option key missing from a row counts as its
+pre-option behaviour, `PRE_OPTION_BEHAVIOUR`, else its natural value; planned: the same
+`difficulty`). Both the stored and the requested
 agent name are canonicalised, so `--agents hold` and `--agents turtle` count the same rows
 (LESSONS bug 8, fixed).

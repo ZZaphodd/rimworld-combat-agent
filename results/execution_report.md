@@ -1,5 +1,9 @@
 # Doctrine execution report (axis B: does each doctrine do what it claims?)
 
+> **Historical snapshot:** legacy code (legacy/), arenas on the Peaceful difficulty, old
+> names (aggressive / b1 = amove, focus = the doctrine agent, hold = turtle). Its lessons are
+> in LESSONS.md; current reference data is results/baseline/ (baseline-v2 pending, WORKFLOW).
+
 All runs: frozen OutlanderRough squad of 14 in `arena_forest`, 1500-pt theme raids,
 harness step **120 ticks**, max 15000 ticks. Grading and scoring are unchanged (`eval.grade/score`).
 

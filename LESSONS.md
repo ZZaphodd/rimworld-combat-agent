@@ -1,7 +1,7 @@
 # Lessons (micro / tactical / strategic)
 
 Knowledge that so far lived only in parameters, docstrings and reports. Each entry has three
-parts: **lesson** → *evidence* → **implication for the rewrite**. Layer terms are from
+parts: **lesson** → *evidence* → **implication**. Layer terms are from
 GLOSSARY.md and WORKFLOW.md. Report names refer to results/*.md. Numbers are n=5 per cell unless
 stated otherwise; with a per-episode SD of 1.5–2.4 deaths, most differences in losses are not
 significant.
@@ -40,6 +40,14 @@ significant.
   The gate uses a strict per-cell interval (98%, above the margin) plus a pooled per-agent check
   (WORKFLOW "Gate rule"); single-cell regressions need more runs to be seen. Never read one cell
   of n = 10 as a regression or an improvement.
+- **Pin down the measurement environment before measuring.** *baseline-v1 and the first gate
+  ran on the arenas' Peaceful difficulty (a downed raider dies outright half as often, colonist
+  mood +10, no storyteller threats); the standard became Strive to Survive, so 910 battles turned
+  into exploration data (WORKFLOW, GAME_FACTS §6c).* → The evaluation standard is a fixed table
+  (WORKFLOW); changing any item means a new baseline; rows record the difficulty.
+- **`$(grep -c x f || echo 0)` is "0\n0" when nothing matches** (grep -c prints 0 and exits 1).
+  *The gate script's crash-count stop never worked (no crash happened).* → `n=$(grep -c ...);
+  n=${n:-0}`.
 - **Moving pawns don't shoot.** *Kite v1 retreat_share 0.48–0.60; the doctrine agent v1 had 12–13
   of 14 pawns "moving" at contact (execution_report).* → Count the shooting time a move costs in
   every layer (v3 move_cost does this).
@@ -286,10 +294,11 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
 - **The doctrine agent lost both pirate_mixed battles** (one with 0 dead but 11 downed and a
   satisfied raid, one with 5 kidnapped) while rescuing 13–19 times per battle; on mechs it won
   both. Carrying works mechanically, but a carrier walks ~1 cell per 30 ticks (one probe) and stops shooting.
-  → Rescue is not shown to pay; keep it doctrine-agent-only. It is now an option
-  (`rescue=on|off`, and `wounded_pullback=on|off` for doctrine and turtle; natural on); the
-  baseline compares them. One episode each ran as designed (rescue=off: 0 rescues; pull-back off:
-  0 pull-backs), n=1, no verdict.
+  → Rescue is not shown to pay; keep it doctrine-agent-only. It became an option
+  (`rescue=on|off`, and `wounded_pullback=on|off` for doctrine and turtle). *baseline-v1
+  (n = 70 per side): the doctrine agent lost 1.43 colonists per battle with rescue on (v4) vs
+  1.20 with it off (v5); turtle's pull-back off showed no effect (results/baseline/
+  options_report.md).* → rescue is off by default from doctrine v5; wounded_pullback stays on.
 - **close loses to snipers in this squad** (5 lost per battle, all 14 closed by tick ~1200): the
   losses come during the approach, as in v2. → Bounding overwatch (TODO) before reading close's
   sniper cell as a doctrine verdict.
@@ -319,9 +328,6 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
   and the new enemy_splash_heavy (spread: grenadier 0.77 vs ≤ 0.13) separate the themes; close's
   enemy_outranges points the wrong way for the current close.* → defensible_terrain is soft;
   squad/terrain thresholds wait for the holdout.
-- **`$(grep -c x f || echo 0)` is "0\n0" when nothing matches** (grep -c prints 0 and exits 1).
-  *The gate script's crash-count stop never worked (no crash happened).* → `n=$(grep -c ...);
-  n=${n:-0}`.
 - **vs_throwers options run** (results/phase2/options.jsonl, 1 episode each, not an evaluation):
   stand_off made 15 thrower moves (spread, grenadier) and close_in 24 thrower attacks; on
   frag_check turtle's on_slot_share fell from ~1.0 to 0.64 (stand_off) and 0.14 (close_in), as
@@ -331,19 +337,23 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
 
 ## 3. Strategic (selection / router)
 
-- **Provisional routing** (theme matrix v1, fixed 120, n=5, current grade; DATA.md §7):
+- **Provisional routing** (baseline-v1: current doctrine versions, n = 10 per cell, adaptive
+  cycle + micro v4; **Peaceful**, so provisional until baseline-v2; results/baseline/core_report.md):
 
-| Raid | Route to | Avoid | Evidence |
+| Raid (theme) | Route to (lost/battle) | Avoid | Note |
 |---|---|---|---|
-| explosive-heavy | spread | kite, doctrine agent | P(spread > amove) 0.76 |
-| melee-heavy (pirate or tribal) | turtle, close 2nd | kite v1 (fixed in v3, not re-run in the matrix) | P 1.00 |
-| mechs | close / kite / doctrine agent (≈ tie) | turtle v3 (stall fixed in v4) | |
-| mixed pirates | doctrine agent ≈ amove | spread | nothing clearly beats amove |
-| snipers | doctrine agent, amove | turtle (8% neutralized), spread | P = 0.00 for 4 doctrines |
-| tribal archers | turtle, kite | spread | |
+| explosive-heavy (grenadier) | spread (1.8, LER 1.43) | turtle (5.2) | every other doctrine loses most battles |
+| melee pirates | kite (0.0), turtle (0.2) | spread (0.8) | |
+| mixed pirates | doctrine agent v5 (0.8, LER 2.5) | spread, kite (≥ 2.1) | the only theme where the doctrine agent leads |
+| snipers | amove (1.2, LER 2.3) | spread (3.5) | the squad has no long guns |
+| tribal archers | amove (0.2), kite (0.3) | spread (1.7) | |
+| tribal melee | turtle (0.1), kite (0.3) | spread (1.4) | |
+| mechs | any (all 60 battles of the 6 doctrines decisive; amove, turtle 0 lost) | spread (0.8) | |
 
-  Rows are stale for kite, the doctrine agent and turtle. The squad has no long guns, so the
-  sniper and archer themes partly measure the squad, not the doctrine.
+  Oracle routing (best doctrine per theme) 0.64 lost/battle vs 1.06 for the best single doctrine
+  (kite). Changed since the old theme matrix (n = 5, kite v1, doctrine v1, turtle v3): kite went
+  from worst to best against melee, and turtle is no longer the archer pick. The squad has no long
+  guns, so the sniper and archer themes partly measure the squad, not the doctrine.
 - **Equal points ≠ equal headcount** (tribal 1500 pt ≈ 26 pawns vs our 14). → Use a force ratio by
   points *and* by count as router features (METT-T).
 - **"win" overstates outcomes vs pirates.** *Fled raiders counted as cleared: grenadier/hold had 0

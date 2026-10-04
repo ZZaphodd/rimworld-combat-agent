@@ -12,8 +12,8 @@ RimWorld enemy AI, not other players (see TODO.md, scope principle).
 | **micro** | Battle drills and reflexes: dodging a skillshot, stepping out of fire, not re-entering a fled cell. Judged per event, not per battle | RTS |
 | **tactical** | Doctrine execution: positioning (concave, choke, standoff), fire control, focus, commit/reset timing. Judged per battle with the doctrine fixed | military |
 | **strategic / decision** | Choosing doctrine and assets for this raid, terrain and squad, and when to transition (the router). Judged over a scenario distribution | RTS/military |
-| **precondition** | What a doctrine needs to be able to win (turtle: defensible terrain — choke/concave — and an enemy that will come to it). Checked by the router before choosing | ours |
-| **win condition unattainable** | The signal a doctrine raises (no progress for 3000 ticks, or a precondition broken at runtime); the strategic layer decides what to do with it | ours |
+| **precondition** | What a doctrine needs to be able to win, e.g. turtle: an enemy that comes to it (hard) — defensible terrain is soft since the baseline calibration. Checked by the router before choosing | ours |
+| **win condition unattainable** | Signals a doctrine raises: `no_progress` (3000 contested ticks without enemy points lost — a stalemate), `losing_trade` (≥ 2 pawns gone and running LER < 1 — losing fast), or a precondition broken at runtime. Report-only for now; the strategic layer will decide what to do | ours |
 | **stalemate / progress rate** | Progress rate = enemy combat points lost per 1,000 ticks. A **pause** is any stretch with no progress; a **stalemate** is a stretch with no progress while we pay a cost (damage, downed, lost pawns) or are under threat (a raider in its weapon range of us): only that *contested* time raises "win condition unattainable" (EVAL_SPEC §2). Tactical KPI and the trigger for commit/reset | ours |
 | **layer discipline** | Change and test one layer at a time with the others held fixed; a micro win must not be judged by tactical outcomes | ours |
 | **doctrine** | A posture with a **win condition**, plus **commit** and **reset** criteria | ours + MOBA |
@@ -48,7 +48,7 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **skillshot** | A telegraphed attack that can be dodged after it is seen (frag: ~90-tick fuse) | MOBA |
 | **undodgeable** | Too fast once fired (rockets); counter only by prevention | ours |
 | **telegraph** | The warning signal before an attack lands | RTS/MOBA |
-| **zone / zoning** | Area denied by threat; our **zone map** is the threat heatmap | MOBA |
+| **zone / zoning** | Area denied by threat. Our **zone map** is a shared perception layer (answers queries, decides nothing): enemy zones, hazard zones, own-fire danger zones | MOBA |
 | **CC** | Crowd control: stun, EMP, smoke, berserk | MOBA |
 | **clump / deathball** | Massed squad: strong against single-target, weak against splash | RTS |
 
@@ -85,6 +85,11 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **face-check** | Walking into unseen fire unprepared (KPI candidate) | MOBA |
 | **hard / soft counter** | Strong / mild doctrine–theme advantage (router table) | RTS/MOBA |
 | **decisive / repelled / pyrrhic / defeat** | Outcome grades (game raid messages decide) | ours |
+| **trade share** | E / (E + O): the bounded twin of the trade ratio (stays finite when we lose nobody); used by the gate | ours |
+| **evaluation standard** | The fixed environment every evaluation battle uses (difficulty Strive to Survive, theme scenarios, cycle, caps); changing it means a new baseline (WORKFLOW) | ours |
+| **baseline-v1 / baseline-v2** | Frozen reference results: v1 on Peaceful (exploration data), v2 on Strive to Survive (pending) | ours |
+| **gate** | The no-regression check a branch passes before merging (`tools/gate.py`, WORKFLOW) | ours |
+| **A/A run** | A gate run where both sides behave the same (report-only change): checks the gate's own false-alarm rate | ours |
 
 ## Military doctrine
 
@@ -101,7 +106,8 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **enfilade / defilade** | Fire along the long axis of an enemy line / a position out of enemy direct fire (a zone-map cell category) | military |
 | **cover vs concealment** | Cover protects (walls, sandbags); concealment only hides (smoke lowers accuracy) | military |
 | **dead space** | Area a position cannot cover with fire (planner blind spots) | military |
-| **friendly fire (아군 오사) / fratricide** | Our own shot or splash hitting our own pawn (shooting into a melee, a short-range shooter inside a long gun's lane, our grenades/incendiary). Korean term kept on purpose: precise nuance, cheap as a single word | military/ours |
+| **friendly fire (아군 오사) / fratricide** | Our own shot or splash hitting our own pawn: a missed shot landing near its target where our pawn stands (shooting into a melee, a short-range shooter advancing next to raiders), our grenades/incendiary. Korean term kept on purpose: precise nuance, cheap as a single word. Where the danger zone lies is being measured (TODO Now 2) | military/ours |
+| **safe radius** | Pawns within ~5 cells of a shooter are not hit by its missed shots (wiki; our lane drill: 0 hits at 1–6 cells). Explosives ignore it | ours |
 | **danger close** | Using splash near our own pawns | military |
 | **battle drill** | Trained immediate response: the reflex layer ("react to contact", "break contact" = disengage) | military |
 | **bounding overwatch / fire and maneuver** | One element moves while the other covers it; how `close` should advance | military |

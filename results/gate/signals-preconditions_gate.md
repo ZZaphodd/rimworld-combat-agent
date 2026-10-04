@@ -1,4 +1,4 @@
-# Gate: results/gate/signals-preconditions.jsonl vs /Users/kkmbaek/code/rimworld-combat-agent/results/baseline/core.jsonl [adaptive:30/120@40+rx4]
+# Gate: results/gate/signals-preconditions.jsonl vs results/baseline/core.jsonl [adaptive:30/120@40+rx4]
 
 Rule (WORKFLOW.md): a cell regresses if the 98% bootstrap interval of its worsening lies above the margin (lost 0.5/battle, trade share 0.1); an agent regresses if the 95% interval of its pooled worsening lies above 0.25 x margin. PASS = no regression, no incomplete cell.
 

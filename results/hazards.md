@@ -1,5 +1,8 @@
 # Telegraphed area attacks: what we can see and when
 
+> The measuring scripts now live in legacy/ (`measure_hazards.py`, `measure_grenade.py`,
+> `measure_blast.py`). These are game mechanics, unaffected by the difficulty, so the values stand.
+
 Measured with `measure_hazards.py` (spawned carriers ~12–20 cells from the theme squad,
 2-tick sampling) plus static stats from `get_info_card`. Raw rows: `results/hazards.jsonl`.
 

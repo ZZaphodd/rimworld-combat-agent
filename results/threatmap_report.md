@@ -1,5 +1,9 @@
 # Threat heatmap + reflex v3
 
+> **Historical snapshot:** legacy code (legacy/), arenas on the Peaceful difficulty, old
+> names (aggressive / b1 = amove, focus = the doctrine agent, hold = turtle). Its lessons are
+> in LESSONS.md; current reference data is results/baseline/ (baseline-v2 pending, WORKFLOW).
+
 Goal: a pawn that flees a dangerous cell must not walk (or be walked by RimMolt's Auto attack)
 straight back into it. The trigger was reflex v2 on theme_pirate_grenadier: molotov-fire step-outs
 and rocket-spacing nudges broke Auto attack, Auto attack re-chose the same cover, and losses rose

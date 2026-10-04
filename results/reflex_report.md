@@ -1,5 +1,9 @@
 # Adaptive decision cycle + shared reflex layer
 
+> **Historical snapshot:** legacy code (legacy/), arenas on the Peaceful difficulty, old
+> names (aggressive / b1 = amove, focus = the doctrine agent, hold = turtle). Its lessons are
+> in LESSONS.md; current reference data is results/baseline/ (baseline-v2 pending, WORKFLOW).
+
 Goal: a frag grenade we could have stepped away from must not decide a fight.
 Raw rows: `results/reflex_check.jsonl` (165 episodes, 0 harness errors). Batches:
 `reflex_check.sh` (before vs after, reflex v1), `reflex_ablation.sh` (cycle without reflex),

@@ -4,13 +4,13 @@ Research on combat agents for RimWorld, driven through the [RimMolt](https://ste
 mod's MCP server. The agents fight RimWorld's built-in raid AI (not other players) and are
 evaluated on generated test scenarios.
 
-Status: **pre-baseline** — the docs are the source of truth. The code is being rebuilt on a
-three-layer architecture (micro / tactical / strategic) in `rca/`; phase 1 (foundation: game
-layer, terrain, harness, trade-ratio scoring, verified reflexes, amove) and phase 2 (doctrine,
-turtle, spread, kite, close with preconditions, phases and the "win condition unattainable"
-signal; progress-rate and battle-log KPIs) are in; the baseline checkpoint is next. The exploration code is kept in `legacy/` for reference. See
-[DOCS.md](DOCS.md) for the document index and code layout, [TODO.md](TODO.md) for the roadmap and
-[WORKFLOW.md](WORKFLOW.md) for how changes are tested.
+Status: the code is rebuilt on a three-layer architecture (micro / tactical / strategic) in `rca/`,
+with six doctrines (amove, doctrine, turtle, spread, kite, close). **baseline-v1** was measured on
+the Peaceful difficulty; the evaluation standard is now **Strive to Survive** (WORKFLOW.md), so
+baseline-v1 is exploration data and **baseline-v2** is next. The docs are the source of truth; the
+exploration code is kept in `legacy/` for reference. See [DOCS.md](DOCS.md) for the document index
+and code layout, [TODO.md](TODO.md) for the roadmap and [WORKFLOW.md](WORKFLOW.md) for how changes
+are tested.
 
 ## Usage
 
@@ -24,6 +24,7 @@ python3 tools/run_eval.py --agents turtle --scenarios theme_frag_check --runs 1 
     --option vs_throwers=stand_off --results results/my_batch.jsonl   # tactical option
 python3 tools/run_drill.py --sessions 3 --events 12   # micro frag drill, dodge off vs on
 python3 tools/rescore.py                               # rescore every results file
+python3 tools/gate.py results/gate/<branch>.jsonl     # merge gate: branch vs baseline
 ```
 
 ## Requirements

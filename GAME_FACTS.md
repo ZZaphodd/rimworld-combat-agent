@@ -28,7 +28,7 @@ its rules are things to learn and exploit. Section 8 collects them and is the se
   earliest raid day, so mechs come only through "Execute raid with faction...". That route lets
   the game choose strategy and arrival [code].
 - **Generation failures:** 42 of 167 attempts (25%) at 6000 pt produced nothing (census_recollect.log).
-  The theme build at 1500 pt failed 1 of 2 tries. TODO speaks of ~25–30%. Failures are silent (see
+  The theme build at 1500 pt failed 1 of 2 tries. Failures are silent (see
   RIMMOLT_API.md §3 rule 9).
 - **Low points fail more.** The theme builder walks a ladder of 1500 → 2000 → 2500 → 3000 → 4000 pt.
   1500 pt worked on the 2nd try. The exact threshold is UNVERIFIED.
@@ -135,11 +135,12 @@ leaves `Fire`), `Bullet_DoomsdayRocket`, `Bullet_Rocket`, `Proj_GrenadeEMP`, `Pr
 `Proj_GrenadeSmoke`, `Bullet_IncendiaryLauncher`, `Bullet_EMPLauncher`, `Bullet_SmokeLauncher`.
 Blasts show up as short-lived `Explosion` things.
 
-**Melee keyword list** (is_melee, weapon label substring): `sword, horn, hammer, mace, spear, knife,
-axe, club, gladius, ikwa, fist, claw`. The census classifier uses a different, longer list
-(adds `blade, scythe, lance, pike, bite`) and puts it last after explosive, long, support, bow,
-thrown, short and medium (DATA.md §4). Both lists are UNVERIFIED against the actual weapon set; the
-rewrite should use one classifier.
+**Weapon classes** (`rca/game/weapons.weapon_class`, weapon label substring, first match in the
+order explosive, long, support, bow, thrown, short, medium, melee; mechs by kind, below). rca has
+this one classifier; `is_melee` = class melee (the legacy split into a short is_melee list and a
+longer census list, DATA.md §4, is gone). Melee words: `sword, knife, club, mace, spear, axe,
+hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike`. The word lists are
+UNVERIFIED against the full weapon set (`data/weapon_ranges.json`).
 
 **Mech kill priority** (doctrine agent, higher first; unknown kinds 2; rocket carriers 6):
 
@@ -157,6 +158,15 @@ The doctrine agent's melee pawns only go for Lancer/Pikeman/Scyther unless somet
 **Mech weapon class** (no weapon label, so classed by kind): Lancer medium, Pikeman long, Scyther
 melee, Centurion/CentipedeBlaster/CentipedeGunner/Warqueen support, CentipedeBurner/Termite/
 Scorcher/Diabolus explosive, WarUrchin/Militor short, Tesseron/Legionary medium.
+
+## 5b. Friendly fire (아군 오사)
+
+| Fact | Value | Evidence |
+|---|---|---|
+| Safe radius | A shot does not hit an ally within ~5 cells of the shooter | wiki; lane drill (branch `feat/friendly-fire-kpi`, WIP): 0 hits with the ally 1–6 cells from the shooter |
+| Explosives | Splash ignores the safe radius (grenades, incendiary bolts, rockets) | wiki; not measured in game |
+| Chance | Not a difficulty factor: absent from Difficulties.xml, so every preset uses the same value (40% per the difficulty documentation; only a Custom difficulty changes it) | XML read 2026-10-04; value not measured |
+| Where the danger lies | A missed shot lands around its target, so an ally standing near the target (in melee, or a short-range shooter that walked up to the raiders) is the likely victim rather than one in the middle of the lane | hypothesis; near-target drill pending (TODO Now 2) |
 
 ## 6. Hazards
 
@@ -196,10 +206,28 @@ See results/hazards.md (reaction windows) and results/reflex_report.md. Addition
 | Raid points vs kind points | theme raids spawned at 1500 pt sum to 1260–1485 points of kinds (pirate_mixed 1455, tribal_archers 1485); theme_mechs 1000 (4 Pikeman, 3 Scyther, 1 Termite_Breach) | manifests × table |
 | Mean points per raider | tribal 54–59, pirates 104–115, frag_check grenadiers 70, mechs 125–248 by scenario | `scoring.manifest_mean_points` |
 
+## 6c. Difficulty
+
+The evaluation standard is **Strive to Survive** (DifficultyDef `Rough`, WORKFLOW); the current
+saves are still Peaceful (conversion: TODO Now 1). Values from
+`Data/Core/Defs/Misc/DifficultyDefs/Difficulties.xml` (game 1.6.4871) that can touch a battle;
+"default" = not set in the XML, the C# field default applies:
+
+| Setting | Peaceful | Strive to Survive | Effect on our battles |
+|---|---|---|---|
+| `threatScale` | 0.10 | 1 | sizes storyteller threats only; our raids are spawned with explicit points |
+| `allowBigThreats`, `allowIntroThreats` | false | default (true) | the storyteller can send its own threats during an episode → outcome `invalid` (EVAL_SPEC §3, planned) |
+| `enemyDeathOnDownedChanceFactor` | 0.5 | 1 | a raider that goes down dies outright twice as often: more `killed`, fewer `downed` |
+| `colonistMoodOffset` | +10 | 0 | lower mood: mental breaks more likely in long battles |
+| `predatorsHuntHumanlikes` | false | default (true) | wild predators may hunt our pawns |
+| `manhunterChanceOnDamageFactor` | 0.25 | default (1) | an animal hit by a stray shot turns manhunter 4× as often. Arena creation destroys wild animals (PROCEDURES §1) and a loaded theme map had 0 (`list_wildlife`, 2026-10-04); whether animals wander in during an episode: UNVERIFIED |
+| friendly fire chance | – | – | not in the XML: the same on every preset (§5b) |
+
 ## 7. Arena facts
 
 - Scenario: **The Rich Explorer** (one colonist arrives by drop pod with a kit: charge rifle,
-  meds, ...), storyteller Phoebe/Peaceful. The kit must be cleared from the landing area or squads
+  meds, ...), storyteller Phoebe, difficulty Peaceful in the current saves (to become Strive to Survive, §6c).
+  The kit must be cleared from the landing area or squads
   pick it up [code].
 - **Ruins hold weapons**, even persona weapons. Remove every `Gun_*`, `MeleeWeapon_*`, `Weapon_*`
   item before saving [code].
