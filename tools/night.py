@@ -70,7 +70,7 @@ def cmd_new(a):
     from rca.game import session
     from rca.game.debug import Debug
     if not s.get("factions"):
-        session.load(rm, "arena_forest")
+        session.load(rm, problem.ARENAS[0])
         s = state()
         s["factions"] = problem.raid_factions(Debug(rm, log))
         save_state(s)

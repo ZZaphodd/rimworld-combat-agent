@@ -19,7 +19,9 @@ from .scenario import make_squad, pawn_row
 from .theme import classify
 
 OUT = ROOT / "scenarios_rand"
-ARENAS = ("arena_forest", "arena_open")
+# Copies of the evaluation arenas with every human faction made hostile (the Empire and the
+# civil outlanders start neutral), so the evaluation arenas stay as they are.
+ARENAS = ("arena_forest_night", "arena_open_night")
 PLACE = (125, 125)
 # Raid factions that are not a human or mech fighting force (or are Anomaly/ancient set pieces).
 NOT_RAIDERS = {"PlayerColony", "Entities", "HoraxCult", "Ancients", "AncientsHostile", "Insect",
@@ -59,12 +61,12 @@ def spawn(d, faction, points, tries=3):
     return []
 
 
-def make(rm, idx, rng, factions, points=500, log=print):
+def make(rm, idx, rng, factions, points=500, log=print, arenas=ARENAS):
     """Build problem `idx`; factions = (humans, mechs) from raid_factions().
     Returns the manifest, or None if no squad or no enemy could be spawned."""
     humans, mechs = factions
     d = Debug(rm, log)
-    arena = rng.choice(ARENAS)
+    arena = rng.choice(arenas)
     session.load(rm, arena)
     observers = [c["id"] for c in rm.call("list_colonists")["colonists"]]
     squad_faction, raid = None, []
