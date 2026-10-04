@@ -74,3 +74,11 @@ def shot(x0, z0, w=40, h=30, out="cp.jpg", caption=""):
     o = f"{ROOT}/results/human/hands_{out}"
     frames.annotate(r["path"], (x0, x0 + w, z0, z0 + h), o, ps, caption=caption, gamma=1.3)
     print(o)
+
+
+def melee(name, enemy):
+    """Melee attack <enemy> from the float menu (the verb gizmo would use a gun)."""
+    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}[enemy]
+    opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
+    m = next((o for o in opts if o["label"].lower().startswith("melee attack") and not o["disabled"]), None)
+    return bool(m) and bool(rm.call("order_pawn", id=ids()[name], targetId=e, index=m["index"]).get("executed"))
