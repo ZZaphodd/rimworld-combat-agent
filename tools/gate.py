@@ -257,7 +257,7 @@ def parse_versions(s):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("branch", nargs="?")
-    ap.add_argument("--baseline", default=str(ROOT / "results/baseline/core.jsonl"))
+    ap.add_argument("--baseline", default=str(ROOT / "results/baseline_v2/core.jsonl"))
     ap.add_argument("--agents")
     ap.add_argument("--base-version", help="agent=version,... (default: highest)")
     ap.add_argument("--branch-version", help="agent=version,... (default: highest)")

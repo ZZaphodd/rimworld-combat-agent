@@ -1,14 +1,11 @@
 # Workflow
 
-## Current stage: evaluation standard changed — baseline-v2 pending
+## Current stage: baseline-v2 is the reference (2026-10-05)
 
-baseline-v1 (tag on GitHub, results/baseline/README.md) was measured on the **Peaceful** difficulty.
-The evaluation standard is now **Strive to Survive** (below), so baseline-v1 and every gate run
-against it are **exploration data**. Until baseline-v2 exists there is no valid reference:
-**no gate verdicts and no behaviour-changing merges**. Measurement-only work (KPIs, drills,
-analysis) may continue and merge on passing unit tests. The repo is public on GitHub (origin);
-main and tags are pushed after a passing gate (or, for measurement-only work, passing tests);
-feature branches may stay local.
+baseline-v2 (tag, results/baseline_v2/README.md) on the evaluation standard below is the
+reference for every gate verdict; baseline-v1 (Peaceful, 1500 pt) is exploration data. The repo
+is public on GitHub (origin); main and tags are pushed after a passing gate (or, for
+measurement-only work, passing tests); feature branches may stay local.
 
 ## Evaluation standard
 
@@ -85,7 +82,7 @@ read (results/threatmap_report.md).
 ### Gate rule (`tools/gate.py`)
 
 ```
-python3 tools/gate.py results/gate/<branch>.jsonl          # vs results/baseline/core.jsonl
+python3 tools/gate.py results/gate/<branch>.jsonl          # vs results/baseline_v2/core.jsonl
 python3 tools/gate.py --simulate                           # false-alarm rate / power
 ```
 
