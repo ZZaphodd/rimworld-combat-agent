@@ -143,9 +143,10 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
 - [x] From the baseline calibration (results/baseline/calibration.md), branch
       feat/signals-preconditions: second signal `losing_trade` (≥ 2 pawns gone and running LER
       < 1.0; report-only); turtle defensible_terrain → soft; spread `enemy_splash_heavy` ≥ 0.45.
-- [ ] Re-fit losing_trade exactly on rows with `kpis.trade_curve` (`tools/fit_signals.py
-      results/gate/signals-preconditions.jsonl`): the baseline fit used a proxy enemy curve.
-      Consider counting pawns *downed* at the end too (defeats by downed pawns are missed).
+- [x] Re-fit losing_trade exactly on the gate rows (`kpis.trade_curve`): 2 pawns / LER < 1.0
+      holds (85% bad among fires, 56% of bad caught; calibration.md).
+- [ ] losing_trade misses defeats by pawns *downed* (not dead): consider a downed-weighted
+      variant (report-only, fit on trade_curve + downed counts — needs downed in the curve).
 - [ ] close's enemy_outranges is inverted for the current close: revisit after bounding
       overwatch (fire control item 3). Docstring note only for now.
 - [ ] Holdout (2nd squad composition + 2nd arena, e.g. arena_fort) to fit squad/terrain-based

@@ -80,3 +80,21 @@ tribal melee 0. Spread beat amove only on grenadier (P(LER) 0.88; ≤ 0.37 elsew
 core_report.md). Threshold **0.45**, the middle of the gap 0.13–0.77. One grenadier raid only:
 the fit separates the themes, it does not say where between 0.13 and 0.77 spread starts to pay.
 Caveat: the class counts a smoke launcher as explosive (1 of the 10 grenadier raiders).
+
+### Exact check on the gate rows (results/gate/signals-preconditions.jsonl, 420 battles, 178 bad)
+
+The gate rows carry `kpis.trade_curve`, so the rule is replayed exactly
+(`python3 tools/fit_signals.py results/gate/signals-preconditions.jsonl`):
+
+| min pawns gone | LER < | fires | share bad among fires | share of bad caught | fires in good | median lead |
+|---|---|---|---|---|---|---|
+| 1 | 1.0 | 174 | 0.75 | 0.74 | 43 | 3795 |
+| 2 | 0.75 | 109 | 0.85 | 0.52 | 16 | 3128 |
+| **2** | **1.0** | **117** | **0.85** | **0.56** | **17** | **3132** |
+| 2 | 1.5 | 124 | 0.85 | 0.59 | 19 | 3150 |
+| 3 | 1.0 | 72 | 0.93 | 0.38 | 5 | 2818 |
+
+The proxy fit holds: the chosen rule fires in 117 battles, 85% of them bad, and catches 56% of
+bad battles (no_progress on the same rows: 11; either signal: 106 of 178). In-game signal ticks
+match the replay. Kept at 2 pawns, LER < 1.0. Precondition values in game equal the manifest
+values (enemy_splash_heavy 0.769 on grenadier only; defensible_terrain 0.02, soft).
