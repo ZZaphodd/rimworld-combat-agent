@@ -44,6 +44,20 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 
 "Lost (actual)": the rows count a kidnapped pawn twice (TODO Now 2); the reports correct it.
 
+## Replays: can the plan be copied without the human? (2026-10-05)
+
+| problem | who | how | result | lost | badness |
+|---|---|---|---|---|---|
+| rand_127 | `replay` v1 (Python, `tools/run_replay.py`) | the human's loadout + positions over time | squad down, 6 kidnapped | 6 | 190 |
+| rand_127 | `replay` v2 | + hit the wall the human broke | same: the wall never fell | 6 | 190 |
+| rand_127 | **Claude, playing directly** (`tools/hands.py`, player `claude`) | same plan, decided turn by turn: breach with 6 pawns, the two strongest at the mouth, open the urn cell (3 v 1), rotate the front below 45% | **repelled** | **0** (1 downed) | **10.8** (human 26.0) |
+
+Positions alone lost; the plan won once the hands-on parts were done: breaking the wall
+with many pawns (one swing per order), standing *beside* the mouth instead of in it, a
+third cell touching the mouth, and rotation. Coding each intention as an agent is slow
+(user, 2026-10-05), so the next replays are played directly; the Python replay rows stay in
+`replay.jsonl` as the "plan only" control. Caveat: Claude knew the plan and the raid's timing.
+
 ## What the human games say so far (hypotheses for the gate)
 
 1. **Kidnapping decides Strive battles.** Every defeat above ended with captives. Keep the downed
