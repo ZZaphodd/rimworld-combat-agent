@@ -138,6 +138,10 @@ Measured or read from the XML (more reliable):
 | Low-shield pack | deploys at once where the wearer stands (does not follow), radius 4.9, lasts 1800 ticks; stops incoming ground-level fire crossing the edge, explosives burst at the edge (the blast still reaches 1.9 inside); shots from inside go out; melee walks in; mortars pass | [wiki: Low-shield pack](https://rimworldwiki.com/wiki/Low-shield_pack) |
 | Neanderthal (xenotype) | strong melee damage, robust (~×1.33 effective health), reduced pain (hard to down), 96% move speed, slow learning | [wiki: Neanderthal](https://rimworldwiki.com/wiki/Neanderthal); rand_127 |
 | Man in black | when every colonist is down, the storyteller sends a `StrangerInBlack` colonist (rand_065: "Howard" at the map edge); the harness destroys him (EVAL_SPEC §3) | rand_065, user |
+| Breaking a wall | marble wall at 91%: two drafted melee pawns (ikwas) adjacent + four bows/pila shooting it, one order each every 90 ticks: down in 11 rounds (~1000 ticks). One ikwa swing took ~3% | rand_127, Claude's replay |
+| Urn cell | a granite urn's cell can be stood on (a pawn walked onto (212,85) in rand_127); breaking it is slow (82% to 2.9% in ~10 rounds and it still stood) | rand_127 |
+| Set on fire while drafted | the pawn ends up undrafted and "wandering"; it must be drafted again before it takes orders | rand_039, Claude |
+| Raiders out of line of sight | Empire troopers in the open stop at their own range (19–27 cells) and shoot; with no line of sight they keep walking in (rand_065). A knife or grenadier raider follows a retreating squad ahead of the raid's gunners (rand_039) | human and Claude plays |
 | Weapon swap by order | `manage_gear` drop (instant, also while paused) + equip (a walk-over job, runs when unpaused; drafting cancels it): 8 swaps in ~140 ticks with pawns 2 cells apart | rand_084, rand_127 |
 
 Projectile defs: `Proj_GrenadeFrag` (rests, then blows), `Proj_GrenadeMolotov` (bursts on impact,

@@ -53,6 +53,11 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 | rand_127 | **Claude, playing directly** (`tools/hands.py`, player `claude`) | same plan, decided turn by turn: breach with 6 pawns, the two strongest at the mouth, open the urn cell (3 v 1), rotate the front below 45% | **repelled** | **0** (1 downed) | **10.8** (human 26.0) |
 | rand_030 | Claude, directly | same loadout and hill; the raid split round both sides of the hill this time; smoke, Mushinto first, molotov + frags on the southern group, Butters tied up the grenadier late | repelled | 1 (7 permanent injuries) | 38.8 (human 21.1) |
 | rand_084 | Claude, directly | same loadout, notch, gap slip at 11 cells, knives on Rusty, both grenadiers tied up in melee; Carlson flanked round the west end and killed Alo | repelled | 1 | 20.5 (human 1.8) |
+| rand_039 | Claude, directly | same loadout, ruin, three bounds east killing the followers; carried the downed; chased three kidnappers and got all three back | pyrrhic | 0 (5 downed) | 48.4 (human 8.0) |
+
+Turn logs of Claude's plays (orders by tick, what followed): `raw/<id>/claude_turns.md`; the
+operating facts they rely on are in RIMMOLT_API.md (verb gizmo on buildings, melee/carry
+orders, manage_gear) and GAME_FACTS.md.
 
 Claude's direct replays: better than the human where the raid moved as in the human's game
 (127), worse where it did not (030: the raid split round the hill; 084: the sniper flanked
