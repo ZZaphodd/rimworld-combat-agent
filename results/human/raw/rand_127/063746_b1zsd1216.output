@@ -1,0 +1,10 @@
+   rand_127 loaded and paused: play when ready (the harness only watches) | tick 4825 | battles done finished:    squad_down grade=defeat LER=0.113 lost=2 downed=8 | enemy seen 7 killed 1+0? escaped 0 | ticks=4412 wall=338.2s -> /U
+ours: 8 standing 0 | enemies: Tribal_Penitent 0c, Tribal_Penitent 1c, Tribal_Berserker 1c, Tribal_Penitent 1c, Tribal_Penitent 2c, Tribal_Archer 19c
+rect x112-152 z100-130
+fires 0 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-063746-460.png
+[('Barracuda', 133, 114, 'D'), ('Crica', 129, 112, 'D'), ('Mabe', 131, 113, 'D'), ('Raraguatas', 136, 118, 'D'), ('Trout', 135, 117, 'D'), ('Grasshoppe', 134, 114, 'D'), ('Tol', 134, 115, 'D'), ('Ñala', 132, 114, 'D')]
+enemies: [('Dragonfly', 133, 115, '', 'kidnapping Trout.'), ('Lándoa', 142, 131, '', 'wandering.'), ('Gabobrei', 134, 115, '', 'kidnapping Tol.'), ('Weasel', 133, 113, '', 'kidnapping Grasshopper.'), ('Bargodue', 132, 114, '', 'kidnapping Ñala.'), ('Iguabust', 133, 114, '', 'kidnapping Barracuda.')]
+   squad_down grade=defeat LER=0.113 lost=2 downed=8 | enemy seen 7 killed 1+0? escaped 0 | ticks=4412 wall=338.2s -> ~/code/rimworld-combat-agent/results/human/play.jsonl
+
+[exited with code 0]

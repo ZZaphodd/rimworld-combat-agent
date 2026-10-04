@@ -1,0 +1,10 @@
+   rand_084 loaded and paused: play when ready (the harness only watches) | tick 6227 | battles done playing
+ours: 9 standing 9 | enemies: Pirate(down) 23c
+rect x12-52 z121-155
+fires 3 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-062039-442.png
+[('Alo', 28, 131, ''), ('Choppy', 31, 129, ''), ('Pikliag', 24, 132, ''), ('Guker', 32, 130, ''), ('Keap', 31, 128, ''), ('Slab', 26, 131, ''), ('Weluobb', 25, 131, ''), ('Wien', 22, 138, ''), ('Polobb', 25, 130, '')]
+enemies: [('Yuna', 42, 148, 'D', 'downed.')]
+   rand_084 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

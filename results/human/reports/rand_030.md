@@ -72,8 +72,8 @@ nobody could be kidnapped.
 ## Why it worked
 
 1. **Loadout.** The two best shooters got the guns; the frags went to the two who cannot shoot.
-   Frag grenades land somewhere inside a fixed radius, so (assumption, not yet measured)
-   shooting skill matters little for them.
+   A frag lands within a forced miss radius (1.9; near the target within ~1 cell), so skill
+   matters little for it, while it multiplies a gun's hit chance ([wiki](https://rimworldwiki.com/wiki/Frag_grenades)).
 2. **Wait where the raid must come close.** A short-range squad (half the weapons reach 13–16)
    hid behind a sight-blocking hill. The raid only saw us after it had walked into our range.
    The agent advanced into the open and met the raid's rifle and revolvers at their range.

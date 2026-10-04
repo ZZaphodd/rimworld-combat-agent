@@ -30,14 +30,21 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
    * `vs_throwers=stand_off` lost both night tests with few kills (rand_029 bows, rand_069
      rifles): moving pawns don't shoot and isolated pawns get kidnapped — check the option
      before evaluating it (the human round 2 was cover positioning, not this rule);
-   * the briefing should show weapon quality (awful / poor squads lost hard, rand_094: 0 kills);
+   * the briefing should show weapon quality (awful / poor squads lost hard, rand_094: 0 kills)
+     and shooting/melee skills; then check whether the worst list is mostly low-skill squads
+     (rand_084: best shooter 4, rand_107: all but one 0–4), i.e. the problem rather than the
+     doctrine — recruited raiders are often poor colonists; also xenotypes: raid points seem
+     to underprice Neanderthals (rand_127), so price the pairing before blaming a doctrine;
+   * trace polls are wall-clock (1 s), so at speed 3 a line is ~180 ticks apart: poll faster
+     (0.5 s) or by game ticks;
    * kite stalls against melee mechs that loiter (rand_004 timeout);
    * human demonstrations on the losing types (bows vs guns, all-thrower squads, guns vs Empire,
      savage squads) from results/night/worst.md; played so far: #1–#3 with battle reports
      (results/human/README.md: kidnap response, no isolated pawns, ambush for short-range
      squads, loadout swap);
-   * measure whether shooting skill changes frag/molotov accuracy (drill: same thrower spot,
-     shooting 0 vs 10, landing spread around the target) before the loadout step relies on it.
+   * optional: measure how much shooting skill widens frag landing at long throws (drill: same
+     spot, shooting 0 vs 10, 5 and 12 cells). The wiki (GAME_FACTS) already says the forced miss
+     mostly ignores accuracy, so the loadout rule does not wait for it.
 3. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted
    (WIP commit; usage limit).** Measurement-only, so it may merge on passing tests before v2.
    Status:
@@ -81,7 +88,16 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
 4. Enemy-AI hypothesis traces + start ENEMY_AI.md (LOS-break relocation, directional cover, fire
    avoidance, berserk vs cover, melee lock details, raiders out of our range).
 5. Per-enemy threat profile (chronic / acute).
-6. Rule-based router v1 (input structure METT-T) → regret on fresh instances.
+6. Rule-based router v1 (input structure METT-T) → regret on fresh instances. **Design
+   principle (user, 2026-10-05): a tactical repertoire first, battlefield selection on top.**
+   A play = a named tactic with terrain requirements and an execution script; the strategic
+   layer searches the map (near the raid's likely path, reachable before contact) for sites that
+   afford a play suited to the matchup, and picks a (play, site) pair plus the loadout. Plays
+   seen in human games so far (results/human/reports/): corner ambush (030), notch hold + gap
+   slip against throwers (084), narrow mouth with rotation against stronger melee (127), kite to
+   stretch the raid and pick off the runners (067), kidnap exit-route block (067). Each needs a
+   terrain detector (corner within our range with LOS cut, gap ≤ 3, 3-sided pocket) and the
+   traces to check where the human stood relative to it.
 7. Lances (asset layer). 8. Flush manoeuvres (if 4 confirms). Later: BaseGen arenas, bait,
    psycasts, mech bosses, LLM router, and the 1500-pt scenario set on Strive (squad of ~14:
    the scale of baseline-v1) once the doctrines are mature at 500.
@@ -216,9 +232,12 @@ Alongside: push only decision-relevant cells to n = 10–20.
 ### Strategic
 - [ ] **Loadout step** (human rand_030): before contact, when the raid is far enough (the swap
       took ~1000 ticks), redistribute weapons by skill: guns to the best shooters, throwables to
-      the worst, melee weapons to the best melee. The router picks it with the doctrine (the
-      doctrine depends on the result). Needs skills in the briefing and the grenade-accuracy
-      measurement (Now 2). Picking up a fallen ally's weapon mid-fight is tactical, not this.
+      the worst, melee weapons to the best melee. Why throwables go low (user, wiki): skill
+      multiplies a gun's output (hit chance) but barely a grenade's (forced miss 1.9 near the
+      target), so skill is worth most behind a gun; and a grenade can't be thrown in melee, so
+      not to the melee pawns. The router picks it with the doctrine (the doctrine depends on
+      the result); needs skills in the briefing. Picking up a fallen ally's weapon mid-fight is
+      tactical, not this. First use: rand_084 (Claude did the swap, the user fought).
 - [ ] Router input structure = METT-T (Enemy: composition + threat profile; Terrain: arena/fort/OAKOC;
       Troops: our squad composition; Time: prep time before contact; Mission). Roadmap 6.
 - [ ] ENEMY_AI.md: knowledge base of built-in enemy behaviour with evidence (raid flee vs

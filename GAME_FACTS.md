@@ -132,6 +132,12 @@ Measured or read from the XML (more reliable):
 | Aiming times (info card) | frag/molotov 1.5 s; doomsday/triple rocket 4.5 s; incendiary/EMP/smoke launcher 3.5 s | hazards.md |
 | Flight times | frag 75–122 ticks, molotov ~90–105, doomsday 30–45, triple rocket 30–60 | hazards.md |
 | Aiming observable? | no: the carrier's job stays "watching for targets" | hazards.md |
+| Frag landing vs thrower skill | forced miss radius 1.9: near the target it lands within ~1 cell; shooting skill, accuracy, sight and manipulation matter only at longer throws; aiming-time effects apply (trigger-happy helps, careful shooter barely hurts). So low-skill pawns throw nearly as well as good ones | [wiki: Frag grenades](https://rimworldwiki.com/wiki/Frag_grenades), not measured here |
+| Grenades in melee | can't be thrown while the thrower is in melee | wiki: Frag grenades |
+| Frag fuse (wiki) | 100 ticks after landing (we measured 88–91 at rest) | wiki: Frag grenades |
+| Low-shield pack | deploys at once where the wearer stands (does not follow), radius 4.9, lasts 1800 ticks; stops incoming ground-level fire crossing the edge, explosives burst at the edge (the blast still reaches 1.9 inside); shots from inside go out; melee walks in; mortars pass | [wiki: Low-shield pack](https://rimworldwiki.com/wiki/Low-shield_pack) |
+| Neanderthal (xenotype) | strong melee damage, robust (~×1.33 effective health), reduced pain (hard to down), 96% move speed, slow learning | [wiki: Neanderthal](https://rimworldwiki.com/wiki/Neanderthal); rand_127 |
+| Weapon swap by order | `manage_gear` drop (instant, also while paused) + equip (a walk-over job, runs when unpaused; drafting cancels it): 8 swaps in ~140 ticks with pawns 2 cells apart | rand_084, rand_127 |
 
 Projectile defs: `Proj_GrenadeFrag` (rests, then blows), `Proj_GrenadeMolotov` (bursts on impact,
 leaves `Fire`), `Bullet_DoomsdayRocket`, `Bullet_Rocket`, `Proj_GrenadeEMP`, `Proj_GrenadeTox`,

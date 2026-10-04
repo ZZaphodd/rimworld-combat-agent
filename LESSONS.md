@@ -372,8 +372,24 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
   two best shooters (9, 6), frags to the two who can't shoot (0, 0), at the start with the raid
   100 cells away (~1000 ticks); then an ambush behind a hill: decisive, 1 lost, 9 of 9 raiders out,
   vs close (agent): 7 lost, 3 out. n = 1 and two changes at once (reports/rand_030.md).* → A
-  pre-contact weapon redistribution step chosen by the router (TODO Strategic); the grenade
-  accuracy vs shooting skill assumption is unmeasured (GAME_FACTS TODO).
+  pre-contact weapon redistribution step chosen by the router (TODO Strategic). Throwables to
+  the worst shooters because skill multiplies a gun's output far more than a grenade's (forced
+  miss radius; wiki, GAME_FACTS), and never to melee pawns (no throwing in melee).
+- **Battlefield selection only works on top of a tactical repertoire** (user, 2026-10-05: "hard
+  to put into words, but you need a tactical repertoire before strategic battlefield selection
+  works"). *Every human win used a named play that needs a terrain feature: corner ambush
+  (rand_030), notch hold + gap slip that breaks the throwers' line of sight (rand_084), narrow
+  mouth with rotation against a stronger melee raid (rand_127). rand_127 is the control: same
+  squad, raid and loadout, packed on open ground → squad down (2 dead, 8 downed, 1 kill); in the
+  nook → repelled, 0 lost, 5 raiders out (results/human/reports/).* → The router should choose
+  (play, site) pairs from a play library whose entries declare their terrain requirements, not
+  a doctrine plus a terrain score (TODO roadmap).
+- **Loadout won both times Claude did it** (rand_084: 0 lost, nobody downed; rand_127: 0 lost):
+  ~100–150 ticks of drop + equip before contact. n = 2 and each win also had a good site.
+- **Raid points don't price xenotypes.** *rand_127: 7 Neanderthals (robust, strong melee,
+  reduced pain) at 500 pt downed all 10 tribals at 500 pt in the open, for the agent and for
+  the human.* → Before reading a worst-list problem as a doctrine failure, check whether the
+  pairing is fair (TODO Now 2).
 - **A short-range squad should not advance into the open.** *rand_030: the agent's close met the
   raid's rifle and revolvers at t887 in the open; the human waited behind sight-blocking terrain
   until the raid came round the corner inside 13–16 cells.* → Router rule candidate: throwers +
