@@ -50,7 +50,10 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
    retrying up to 5 times.
 9. `Clear area (rect)` over the landing spot ±8 cells (the explorer's kit), `Destroy factionless
    animals` again, then destroy every loose `Gun_*`/`MeleeWeapon_*`/`Weapon_*` item (ruins) with
-   `T: Destroy`.
+   `T: Destroy`, and strip Anomaly content (`arena.strip_anomaly`: "Dark entities" pawns,
+   cryptosleep caskets, the Void Monolith; GAME_FACTS §7). Saves built before this step:
+   `make_arena.py --strip-anomaly save1,save2,...` (load, strip, save; done for the 10 t500
+   saves on 2026-10-04).
 10. `save_game("arena_forest")`.
 11. `Clear area (rect)` over (50,50)–(200,200), then `save_game("arena_open")`.
 

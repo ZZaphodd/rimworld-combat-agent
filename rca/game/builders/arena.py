@@ -20,6 +20,11 @@ FORT_SANDBAGS_X = 128
 
 
 STORYTELLER, DIFFICULTY = "Phoebe", "Rough"     # Rough = Strive to Survive (WORKFLOW)
+# Anomaly content that would disturb a battle: an "ancient danger" ruin's sleepers come out when
+# a casket is shot, its fleshbeast guards count as live hostiles (every episode timed out), and
+# the Void Monolith drives Anomaly events. Found in the 2026-10-04 arena (GAME_FACTS §7).
+ANOMALY_DEFS = ("AncientCryptosleepCasket", "VoidMonolith")
+ENTITY_FACTION = "Dark entities"
 MAP_SIZE = 250                                  # the game's design size; arenas so far
 
 
@@ -113,6 +118,34 @@ def create(rm, map_size=MAP_SIZE, log=print):
     prepare_and_save(rm, log)
 
 
+def strip_anomaly(rm, d, log=print):
+    """Destroy entity-faction pawns, cryptosleep caskets and the monolith on the
+    loaded map; never a cell another pawn stands on. Returns what was removed."""
+    pawns = rm.call("list_things", category="pawn", verbose=True, confirm=True)["things"]
+    cells = {}
+    for t in pawns:
+        cells.setdefault((t["x"], t["z"]), []).append(t)
+    targets = [t for t in pawns if t.get("faction") == ENTITY_FACTION]
+    for name in ANOMALY_DEFS:
+        targets += things_of(rm, name)
+    removed = []
+    for t in targets:
+        at = (t["x"], t["z"])
+        others = [p for p in cells.get(at, []) if p["id"] != t["id"]]
+        if others:
+            raise RimMoltError(f"{t['id']} shares {at} with {[p['id'] for p in others]}")
+        d.destroy_at(*at)
+        removed.append(t.get("def") or t.get("kind"))
+    d.close()
+    left = [t["id"] for t in rm.call("list_things", category="pawn", verbose=True,
+                                     confirm=True)["things"] if t.get("faction") == ENTITY_FACTION]
+    left += [t["id"] for name in ANOMALY_DEFS for t in things_of(rm, name)]
+    if left:
+        raise RimMoltError(f"anomaly content left: {left}")
+    log(f"stripped anomaly content: {removed}")
+    return removed
+
+
 def prepare_and_save(rm, log=print):
     for w in rm.call("list_windows")["windows"]:
         if w["type"] == "Dialog_NodeTree":
@@ -133,6 +166,7 @@ def prepare_and_save(rm, log=print):
     d.clear_area(lx - 8, lz - 8, lx + 8, lz + 8)    # the explorer's kit must not arm squads
     d.run("Destroy factionless animals")
     d.remove_loose_weapons()
+    strip_anomaly(rm, d, log)
     session.save(rm, "arena_forest")
     log("saved arena_forest")
     d.clear_area(*OPEN_RECT)

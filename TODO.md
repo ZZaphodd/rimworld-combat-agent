@@ -18,9 +18,10 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
      cluster radius, max guns per target): check them on the squad of 9 before baseline-v2;
    * [x] harness guard: a hostile not on the map at the start → outcome `invalid`, re-run
      (EVAL_SPEC §3); difficulty checked at every start and stored in every row;
-   * **Anomaly contamination found** (2026-10-04): the new arena has an "ancient danger" ruin
-     (6 cryptosleep caskets guarded by 4 fleshbeasts, present in every t500 save) and the Void
-     Monolith (Anomaly playstyle "standard"). Fix before baseline-v2;
+   * [x] Anomaly contamination (2026-10-04): an "ancient danger" ruin (6 cryptosleep caskets,
+     4 fleshbeast guards) and the Void Monolith were in every t500 save; stripped from all 10
+     (`arena.strip_anomaly`, also part of arena prep now). Anomaly playstyle stays "standard":
+     a later Anomaly event would end an episode as invalid;
    * baseline-v2: 6 doctrines × 6 t500 themes × 10 (`--scenarios tier:t500`); tag `baseline-v2`;
    * re-run the calibration fits (no_progress, losing_trade, preconditions) on v2.
 2. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted

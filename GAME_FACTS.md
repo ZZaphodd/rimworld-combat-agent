@@ -232,6 +232,13 @@ saves are still Peaceful (conversion: TODO Now 1). Values from
   meds, ...), storyteller Phoebe, difficulty Peaceful in the current saves (to become Strive to Survive, §6c).
   The kit must be cleared from the landing area or squads
   pick it up [code].
+- **Anomaly content on a fresh map** [obs 2026-10-04, tile 372, Anomaly playstyle "standard
+  with monolith"]: an "ancient danger" ruin with 6 `AncientCryptosleepCasket`s (sleepers inside)
+  guarded by 4 dormant fleshbeasts (faction "Dark entities": Fingerspike ×2, Trispike,
+  Toughspike), plus the `VoidMonolith`. The fleshbeasts never joined a battle but stayed live
+  hostiles, so the episode could only time out (138 s wall; 34 s once removed). Debug
+  `T: Destroy` on a casket removes it with its sleepers (nothing ejected). `arena.strip_anomaly`
+  removes all of it; the ruin walls stay as cover. Peaceful arenas had no such guards.
 - **Ruins hold weapons**, even persona weapons. Remove every `Gun_*`, `MeleeWeapon_*`, `Weapon_*`
   item before saving [code].
 - Map size **250×250** [code]. Map tile: flat temperate forest, inland, no river, 10–20 °C, no
