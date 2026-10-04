@@ -123,9 +123,13 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
       permanent folder (scratch is deleted with the session), git init, gzipped .rws saves + restore
       script, relative paths in scripts/logs, .gitignore (personal saves), noreply commit email,
       public GitHub repo (read-only for others), optional license.
-- [ ] After the baseline is frozen (WORKFLOW.md): gate.py (re-run the baseline suite on a branch and
-      judge non-inferiority vs the tagged baseline). Commit hash in every result row: done (rca
-      rows carry `commit`).
+- [x] After the baseline is frozen (WORKFLOW.md): `tools/gate.py` (re-run the baseline suite on a
+      branch and judge non-inferiority vs the tagged baseline; rule in WORKFLOW "Gate rule",
+      unit-tested in tests/test_gate.py, `--simulate` for its false-alarm rate). Commit hash in
+      every result row: done (rca rows carry `commit`).
+- [ ] Gate power at n = 10: a regression confined to one cell is caught only when large (+1
+      colonist/battle in a median-noise cell: ~18%). For a change aimed at one theme, run 20 per
+      cell on both sides (baseline top-up on the tagged code), or add a per-theme pooled level.
 - [ ] Phase 2 requirements from the stalemate clarification (WORKFLOW layer contracts):
       1. [x] Progress-rate KPI + longest no-progress stretch (EVAL_SPEC §8); every doctrine raises
          "win condition unattainable" (`signals`) after 3000 *contested* ticks without progress
@@ -136,8 +140,13 @@ to learn, document (ENEMY_AI.md, with evidence) and exploit.
          still to test on grenadier themes with the doctrine fixed and micro pinned.
       4. [ ] ENEMY_AI hypothesis (roadmap 3): what raiders do when our pawns are out of their range
          (hold? advance? wait for targets?).
-- [ ] From the baseline calibration (results/baseline/calibration.md): second signal "losing trade"
-      for fast defeats (no_progress catches only 12% of bad battles); turtle defensible_terrain →
-      soft; spread gets an enemy splash-heavy precondition; close's enemy_outranges is inverted for
-      the current close (revisit after bounding overwatch); holdout (2nd squad + 2nd arena) needed to
-      fit squad/terrain-based preconditions — do it before the router. Code changes = branch + gate.
+- [x] From the baseline calibration (results/baseline/calibration.md), branch
+      feat/signals-preconditions: second signal `losing_trade` (≥ 2 pawns gone and running LER
+      < 1.0; report-only); turtle defensible_terrain → soft; spread `enemy_splash_heavy` ≥ 0.45.
+- [ ] Re-fit losing_trade exactly on rows with `kpis.trade_curve` (`tools/fit_signals.py
+      results/gate/signals-preconditions.jsonl`): the baseline fit used a proxy enemy curve.
+      Consider counting pawns *downed* at the end too (defeats by downed pawns are missed).
+- [ ] close's enemy_outranges is inverted for the current close: revisit after bounding
+      overwatch (fire control item 3). Docstring note only for now.
+- [ ] Holdout (2nd squad composition + 2nd arena, e.g. arena_fort) to fit squad/terrain-based
+      preconditions (ranged_squad, defensible_terrain, room_to_spread) — before the router.
