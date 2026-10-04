@@ -102,7 +102,7 @@ anything else 25 (`default`). Turret and mortar guns are left out of the label i
 | hellcat rifle | 26.9 | 35 ("rifle") | |
 | heavy charge blaster (Centipede blaster), inferno cannon (Centipede burner) | 26.9 | 25 | |
 | LMG, autopistol, revolver | 25.9 | 26 | |
-| thump cannon (Termite), beam graser (Tesseron), needle launcher (Legionary) | 24.9 | 25 | |
+| thump cannon (Termite), beam graser (Tesseron, min 3.9: a pawn inside can't be shot by it), needle launcher (Legionary) | 24.9 | 25 | |
 | incendiary / EMP / smoke / toxbomb launcher | 23.9 | 23 | |
 | heavy SMG | 22.9 | 23 | |
 | beam repeater (Cyclops) | 21.9 | 25 | |
