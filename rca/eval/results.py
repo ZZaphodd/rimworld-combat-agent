@@ -33,11 +33,24 @@ def config_label(cfg):
     return f"{cyc}{f'+rx{rxv}' if rx else ''}"
 
 
-def read_rows(path):
+LEGACY_DIFFICULTY = "peaceful"      # every row before the difficulty field (DATA.md §5)
+INVALID = "invalid"                  # outcome of an episode a storyteller threat disturbed
+
+
+def row_difficulty(r):
+    return (r.get("difficulty") or LEGACY_DIFFICULTY).lower()
+
+
+def read_rows(path, invalid=False):
+    """Rows with canonical agent names. Invalid episodes (outcome 'invalid',
+    EVAL_SPEC §3) stay in the file for traceability but are skipped unless
+    invalid=True, so no summary, gate or resume count ever sees them."""
     rows = []
     for line in path.read_text().splitlines():
         if line.strip():
             r = json.loads(line)
+            if r.get("outcome") == INVALID and not invalid:
+                continue
             r["agent_raw"] = r["agent"]
             r["agent"] = canonical(r["agent"])
             rows.append(r)
@@ -62,14 +75,16 @@ def row_options(r, natural_of=None):
     return {**natural, **missing, **stored}
 
 
-def done_counts(rows, version_of, config, options_of=None, natural_of=None):
+def done_counts(rows, version_of, config, options_of=None, natural_of=None, difficulty=None):
     """Rows per (scenario, canonical agent) that count for --resume: same agent
-    version (version_of(agent) for the current code), same config and, when
-    options_of is given, the same tactical options (row_options; rows without
-    any = {} or, with natural_of, the natural values)."""
+    version (version_of(agent) for the current code), same config, when
+    options_of is given the same tactical options (row_options; rows without
+    any = {} or, with natural_of, the natural values) and, when difficulty is
+    given, the same difficulty (row_difficulty)."""
     return Counter((r["scenario"], r["agent"]) for r in rows
                    if r.get("agent_version") == version_of(r["agent"])
                    and row_config(r) == config
+                   and (difficulty is None or row_difficulty(r) == difficulty)
                    and (options_of is None
                         or row_options(r, natural_of) == options_of(r["agent"])))
 

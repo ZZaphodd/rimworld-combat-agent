@@ -16,9 +16,11 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
      at 500 pt — back with the 1500 set);
    * doctrine parameters were tuned on a squad of 14 (formation widths, kite fan-out, turtle
      cluster radius, max guns per target): check them on the squad of 9 before baseline-v2;
-   * harness guard: Strive allows storyteller threats — detect unexpected raids mid-episode
-     and mark the episode invalid (EVAL_SPEC §3; manhunter animals: later, Evaluation / harness);
-   * record the difficulty in every result row (WORKFLOW traceability);
+   * [x] harness guard: a hostile not on the map at the start → outcome `invalid`, re-run
+     (EVAL_SPEC §3); difficulty checked at every start and stored in every row;
+   * **Anomaly contamination found** (2026-10-04): the new arena has an "ancient danger" ruin
+     (6 cryptosleep caskets guarded by 4 fleshbeasts, present in every t500 save) and the Void
+     Monolith (Anomaly playstyle "standard"). Fix before baseline-v2;
    * baseline-v2: 6 doctrines × 6 t500 themes × 10 (`--scenarios tier:t500`); tag `baseline-v2`;
    * re-run the calibration fits (no_progress, losing_trade, preconditions) on v2.
 2. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted

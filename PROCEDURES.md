@@ -187,9 +187,10 @@ Theme predicates and acceptance rates: DATA.md §3.
 
 ## 9. Episode start (`session.start_episode`, `harness.run_episode`)
 
-1. Load + ready wait (§3). This leaves dev mode on. Planned (TODO Now 1): read
-   `get_status.difficulty`, refuse to run unless it is the evaluation standard, and store it
-   in the row.
+1. Load + ready wait (§3). This leaves dev mode on. The harness reads `get_status.difficulty`,
+   stops the batch unless it is `--difficulty` (default `strive to survive`), and stores it in
+   the row. During the episode, a hostile that was not there at the start ends it as `invalid`
+   (EVAL_SPEC §3); the run is repeated up to 3 times.
 2. `debug_menu run tab=settings path="Never Force Normal Speed" value=True`, then `close`.
 3. `dev_mode(devMode=False, godMode=False)`. The agent runs with no dev mode and a sandboxed client.
 4. Read the squad state, create the tracker, `observe(0)`, create the episode's `Terrain`,
@@ -253,8 +254,9 @@ touch <batch>.done
 - `--resume` counts the existing rows per (scenario, canonical agent). A row counts only if
   **agent_version equals the current class's version**, **and** (cycle policy, reflex on/off,
   reflex version) equal the current run's settings, **and** its effective `options` equal the
-  requested ones (no field = `{}`; a missing key = its pre-option behaviour, §9). Planned: the
-  same `difficulty`. Rows from other versions or settings are kept in the file but ignored.
+  requested ones (no field = `{}`; a missing key = its pre-option behaviour, §9), **and** the same
+  `difficulty` (no field = `peaceful`). Invalid rows never count. Rows from other versions or
+  settings are kept in the file but ignored.
 - It then runs runs [done, runs) for each cell.
 - An episode that fails twice is written to `<results>.errors.jsonl` and skipped; `--resume`
   ignores that file, so the next pass retries it.

@@ -50,7 +50,7 @@ from pathlib import Path
 
 import _path  # noqa: F401
 from rca.eval import scoring
-from rca.eval.results import config_label, read_rows, row_config, row_options
+from rca.eval.results import config_label, read_rows, row_config, row_difficulty, row_options
 from rca.tactical import options_of
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -171,6 +171,10 @@ def gate(base_rows, branch_rows, agents=None, base_version=None, branch_version=
     if len(configs) != 1:
         raise SystemExit(f"branch rows mix configs: {configs}")
     config = configs.pop()
+    diffs = {row_difficulty(r) for r in branch_rows}
+    if len(diffs) != 1:
+        raise SystemExit(f"branch rows mix difficulties: {diffs}")
+    base_rows = [r for r in base_rows if row_difficulty(r) in diffs]   # none -> INCOMPLETE
     br = select(branch_rows, branch_version, config)
     ba = select(base_rows, base_version, config)
     keep = set(agents or br)

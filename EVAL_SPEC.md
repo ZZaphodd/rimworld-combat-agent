@@ -199,10 +199,19 @@ if squad_kidnapped > 0: outcome = "raid_left_with_captives"
 `enemies_cleared` also covers a raid that walked off the map. Use the **grade**, not the outcome
 or `win`.
 
-**Planned (TODO Now 1): outcome `invalid`.** Strive to Survive lets the storyteller send its own
-threats during an episode (Peaceful blocked them). The harness will detect hostiles that are not
-part of the scenario's raid, end the episode as `invalid`, and re-run it; invalid rows never count
-in a cell. Manhunter animals (more likely on Strive, GAME_FACTS §6c) are a later item (TODO).
+**Outcome `invalid`** (2026-10-04). Strive to Survive lets the storyteller send its own threats
+during an episode (Peaceful blocked them). Any hostile pawn the tracker sees that was not on the
+map at the episode start (`harness.unexpected_hostiles`: a raid, a manhunter, a mech cluster)
+ends the episode at once with outcome `invalid` and `invalid {reason: "unexpected_hostiles",
+tick, kinds}`. The row is written (traceability) but `read_rows` skips it unless
+`invalid=True`, so no summary, gate or resume count sees it; `run_batch` re-runs the same run up
+to 3 times, then leaves it to a later `--resume`. Hostiles already in the save are not caught
+(the 2026-10-04 Anomaly fleshbeasts were: TODO Now 1). Non-hostile incidents (disease, solar
+flare, psychic drone) only show in `game_messages`.
+
+**Difficulty check.** At every episode start the harness reads `get_status.difficulty`; a save
+on another difficulty than `--difficulty` (default `strive to survive`; `any` = off) raises
+`WrongDifficulty`, which stops the batch (no retry).
 
 ## 4. Fate classification (battle_tracker)
 
@@ -387,8 +396,8 @@ Schema 2 (rca rows carry `"schema": 2`; legacy rows have no `schema`):
 | Group | Fields |
 |---|---|
 | identity | `schema, scenario, agent` (canonical), `agent_version, commit` (git HEAD, `+dirty` if rca/ had uncommitted changes), `time` (unix) |
-| config | `cycle, step_ticks` (= calm cycle), `reflex, reflex_version` (rca micro = 4; legacy reflexes 1–3), `max_ticks`; planned `difficulty` (DifficultyDef name, `Rough` = Strive to Survive; rows without it ran on Peaceful; TODO Now 1) |
-| run | `outcome, ticks, steps, fast_steps, agent_errors, agent_think_s, wall_s` |
+| config | `cycle, step_ticks` (= calm cycle), `reflex, reflex_version` (rca micro = 4; legacy reflexes 1–3), `max_ticks`, `difficulty` (the label `get_status` reports, lowercase, e.g. `strive to survive`; rows without it ran on Peaceful) |
+| run | `outcome` (incl. `invalid`, §3), `invalid` (null or `{reason, tick, kinds}`), `ticks, steps, fast_steps, agent_errors, agent_think_s, wall_s` |
 | squad | `squad_size, deaths, squad_dead, squad_kidnapped, downed_at_end, hp_lost_pct, new_permanent_injuries` |
 | enemy | `enemies_seen, enemies_active_end, enemies_downed_end, enemies_killed, enemies_killed_inferred, enemies_escaped, enemy_neutralized_frac, kills_record`; rca: `enemy_seen_points, enemy_lost_points, enemy_escaped_points, enemy_kinds` |
 | verdict (stale-prone, console only) | `grade, win, score_v1, trade_enemy_points, trade_our_points, ler, ler_basis, colonist_enemies` |
@@ -406,7 +415,7 @@ canonical names. Legacy rows store `score` (old formula) instead of `score_v1`; 
 **Resume key** (PROCEDURES.md §11): (scenario, canonical agent) counts only rows with the current
 `agent_version`, the same (cycle, reflex, reflex_version) and the same effective `options`
 (rows without the field count as `{}`; an option key missing from a row counts as its
-pre-option behaviour, `PRE_OPTION_BEHAVIOUR`, else its natural value; planned: the same
-`difficulty`). Both the stored and the requested
+pre-option behaviour, `PRE_OPTION_BEHAVIOUR`, else its natural value) and the same
+`difficulty` (rows without it = `peaceful`). Invalid rows never count. Both the stored and the requested
 agent name are canonicalised, so `--agents hold` and `--agents turtle` count the same rows
 (LESSONS bug 8, fixed).

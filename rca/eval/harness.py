@@ -6,6 +6,11 @@ raider is within 40 cells of a squad pawn without a fate, else 120), reads the
 game's messages and the step's _delta, observes fates, and checks the stop
 conditions. An agent exception costs it the step; a harness/game exception
 retries the episode once after the watchdog has checked the game.
+
+Strive to Survive lets the storyteller send its own threats: a hostile pawn
+that was not on the map at the start ends the episode as 'invalid' (kept in
+the file, skipped by every reader, re-run by run_batch). The game's difficulty
+is checked at every episode start and stored in the row.
 """
 import json
 import math
@@ -19,7 +24,7 @@ from ..terrain import Terrain
 from . import firelog, scoring
 from .kpis import CONTACT
 from .progress import ProgressMeter
-from .results import SCHEMA, append_row, git_commit, row_config
+from .results import INVALID, SCHEMA, append_row, git_commit, row_config
 from .tracker import BattleTracker
 
 SCENARIO_DIR = ROOT / "scenarios_out"
@@ -29,6 +34,18 @@ FORBIDDEN = {
     "select_starting_site", "choose_ideoligion", "edit_ideoligion", "edit_starting_pawn",
     "start_game", "reform_ideoligion", "rename_pawn"}
 PERMANENT_WORDS = ("missing", "cut off", "shot off", "torn off", "bitten off", "destroyed")
+STANDARD_DIFFICULTY = "strive to survive"         # WORKFLOW "Evaluation standard"
+INVALID_TRIES = 3                                 # re-runs of a run disturbed by the storyteller
+
+
+class WrongDifficulty(RuntimeError):
+    """The loaded save is not on the evaluation difficulty: stop the batch."""
+
+
+def unexpected_hostiles(start_ids, enemies):
+    """Hostiles the tracker has seen that were not on the map at the episode
+    start: a storyteller threat (raid, manhunter, mech cluster), not the scenario."""
+    return {eid: e for eid, e in enemies.items() if eid not in start_ids}
 
 
 class Sandbox:
@@ -131,12 +148,17 @@ def engagement_kpis(tracker, avail_ours, avail_theirs):
             "fire_names_ambiguous": sorted(both), "log_entries": len(tracker.combat)}
 
 
-def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, options=None):
+def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, options=None,
+                difficulty=STANDARD_DIFFICULTY):
     session.start_episode(rm, manifest["save"])
+    found = (rm.call("get_status").get("difficulty") or "").lower()
+    if difficulty and found != difficulty:
+        raise WrongDifficulty(f"{manifest['save']} is on {found!r}, not {difficulty!r}")
     ids = [p["id"] for p in manifest["squad"]]
     before = squad_state(rm, ids)
     tracker = BattleTracker(rm, ids)
     live = tracker.observe(0)
+    start_ids, intruders = set(tracker.enemy), {}
     terrain = Terrain(rm)                       # per episode: never shared (LESSONS §4.2)
     client, errors = Sandbox(rm), 0
     agent.reflex, agent.terrain, agent.now = reflex, terrain, 0
@@ -178,6 +200,12 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
         delta = ev.get("_delta") or {}
         deltas.update(k for k in ("newBuildings", "removedBuildings") if delta.get(k))
         live = tracker.observe(ticks)
+        intruders = unexpected_hostiles(start_ids, tracker.enemy)
+        if intruders:
+            outcome = INVALID
+            log(f"   invalid: {len(intruders)} unexpected hostiles at tick {ticks} "
+                f"({sorted({e['kind'] for e in intruders.values()})})")
+            break
         squad_pos = [(s["x"], s["z"]) for s in tracker.squad.values()
                      if s.get("x") is not None and not s["fate"]]
         terrain.update(ticks, delta=delta, squad=squad_pos, contact=step < cycle.calm)
@@ -215,14 +243,18 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
         kpis = {"error": repr(e)[:120]}
     m = measure(before, squad_state(rm, ids), tracker.finish())
     signals = list(getattr(agent, "signals", []) or [])
-    if m["squad_kidnapped"]:
+    if m["squad_kidnapped"] and outcome != INVALID:
         outcome = "raid_left_with_captives"
     m.update({
         "schema": SCHEMA, "scenario": manifest["id"], "agent": agent.name,
         "agent_version": agent.version, "commit": git_commit(), "time": time.time(),
         "cycle": cycle.policy, "step_ticks": cycle.calm, "reflex": reflex,
         "reflex_version": getattr(agent, "rx_version", None), "max_ticks": max_ticks,
-        "outcome": outcome, "ticks": ticks, "steps": steps, "fast_steps": fast_steps,
+        "difficulty": found, "outcome": outcome,
+        "invalid": ({"reason": "unexpected_hostiles", "tick": ticks,
+                     "kinds": dict(Counter(e["kind"] for e in intruders.values()))}
+                    if outcome == INVALID else None),
+        "ticks": ticks, "steps": steps, "fast_steps": fast_steps,
         "agent_errors": errors, "agent_think_s": round(think, 2),
         "wall_s": round(time.time() - wall0, 1),
         "raid_fled_tick": fled, "raid_satisfied_tick": satisfied,
@@ -244,11 +276,14 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
 
 
 def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max_ticks=15000,
-              resume=False, watchdog=None, log=print, options=None):
+              resume=False, watchdog=None, log=print, options=None,
+              difficulty=STANDARD_DIFFICULTY):
     """Run each (scenario, agent) up to `runs` rows in `results`; failed
     episodes go to <results>.errors.jsonl and are retried by the next --resume.
     options (e.g. {"vs_throwers": "stand_off"}) apply to agents that offer them
-    and are part of the resume key."""
+    and are part of the resume key, as is the difficulty (None = don't check).
+    An invalid episode (storyteller threat) is written and the run repeated, up
+    to INVALID_TRIES times. A save on the wrong difficulty stops the batch."""
     from ..tactical import make, options_of, version_of
     from .results import canonical, done_counts, read_rows
     names = [canonical(a) for a in agent_names]
@@ -256,25 +291,23 @@ def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max
     done = Counter()
     if resume and results.exists():
         done = done_counts(read_rows(results), version_of, config,
-                           lambda a: options_of(a, options), lambda a: options_of(a))
+                           lambda a: options_of(a, options), lambda a: options_of(a),
+                           difficulty)
     for m in manifests:
         for name in names:
             for run in range(done[(m["id"], name)], runs):
                 log(f"== {m['id']} / {name} / run {run + 1} [{cycle.policy}"
                     f"{f' +rx{config[2]}' if reflex else ''}]")
-                res = None
-                for attempt in range(2):
-                    try:
-                        if watchdog:
-                            watchdog.ensure()
-                        res = run_episode(rm, m, make(name), max_ticks, cycle, reflex, log, options)
+                for _ in range(INVALID_TRIES):
+                    res = run_attempts(rm, m, name, max_ticks, cycle, reflex, log, options,
+                                       difficulty, watchdog)
+                    if res is None or res["outcome"] != INVALID:
                         break
-                    except Exception as e:
-                        log(f"   episode error (attempt {attempt + 1}): {e!r}")
-                        time.sleep(5)
-                    finally:
-                        if watchdog:
-                            watchdog.episode_done()
+                    append_row(results, res)
+                    log("   re-running the invalid episode")
+                if res is not None and res["outcome"] == INVALID:
+                    log(f"   still invalid after {INVALID_TRIES} tries; a later --resume retries")
+                    continue
                 if res is None:
                     append_row(results.with_suffix(".errors.jsonl"), {
                         "scenario": m["id"], "agent": name, "run": run + 1, "cycle": cycle.policy,
@@ -293,3 +326,23 @@ def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max
                     f"signal={res['unattainable_reason']} "
                     f"ticks={res['ticks']} wall={res['wall_s']}s")
     return row_config({"cycle": cycle.policy, "reflex": reflex, "reflex_version": config[2]})
+
+
+def run_attempts(rm, m, name, max_ticks, cycle, reflex, log, options, difficulty, watchdog):
+    """One episode, retried once on a harness/game error; None if both failed."""
+    from ..tactical import make
+    for attempt in range(2):
+        try:
+            if watchdog:
+                watchdog.ensure()
+            return run_episode(rm, m, make(name), max_ticks, cycle, reflex, log, options,
+                               difficulty)
+        except WrongDifficulty:
+            raise
+        except Exception as e:
+            log(f"   episode error (attempt {attempt + 1}): {e!r}")
+            time.sleep(5)
+        finally:
+            if watchdog:
+                watchdog.episode_done()
+    return None
