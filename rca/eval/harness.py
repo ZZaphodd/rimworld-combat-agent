@@ -276,13 +276,14 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
 
 
 def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
-                         difficulty=STANDARD_DIFFICULTY, player="human"):
+                         difficulty=STANDARD_DIFFICULTY, player="human", trace=None):
     """Observe-only episode: a person plays, the harness never pauses or
     advances time. It loads the scenario (paused; the player unpauses), then
     polls every poll_s seconds of wall time: fates, contact windows, the
     storyteller guard and the stop conditions, and writes the same row as
     run_episode (agent = player, cycle 'observed'). Game messages come from
-    get_alerts' recent messages (there is no wait_for_event to carry them)."""
+    get_alerts' recent messages (there is no wait_for_event to carry them).
+    trace (rca.eval.trace.Trace) records every poll: positions, weapons, jobs."""
     session.start_episode(rm, manifest["save"])
     found = (rm.call("get_status").get("difficulty") or "").lower()
     if difficulty and found != difficulty:
@@ -310,19 +311,22 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
             continue
         if ticks == last:                       # paused: nothing to observe
             continue
-        last, polls = ticks, polls + 1
+        last, polls, new = ticks, polls + 1, []
         for note in (rm.call("get_alerts").get("recentMessages") or []):
             text = (note.get("text") or "")[:160]
             if (note.get("tick"), text) in stale:
                 continue
             if text and text not in messages:
                 messages[text] = ticks
+                new.append(text)
                 low = text.lower()
                 if fled is None and " are fleeing" in low:
                     fled = ticks
                 if satisfied is None and "satisfied with the damage" in low:
                     satisfied = ticks
         live = tracker.observe(ticks)
+        if trace:
+            trace.poll(rm, ticks, new)
         intruders = unexpected_hostiles(start_ids, tracker.enemy)
         if intruders:
             outcome = INVALID
@@ -372,6 +376,8 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         "options": {}, "signals": [], "unattainable_tick": None, "unattainable_reason": None,
         "kpis": {"observed": True, "poll_s": poll_s, "polls": polls}})
     m.update(verdict(m, scoring.manifest_mean_points(manifest)))
+    if trace:
+        trace.end(m)
     return m
 
 
