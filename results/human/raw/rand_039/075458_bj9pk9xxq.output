@@ -1,0 +1,11 @@
+   rand_039 loaded and paused: play when ready (the harness only watches) | tick 6243 | battles done playing
+ours: 8 standing 7 | enemies: Town_Guard 16c, Town_Guard 17c, Town_Councilman 25c, Town_Guard 26c, Town_Guard 37c
+other pawns: [('Tortoise', 165, 3)]
+rect x160-200 z79-119
+fires 36 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-075457-614.png
+[('Trev', 186, 87, '', 100), ('Powo', 185, 86, '', 100), ('Shinichi', 186, 86, '', 100), ('Elsie', 187, 96, 'D', 37), ('Bodenstein', 186, 88, '', 100), ('Cline', 187, 91, '', 100), ('Hao', 185, 90, '', 100), ('Dennis', 188, 93, '', 71)]
+enemies: [('Dotsey', 172, 124, '', 100, 'watching for targets.'), ('Stench', 179, 104, '', 100, 'watching for targets.'), ('Pratt', 173, 112, '', 100, 'watching for targets.'), ('Martin', 173, 111, '', 100, 'watching for targets.'), ('Zerong', 178, 105, '', 100, 'watching for targets.')]
+   rand_039 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

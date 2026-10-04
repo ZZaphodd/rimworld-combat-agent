@@ -1,0 +1,10 @@
+   rand_065 loaded and paused: play when ready (the harness only watches) | tick 3984 | battles done playing
+ours: 9 standing 9 | enemies: Empire_Fighter_Janissary 11c, Empire_Fighter_Trooper 18c, Empire_Fighter_Janissary 21c, Empire_Fighter_Trooper 23c, Empire_Fighter_Trooper 24c, Empire_Fighter_Trooper 25c
+rect x84-124 z32-70
+fires 0 | frags/molotovs in play 0 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-070553-988.png
+[('Trev', 104, 41, '', 100), ('Professor', 104, 40, '', 100), ('Dani', 104, 39, '', 100), ('Philip', 105, 39, '', 100), ('Stomp', 106, 41, '', 100), ('Sakura', 105, 41, '', 100), ('Konstantin', 106, 39, '', 100), ('Jess', 100, 41, '', 100), ('Hermine', 105, 40, '', 100)]
+enemies: [('Justinian', 106, 63, '', 100, 'moving.'), ('Rogerios', 105, 62, '', 100, 'moving.'), ('Pusare', 105, 59, '', 100, 'moving.'), ('Eulogia', 108, 56, '', 100, 'moving.'), ('Tauos', 105, 50, '', 100, 'moving.'), ('Kourkouas', 104, 64, '', 100, 'moving.')]
+   rand_065 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]

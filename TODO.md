@@ -37,6 +37,10 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
      to underprice Neanderthals (rand_127), so price the pairing before blaming a doctrine;
    * trace polls are wall-clock (1 s), so at speed 3 a line is ~180 ticks apart: poll faster
      (0.5 s) or by game ticks;
+   * done 2026-10-05: squad down no longer ends an episode (`end_rule: raid_gone`, EVAL_SPEC
+     §3), and the man in black is removed (`strangers_removed`). **Before the next gate:** the
+     gate must compare like with like — baseline-v2 rows stopped at squad down; either re-run
+     the baseline cells that had squad downs or score new rows by `squad_down.missing`;
    * kite stalls against melee mechs that loiter (rand_004 timeout);
    * human demonstrations on the losing types (bows vs guns, all-thrower squads, guns vs Empire,
      savage squads) from results/night/worst.md; played so far: #1–#3 with battle reports

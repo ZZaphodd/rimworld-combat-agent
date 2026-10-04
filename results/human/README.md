@@ -28,6 +28,15 @@ A person plays a scenario; the harness only watches and grades it like an agent 
 | rand_030 (#3) | human_swap | **decisive** | 1 | 9 of 9 | close: lost 7, 3 out | [rand_030](reports/rand_030.md) |
 | rand_084 (#4) | human_loadout | **repelled**, nobody downed | 0 | 6 of 8 | doctrine: lost 6, 3 out | [rand_084](reports/rand_084.md) |
 | rand_127 (#5) | human_loadout | **repelled** | 0 (1 downed) | 5 of 7 | amove: all 10 downed, 0 out | [rand_127](reports/rand_127.md) |
+| rand_065 (#6) | human_loadout | squad down (≈ draw) | 0 + 3 being carried off | 3 of 6 | close: lost 4, 3 out | [rand_065](reports/rand_065.md) |
+| rand_029 (#7) | human_loadout | **pyrrhic** | 2 (both captives taken back) | 7 of 8 | doctrine: 7 dead, 5 out | [rand_029](reports/rand_029.md) |
+| rand_039 (#8) | human_loadout | **repelled** | 0 (1 downed, carried along) | 6 of 8 | kite: lost 5, 2 out | [rand_039](reports/rand_039.md) |
+
+**Batch 1 (worst list #1–#8, 2026-10-05), in one line each:** the human beat the agent on all
+eight by badness (8.0–96 vs 108–142); five wins (030, 084, 127, 029, 039 — four of them with
+Claude's loadout), two defeats with far fewer losses (107, 067) and one near-draw (065). Every
+win used a terrain play; every loss had isolated pawns or a downed pawn left exposed. Rows from
+this batch stopped at squad down (old rule); the next batch runs with `end_rule: raid_gone`.
 
 `human_loadout`: Claude redistributed the weapons at the start (`manage_gear` drop + equip,
 ~100–150 ticks, before the player drafted), the player fought. Attempts the player abandoned or
@@ -56,3 +65,10 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
    narrow mouth with rotation against stronger melee (rand_127; the same squad lost in the open).
 8. **Points don't price xenotypes:** 7 Neanderthals beat 10 tribals in the open at 500 v 500
    (agent and human, rand_127).
+9. **Loadout follows the play, not skill alone:** rand_065 gave Jess (shooting 16, melee 14) a
+   37-cell rifle for what became a 4–6-cell fight. (play, site, loadout) is one decision.
+10. **Spacing yes, width no:** rand_029's line was 4–5 cells between pawns but 43 cells end to
+   end; every loss was on an end. Keep each pawn within reach of two neighbours.
+11. **Stepped withdrawal against a raid that holds at range:** fall back a bound, turn, kill
+   whoever followed (rand_039: knives and the grenadier arrived one at a time); carry the
+   downed along.

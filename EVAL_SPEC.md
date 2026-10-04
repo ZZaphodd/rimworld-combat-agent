@@ -189,12 +189,26 @@ cycle -> agent.step -> wait(step) -> ticks = ticksGame - t0
   -> live = tracker.observe(ticks)
   -> progress meter (tracker.lost_points), contact windows for fire_share
   -> engagement counters (legacy, biased)
+  -> remove_strangers if a colonist outside the squad appeared (man in black)
   -> stop if: no live (non-downed) hostile -> "enemies_cleared"
-              no standing squad pawn        -> "squad_down"
+              squad down for AFTER_DOWN_TICKS (6000) -> see below
               ticks >= max_ticks             -> "timeout"
 pause; kpis; squad_state(after); measure; agent.signals; fire_share from the pooled battle log
+if squad_down was recorded and nobody of the squad stands at the end: outcome = "squad_down"
 if squad_kidnapped > 0: outcome = "raid_left_with_captives"
 ```
+
+**Squad down no longer ends an episode** (rule `end_rule: "raid_gone"`, 2026-10-05). The first
+moment no squad pawn stands is stored as `squad_down {tick, missing, downed, enemies_standing,
+enemies_out}`, and the episode runs on until the raid is gone (or 6000 ticks, or `max_ticks`), so
+kidnappings that finish later and comebacks count (rand_065: the old rule recorded "0 kidnapped";
+afterwards one pawn was carried off and another got up and downed a carrier). Rows without
+`end_rule` (baseline-v1, baseline-v2, the night run) stopped at squad down: compare like with
+like — for a new row with `squad_down`, `squad_down.missing` is what the old rule counted as lost.
+
+**The man in black** (`StrangerInBlack`, the storyteller's helper once every colonist is down)
+never takes part: `harness.remove_strangers` destroys him as soon as he appears (dev mode on only
+for the destroy), recorded in `strangers_removed [{tick, name, kind}]` (user rule, 2026-10-05).
 
 `enemies_cleared` also covers a raid that walked off the map. Use the **grade**, not the outcome
 or `win`.
@@ -397,7 +411,7 @@ Schema 2 (rca rows carry `"schema": 2`; legacy rows have no `schema`):
 |---|---|
 | identity | `schema, scenario, agent` (canonical), `agent_version, commit` (git HEAD, `+dirty` if rca/ had uncommitted changes), `time` (unix) |
 | config | `cycle, step_ticks` (= calm cycle), `reflex, reflex_version` (rca micro = 4; legacy reflexes 1–3), `max_ticks`, `difficulty` (the label `get_status` reports, lowercase, e.g. `strive to survive`; rows without it ran on Peaceful) |
-| run | `outcome` (incl. `invalid`, §3), `invalid` (null or `{reason, tick, kinds}`), `ticks, steps, fast_steps, agent_errors, agent_think_s, wall_s` |
+| run | `outcome` (incl. `invalid`, §3), `invalid` (null or `{reason, tick, kinds}`), `ticks, steps, fast_steps, agent_errors, agent_think_s, wall_s`; since 2026-10-05 `end_rule` (`raid_gone`), `squad_down` (null or `{tick, missing, downed, enemies_standing, enemies_out}`), `strangers_removed` (§3) |
 | squad | `squad_size, deaths, squad_dead, squad_kidnapped, downed_at_end, hp_lost_pct, new_permanent_injuries` |
 | enemy | `enemies_seen, enemies_active_end, enemies_downed_end, enemies_killed, enemies_killed_inferred, enemies_escaped, enemy_neutralized_frac, kills_record`; rca: `enemy_seen_points, enemy_lost_points, enemy_escaped_points, enemy_kinds` |
 | verdict (stale-prone, console only) | `grade, win, score_v1, trade_enemy_points, trade_our_points, ler, ler_basis, colonist_enemies` |

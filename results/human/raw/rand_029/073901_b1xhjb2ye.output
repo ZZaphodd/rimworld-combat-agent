@@ -1,0 +1,11 @@
+   rand_029 loaded and paused: play when ready (the harness only watches) | tick 12157 | battles done finished:    enemies_cleared grade=pyrrhic LER=0.904 lost=2 downed=4 | enemy seen 8 killed 4+0? escaped 1 | ticks=11213 wall=853.5
+ours: 7 standing 3 | enemies: Town_Councilman_Pig(down) 43c, Grenadier_Destructive(down) 63c, Grenadier_Destructive(down) 65c
+other pawns: [('Cougar', 21, 126), ('Hare', 0, 159)]
+rect x120-190 z61-109
+fires 1 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-073901-423.png
+[('Purple', 129, 65, '', 100), ('Rodaballo', 121, 59, '', 84), ('Chicken', 141, 146, 'D', 36), ('Komodo', 125, 24, '', 100), ('Uloma', 190, 104, 'D', 17), ('Sparrow', 125, 24, 'D', 33), ('Croulerem', 129, 65, 'D', 39)]
+enemies: [('Teat', 124, 110, 'D', 15, 'downed.'), ('Keopp', 142, 132, 'D', 15, 'downed, unconscious.'), ('Stamper', 126, 6, 'D', 16, 'downed, unconscious.')]
+   enemies_cleared grade=pyrrhic LER=0.904 lost=2 downed=4 | enemy seen 8 killed 4+0? escaped 1 | ticks=11213 wall=853.5s -> ~/code/rimworld-combat-agent/results/human/play.jsonl
+
+[exited with code 0]
