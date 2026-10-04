@@ -1,0 +1,256 @@
+{
+  "id": "rand_042",
+  "save": "scenario_rand_042",
+  "spec": {
+    "id": "rand_042",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Tasalocó Crica",
+      "weapon": "Short bow (poor)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human42619",
+      "name": "Purple Billa",
+      "weapon": "Recurve bow (normal 83%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human42622",
+      "name": "Yuu 'Hakuja' Ito",
+      "weapon": "Short bow (poor 84%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human42625",
+      "name": "Olán Irgo",
+      "weapon": "Recurve bow (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human42630",
+      "name": "Bluejay Abansa",
+      "weapon": "Short bow (normal 64%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human42634",
+      "name": "Barga 'Raccoon' Mabo",
+      "weapon": "Pila (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human42639",
+      "name": "Exorus 'Huntsman' Hawke",
+      "weapon": "Greatbow (good)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "long",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human42644",
+      "name": "Lercha Abeulo",
+      "weapon": "Recurve bow (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42651",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 75,
+      "z": 3
+    },
+    {
+      "id": "Human42655",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Greatbow",
+      "class": "long",
+      "x": 63,
+      "z": 5
+    },
+    {
+      "id": "Human42660",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Greatbow",
+      "class": "long",
+      "x": 73,
+      "z": 2
+    },
+    {
+      "id": "Human42664",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 76,
+      "z": 0
+    },
+    {
+      "id": "Human42668",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 69,
+      "z": 5
+    },
+    {
+      "id": "Human42673",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 68,
+      "z": 2
+    },
+    {
+      "id": "Human42677",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 64,
+      "z": 3
+    },
+    {
+      "id": "Human42681",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 68,
+      "z": 6
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "bow": 6,
+        "thrown": 1,
+        "long": 1
+      },
+      "squad_range_median": 24.4,
+      "squad_range_max": 29.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "bow": 6,
+        "long": 2
+      },
+      "enemy_points": 480.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.25,
+      "count_ratio": 1.0,
+      "distance": 132.8,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.021,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

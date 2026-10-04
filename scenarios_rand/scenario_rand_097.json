@@ -1,0 +1,246 @@
+{
+  "id": "rand_097",
+  "save": "scenario_rand_097",
+  "spec": {
+    "id": "rand_097",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Keisuke 'Poopy' Moore",
+      "weapon": "Revolver (poor)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44824",
+      "name": "Max Guerrero",
+      "weapon": "Molotov cocktails (90%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44831",
+      "name": "Bikram 'Biks' Sohi",
+      "weapon": "Pump shotgun (normal 80%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44836",
+      "name": "Tina 'Slick' Dunlap",
+      "weapon": "Autopistol (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human44843",
+      "name": "Mark Logan",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44848",
+      "name": "Freya 'Tail' Fairwing",
+      "weapon": "Machine pistol (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44854",
+      "name": "Izolda Lane",
+      "weapon": "Molotov cocktails",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44861",
+      "def": "Town_Councilman_Pig",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 244,
+      "z": 19
+    },
+    {
+      "id": "Human44866",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 244,
+      "z": 19
+    },
+    {
+      "id": "Human44873",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 249,
+      "z": 22
+    },
+    {
+      "id": "Human44877",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 247,
+      "z": 20
+    },
+    {
+      "id": "Human44884",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 246,
+      "z": 18
+    },
+    {
+      "id": "Human44889",
+      "def": "Town_Guard_Pig",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 247,
+      "z": 30
+    },
+    {
+      "id": "Human44894",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 243,
+      "z": 22
+    },
+    {
+      "id": "Human44900",
+      "def": "Town_Guard_Pig",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 244,
+      "z": 21
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 7,
+      "squad_classes": {
+        "short": 5,
+        "explosive": 2
+      },
+      "squad_range_median": 19.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 3,
+        "explosive": 4,
+        "melee": 1
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.12,
+      "enemy_explosive_share": 0.5,
+      "enemy_outrange_share": 0.12,
+      "count_ratio": 0.88,
+      "distance": 159.2,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.044,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

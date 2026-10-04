@@ -77,6 +77,11 @@ def make(rm, idx, rng, factions, points=500, log=print, arenas=ARENAS):
             break
     if not raid:
         return None
+    for t in [t for t in raid if t.get("def") != "Human"]:   # pack animals can't be recruited
+        d.destroy_at(t["x"], t["z"])
+    raid = [t for t in raid if t.get("def") == "Human"]
+    if not raid:
+        return None
     squad_cls = {r["id"]: r for r in classify(rm, raid)}
     ids = make_squad(d, raid, PLACE)
     d.remove_observers(observers, ids)

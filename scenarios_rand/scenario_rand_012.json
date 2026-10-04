@@ -1,0 +1,225 @@
+{
+  "id": "rand_012",
+  "save": "scenario_rand_012",
+  "spec": {
+    "id": "rand_012",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Orange Xigore",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42620",
+      "name": "Bancam Hippo",
+      "weapon": "Wooden club",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42623",
+      "name": "Green Alocombar",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42628",
+      "name": "Bico Irobiarbai",
+      "weapon": "Steel ikwa (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42632",
+      "name": "Rhino Lándoa",
+      "weapon": "Steel spear (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42638",
+      "def": "Drifter_Yttakin",
+      "weapon": "Granite club",
+      "class": "melee",
+      "x": 217,
+      "z": 243
+    },
+    {
+      "id": "WildBoar42640",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 217,
+      "z": 249
+    },
+    {
+      "id": "Human42641",
+      "def": "Pirate_Yttakin",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 219,
+      "z": 243
+    },
+    {
+      "id": "Human42646",
+      "def": "Drifter_Yttakin",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 217,
+      "z": 243
+    },
+    {
+      "id": "Human42649",
+      "def": "Drifter_Yttakin",
+      "weapon": "Wooden club",
+      "class": "melee",
+      "x": 214,
+      "z": 245
+    },
+    {
+      "id": "WildBoar42651",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 214,
+      "z": 245
+    },
+    {
+      "id": "WildBoar42652",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 216,
+      "z": 248
+    },
+    {
+      "id": "Human42653",
+      "def": "Drifter_Yttakin",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 214,
+      "z": 243
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 5,
+      "squad_classes": {
+        "melee": 5
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 5,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "melee": 4,
+        "other": 3,
+        "long": 1
+      },
+      "enemy_points": 370.0,
+      "enemy_range_median": 13.2,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.5,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.5,
+      "count_ratio": 0.62,
+      "distance": 150.5,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.021,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

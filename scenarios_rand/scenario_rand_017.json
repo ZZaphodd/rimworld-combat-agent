@@ -1,0 +1,206 @@
+{
+  "id": "rand_017",
+  "save": "scenario_rand_017",
+  "spec": {
+    "id": "rand_017",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Zetro Reme",
+      "weapon": "Steel spear (poor)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42621",
+      "name": "Valens Kourkouas",
+      "weapon": "Charge rifle (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42627",
+      "name": "Ariadne Doukas",
+      "weapon": "Hellcat rifle (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Trooper"
+    },
+    {
+      "id": "Human42634",
+      "name": "Anna Rogerios",
+      "weapon": "Steel gladius (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human646",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 0,
+      "z": 126
+    },
+    {
+      "id": "Human42645",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 3,
+      "z": 127
+    },
+    {
+      "id": "Human42652",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 3,
+      "z": 128
+    },
+    {
+      "id": "Human42676",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 1,
+      "z": 128
+    },
+    {
+      "id": "Human42681",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 2,
+      "z": 137
+    },
+    {
+      "id": "Human42686",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 0,
+      "z": 131
+    },
+    {
+      "id": "Human42692",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 5,
+      "z": 135
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "melee": 2,
+        "medium": 2
+      },
+      "squad_range_median": 14.2,
+      "squad_range_max": 27.9,
+      "squad_melee": 2,
+      "enemy_n": 7,
+      "enemy_classes": {
+        "explosive": 7
+      },
+      "enemy_points": 490.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 0.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 1.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 0.57,
+      "distance": 123.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.016,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

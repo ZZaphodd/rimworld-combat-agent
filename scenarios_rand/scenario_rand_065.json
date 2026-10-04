@@ -1,0 +1,252 @@
+{
+  "id": "rand_065",
+  "save": "scenario_rand_065",
+  "spec": {
+    "id": "rand_065",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Empire",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Trevor 'Trev' Austin",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human42622",
+      "name": "Charles 'Professor' Hagin",
+      "weapon": "Steel knife (poor 83%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42627",
+      "name": "Daniel 'Dani' Kireew",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42631",
+      "name": "Philip Huerta",
+      "weapon": "Pump shotgun (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42636",
+      "name": "Cory 'Stomp' Gustafson",
+      "weapon": "Heavy SMG (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42641",
+      "name": "Sakura Hurley",
+      "weapon": "Steel knife (poor 51%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42646",
+      "name": "Konstantin Short",
+      "weapon": "Machine pistol (poor)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42652",
+      "name": "Jesse 'Jess' Spence",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42656",
+      "name": "Hermine Ibarra",
+      "weapon": "Steel knife (poor 88%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42662",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "LMG",
+      "class": "support",
+      "x": 1,
+      "z": 247
+    },
+    {
+      "id": "Human42670",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Hellcat rifle",
+      "class": "medium",
+      "x": 6,
+      "z": 244
+    },
+    {
+      "id": "Human42677",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "LMG",
+      "class": "support",
+      "x": 7,
+      "z": 248
+    },
+    {
+      "id": "Human42683",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "heavy SMG",
+      "class": "support",
+      "x": 1,
+      "z": 249
+    },
+    {
+      "id": "Human42689",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge lance",
+      "class": "long",
+      "x": 7,
+      "z": 247
+    },
+    {
+      "id": "Human42695",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 7,
+      "z": 249
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 3,
+        "melee": 4,
+        "long": 1,
+        "support": 1
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 4,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "support": 4,
+        "medium": 1,
+        "long": 1
+      },
+      "enemy_points": 460.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 1.5,
+      "distance": 171.8,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.556,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.556,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.167,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.013,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

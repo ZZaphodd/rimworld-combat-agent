@@ -78,7 +78,11 @@ def cmd_new(a):
     rng = random.Random(a.seed if a.seed is not None else time.time_ns())
     m = None
     for _ in range(3):
-        m = problem.make(rm, problem.next_index(), rng, s["factions"], a.points, log)
+        try:
+            m = problem.make(rm, problem.next_index(), rng, s["factions"], a.points, log)
+        except Exception as e:                  # a failed build costs a retry, not the night
+            log(f"   build failed: {e!r}")
+            m = None
         if m:
             break
     if not m:

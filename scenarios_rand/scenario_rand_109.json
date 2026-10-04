@@ -1,0 +1,240 @@
+{
+  "id": "rand_109",
+  "save": "scenario_rand_109",
+  "spec": {
+    "id": "rand_109",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Maria 'Stumpy' Knox",
+      "weapon": "Machine pistol (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44825",
+      "name": "Juliette 'Julie' Austin",
+      "weapon": "Machine pistol (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44837",
+      "name": "Auroa 'Ahmel' Ahmelia",
+      "weapon": "Machine pistol (normal 88%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44843",
+      "name": "Freddie Joseph",
+      "weapon": "Revolver (poor 26%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44848",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Steel knife (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44852",
+      "name": "Gert 'Hairy' Harding",
+      "weapon": "Autopistol (poor 93%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44857",
+      "name": "Rachel Brewer",
+      "weapon": "Autopistol (good 79%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44862",
+      "name": "Robin 'Birdie' Hawke",
+      "weapon": "Steel knife (awful 80%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44867",
+      "name": "Andy 'Scotsman' McMellon",
+      "weapon": "Revolver (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44872",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 0,
+      "z": 112
+    },
+    {
+      "id": "Human44877",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 0,
+      "z": 99
+    },
+    {
+      "id": "Human44882",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 4,
+      "z": 101
+    },
+    {
+      "id": "Human44886",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 7,
+      "z": 110
+    },
+    {
+      "id": "Human44889",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 7,
+      "z": 104
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 7,
+        "melee": 2
+      },
+      "squad_range_median": 19.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 2,
+      "enemy_n": 5,
+      "enemy_classes": {
+        "melee": 5
+      },
+      "enemy_points": 300.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.8,
+      "distance": 122.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.042,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

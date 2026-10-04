@@ -1,0 +1,278 @@
+{
+  "id": "rand_126",
+  "save": "scenario_rand_126",
+  "spec": {
+    "id": "rand_126",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Skab Heskez",
+      "weapon": "Machine pistol (awful 83%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42620",
+      "name": "Sammi 'Whisper' Ashwood",
+      "weapon": "Tox grenades (76%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Tox"
+    },
+    {
+      "id": "Human42625",
+      "name": "Dtchrath Ltzvon",
+      "weapon": "Steel knife (poor 24%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human42630",
+      "name": "Susskind Hodge",
+      "weapon": "Granite club",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42636",
+      "name": "Maxim 'Max' Nechaev",
+      "weapon": "Wooden club (42%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human42642",
+      "name": "Razpox 'Choke' Heskling",
+      "weapon": "Sandstone club (48%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human42647",
+      "name": "Rekskul Rokman",
+      "weapon": "Steel knife (normal 29%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human42651",
+      "name": "Noah 'JC' Cuadrado",
+      "weapon": "Machine pistol (poor)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42656",
+      "name": "Cynia Celanial",
+      "weapon": "Bolt-action rifle (poor 70%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "long",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42662",
+      "name": "Sara Rodgers",
+      "weapon": "Steel club (38%)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42668",
+      "def": "Drifter",
+      "weapon": "Wooden club",
+      "class": "melee",
+      "x": 241,
+      "z": 2
+    },
+    {
+      "id": "Human42672",
+      "def": "Scavenger",
+      "weapon": "machine pistol",
+      "class": "short",
+      "x": 227,
+      "z": 0
+    },
+    {
+      "id": "Human42688",
+      "def": "Scavenger",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 241,
+      "z": 4
+    },
+    {
+      "id": "Human42693",
+      "def": "Pirate",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 240,
+      "z": 0
+    },
+    {
+      "id": "Human42700",
+      "def": "Drifter",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 227,
+      "z": 0
+    },
+    {
+      "id": "Human42705",
+      "def": "Pirate",
+      "weapon": "bolt-action rifle",
+      "class": "long",
+      "x": 237,
+      "z": 4
+    },
+    {
+      "id": "Human42710",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 227,
+      "z": 0
+    },
+    {
+      "id": "Human42715",
+      "def": "Scavenger",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 241,
+      "z": 3
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "short": 2,
+        "explosive": 1,
+        "melee": 6,
+        "long": 1
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 36.9,
+      "squad_melee": 6,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "melee": 2,
+        "short": 4,
+        "long": 2
+      },
+      "enemy_points": 400.0,
+      "enemy_range_median": 22.9,
+      "enemy_closer_share": 0.75,
+      "enemy_melee_share": 0.25,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.75,
+      "count_ratio": 1.25,
+      "distance": 164.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.4,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.4,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.075,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

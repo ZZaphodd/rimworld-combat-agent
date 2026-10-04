@@ -1,0 +1,275 @@
+{
+  "id": "rand_121",
+  "save": "scenario_rand_121",
+  "spec": {
+    "id": "rand_121",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Borba Reiolerban",
+      "weapon": "Steel ikwa (poor 51%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44823",
+      "name": "Miñoca Galga",
+      "weapon": "Recurve bow (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44827",
+      "name": "Green Flamingo",
+      "weapon": "Recurve bow (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44831",
+      "name": "Orange Breitol",
+      "weapon": "Steel club (33%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44833",
+      "name": "Lercha Combo",
+      "weapon": "Short bow (awful)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44837",
+      "name": "Chobanbe Asgo",
+      "weapon": "Steel club (91%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44840",
+      "name": "Boomrat Tratros",
+      "weapon": "Steel spear (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44845",
+      "name": "Purple Tolton",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44850",
+      "name": "Koala Camba",
+      "weapon": "Short bow (awful)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44854",
+      "name": "Camisa Goiño",
+      "weapon": "Short bow (poor 74%)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44859",
+      "def": "Scavenger",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 0,
+      "z": 155
+    },
+    {
+      "id": "Human44864",
+      "def": "Pirate",
+      "weapon": "bolt-action rifle",
+      "class": "long",
+      "x": 5,
+      "z": 159
+    },
+    {
+      "id": "Human44871",
+      "def": "Pirate",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 4,
+      "z": 155
+    },
+    {
+      "id": "Human44875",
+      "def": "Pirate",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 0,
+      "z": 154
+    },
+    {
+      "id": "Human44880",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 0,
+      "z": 164
+    },
+    {
+      "id": "Human44886",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 0,
+      "z": 167
+    },
+    {
+      "id": "Human44891",
+      "def": "Scavenger",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 6,
+      "z": 155
+    },
+    {
+      "id": "Human44896",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 3,
+      "z": 163
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "melee": 5,
+        "bow": 5
+      },
+      "squad_range_median": 12.2,
+      "squad_range_max": 25.9,
+      "squad_melee": 5,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 6,
+        "long": 2
+      },
+      "enemy_points": 445.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.75,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.88,
+      "count_ratio": 1.25,
+      "distance": 127.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.023,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

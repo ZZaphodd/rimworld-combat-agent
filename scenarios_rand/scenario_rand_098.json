@@ -1,0 +1,216 @@
+{
+  "id": "rand_098",
+  "save": "scenario_rand_098",
+  "spec": {
+    "id": "rand_098",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Vasalo Guaxebil",
+      "weapon": "Pila (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human44824",
+      "name": "Engo Biala",
+      "weapon": "Short bow (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44828",
+      "name": "Tarsier Iraen",
+      "weapon": "Short bow (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44832",
+      "name": "Doaro Elephant",
+      "weapon": "Recurve bow (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44836",
+      "name": "Laxigo Trotranisatran",
+      "weapon": "Greatbow (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human44841",
+      "name": "Croiga Scorpion",
+      "weapon": "Short bow (poor 81%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44844",
+      "name": "Blue Duck",
+      "weapon": "Recurve bow (normal 98%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44849",
+      "name": "Bogoxadaga 'Crocodile' Curtraro",
+      "weapon": "Pila (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Lancer44865",
+      "def": "Mech_Lancer",
+      "weapon": "Charge lance",
+      "class": "long",
+      "x": 20,
+      "z": 100
+    },
+    {
+      "id": "Mech_Scorcher44867",
+      "def": "Mech_Scorcher",
+      "weapon": "Mini-flameblaster",
+      "class": "medium",
+      "x": 20,
+      "z": 99
+    },
+    {
+      "id": "Mech_Scyther44864",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 209,
+      "z": 100
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "thrown": 2,
+        "bow": 5,
+        "long": 1
+      },
+      "squad_range_median": 22.9,
+      "squad_range_max": 29.9,
+      "squad_melee": 0,
+      "enemy_n": 3,
+      "enemy_classes": {
+        "long": 1,
+        "medium": 1,
+        "melee": 1
+      },
+      "enemy_points": 415.0,
+      "enemy_range_median": 4.9,
+      "enemy_closer_share": 0.33,
+      "enemy_melee_share": 0.33,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.33,
+      "count_ratio": 2.67,
+      "distance": 48.0,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.333,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.333,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.333,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.037,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

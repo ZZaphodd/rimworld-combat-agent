@@ -1,0 +1,247 @@
+{
+  "id": "rand_125",
+  "save": "scenario_rand_125",
+  "spec": {
+    "id": "rand_125",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Boga Gave",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42619",
+      "name": "Banastra Gascuque",
+      "weapon": "Steel knife (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42621",
+      "name": "Borbiisada Vasalo",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42625",
+      "name": "Black Pexada",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42630",
+      "name": "Gerbil Doreitox",
+      "weapon": "Steel spear (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42635",
+      "name": "Balán Neguro",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42640",
+      "name": "Carabiar Lándoa",
+      "weapon": "Steel knife (awful 85%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42642",
+      "name": "Purple Coyote",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42649",
+      "def": "Pirate_Yttakin",
+      "weapon": "pump shotgun",
+      "class": "short",
+      "x": 23,
+      "z": 247
+    },
+    {
+      "id": "Human42652",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 36,
+      "z": 249
+    },
+    {
+      "id": "Human42655",
+      "def": "Drifter_Yttakin",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 21,
+      "z": 246
+    },
+    {
+      "id": "Human42658",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 36,
+      "z": 249
+    },
+    {
+      "id": "Human42661",
+      "def": "Drifter_Yttakin",
+      "weapon": "Wooden club",
+      "class": "melee",
+      "x": 36,
+      "z": 249
+    },
+    {
+      "id": "Human42663",
+      "def": "Pirate_Yttakin",
+      "weapon": "bolt-action rifle",
+      "class": "long",
+      "x": 36,
+      "z": 249
+    },
+    {
+      "id": "Human42666",
+      "def": "Pirate_Yttakin",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 21,
+      "z": 248
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "melee": 8
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 8,
+      "enemy_n": 7,
+      "enemy_classes": {
+        "short": 2,
+        "melee": 3,
+        "long": 2
+      },
+      "enemy_points": 365.0,
+      "enemy_range_median": 15.9,
+      "enemy_closer_share": 0.71,
+      "enemy_melee_share": 0.43,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.57,
+      "count_ratio": 1.14,
+      "distance": 155.8,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.714,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.429,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

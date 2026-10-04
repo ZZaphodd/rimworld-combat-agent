@@ -1,0 +1,256 @@
+{
+  "id": "rand_069",
+  "save": "scenario_rand_069",
+  "spec": {
+    "id": "rand_069",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human42622",
+      "name": "Kusnue 'Gracie' Yang",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42627",
+      "name": "Anthony 'Tony' Gallagher",
+      "weapon": "Revolver (normal 64%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42632",
+      "name": "Hratli 'Ninjak' Skirata",
+      "weapon": "Bolt-action rifle (normal 97%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42638",
+      "name": "Kevin Czarnecki",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42644",
+      "name": "Autumn 'Red' Brown",
+      "weapon": "Bolt-action rifle (normal 91%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42650",
+      "name": "Cathryn Trobert",
+      "weapon": "Bolt-action rifle (normal 68%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42655",
+      "name": "Setsuko Cortez",
+      "weapon": "Pump shotgun (normal 65%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42662",
+      "def": "Town_Guard_Pig",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 245,
+      "z": 228
+    },
+    {
+      "id": "Human42668",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 249,
+      "z": 215
+    },
+    {
+      "id": "Human42674",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 248,
+      "z": 215
+    },
+    {
+      "id": "Human42680",
+      "def": "Villager_Pig",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 243,
+      "z": 222
+    },
+    {
+      "id": "Human42684",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 249,
+      "z": 218
+    },
+    {
+      "id": "Human42690",
+      "def": "Town_Guard_Pig",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 244,
+      "z": 223
+    },
+    {
+      "id": "Human42695",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 242,
+      "z": 219
+    },
+    {
+      "id": "Human42701",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 249,
+      "z": 215
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "short": 3,
+        "long": 5
+      },
+      "squad_range_median": 36.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 4,
+        "explosive": 3,
+        "melee": 1
+      },
+      "enemy_points": 495.0,
+      "enemy_range_median": 14.4,
+      "enemy_closer_share": 0.62,
+      "enemy_melee_share": 0.12,
+      "enemy_explosive_share": 0.38,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.0,
+      "distance": 154.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.625,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.375,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.095,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

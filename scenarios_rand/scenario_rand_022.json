@@ -1,0 +1,314 @@
+{
+  "id": "rand_022",
+  "save": "scenario_rand_022",
+  "spec": {
+    "id": "rand_022",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "Pirate",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Elsie Pyranet",
+      "weapon": "Steel knife (poor 33%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44824",
+      "name": "Tyren Nordgren",
+      "weapon": "Steel knife (poor 21%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44828",
+      "name": "Ade 'Rare' Snave",
+      "weapon": "Wooden club (45%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44832",
+      "name": "Maurizio Mezzatesta",
+      "weapon": "Steel knife (poor 39%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44836",
+      "name": "David Bishop",
+      "weapon": "Slate club (57%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44840",
+      "name": "Olive Cooper",
+      "weapon": "Steel club (27%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44844",
+      "name": "Lance 'Greyhound' Zelent",
+      "weapon": "Steel knife (poor 58%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44849",
+      "name": "Julio 'Protein' Castaneda",
+      "weapon": "Obsidian knife (poor 30%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44853",
+      "name": "Jaden 'Jade' Ittanenn",
+      "weapon": "Wooden club (22%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44858",
+      "name": "Erisen Irioth",
+      "weapon": "Steel knife (poor 37%)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44862",
+      "name": "Lilith Luxemburg",
+      "weapon": "Steel knife (poor 43%)",
+      "x": 121,
+      "z": 121,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44867",
+      "name": "Jesse 'Jess' Spence",
+      "weapon": "Steel knife (poor 35%)",
+      "x": 123,
+      "z": 121,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44871",
+      "name": "MJ Xarit",
+      "weapon": "Steel club (27%)",
+      "x": 125,
+      "z": 121,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44876",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 0,
+      "z": 61
+    },
+    {
+      "id": "Human44883",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 1,
+      "z": 60
+    },
+    {
+      "id": "Human44889",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 5,
+      "z": 53
+    },
+    {
+      "id": "Human44896",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 0,
+      "z": 52
+    },
+    {
+      "id": "Human44901",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 2,
+      "z": 46
+    },
+    {
+      "id": "Human44903",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 0,
+      "z": 55
+    },
+    {
+      "id": "Human44908",
+      "def": "Town_Councilman",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 1,
+      "z": 51
+    },
+    {
+      "id": "Human44916",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 3,
+      "z": 46
+    },
+    {
+      "id": "Human44922",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 4,
+      "z": 56
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 13,
+      "squad_classes": {
+        "melee": 13
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 13,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 4,
+        "explosive": 1,
+        "long": 2,
+        "melee": 2
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.67,
+      "enemy_melee_share": 0.22,
+      "enemy_explosive_share": 0.11,
+      "enemy_outrange_share": 0.78,
+      "count_ratio": 1.44,
+      "distance": 141.3,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.048,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

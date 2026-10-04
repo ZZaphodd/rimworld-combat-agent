@@ -1,0 +1,259 @@
+{
+  "id": "rand_039",
+  "save": "scenario_rand_039",
+  "spec": {
+    "id": "rand_039",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44820",
+      "name": "Trevor 'Trev' Austin",
+      "weapon": "Autopistol (normal 82%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44825",
+      "name": "Pontus 'Powo' Wolke",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44830",
+      "name": "Shinichi Salas",
+      "weapon": "Heavy SMG (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44835",
+      "name": "Elsie Owen",
+      "weapon": "Autopistol (poor 60%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44839",
+      "name": "Valentina Bodenstein",
+      "weapon": "Autopistol (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44844",
+      "name": "Saburo Cline",
+      "weapon": "Incendiary launcher (normal 78%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44850",
+      "name": "Zicu Hao",
+      "weapon": "Heavy SMG (normal 83%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "support",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44855",
+      "name": "Dennis Richtarski",
+      "weapon": "Revolver (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44863",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 0,
+      "z": 12
+    },
+    {
+      "id": "Human44868",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 7,
+      "z": 2
+    },
+    {
+      "id": "Human44873",
+      "def": "Town_Guard",
+      "weapon": "Incendiary launcher",
+      "class": "explosive",
+      "x": 0,
+      "z": 12
+    },
+    {
+      "id": "Human44878",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 1,
+      "z": 1
+    },
+    {
+      "id": "Human44885",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 1,
+      "z": 7
+    },
+    {
+      "id": "Human44888",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 0,
+      "z": 12
+    },
+    {
+      "id": "Human44893",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 0,
+      "z": 12
+    },
+    {
+      "id": "Human44898",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 0,
+      "z": 12
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "short": 4,
+        "long": 1,
+        "support": 2,
+        "explosive": 1
+      },
+      "squad_range_median": 25.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "long": 2,
+        "short": 2,
+        "explosive": 2,
+        "melee": 2
+      },
+      "enemy_points": 440.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.25,
+      "enemy_explosive_share": 0.25,
+      "enemy_outrange_share": 0.25,
+      "count_ratio": 1.0,
+      "distance": 168.8,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.073,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

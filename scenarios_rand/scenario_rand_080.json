@@ -1,0 +1,258 @@
+{
+  "id": "rand_080",
+  "save": "scenario_rand_080",
+  "spec": {
+    "id": "rand_080",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Poien 'Rotund' Lumoinub",
+      "weapon": "Frag grenades (80%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42619",
+      "name": "Poiub Lapoper",
+      "weapon": "Pump shotgun (normal 84%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42625",
+      "name": "Zihan 'Martin' Huang",
+      "weapon": "Frag grenades (94%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42631",
+      "name": "Popub 'Lumpy' Pugoin",
+      "weapon": "Molotov cocktails",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42636",
+      "name": "Cory 'Stomp' Gustafson",
+      "weapon": "Frag grenades",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42638",
+      "name": "Mugogg 'Piggins' Moinkmoinag",
+      "weapon": "Molotov cocktails",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42643",
+      "name": "Nebulys Strike",
+      "weapon": "Revolver (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman_Pig"
+    },
+    {
+      "id": "Human42650",
+      "name": "Pwuug 'Trough' Gawelow",
+      "weapon": "Steel knife (poor 81%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager_Pig"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42655",
+      "def": "Pirate",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 140,
+      "z": 245
+    },
+    {
+      "id": "Human42660",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 131,
+      "z": 247
+    },
+    {
+      "id": "Human42665",
+      "def": "Thrasher",
+      "weapon": "Steel mace",
+      "class": "melee",
+      "x": 135,
+      "z": 249
+    },
+    {
+      "id": "Human42670",
+      "def": "Drifter",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 131,
+      "z": 249
+    },
+    {
+      "id": "Human42674",
+      "def": "Scavenger",
+      "weapon": "pump shotgun",
+      "class": "short",
+      "x": 144,
+      "z": 248
+    },
+    {
+      "id": "Human42679",
+      "def": "Scavenger",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 144,
+      "z": 248
+    },
+    {
+      "id": "Human646",
+      "def": "Pirate",
+      "weapon": "machine pistol",
+      "class": "short",
+      "x": 145,
+      "z": 249
+    },
+    {
+      "id": "Human42684",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 131,
+      "z": 246
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "explosive": 5,
+        "short": 2,
+        "melee": 1
+      },
+      "squad_range_median": 12.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 1,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 4,
+        "melee": 2,
+        "long": 1,
+        "explosive": 1
+      },
+      "enemy_points": 435.0,
+      "enemy_range_median": 17.9,
+      "enemy_closer_share": 0.75,
+      "enemy_melee_share": 0.25,
+      "enemy_explosive_share": 0.12,
+      "enemy_outrange_share": 0.5,
+      "count_ratio": 1.0,
+      "distance": 124.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.016,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

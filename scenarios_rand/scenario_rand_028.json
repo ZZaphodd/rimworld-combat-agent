@@ -1,0 +1,265 @@
+{
+  "id": "rand_028",
+  "save": "scenario_rand_028",
+  "spec": {
+    "id": "rand_028",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Moinkoik 'Rotund' Gol-Geog",
+      "weapon": "Molotov cocktails",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44824",
+      "name": "Moiis Mowliag",
+      "weapon": "Uranium knife (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Town_Councilman_Pig"
+    },
+    {
+      "id": "Human44831",
+      "name": "Mugopp 'Sniff' Moi-Pogup",
+      "weapon": "Molotov cocktails",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44836",
+      "name": "Flebe Tyronian",
+      "weapon": "Molotov cocktails",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44843",
+      "name": "Molpen Mowobb",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human44849",
+      "name": "Squoub 'Tusk' Gamoioik",
+      "weapon": "Frag grenades (89%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44854",
+      "name": "Hratli 'Ninjak' Skirata",
+      "weapon": "Pump shotgun (poor 96%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human44860",
+      "name": "Gaobb 'Heft' Lupoiub",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44868",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 156,
+      "z": 3
+    },
+    {
+      "id": "Human44873",
+      "def": "Town_Councilman",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 158,
+      "z": 1
+    },
+    {
+      "id": "Human44880",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 154,
+      "z": 4
+    },
+    {
+      "id": "Human44886",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 151,
+      "z": 4
+    },
+    {
+      "id": "Human44892",
+      "def": "Town_Guard",
+      "weapon": "Incendiary launcher",
+      "class": "explosive",
+      "x": 154,
+      "z": 1
+    },
+    {
+      "id": "Human44897",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 150,
+      "z": 6
+    },
+    {
+      "id": "Human44902",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 154,
+      "z": 3
+    },
+    {
+      "id": "Human44908",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 154,
+      "z": 2
+    },
+    {
+      "id": "Human44912",
+      "def": "Villager",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 150,
+      "z": 6
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "explosive": 5,
+        "melee": 1,
+        "short": 2
+      },
+      "squad_range_median": 12.9,
+      "squad_range_max": 23.9,
+      "squad_melee": 1,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 4,
+        "melee": 3,
+        "explosive": 2
+      },
+      "enemy_points": 470.0,
+      "enemy_range_median": 15.9,
+      "enemy_closer_share": 0.78,
+      "enemy_melee_share": 0.33,
+      "enemy_explosive_share": 0.22,
+      "enemy_outrange_share": 0.44,
+      "count_ratio": 0.89,
+      "distance": 124.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.333,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.444,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.018,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "id": "rand_049",
+  "save": "scenario_rand_049",
+  "spec": {
+    "id": "rand_049",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Skye Lorne",
+      "weapon": "Pump shotgun (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate_Yttakin"
+    },
+    {
+      "id": "Human44822",
+      "name": "Wtt Rooyerk",
+      "weapon": "Pump shotgun (normal 49%)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    },
+    {
+      "id": "Human44826",
+      "name": "Yiyang 'Mitsuya' Jiang",
+      "weapon": "Steel knife (poor 20%)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter_Yttakin"
+    },
+    {
+      "id": "Human44830",
+      "name": "Durraen Haark",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Pirate_Yttakin"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44835",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Greatbow",
+      "class": "long",
+      "x": 229,
+      "z": 1
+    },
+    {
+      "id": "Human44839",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 217,
+      "z": 0
+    },
+    {
+      "id": "Human44844",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 222,
+      "z": 7
+    },
+    {
+      "id": "Human44847",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Pila",
+      "class": "thrown",
+      "x": 231,
+      "z": 1
+    },
+    {
+      "id": "Human44852",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 229,
+      "z": 4
+    },
+    {
+      "id": "Human44854",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 229,
+      "z": 6
+    },
+    {
+      "id": "Human44858",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 221,
+      "z": 7
+    },
+    {
+      "id": "Human44873",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 226,
+      "z": 0
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "short": 2,
+        "melee": 1,
+        "long": 1
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 1,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "long": 1,
+        "bow": 6,
+        "thrown": 1
+      },
+      "enemy_points": 465.0,
+      "enemy_range_median": 24.4,
+      "enemy_closer_share": 0.12,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.88,
+      "count_ratio": 0.5,
+      "distance": 157.9,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.104,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "id": "rand_088",
+  "save": "scenario_rand_088",
+  "spec": {
+    "id": "rand_088",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Caxigo 'Hornet' Ñora",
+      "weapon": "Recurve bow (normal 56%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44823",
+      "name": "Ler Bee",
+      "weapon": "Steel spear (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44827",
+      "name": "Purple Saigacam",
+      "weapon": "Recurve bow (normal 79%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44832",
+      "name": "White Vulture",
+      "weapon": "Steel ikwa (awful)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44836",
+      "name": "Lándoa 'Fox' Baicó",
+      "weapon": "Steel ikwa (awful)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44840",
+      "name": "Black Shark",
+      "weapon": "Short bow (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44844",
+      "name": "Trobo Camsea",
+      "weapon": "Steel knife (poor 46%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44846",
+      "name": "Condor Searroñovas",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44851",
+      "name": "Dog Tradoa",
+      "weapon": "Recurve bow (normal 86%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Pikeman44858",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 216,
+      "z": 7
+    },
+    {
+      "id": "Mech_Lancer44860",
+      "def": "Mech_Lancer",
+      "weapon": "Charge lance",
+      "class": "long",
+      "x": 17,
+      "z": 246
+    },
+    {
+      "id": "Mech_Pikeman44862",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 8,
+      "z": 245
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "bow": 4,
+        "melee": 5
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 25.9,
+      "squad_melee": 5,
+      "enemy_n": 3,
+      "enemy_classes": {
+        "long": 3
+      },
+      "enemy_points": 410.0,
+      "enemy_range_median": 44.9,
+      "enemy_closer_share": 0.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 3.0,
+      "distance": 60.9,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.444,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.444,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.038,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

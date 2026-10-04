@@ -1,0 +1,284 @@
+{
+  "id": "rand_001",
+  "save": "scenario_rand_001",
+  "spec": {
+    "id": "rand_001",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Braga 'Lobster' Xego",
+      "weapon": "Steel ikwa (poor 76%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44823",
+      "name": "White Carro",
+      "weapon": "Steel ikwa (poor 83%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44827",
+      "name": "Croio 'Barracuda' Caxetas",
+      "weapon": "Wooden club (91%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44831",
+      "name": "Braga Mule",
+      "weapon": "Steel ikwa (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44836",
+      "name": "Busto Cómaro",
+      "weapon": "Steel ikwa (poor)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44840",
+      "name": "Ñocam 'Pig' Tona",
+      "weapon": "Steel ikwa (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44844",
+      "name": "Carro 'Alligator' Galvasocam",
+      "weapon": "Wooden club (43%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44846",
+      "name": "Canbe Tranca",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44852",
+      "name": "Abruga Camel",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44858",
+      "name": "Choco Biarcocha",
+      "weapon": "Steel knife (poor 65%)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44862",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 4,
+      "z": 218
+    },
+    {
+      "id": "Human44867",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 4,
+      "z": 219
+    },
+    {
+      "id": "Human44874",
+      "def": "Villager_Pig",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 3,
+      "z": 213
+    },
+    {
+      "id": "Human44879",
+      "def": "Town_Councilman_Pig",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 6,
+      "z": 218
+    },
+    {
+      "id": "Human44887",
+      "def": "Town_Guard_Pig",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 0,
+      "z": 214
+    },
+    {
+      "id": "Human44894",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 2,
+      "z": 225
+    },
+    {
+      "id": "Human44899",
+      "def": "Town_Guard_Pig",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 7,
+      "z": 215
+    },
+    {
+      "id": "Human44904",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 1,
+      "z": 212
+    },
+    {
+      "id": "Human44909",
+      "def": "Villager_Pig",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 2,
+      "z": 212
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "melee": 10
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 10,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 5,
+        "explosive": 1,
+        "melee": 2,
+        "support": 1
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.78,
+      "enemy_melee_share": 0.22,
+      "enemy_explosive_share": 0.11,
+      "enemy_outrange_share": 0.78,
+      "count_ratio": 1.11,
+      "distance": 152.8,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.039,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

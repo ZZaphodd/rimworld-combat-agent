@@ -1,0 +1,243 @@
+{
+  "id": "rand_015",
+  "save": "scenario_rand_015",
+  "spec": {
+    "id": "rand_015",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Mallard Ambisa",
+      "weapon": "Greatbow (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human42619",
+      "name": "Ape Bilegoda",
+      "weapon": "Steel ikwa (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42624",
+      "name": "Losai Manatee",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42628",
+      "name": "Green Alpaca",
+      "weapon": "Steel ikwa (normal 87%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42632",
+      "name": "Crica Laa",
+      "weapon": "Steel knife (poor 50%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42634",
+      "name": "Perei Curne",
+      "weapon": "Wooden club (55%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42639",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 247,
+      "z": 204
+    },
+    {
+      "id": "Human42646",
+      "def": "Scavenger",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 243,
+      "z": 203
+    },
+    {
+      "id": "Human42653",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 249,
+      "z": 205
+    },
+    {
+      "id": "Human42658",
+      "def": "Scavenger",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 248,
+      "z": 198
+    },
+    {
+      "id": "Human42663",
+      "def": "Scavenger",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 247,
+      "z": 194
+    },
+    {
+      "id": "Human42668",
+      "def": "Pirate",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 246,
+      "z": 198
+    },
+    {
+      "id": "Human42675",
+      "def": "Scavenger",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 248,
+      "z": 191
+    },
+    {
+      "id": "Human42680",
+      "def": "Scavenger",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 248,
+      "z": 191
+    },
+    {
+      "id": "Human42682",
+      "def": "Grenadier_Tox",
+      "weapon": "Tox grenades",
+      "class": "explosive",
+      "x": 244,
+      "z": 194
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 6,
+      "squad_classes": {
+        "long": 1,
+        "melee": 5
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 29.9,
+      "squad_melee": 5,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "explosive": 2,
+        "short": 7
+      },
+      "enemy_points": 490.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.78,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.22,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 0.67,
+      "distance": 142.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.167,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.167,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.024,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

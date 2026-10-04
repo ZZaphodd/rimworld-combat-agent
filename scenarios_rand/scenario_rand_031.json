@@ -1,0 +1,211 @@
+{
+  "id": "rand_031",
+  "save": "scenario_rand_031",
+  "spec": {
+    "id": "rand_031",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Empire",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Buffalo Vasol",
+      "weapon": "Steel knife (awful 69%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42618",
+      "name": "Blue Cheetah",
+      "weapon": "Steel knife (poor 29%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42620",
+      "name": "Biliramito Miñoca",
+      "weapon": "Steel club",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42622",
+      "name": "Weasel Laroas",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42627",
+      "name": "Riesling Bacchus",
+      "weapon": "Limestone club (51%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42629",
+      "name": "Pheasant Vasalo",
+      "weapon": "Steel ikwa (awful)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42634",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Wooden gladius",
+      "class": "melee",
+      "x": 2,
+      "z": 216
+    },
+    {
+      "id": "Human42639",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge lance",
+      "class": "long",
+      "x": 5,
+      "z": 212
+    },
+    {
+      "id": "Human42644",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Hellcat rifle",
+      "class": "medium",
+      "x": 0,
+      "z": 202
+    },
+    {
+      "id": "Human42651",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Hellcat rifle",
+      "class": "medium",
+      "x": 0,
+      "z": 217
+    },
+    {
+      "id": "Human42658",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Zeushammer",
+      "class": "melee",
+      "x": 0,
+      "z": 217
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 6,
+      "squad_classes": {
+        "melee": 6
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 6,
+      "enemy_n": 5,
+      "enemy_classes": {
+        "melee": 2,
+        "long": 1,
+        "medium": 2
+      },
+      "enemy_points": 430.0,
+      "enemy_range_median": 26.9,
+      "enemy_closer_share": 0.4,
+      "enemy_melee_share": 0.4,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.6,
+      "count_ratio": 1.2,
+      "distance": 151.3,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.4,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.4,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.03,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

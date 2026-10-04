@@ -1,0 +1,215 @@
+{
+  "id": "rand_024",
+  "save": "scenario_rand_024",
+  "spec": {
+    "id": "rand_024",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "By Wyn'kottysh",
+      "weapon": "Molotov cocktails",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42621",
+      "name": "Ryuk Durhoytt",
+      "weapon": "Frag grenades",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42628",
+      "name": "Ko Wyn'byttul",
+      "weapon": "Molotov cocktails",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42635",
+      "name": "Roya Byark",
+      "weapon": "Molotov cocktails",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42643",
+      "def": "Town_Councilman_Pig",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 0,
+      "z": 98
+    },
+    {
+      "id": "Human42650",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 1,
+      "z": 96
+    },
+    {
+      "id": "Human42654",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 0,
+      "z": 83
+    },
+    {
+      "id": "Human42660",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 2,
+      "z": 83
+    },
+    {
+      "id": "Human42666",
+      "def": "Town_Guard_Pig",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 0,
+      "z": 82
+    },
+    {
+      "id": "Human42671",
+      "def": "Town_Guard_Pig",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 1,
+      "z": 97
+    },
+    {
+      "id": "Human42676",
+      "def": "Villager_Pig",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 0,
+      "z": 83
+    },
+    {
+      "id": "Human42680",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 5,
+      "z": 89
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "explosive": 4
+      },
+      "squad_range_median": 12.9,
+      "squad_range_max": 12.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 3,
+        "explosive": 4,
+        "melee": 1
+      },
+      "enemy_points": 485.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.12,
+      "enemy_explosive_share": 0.5,
+      "enemy_outrange_share": 0.25,
+      "count_ratio": 0.5,
+      "distance": 129.0,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.024,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

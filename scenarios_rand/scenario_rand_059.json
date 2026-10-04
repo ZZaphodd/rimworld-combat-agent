@@ -1,0 +1,252 @@
+{
+  "id": "rand_059",
+  "save": "scenario_rand_059",
+  "spec": {
+    "id": "rand_059",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Empire",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Nanami Hancock",
+      "weapon": "Revolver (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human42622",
+      "name": "Hyacinth 'Hya' Staros",
+      "weapon": "Pump shotgun (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42628",
+      "name": "Dolly Doloryl",
+      "weapon": "Autopistol (poor 69%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42633",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Machine pistol (good)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42638",
+      "name": "Freya 'Tail' Fairwing",
+      "weapon": "Heavy SMG (normal 89%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42645",
+      "name": "Kiku Usino",
+      "weapon": "Heavy SMG (normal 94%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "support",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42651",
+      "name": "Edore 'Eddie' Surana",
+      "weapon": "Revolver (normal 76%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42657",
+      "name": "Bull 'Pepper' Chang",
+      "weapon": "Steel knife (awful)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42671",
+      "name": "Maria-Vaneza 'Tres' Inot",
+      "weapon": "Machine pistol (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42677",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Chain shotgun",
+      "class": "short",
+      "x": 249,
+      "z": 122
+    },
+    {
+      "id": "Human42685",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "LMG",
+      "class": "support",
+      "x": 247,
+      "z": 116
+    },
+    {
+      "id": "Human42692",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Steel longsword",
+      "class": "melee",
+      "x": 247,
+      "z": 119
+    },
+    {
+      "id": "Human42706",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Chain shotgun",
+      "class": "short",
+      "x": 247,
+      "z": 114
+    },
+    {
+      "id": "Human42713",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge rifle",
+      "class": "medium",
+      "x": 248,
+      "z": 120
+    },
+    {
+      "id": "Human42719",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Chain shotgun",
+      "class": "short",
+      "x": 247,
+      "z": 121
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 6,
+        "support": 2,
+        "melee": 1
+      },
+      "squad_range_median": 22.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 1,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "short": 3,
+        "support": 1,
+        "melee": 1,
+        "medium": 1
+      },
+      "enemy_points": 460.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 0.67,
+      "enemy_melee_share": 0.17,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.17,
+      "count_ratio": 1.5,
+      "distance": 123.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.889,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.167,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.889,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.167,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.016,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

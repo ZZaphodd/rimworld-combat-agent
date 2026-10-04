@@ -1,0 +1,257 @@
+{
+  "id": "rand_090",
+  "save": "scenario_rand_090",
+  "spec": {
+    "id": "rand_090",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44820",
+      "name": "Joshua Stubbles",
+      "weapon": "Heavy SMG (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44825",
+      "name": "Zane Huynh",
+      "weapon": "Autopistol (good)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human44834",
+      "name": "Martin 'Marty' Tallman",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44839",
+      "name": "Carlotta Frank",
+      "weapon": "Bolt-action rifle (normal 70%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44844",
+      "name": "Robert 'Arcturus' Brown",
+      "weapon": "Pump shotgun (poor)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44850",
+      "name": "Eva Fischer",
+      "weapon": "Pump shotgun (normal 98%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44856",
+      "name": "Harriet Novak",
+      "weapon": "Pump shotgun (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44861",
+      "name": "Sydney 'Syd' Barber",
+      "weapon": "Revolver (normal 22%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44867",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 0,
+      "z": 166
+    },
+    {
+      "id": "Human44873",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 0,
+      "z": 180
+    },
+    {
+      "id": "Human44878",
+      "def": "Town_Councilman",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 0,
+      "z": 180
+    },
+    {
+      "id": "Human44885",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 2,
+      "z": 165
+    },
+    {
+      "id": "Human44891",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 0,
+      "z": 180
+    },
+    {
+      "id": "Human44908",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 2,
+      "z": 167
+    },
+    {
+      "id": "Human44920",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 1,
+      "z": 165
+    },
+    {
+      "id": "Human44925",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 5,
+      "z": 169
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "support": 1,
+        "short": 5,
+        "melee": 1,
+        "long": 1
+      },
+      "squad_range_median": 19.4,
+      "squad_range_max": 36.9,
+      "squad_melee": 1,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 7,
+        "long": 1
+      },
+      "enemy_points": 445.0,
+      "enemy_range_median": 22.9,
+      "enemy_closer_share": 0.88,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.5,
+      "count_ratio": 1.0,
+      "distance": 131.8,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.026,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

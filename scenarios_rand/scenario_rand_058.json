@@ -1,0 +1,255 @@
+{
+  "id": "rand_058",
+  "save": "scenario_rand_058",
+  "spec": {
+    "id": "rand_058",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44820",
+      "name": "Poinis Molorg",
+      "weapon": "Frag grenades",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44826",
+      "name": "Trevor 'Trev' Austin",
+      "weapon": "Revolver (good)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman_Pig"
+    },
+    {
+      "id": "Human44832",
+      "name": "Squaag Poinlaoik",
+      "weapon": "Pump shotgun (normal 83%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human44838",
+      "name": "Poiog 'Curly' Squamukogg",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human44842",
+      "name": "Buopp Moinork",
+      "weapon": "Molotov cocktails",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44849",
+      "name": "Paul Paulson",
+      "weapon": "Pump shotgun (normal 94%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human44854",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Autopistol (poor)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human44858",
+      "name": "Pigork Gubuup",
+      "weapon": "Molotov cocktails (97%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44863",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 38,
+      "z": 0
+    },
+    {
+      "id": "Human44869",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 36,
+      "z": 5
+    },
+    {
+      "id": "Human44874",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 32,
+      "z": 5
+    },
+    {
+      "id": "Human44879",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 36,
+      "z": 1
+    },
+    {
+      "id": "Human44884",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 38,
+      "z": 2
+    },
+    {
+      "id": "Human44891",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 23,
+      "z": 0
+    },
+    {
+      "id": "Human44897",
+      "def": "Town_Councilman",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 23,
+      "z": 0
+    },
+    {
+      "id": "Human44904",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 31,
+      "z": 4
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "explosive": 3,
+        "short": 5
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 7,
+        "melee": 1
+      },
+      "enemy_points": 430.0,
+      "enemy_range_median": 20.9,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 0.12,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.5,
+      "count_ratio": 1.0,
+      "distance": 153.0,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.048,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

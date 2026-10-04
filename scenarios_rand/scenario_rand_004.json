@@ -1,0 +1,175 @@
+{
+  "id": "rand_004",
+  "save": "scenario_rand_004",
+  "spec": {
+    "id": "rand_004",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Nekpusli Ropas",
+      "weapon": "Biocoded charge lance (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42621",
+      "name": "Gratian Laskaris",
+      "weapon": "Biocoded heavy SMG (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42627",
+      "name": "Callincus Troare",
+      "weapon": "Chain shotgun (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Empire_Fighter_Trooper"
+    },
+    {
+      "id": "Human42633",
+      "name": "Athenais Usdeus",
+      "weapon": "Silver longsword (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther42658",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 17,
+      "z": 214
+    },
+    {
+      "id": "Mech_Scyther42659",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 21,
+      "z": 217
+    },
+    {
+      "id": "Mech_Scyther42657",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 15,
+      "z": 224
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "long": 1,
+        "support": 1,
+        "short": 1,
+        "melee": 1
+      },
+      "squad_range_median": 17.9,
+      "squad_range_max": 32.9,
+      "squad_melee": 1,
+      "enemy_n": 3,
+      "enemy_classes": {
+        "melee": 3
+      },
+      "enemy_points": 450.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.33,
+      "distance": 142.2,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.017,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

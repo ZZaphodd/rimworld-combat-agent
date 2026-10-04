@@ -24,7 +24,17 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
      a later Anomaly event would end an episode as invalid;
    * baseline-v2: 6 doctrines × 6 t500 themes × 10 (`--scenarios tier:t500`); tag `baseline-v2`;
    * re-run the calibration fits (no_progress, losing_trade, preconditions) on v2.
-2. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted
+2. [ ] **After the router night run (results/night/README.md)** — fix and investigate:
+   * bug: colonists lost double-counts a pawn that died and was carried off (rand_107: lost 10
+     with a squad of 9) — `measure()` deaths vs squad_kidnapped;
+   * `vs_throwers=stand_off` lost both night tests with few kills (rand_029 bows, rand_069
+     rifles): moving pawns don't shoot and isolated pawns get kidnapped — check the option
+     before evaluating it (the human round 2 was cover positioning, not this rule);
+   * the briefing should show weapon quality (awful / poor squads lost hard, rand_094: 0 kills);
+   * kite stalls against melee mechs that loiter (rand_004 timeout);
+   * human demonstrations on the losing types (bows vs guns, all-thrower squads, guns vs Empire,
+     savage squads) from results/night/worst.md.
+3. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted
    (WIP commit; usage limit).** Measurement-only, so it may merge on passing tests before v2.
    Status:
    * KPIs written (friendly hits from the pooled battle log, lane intrusion) — report-only;

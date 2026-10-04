@@ -1,0 +1,273 @@
+{
+  "id": "rand_101",
+  "save": "scenario_rand_101",
+  "spec": {
+    "id": "rand_101",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Red Canraabru",
+      "weapon": "Wooden club (32%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42617",
+      "name": "Doaduepe Muffalo",
+      "weapon": "Steel ikwa (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42622",
+      "name": "Cambangua 'Snake' Busttra",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42627",
+      "name": "Robalcam Lavego",
+      "weapon": "Steel club",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42629",
+      "name": "Xadabacurabru 'Porcupine' Borba",
+      "weapon": "Steel spear (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42633",
+      "name": "Danny 'Dan' Zitro",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42638",
+      "name": "White Chinchilla",
+      "weapon": "Steel spear (poor)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42642",
+      "name": "Gray Caga",
+      "weapon": "Steel spear (poor)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42646",
+      "name": "Brabobrei Tranlou",
+      "weapon": "Steel knife (poor 76%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42649",
+      "def": "Pirate",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 247,
+      "z": 203
+    },
+    {
+      "id": "Human42655",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 247,
+      "z": 205
+    },
+    {
+      "id": "Human42660",
+      "def": "Scavenger",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 247,
+      "z": 198
+    },
+    {
+      "id": "Human42665",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 249,
+      "z": 199
+    },
+    {
+      "id": "Human42670",
+      "def": "Scavenger",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 249,
+      "z": 199
+    },
+    {
+      "id": "Human42676",
+      "def": "Thrasher",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 247,
+      "z": 206
+    },
+    {
+      "id": "Human42682",
+      "def": "Pirate",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 249,
+      "z": 201
+    },
+    {
+      "id": "Human42690",
+      "def": "Scavenger",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 244,
+      "z": 200
+    },
+    {
+      "id": "Human42696",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 247,
+      "z": 212
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 9
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 9,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 7,
+        "explosive": 1,
+        "melee": 1
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.89,
+      "enemy_melee_share": 0.11,
+      "enemy_explosive_share": 0.11,
+      "enemy_outrange_share": 0.89,
+      "count_ratio": 1.0,
+      "distance": 145.7,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.889,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.052,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

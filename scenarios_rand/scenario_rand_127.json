@@ -1,0 +1,268 @@
+{
+  "id": "rand_127",
+  "save": "scenario_rand_127",
+  "spec": {
+    "id": "rand_127",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Irotox 'Barracuda' Toxos",
+      "weapon": "Short bow (poor 67%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44822",
+      "name": "Laque Pigeon",
+      "weapon": "Short bow (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44826",
+      "name": "Crica Eagle",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44830",
+      "name": "Ñala Baicagape",
+      "weapon": "Short bow (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44833",
+      "name": "Tol Borba",
+      "weapon": "Short bow (poor)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44836",
+      "name": "Mabe Tasulo",
+      "weapon": "Pila (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human44841",
+      "name": "Black Raraguatas",
+      "weapon": "Wooden club (95%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44843",
+      "name": "White Trout",
+      "weapon": "Steel ikwa (awful 75%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44847",
+      "name": "Gobiar 'Grasshopper' Ambas",
+      "weapon": "Steel ikwa (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44851",
+      "name": "Xoscamgalcho 'Owl' Gada",
+      "weapon": "Short bow (poor)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44868",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 83,
+      "z": 249
+    },
+    {
+      "id": "Human44870",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 86,
+      "z": 248
+    },
+    {
+      "id": "Human44873",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 93,
+      "z": 246
+    },
+    {
+      "id": "Human44878",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 83,
+      "z": 249
+    },
+    {
+      "id": "Human44880",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 83,
+      "z": 249
+    },
+    {
+      "id": "Human44882",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 83,
+      "z": 249
+    },
+    {
+      "id": "Human44884",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 90,
+      "z": 246
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "bow": 5,
+        "melee": 4,
+        "thrown": 1
+      },
+      "squad_range_median": 20.9,
+      "squad_range_max": 22.9,
+      "squad_melee": 4,
+      "enemy_n": 7,
+      "enemy_classes": {
+        "melee": 6,
+        "bow": 1
+      },
+      "enemy_points": 310.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 0.86,
+      "enemy_melee_share": 0.86,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.43,
+      "distance": 130.0,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.6,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.857,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.857,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.6,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.039,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

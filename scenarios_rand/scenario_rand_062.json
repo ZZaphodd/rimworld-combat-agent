@@ -1,0 +1,209 @@
+{
+  "id": "rand_062",
+  "save": "scenario_rand_062",
+  "spec": {
+    "id": "rand_062",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Gratian Arianites",
+      "weapon": "Wooden warhammer (poor)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42621",
+      "name": "Nepla Bosbastheo",
+      "weapon": "Biocoded LMG (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Empire_Fighter_Trooper"
+    },
+    {
+      "id": "Human42628",
+      "name": "Petronella Philonus",
+      "weapon": "Assault rifle (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42634",
+      "name": "Zena Rore",
+      "weapon": "LMG (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Empire_Fighter_Trooper"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42642",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 110,
+      "z": 1
+    },
+    {
+      "id": "Human42646",
+      "def": "Drifter_Yttakin",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 108,
+      "z": 7
+    },
+    {
+      "id": "Human42648",
+      "def": "Pirate_Yttakin",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 105,
+      "z": 3
+    },
+    {
+      "id": "Human42651",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 113,
+      "z": 3
+    },
+    {
+      "id": "WildBoar42656",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 110,
+      "z": 2
+    },
+    {
+      "id": "Human42657",
+      "def": "Pirate_Yttakin",
+      "weapon": "autopistol",
+      "class": "short",
+      "x": 102,
+      "z": 6
+    },
+    {
+      "id": "Human42660",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 108,
+      "z": 6
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "melee": 1,
+        "support": 2,
+        "medium": 1
+      },
+      "squad_range_median": 25.9,
+      "squad_range_max": 30.9,
+      "squad_melee": 1,
+      "enemy_n": 7,
+      "enemy_classes": {
+        "melee": 3,
+        "long": 1,
+        "short": 3
+      },
+      "enemy_points": 370.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.86,
+      "enemy_melee_share": 0.43,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.14,
+      "count_ratio": 0.57,
+      "distance": 122.2,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.857,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.429,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.143,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.015,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

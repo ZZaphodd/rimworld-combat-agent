@@ -1,0 +1,208 @@
+{
+  "id": "rand_020",
+  "save": "scenario_rand_020",
+  "spec": {
+    "id": "rand_020",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Camel Léas",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42619",
+      "name": "Purple Pheasant",
+      "weapon": "Steel spear (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42624",
+      "name": "Gañacanño Balbilaban",
+      "weapon": "Steel club (65%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42626",
+      "name": "Elk Leño",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42631",
+      "name": "Ibis Abanqueiro",
+      "weapon": "Steel spear (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42636",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 0,
+      "z": 40
+    },
+    {
+      "id": "WildBoar42641",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 4,
+      "z": 51
+    },
+    {
+      "id": "WildBoar42642",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 5,
+      "z": 51
+    },
+    {
+      "id": "WildBoar42643",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 3,
+      "z": 44
+    },
+    {
+      "id": "WildBoar42644",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 0,
+      "z": 46
+    },
+    {
+      "id": "Human42645",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 1,
+      "z": 51
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 5,
+      "squad_classes": {
+        "melee": 5
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 5,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "explosive": 2,
+        "other": 4
+      },
+      "enemy_points": 360.0,
+      "enemy_range_median": 25.0,
+      "enemy_closer_share": 0.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.33,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 0.83,
+      "distance": 145.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.333,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.015,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

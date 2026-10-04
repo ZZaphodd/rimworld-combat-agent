@@ -1,0 +1,258 @@
+{
+  "id": "rand_096",
+  "save": "scenario_rand_096",
+  "spec": {
+    "id": "rand_096",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Orange Zebra",
+      "weapon": "Steel club (23%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42617",
+      "name": "Troroca Baigomeagua",
+      "weapon": "Sandstone club",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42619",
+      "name": "Red Caca",
+      "weapon": "Wooden club (69%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42621",
+      "name": "Ralph 'Humps' Brock",
+      "weapon": "Steel club (97%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42623",
+      "name": "Alocriga Miñoca",
+      "weapon": "Steel knife (poor)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42625",
+      "name": "Lerborcam Oyster",
+      "weapon": "Steel spear (good)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42630",
+      "name": "Red Cano",
+      "weapon": "Steel spear (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42636",
+      "name": "Green Iraque",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42639",
+      "name": "Choler Olga",
+      "weapon": "Steel ikwa (poor 54%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42643",
+      "name": "Becam Mabiborbo",
+      "weapon": "Steel spear (normal)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42651",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 85,
+      "z": 5
+    },
+    {
+      "id": "Human42655",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 81,
+      "z": 0
+    },
+    {
+      "id": "Human42659",
+      "def": "Tribal_Penitent",
+      "weapon": "Marble club",
+      "class": "melee",
+      "x": 77,
+      "z": 1
+    },
+    {
+      "id": "Human42662",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 84,
+      "z": 3
+    },
+    {
+      "id": "Human42666",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 83,
+      "z": 6
+    },
+    {
+      "id": "Human42669",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 87,
+      "z": 3
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "melee": 10
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 10,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "melee": 5,
+        "bow": 1
+      },
+      "enemy_points": 275.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 0.83,
+      "enemy_melee_share": 0.83,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.17,
+      "count_ratio": 1.67,
+      "distance": 128.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.833,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.833,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.022,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "id": "rand_103",
+  "save": "scenario_rand_103",
+  "spec": {
+    "id": "rand_103",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Empire",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Benjamin 'Ben' Woolums",
+      "weapon": "Limestone club (73%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42620",
+      "name": "Kef 'Waste' Skrapkin",
+      "weapon": "Steel club",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42625",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Wooden mace (poor 86%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42630",
+      "name": "Matthew 'Mahoo' Young",
+      "weapon": "Steel club (85%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42635",
+      "name": "Gem Dampskow",
+      "weapon": "Steel axe (poor 75%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42642",
+      "name": "Az 'Knife' Rokak",
+      "weapon": "Wooden club (68%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42647",
+      "name": "Rissa Gransier",
+      "weapon": "Steel club (75%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42653",
+      "name": "Riel 'Elaina' Kenway",
+      "weapon": "Steel knife (poor 76%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42659",
+      "name": "John 'Jack' Sullivan",
+      "weapon": "Wooden club (83%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42665",
+      "name": "Gwoup 'Nostril' Ween",
+      "weapon": "Steel axe (poor)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42672",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge rifle",
+      "class": "medium",
+      "x": 248,
+      "z": 48
+    },
+    {
+      "id": "Human42678",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 249,
+      "z": 35
+    },
+    {
+      "id": "Human42685",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge rifle",
+      "class": "medium",
+      "x": 248,
+      "z": 35
+    },
+    {
+      "id": "Human42691",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 246,
+      "z": 36
+    },
+    {
+      "id": "Human42698",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Assault rifle",
+      "class": "medium",
+      "x": 244,
+      "z": 39
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "melee": 10
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 10,
+      "enemy_n": 5,
+      "enemy_classes": {
+        "medium": 3,
+        "melee": 1,
+        "support": 1
+      },
+      "enemy_points": 430.0,
+      "enemy_range_median": 27.9,
+      "enemy_closer_share": 0.2,
+      "enemy_melee_share": 0.2,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.8,
+      "count_ratio": 2.0,
+      "distance": 148.9,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.2,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.2,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.034,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

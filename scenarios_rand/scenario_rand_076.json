@@ -1,0 +1,247 @@
+{
+  "id": "rand_076",
+  "save": "scenario_rand_076",
+  "spec": {
+    "id": "rand_076",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Moioin Buguug",
+      "weapon": "Autopistol (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42620",
+      "name": "Pablo Cholaky",
+      "weapon": "Revolver (normal 89%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42625",
+      "name": "Liog 'Ruffle' Poag",
+      "weapon": "Autopistol (awful 84%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human42631",
+      "name": "Woorg Moow",
+      "weapon": "Machine pistol (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42637",
+      "name": "Balug Squmuger",
+      "weapon": "Autopistol (good)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman_Pig"
+    },
+    {
+      "id": "Human42644",
+      "name": "Gleag Poinap",
+      "weapon": "Autopistol (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42649",
+      "name": "Poloik 'Hog' Molpigub",
+      "weapon": "Revolver (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42654",
+      "name": "Hratli 'Ninjak' Skirata",
+      "weapon": "Revolver (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42659",
+      "name": "John 'Blitz' Kriegsler",
+      "weapon": "Autopistol (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42666",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 113,
+      "z": 2
+    },
+    {
+      "id": "Human42668",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 120,
+      "z": 4
+    },
+    {
+      "id": "Human42673",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 108,
+      "z": 0
+    },
+    {
+      "id": "Human42678",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 120,
+      "z": 4
+    },
+    {
+      "id": "Human42680",
+      "def": "Tribal_Penitent",
+      "weapon": "Wooden club",
+      "class": "melee",
+      "x": 121,
+      "z": 3
+    },
+    {
+      "id": "Human42682",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 120,
+      "z": 0
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 9
+      },
+      "squad_range_median": 25.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 0,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "melee": 6
+      },
+      "enemy_points": 290.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.5,
+      "distance": 122.2,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.028,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

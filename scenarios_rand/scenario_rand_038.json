@@ -1,0 +1,235 @@
+{
+  "id": "rand_038",
+  "save": "scenario_rand_038",
+  "spec": {
+    "id": "rand_038",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Kangaroo Carro",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42620",
+      "name": "Crica Traalogalsea",
+      "weapon": "Steel ikwa (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42624",
+      "name": "Bico Brígagua",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42628",
+      "name": "Llogogoma 'Dragon' Abeneiro",
+      "weapon": "Steel breach axe (poor 71%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Breacher"
+    },
+    {
+      "id": "Human42632",
+      "name": "Tasca Lemur",
+      "weapon": "Steel ikwa (poor 90%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42636",
+      "name": "Traoca 'Jackal' Gaxosbocom",
+      "weapon": "Steel knife (normal 28%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42641",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Pila",
+      "class": "thrown",
+      "x": 0,
+      "z": 218
+    },
+    {
+      "id": "Human42645",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 0,
+      "z": 203
+    },
+    {
+      "id": "Human42649",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 7,
+      "z": 209
+    },
+    {
+      "id": "Human42653",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 0,
+      "z": 214
+    },
+    {
+      "id": "Human42657",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 1,
+      "z": 204
+    },
+    {
+      "id": "Human42661",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 0,
+      "z": 203
+    },
+    {
+      "id": "Human42665",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Greatbow",
+      "class": "long",
+      "x": 0,
+      "z": 212
+    },
+    {
+      "id": "Human42677",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 2,
+      "z": 216
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 6,
+      "squad_classes": {
+        "melee": 6
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 6,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "thrown": 1,
+        "bow": 6,
+        "long": 1
+      },
+      "enemy_points": 480.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.12,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 0.75,
+      "distance": 149.7,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.03,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

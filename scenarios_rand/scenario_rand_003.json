@@ -1,0 +1,267 @@
+{
+  "id": "rand_003",
+  "save": "scenario_rand_003",
+  "spec": {
+    "id": "rand_003",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Maria 'Manju' Manning",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human44827",
+      "name": "Jose 'Pansy' Cowan",
+      "weapon": "Steel axe (poor 69%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human44832",
+      "name": "Lia Lu",
+      "weapon": "Steel knife (poor 54%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44834",
+      "name": "Erie 'Diver' Riggs",
+      "weapon": "Steel knife (awful 55%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44837",
+      "name": "Nikolay Bailey",
+      "weapon": "Machine pistol (poor 70%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human44841",
+      "name": "Azskab 'Gloom' Popkill",
+      "weapon": "Biocoded machine pistol (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human44848",
+      "name": "Skulrak 'Drowner' Farad",
+      "weapon": "Steel knife (poor 28%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44851",
+      "name": "Molpup 'Piglet' Powoik",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human44857",
+      "name": "Dek 'Bones' Barik",
+      "weapon": "Wooden mace (awful 69%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44865",
+      "def": "Villager",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 245,
+      "z": 12
+    },
+    {
+      "id": "Human44870",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 249,
+      "z": 13
+    },
+    {
+      "id": "Human44875",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 242,
+      "z": 9
+    },
+    {
+      "id": "Human44883",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 248,
+      "z": 15
+    },
+    {
+      "id": "Human44888",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 249,
+      "z": 10
+    },
+    {
+      "id": "Human44893",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 245,
+      "z": 14
+    },
+    {
+      "id": "Human44899",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 246,
+      "z": 9
+    },
+    {
+      "id": "Human44907",
+      "def": "Town_Guard",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 242,
+      "z": 8
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "long": 1,
+        "melee": 5,
+        "short": 3
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 36.9,
+      "squad_melee": 5,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 5,
+        "long": 2,
+        "support": 1
+      },
+      "enemy_points": 445.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.62,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 1.12,
+      "distance": 165.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.444,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.625,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.444,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.039,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

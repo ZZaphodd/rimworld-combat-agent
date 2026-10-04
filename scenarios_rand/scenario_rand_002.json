@@ -1,0 +1,276 @@
+{
+  "id": "rand_002",
+  "save": "scenario_rand_002",
+  "spec": {
+    "id": "rand_002",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Mushinto Takamu",
+      "weapon": "Uranium knife (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Town_Councilman_Pig"
+    },
+    {
+      "id": "Human44825",
+      "name": "Kjelt Karlsen",
+      "weapon": "Molotov cocktails",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44832",
+      "name": "Golopp Luup",
+      "weapon": "Steel knife (poor 25%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human44837",
+      "name": "Liopp Pwuer",
+      "weapon": "Pump shotgun (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human44843",
+      "name": "Baler Mugub",
+      "weapon": "Pump shotgun (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human44848",
+      "name": "Koogg 'Lard' Moipiopp",
+      "weapon": "Frag grenades",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human44857",
+      "name": "Squooik Maorg",
+      "weapon": "Revolver (poor 80%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human44861",
+      "name": "Poinkog 'Pong' Poog",
+      "weapon": "Revolver (awful 35%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human44865",
+      "name": "Moinopp 'Hog' Kopoiup",
+      "weapon": "Revolver (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44873",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 248,
+      "z": 157
+    },
+    {
+      "id": "Human44880",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 244,
+      "z": 168
+    },
+    {
+      "id": "Human44884",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 246,
+      "z": 156
+    },
+    {
+      "id": "Human44888",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 249,
+      "z": 155
+    },
+    {
+      "id": "Human44894",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 246,
+      "z": 168
+    },
+    {
+      "id": "Human44899",
+      "def": "Town_Guard",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 249,
+      "z": 154
+    },
+    {
+      "id": "Human44905",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 243,
+      "z": 165
+    },
+    {
+      "id": "Human44912",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 247,
+      "z": 160
+    },
+    {
+      "id": "Human44918",
+      "def": "Villager",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 248,
+      "z": 167
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 2,
+        "explosive": 2,
+        "short": 5
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 2,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 5,
+        "melee": 1,
+        "explosive": 2,
+        "support": 1
+      },
+      "enemy_points": 495.0,
+      "enemy_range_median": 15.9,
+      "enemy_closer_share": 0.67,
+      "enemy_melee_share": 0.11,
+      "enemy_explosive_share": 0.22,
+      "enemy_outrange_share": 0.44,
+      "count_ratio": 1.0,
+      "distance": 127.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.444,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.056,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

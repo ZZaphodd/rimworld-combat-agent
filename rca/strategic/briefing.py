@@ -19,9 +19,18 @@ def _centroid(ps):
     return (sum(p["x"] for p in ps) / len(ps), sum(p["z"] for p in ps) / len(ps))
 
 
+def _animal_melee(e):
+    """Animals carry no weapon and no mech kind: they fight in melee (range 1.5), while
+    weapon_class/weapon_range would call them 'other' with the default range 25."""
+    if not e.get("weapon") or e.get("weapon") == "none":
+        if not (e.get("def") or "").startswith("Mech_") and e.get("class") == "other":
+            return {**e, "class": "melee", "weapon": "Bite (animal)"}
+    return e
+
+
 def features(manifest):
     """Composition numbers from a manifest (offline, no game)."""
-    sq, en = manifest["squad"], manifest["enemy"]
+    sq, en = manifest["squad"], [_animal_melee(e) for e in manifest["enemy"]]
     sq_r = [weapon_range(p.get("weapon") or "", p.get("kind", "")) for p in sq]
     en_r = [weapon_range(e.get("weapon") or "", e.get("def", "")) for e in en]
     en_cls = Counter(e.get("class", "other") for e in en)
@@ -51,7 +60,7 @@ def preconditions(rm, manifest, names=("doctrine", "turtle", "spread", "kite", "
     from ..tactical.preconditions import Context, check
     from ..terrain import Terrain
     terrain = Terrain(rm)
-    sq, en = manifest["squad"], manifest["enemy"]
+    sq, en = manifest["squad"], [_animal_melee(e) for e in manifest["enemy"]]
     squad = [{"pos": (p["x"], p["z"]), "range": weapon_range(p.get("weapon") or ""),
               "melee": is_melee(p.get("weapon") or "")} for p in sq]
     enemies = [{"pos": (e["x"], e["z"]), "cls": e.get("class", "other"),

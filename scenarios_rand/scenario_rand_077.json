@@ -1,0 +1,226 @@
+{
+  "id": "rand_077",
+  "save": "scenario_rand_077",
+  "spec": {
+    "id": "rand_077",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Shaesh Kyshersh",
+      "weapon": "Machine pistol (poor 86%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    },
+    {
+      "id": "Human42619",
+      "name": "Ro Orul",
+      "weapon": "Autopistol (awful 52%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    },
+    {
+      "id": "Human42622",
+      "name": "Felix von Schild",
+      "weapon": "Biocoded machine pistol (awful 53%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    },
+    {
+      "id": "Human42625",
+      "name": "Wyshersh Kin'banya",
+      "weapon": "Molotov cocktails",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42631",
+      "name": "Wttduersh Shouk",
+      "weapon": "Slate club (33%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter_Yttakin"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42634",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 1,
+      "z": 38
+    },
+    {
+      "id": "Human42637",
+      "def": "Scavenger_Yttakin",
+      "weapon": "machine pistol",
+      "class": "short",
+      "x": 6,
+      "z": 28
+    },
+    {
+      "id": "Human42641",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 0,
+      "z": 23
+    },
+    {
+      "id": "Human42644",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 2,
+      "z": 26
+    },
+    {
+      "id": "Human42647",
+      "def": "Drifter_Yttakin",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 1,
+      "z": 36
+    },
+    {
+      "id": "Human42650",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 5,
+      "z": 37
+    },
+    {
+      "id": "Human42653",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 4,
+      "z": 27
+    },
+    {
+      "id": "Human42656",
+      "def": "Drifter_Yttakin",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 6,
+      "z": 31
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 5,
+      "squad_classes": {
+        "short": 3,
+        "explosive": 1,
+        "melee": 1
+      },
+      "squad_range_median": 19.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 1,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 6,
+        "melee": 2
+      },
+      "enemy_points": 370.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 0.25,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.25,
+      "count_ratio": 0.62,
+      "distance": 154.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.8,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.8,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.044,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

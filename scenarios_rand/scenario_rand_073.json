@@ -1,0 +1,271 @@
+{
+  "id": "rand_073",
+  "save": "scenario_rand_073",
+  "spec": {
+    "id": "rand_073",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Sparrow Abruastra",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44824",
+      "name": "Yuu 'Hakuja' Ito",
+      "weapon": "Steel knife (poor 42%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44826",
+      "name": "Blue Xostolabrubust",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44830",
+      "name": "Aquema Balcurto",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44834",
+      "name": "Gacamisacam Monkey",
+      "weapon": "Steel spear (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44839",
+      "name": "Asna Colmea",
+      "weapon": "Steel knife (poor 53%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44841",
+      "name": "Muffalo Babar",
+      "weapon": "Steel knife (poor)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44844",
+      "name": "Seahorse Tol",
+      "weapon": "Steel club",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44846",
+      "name": "Samantha 'Sam' Haxton",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44854",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 249,
+      "z": 125
+    },
+    {
+      "id": "Human44858",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 246,
+      "z": 122
+    },
+    {
+      "id": "Human44863",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 248,
+      "z": 117
+    },
+    {
+      "id": "Human44867",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 246,
+      "z": 124
+    },
+    {
+      "id": "Human44871",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 245,
+      "z": 124
+    },
+    {
+      "id": "Human44876",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 248,
+      "z": 125
+    },
+    {
+      "id": "Human44880",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 243,
+      "z": 115
+    },
+    {
+      "id": "Human44884",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 244,
+      "z": 124
+    },
+    {
+      "id": "Human44889",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 245,
+      "z": 120
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 9
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 9,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "melee": 9
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.0,
+      "distance": 121.5,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.049,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

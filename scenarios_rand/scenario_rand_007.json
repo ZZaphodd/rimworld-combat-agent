@@ -1,0 +1,275 @@
+{
+  "id": "rand_007",
+  "save": "scenario_rand_007",
+  "spec": {
+    "id": "rand_007",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Joshua 'Zug' Hamby",
+      "weapon": "Molotov cocktails",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42635",
+      "name": "Macey Mononate",
+      "weapon": "Autopistol (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42640",
+      "name": "Waldo Farrell",
+      "weapon": "Machine pistol (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42623",
+      "name": "Robbie Tachikoma",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42650",
+      "name": "Xizi Tongsheng",
+      "weapon": "Machine pistol (normal 59%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42665",
+      "name": "Crink Hawkins",
+      "weapon": "Machine pistol (normal 74%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42670",
+      "name": "Peyton 'Pey' Rogers",
+      "weapon": "Autopistol (good)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human42677",
+      "name": "Robert 'Gnugfur' Krondorfer",
+      "weapon": "Steel knife (normal 95%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42681",
+      "name": "Wesley Pickles",
+      "weapon": "Steel knife (poor 38%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42686",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 2,
+      "z": 108
+    },
+    {
+      "id": "Human42688",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 1,
+      "z": 108
+    },
+    {
+      "id": "Human42692",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 3,
+      "z": 97
+    },
+    {
+      "id": "Human42696",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 0,
+      "z": 109
+    },
+    {
+      "id": "Human42699",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 0,
+      "z": 109
+    },
+    {
+      "id": "Human42703",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 2,
+      "z": 103
+    },
+    {
+      "id": "Human42707",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 0,
+      "z": 95
+    },
+    {
+      "id": "Human42711",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 0,
+      "z": 95
+    },
+    {
+      "id": "Human42716",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 1,
+      "z": 95
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "explosive": 1,
+        "short": 5,
+        "long": 1,
+        "melee": 2
+      },
+      "squad_range_median": 19.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 2,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "melee": 5,
+        "bow": 4
+      },
+      "enemy_points": 465.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 0.56,
+      "enemy_melee_share": 0.56,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.11,
+      "count_ratio": 1.0,
+      "distance": 125.5,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.556,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.556,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.027,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

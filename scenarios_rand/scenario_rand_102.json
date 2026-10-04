@@ -1,0 +1,242 @@
+{
+  "id": "rand_102",
+  "save": "scenario_rand_102",
+  "spec": {
+    "id": "rand_102",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Empire",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Brape 'Kangaroo' Quezo",
+      "weapon": "Steel ikwa (poor)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42619",
+      "name": "Meareca Crica",
+      "weapon": "Steel ikwa (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42623",
+      "name": "Combo 'Raccoon' Bringa",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42627",
+      "name": "Black Bargaca",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42632",
+      "name": "Green Bat",
+      "weapon": "Steel ikwa (poor 60%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42637",
+      "name": "Baiño Jay",
+      "weapon": "Steel knife (poor 65%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42639",
+      "name": "Red Légua",
+      "weapon": "Steel ikwa (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human42643",
+      "name": "Purple Cockroach",
+      "weapon": "Slate club (35%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human42645",
+      "name": "Green Toñaban",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human42650",
+      "name": "Cernaabru Camel",
+      "weapon": "Steel knife (poor 79%)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42657",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Steel gladius",
+      "class": "melee",
+      "x": 0,
+      "z": 97
+    },
+    {
+      "id": "Human42664",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge rifle",
+      "class": "medium",
+      "x": 2,
+      "z": 96
+    },
+    {
+      "id": "Human42670",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "assault rifle",
+      "class": "medium",
+      "x": 3,
+      "z": 83
+    },
+    {
+      "id": "Human42676",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Zeushammer",
+      "class": "melee",
+      "x": 0,
+      "z": 83
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "melee": 10
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 10,
+      "enemy_n": 4,
+      "enemy_classes": {
+        "melee": 2,
+        "medium": 2
+      },
+      "enemy_points": 400.0,
+      "enemy_range_median": 14.7,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.5,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.5,
+      "count_ratio": 2.5,
+      "distance": 128.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.022,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

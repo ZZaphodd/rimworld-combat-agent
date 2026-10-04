@@ -1,0 +1,236 @@
+{
+  "id": "rand_044",
+  "save": "scenario_rand_044",
+  "spec": {
+    "id": "rand_044",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Irtran 'Whale' Cambiar",
+      "weapon": "Steel knife (poor 42%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44821",
+      "name": "White Légua",
+      "weapon": "Steel spear (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44826",
+      "name": "Walrus Gabiar",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44830",
+      "name": "Comboa 'Pig' Laabeocó",
+      "weapon": "Slate club",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44832",
+      "name": "Labamar Guago",
+      "weapon": "Granite club (36%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44834",
+      "name": "Tasca Brívere",
+      "weapon": "Wooden club (28%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44839",
+      "def": "Town_Guard",
+      "weapon": "Incendiary launcher",
+      "class": "explosive",
+      "x": 2,
+      "z": 157
+    },
+    {
+      "id": "Human44844",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 1,
+      "z": 147
+    },
+    {
+      "id": "Human44848",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 4,
+      "z": 156
+    },
+    {
+      "id": "Human44853",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 0,
+      "z": 143
+    },
+    {
+      "id": "Human44857",
+      "def": "Villager",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 3,
+      "z": 144
+    },
+    {
+      "id": "Human44862",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 5,
+      "z": 153
+    },
+    {
+      "id": "Human44867",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 0,
+      "z": 147
+    },
+    {
+      "id": "Human44871",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 5,
+      "z": 153
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 6,
+      "squad_classes": {
+        "melee": 6
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 6,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "explosive": 2,
+        "melee": 1,
+        "short": 4,
+        "long": 1
+      },
+      "enemy_points": 460.0,
+      "enemy_range_median": 21.9,
+      "enemy_closer_share": 0.62,
+      "enemy_melee_share": 0.12,
+      "enemy_explosive_share": 0.25,
+      "enemy_outrange_share": 0.88,
+      "count_ratio": 0.75,
+      "distance": 124.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.625,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.077,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

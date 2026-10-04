@@ -1,0 +1,274 @@
+{
+  "id": "rand_130",
+  "save": "scenario_rand_130",
+  "spec": {
+    "id": "rand_130",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Nate Zhang",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42620",
+      "name": "Rae Clayton",
+      "weapon": "Steel knife (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42625",
+      "name": "Petra Paul",
+      "weapon": "Pump shotgun (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42629",
+      "name": "Sam 'Sammy' Gerador",
+      "weapon": "Revolver (good)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human42636",
+      "name": "Reika 'Lady' Rivera",
+      "weapon": "Revolver (normal 60%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42641",
+      "name": "Yuu 'Hakuja' Ito",
+      "weapon": "Autopistol (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42647",
+      "name": "Dave Faraday",
+      "weapon": "Machine pistol (poor 70%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42652",
+      "name": "Ripley 'Missy' Moody",
+      "weapon": "Pump shotgun (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42657",
+      "name": "Beatriz Kent",
+      "weapon": "Revolver (awful)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42662",
+      "def": "Town_Councilman",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 214,
+      "z": 249
+    },
+    {
+      "id": "Human42669",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 226,
+      "z": 246
+    },
+    {
+      "id": "Human42677",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 220,
+      "z": 243
+    },
+    {
+      "id": "Human42681",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 219,
+      "z": 242
+    },
+    {
+      "id": "Human42688",
+      "def": "Villager",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 223,
+      "z": 245
+    },
+    {
+      "id": "Human42693",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 215,
+      "z": 246
+    },
+    {
+      "id": "Human42698",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 212,
+      "z": 246
+    },
+    {
+      "id": "Human42704",
+      "def": "Villager",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 213,
+      "z": 244
+    },
+    {
+      "id": "Human42708",
+      "def": "Grenadier_Destructive",
+      "weapon": "Frag grenades",
+      "class": "explosive",
+      "x": 214,
+      "z": 245
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 8,
+        "melee": 1
+      },
+      "squad_range_median": 25.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 1,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 6,
+        "explosive": 2,
+        "melee": 1
+      },
+      "enemy_points": 465.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.78,
+      "enemy_melee_share": 0.11,
+      "enemy_explosive_share": 0.22,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.0,
+      "distance": 152.5,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.889,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.889,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.021,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

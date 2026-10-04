@@ -1,0 +1,257 @@
+{
+  "id": "rand_041",
+  "save": "scenario_rand_041",
+  "spec": {
+    "id": "rand_041",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Pirate",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Vadim Richard",
+      "weapon": "Steel gladius (poor 66%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42620",
+      "name": "Tom 'Woody' Woodthorpe",
+      "weapon": "Wooden club (60%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42626",
+      "name": "Logan Hopkins",
+      "weapon": "Steel axe (poor 79%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42631",
+      "name": "Ren 'Grunt' Chapman",
+      "weapon": "Steel axe (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42636",
+      "name": "Tynan Sylvester",
+      "weapon": "Steel axe (poor 79%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42641",
+      "name": "Igor Franklin",
+      "weapon": "Steel gladius (awful 57%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42646",
+      "name": "Fernand Pena",
+      "weapon": "Steel knife (poor 75%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42651",
+      "name": "Russell 'Rusty' Shackleford",
+      "weapon": "Wooden club",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42656",
+      "name": "Erde Lucatir",
+      "weapon": "Wooden club (92%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42662",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 246,
+      "z": 167
+    },
+    {
+      "id": "Human42667",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 244,
+      "z": 180
+    },
+    {
+      "id": "Human42670",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 246,
+      "z": 167
+    },
+    {
+      "id": "Human42673",
+      "def": "Pirate_Yttakin",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 244,
+      "z": 174
+    },
+    {
+      "id": "WildBoar42676",
+      "def": "WildBoar",
+      "weapon": "none",
+      "class": "other",
+      "x": 248,
+      "z": 181
+    },
+    {
+      "id": "Human42677",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 243,
+      "z": 170
+    },
+    {
+      "id": "Human42680",
+      "def": "Scavenger_Yttakin",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 249,
+      "z": 167
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 9
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 9,
+      "enemy_n": 7,
+      "enemy_classes": {
+        "short": 4,
+        "long": 1,
+        "melee": 2
+      },
+      "enemy_points": 370.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.86,
+      "enemy_melee_share": 0.29,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.71,
+      "count_ratio": 1.29,
+      "distance": 130.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.857,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.286,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.015,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}
