@@ -82,6 +82,9 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 | `order_pawn` (by index) | same target + `index` | `ok` | The index refers to the list just fetched for the same target |
 | `order_pawn` (direct) | `id, x, z, command="Go here"` / `id, targetId, command="Fire at"` | `ok` / `error` | No list round trip needed. A Go here onto an unwalkable cell fails, so retry the neighbours [code] |
 | `do_thing_action` | `id, label, targetId?` | `ok` | `label="Drop <name>"` on a pawn carrying a downed squadmate puts it down [obs 2026-10-03]. `label="Auto attack (AI)"` + `targetId`: RimMolt's own combat AI for that pawn. It picks its own cover cell and can't see our data (it walks pawns back into danger: threatmap_report). `label="Fire at will"` **toggles** a drafted pawn's fire-at-will (used to make the squad hold fire in measurements). The reply's `nowActive` is the state after the click; `inspect_thing` reads it before (micro drill, PROCEDURES §12) |
+| `do_thing_action` (verb) | `id, label="Command_VerbTarget", targetId` | `executed` | The weapon's own attack gizmo: fires/swings at a pawn **or a building** (walls, urns: how a drafted squad breaks cover). On a building it is **one swing/shot per order** (re-issue every ~45–90 ticks) and needs the pawn adjacent for a melee weapon; `executed: false` when out of reach or without line of sight (a rock between). Thrown weapons (frags, molotov) are thrown at the target pawn this way [obs 2026-10-05, rand_127/030] |
+| `do_thing_action` (gizmos) | `id, label` | `executed` | Apparel/ability gizmos by their label, e.g. `"Pop smoke"` (smokepop pack, drafted wearer); `"Drop <name>"` puts down a carried pawn [obs 2026-10-05] |
+| `manage_gear` | `id, op (drop/equip/wear/force/unforce), item` | `itemId, ordered` | `item` = ThingID or **defName** (a label like "Autopistol" is rejected; `rca.game.weapons.weapon_def()` maps a gear label to a defName). `drop` is instant, also while paused, and returns the dropped `itemId`; `equip` with that id is a walk-over job that runs when time moves and is **cancelled by drafting** [obs 2026-10-05] |
 | `say` | `text` | – | On-screen message panel (standalone agent only) |
 
 `order_pawn` option label formats seen [log]:
@@ -94,6 +97,11 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
   In the bed-less arenas `Rescue` is disabled and **`Carry <name>` is enabled**: executing it makes a
   drafted pawn pick the victim up and carry it under later `Go here` orders until `Drop <name>`
   [obs 2026-10-03; rca/tactical/squad.py].
+- On a raider: `Fire at <name>`, `Melee attack <name>` (the way to send a knife at a shooter or tie a
+  grenadier up in melee: throwers can't throw in melee); on a **downed** raider `Melee attack <name>
+  to death` (finishing), `Carry <name>`, `Strip <name>`, `Tend <name>`. On a downed squadmate
+  `Carry <name>`, then `Go here` walks the carrier with it [obs 2026-10-05].
+- `Cannot go here: No path` for a cell behind a wall: break the wall first (verb gizmo above).
 - Disabled options keep their text with a reason, e.g.
   `Cannot rescue: No reachable, un-reserved non-prisoner bed in safe temperature.` (no beds in the arenas),
   `Cannot tend X: Will never do doctoring`, `Cannot capture: ...`.
@@ -105,7 +113,7 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 | Tool | Arguments | Returns | Quirks |
 |---|---|---|---|
 | `wait_for_event` | `maxGameTicks, maxSeconds, pause="always", force=True` | `_notifications[]`, `cause`, `ticksWaited`, `_delta` | Advances game time and pauses again afterwards. **15-tick quanta**: a 6-tick request advanced 14–16 ticks (hazards.md), 300-tick requests advanced 300–316 [obs]. A letter or notable message, or `threatAppeared`/`threatsCleared`, **ends the wait early**, so read the clock from `get_status`. **`force`** (tool schema): bypasses the crisis cap; without it a wait that starts with hostiles on the map, fire in the home area or a dying colonist is capped at 2500 ticks. `_notifications` carry the game's messages and letters (`{kind, text, label}`); raid fled/satisfied messages are read from here. Also returns `event, cause, ticksWaited, time` and `pausedAfter` (what really happened: a mod setting can override `pause`); `crisisCap` says why a wait was capped. **`_delta`**: `newItems/removedItems`, `newBuildings/removedBuildings` (`[{def, label, count}]`, **no cells**), `pawnDamage`; keys absent when nothing changed. Verified 2026-10-03: a debug bomb on a ruin wall gave `removedBuildings: [{def: Wall, count: 2}]`; 31,500 ticks of forest fire (trees burning down to stumps, some destroyed) gave **no** `_delta` at all: plants are not reported |
-| `set_speed` | `action="pause"` | – | Always pause before teleports and saves: teleport misses walking pawns [obs] |
+| `set_speed` | `action="pause"` | – | Always pause before teleports and saves: teleport misses walking pawns [obs]. Only `pause`/`unpause`: no speed setting; to advance a fixed number of ticks use `wait_for_event` (`rm.wait(ticks)`), which is how Claude plays turn by turn (tools/hands.py) |
 
 ### Game lifecycle
 
