@@ -275,6 +275,106 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
     return m
 
 
+def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
+                         difficulty=STANDARD_DIFFICULTY, player="human"):
+    """Observe-only episode: a person plays, the harness never pauses or
+    advances time. It loads the scenario (paused; the player unpauses), then
+    polls every poll_s seconds of wall time: fates, contact windows, the
+    storyteller guard and the stop conditions, and writes the same row as
+    run_episode (agent = player, cycle 'observed'). Game messages come from
+    get_alerts' recent messages (there is no wait_for_event to carry them)."""
+    session.start_episode(rm, manifest["save"])
+    found = (rm.call("get_status").get("difficulty") or "").lower()
+    if difficulty and found != difficulty:
+        raise WrongDifficulty(f"{manifest['save']} is on {found!r}, not {difficulty!r}")
+    ids = [p["id"] for p in manifest["squad"]]
+    before = squad_state(rm, ids)
+    tracker = BattleTracker(rm, ids)
+    live = tracker.observe(0)
+    start_ids, intruders = set(tracker.enemy), {}
+    t0 = rm.call("get_status")["ticksGame"]
+    wall0, polls, ticks, last, outcome = time.time(), 0, 0, -1, "timeout"
+    progress, avail_o, avail_t = ProgressMeter(), {}, {}
+    messages, fled, satisfied = {}, None, None
+    # Toasts from before the load (the previous battle's "... are fleeing") are still in
+    # recentMessages; skip exactly those (tick, text) pairs. A new message with the same
+    # text has another tick and still counts.
+    stale = {(n.get("tick"), (n.get("text") or "")[:160])
+             for n in (rm.call("get_alerts").get("recentMessages") or [])}
+    log(f"   {manifest['id']} loaded and paused: play when ready (the harness only watches)")
+    while True:
+        time.sleep(poll_s)
+        try:
+            ticks = rm.call("get_status")["ticksGame"] - t0
+        except RimMoltError:
+            continue
+        if ticks == last:                       # paused: nothing to observe
+            continue
+        last, polls = ticks, polls + 1
+        for note in (rm.call("get_alerts").get("recentMessages") or []):
+            text = (note.get("text") or "")[:160]
+            if (note.get("tick"), text) in stale:
+                continue
+            if text and text not in messages:
+                messages[text] = ticks
+                low = text.lower()
+                if fled is None and " are fleeing" in low:
+                    fled = ticks
+                if satisfied is None and "satisfied with the damage" in low:
+                    satisfied = ticks
+        live = tracker.observe(ticks)
+        intruders = unexpected_hostiles(start_ids, tracker.enemy)
+        if intruders:
+            outcome = INVALID
+            log(f"   invalid: {len(intruders)} unexpected hostiles at tick {ticks}")
+            break
+        standing = [(s_["x"], s_["z"]) for s_ in tracker.squad.values()
+                    if s_.get("x") is not None and not s_["fate"] and not s_["downed"]]
+        contact = any(math.dist(p, (h["x"], h["z"])) <= CONTACT for p in standing for h in live)
+        progress.update(ticks, tracker.lost_points(), contact)
+        if contact:
+            w = ticks // firelog.WINDOW
+            for s_ in tracker.squad.values():
+                if s_["name"] and not s_["fate"] and not s_["downed"]:
+                    avail_o.setdefault(s_["name"], set()).add(w)
+            for e in tracker.enemy.values():
+                if e["fate"] is None and not e.get("downed"):
+                    avail_t.setdefault(e["name"], set()).add(w)
+        squad = [c for c in rm.call("list_colonists")["colonists"] if c["id"] in ids]
+        if not live:
+            outcome = "enemies_cleared"
+            break
+        if not any(not c.get("downed") for c in squad):
+            outcome = "squad_down"
+            break
+        if ticks >= max_ticks:
+            break
+    rm.call("set_speed", action="pause")
+    m = measure(before, squad_state(rm, ids), tracker.finish())
+    if m["squad_kidnapped"] and outcome != INVALID:
+        outcome = "raid_left_with_captives"
+    m.update({
+        "schema": SCHEMA, "scenario": manifest["id"], "agent": player, "agent_version": 1,
+        "commit": git_commit(), "time": time.time(), "cycle": "observed", "step_ticks": None,
+        "reflex": False, "reflex_version": None, "max_ticks": max_ticks,
+        "difficulty": found, "outcome": outcome,
+        "invalid": ({"reason": "unexpected_hostiles", "tick": ticks,
+                     "kinds": dict(Counter(e["kind"] for e in intruders.values()))}
+                    if outcome == INVALID else None),
+        "ticks": ticks, "steps": polls, "fast_steps": 0, "agent_errors": 0, "agent_think_s": None,
+        "wall_s": round(time.time() - wall0, 1),
+        "raid_fled_tick": fled, "raid_satisfied_tick": satisfied,
+        "game_messages": [{"tick": t, "text": x} for x, t in list(messages.items())[:60]],
+        "building_deltas": {}, "engaged_steps": 0, "engaged_ours": 0, "engaged_theirs": 0,
+        "engagement_ratio": None,
+        **engagement_kpis(tracker, avail_o, avail_t),
+        **progress.summary(),
+        "options": {}, "signals": [], "unattainable_tick": None, "unattainable_reason": None,
+        "kpis": {"observed": True, "poll_s": poll_s, "polls": polls}})
+    m.update(verdict(m, scoring.manifest_mean_points(manifest)))
+    return m
+
+
 def run_batch(rm, manifests, agent_names, runs, results, cycle, reflex=True, max_ticks=15000,
               resume=False, watchdog=None, log=print, options=None,
               difficulty=STANDARD_DIFFICULTY):

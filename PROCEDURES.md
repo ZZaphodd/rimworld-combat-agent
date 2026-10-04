@@ -319,3 +319,25 @@ Found while building: raid generation fails now and then even for humans (Pirate
 retry, up to 3 tries); Mechanoid 700 failed 4 tries in a row before one worked. Settle waits
 cost the observer (gone after the mech fill; a "Game Over" letter remains): view the save
 paused. Dismiss raid letters with `read_letter(id, dismiss=True)` (117 had piled up).
+
+## 15. Human play and the router night run (roadmap 3: failure mining)
+
+**Human play** (`tools/run_human.py --scenario <id>` or `--manifest <file>`;
+`harness.run_observed_episode`): the scenario loads paused and a person plays; the harness
+never pauses or advances time. It polls every second (fates, contact windows, the storyteller
+guard, stop conditions; game messages from `get_alerts.recentMessages`, skipping the toasts
+left from before the load) and writes the usual row with agent `human`, cycle `observed`, to
+`results/human/play.jsonl`. Screenshots for a watcher: `screenshot(include_ui=false, x, z, w,
+h)` renders offscreen and never moves the player's camera.
+
+**Router night run** (`tools/night.py`): `new` builds a random problem
+(`rca/game/builders/problem.py`: arena_forest_night or arena_open_night × our squad = a raid of
+a random human faction at 500 pt, recruited and placed at (125, 125) × the enemy = a raid of
+a random faction at 500 pt, mechanoids included; no assault check) and prints the briefing
+(`rca/strategic/briefing.py`: both sides' composition and ranges, each doctrine's
+preconditions on the map). The router (a person or Claude) picks a doctrine and options and
+runs `night.py run <id> --agent <d> [--option k=v] --why "<reason>"`; the row (+ `router`,
+`problem`, `badness`) goes to `results/night/router.jsonl`. `night.py rank --top 100` writes
+`results/night/worst.md` (badness: `rca/eval/ranking.py`). The game restarts after 80 loads
+(`results/night/state.json`). The night arenas are copies of the evaluation arenas with the
+Empire and the civil outlanders made hostile (debug goodwill), saved as `arena_*_night`.
