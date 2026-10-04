@@ -11,14 +11,34 @@ from ..debug import Debug
 from ..weapons import weapon_class, weapon_name
 from .scenario import assaults, make_squad, pawn_row
 
-BASE_SAVE = "theme_base"
-BASE_META = ROOT / "themes/base.json"
-SAMPLES = ROOT / "themes/samples.jsonl"
+# Scenario sets: one frozen squad and raids of one size. "theme" = the 1500-pt set of
+# baseline-v1 (Peaceful, saves at tag baseline-v1); "t500" = the 500-pt set on Strive to
+# Survive (2026-10-04, chosen from the threat montage). use() switches the module to a set.
+SETS = {
+    "theme": {"points": 1500, "size": (12, 15), "mechs": [1500, 2000, 2500, 3000, 4000],
+              "base_save": "theme_base", "dir": "themes"},
+    "t500": {"points": 500, "size": (7, 10), "mechs": [500, 600, 700, 800, 1000],
+             "base_save": "theme_base_t500", "dir": "themes/t500",
+             # no pirate raid at 500 pt was >= 60% snipers (0 of 141 draws, max 50%): the
+             # game sends sniper squads only at higher points; back with a 1500 set
+             "skip": ["pirate_sniper"]},
+}
 ARENA = "arena_forest"
-SQUAD = {"faction": "OutlanderRough", "points": 1500, "place": [125, 125], "size": (12, 15),
-         "max_top_share": 0.5}
-POINTS = 1500                                   # = squad points
-MECH_POINTS = [1500, 2000, 2500, 3000, 4000]    # low points fail to generate more often
+
+
+def use(name):
+    """Point the builders at scenario set `name` (ids and saves are prefixed with it)."""
+    global SET, BASE_SAVE, BASE_META, SAMPLES, SQUAD, POINTS, MECH_POINTS, THEME_NAMES
+    s = SETS[name]
+    THEME_NAMES = [t for t in THEMES if t not in s.get("skip", [])]
+    SET, BASE_SAVE = name, s["base_save"]
+    BASE_META, SAMPLES = ROOT / s["dir"] / "base.json", ROOT / s["dir"] / "samples.jsonl"
+    SQUAD = {"faction": "OutlanderRough", "points": s["points"], "place": [125, 125],
+             "size": s["size"], "max_top_share": 0.5}
+    POINTS = s["points"]                        # = squad points
+    MECH_POINTS = s["mechs"]                    # low points fail to generate more often
+    BASE_META.parent.mkdir(parents=True, exist_ok=True)
+
 FRAG_CHECK = {"kind": "Grenadier_Destructive", "count": 5, "distance": 27, "min_frag_share": 0.6}
 
 
@@ -44,6 +64,9 @@ THEMES = {
     "mechs": (["Mechanoid"], None,
               "Mechanoid raid (game-chosen strategy/arrival), must pass the assault check"),
 }
+
+
+use("theme")
 
 
 def classify(rm, pawns):
@@ -113,11 +136,11 @@ def save_theme(rm, d, name, base, rows, faction, points, out_dir, scenarios_path
     ids = [p["id"] for p in base["squad"]]
     d.place({k: tuple(v) for k, v in base["slots"].items()})   # it wandered while settling
     d.close()
-    save = f"scenario_theme_{name}"
+    save = f"scenario_{SET}_{name}"
     session.save(rm, save)
     if not assaults(rm, save, ids, log=log):
         return False
-    spec = {"id": f"theme_{name}", "tier": "theme", "note": THEMES[name][2], "arena": ARENA,
+    spec = {"id": f"{SET}_{name}", "tier": SET, "note": THEMES[name][2], "arena": ARENA,
             "squad": _squad_spec(base),
             "enemy": {"faction": faction, "points": points,
                       **({"method": "faction"} if faction == "Mechanoid" else
@@ -195,11 +218,11 @@ def build_frag_check(rm, base, out_dir, scenarios_path, max_attempts=15, log=pri
             continue
         d.place({k: tuple(v) for k, v in base["slots"].items()})
         d.close()
-        save = "scenario_theme_frag_check"
+        save = f"scenario_{SET}_frag_check"
         session.save(rm, save)
         if not assaults(rm, save, ids, log=log):
             continue
-        spec = {"id": "theme_frag_check", "tier": "check",
+        spec = {"id": f"{SET}_frag_check", "tier": "check",
                 "note": f"Reflex check: {len(rows)} {fc['kind']} ({frags} with frag grenades) "
                         f"spawned ~{fc['distance']} cells east of the theme squad (debug Spawn "
                         "Pawn, no raid lord: no fleeing/satisfied message).",

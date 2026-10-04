@@ -12,16 +12,17 @@ WORKFLOW.md). The census and theme samples are also one-off draws.
 
 ## 1. Saves (`saves/*.rws.gz` in the repo; `restore_saves.sh` unpacks them into RimWorld's Saves folder)
 
-All 24 saves are on the **Peaceful** difficulty; the evaluation standard is Strive to Survive
-(WORKFLOW), so they are to be converted (PROCEDURES §1b, TODO Now 1).
+Since 2026-10-04 the repo holds the **Strive to Survive** saves of the new world. The 24
+Peaceful saves of baseline-v1 (arena_fort, theme_base, scenario_theme_*, the legacy
+std/hard/fort/smoke scenarios) are only at tag `baseline-v1` and in a local archive folder.
 
 | Save | Built by | Content |
 |---|---|---|
-| `arena_forest` | make_arena (PROCEDURES §1) | 250×250 temperate forest, observer at (240,240), no animals, no fog, no loose weapons |
+| `arena_forest` | make_arena (PROCEDURES §1) | 250×250 flat temperate forest (tile 372), Strive to Survive, observer at (240,240), no animals, no fog, no loose weapons |
 | `arena_open` | make_arena | arena_forest with (50,50)–(200,200) cleared |
-| `arena_fort` | make_arena `--fort` | arena_open + granite compound (PROCEDURES §2) |
-| `theme_base` | theme_builder `--base` | arena_forest + frozen 14-pawn OutlanderRough squad, observer removed |
-| `scenario_<id>` (20) | scenario_builder / theme_builder | one per manifest in scenarios_out/ |
+| `theme_base_t500` | build_themes `--set t500 --base` | arena_forest + frozen 9-pawn squad (OutlanderRough 500 pt: 4 bolt-action rifles, 3 revolvers, machine pistol, frag grenades), observer removed |
+| `scenario_t500_<theme>` (6 + frag_check) | build_themes `--set t500` | one per manifest `scenarios_out/scenario_t500_*.json` |
+| `montage_threats` | build_montage (PROCEDURES §14) | separate 300×300 world: 4 raid types × 7 sizes in walled pens; for viewing, not evaluation |
 
 ## 2. scenarios.json and scenarios_out/
 
@@ -56,6 +57,17 @@ Squad sizes: 10–18 for the Pirate-squad scenarios, 14 for theme/check. Enemy c
 (frag_check) to 34 (fort_tribe_rush).
 
 ## 3. themes/
+
+**Set t500** (`themes/t500/`, 2026-10-04, Strive to Survive; the evaluation standard): squad of
+9 accepted on the 2nd draw (9 pawns, top class share 0.44). Themes at 500 pt, accepted at draw:
+pirate_melee 1 (9 melee), pirate_mixed 4 (9: melee 4, explosive 3, long 1, short 1),
+pirate_grenadier 20 (6 explosive), tribal_archers 1 (9: bow 5, melee 3, long 1), tribal_melee 3
+(10 melee), mechs 43 (4: long 2, medium 2; 42 of 43 mech draws loitered), frag_check 1 (5
+grenadiers: 3 frag, 2 molotov). pirate_sniper: no draw in 150 (141 pirate raids, 9 spawn
+failures) reached ≥ 60% long (max 50%, once), so the set skips it. Pirate raid sizes at 500 pt:
+6–13, median 8–9 (`samples.jsonl`).
+
+**Set theme** (`themes/`, 1500 pt, Peaceful, baseline-v1) — the rest of this section:
 
 | File | Schema |
 |---|---|

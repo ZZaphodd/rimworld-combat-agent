@@ -61,10 +61,13 @@ class Cycle:
 
 def load_manifests(ids="all"):
     """'all' = every non-check scenario: frag_check (tier check) is a drill
-    scenario and must be named explicitly (LESSONS bug 13)."""
+    scenario and must be named explicitly (LESSONS bug 13). 'tier:<t>' = every
+    scenario of one tier, e.g. tier:t500 (the 500-pt theme set)."""
     ms = [json.loads(p.read_text()) for p in sorted(SCENARIO_DIR.glob("*.json"))]
     if ids == "all":
         return [m for m in ms if m["spec"].get("tier") != "check"]
+    if isinstance(ids, str) and ids.startswith("tier:"):
+        return [m for m in ms if m["spec"].get("tier") == ids[5:]]
     want = ids.split(",") if isinstance(ids, str) else list(ids)
     by = {m["id"]: m for m in ms}
     missing = [i for i in want if i not in by]

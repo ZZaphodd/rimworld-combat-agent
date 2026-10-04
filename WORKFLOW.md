@@ -18,7 +18,7 @@ item means a new baseline.
 | Item | Value |
 |---|---|
 | Difficulty | **Strive to Survive** (threat scale 100%; the user's normal play). Raids are spawned with explicit points, so threat scale doesn't size them; what differs from Peaceful is enemy death-on-downed (×1.0 vs ×0.5) and colonist mood offset (0 vs +10, mental breaks). Strive allows storyteller threats: the harness must detect unexpected raids and invalidate the episode |
-| Scenarios | the 7 theme scenarios (frozen squad of 14, arena_forest, 1500 pt raids) |
+| Scenarios | the **6 themes of set t500** (`--scenarios tier:t500`: pirate_mixed, pirate_melee, pirate_grenadier, tribal_archers, tribal_melee, mechs): frozen squad of 9 drawn from OutlanderRough 500 pt, arena_forest 250×250, 500-pt raids (chosen from the threat montage, results/montage/legend.md: ~13–19 pawns per battle vs 26–43 at 1500). No sniper theme: the game doesn't send sniper raids at 500 pt; it comes back with the 1500-pt set, much later |
 | Decision cycle | adaptive 30/120@40 |
 | Episode cap | 15000 ticks |
 | Game restart | every 100 episodes |

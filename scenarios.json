@@ -403,5 +403,152 @@
       "distance": 27,
       "min_frag_share": 0.6
     }
+  },
+  {
+    "id": "t500_pirate_melee",
+    "tier": "t500",
+    "note": "Pirate raid, >=60% melee",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "t500_pirate_mixed",
+    "tier": "t500",
+    "note": "Pirate raid, no weapon class >= 50%",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "t500_pirate_grenadier",
+    "tier": "t500",
+    "note": "Pirate raid, >=60% explosive weapons (grenades, launchers)",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "t500_tribal_archers",
+    "tier": "t500",
+    "note": "Tribal raid, >=60% bows/greatbows",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "t500_tribal_melee",
+    "tier": "t500",
+    "note": "Tribal raid, >=70% melee",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  {
+    "id": "t500_mechs",
+    "tier": "t500",
+    "note": "Mechanoid raid (game-chosen strategy/arrival), must pass the assault check",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  {
+    "id": "t500_frag_check",
+    "tier": "check",
+    "note": "Reflex check: 5 Grenadier_Destructive (3 with frag grenades) spawned ~27 cells east of the theme squad (debug Spawn Pawn, no raid lord: no fleeing/satisfied message).",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "method": "spawn_pawn",
+      "kind": "Grenadier_Destructive",
+      "count": 5,
+      "distance": 27,
+      "min_frag_share": 0.6
+    }
   }
 ]

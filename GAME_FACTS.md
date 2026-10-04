@@ -40,6 +40,9 @@ its rules are things to learn and exploit. Section 8 collects them and is the se
 - **Never walk off the map.** A mech that disappears was destroyed. The fate tracker relies on this
   (observed; ENEMY_AI.md candidate). Seen 2/5 times in theme_mechs: mechs parked 13–28 cells from a
   turtle line, out of sight and not attacking (execution_report §3).
+- **Low-point mech raids loiter.** At 500 pt (faction route, Strive to Survive) 42 of 43 raids
+  failed the assault check (no approach in 3000 ticks); 3–4 mechs each. At 1500 pt 1 of 2
+  theme draws passed (2026-10-03, Peaceful) [themes/t500/build.log].
 - **Militor swarms:** 3 of 125 mech census raids at 6000 pt were 120–133 Militors only. A code
   comment blamed leaked pods, but they still appear after the fresh-arena fix, so they are probably
   a genuine composition (UNVERIFIED).
@@ -256,7 +259,8 @@ saves are still Peaceful (conversion: TODO Now 1). Values from
 | Raiders kidnap downed colonists (job `kidnapping <name>.`) and leave the map with them | tracker, theme_report (3/5 kite runs left with captives) | observed |
 | Mechs never walk off the map | tracker design | observed, not counted |
 | Mechs may park out of sight 13–28 cells from a static line and not attack | execution_report §3 (hold v3 traces) | observed |
-| Mech raids sometimes don't assault at all (strategy chosen by the game) | assault check rejects | observed |
+| Mech raids sometimes don't assault at all (strategy chosen by the game); at 500 pt almost never (1 of 43 approached) | assault check rejects; themes/t500/build.log | measured at 500 pt |
+| Pirate sniper squads (≥ 60% long guns) appear at 1500 pt (a 13-sniper raid in the montage) but not at 500 pt (0 of 141 draws, max 50%): the raid composition depends on the points, not only on proportions | results/montage, themes/t500/samples.jsonl | measured; threshold UNVERIFIED |
 | Grenade aiming is not observable (job stays "watching for targets") | hazards.md | measured |
 | Melee raiders show their target: `targeting = "attacking colonist <name>"` (kite v3 uses it) | [code], execution_report | observed |
 | Raiders mostly stop throwing frags when we hold beyond 13 cells (frags seen fell to ~0) | threatmap_report verdict | measured, n=10 |

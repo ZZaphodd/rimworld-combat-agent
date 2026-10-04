@@ -10,14 +10,16 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
 
 1. [ ] **Switch the evaluation standard to Strive to Survive and build baseline-v2** (WORKFLOW
    "Evaluation standard"). baseline-v1 and the first gate ran on Peaceful → exploration data.
-   * **rebuild instead of converting** (2026-10-04): the old saves are archived (outside the
-     Saves folder; repo copies stay at tag baseline-v1). First choose the threat size from the
-     montage (`montage_threats`, results/montage/legend.md: fewer pawns per battle = faster
-     evals), then a new evaluation world, squad and scenarios on Strive to Survive;
+   * **rebuild instead of converting** (2026-10-04): old saves archived (repo copies at tag
+     baseline-v1); threat size **500 pt** chosen from the montage; new arena_forest (250×250,
+     Strive) done; scenario set t500 done (squad of 9, 6 themes + frag_check; no sniper theme
+     at 500 pt — back with the 1500 set);
+   * doctrine parameters were tuned on a squad of 14 (formation widths, kite fan-out, turtle
+     cluster radius, max guns per target): check them on the squad of 9 before baseline-v2;
    * harness guard: Strive allows storyteller threats — detect unexpected raids mid-episode
      and mark the episode invalid (EVAL_SPEC §3; manhunter animals: later, Evaluation / harness);
    * record the difficulty in every result row (WORKFLOW traceability);
-   * baseline-v2: 6 doctrines × 7 themes × 10, overnight; tag `baseline-v2`;
+   * baseline-v2: 6 doctrines × 6 t500 themes × 10 (`--scenarios tier:t500`); tag `baseline-v2`;
    * re-run the calibration fits (no_progress, losing_trade, preconditions) on v2.
 2. [ ] **Friendly fire (아군 오사) measurement — branch `feat/friendly-fire-kpi`, interrupted
    (WIP commit; usage limit).** Measurement-only, so it may merge on passing tests before v2.
@@ -44,7 +46,8 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
 5. Per-enemy threat profile (chronic / acute).
 6. Rule-based router v1 (input structure METT-T) → regret on fresh instances.
 7. Lances (asset layer). 8. Flush manoeuvres (if 4 confirms). Later: BaseGen arenas, bait,
-   psycasts, mech bosses, LLM router.
+   psycasts, mech bosses, LLM router, and the 1500-pt scenario set on Strive (squad of ~14:
+   the scale of baseline-v1) once the doctrines are mature at 500.
 
 Alongside: push only decision-relevant cells to n = 10–20.
 

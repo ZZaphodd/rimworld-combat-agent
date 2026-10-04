@@ -24,20 +24,25 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 
 ## 1. Arena creation (`arena_forest`, `arena_open`)
 
-1. **By hand:** new colony → scenario **The Rich Explorer** → storyteller Phoebe, **Strive to
-   Survive** (the evaluation standard, WORKFLOW) → open "Create world". The existing arenas were
-   built on Peaceful; they are converted by §1b, not rebuilt.
+1. `tools/make_arena.py --new-game` (`arena.new_game`): quit to title, new colony →
+   **The Rich Explorer** → Phoebe, **Strive to Survive** (the evaluation standard, WORKFLOW) →
+   "Create world" page. Both selection pages have a review gate (the first call only lists the
+   choices), so each is called up to twice. The pre-2026-10-04 arenas were Peaceful
+   (archived).
 2. **By hand:** on the planet page, make sure the factions **Pirate gang, Rough outlander union,
    Fierce tribe, Savage tribe, Mechanoid hive** are listed. Biotech swaps the first four for
    xenotype variants, and the `Add...` float menu vanishes unless the real mouse is over it.
    Script check: `get_window_ui` on `Page_CreateWorldParams`, labels between `Factions` and `Add...`.
-3. `create_world(coverage=0.3, rainfall/temperature/population=Normal, pollution=0)`; poll
+3. `tools/make_arena.py` does steps 3–11: map size **250×250** (`arena.set_map_size`: Advanced
+   settings → `Edit...` → radio `250x250`, verified, `--map-size` to change), then
+   `create_world(coverage=0.3, rainfall/temperature/population=Normal, pollution=0)`; poll
    `game_setup_status` until `stage == "starting_site"`.
 4. Tile: `find_world_tiles(TemperateForest, Flat, coastal=False, river=False, temp 10–20, limit=60)`.
    For each tile, preview `select_starting_site(tile)` and take the first one with no
    `nearbyObjects` where every surrounding biome is temperate forest. Then confirm it.
 5. `choose_ideoligion(classic)`; rename the starting pawn **Arena 'Observer' Keeper**; `start_game`;
-   poll until `programState == "Playing"`; wait 3 s.
+   poll until `programState == "Playing"`; wait 3 s; refuse to go on unless
+   `get_status.difficulty` is `strive to survive`.
 6. Close the intro letter (`Dialog_NodeTree` → OK). Wait (120-tick waits, up to 30) until no
    `DropPodIncoming`/`ActiveDropPod` remains.
 7. Pause; dev mode on; run `Destroy factionless animals`, `Destroy player animals`, `Clear All Fog`.
@@ -139,6 +144,14 @@ raiders, arena_open) and passed the assault check (gap 131 → 19). The save is 
 folder (saves are never deleted).
 
 ## 7. Theme building (theme_builder)
+
+Scenario sets (`--set`, `theme.SETS`): **t500** (the evaluation standard: squad from
+OutlanderRough 500 pt with 7–10 pawns, raids 500 pt, mech ladder 500/600/700/800/1000; ids and
+saves `t500_<theme>` / `scenario_t500_<theme>`, base `theme_base_t500`, files in `themes/t500/`)
+and **theme** (1500 pt, squad 12–15, baseline-v1; `theme_<name>`, `themes/`). The steps below
+are written for the 1500 set; t500 is the same with its numbers. `themes/t500/build.sh` runs
+the whole set with a fresh game before each load-heavy stage (base + pirates, then tribes, mechs
+and frag_check).
 
 1. **Frozen base** (`--base`): load `arena_forest` and spawn OutlanderRough 1500 pt until the raid
    has 12–15 pawns and no weapon class ≥ 50% (up to 40 tries; the first draw passed). Recruit,

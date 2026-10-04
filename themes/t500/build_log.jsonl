@@ -1,0 +1,7 @@
+{"theme": "pirate_melee", "accepted_at_attempt": 1, "faction": "Pirate", "points": 500, "size": 9, "group_attempts": 150, "tried": {"Pirate": 141, "spawn_failed": 9}}
+{"theme": "pirate_mixed", "accepted_at_attempt": 4, "faction": "Pirate", "points": 500, "size": 9, "group_attempts": 150, "tried": {"Pirate": 141, "spawn_failed": 9}}
+{"theme": "pirate_grenadier", "accepted_at_attempt": 20, "faction": "Pirate", "points": 500, "size": 6, "group_attempts": 150, "tried": {"Pirate": 141, "spawn_failed": 9}}
+{"theme": "pirate_sniper", "accepted": false, "group_attempts": 150, "tried": {"Pirate": 141, "spawn_failed": 9}}
+{"theme": "tribal_archers", "accepted_at_attempt": 1, "faction": "TribeRough", "points": 500, "size": 9, "group_attempts": 4, "tried": {"TribeRough": 2, "TribeSavage": 1}}
+{"theme": "tribal_melee", "accepted_at_attempt": 3, "faction": "TribeRough", "points": 500, "size": 10, "group_attempts": 4, "tried": {"TribeRough": 2, "TribeSavage": 1}}
+{"theme": "mechs", "accepted_at_attempt": 43, "faction": "Mechanoid", "points": 500, "size": 4, "group_attempts": 44, "tried": {"Mechanoid": 43, "loitering": 42}}

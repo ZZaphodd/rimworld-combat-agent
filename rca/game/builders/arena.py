@@ -1,7 +1,8 @@
 """arena_forest / arena_open from the planet page, and arena_fort (PROCEDURES §1-§2).
 
-Run with RimWorld on the 'Create world' page. Faction list must be fixed BY
-HAND first: the Add... float menu vanishes unless the real mouse is over it.
+new_game() goes from any state to the planet page (The Rich Explorer, Phoebe,
+Strive to Survive). The faction list must then be fixed BY HAND: the Add...
+float menu vanishes unless the real mouse is over it. create() does the rest.
 """
 import time
 
@@ -16,6 +17,10 @@ OPEN_RECT = (50, 50, 200, 200)
 FORT = (110, 110, 140, 140)          # granite wall outline
 FORT_GAP = (124, 126)                # z-range of the single opening in the east wall
 FORT_SANDBAGS_X = 128
+
+
+STORYTELLER, DIFFICULTY = "Phoebe", "Rough"     # Rough = Strive to Survive (WORKFLOW)
+MAP_SIZE = 250                                  # the game's design size; arenas so far
 
 
 def wait_stage(rm, done, timeout=300):
@@ -39,6 +44,41 @@ def check_factions(rm):
         raise SystemExit(f"Add these factions on the planet page first: {missing}")
 
 
+def new_game(rm):
+    """Quit whatever is loaded (unsaved progress discarded) and walk the setup
+    pages up to the planet page."""
+    if rm.call("game_setup_status").get("programState") == "Playing":
+        rm.call("return_to_title", confirm=True)
+        wait_stage(rm, lambda s: s.get("stage") == "main_menu")
+    rm.call("main_menu", action="new_colony")
+    wait_stage(rm, lambda s: s.get("stage") == "scenario")
+    for _ in range(2):              # the first call may only return the list (review gate)
+        if rm.call("select_scenario", name="The Rich Explorer").get("stage") == "storyteller":
+            break
+    for _ in range(2):              # same review gate on the storyteller page
+        if rm.call("select_storyteller", storyteller=STORYTELLER, difficulty=DIFFICULTY,
+                   reloadAnytime=True).get("stage") == "planet":
+            break
+    wait_stage(rm, lambda s: s.get("stage") == "planet")
+
+
+def set_map_size(rm, size=MAP_SIZE):
+    """Planet page -> Advanced settings 'Edit...' -> Dialog_AdvancedGameConfig radio."""
+    page = next(w["index"] for w in rm.call("list_windows")["windows"]
+                if w["type"] == "Page_CreateWorldParams")
+    rm.call("window_action", index=page, clickButton="Edit...", row="Advanced settings")
+    time.sleep(0.5)
+    dlg = next(w["index"] for w in rm.call("list_windows")["windows"]
+               if w["type"] == "Dialog_AdvancedGameConfig")
+    rm.call("window_action", index=dlg, clickButton=f"{size}x{size}")
+    time.sleep(0.3)
+    chosen = [r["label"] for r in rm.call("get_window_ui", index=dlg).get("radios", [])
+              if r.get("chosen") and "x" in r["label"]]
+    rm.call("window_action", index=dlg, clickButton="Close")
+    if not any(c.startswith(f"{size}x{size}") for c in chosen):
+        raise RimMoltError(f"map size not set: {chosen}")
+
+
 def pick_tile(rm):
     """Flat inland temperate forest, no river, nothing within 5 tiles."""
     tiles = rm.call("find_world_tiles", biome="TemperateForest", hilliness="Flat", coastal=False,
@@ -50,11 +90,11 @@ def pick_tile(rm):
     raise RimMoltError("no clean arena tile found")
 
 
-def create(rm, log=print):
+def create(rm, map_size=MAP_SIZE, log=print):
     if rm.call("game_setup_status").get("stage") != "planet":
-        raise SystemExit("Open the 'Create world' page first (new colony -> The Rich Explorer "
-                         "-> Phoebe/Peaceful).")
+        raise SystemExit("Open the 'Create world' page first (make_arena.py --new-game).")
     check_factions(rm)
+    set_map_size(rm, map_size)
     rm.call("create_world", coverage=0.3, rainfall="Normal", temperature="Normal",
             population="Normal", pollution=0)
     wait_stage(rm, lambda s: s.get("stage") == "starting_site")
@@ -67,6 +107,9 @@ def create(rm, log=print):
     rm.call("start_game")
     wait_stage(rm, lambda s: s.get("programState") == "Playing")
     time.sleep(3)
+    difficulty = rm.call("get_status").get("difficulty")
+    if difficulty != "strive to survive":
+        raise RimMoltError(f"difficulty is {difficulty!r}, not the evaluation standard")
     prepare_and_save(rm, log)
 
 

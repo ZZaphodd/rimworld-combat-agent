@@ -1,0 +1,173 @@
+{
+  "id": "t500_tribal_archers",
+  "save": "scenario_t500_tribal_archers",
+  "spec": {
+    "id": "t500_tribal_archers",
+    "tier": "t500",
+    "note": "Tribal raid, >=60% bows/greatbows",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human41371",
+      "name": "Kisaki Spoosh",
+      "weapon": "Machine pistol (poor 88%)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41376",
+      "name": "Erin O'Meara",
+      "weapon": "Revolver (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41383",
+      "name": "James Ballard",
+      "weapon": "Frag grenades",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41385",
+      "name": "Flossie Magnecite",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41392",
+      "name": "Trevor 'Trev' Austin",
+      "weapon": "Revolver (excellent)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41400",
+      "name": "Chad 'Fitz' Fitzgerald",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human41407",
+      "name": "Aiko Cruz",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human41411",
+      "name": "Takumi Fleming",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human41417",
+      "name": "Savanna Malone",
+      "weapon": "Revolver (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44874",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 245,
+      "z": 69
+    },
+    {
+      "id": "Human44876",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 242,
+      "z": 72
+    },
+    {
+      "id": "Human44880",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 243,
+      "z": 70
+    },
+    {
+      "id": "Human44885",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 241,
+      "z": 75
+    },
+    {
+      "id": "Human44890",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 245,
+      "z": 75
+    },
+    {
+      "id": "Human44895",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 245,
+      "z": 70
+    },
+    {
+      "id": "Human44898",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Greatbow",
+      "class": "long",
+      "x": 245,
+      "z": 67
+    },
+    {
+      "id": "Human44903",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 247,
+      "z": 70
+    },
+    {
+      "id": "Human44906",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 242,
+      "z": 76
+    }
+  ]
+}

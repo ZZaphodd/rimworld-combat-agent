@@ -1,0 +1,132 @@
+{
+  "id": "t500_mechs",
+  "save": "scenario_t500_mechs",
+  "spec": {
+    "id": "t500_mechs",
+    "tier": "t500",
+    "note": "Mechanoid raid (game-chosen strategy/arrival), must pass the assault check",
+    "arena": "arena_forest",
+    "squad": {
+      "base_save": "theme_base_t500",
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human41371",
+      "name": "Kisaki Spoosh",
+      "weapon": "Machine pistol (poor 88%)",
+      "x": 121,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41376",
+      "name": "Erin O'Meara",
+      "weapon": "Revolver (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41383",
+      "name": "James Ballard",
+      "weapon": "Frag grenades",
+      "x": 125,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41385",
+      "name": "Flossie Magnecite",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41392",
+      "name": "Trevor 'Trev' Austin",
+      "weapon": "Revolver (excellent)",
+      "x": 129,
+      "z": 125,
+      "health": 100
+    },
+    {
+      "id": "Human41400",
+      "name": "Chad 'Fitz' Fitzgerald",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human41407",
+      "name": "Aiko Cruz",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human41411",
+      "name": "Takumi Fleming",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 125,
+      "z": 123,
+      "health": 100
+    },
+    {
+      "id": "Human41417",
+      "name": "Savanna Malone",
+      "weapon": "Revolver (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Pikeman44874",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 8,
+      "z": 3
+    },
+    {
+      "id": "Mech_Tesseron44876",
+      "def": "Mech_Tesseron",
+      "weapon": "Beam graser",
+      "class": "medium",
+      "x": 4,
+      "z": 1
+    },
+    {
+      "id": "Mech_Pikeman44878",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 6,
+      "z": 0
+    },
+    {
+      "id": "Mech_Scorcher44880",
+      "def": "Mech_Scorcher",
+      "weapon": "Mini-flameblaster",
+      "class": "medium",
+      "x": 5,
+      "z": 5
+    }
+  ]
+}
