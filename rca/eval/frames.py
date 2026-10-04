@@ -43,8 +43,9 @@ def _text(x, y, s, size, fill, anchor="middle"):
 
 def svg(jpeg_b64, size, rect, pawns=(), notes=(), caption="", paths=()):
     """pawns: dicts {n, x, z, side: 'ours'|'them', d: downed}; notes: (x, z, text);
-    paths: (side, [(x, z, label)][, dashed]) drawn as a line with labelled dots (route
-    maps); dashed marks a route that was not observed in between."""
+    paths: (side, [(x, z, label)][, dashed]) drawn as a line with labelled pills (route
+    maps; points with an empty label only bend the line); dashed marks a route that was not
+    observed in between."""
     w, h = size
     ppc = w / (rect[1] - rect[0])
     r, fs = max(5.0, ppc * 0.55), 11 if ppc >= 12 else 10
@@ -63,6 +64,8 @@ def svg(jpeg_b64, size, rect, pawns=(), notes=(), caption="", paths=()):
         out.append(f'<polyline points="{" ".join(f"{a:.0f},{b:.0f}" for a, b in xy)}" '
                    f'fill="none" stroke="{color}" stroke-width="3" stroke-opacity=".85"{dash}/>')
         for (px, py), (_, _, label) in zip(xy, pts):
+            if not label:                                     # an unlabelled trace point
+                continue
             half = max(9, 3.3 * len(str(label)) + 3)          # a pill wide enough for "5,6,7"
             out.append(f'<rect x="{px - half:.0f}" y="{py - 9:.0f}" width="{2 * half:.0f}" '
                        f'height="18" rx="9" fill="{color}" stroke="#000" stroke-width="1.5"/>')

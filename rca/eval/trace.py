@@ -15,6 +15,7 @@ pawn = {"id", "n" name, "x", "z", "hp" health %, "w" weapon, "j" job, "d": 1 dow
 import gzip
 import json
 import time
+import zlib
 from pathlib import Path
 
 from .results import git_commit
@@ -90,6 +91,13 @@ class Trace:
 
 
 def read(path):
-    """All lines of a trace (header, polls, end) as dicts."""
-    with gzip.open(path, "rt") as f:
-        return [json.loads(line) for line in f if line.strip()]
+    """All lines of a trace (header, polls, end) as dicts. A trace whose writer was killed
+    (an abandoned attempt) has no gzip trailer and maybe half a last line: read what is there."""
+    data = zlib.decompressobj(16 + zlib.MAX_WBITS).decompress(Path(path).read_bytes())
+    out = []
+    for line in data.decode("utf-8", "replace").splitlines():
+        try:
+            out.append(json.loads(line))
+        except json.JSONDecodeError:
+            break
+    return out

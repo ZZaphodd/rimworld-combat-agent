@@ -62,5 +62,17 @@ class TraceTest(unittest.TestCase):
         self.assertEqual((end["end"], end["t"], end["grade"]), ("enemies_cleared", 200, "decisive"))
 
 
+class TruncatedTest(unittest.TestCase):
+    def test_killed_writer_is_still_readable(self):
+        tmp = Path(tempfile.mkdtemp())
+        t = trace.Trace(tmp / "t.jsonl.gz", MANIFEST, "human")
+        t.poll(FakeRm(), 120)
+        killed = tmp / "killed.jsonl.gz"              # the bytes on disk before any close:
+        killed.write_bytes((tmp / "t.jsonl.gz").read_bytes())   # no trailer, no end line
+        t.end({"outcome": "x"})
+        lines = trace.read(killed)
+        self.assertEqual([("header" in x, x.get("t")) for x in lines], [(True, None), (False, 120)])
+
+
 if __name__ == "__main__":
     unittest.main()
