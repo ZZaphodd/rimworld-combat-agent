@@ -1,11 +1,15 @@
-"""turtle (formerly hold) v8: pick the battleground, man a concave, let them come.
+"""turtle (formerly hold) v9: pick the battleground, man a concave, let them come.
 
 Win condition: raiders come through our choke/approach into a packed concave
 and die crossing open ground under the fire of every shooter at once
 (engagement surface ours > theirs).
-Preconditions (thresholds UNVERIFIED): defensible terrain near the anchor
-(defensible_terrain) and an enemy that comes to us (enemy_approaches). The "turtle + grenade" stalemate
-(LESSONS §0) was a turtle without either.
+Preconditions: an enemy that comes to us (enemy_approaches >= 0.5, hard;
+validated on baseline-v1: turtle was good where >= 0.5, bad where 0) and
+defensible terrain near the anchor (defensible_terrain >= 0.10, **soft** since
+v9: recorded, never makes turtle unattainable; it is 0.02 on every theme of the
+one baseline arena and turtle still won on open forest when the enemy came;
+calibration.md). The "turtle + grenade" stalemate (LESSONS §0) was a turtle
+without either.
 Phases:
   setup   plan (rca/tactical/planner.py v4, per-pawn XML ranges), draft, walk
           to the slots; melee pawns a step behind the line;
@@ -22,7 +26,9 @@ Phases:
 Signals: precondition:no_approach (raid already inside at planning: nothing to
 hold), precondition:enemy_approaches (the idle sally fired: they don't come),
 no_progress (NO_PROGRESS_TICKS of contested time without enemy points lost,
-also after a sally; EVAL_SPEC §2).
+also after a sally; EVAL_SPEC §2), losing_trade (report-only; doctrine.py).
+v9: report-only (losing_trade signal, defensible_terrain soft); behaviour
+identical to v8, bumped so rows never mix.
 Casualties: < 45% health steps off the line to a fallback cell, drafted
 (unless the fight is inside); option wounded_pullback=on|off (natural on).
 vs_throwers: accept_dodge (natural; micro dodges, viscosity 0.8) / stand_off /
@@ -47,9 +53,9 @@ SLOT_REISSUE_TICKS = 600
 
 class Turtle(SquadDoctrine):
     name = "turtle"
-    version = 8                  # legacy hold/turtle v1-v7
+    version = 9                  # v9 = v8 + losing_trade, soft defensible_terrain (report-only); legacy v1-v7
     win_condition = "they come through our approach into a packed concave and die crossing open ground"
-    preconditions = {"defensible_terrain": {"radius": 14, "min_cover": 0.10},
+    preconditions = {"defensible_terrain": {"radius": 14, "min_cover": 0.10, "soft": True},
                      "enemy_approaches": {"min_share": 0.5}}
     phases_spec = {"setup": "plan + walk to slots", "hold": "line, fire at will",
                    "commit": "inside (local) or sally (idle 4800 / stall 1440 ticks)",

@@ -127,6 +127,8 @@ hammer, ikwa, gladius, horn, claw, blade, fist, bite, scythe, lance, pike) → o
 | `prebaseline/signal_check.jsonl` | 4 | turtle and kite on theme_tribal_melee, 2 each, with no_progress rule 2 (kpis `longest_pause_ticks`, `longest_contested_ticks`, `pressure_ticks`) |
 | `prebaseline/options_check.jsonl` | 3 | one episode each: doctrine rescue=off, doctrine wounded_pullback=off (pirate_mixed), turtle wounded_pullback=off (pirate_melee); exercises the options, not an evaluation |
 | `prebaseline/restart_check.jsonl` | 3 | amove on frag_check: planned restart (`--restart-every 1`) before run 2, crash relaunch (game killed) before run 3. `prebaseline/restart.sh` + `.log` |
+| `baseline/core.jsonl` | 490 | **baseline-v1** (tag): amove v5, doctrine v4 + v5, turtle v8, spread v5, kite v5, close v3 × 7 themes × 10; adaptive + micro v4, max 15000 (results/baseline/README.md). `baseline/options.jsonl`: casualty options × 5 |
+| `gate/signals-preconditions.jsonl` | 420 | **gate run** of feat/signals-preconditions: amove v6, doctrine v6, turtle v9, spread v6, kite v6, close v4 × 7 themes × 10, baseline settings. Behaviour = baseline-v1 (report-only bump), adds `losing_trade` signals and `kpis.trade_curve` / `losing_trade_rule`, `pre_enemy_splash_heavy`, soft `pre_defensible_terrain`. `gate/run_signals_preconditions.sh` + `.log`; verdict `gate/signals-preconditions_gate.md` (`tools/gate.py`) |
 | `rca_smoke.jsonl` | 2 | **rca** schema 2: amove v5, adaptive + micro v4, on theme_pirate_mixed and theme_frag_check (smoke test of the new harness) |
 | `drills/frag_drill*.jsonl` | – | **rca** micro frag drill: one `event` row per exploded frag (`session, dodge, frag, cell, landed_seen, gone_seen, in_blast, in_zone, escaped, stayed, lost_track, hit_pawns, hit_entries, hit_in_blast, moves, false_alarm_moves, fuse_left_at_move[], latency[]`) and one `session` row (`ticks, throwers, standing_end, returns, names_unique, kpis, moves[]`). `_trial` = first shake-out run |
 | `rescored/<file>.jsonl` | = source | per-row verdicts recomputed by `tools/rescore.py`: `grade_stored, grade_v1, grade, score_v1, enemy_lost_points, our_lost_points, ler, ler_basis` (+ identity/config). Raw files untouched |
@@ -221,6 +223,16 @@ Readings:
 | turtle (hold v1–v3) | 0.59 | 0.73 | 2.92 | 0.46 | 0.53 |
 
 `win` here is the legacy definition for 236/241 rows.
+
+**Gate feat/signals-preconditions vs baseline-v1 (2026-10-04; `tools/gate.py`, rule in
+WORKFLOW.md; full table results/gate/signals-preconditions_gate.md).** A/A run (report-only
+version bump, behaviour unchanged): **PASS** — 42 cells: 40 ok, 2 watch (amove × mechs: 0.0 →
+0.5 lost/battle, trade share 1.00 → 0.83; doctrine × grenadier: trade share 0.43 → 0.27), 0
+regress; agents pooled (d lost/battle, + = worse): amove +0.04, close −0.01, doctrine −0.06,
+kite −0.13, spread −0.34, turtle −0.07, none regress. Two watch cells is what chance gives
+(~2.6 expected, `--simulate`). Lost/battle per agent, baseline → gate: amove 1.14 → 1.19,
+doctrine 1.20 → 1.14, turtle 1.43 → 1.36, spread 1.81 → 1.47, kite 1.06 → 0.93, close 1.27 →
+1.26: run-to-run noise of the same code is up to ±0.35 per agent at n = 70 (spread).
 
 ### Legacy summaries (legacy score; kept for reference)
 

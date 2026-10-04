@@ -18,7 +18,8 @@ Phases:
   commit  sweep: Auto attack once no melee raider has been within PRESS of a
           fighter for CALM_TICKS contact ticks (or there are no melee raiders);
   reset   back to hold as soon as a melee raider presses again.
-Signal: no_progress. No vs_throwers option (compact squad; not for grenadiers).
+Signals: no_progress, losing_trade (report-only; v6 = v5 + losing_trade,
+behaviour identical, bumped so rows never mix). No vs_throwers option (compact squad; not for grenadiers).
 At a 30-tick cycle reach is ~5.4 cells; MARGIN is untuned for it (UNVERIFIED).
 """
 import math
@@ -29,7 +30,7 @@ from .squad import SquadDoctrine, pos, unit
 
 class Kite(SquadDoctrine):
     name = "kite"
-    version = 5                  # legacy v1-v4 (v4 = v3 rules + reflex layer)
+    version = 6                  # v6 = v5 + losing_trade (report-only); legacy v1-v4 (v4 = v3 rules + reflex layer)
     win_condition = "melee raiders die crossing open ground; the hunted shooter is peeled through the squad"
     preconditions = {"enemy_melee_heavy": {"min_share": 0.4}, "ranged_squad": {"min_share": 0.5}}
     phases_spec = {"setup": "draft, stand", "hold": "fire at will; hunted shooter runs through the squad",

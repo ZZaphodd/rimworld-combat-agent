@@ -32,6 +32,14 @@ significant.
 - **Batches with the same config differ a lot.** *Two v2 grenadier batches differed by up to
   2.8 lost/ep (threatmap_report §6).* → Use n ≥ 10–20 for any cell a decision depends on, and
   holdout checks on a 2nd squad and a 2nd arena (TODO).
+- **A gate with one test per cell fails unchanged code.** *42 cells × 2 metrics at n = 10: a
+  "90% interval above 0 and worse by the margin" rule fails an A/A comparison ~93% of the time
+  (tools/gate.py --simulate). The real A/A run (feat/signals-preconditions, report-only bump)
+  had 2 such cells (amove × mechs 0.0 → 0.5 lost/battle, doctrine × grenadier trade share 0.43 →
+  0.27) with identical code; per-agent lost/battle moved by up to 0.34 (spread 1.81 → 1.47).* →
+  The gate uses a strict per-cell interval (98%, above the margin) plus a pooled per-agent check
+  (WORKFLOW "Gate rule"); single-cell regressions need more runs to be seen. Never read one cell
+  of n = 10 as a regression or an improvement.
 - **Moving pawns don't shoot.** *Kite v1 retreat_share 0.48–0.60; the doctrine agent v1 had 12–13
   of 14 pawns "moving" at contact (execution_report).* → Count the shooting time a move costs in
   every layer (v3 move_cost does this).
@@ -299,6 +307,21 @@ cells, 2 episodes each (results/prebaseline/mech_recheck.jsonl): enemy fire shar
   pressed (100% in all 4 mech battles: Pikemen reach 44.9 cells). Whether rule 2 fires when it should (a real stalemate: snipers out-ranging a turtle)
   is untested. → T = 3000 contested ticks stays a first value (UNVERIFIED), to be fitted on
   baseline data.
+- **Most bad battles are lost fast, not stalled.** *no_progress (3000 contested ticks) is
+  precise (82% of fires in bad battles) but catches 12% of them on baseline-v1. losing_trade
+  (≥ 2 pawns gone and running LER < 1) catches 56% at 85% precision with ~3,100 ticks median
+  lead (exact replay on the gate rows; the baseline proxy fit gave 50–56% / 87–94%); together
+  106 of 178 bad battles (calibration.md).* → The router gets two signals; defeats by pawns
+  downed (not dead) are still unflagged.
+- **Only enemy-based preconditions can be fitted on one squad and one arena.** *In baseline-v1
+  ranged_squad (0.93), defensible_terrain (0.02) and room_to_spread (1.00) are constant; turtle
+  won on the "indefensible" forest vs melee. enemy_approaches (turtle), enemy_melee_heavy (kite)
+  and the new enemy_splash_heavy (spread: grenadier 0.77 vs ≤ 0.13) separate the themes; close's
+  enemy_outranges points the wrong way for the current close.* → defensible_terrain is soft;
+  squad/terrain thresholds wait for the holdout.
+- **`$(grep -c x f || echo 0)` is "0\n0" when nothing matches** (grep -c prints 0 and exits 1).
+  *The gate script's crash-count stop never worked (no crash happened).* → `n=$(grep -c ...);
+  n=${n:-0}`.
 - **vs_throwers options run** (results/phase2/options.jsonl, 1 episode each, not an evaluation):
   stand_off made 15 thrower moves (spread, grenadier) and close_in 24 thrower attacks; on
   frag_check turtle's on_slot_share fell from ~1.0 to 0.64 (stand_off) and 0.14 (close_in), as

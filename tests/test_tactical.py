@@ -122,6 +122,27 @@ class Preconditions(unittest.TestCase):
         rep = check(AGENTS["turtle"], self.ctx(grid_terrain(rows), ["melee"] * 6 + ["short"] * 2))
         self.assertTrue(all_ok(rep), rep)
 
+    def test_turtle_defensible_terrain_is_soft(self):
+        """Open field vs melee: terrain fails but is soft, so turtle is attainable."""
+        rep = check(AGENTS["turtle"], self.ctx(open_terrain(), ["melee"] * 8))
+        self.assertFalse(rep["defensible_terrain"]["ok"])
+        self.assertTrue(rep["defensible_terrain"]["soft"])
+        self.assertNotIn("soft", rep["enemy_approaches"])
+        self.assertTrue(all_ok(rep), rep)
+
+    def test_spread_splash_heavy(self):
+        grenadiers = ["explosive"] * 10 + ["support"] * 2 + ["medium"]       # 0.77
+        mixed = ["short"] * 6 + ["medium"] * 3 + ["explosive", "long", "melee", "support"]
+        rep = check(AGENTS["spread"], self.ctx(open_terrain(), grenadiers))
+        self.assertTrue(rep["enemy_splash_heavy"]["ok"])
+        self.assertEqual(rep["enemy_splash_heavy"]["need"], 0.45)
+        rep = check(AGENTS["spread"], self.ctx(open_terrain(), mixed))
+        self.assertFalse(rep["enemy_splash_heavy"]["ok"])
+        self.assertFalse(all_ok(rep))
+
+    def test_error_report_is_not_a_failure(self):
+        self.assertTrue(all_ok({"error": "boom"}))
+
     def test_kite_and_close(self):
         self.assertTrue(check(AGENTS["kite"], self.ctx(open_terrain(), ["melee"] * 5))
                         ["enemy_melee_heavy"]["ok"])
@@ -223,6 +244,50 @@ class Progress(unittest.TestCase):
         self.assertEqual((m.contested, m.longest_contested, m.longest), (500, 1000, 2000))
         self.assertEqual(m.pressure_ticks, {"cost": 1000, "threat": 500, "either": 1500,
                                             "total": 2500})
+
+
+class LosingTrade(unittest.TestCase):
+    """losing_trade: >= 2 squad pawns gone and enemy points lost < pawns gone x
+    colonist value (4 x mean raider points), on a contested step."""
+    @staticmethod
+    def run_battle(kills_first, gone):
+        d = Progress.doctrine()
+        hs = [{"id": f"r{i}", "kind": "Mercenary_Gunner", "x": 100, "z": 100} for i in range(9)]
+        sq = {f"s{i}": {"pos": (90, 100), "health": 100, "downed": False} for i in range(4)}
+        now = 0
+        for _ in range(2):                              # contact, nothing lost yet
+            d.now = now
+            d.note_progress(hs, True, sq)
+            now += 120
+        hs = hs[kills_first:]
+        for i in range(gone):                           # one pawn gone per step
+            sq = {k: v for k, v in sq.items() if k != f"s{i}"}
+            d.now = now
+            d.note_progress(hs, True, sq)
+            now += 120
+        return d
+
+    def test_fires_on_two_losses_and_a_bad_trade(self):
+        d = self.run_battle(kills_first=1, gone=2)
+        sig = [s for s in d.signals if s["reason"] == "losing_trade"]
+        self.assertEqual(len(sig), 1)
+        self.assertEqual(sig[0]["lost"], 2)
+        self.assertAlmostEqual(sig[0]["ler"], 1 / 8, places=3)   # 1 raider vs 2 x 4 raiders
+        self.assertEqual(d.kpis()["trade_curve"][-1][1], 2)
+
+    def test_one_loss_is_not_enough(self):
+        self.assertEqual(self.run_battle(kills_first=0, gone=1).signals, [])
+
+    def test_even_trade_does_not_fire(self):
+        d = self.run_battle(kills_first=8, gone=2)       # 8 raiders for 2 pawns: LER 1.0
+        self.assertEqual([s for s in d.signals if s["reason"] == "losing_trade"], [])
+        k = d.kpis()
+        self.assertEqual(k["losing_trade_rule"]["min_lost"], 2)
+        self.assertEqual(k["trade_curve"][-1][1:], [2, d.meter.points])
+
+    def test_fires_once(self):
+        d = self.run_battle(kills_first=0, gone=4)
+        self.assertEqual([s["reason"] for s in d.signals].count("losing_trade"), 1)
 
 
 class Pressure(unittest.TestCase):
