@@ -51,6 +51,12 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 | rand_127 | `replay` v1 (Python, `tools/run_replay.py`) | the human's loadout + positions over time | squad down, 6 kidnapped | 6 | 190 |
 | rand_127 | `replay` v2 | + hit the wall the human broke | same: the wall never fell | 6 | 190 |
 | rand_127 | **Claude, playing directly** (`tools/hands.py`, player `claude`) | same plan, decided turn by turn: breach with 6 pawns, the two strongest at the mouth, open the urn cell (3 v 1), rotate the front below 45% | **repelled** | **0** (1 downed) | **10.8** (human 26.0) |
+| rand_030 | Claude, directly | same loadout and hill; the raid split round both sides of the hill this time; smoke, Mushinto first, molotov + frags on the southern group, Butters tied up the grenadier late | repelled | 1 (7 permanent injuries) | 38.8 (human 21.1) |
+| rand_084 | Claude, directly | same loadout, notch, gap slip at 11 cells, knives on Rusty, both grenadiers tied up in melee; Carlson flanked round the west end and killed Alo | repelled | 1 | 20.5 (human 1.8) |
+
+Claude's direct replays: better than the human where the raid moved as in the human's game
+(127), worse where it did not (030: the raid split round the hill; 084: the sniper flanked
+round the far end). Missing habit: track the top threat's path and keep a flank watch.
 
 Positions alone lost; the plan won once the hands-on parts were done: breaking the wall
 with many pawns (one swing per order), standing *beside* the mouth instead of in it, a
