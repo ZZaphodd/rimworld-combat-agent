@@ -1,0 +1,8 @@
+   rand_107 loaded and paused: play when ready (the harness only watches) | tick 3101 | battles done playing
+ours: 9 standing 9 | enemies: Grenadier_Destructive 15c, Grenadier_Destructive 19c, Town_Guard_Pig 21c, Town_Guard_Pig 25c, Town_Councilman_Pig 27c, Town_Guard_Pig 28c, Town_Guard_Pig 34c, Grenadier_Destructive 38c
+rect x10-56 z101-149
+fires 5 | frags/molotovs in play 2 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-045200-624.png
+[('Gracite', 38, 108, ''), ('Diatite', 49, 115, ''), ('Pete', 16, 127, ''), ('Dan', 27, 127, ''), ('Thirock', 26, 139, ''), ('Yolanda', 29, 111, ''), ('Waltz', 35, 110, ''), ('Hickman', 28, 114, ''), ('Trev', 27, 117, '')]
+
+[exited with code 0]

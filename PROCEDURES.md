@@ -327,8 +327,14 @@ paused. Dismiss raid letters with `read_letter(id, dismiss=True)` (117 had piled
 never pauses or advances time. It polls every second (fates, contact windows, the storyteller
 guard, stop conditions; game messages from `get_alerts.recentMessages`, skipping the toasts
 left from before the load) and writes the usual row with agent `human`, cycle `observed`, to
-`results/human/play.jsonl`. Screenshots for a watcher: `screenshot(include_ui=false, x, z, w,
-h)` renders offscreen and never moves the player's camera.
+`results/human/play.jsonl`. Every poll also goes to a trace (`rca/eval/trace.py`,
+`results/human/traces/`, named in the row's `trace`; `--no-trace` skips it): each pawn's
+position, health, weapon, job and drafted flag on both sides, fires, thrown projectiles and new
+messages, ~0.25 s per poll. Screenshots for a watcher: `screenshot(include_ui=false, x, z, w,
+h)` renders offscreen and never moves the player's camera. A battle report
+(`results/human/reports/<id>.md`) uses them: `rca/eval/frames.annotate()` labels a screenshot
+with who stood where (blue ours, red enemies, dashed downed) and draws route maps (macOS:
+Quick Look + ffmpeg).
 
 **Router night run** (`tools/night.py`): `new` builds a random problem
 (`rca/game/builders/problem.py`: arena_forest_night or arena_open_night × our squad = a raid of

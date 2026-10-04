@@ -1,0 +1,10 @@
+   rand_107 loaded and paused: play when ready (the harness only watches) | tick 4855 | battles done playing
+ours: 8 standing 7 | enemies: Grenadier_Destructive 6c, Grenadier_Destructive 9c, Town_Guard_Pig 11c, Grenadier_Destructive 13c, Town_Guard_Pig 14c, Town_Councilman_Pig 17c, Town_Guard_Pig 21c
+other pawns: [('Megasloth', 150, 6)]
+rect x16-56 z101-147
+fires 9 | frags/molotovs in play 1 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-045611-582.png
+[('Gracite', 46, 108, ''), ('Diatite', 46, 114, 'D'), ('Pete', 30, 122, ''), ('Thirock', 27, 140, ''), ('Yolanda', 41, 115, ''), ('Waltz', 35, 114, ''), ('Hickman', 28, 114, ''), ('Trev', 26, 114, '')]
+jobs: [('Pik-Gologg', 'watching for targets.'), ('Levin', 'watching for targets.'), ('Nostil', 'melee attacking Pete.'), ('Mushinto', 'watching for targets.'), ('Poimoppug', 'watching for targets.'), ('Piglet', 'watching for targets.'), ('Dumpy', 'moving.')]
+
+[exited with code 0]

@@ -1,0 +1,9 @@
+   rand_067 loaded and paused: play when ready (the harness only watches) | tick 3903 | battles done playing
+ours: 8 standing 8 | enemies: Drifter_Yttakin 3c, Grenadier_Destructive 6c, WildBoar 8c, Scavenger_Yttakin 8c, Pirate_Yttakin 10c, Scavenger_Yttakin 29c
+rect x194-234 z17-48
+fires 5 | frags/molotovs in play 1 | paused=False
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-051437-403.png
+[('Ape', 213, 27, ''), ('Ambbaigoboa', 214, 38, ''), ('Stork', 213, 40, ''), ('Camlavexa', 215, 24, ''), ('Banve', 214, 29, ''), ('Huntsman', 213, 38, ''), ('Mole', 217, 28, ''), ('Val', 213, 41, '')]
+jobs: [('Hadyott', 215, 39, '', 'melee attacking Ambbaigoboa.'), ('Ryan', 212, 41, '', 'melee attacking Stork.'), ('Duen', 199, 58, '', 'watching for targets.'), ("Kin'kovysh", 211, 43, '', 'watching for targets.'), ('Wild boar', 214, 41, '', 'melee attacking Val.'), ('Kelerk', 215, 30, '', 'melee attacking Banve.')]
+
+[exited with code 0]

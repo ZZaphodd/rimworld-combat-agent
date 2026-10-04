@@ -1,0 +1,10 @@
+   rand_030 loaded and paused: play when ready (the harness only watches) | tick 5551 | battles done finished:    enemies_cleared grade=decisive LER=2.25 lost=1 downed=0 | enemy seen 9 killed 6+2? escaped 0 | ticks=4747 wall=740.5s
+ours: 7 standing 7 | enemies: Town_Guard(down) 17c
+rect x169-209 z83-127
+fires 19 | frags/molotovs in play 0 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-054013-922.png
+[('Butters', 191, 102, ''), ('Bog', 201, 90, ''), ('Booug', 195, 105, ''), ('Pwuis', 201, 120, ''), ('Slop', 191, 102, ''), ('Polork', 183, 101, ''), ('Trough', 201, 113, '')]
+hostile: [('Manuel', 'Esverbonder Concord', 178, 108, 'D')]
+   enemies_cleared grade=decisive LER=2.25 lost=1 downed=0 | enemy seen 9 killed 6+2? escaped 0 | ticks=4747 wall=740.5s -> ~/code/rimworld-combat-agent/results/human/play.jsonl
+
+[exited with code 0]

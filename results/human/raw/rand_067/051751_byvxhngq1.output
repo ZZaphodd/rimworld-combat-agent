@@ -1,0 +1,11 @@
+   rand_067 loaded and paused: play when ready (the harness only watches) | tick 6603 | battles done playing
+ours: 8 standing 3 | enemies: Pirate_Yttakin 7c, Grenadier_Destructive 9c, Scavenger_Yttakin 11c, Scavenger_Yttakin 13c
+other pawns: [('Rat', 246, 164)]
+rect x193-233 z4-52
+fires 30 | frags/molotovs in play 1 | paused=True
+~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-051751-520.png
+[('Ape', 209, 8, ''), ('Stork', 211, 44, 'D'), ('Camlavexa', 205, 17, ''), ('Banve', 217, 12, ''), ('Huntsman', 210, 45, 'D'), ('Val', 212, 48, 'D'), ('Ambbaigoboa', 221, 42, 'D'), ('Mole', 220, 34, 'D')]
+jobs: [('Hadyott', 208, 24, '', 'watching for targets.'), ('Ryan', 205, 24, '', 'watching for targets.'), ('Duen', 221, 42, '', 'kidnapping Ambbaigoboa.'), ("Kin'kovysh", 220, 34, '', 'kidnapping Mole.')]
+   rand_067 loaded and paused: play when ready (the harness only watches)
+
+[exited with code 0]
