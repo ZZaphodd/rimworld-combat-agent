@@ -296,6 +296,11 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
     wall0, polls, ticks, last, outcome = time.time(), 0, 0, -1, "timeout"
     progress, avail_o, avail_t = ProgressMeter(), {}, {}
     messages, fled, satisfied = {}, None, None
+    # Toasts from before the load (the previous battle's "... are fleeing") are still in
+    # recentMessages; skip exactly those (tick, text) pairs. A new message with the same
+    # text has another tick and still counts.
+    stale = {(n.get("tick"), (n.get("text") or "")[:160])
+             for n in (rm.call("get_alerts").get("recentMessages") or [])}
     log(f"   {manifest['id']} loaded and paused: play when ready (the harness only watches)")
     while True:
         time.sleep(poll_s)
@@ -308,6 +313,8 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         last, polls = ticks, polls + 1
         for note in (rm.call("get_alerts").get("recentMessages") or []):
             text = (note.get("text") or "")[:160]
+            if (note.get("tick"), text) in stale:
+                continue
             if text and text not in messages:
                 messages[text] = ticks
                 low = text.lower()
