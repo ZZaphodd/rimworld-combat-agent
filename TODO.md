@@ -199,3 +199,6 @@ Alongside: push only decision-relevant cells to n = 10–20.
   signal (≥ 2 pawns gone and running LER < 1.0; report-only; 85% bad among fires, 56% of bad
   caught); turtle defensible_terrain → soft; spread `enemy_splash_heavy` ≥ 0.45; `tools/gate.py`
   (rule in WORKFLOW, unit-tested, `--simulate`); commit hash in every result row.
+- 2026-10-04 — **Docs review** for the Strive to Survive standard (every doc; RIMMOLT_API checked
+  against the live tool list) and **`tools/rm.py`**: compact game probe for hand checks (status
+  ~120 bytes vs ~7 KB raw; `rca/probe.py`, tests/test_probe.py).

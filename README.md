@@ -25,6 +25,7 @@ python3 tools/run_eval.py --agents turtle --scenarios theme_frag_check --runs 1 
 python3 tools/run_drill.py --sessions 3 --events 12   # micro frag drill, dodge off vs on
 python3 tools/rescore.py                               # rescore every results file
 python3 tools/gate.py results/gate/<branch>.jsonl     # merge gate: branch vs baseline
+python3 tools/rm.py status                            # probe the running game, compact output
 ```
 
 ## Requirements

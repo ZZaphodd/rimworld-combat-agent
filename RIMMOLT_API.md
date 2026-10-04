@@ -5,6 +5,9 @@ client port is checked against. Evidence key: **[code]** = the old client relied
 worked over hundreds of episodes; **[log]** = seen in run logs; **[obs]** = observed during
 development; **UNVERIFIED** = assumed, never checked directly. Checked against RimMolt's own
 tool list (117 tools) and live replies on 2026-10-04: argument names below match the schemas.
+**Probing by hand:** `python3 tools/rm.py` (status, pawns, pawn, area, wait, debug, tools, call)
+prints one line per thing and drops the `get_status` bundle, colour tags and long lists
+(`rca/probe.py`): ~120 bytes for a status vs ~7 KB raw.
 
 ## 1. Transport
 
