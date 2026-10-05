@@ -37,6 +37,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_011](cards/rand_011.md) | open | 4 good shooters (after the loadout) vs low-skill raid with 2 grenadiers | `us-outrange` `raid-low-skill` `raid-throwers` | loadout + two lines on open ground across the lane | 106.4 / 25.8 / 22.4 |
 | [rand_104](cards/rand_104.md) | forest | savage bows (after the loadout) vs civil raid with 3 throwers | `raid-throwers` `us-bows` | one line in the forest, throwers first, melee-lock on the last thrower | 105.5 / 46.0 / 35.3 |
 | [rand_015](cards/rand_015.md) | open | Neanderthal melee ×6 vs Waster gunners ×9 (molotov, tox) | `raid-outranges` `raid-outnumbers` `us-melee-pawns` | west rock pocket corner ambush (Claude alone, 3 attempts, all defeats) | 105.2 / – / 61.4 (best of 3) |
+| [rand_023](cards/rand_023.md) | forest | savage melee ×10 vs outlanders ×8 (a shooting-19 revolver, no explosives) | `raid-outranges` `us-outnumber` `us-melee-pawns` | (none yet: Claude's breach of the NE hall failed) | 101.8 / – / 100.2 |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
