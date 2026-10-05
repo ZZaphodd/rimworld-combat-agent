@@ -39,6 +39,10 @@
   Emñobi at t2397 at (144, 112), the ruin's west edge; the squad set off at t2459; Toni died inside
   the ruin at (147, 111) ~t2720, where he came in. In Claude's replay the squad set off at t2315,
   57 ticks before Toni's first blow (t2372), and Toni lived until t3556.
+- **Human, staggered start (told after Claude's replay):** team 1 went round clockwise, team 2
+  counter-clockwise, and team 2 was sent first, so that both teams came into the raid's shooters'
+  sight at the same moment. The trace (one poll per ~12 ticks) shows both moving between t2447 and
+  t2459.
 - **Human, t1325–2578** `raid-strung-out` → `concealed-wait`: ten packed in the small ruin
   (145–150, 108–111); the raid's front reached them with Lissa 50 cells behind.
 - **Human, t2578–3983** → `mark-shooters` `dealer-shields`: one of ours on each shooter, Whale's group
