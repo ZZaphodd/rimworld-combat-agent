@@ -335,6 +335,7 @@
   ],
   "plays": [
    "concealed-wait",
+   "cover-path-start",
    "mark-shooters",
    "dealer-shields",
    "loadout",

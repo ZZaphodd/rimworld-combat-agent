@@ -50,6 +50,10 @@ Raid (8 civil outlanders):
 3. **Lissa:** Gorilla was a good pawn to send to melee-lock her, since his own damage was low.
 4. **Toni:** handled passively. He came in before the squad left its hidden spot and was killed
    there for free. With our numbers, he was not counted a big threat.
+5. **When to leave the ruin** (told after Claude's replay): cells that cover hides from a raider's
+   gun are not shot at. The player traced the raiders' sight and set off when the walk to the
+   marked shooters, counting only the exposed cells, became the shortest. Both groups had to set
+   off together: if the raid hugs the north side, the group going round the south has a long way.
 
 ## Route
 
