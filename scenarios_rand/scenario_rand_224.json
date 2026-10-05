@@ -1,0 +1,247 @@
+{
+  "id": "rand_224",
+  "save": "scenario_rand_224",
+  "spec": {
+    "id": "rand_224",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Black Gove",
+      "weapon": "Steel knife (poor 26%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44822",
+      "name": "Ler 'Jackal' Combarro",
+      "weapon": "Steel spear (good)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44827",
+      "name": "Dolphin Ñobra",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44832",
+      "name": "Mandrill Ambas",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44837",
+      "name": "Toxemgarro Embaixada",
+      "weapon": "Pila (good)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Militor44851",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 201,
+      "z": 94
+    },
+    {
+      "id": "Mech_Militor44853",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 204,
+      "z": 89
+    },
+    {
+      "id": "Mech_Militor44859",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 199,
+      "z": 88
+    },
+    {
+      "id": "Mech_Militor44863",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 195,
+      "z": 88
+    },
+    {
+      "id": "Mech_Militor44861",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 197,
+      "z": 93
+    },
+    {
+      "id": "Mech_Militor44869",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 193,
+      "z": 92
+    },
+    {
+      "id": "Mech_Militor44871",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 202,
+      "z": 89
+    },
+    {
+      "id": "Mech_Militor44865",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 191,
+      "z": 89
+    },
+    {
+      "id": "Mech_Militor44857",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 196,
+      "z": 93
+    },
+    {
+      "id": "Mech_Militor44867",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 199,
+      "z": 94
+    },
+    {
+      "id": "Mech_Militor44855",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 191,
+      "z": 89
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 5,
+      "squad_classes": {
+        "melee": 4,
+        "thrown": 1
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 18.9,
+      "squad_melee": 4,
+      "enemy_n": 11,
+      "enemy_classes": {
+        "short": 11
+      },
+      "enemy_points": 495.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 0.45,
+      "distance": 79.8,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.2,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.2,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.225,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "id": "rand_164",
+  "save": "scenario_rand_164",
+  "spec": {
+    "id": "rand_164",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Gala Neabancocan",
+      "weapon": "Steel spear (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44823",
+      "name": "Red Cholloulo",
+      "weapon": "Steel ikwa (awful 57%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44827",
+      "name": "Legua Bocore",
+      "weapon": "Steel ikwa (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44831",
+      "name": "Abruisa Marulo",
+      "weapon": "Steel spear (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44834",
+      "name": "Yuu 'Hakuja' Ito",
+      "weapon": "Steel ikwa (poor 74%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44838",
+      "name": "Borba Lercroi",
+      "weapon": "Steel ikwa (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44842",
+      "name": "Barra 'Frog' Gomen",
+      "weapon": "Steel spear (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44846",
+      "name": "Gaborñoga Chave",
+      "weapon": "Steel ikwa (poor 97%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44850",
+      "name": "Riesling Bacchus",
+      "weapon": "Steel knife (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44856",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 177,
+      "z": 2
+    },
+    {
+      "id": "Human44860",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 181,
+      "z": 6
+    },
+    {
+      "id": "Human44862",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 178,
+      "z": 5
+    },
+    {
+      "id": "Human44867",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 192,
+      "z": 0
+    },
+    {
+      "id": "Human44871",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 178,
+      "z": 1
+    },
+    {
+      "id": "Human44875",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 192,
+      "z": 0
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 9
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 9,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "melee": 6
+      },
+      "enemy_points": 305.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.5,
+      "distance": 135.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.049,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

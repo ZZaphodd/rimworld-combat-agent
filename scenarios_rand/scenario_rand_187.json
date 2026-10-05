@@ -1,0 +1,266 @@
+{
+  "id": "rand_187",
+  "save": "scenario_rand_187",
+  "spec": {
+    "id": "rand_187",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Laogg 'Suet' Moimugow",
+      "weapon": "Autopistol (normal 64%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42620",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Autopistol (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human42624",
+      "name": "Sam 'Sammy' Gerador",
+      "weapon": "Steel knife (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Town_Councilman_Pig"
+    },
+    {
+      "id": "Human42630",
+      "name": "Moilap 'Nostril' Koow",
+      "weapon": "Pump shotgun (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42635",
+      "name": "Gwuoik Pigmukap",
+      "weapon": "Frag grenades",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42641",
+      "name": "Liup 'Barn' Moilogg",
+      "weapon": "Steel knife (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Town_Guard_Pig"
+    },
+    {
+      "id": "Human42645",
+      "name": "Moiogg Mopiup",
+      "weapon": "Frag grenades",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42653",
+      "name": "Squag 'Rasher' Moppag",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager_Pig"
+    },
+    {
+      "id": "Human42657",
+      "name": "Rebecca 'Lynx' Edwards",
+      "weapon": "Steel knife (poor 33%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager_Pig"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42665",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 76,
+      "z": 0
+    },
+    {
+      "id": "Human42671",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 74,
+      "z": 5
+    },
+    {
+      "id": "Human42678",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 61,
+      "z": 3
+    },
+    {
+      "id": "Human42684",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 73,
+      "z": 3
+    },
+    {
+      "id": "Human42689",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 66,
+      "z": 4
+    },
+    {
+      "id": "Human42695",
+      "def": "Town_Guard",
+      "weapon": "Heavy SMG",
+      "class": "support",
+      "x": 65,
+      "z": 2
+    },
+    {
+      "id": "Human42701",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 69,
+      "z": 3
+    },
+    {
+      "id": "Human42706",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 65,
+      "z": 6
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 3,
+        "melee": 4,
+        "explosive": 2
+      },
+      "squad_range_median": 12.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 4,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 7,
+        "support": 1
+      },
+      "enemy_points": 460.0,
+      "enemy_range_median": 21.4,
+      "enemy_closer_share": 0.88,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.75,
+      "count_ratio": 1.12,
+      "distance": 133.2,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.556,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.556,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.019,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

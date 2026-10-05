@@ -1,0 +1,179 @@
+{
+  "id": "rand_212",
+  "save": "scenario_rand_212",
+  "spec": {
+    "id": "rand_212",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Markos Kourtikos",
+      "weapon": "Charge lance (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human44825",
+      "name": "Casiane Doukas",
+      "weapon": "Sniper rifle (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human44833",
+      "name": "Theodore Acinatus",
+      "weapon": "Charge lance (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Pikeman44842",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 18,
+      "z": 85
+    },
+    {
+      "id": "Mech_Militor44848",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 15,
+      "z": 85
+    },
+    {
+      "id": "Mech_Militor44846",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 12,
+      "z": 83
+    },
+    {
+      "id": "Mech_Lancer44840",
+      "def": "Mech_Lancer",
+      "weapon": "Charge lance",
+      "class": "long",
+      "x": 11,
+      "z": 95
+    },
+    {
+      "id": "Mech_Pikeman44844",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 8,
+      "z": 83
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 3,
+      "squad_classes": {
+        "long": 3
+      },
+      "squad_range_median": 32.9,
+      "squad_range_max": 44.9,
+      "squad_melee": 0,
+      "enemy_n": 5,
+      "enemy_classes": {
+        "long": 3,
+        "short": 2
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 32.9,
+      "enemy_closer_share": 0.4,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.4,
+      "count_ratio": 0.6,
+      "distance": 118.7,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.4,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.4,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.04,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "id": "rand_145",
+  "save": "scenario_rand_145",
+  "spec": {
+    "id": "rand_145",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Nosare Ereosa",
+      "weapon": "Hellcat rifle (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human44825",
+      "name": "Appa Pasro",
+      "weapon": "Assault rifle (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Trooper"
+    },
+    {
+      "id": "Human44832",
+      "name": "Callincus Metoches",
+      "weapon": "Monosword (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human44838",
+      "name": "Provama Pyan",
+      "weapon": "LMG (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Empire_Fighter_Janissary"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44845",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 5,
+      "z": 129
+    },
+    {
+      "id": "Human44847",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 1,
+      "z": 134
+    },
+    {
+      "id": "Human44852",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 4,
+      "z": 127
+    },
+    {
+      "id": "Human44857",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 0,
+      "z": 124
+    },
+    {
+      "id": "Human44860",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 3,
+      "z": 124
+    },
+    {
+      "id": "Human44864",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 0,
+      "z": 128
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "medium": 2,
+        "melee": 1,
+        "support": 1
+      },
+      "squad_range_median": 26.4,
+      "squad_range_max": 30.9,
+      "squad_melee": 1,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "melee": 4,
+        "bow": 2
+      },
+      "enemy_points": 310.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 0.67,
+      "enemy_melee_share": 0.67,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 0.67,
+      "distance": 122.9,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.065,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

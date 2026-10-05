@@ -1,0 +1,248 @@
+{
+  "id": "rand_198",
+  "save": "scenario_rand_198",
+  "spec": {
+    "id": "rand_198",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Dark 'Skulk' Skaldling",
+      "weapon": "Steel mace (poor 79%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42620",
+      "name": "Burnskar Reekash",
+      "weapon": "Steel mace (poor 92%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42626",
+      "name": "Skarbug 'Beatface' Reekox",
+      "weapon": "Steel axe (awful 94%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42631",
+      "name": "Setsuko 'Dumbo' Conrad",
+      "weapon": "Steel knife (normal 87%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42637",
+      "name": "Robert 'Ironhead' Seafield",
+      "weapon": "Steel axe (poor 61%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42643",
+      "name": "David Bishop",
+      "weapon": "Steel knife (awful 67%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42649",
+      "name": "Razaz Harisk",
+      "weapon": "Steel axe (poor 52%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42654",
+      "name": "Hizfir Kraxip",
+      "weapon": "Wooden mace (poor 85%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42659",
+      "name": "Lucas 'Blackjack' Wakefield",
+      "weapon": "Wooden club (71%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42665",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 199,
+      "z": 0
+    },
+    {
+      "id": "Human42669",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 199,
+      "z": 6
+    },
+    {
+      "id": "Human42673",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 205,
+      "z": 4
+    },
+    {
+      "id": "Human42677",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 203,
+      "z": 3
+    },
+    {
+      "id": "Human42681",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 200,
+      "z": 5
+    },
+    {
+      "id": "Human42685",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 196,
+      "z": 1
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 9
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 9,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "melee": 5,
+        "bow": 1
+      },
+      "enemy_points": 310.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 0.83,
+      "enemy_melee_share": 0.83,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.17,
+      "count_ratio": 1.5,
+      "distance": 142.7,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.833,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.833,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.035,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

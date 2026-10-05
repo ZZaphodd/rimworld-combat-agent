@@ -1,0 +1,216 @@
+{
+  "id": "rand_191",
+  "save": "scenario_rand_191",
+  "spec": {
+    "id": "rand_191",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Basilos Kastamos",
+      "weapon": "Steel axe (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42623",
+      "name": "Phocas Vaanrus",
+      "weapon": "Wooden mace (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42630",
+      "name": "Eulogia Melodus",
+      "weapon": "Charge lance (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42636",
+      "name": "Licinius Caslos",
+      "weapon": "Plasmasword (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42643",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Pila",
+      "class": "thrown",
+      "x": 82,
+      "z": 249
+    },
+    {
+      "id": "Human42648",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Pila",
+      "class": "thrown",
+      "x": 93,
+      "z": 245
+    },
+    {
+      "id": "Human42653",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 92,
+      "z": 245
+    },
+    {
+      "id": "Human42669",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 92,
+      "z": 247
+    },
+    {
+      "id": "Human42671",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Pila",
+      "class": "thrown",
+      "x": 86,
+      "z": 245
+    },
+    {
+      "id": "Human42675",
+      "def": "Tribal_Hunter",
+      "weapon": "Recurve bow",
+      "class": "bow",
+      "x": 83,
+      "z": 245
+    },
+    {
+      "id": "Human42679",
+      "def": "Tribal_HeavyArcher",
+      "weapon": "Pila",
+      "class": "thrown",
+      "x": 85,
+      "z": 248
+    },
+    {
+      "id": "Human42683",
+      "def": "Tribal_Archer",
+      "weapon": "Short bow",
+      "class": "bow",
+      "x": 80,
+      "z": 249
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "melee": 3,
+        "long": 1
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 32.9,
+      "squad_melee": 3,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "thrown": 4,
+        "melee": 2,
+        "bow": 2
+      },
+      "enemy_points": 495.0,
+      "enemy_range_median": 18.9,
+      "enemy_closer_share": 0.75,
+      "enemy_melee_share": 0.25,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.75,
+      "count_ratio": 0.5,
+      "distance": 127.5,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.016,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

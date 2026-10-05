@@ -1,0 +1,256 @@
+{
+  "id": "rand_169",
+  "save": "scenario_rand_169",
+  "spec": {
+    "id": "rand_169",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Tobor Cheetah",
+      "weapon": "Recurve bow (normal 97%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human42619",
+      "name": "White Baiamb",
+      "weapon": "Recurve bow (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human42623",
+      "name": "Colmea Goat",
+      "weapon": "Recurve bow (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human42628",
+      "name": "Tolmarxadalou Abecan",
+      "weapon": "Pila (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human42644",
+      "name": "Barxigone 'Falcon' Gochoma",
+      "weapon": "Short bow (poor)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human42648",
+      "name": "White Bagogua",
+      "weapon": "Pila (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human42653",
+      "name": "Canto 'Whale' Milada",
+      "weapon": "Pila (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "thrown",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human42658",
+      "name": "Carcammea Irogo",
+      "weapon": "Short bow (poor 53%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42663",
+      "def": "Thrasher",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 0,
+      "z": 39
+    },
+    {
+      "id": "Human42669",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 3,
+      "z": 35
+    },
+    {
+      "id": "Human42675",
+      "def": "Drifter",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 0,
+      "z": 32
+    },
+    {
+      "id": "Human42679",
+      "def": "Pirate",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 3,
+      "z": 30
+    },
+    {
+      "id": "Human42686",
+      "def": "Pirate",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 0,
+      "z": 44
+    },
+    {
+      "id": "Human42693",
+      "def": "Pirate",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 5,
+      "z": 39
+    },
+    {
+      "id": "Human42696",
+      "def": "Pirate",
+      "weapon": "bolt-action rifle",
+      "class": "long",
+      "x": 7,
+      "z": 35
+    },
+    {
+      "id": "Human42702",
+      "def": "Pirate",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 1,
+      "z": 32
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "bow": 5,
+        "thrown": 3
+      },
+      "squad_range_median": 22.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 0,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "melee": 2,
+        "short": 2,
+        "long": 4
+      },
+      "enemy_points": 460.0,
+      "enemy_range_median": 31.4,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.25,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.5,
+      "count_ratio": 1.0,
+      "distance": 150.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.008,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

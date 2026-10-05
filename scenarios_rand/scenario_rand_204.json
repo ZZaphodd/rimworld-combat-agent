@@ -1,0 +1,275 @@
+{
+  "id": "rand_204",
+  "save": "scenario_rand_204",
+  "spec": {
+    "id": "rand_204",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "White Zozacolabru",
+      "weapon": "Steel knife (poor 91%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44822",
+      "name": "Peca Canga",
+      "weapon": "Steel ikwa (poor)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44827",
+      "name": "Nabreibo Breixos",
+      "weapon": "Steel spear (good)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44832",
+      "name": "Green Mule",
+      "weapon": "Steel ikwa (awful)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44836",
+      "name": "Bansaga Alobi",
+      "weapon": "Steel ikwa (poor)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44840",
+      "name": "Senra Barracuda",
+      "weapon": "Steel knife (poor 27%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44842",
+      "name": "Lecorro Cheda",
+      "weapon": "Wooden spear (poor)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44848",
+      "name": "Orange Scullocha",
+      "weapon": "Steel knife (normal 26%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44850",
+      "name": "Verea Borbanascan",
+      "weapon": "Steel ikwa (poor 91%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    },
+    {
+      "id": "Human44854",
+      "name": "Lobster Labo",
+      "weapon": "Steel knife (poor 97%)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44859",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 244,
+      "z": 104
+    },
+    {
+      "id": "Human44865",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 247,
+      "z": 104
+    },
+    {
+      "id": "Human44870",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 243,
+      "z": 104
+    },
+    {
+      "id": "Human44877",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 245,
+      "z": 108
+    },
+    {
+      "id": "Human44883",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 249,
+      "z": 111
+    },
+    {
+      "id": "Human44889",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 242,
+      "z": 105
+    },
+    {
+      "id": "Human44895",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 243,
+      "z": 107
+    },
+    {
+      "id": "Human44900",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 246,
+      "z": 101
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "melee": 10
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 1.5,
+      "squad_melee": 10,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "explosive": 2,
+        "long": 2,
+        "short": 4
+      },
+      "enemy_points": 480.0,
+      "enemy_range_median": 20.9,
+      "enemy_closer_share": 0.5,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.25,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 1.25,
+      "distance": 121.3,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": null,
+          "value": null,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.059,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

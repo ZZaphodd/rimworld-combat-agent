@@ -1,0 +1,224 @@
+{
+  "id": "rand_149",
+  "save": "scenario_rand_149",
+  "spec": {
+    "id": "rand_149",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Bosmet Arilopospy",
+      "weapon": "Silver longsword (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42621",
+      "name": "Phocas Daimos",
+      "weapon": "Plasteel spear (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42630",
+      "name": "Nikephos Komnenos",
+      "weapon": "Charge rifle (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42637",
+      "name": "Akakios Koopasare",
+      "weapon": "Hellcat rifle (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Trooper"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42646",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 69,
+      "z": 2
+    },
+    {
+      "id": "Human42654",
+      "def": "Villager",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 76,
+      "z": 3
+    },
+    {
+      "id": "Human42659",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 73,
+      "z": 2
+    },
+    {
+      "id": "Human42664",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 67,
+      "z": 6
+    },
+    {
+      "id": "Human42669",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 69,
+      "z": 6
+    },
+    {
+      "id": "Human42674",
+      "def": "Villager",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 67,
+      "z": 6
+    },
+    {
+      "id": "Human42679",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 73,
+      "z": 4
+    },
+    {
+      "id": "Human42684",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 71,
+      "z": 2
+    },
+    {
+      "id": "Human42689",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 76,
+      "z": 3
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "melee": 2,
+        "medium": 2
+      },
+      "squad_range_median": 14.2,
+      "squad_range_max": 27.9,
+      "squad_melee": 2,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 6,
+        "melee": 1,
+        "long": 2
+      },
+      "enemy_points": 490.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.78,
+      "enemy_melee_share": 0.11,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.78,
+      "count_ratio": 0.44,
+      "distance": 132.6,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.111,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.021,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

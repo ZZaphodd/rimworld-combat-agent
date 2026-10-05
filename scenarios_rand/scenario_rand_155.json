@@ -1,0 +1,256 @@
+{
+  "id": "rand_155",
+  "save": "scenario_rand_155",
+  "spec": {
+    "id": "rand_155",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRoughPig",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Zihan 'Martin' Huang",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human42622",
+      "name": "Alva Rex",
+      "weapon": "Machine pistol (normal 99%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42628",
+      "name": "Antonino 'Toni' Cefalu",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42633",
+      "name": "Matthew Phovel",
+      "weapon": "Machine pistol (normal)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42639",
+      "name": "Matthew 'Matt' Martin",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42645",
+      "name": "Anna Hardy",
+      "weapon": "Steel knife (poor)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human42650",
+      "name": "Agatha 'Stumpy' Rasmussen",
+      "weapon": "Machine pistol (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human42655",
+      "name": "Chaz Targrin",
+      "weapon": "Autopistol (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42662",
+      "def": "Town_Councilman_Pig",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 242,
+      "z": 12
+    },
+    {
+      "id": "Human42668",
+      "def": "Town_Guard_Pig",
+      "weapon": "Incendiary launcher",
+      "class": "explosive",
+      "x": 244,
+      "z": 3
+    },
+    {
+      "id": "Human42674",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 242,
+      "z": 11
+    },
+    {
+      "id": "Human42680",
+      "def": "Grenadier_Destructive",
+      "weapon": "Molotov cocktails",
+      "class": "explosive",
+      "x": 249,
+      "z": 13
+    },
+    {
+      "id": "Human42685",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 242,
+      "z": 6
+    },
+    {
+      "id": "Human42690",
+      "def": "Town_Guard_Pig",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 241,
+      "z": 9
+    },
+    {
+      "id": "Human42695",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 246,
+      "z": 14
+    },
+    {
+      "id": "Human42697",
+      "def": "Town_Guard_Pig",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 248,
+      "z": 15
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "short": 6,
+        "long": 1,
+        "melee": 1
+      },
+      "squad_range_median": 19.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 1,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "short": 6,
+        "explosive": 2
+      },
+      "enemy_points": 470.0,
+      "enemy_range_median": 19.9,
+      "enemy_closer_share": 0.75,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.25,
+      "enemy_outrange_share": 0.12,
+      "count_ratio": 1.0,
+      "distance": 165.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.125,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.023,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

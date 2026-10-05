@@ -1,0 +1,249 @@
+{
+  "id": "rand_211",
+  "save": "scenario_rand_211",
+  "spec": {
+    "id": "rand_211",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "Pirate",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Meer 'Slab' Balork",
+      "weapon": "Pump shotgun (good)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human44825",
+      "name": "Phoenix 'Beanix' Mesinas",
+      "weapon": "Machine pistol (poor 47%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human44830",
+      "name": "Jowie Alvarez",
+      "weapon": "Steel knife (normal 26%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human44835",
+      "name": "Xiaoer Wang",
+      "weapon": "Steel mace (poor 52%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human44839",
+      "name": "CJ 'Pitt' Pitkin",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human44855",
+      "name": "Elena Kramer",
+      "weapon": "Autopistol (poor 90%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human44859",
+      "name": "Hector Jenkins",
+      "weapon": "Autopistol (poor 78%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human44864",
+      "name": "Oleg Kaufman",
+      "weapon": "Biocoded pump shotgun (normal 75%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human44870",
+      "name": "Flebe Tyronian",
+      "weapon": "Steel knife (poor 37%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44876",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 0,
+      "z": 35
+    },
+    {
+      "id": "Human44878",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 0,
+      "z": 35
+    },
+    {
+      "id": "Human44883",
+      "def": "Tribal_Berserker",
+      "weapon": "Steel spear",
+      "class": "melee",
+      "x": 1,
+      "z": 38
+    },
+    {
+      "id": "Human44888",
+      "def": "Tribal_Penitent",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 3,
+      "z": 43
+    },
+    {
+      "id": "Human44890",
+      "def": "Tribal_Warrior",
+      "weapon": "Steel ikwa",
+      "class": "melee",
+      "x": 0,
+      "z": 35
+    },
+    {
+      "id": "Human44893",
+      "def": "Tribal_Penitent",
+      "weapon": "Limestone club",
+      "class": "melee",
+      "x": 4,
+      "z": 44
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "short": 5,
+        "melee": 3,
+        "long": 1
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 3,
+      "enemy_n": 6,
+      "enemy_classes": {
+        "melee": 6
+      },
+      "enemy_points": 300.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.5,
+      "distance": 150.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.027,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

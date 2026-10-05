@@ -1,0 +1,263 @@
+{
+  "id": "rand_197",
+  "save": "scenario_rand_197",
+  "spec": {
+    "id": "rand_197",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Pirate",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Varrel Jin",
+      "weapon": "Frag grenades",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42621",
+      "name": "Yuuma Werner",
+      "weapon": "Pump shotgun (poor 80%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42626",
+      "name": "Narda Glass",
+      "weapon": "Steel club (54%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    },
+    {
+      "id": "Human42632",
+      "name": "Sjoerd 'Bowman' Lukas",
+      "weapon": "Revolver (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42637",
+      "name": "Shawn 'Chris' Flores",
+      "weapon": "Machine pistol (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42643",
+      "name": "Nadezhda Duarte",
+      "weapon": "Revolver (poor 74%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42648",
+      "name": "Leonard 'Lenny' Gorefist",
+      "weapon": "Machine pistol (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42655",
+      "name": "Rosalyn 'Rozzie' Rivera",
+      "weapon": "Steel knife (poor 62%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42661",
+      "def": "Thrasher",
+      "weapon": "Limestone club",
+      "class": "melee",
+      "x": 188,
+      "z": 2
+    },
+    {
+      "id": "Human42666",
+      "def": "Thrasher",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 185,
+      "z": 4
+    },
+    {
+      "id": "Human42671",
+      "def": "Thrasher",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 178,
+      "z": 2
+    },
+    {
+      "id": "Human42677",
+      "def": "Thrasher",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 178,
+      "z": 4
+    },
+    {
+      "id": "Human42683",
+      "def": "Thrasher",
+      "weapon": "Granite club",
+      "class": "melee",
+      "x": 176,
+      "z": 1
+    },
+    {
+      "id": "Human42689",
+      "def": "Thrasher",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 187,
+      "z": 3
+    },
+    {
+      "id": "Human42695",
+      "def": "Thrasher",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 176,
+      "z": 1
+    },
+    {
+      "id": "Human42701",
+      "def": "Thrasher",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 186,
+      "z": 1
+    },
+    {
+      "id": "Human42707",
+      "def": "Thrasher",
+      "weapon": "Steel gladius",
+      "class": "melee",
+      "x": 182,
+      "z": 1
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "explosive": 1,
+        "short": 5,
+        "melee": 2
+      },
+      "squad_range_median": 17.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 2,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "melee": 9
+      },
+      "enemy_points": 450.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 0.89,
+      "distance": 135.0,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.006,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

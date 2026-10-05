@@ -1,0 +1,266 @@
+{
+  "id": "rand_227",
+  "save": "scenario_rand_227",
+  "spec": {
+    "id": "rand_227",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Gennady Cowan",
+      "weapon": "Steel knife (poor)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44824",
+      "name": "Chiyoko Barr",
+      "weapon": "Autopistol (good)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Councilman"
+    },
+    {
+      "id": "Human44831",
+      "name": "Logan 'Mocha' Hirasawa",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44835",
+      "name": "Taisia Manning",
+      "weapon": "Steel knife (poor)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44840",
+      "name": "Caroline 'Carol' Rikkaru",
+      "weapon": "Revolver (poor 29%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    },
+    {
+      "id": "Human44845",
+      "name": "Katsumi Roach",
+      "weapon": "Pump shotgun (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44852",
+      "name": "Carys Pentaryl",
+      "weapon": "Autopistol (normal)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44859",
+      "name": "Fernanda Williams",
+      "weapon": "Autopistol (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Town_Guard"
+    },
+    {
+      "id": "Human44864",
+      "name": "Diana Raspivine",
+      "weapon": "Revolver (poor)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Villager"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44870",
+      "def": "Drifter",
+      "weapon": "Wooden club",
+      "class": "melee",
+      "x": 221,
+      "z": 245
+    },
+    {
+      "id": "Human44874",
+      "def": "Thrasher",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 223,
+      "z": 244
+    },
+    {
+      "id": "Human44880",
+      "def": "Scavenger",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 228,
+      "z": 243
+    },
+    {
+      "id": "Human44885",
+      "def": "Scavenger",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 221,
+      "z": 243
+    },
+    {
+      "id": "Human44890",
+      "def": "Pirate",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 219,
+      "z": 247
+    },
+    {
+      "id": "Human44896",
+      "def": "Scavenger",
+      "weapon": "bolt-action rifle",
+      "class": "long",
+      "x": 224,
+      "z": 246
+    },
+    {
+      "id": "Human44902",
+      "def": "Scavenger",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 230,
+      "z": 247
+    },
+    {
+      "id": "Human44907",
+      "def": "Drifter",
+      "weapon": "Steel knife",
+      "class": "melee",
+      "x": 231,
+      "z": 249
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "melee": 3,
+        "short": 6
+      },
+      "squad_range_median": 25.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 3,
+      "enemy_n": 8,
+      "enemy_classes": {
+        "melee": 3,
+        "short": 2,
+        "long": 3
+      },
+      "enemy_points": 385.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.62,
+      "enemy_melee_share": 0.38,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.38,
+      "count_ratio": 1.12,
+      "distance": 157.3,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.625,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.375,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.667,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.375,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.121,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}
