@@ -1386,6 +1386,70 @@
   }
  },
  {
+  "title": "rand_130 · civil outlanders ×9 (one ace) vs civil outlanders ×9 with two grenadiers · open — repelled",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers",
+   "raid-low-skill",
+   "us-low-skill",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "skirmish-line",
+   "focus-top-threat",
+   "frag-dodge",
+   "carry-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine`",
+    "play": "focus fire",
+    "result": "defeat (captives)",
+    "lost": "16 (incl. kidnap count)",
+    "badness": "206.0"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "loadout; two rows across the lane; the ace on the grenadiers; grenade sidesteps; carry the downed",
+    "result": "**repelled**",
+    "lost": "1 dead, 3 downed",
+    "badness": "**35.4**"
+   }
+  ],
+  "id": "rand_130",
+  "sites": [],
+  "arena": "arena_open_night",
+  "ours": "OutlanderCivil",
+  "raid": "OutlanderCivil",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "short": 8,
+    "melee": 1
+   },
+   "enemy_n": 9,
+   "enemy_classes": {
+    "short": 6,
+    "explosive": 2,
+    "melee": 1
+   },
+   "enemy_melee_share": 0.11,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.22,
+   "count_ratio": 1.0,
+   "distance": 152.5,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
   "title": "rand_179 · pirate guns ×8 (low skill) vs tribal archers ×9 · open — repelled",
   "situation": [
    "open-arena",
