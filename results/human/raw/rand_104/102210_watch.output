@@ -1,0 +1,19 @@
+tick 7071 (game 7454) | paused=False | ours 6 (down 2) | them 4 (down 3)
+OURS
+   Cheetah     @105,96 58% Pila | watching for targets. | nearest foe 1
+   Roamb       @109,103 43% Recurve bow | melee attacking Cholaky. | nearest foe 7
+   Crica       @95,127 32% DOWN - | downed. | nearest foe 14
+   Goenaban    @96,132 30% DOWN - | downed. | nearest foe 15
+   White       @96,132 87% Recurve bow | tending to Goenaban. | nearest foe 15
+   Cambiar     @92,124 100% Greatbow | attacking Mac. | nearest foe 17
+THEM
+   Annie       @105,95 37% DOWN - | downed. | nearest foe 1
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 7
+   Mac         @109,125 37% Autopistol | moving. | nearest foe 15
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 17
+fires 28 | grenades in the air 0
+rect x83-123 z88-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-102204-063.png
+frame results/human/hands_watch_7071.jpg
+
+[exited with code 0]

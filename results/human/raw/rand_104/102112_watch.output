@@ -1,0 +1,20 @@
+tick 6425 (game 6808) | paused=True | ours 6 (down 2) | them 5 (down 2)
+OURS
+   Cheetah     @105,96 61% Pila | melee attacking Annie. | nearest foe 1
+   Roamb       @101,103 43% Recurve bow | moving. | nearest foe 9
+   White       @95,116 87% Recurve bow | watching for targets. | nearest foe 17
+   Crica       @95,127 32% DOWN - | downed. | nearest foe 21
+   Goenaban    @96,132 30% DOWN - | downed. | nearest foe 22
+   Cambiar     @92,124 100% Greatbow | watching for targets. | nearest foe 23
+THEM
+   Annie       @105,95 47% Frag grenades | melee attacking Cheetah. | nearest foe 1
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 12
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 19
+   Lady        @117,125 40% Revolver | watching for targets. | nearest foe 24
+   Mac         @119,125 59% Autopistol | watching for targets. | nearest foe 26
+fires 22 | grenades in the air 0
+rect x85-126 z88-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-102107-547.png
+frame results/human/hands_watch_6425.jpg
+
+[exited with code 0]

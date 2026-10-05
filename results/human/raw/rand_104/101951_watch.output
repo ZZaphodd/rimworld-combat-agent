@@ -1,0 +1,22 @@
+tick 4627 (game 5010) | paused=True | ours 6 (down 0) | them 7 (down 2)
+OURS
+   Goenaban    @96,132 39% Short bow | watching for targets. | nearest foe 14
+   Crica       @95,127 64% Recurve bow | watching for targets. | nearest foe 14
+   Roamb       @92,104 49% Recurve bow | moving. | nearest foe 14
+   Cheetah     @101,96 100% Pila | watching for targets. | nearest foe 15
+   White       @90,116 100% Recurve bow | watching for targets. | nearest foe 16
+   Cambiar     @92,124 100% Greatbow | watching for targets. | nearest foe 17
+THEM
+   Bishop      @109,128 69% Pump shotgun | watching for targets. | nearest foe 14
+   Annie       @105,110 82% Frag grenades | watching for targets. | nearest foe 14
+   Sammy       @115,105 100% Autopistol | watching for targets. | nearest foe 17
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 17
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 21
+   Lady        @117,125 77% Revolver | watching for targets. | nearest foe 22
+   Mac         @119,125 100% Autopistol | watching for targets. | nearest foe 24
+fires 6 | grenades in the air 0
+rect x83-126 z89-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-101947-130.png
+frame results/human/hands_watch_4627.jpg
+
+[exited with code 0]

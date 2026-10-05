@@ -1,0 +1,25 @@
+tick 848 (game 1231) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   White       @101,118 100% Recurve bow | watching for targets. | nearest foe 94
+   Cambiar     @101,123 100% Greatbow | watching for targets. | nearest foe 94
+   Donkey      @101,114 100% Recurve bow | watching for targets. | nearest foe 94
+   Crica       @101,127 100% Recurve bow | watching for targets. | nearest foe 94
+   Roamb       @101,109 100% Recurve bow | watching for targets. | nearest foe 95
+   Goenaban    @101,132 100% Short bow | watching for targets. | nearest foe 95
+   Cheetah     @101,105 100% Pila | watching for targets. | nearest foe 95
+   Rrodoañocer @101,137 100% Short bow | watching for targets. | nearest foe 96
+THEM
+   Rabbit      @195,119 100% Molotov cocktails | moving. | nearest foe 94
+   Lady        @198,119 100% Revolver | moving. | nearest foe 97
+   Cholaky     @200,119 100% Frag grenades | moving. | nearest foe 99
+   Annie       @200,119 100% Frag grenades | moving. | nearest foe 99
+   Mac         @202,119 100% Autopistol | moving. | nearest foe 101
+   Bishop      @206,119 100% Pump shotgun | moving. | nearest foe 105
+   Georgette   @213,119 100% Steel knife | moving. | nearest foe 112
+   Sammy       @215,119 100% Autopistol | moving. | nearest foe 114
+fires 0 | grenades in the air 0
+rect x81-121 z98-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-101529-166.png
+frame results/human/hands_watch_848.jpg
+
+[exited with code 0]

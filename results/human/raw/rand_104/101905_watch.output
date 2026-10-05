@@ -1,0 +1,22 @@
+tick 4031 (game 4414) | paused=True | ours 6 (down 0) | them 7 (down 2)
+OURS
+   Roamb       @95,108 65% Recurve bow | watching for targets. | nearest foe 10
+   Cheetah     @99,99 100% Pila | moving. | nearest foe 13
+   White       @90,116 100% Recurve bow | watching for targets. | nearest foe 16
+   Goenaban    @96,132 44% Short bow | watching for targets. | nearest foe 17
+   Crica       @95,127 64% Recurve bow | watching for targets. | nearest foe 17
+   Cambiar     @92,124 100% Greatbow | watching for targets. | nearest foe 19
+THEM
+   Annie       @105,110 81% Frag grenades | watching for targets. | nearest foe 10
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 16
+   Bishop      @112,127 81% Pump shotgun | watching for targets. | nearest foe 17
+   Sammy       @115,105 100% Autopistol | watching for targets. | nearest foe 17
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 21
+   Mac         @119,125 100% Autopistol | watching for targets. | nearest foe 24
+   Lady        @123,118 100% Revolver | watching for targets. | nearest foe 29
+fires 7 | grenades in the air 1
+rect x83-130 z92-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-101900-280.png
+frame results/human/hands_watch_4031.jpg
+
+[exited with code 0]

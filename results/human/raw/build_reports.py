@@ -130,6 +130,18 @@ def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None):
 if __name__ == "__main__":
     which = sys.argv[1:] or ["rand_030", "rand_067", "rand_107", "rand_084", "rand_127",
                              "rand_065", "rand_029", "rand_039", "rand_011"]
+    if "rand_104" in which:
+        build("rand_104", [
+            (1231, "one north-south line in the forest, 4-5 cells apart, 32 long; the raid 94 cells east"),
+            (3189, "Rabbit (molotov) down; the centre stepped back into an arc; fire in front of it"),
+            (3882, "Cholaky (frags) down; Donkey dead; Georgette (knife) on Crica"),
+            (4414, "Georgette dead; Rrodoanocer dead at the north end (Bishop's shotgun side)"),
+            (5596, "Goenaban down at the north end; the raid holds at 14-24 cells"),
+            (6038, "Bishop dead; Crica down; four standing on each side"),
+            (6808, "Sammy dead; Cheetah locks Annie (the last thrower) in melee"),
+            (7454, "Annie down, Lady dead, the raid fled; Mac the last one"),
+        ], notes=[(125, 129, "start")],
+           trace_file="results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz")
     if "rand_011" in which:
         build("rand_011", [
             (1256, "two lines on open ground: guns in front, clubs and weak guns 6 cells behind"),

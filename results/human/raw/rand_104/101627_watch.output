@@ -1,0 +1,25 @@
+tick 1722 (game 2105) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   White       @104,118 100% Recurve bow | watching for targets. | nearest foe 35
+   Cambiar     @104,123 100% Greatbow | watching for targets. | nearest foe 35
+   Donkey      @104,114 100% Recurve bow | watching for targets. | nearest foe 35
+   Crica       @104,127 100% Recurve bow | watching for targets. | nearest foe 36
+   Roamb       @104,109 100% Recurve bow | watching for targets. | nearest foe 36
+   Goenaban    @104,132 100% Short bow | watching for targets. | nearest foe 37
+   Cheetah     @104,105 100% Pila | watching for targets. | nearest foe 38
+   Rrodoañocer @104,137 100% Short bow | watching for targets. | nearest foe 39
+THEM
+   Rabbit      @139,119 100% Molotov cocktails | moving. | nearest foe 35
+   Lady        @146,120 100% Revolver | moving. | nearest foe 42
+   Annie       @149,119 100% Frag grenades | moving. | nearest foe 45
+   Mac         @151,119 100% Autopistol | moving. | nearest foe 47
+   Cholaky     @151,119 100% Frag grenades | moving. | nearest foe 47
+   Bishop      @156,119 100% Pump shotgun | moving. | nearest foe 52
+   Sammy       @172,119 100% Autopistol | moving. | nearest foe 68
+   Georgette   @172,119 100% Steel knife | moving. | nearest foe 68
+fires 0 | grenades in the air 0
+rect x97-153 z98-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-101554-446.png
+frame results/human/hands_watch_1722.jpg
+
+[exited with code 0]
