@@ -47,20 +47,26 @@ straight west along z 119.
 
 ![1](img/rand_104_1_t848.jpg)
 One north–south line at x 101 (later 104), z 105–137: eight pawns 4–5 cells apart, 32 cells
-long, Cambiar's greatbow in the middle. The raid walked in a column along z 119 with the
+long, Cambiar's greatbow in the middle. The player placed it where the greatbow at its longest
+range reaches the slate chunks beside the raid's path with one cell to spare (28.9–29.8 cells
+from Cambiar's cell; range 29.9). The raid walked in a column along z 119 with the
 throwers in front.
 
 ![2](img/rand_104_2_t2806.jpg)
 In the forest the first hits came at ~11 cells (Rabbit, t2197), not at the bows' 23–30.
 Rabbit (molotovs) threw first, into the line's centre; the fire burned there for the rest of
 the battle (6 → 28 burning cells). **Rabbit downed t2582.** The centre (White, Cambiar, Crica)
-stepped back to x 90–95, an arc with the wings forward.
+stepped back to x 90–95, an arc with the wings forward. The player kept the greatbow from
+dodging (every move costs it damage) and let the pawns around it take the molotov landings;
+White stood in the middle to keep the line balanced.
 
 ![3](img/rand_104_3_t3499.jpg)
 **Cholaky (frags) downed t2980**: two of three throwers down with nobody of ours hurt yet.
 Then the north end took Bishop's shotgun from 13–16 cells (Goenaban 76 → 44%). **Donkey
 dead** between t3188 and t3250 at (99, 113), the pawn nearest the throwers: 100% at one poll,
-dead at the next — a single hit; the shooter's log went with the dead. Georgette (knife) ran
+dead at the next — Lady's revolver (shooting 4) destroyed his head in one hit (the player saw
+it; the shooter's log went with the dead). The player: that broke the balance on the north
+side, while the south had room. Georgette (knife) ran
 in to Crica (melee 12).
 
 ![4](img/rand_104_4_t4031.jpg)
@@ -77,7 +83,7 @@ sides wore each other down for ~2500 ticks. Annie threw about ten frags at the s
 
 ![7](img/rand_104_7_t6425.jpg)
 **Sammy dead** (t5699). Cheetah (pila, Tough) went to Annie, the last thrower, and locked her
-in melee; Roamb joined.
+in melee so she could not throw; Roamb joined.
 
 ![8](img/rand_104_8_t7071.jpg)
 Lady dead and the raid fled (t6457); Annie downed in melee (t6710); Mac killed at t7128.

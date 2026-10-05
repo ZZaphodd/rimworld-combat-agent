@@ -24,23 +24,30 @@
 - **t0–75** `us-skill-mismatch` → `loadout`: the greatbow to Cambiar (12), Cambiar's recurve to
   Crica (9), Crica's short bow to Goenaban (4).
 - **t848–1722** `approach` → `skirmish-line`: one line at x 101–104, z 105–137, 4–5 cells apart,
-  32 long; the raid in a column along z 119, throwers in front.
+  32 long; the raid in a column along z 119, throwers in front. Player: the line stands where
+  the greatbow at its longest range reaches the rock chunks by the raid's path with one cell to
+  spare (slate chunks at (132–133, 115–116): 28.9–29.8 cells from Cambiar's cell (104, 123); the
+  greatbow's range is 29.9).
 - **t2197–2980** `thrower-close`: in the forest the first hits came at ~11 cells. Rabbit's
   molotov landed in front of the line's centre and burned there all battle. Rabbit downed
   t2582, Cholaky downed t2980 — two of three throwers, no loss of ours. The centre stepped back
-  to x 90–95 (an arc, wings forward).
+  to x 90–95 (an arc, wings forward). Player: the greatbow loses damage every time it moves, so
+  the pawns around it took the molotov landings instead of Cambiar dodging; White in the middle
+  to keep the line balanced.
 - **t2938–4031** `raid-holds`: Bishop (shotgun) worked on the north end from 13–16 cells
   (Goenaban 100 → 44%). Donkey, nearest the throwers at (99, 113), died between t3188 and t3250
-  in one hit. Georgette (knife) reached Crica (melee 12) and died t3753. Rrodoañocer died at
+  in one hit: Lady (revolver, shooting 4) destroyed his head (seen by the player). Player: that
+  broke the balance on the north side; the south had more room. Georgette (knife) reached Crica (melee 12) and died t3753. Rrodoañocer died at
   the north end (t3833–4031).
 - **t4031–5655** `raid-holds` `thrower-close`: a slow exchange at 14–24 cells; Annie threw ~10
   frags at the south group. Goenaban downed t4677 (Bishop); Bishop dead t5269; Crica downed
   t5573 (Mac); Sammy dead t5699.
 - **t6425–6710** → `melee-lock`: Cheetah (pila, Tough) locked Annie, the last thrower, in
-  melee; Roamb joined; Annie downed t6710. Lady dead, raid fled t6457; Mac killed t7128.
+  melee so she could not throw (the player's intent); Roamb joined; Annie downed t6710. Lady dead, raid fled t6457; Mac killed t7128.
 
 ## What the play stood on (observed)
-- No site: forest 24 cells west of the start, across the raid's straight line west.
+- No site, but a range mark: the line was placed by the greatbow's range to rock chunks beside
+  the raid's path (above), in the forest 21–24 cells west of the start.
 - Forest: contact at ~11 cells, so the bows' 23–30 did not show; the fight ran at 10–24 cells.
 - The throwers walked at the front of the raid's column: they were the first targets.
 - Losses: the pawn nearest the throwers, then the north half of a 32-cell line under one
