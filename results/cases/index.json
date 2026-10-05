@@ -1618,7 +1618,7 @@
   }
  },
  {
-  "title": "rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human ×2 (raid left with captives)",
+  "title": "rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human ×2 and Claude (raid left with captives)",
   "situation": [
    "open-arena",
    "raid-far",
@@ -1636,7 +1636,9 @@
    "mark-shooters",
    "melee-lock",
    "piecemeal",
-   "mouth-hold"
+   "mouth-hold",
+   "concealed-wait",
+   "cover-path-start"
   ],
   "results": [
    {
@@ -1659,6 +1661,13 @@
     "result": "defeat, raid left with 5 captives (t9479)",
     "lost": "3 dead, 5 kidnapped",
     "badness": "172.0"
+   },
+   {
+    "who": "Claude",
+    "play": "pilas to Eagle and Tarsier; hidden outside the big ruin's west wall (first sight at 10 cells, computed); every shooter marked at once, Eagle + Tarsier on Kenny, staggered start; then the melee weapons ganged one at a time and the bows shot",
+    "result": "defeat, raid left with 6 captives (t6724)",
+    "lost": "1 dead, 6 kidnapped, 1 downed",
+    "badness": "173.6"
    }
   ],
   "id": "rand_190",
