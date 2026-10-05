@@ -64,6 +64,7 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 | rand_126 | Claude alone | loadout (rifle to the shooting-16 club holder); west rock pocket; tip ambush 3–4 on 1; Max's rifle, machine pistols and a Fire spew on the raiders holding north of the pocket | **repelled** | **0** (0 downed) | **13.6** (agent 99.8) |
 | rand_058 | Claude alone | west rock pocket (east part, hidden from the south); frag and molotovs on the bunch at the tip and on the raiders who went north; locks; one death from our own frag | **repelled** | 2 (2 downed) | 47.3 (agent 99.1) |
 | rand_128 | Claude alone | Empire: focus + molotov + frag on each shield-belt champion, bounds, a kite loop on the slower one; both champions dead, then the LMG and charge rifle held at 21–25 cells on open ground | defeat (captive) | 4 + 1 kidnapped | 94.7 (agent 95.4) |
+| rand_118 | Claude alone | tribal bows vs Yttakin melee + 2 pistols: breach the nook (t2246), mouth hold with two front cells, bows on the raider in the mouth ("Fire at" menu, shot-count check), two rotations; the two pistols left after five dead (attempt 1, resumed after a context compaction, is in `discarded.jsonl`) | **repelled** | **0** (2 downed) | **28.2** (agent 93.2) |
 
 Turn logs of Claude's plays (orders by tick, what followed): `raw/<id>/claude_turns.md`; the
 operating facts they rely on are in RIMMOLT_API.md (verb gizmo on buildings, melee/carry

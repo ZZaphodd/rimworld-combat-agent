@@ -41,6 +41,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_126](cards/rand_126.md) | open | Waster melee ×6 + a shooting-16 rifle (after the loadout) vs pirates ×8 | `raid-outranges` `us-outnumber` `us-melee-pawns` | **won**: west rock pocket tip ambush, rifle + Fire spew on the northern holders | 99.8 / – / 13.6 |
 | [rand_058](cards/rand_058.md) | forest | short guns + 3 throwables vs civil outlanders with 3 shotguns | `us-short` `raid-outranges` | repelled: west rock pocket, throwables on the bunch at the tip | 99.1 / – / 47.3 |
 | [rand_128](cards/rand_128.md) | open | pistols/shotguns + frag/molotov vs Empire: 2 shield-belt champions in plate, LMG, charge rifle | `raid-armoured` `raid-strong-1v1` `us-outnumber` | both champions killed (focus + fire, kite the slow one); lost to the gunners holding at range | 95.4 / – / 94.7 |
+| [rand_118](cards/rand_118.md) | open | tribal bows vs Yttakin blades ×6 + machine pistol + autopistol + boar | `raid-melee` `us-bows` `us-low-skill` | **repelled**: breach the nook, mouth hold, every bow on the raider in the mouth, two rotations (attempt 2; attempt 1 discarded) | 93.2 / – / 28.2 |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
