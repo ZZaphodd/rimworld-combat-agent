@@ -60,28 +60,34 @@ Navarro (twice, 44%), Maggie, Dennis and Cameron at 17–28 cells; the raid's fi
 came at t1956 (Mila).
 
 ![3](img/rand_011_3_t2244.jpg)
-Shaw (frags) inside 13 cells. Olaf (marble club) went alone to the south-west towards him;
-from t2512 Reid's and Zach's machine pistols hit him (leg, eye, jaw, shoulder).
+Shaw (frags) inside 13 cells. The player sent Olaf (marble club, 3/3) alone to the south-west
+as bait for the grenades and guns; from t2512 Reid's and Zach's machine pistols hit him (leg,
+eye, jaw, shoulder).
 
 ![4](img/rand_011_4_t2805.jpg)
 Pablo (knife) reaches Diver. The raid's gunners stop at 15–27 cells ("watching for targets").
-About ten frags came in between t2375 and t4617 (trace); the combat log, which keeps only
-recent entries, shows no frag injury, and every wound it shows on us is a bullet.
+About ten frags came in between t2375 and t4617 (trace), about five of them 1–3 cells from
+Strangler; the player stepped Strangler aside each time. The combat log (it keeps only recent
+entries) shows no frag injury; every wound it shows on us is a bullet. The frags did not go
+for the bait (Olaf): they landed by Mila and Bagad, then by Strangler.
 
 ![5](img/rand_011_5_t3552.jpg)
-Pablo dead (Bagad held him in melee from t2912; Diver's revolver). The squad has stepped
+Pablo dead (Bagad held him in melee from t2912 while Mila and Olaf came to make it 3 to 1;
+Diver's revolver finished him). He was the raid's only melee pawn: from here none of ours could
+be melee-locked (the player's reasoning). The squad has stepped
 6 cells further east (x 120–131). Both grenadiers within 13; Strangler down to 61% (Reid's
 machine pistol in the leg; the liver shot followed at t3722).
 
 ![6](img/rand_011_6_t3979.jpg)
 Olaf downed in the middle (t3817, Reid). Shaw dead (t3939: Strangler's shotgun, Wanya).
-Bagad and Mila charge through the raid to its wounded back pair, Navarro (44%) and Cameron
-(68%).
+Bagad and Mila (ordered at t3707) run due west along z 125–126, past the raid's north side,
+to melee-lock the raid's shooters: its back pair, Navarro (44%) and Cameron (68%).
 
 ![7](img/rand_011_7_t4450.jpg)
 Bagad dead: Dennis's autopistol hit his liver at t3896 during the charge; he died ~360 ticks
-later. Maggie dead (t4433, Diver's revolver). Mila used her **Fire spew** on Navarro and Cameron
-(t4512–4515): Navarro died burning, Cameron was seared.
+later. Maggie dead (t4433, Diver's revolver). Mila happened to stand where her **Fire spew** reached both
+Navarro and Cameron (t4512–4515; the player knew the ability): Navarro died burning, Cameron was
+seared.
 
 ![8](img/rand_011_8_t4887.jpg)
 Four raiders died in 300 ticks — Dennis (Boss, t4443), Navarro (fire spew, t4515), Cameron
@@ -99,14 +105,17 @@ Cali turned on Mila; all seven standing finished him in melee. Olaf was carried 
    and Diver holding clubs.
 2. **The raid's gunners held at 15–27 cells and came no closer**; what came in were the
    knife (Pablo) and the two grenadiers, one at a time, and each died near our line.
-3. **Our losses came from leaving the line**: Olaf alone on the south-west flank (downed by
-   the machine pistols), Bagad in the charge through the raid (liver shot). The pawns that
-   stayed in the line were wounded, not downed.
-4. **Reid** (machine pistol, shooting 4) did most of our damage (Olaf, Strangler, Mila) and was
+3. **Our losses came from the pawns sent out of the line**: Olaf as bait on the south-west
+   flank (downed by the machine pistols), Bagad in the charge past the raid's north side (liver
+   shot). The pawns that stayed in the line were wounded, not downed.
+4. **Melee lock, one way.** The player killed the raid's only melee pawn first (3 to 1), so
+   none of ours could be locked, then sent two clubs to lock the raid's shooters.
+5. **Reid** (machine pistol, shooting 4) did most of our damage (Olaf, Strangler, Mila) and was
    untouched until t4158.
-5. **A gene ability decided a moment:** Mila's Fire spew (not in the battle card: `hands.brief`
-   did not list abilities) killed Navarro and set the ground burning among the raid's back.
-6. The raid broke at t4666 with 7 of 9 out; there was no long fight, so no kidnapping. The
+6. **A gene ability decided a moment:** Mila's Fire spew (the player knew it; Claude's battle
+   card did not list it, `hands.brief` now does) killed Navarro and set the ground burning among
+   the raid's back.
+7. The raid broke at t4666 with 7 of 9 out; there was no long fight, so no kidnapping. The
    agent, which killed four without loss early, lost its three in the long fight after t4900.
 
 ## Case retrieval, first use (results/cases/sheets/rand_011_start.md)

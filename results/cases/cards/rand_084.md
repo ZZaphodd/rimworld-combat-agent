@@ -1,7 +1,7 @@
 # rand_084 · pig outlanders ×9 (low skill) vs pirates ×8 with a sniper and two grenadiers · open
 
 **Situation:** `open-arena` `raid-far` `raid-sniper` `raid-throwers` `top-threat` `us-low-skill` `us-melee-pawns` `us-skill-mismatch`
-**Plays seen:** `loadout` `notch-hold` `gap-slip` `melee-tieup` `molotov-into-group` `finish-downed`
+**Plays seen:** `loadout` `notch-hold` `gap-slip` `melee-lock` `molotov-into-group` `finish-downed`
 **Numbers:** ours 9 (short 5, explosive 2, melee 2), range median 25.9 · raid 8 (long 2, short 3, explosive 2, melee 1), 455 pt, outrange share 0.25 · count ratio 1.12 · raid from the east edge, 140 cells
 
 ## Sides
@@ -36,7 +36,7 @@
   south face; the rock now blocks the grenadiers' sight (a throw needs it).
 - **t4083–4403** `outflank`: the raid comes round both ends (through the gap: Lia, McMahon;
   round the east end: Rusty, Maris).
-- **t4083–4718** `melee-contact` → `melee-tieup`: Choppy (knife) holds Rusty (shooting 11,
+- **t4083–4718** `melee-contact` → `melee-lock`: Choppy (knife) holds Rusty (shooting 11,
   melee 0) — the human's Choppy won the duel; Claude's Choppy + Keap killed Rusty at the gap;
   guns on McMahon round the east end.
 - **t4443–5500 (Claude)** `enemy-downed` → `finish-downed` and melee on the throwers who came

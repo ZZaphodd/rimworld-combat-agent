@@ -48,6 +48,7 @@ A scene lists both for that moment.
 | `enemy-downed` | raiders lie downed near us |
 | `top-threat` | one raider is clearly the most dangerous (skill, weapon) |
 | `raid-breaking` | the raid flees or gives up |
+| `no-enemy-melee` *(new, 2026-10-05)* | the raid has no melee pawn left standing: ours can lock its shooters and none of ours can be locked (rand_011, the player's reasoning after Pablo died) |
 
 ## Plays: what was done
 
@@ -68,11 +69,12 @@ A scene lists both for that moment.
 | `smoke` | pop smoke at contact |
 | `molotov-into-group` | fire into a bunched group |
 | `focus-top-threat` | everyone on the most dangerous raider first |
-| `melee-tieup` | a melee pawn holds a raider's gunner or thrower in melee |
+| `melee-lock` | a melee pawn engages a raider's gunner or thrower: in melee it cannot shoot (the user's term; renamed from `melee-tieup` 2026-10-05). One-sided once the raid has no melee pawn left (`no-enemy-melee`) |
 | `carry-downed` | carry our downed along / inside |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
 | `finish-downed` | kill downed raiders in melee |
-| `melee-charge` *(new, 2026-10-05)* | melee pawns run through or round the raid to hit its back (rand_011: Bagad and Mila on the wounded back pair) |
+| `frag-dodge` *(new, 2026-10-05)* | step a pawn aside each time a frag lands next to it (rand_011: Strangler, ~5 frags within 1–3 cells, no frag wound) |
+| `bait` *(new, 2026-10-05)* | a cheap pawn sent out alone to draw grenades and fire away from the line (rand_011: Olaf, the player's intent) |
 | `ability` *(new, 2026-10-05)* | a gene or psychic ability used (rand_011: Mila's Fire spew); `hands.brief()` lists them |
 | `gang-melee` *(new, 2026-10-05)* | everyone standing piles onto one raider in melee |
