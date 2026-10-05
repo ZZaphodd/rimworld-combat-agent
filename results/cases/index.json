@@ -187,6 +187,13 @@
     "badness": "**33.2**"
    },
    {
+    "who": "Claude, attempt 4 (replaying the human's play)",
+    "play": "same loadout and gap; out through it when Seizz neared; fixed markers on Seizz (bait), Horror, Tooth; the rest on the nearest dangerous unmarked shooter",
+    "result": "**repelled**",
+    "lost": "1 dead, 1 downed",
+    "badness": "**25.5**"
+   },
+   {
     "who": "Claude (alone)",
     "play": "loadout; west rock pocket; ambush at rock B's north tip; locks on the throwers",
     "result": "defeat, captives (Bilegoda)",
