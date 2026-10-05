@@ -74,7 +74,7 @@ A scene lists both for that moment.
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
 | `finish-downed` | kill downed raiders in melee |
-| `frag-dodge` *(new, 2026-10-05)* | step a pawn aside each time a frag lands next to it (rand_011: Strangler, ~5 frags within 1–3 cells, no frag wound) |
-| `bait` *(new, 2026-10-05)* | a cheap pawn sent out alone to draw grenades and fire away from the line (rand_011: Olaf, the player's intent) |
+| `frag-dodge` *(new, 2026-10-05)* | move only the pawn a frag is aimed at, as it is thrown (the player's method, rand_011: the launch makes a whoosh; paused, step the game a frame or two to see the grenadier and the grenade and read the target or landing cell; move that pawn ~2–3 × the blast radius to a cell with no friendly-fire line that still shoots at the raid). Strangler: ~5 frags within 1–3 cells, no frag wound |
+| `bait` *(new, 2026-10-05)* | a cheap pawn sent out alone to draw the raid's fire, so the shooters in the line need not move and keep shooting (rand_011: Olaf, the player's intent) |
 | `ability` *(new, 2026-10-05)* | a gene or psychic ability used (rand_011: Mila's Fire spew); `hands.brief()` lists them |
 | `gang-melee` *(new, 2026-10-05)* | everyone standing piles onto one raider in melee |

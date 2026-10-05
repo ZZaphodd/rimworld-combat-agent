@@ -29,10 +29,14 @@
   The two rifles and Diver hit Navarro (twice), Maggie, Dennis and Cameron at 17–28 cells; the
   raid's first hit came at t1956.
 - **t2244–2805** `thrower-close` `raid-holds`: Shaw inside 13; the raid's gunners stopped at
-  15–27 cells. → `bait`: the player sent Olaf (club, 3/3) alone to the south-west as bait for
-  the grenades and guns; the machine pistols shot him up from t2512. Pablo (knife) ran in to Diver.
+  15–27 cells. → `bait`: the player sent Olaf (club, 3/3) alone to the south-west as bait, so
+  that the shooters in the line would not have to move and could keep shooting; the machine
+  pistols shot him up from t2512 (the frags still went for the line). Pablo (knife) ran in to Diver.
 - **t2567–3707** `thrower-close` → `frag-dodge`: about five frags landed 1–3 cells from Strangler;
-  the player stepped Strangler aside each time; no frag wound (his wounds were Reid's bullets).
+  no frag wound (his wounds were Reid's bullets). The player's method: at the launch's whoosh,
+  pause; step a frame or two to see the grenadier and the grenade and read whom it is aimed at;
+  move only that pawn, 2–3 × the blast radius, to a cell with no friendly-fire line that still
+  shoots at the raid.
 - **t2912–3304** `melee-contact` → `gang-melee` `melee-lock`: Pablo (knife) was the raid's only
   melee pawn. Bagad (club) held him while the player brought Mila and Olaf north to kill him 3 to
   1 (player: with him dead, none of ours could be melee-locked). Diver's revolver finished him

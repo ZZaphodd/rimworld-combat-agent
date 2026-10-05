@@ -61,13 +61,15 @@ came at t1956 (Mila).
 
 ![3](img/rand_011_3_t2244.jpg)
 Shaw (frags) inside 13 cells. The player sent Olaf (marble club, 3/3) alone to the south-west
-as bait for the grenades and guns; from t2512 Reid's and Zach's machine pistols hit him (leg,
-eye, jaw, shoulder).
+as bait: while the raid shot at him, the shooters in the line did not have to move and kept
+shooting. From t2512 Reid's and Zach's machine pistols hit him (leg, eye, jaw, shoulder).
 
 ![4](img/rand_011_4_t2805.jpg)
 Pablo (knife) reaches Diver. The raid's gunners stop at 15–27 cells ("watching for targets").
 About ten frags came in between t2375 and t4617 (trace), about five of them 1–3 cells from
-Strangler; the player stepped Strangler aside each time. The combat log (it keeps only recent
+Strangler; the player moved only Strangler each time (method: at the launch's whoosh, pause,
+step a frame or two to read whom the grenade is aimed at, then move that one pawn 2–3 × the blast
+radius to a cell with no friendly-fire line that can still shoot). The combat log (it keeps only recent
 entries) shows no frag injury; every wound it shows on us is a bullet. The frags did not go
 for the bait (Olaf): they landed by Mila and Bagad, then by Strangler.
 
