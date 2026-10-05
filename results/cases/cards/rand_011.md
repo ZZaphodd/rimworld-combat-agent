@@ -1,7 +1,7 @@
 # rand_011 · Waster pirates ×9 (four good shooters) vs low-skill outlanders ×9 with two grenadiers · open
 
 **Situation:** `open-arena` `raid-far` `raid-throwers` `raid-low-skill` `us-outrange` `us-melee-pawns` `us-skill-mismatch`
-**Plays seen:** `loadout` `skirmish-line` `melee-tieup` `melee-charge` `ability` `gang-melee`
+**Plays seen:** `loadout` `skirmish-line` `bait` `frag-dodge` `gang-melee` `melee-lock` `ability`
 **Numbers:** ours 9 (short 4, melee 3, long 2), range median 25.9 (max 36.9) · raid 9 (short 6, explosive 2, melee 1), 495 pt, outrange share 0, closer share 0.78 · count ratio 1.0 · raid from the west edge (0–16, 47–67), ~140 cells
 
 ## Sides
@@ -29,15 +29,22 @@
   The two rifles and Diver hit Navarro (twice), Maggie, Dennis and Cameron at 17–28 cells; the
   raid's first hit came at t1956.
 - **t2244–2805** `thrower-close` `raid-holds`: Shaw inside 13; the raid's gunners stopped at
-  15–27 cells. Olaf (club) went alone to the south-west towards Shaw and was shot up by the
-  machine pistols (from t2512). Pablo (knife) ran in to Diver.
-- **t2912–3304** `melee-contact` → `melee-tieup`: Bagad (club) held Pablo; Diver's revolver
-  killed him. The line stepped ~6 cells east.
+  15–27 cells. → `bait`: the player sent Olaf (club, 3/3) alone to the south-west as bait for
+  the grenades and guns; the machine pistols shot him up from t2512. Pablo (knife) ran in to Diver.
+- **t2567–3707** `thrower-close` → `frag-dodge`: about five frags landed 1–3 cells from Strangler;
+  the player stepped Strangler aside each time; no frag wound (his wounds were Reid's bullets).
+- **t2912–3304** `melee-contact` → `gang-melee` `melee-lock`: Pablo (knife) was the raid's only
+  melee pawn. Bagad (club) held him while the player brought Mila and Olaf north to kill him 3 to
+  1 (player: with him dead, none of ours could be melee-locked). Diver's revolver finished him
+  at t3304. The line stepped ~6 cells east.
 - **t3552–3979** `thrower-close` `our-downed`: both grenadiers within 13; Olaf downed in the
   middle at t3817 (Reid's machine pistol). Shaw killed (Strangler's shotgun, Wanya) at t3939.
-- **t3896–4515** → `melee-charge` `ability`: Bagad and Mila charged through the raid to its
-  wounded back pair (Navarro 44%, Cameron 68%). Bagad took a liver shot (Dennis) on the way and
-  died ~360 ticks later. Mila's Fire spew killed Navarro and seared Cameron; fire on the ground.
+- **t3707–4515** `no-enemy-melee` → `melee-lock` `ability`: the player sent Bagad and Mila west
+  to melee-lock the raid's shooters. They ran from (125, 126) due west along z 125–126, past the
+  raid's north side (5–10 cells from Cali, Zach, Reid, Dennis), to its back pair Navarro (44%)
+  and Cameron (68%), arriving t4160–4220. Bagad took a liver shot from Dennis at ~(115, 125),
+  t3896, and died ~360 ticks later. Mila happened to stand where her Fire spew (the player knew
+  the ability) could reach both: Navarro died burning, Cameron was seared; fire on the ground.
 - **t4433–4711** `raid-breaking`: Maggie (Diver), Dennis (Boss), Cameron (Boss), Zach (Far) dead
   within 300 ticks; the raid broke at t4666. Reid downed (Boss, spine).
 - **t4900–6420** → `gang-melee`: Cali ran, then turned on Mila; all seven standing finished him
@@ -48,7 +55,7 @@
   lane (it walked north-east past the west lake: (76, 113) at ~t1524).
 - Four of ours shoot 8–13 after the loadout; the raid shoots 1–5 with a median range of 20.
 - The raid's gunners held at 15–27 cells; only the knife and the grenadiers came closer.
-- Losses: the two who left the line (Olaf alone on the flank, Bagad in the charge).
+- Losses: the two who left the line (Olaf as bait on the flank, Bagad in the charge).
 - The fight was short (raid broke at t4666), so no kidnapping began.
 
 ## Retrieval check

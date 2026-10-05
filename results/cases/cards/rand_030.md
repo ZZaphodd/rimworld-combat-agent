@@ -1,7 +1,7 @@
 # rand_030 · pig outlanders ×8 (short guns + throwables) vs outlanders ×9 · forest
 
 **Situation:** `forest-arena` `raid-far` `raid-outranges` `raid-outnumbers` `us-short` `us-low-skill` `us-skill-mismatch` `top-threat`
-**Plays seen:** `loadout` `hide-wait` `corner-ambush` `smoke` `molotov-into-group` `focus-top-threat` `melee-tieup`
+**Plays seen:** `loadout` `hide-wait` `corner-ambush` `smoke` `molotov-into-group` `focus-top-threat` `melee-lock`
 **Numbers:** ours 8 (explosive 3, short 5), range median 17.9 · raid 9 (short 5, long, support, melee, explosive), 500 pt, outrange share 0.56 · count ratio 0.89 · raid from the south edge behind a lake, 120 cells
 
 ## Sides
@@ -39,7 +39,7 @@
 - **t2519–2955 (Claude)** `raid-split` `melee-contact` → `molotov-into-group`: molotov + frag
   into the southern cluster (Lang); Grub on Bog, three on Grub; Grub and Lang dead.
 - **t2955–3329 (Claude)** `thrower-close`: guns on Smarty mostly missed; Bog dead ~t3300.
-- **t3329 (Claude)** → `melee-tieup`: Butters (melee 11) on Smarty; Smarty, May dead; the raid
+- **t3329 (Claude)** → `melee-lock`: Butters (melee 11) on Smarty; Smarty, May dead; the raid
   fled t3824.
 
 ## What the play stood on (observed)
