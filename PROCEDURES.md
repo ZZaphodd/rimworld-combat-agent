@@ -17,6 +17,7 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 | §10 watchdog | (in-process) | `rca/game/session.Watchdog` |
 | §12 micro drills | `tools/run_drill.py` | `rca/micro/drills.py` |
 | §14 threat montage | `tools/build_montage.py` | `rca/game/builders/montage.py` |
+| §15–16 human / Claude play | `tools/run_human.py`, `tools/hands.py` | `rca/eval/harness.run_observed_episode` |
 | combat points | `tools/combat_points.py` | `rca/game/defs.py` |
 
 **Save guard:** `session.save` refuses any name not starting with `arena_`, `scenario_`,
@@ -347,3 +348,49 @@ runs `night.py run <id> --agent <d> [--option k=v] --why "<reason>"`; the row (+
 `results/night/worst.md` (badness: `rca/eval/ranking.py`). The game restarts after 80 loads
 (`results/night/state.json`). The night arenas are copies of the evaluation arenas with the
 Empire and the civil outlanders made hostile (debug goodwill), saved as `arena_*_night`.
+
+## 16. Claude plays directly, with the case library (2026-10-05)
+
+Claude fights the whole battle itself (strategic: loadout and site; tactical: the play; micro:
+each order), turn by turn through `tools/hands.py`, and looks back at past battles in
+`results/cases/` while doing it. The Python agents are frozen as the baseline. The library and
+the retrieval prompts are in `results/cases/README.md`.
+
+**After a context compaction, read first:** `results/cases/README.md`, this section,
+`tools/hands.py` (docstring and helpers), the operating facts in RIMMOLT_API.md
+(`do_thing_action`, `order_pawn` float menu, `manage_gear`) and the last journal in
+`results/cases/journals/`.
+
+1. **Pick** the next problem in `results/night/worst.md` that has no card in
+   `results/cases/cards/` (#9 `rand_011` onward), unless the user names one.
+2. **Load:** `python3 tools/run_human.py --manifest scenarios_rand/scenario_<id>.json --player
+   claude`, in the background. It loads paused and only watches; the trace goes to
+   `results/human/traces/`, the row to `results/human/play.jsonl`. Time moves only with
+   `hands.wait(ticks)` (it pauses again after).
+3. **Battle card:** `hands.brief("player")` and `hands.brief("hostile")` (shooting/melee, combat
+   traits, weapon, armour, smoke packs, positions; read them before the battle, skills grow
+   during it), the raid's edge and distance, `briefing.features(manifest)`, situation tags from
+   `results/cases/tags.md`. Show the user a short card in chat.
+4. **Retrieval (start):** the subagent prompt in `results/cases/README.md` writes
+   `results/cases/sheets/<id>_start.md`. Read it, decide (loadout, site, play), and tell the
+   user the plan in a few lines.
+5. **Loadout** before anyone is drafted (drafting cancels the pick-up job): `manage_gear` drop,
+   then equip by ThingID (RIMMOLT_API.md), ~100–200 ticks.
+6. **Play:** draft and order with `go`, `attack`, `melee`, `hit` (walls, urns), float-menu
+   `Carry`/`Melee attack … to death`, gizmos `Pop smoke`/`Drop <name>`; `st()` and
+   `shot()` to look; `wait()` 45–150 ticks per decision (shorter in contact). At a turning point
+   the start sheet did not cover, run the scene retrieval. Keep key frames with
+   `shot(..., keep="<id>_t<tick>.jpg")`.
+7. **End:** the harness stops when the raid is gone (or 6000 ticks after squad down; the man in
+   black is removed). Compute badness (`rca.eval.ranking.badness(row)`) and compare with the
+   agent's row in `results/night/router.jsonl` (the worst-list rows stopped at squad down:
+   EVAL_SPEC §3).
+8. **Records:** the journal (`results/cases/journals/`, format in the README), the card (new,
+   or a Claude row and scenes added), new sites in `sites.md`, new tags in `tags.md` marked
+   *(new, date)*, the README's card table. Observations only: no lessons from one battle (ask
+   the user before LESSONS.md).
+9. **Commit** on a branch and merge into main; don't push.
+
+A battle in which the context was compacted is discarded, not resumed: move its row to
+`results/human/discarded.jsonl` with `discarded.why`, and play it again from the start. The
+user may also take over or ask for a restart at any time.

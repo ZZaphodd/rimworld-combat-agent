@@ -84,6 +84,12 @@ Sections: **Now** (blocking, in order) · **Roadmap** · **Open items by layer**
    4. Distil into rules the agents can observe (not the human's pausing or whole-screen view),
       as a doctrine change or tactical option on a branch; the gate (branch vs baseline-v2)
       decides. One demonstration is a hypothesis: human rounds 1 and 2 differed completely.
+   5. **(2026-10-05, current direction)** Claude plays the problems directly, all three layers,
+      with a case library instead of rules: one card per problem (every play of it, scenes
+      tagged by situation), shared sites, journals; a subagent fetches the 3 closest cases
+      at the start and at turning points (results/cases/, PROCEDURES §16). The Python agents
+      are frozen as the baseline. Goal: explore the problem space and name its dimensions
+      (tags.md) from play; see whether results improve as the library grows.
    First demonstrations (t500_pirate_grenadier, results/human/play.jsonl on the branch):
    round 1 pyrrhic (6 killed, 1 lost, 4 downed, 313% HP, 7 permanent injuries); round 2
    repelled with 0 lost, 0 downed, 48% HP (agents 164–239%): hold behind rock lines, keep the
