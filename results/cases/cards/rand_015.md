@@ -19,6 +19,8 @@
 |---|---|---|---|---|---|
 | agent `doctrine` (no loadout) | melee holds until an enemy is within 20, then charges | open ground | defeat, captives | 3 dead, 2 kidnapped | 105.2 |
 | Claude (alone) | loadout; west rock pocket; ambush at rock B's north tip; locks on the throwers | west rock pocket | defeat, captives (Bilegoda) | 1 dead, 1 kidnapped, 1 downed | 61.4 |
+| Claude, attempt 2 | same pocket, greatbow to Crica; a move to the south face done with a blind wait | west rock pocket | defeat, captives | 1 dead, 2 kidnapped | 79.9 |
+| Claude, attempt 3 | big-ruin rooms R1/R2, melee beside the doors, Crica (the raid's target) inside | big-ruin rooms | defeat (no row: harness crash; from the trace) | 4 dead, 2 kidnapped | ≈ agent |
 
 ## Scenes
 - **t2880–3376** `raid-strung-out` → `corner-ambush` `gang-melee`: Seizz (melee 11) 13 cells
@@ -30,6 +32,10 @@
   Curne down, Bilegoda down.
 - **t6097–8236** `kidnap` → `chase-carrier` `carry-downed`: Manatee killed on his way to the
   carrier; Davenport walked off the west edge with Bilegoda; Crica carried Curne away.
+
+- Attempts 2–3 (journal): the opening worked each time (2–4 raiders out at a corner or a door);
+  then gunners holding at 10–20 cells shot into every opening our melee pawns stood in, and the
+  raid ended by kidnapping. Seizz also has **Fire spew** (raiders' abilities are not in the card).
 
 ## What the play stood on (observed)
 - Site: the **west rock pocket** (sites.md): rock B hides the pocket from the east; raiders
