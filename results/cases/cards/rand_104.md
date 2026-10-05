@@ -36,8 +36,10 @@
   to keep the line balanced.
 - **t2938–4031** `raid-holds`: Bishop (shotgun) worked on the north end from 13–16 cells
   (Goenaban 100 → 44%). Donkey, nearest the throwers at (99, 113), died between t3188 and t3250
-  in one hit: Lady (revolver, shooting 4) destroyed his head (seen by the player). Player: that
-  broke the balance on the north side; the south had more room. Georgette (knife) reached Crica (melee 12) and died t3753. Rrodoañocer died at
+  in one hit (the player recalls Lady's revolver, shooting 4, destroying his head; not sure).
+  Player: the north side was under heavy pressure, the south had room. The player rated Bishop
+  (shotgun) and Georgette (knife) the top threats; both came from the same side (north). Georgette
+  (Wimp) went down without much cost, so little fire was taken off Bishop. Georgette (knife) reached Crica (melee 12) and died t3753. Rrodoañocer died at
   the north end (t3833–4031).
 - **t4031–5655** `raid-holds` `thrower-close`: a slow exchange at 14–24 cells; Annie threw ~10
   frags at the south group. Goenaban downed t4677 (Bishop); Bishop dead t5269; Crica downed
@@ -50,8 +52,8 @@
   the raid's path (above), in the forest 21–24 cells west of the start.
 - Forest: contact at ~11 cells, so the bows' 23–30 did not show; the fight ran at 10–24 cells.
 - The throwers walked at the front of the raid's column: they were the first targets.
-- Losses: the pawn nearest the throwers, then the north half of a 32-cell line under one
-  shotgunner.
+- Losses: the pawn nearest the throwers, then the north half of a 32-cell line, where both of
+  the player's top threats (Bishop, Georgette) came in.
 
 ## Sources
 report `results/human/reports/rand_104.md` · trace `results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz` ·
