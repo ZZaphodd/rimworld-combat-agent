@@ -55,8 +55,8 @@ def parse(path):
     return f
 
 
-def load(bid, since=""):
-    fs = [parse(p) for p in sorted((RAW / bid).iterdir()) if p.name >= since]
+def load(bid, since="", until="~"):
+    fs = [parse(p) for p in sorted((RAW / bid).iterdir()) if since <= p.name < until]
     return {f["tick"]: f for f in fs if "tick" in f and "png" in f}
 
 
@@ -96,8 +96,12 @@ def trace_paths(path, picks, every=3):
     return out
 
 
-def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None):
-    fr = load(bid, since)
+def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None, until="~", name=None, ov=None):
+    """name: image prefix (default bid; another attempt of the same problem needs its own);
+    ov: overview_shots.json key (default the id's last three digits); since/until: watcher
+    file name range (a second attempt's looks are saved with a prefix, e.g. "b")."""
+    name = name or bid
+    fr = load(bid, since, until)
     man = json.load(open(ROOT / f"scenarios_rand/scenario_{bid}.json"))
     rows = []
     ours_path = [(*centre([(p["name"], p["x"], p["z"], False) for p in man["squad"]]), "S")]
@@ -105,16 +109,16 @@ def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None):
     for i, (tick, caption) in enumerate(picks, 1):
         f = fr[tick]
         t = tick - T0
-        out = IMG / f"{bid}_{i}_t{t}.jpg"
+        out = IMG / f"{name}_{i}_t{t}.jpg"
         frames.annotate(Path(f["png"]).expanduser(), f["rect"], out, pawns(f), caption=f"{i}. t{t}  {caption}",
                         gamma=gamma)
         rows.append((i, t, out.name, caption))
         for path, side in ((ours_path, "ours"), (them_path, "them")):
             if c := centre(f.get(side, [])):
                 add(path, c, i)
-    png, rect = OVERVIEW[bid[-3:]]
+    png, rect = OVERVIEW[ov or bid[-3:]]
     png = Path(png).expanduser()
-    route = IMG / f"{bid}_route.jpg"
+    route = IMG / f"{name}_route.jpg"
     if trace_file:                                # the trace has every second, not 7 frames
         tp = trace_paths(trace_file, picks)
         ours_path, them_path = ours_path[:1] + tp["ours"], them_path[:1] + tp["them"]
@@ -154,8 +158,20 @@ if __name__ == "__main__":
             (6730, "Speedy dead; Eagle down on the way to Kenny; Landoa down by him, then burned; Kenny still 100%"),
             (7969, "kidnap and leave: Kenny carries Opossum, Valerie Ambas; Anfisa up again"),
             (11590, "Valerie dropped Ambas, carries Eagle; Tarsier alone after her"),
-        ], notes=[(41, 88, "west wall ruin"), (125, 125, "start")],
+        ], notes=[(41, 88, "west wall ruin"), (125, 125, "start")], until="b",
            trace_file="results/human/traces/rand_190_human_20261005-194933.jsonl.gz")
+    if "rand_190b" in which:                     # the user's attempt 2 (looks saved as b*)
+        build("rand_190", [
+            (2347, "all eight in the big ruin's rooms R1/R2; the raid 45-60 cells north-east"),
+            (3360, "all eight in R2; the raid round both rooms: Lucas at the north door, Lorentz in R1"),
+            (3712, "molotovs at R2's north door (t3217, t3461); Lucas dead; five raiders 1-4 cells off the door"),
+            (4050, "Lorentz dead; Opossum down; Ambas burning; Eagle on Kenny, Mosquito on Riley"),
+            (4449, "Eagle shot dead (t3939); Ambas down; Riley dead next (t4065, Mosquito)"),
+            (5243, "Mosquito and Iotros shot dead; Landoa and Bee down; Tarsier alone against Kenny"),
+            (6262, "squad down (t5075): four kidnappers carry ours south"),
+            (7606, "Anfisa came back for Bee: all eight lost"),
+        ], notes=[(105, 45, "big ruin R1/R2"), (125, 125, "start")], since="b", name="rand_190b", ov="190b",
+           trace_file="results/human/traces/rand_190_human_20261005-201645.jsonl.gz")
     if "rand_023" in which:
         build("rand_023", [
             (1708, "all ten packed and hidden at the small ruin (145-150, 108-111); the raid 65 cells away, Lissa far behind"),

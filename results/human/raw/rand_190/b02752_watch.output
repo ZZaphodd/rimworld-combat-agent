@@ -1,0 +1,23 @@
+tick 2752 (game 3135) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Iotros      @107,46 100% Recurve bow | watching for targets. | nearest foe 6
+   Lándoa      @106,46 100% Pila | watching for targets. | nearest foe 7
+   Ambas       @106,46 100% Recurve bow | watching for targets. | nearest foe 7
+   Mosquito    @105,46 92% Pila | moving. | nearest foe 7
+   Eagle       @105,46 100% Short bow | moving. | nearest foe 7
+   Bee         @105,46 100% Greatbow | watching for targets. | nearest foe 7
+   Tarsier     @107,47 100% Recurve bow | watching for targets. | nearest foe 7
+   Opossum     @105,47 100% Steel ikwa | watching for targets. | nearest foe 8
+THEM
+   Riley       @109,40 100% Molotov cocktails | moving. | nearest foe 6
+   Lucas       @114,45 100% Steel knife | moving. | nearest foe 7
+   Anfisa      @112,40 100% Pump shotgun | moving. | nearest foe 8
+   Kenny       @109,38 100% Revolver | moving. | nearest foe 8
+   Allie       @115,43 100% Revolver | moving. | nearest foe 9
+   Speedy      @107,37 100% Machine pistol | watching for targets. | nearest foe 9
+   Lorentz     @108,37 100% Revolver | moving. | nearest foe 9
+   Valerie     @120,45 100% Bolt-action rifle | moving. | nearest foe 13
+fires 0 | grenades in the air 0
+rect x92-132 z27-57
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202013-184.png
+frame results/human/hands_watch_2752.jpg

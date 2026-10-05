@@ -1618,7 +1618,7 @@
   }
  },
  {
-  "title": "rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human (raid left with captives)",
+  "title": "rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human ×2 (raid left with captives)",
   "situation": [
    "open-arena",
    "raid-far",
@@ -1635,7 +1635,8 @@
    "gang-melee",
    "mark-shooters",
    "melee-lock",
-   "piecemeal"
+   "piecemeal",
+   "mouth-hold"
   ],
   "results": [
    {
@@ -1651,10 +1652,18 @@
     "result": "defeat, raid left with 2 captives (t13967)",
     "lost": "3 dead, 2 kidnapped, 3 downed",
     "badness": "129.9"
+   },
+   {
+    "who": "human, attempt 2",
+    "play": "no loadout (melee locks decide, not bows); all eight in the big ruin's rooms R1/R2 as a choke point, hoping the raid splits between the sides",
+    "result": "defeat, raid left with 5 captives (t9479)",
+    "lost": "3 dead, 5 kidnapped",
+    "badness": "172.0"
    }
   ],
   "id": "rand_190",
   "sites": [
+   "big-ruin room",
    "west wall ruin"
   ],
   "arena": "arena_open_night",

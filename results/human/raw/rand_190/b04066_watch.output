@@ -1,0 +1,20 @@
+tick 4066 (game 4449) | paused=False | ours 7 (down 2) | them 6 (down 0)
+OURS
+   Opossum     @105,48 31% DOWN - | downed. | nearest foe 1
+   Bee         @108,51 56% Greatbow | wandering. | nearest foe 1
+   Mosquito    @104,50 52% Pila | melee attacking Riley. | nearest foe 1
+   Lándoa      @106,44 45% Pila | melee attacking Speedy. | nearest foe 1
+   Ambas       @106,47 29% DOWN - | downed. | nearest foe 2
+   Tarsier     @106,45 100% Recurve bow | melee attacking Anfisa. | nearest foe 2
+   Iotros      @106,46 43% Recurve bow | watching for targets. | nearest foe 3
+THEM
+   Valerie     @107,51 100% Bolt-action rifle | watching for targets. | nearest foe 1
+   Speedy      @105,43 100% Machine pistol | melee attacking Lándoa. | nearest foe 1
+   Riley       @105,49 41% Molotov cocktails | melee attacking Mosquito. | nearest foe 1
+   Allie       @106,50 100% Revolver | watching for targets. | nearest foe 2
+   Kenny       @106,51 84% Revolver | watching for targets. | nearest foe 2
+   Anfisa      @106,49 100% Pump shotgun | watching for targets. | nearest foe 2
+fires 4 | grenades in the air 0
+rect x86-126 z32-62
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202218-534.png
+frame results/human/hands_watch_4066.jpg

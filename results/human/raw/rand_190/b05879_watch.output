@@ -1,0 +1,18 @@
+tick 5879 (game 6262) | paused=False | ours 6 (down 5) | them 5 (down 0)
+OURS
+   Ambas       @104,20 29% DOWN - | being carried by Speedy. | nearest foe 0
+   Lándoa      @106,37 30% DOWN - | being carried by Allie. | nearest foe 0
+   Tarsier     @95,27 32% DOWN - | being carried by Kenny. | nearest foe 0
+   Opossum     @101,32 25% DOWN - | being carried by Valerie. | nearest foe 0
+   Bee         @113,51 24% DOWN - | Crawling to safety. | nearest foe 9
+   Nails       @227,236 100% Revolver | wandering. | nearest foe 220
+THEM
+   Anfisa      @104,54 100% Pump shotgun | moving. | nearest foe 220
+   Allie       @106,37 82% Revolver | kidnapping Lándoa. | nearest foe 233
+   Valerie     @101,32 100% Bolt-action rifle | kidnapping Opossum. | nearest foe 240
+   Kenny       @95,27 66% Revolver | kidnapping Tarsier. | nearest foe 247
+   Speedy      @104,20 66% Machine pistol | kidnapping Ambas. | nearest foe 249
+fires 8 | grenades in the air 0
+rect x121-201 z100-156
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202228-250.png
+frame results/human/hands_watch_5879.jpg

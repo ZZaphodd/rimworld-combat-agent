@@ -1,4 +1,6 @@
-# rand_190: human vs agent (amove), savage tribe ×8 (bows, pila, one ikwa) vs rough outlanders ×8 with a molotov and a Hussar revolver
+# rand_190: human ×2 vs agent (amove), savage tribe ×8 (bows, pila, one ikwa) vs rough outlanders ×8 with a molotov and a Hussar revolver
+
+Attempt 2 (the big ruin's rooms, all eight lost, 172.0) is at the end.
 
 Second mining run, worst-list #2. **Defeat, the raid left with captives**: 3 of ours dead
 (Iotros, Lándoa, Bee), 2 kidnapped (Opossum, Mosquito), 3 downed at the end; four raiders dead
@@ -41,6 +43,8 @@ Raid (8 rough outlanders):
 | raiders dead | **4** (+ Anfisa downed, got up and left) | 1 |
 | HP lost (sum) | 672% | 800% |
 | badness | **129.9** | 192.0 |
+
+Attempt 2 (below): defeat, all eight lost (3 dead, 5 kidnapped), three raiders dead, badness 172.0.
 
 ## The player's reading and intents (as told after the battle)
 
@@ -139,9 +143,85 @@ walks at Kenny, who holds at (45, 107) at 100% and shoots.
 6. **Kidnapping** came once five of ours were down. Of the four raiders still standing, three
    carried pawns off; Valerie swapped her captive for Eagle.
 
+## Attempt 2: the big ruin's rooms — all eight lost
+
+Row `results/human/play.jsonl` (rand_190, player `human`, second row) · trace
+`../traces/rand_190_human_20261005-201645.jsonl.gz` · watcher `../raw/rand_190/b*`.
+**Defeat, raid left with captives** (t9479): **3 dead** (Eagle, Mosquito, Iotros, all shot),
+**5 kidnapped** (Ambas, Tarsier, Opossum, Lándoa, Bee); three raiders dead (Lucas, Lorentz,
+Riley) · HP 800% · **badness 172.0**.
+
+### The player's reading and intents (as told after the battle)
+
+1. **The rooms as a choke point**, but the molotov and the shotgun were hard counters to it.
+2. **No loadout:** ranged weapons mean almost nothing here; the fight is about how well the
+   melee locks are made.
+3. **The raid was hoped to split in half** between the rooms' sides; it took bad positions for us.
+4. **A strategic choice with a very narrow window,** and the squad did not get into it.
+
+### Route
+
+![route](img/rand_190b_route.jpg)
+
+The squad walked ~80 cells south-south-west to the big ruin's rooms R1/R2 (104–107, 43–47) and
+waited there. The raid came south-west straight at the rooms. The kidnappers left by the south
+edge.
+
+### Timeline
+
+![1](img/rand_190b_1_t1964.jpg)
+All eight inside rooms R1/R2. The raid is 45–60 cells north-east.
+
+![2](img/rand_190b_2_t2977.jpg)
+**Contact.** All eight inside R2 (104–107, 46–47). The raid came round both rooms:
+- Lucas (knife) at R2's north door, on Opossum;
+- Lorentz inside R1, south of R2;
+- Anfisa, Kenny, Allie, Valerie and Riley 2–4 cells east and north.
+
+![3](img/rand_190b_3_t3329.jpg)
+**Two molotovs at R2's north door** (t3217, t3461), burning at the door.
+- **Lucas dead.** Lándoa, Iotros and Bee on Lorentz.
+- Anfisa (shotgun), Riley, Allie, Kenny and Valerie stood 1–4 cells off the north door
+  (105–107, 49–51), shooting in.
+- Speedy entered R1.
+
+![4](img/rand_190b_4_t3667.jpg)
+**Lorentz dead. Opossum down** (t3630). Ambas is burning. Eagle went on Kenny, and Mosquito
+on Riley outside the north door.
+
+![5](img/rand_190b_5_t4066.jpg)
+**Eagle shot dead** (t3939) by Kenny's door. **Ambas down** (t3726). **Riley dead** soon after
+(t4065, Mosquito).
+
+![6](img/rand_190b_6_t4860.jpg)
+**Mosquito shot dead** (t4281) and **Iotros shot dead** (t4757). Lándoa and Bee down (t4227).
+Tarsier, the last standing, was alone against Kenny in melee; **down t5075**.
+
+![7](img/rand_190b_7_t5879.jpg)
+Squad down: four kidnappers carried Ambas, Lándoa, Tarsier and Opossum south.
+
+![8](img/rand_190b_8_t7223.jpg)
+**Anfisa came back for Bee**, who was crawling alone: all eight lost (t8753).
+
+### What it showed (observations)
+
+1. **The doors were not choke points against this raid.**
+   - The molotovs landed at R2's north door and burned there.
+   - Five raiders stood 1–4 cells off that door and shot in, among them the shotgun, Kenny and
+     the rifle.
+   - Three raiders came in by R1. Of the eight, three died to gunfire, from inside the rooms or
+     at the north door.
+2. **Kenny again was not locked.** Eagle went to him and was shot dead by his door, and
+   Tarsier met him last, alone. Kenny was at 65% when he left with Tarsier.
+3. **Squad down in ~2300 ticks from contact** (t2752–5075); attempt 1 took ~4000.
+4. With no one standing, the raid carried five off. One raider, Anfisa, came back for the last
+   crawler.
+5. In rand_012 the same rooms held, one raider per door, but that raid was mostly melee
+   (Yttakin blades and boars, one rifle), with no molotov and no shotgun.
+
 ## Data
 
 - row: `results/human/play.jsonl` (rand_190, player `human`); agent row: `results/night/router.jsonl`
-- trace: `../traces/rand_190_human_20261005-194933.jsonl.gz`
-- watcher records (`tools/watch.py`): `../raw/rand_190/`; frames: `../raw/build_reports.py`
+- traces: `../traces/rand_190_human_20261005-194933.jsonl.gz` (attempt 1), `../traces/rand_190_human_20261005-201645.jsonl.gz` (attempt 2)
+- watcher records (`tools/watch.py`): `../raw/rand_190/` (attempt 2: `b*`); frames: `../raw/build_reports.py`
 - case card: `results/cases/cards/rand_190.md`

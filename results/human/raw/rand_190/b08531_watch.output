@@ -1,0 +1,10 @@
+tick 8531 (game 8914) | paused=False | ours 2 (down 1) | them 1 (down 0)
+OURS
+   Bee         @121,8 19% DOWN - | being carried by Anfisa. | nearest foe 0
+   Nails       @199,184 100% Revolver | wandering. | nearest foe 193
+THEM
+   Anfisa      @121,8 100% Pump shotgun | kidnapping Bee. | nearest foe 193
+fires 12 | grenades in the air 0
+rect x120-200 z68-124
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202239-051.png
+frame results/human/hands_watch_8531.jpg
