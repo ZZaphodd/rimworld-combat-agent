@@ -73,7 +73,7 @@ its rules are things to learn and exploit. Section 8 collects them and is the se
 |---|---|---|
 | Ticks per second at 1x | 60 | game constant |
 | In-game hour | 2500 ticks | eval CLI help |
-| Smallest `wait_for_event` step | 15 ticks (quantised) | hazards.md |
+| Smallest `wait_for_event` step | 15 ticks (quantised) at the mod's first wait setting; **1 tick** (exact) since the user changed the setting on 2026-10-05 evening, with waits running at ~60 ticks/s | hazards.md; RIMMOLT_API (measured 2026-10-05) |
 | Humanlike raider speed | ~0.075–0.08 cells/tick (~4.6 c/s); covers ~9 cells per 120 ticks, ~2.4 per 30 ticks | execution_report, threatmap.py; some raiders are faster (UNVERIFIED which) |
 | Walking colonist with trees around | 0.07 cells/tick | reflex constant (estimate) |
 | Go here start-up delay | ~15 ticks before a fresh order moves the pawn | reflex constant (estimate, UNVERIFIED) |
