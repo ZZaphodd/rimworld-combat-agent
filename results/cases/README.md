@@ -35,6 +35,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_029](cards/rand_029.md) | open | tribal bows vs 4 throwers | `raid-throwers` `us-bows` | loadout + spaced line + chase the carriers | 110.0 / 55.6 / – |
 | [rand_039](cards/rand_039.md) | forest | low-skill gunners vs civil mixed with throwers | `raid-throwers` `top-threat` | loadout + small ruin + stepped withdrawal | 108.0 / 8.0 / 48.4 |
 | [rand_011](cards/rand_011.md) | open | 4 good shooters (after the loadout) vs low-skill raid with 2 grenadiers | `us-outrange` `raid-low-skill` `raid-throwers` | loadout + two lines on open ground across the lane | 106.4 / 25.8 / 22.4 |
+| [rand_104](cards/rand_104.md) | forest | savage bows (after the loadout) vs civil raid with 3 throwers | `raid-throwers` `us-bows` | one line in the forest, throwers first, melee-lock on the last thrower | 105.5 / 46.0 / – |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole

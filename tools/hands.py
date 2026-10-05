@@ -227,43 +227,99 @@ def away(name, fx, fz, dist=5, toward=None):
     return c
 
 
-def guard(n=10, dt=12, hp_drop=12, near=None, keep=()):
-    """Advance up to n × dt ticks. Each step: dodge grenades (the frag's target, or whoever lies
-    within 3 cells of a landed one, steps ~5 cells away, toward our own centre). Stops early when
-    one of ours loses hp_drop % or goes down, a raider goes down or dies, or (near=(name, d)) a
-    raider comes within d of that pawn. Pawns in keep never dodge (they are on an errand, e.g. a
-    melee order). Prints what happened."""
-    def snap():
-        return ({short_name(p["label"]): (p["x"], p["z"], bool(p.get("downed"))) for p in pawns("player")},
-                {short_name(p["label"]): (p["x"], p["z"], bool(p.get("downed"))) for p in pawns("hostile")})
-    def hp(names):
-        return {n_: rm.call("get_pawn", id=i).get("health") for n_, i in ids().items() if n_ in names}
-    o0, t0 = snap()
-    h0 = hp(o0)
-    dodged = {}
+
+THROWN = ("frag", "molotov", "emp grenade")
+
+
+def _aimed(h):
+    """The colonist a raider's `targeting` names ("targeting colonist X" / "attacking colonist X")."""
+    t = h.get("targeting") or ""
+    return t.split("colonist ", 1)[1].strip() if "colonist " in t else None
+
+
+def _dodge_cell(me, fx, fz, ours, foes, dist=5):
+    """A cell ~dist from (fx, fz): keeps about the same distance to the raid (a sidestep, so the
+    pawn can keep shooting), stays 2+ cells from other squadmates, never closer to the raid."""
+    ex = sum(f["x"] for f in foes) / len(foes) if foes else me["x"]
+    ez = sum(f["z"] for f in foes) / len(foes) if foes else me["z"]
+    d0 = math.dist((me["x"], me["z"]), (ex, ez))
+    best = None
+    for ang in range(0, 360, 30):
+        r = math.radians(ang)
+        c = (round(fx + math.cos(r) * dist), round(fz + math.sin(r) * dist))
+        if math.dist(c, (fx, fz)) < 4 or not (1 <= c[0] <= 248 and 1 <= c[1] <= 248):
+            continue
+        de = math.dist(c, (ex, ez))
+        crowd = sum(1 for o in ours if o is not me and math.dist(c, (o["x"], o["z"])) < 2)
+        score = abs(de - d0) + (8 if de < d0 - 1 else 0) + 5 * crowd + 0.2 * math.dist(c, (me["x"], me["z"]))
+        if best is None or score < best[0]:
+            best = (score, c)
+    return best[1]
+
+
+def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, quiet=False):
+    """Fine-grained steps (dt ticks) with a grenade reflex, the player's way: when a grenade
+    appears, its target is the colonist the nearest grenadier was aiming at (`targeting`), else
+    the pawn nearest its line of flight; only that pawn sidesteps ~5 cells (same distance to the
+    raid, clear of squadmates); once the grenade is gone the pawn's errand is re-issued from
+    `resume` {name: callable}. Pawns in `keep` never dodge. Returns early on an event: one of
+    ours down or -hp_drop % (checked every hp_every steps), a raider down or gone, or
+    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls."""
+    resume = resume or {}
+    weap = {h["id"]: (rm.call("get_pawn", id=h["id"]).get("weapon") or "").lower() for h in pawns("hostile")}
+    throwers = {i for i, w in weap.items() if any(k in w for k in THROWN)}
+    def hp():
+        return {n_: rm.call("get_pawn", id=i).get("health") for n_, i in ids().items()}
+    h0 = hp()
+    ours0 = {short_name(p["label"]): bool(p.get("downed")) for p in pawns("player")}
+    foes0 = {short_name(p["label"]): bool(p.get("downed")) for p in pawns("hostile")}
+    seen, dodging, last_aim = {}, {}, {}
     for k in range(n):
         wait(dt)
-        for f in frags(2):
-            who = f["target"] if not f["landed"] else (f["near"][0][1] if f["near"] and f["near"][0][0] <= 3 else None)
-            if who and who not in keep and dodged.get(f["id"]) != who:
-                ours = [p for p in pawns("player") if not p.get("downed")]
-                cx = sum(p["x"] for p in ours) / len(ours) + 6     # our side (east of the line)
-                cz = sum(p["z"] for p in ours) / len(ours)
-                c = away(who, *f["at"], dist=5, toward=(cx, cz))
-                dodged[f["id"]] = who
-                print(f"   dodge: {who} -> {c} from {f['kind']} at {f['at']}")
-        o1, t1 = snap()
-        h1 = hp(o1)
-        ev = [f"{n_} {h0.get(n_)}->{h1.get(n_)}" for n_ in h1 if h0.get(n_) and h1.get(n_) is not None
-              and h0[n_] - h1[n_] >= hp_drop]
-        ev += [f"{n_} DOWN" for n_ in o1 if o1[n_][2] and not o0.get(n_, (0, 0, False))[2]]
-        ev += [f"{n_} gone" for n_ in o0 if n_ not in o1]
-        ev += [f"raider {n_} down" for n_ in t1 if t1[n_][2] and not t0.get(n_, (0, 0, False))[2]]
-        ev += [f"raider {n_} dead/gone" for n_ in t0 if n_ not in t1]
-        if near and near[0] in o1:
-            px, pz, _ = o1[near[0]]
-            ev += [f"{n_} within {near[1]} of {near[0]}" for n_, (x, z, d) in t1.items()
-                   if not d and math.dist((x, z), (px, pz)) <= near[1]]
+        ours, foes = pawns("player"), pawns("hostile")
+        byname = {short_name(p["label"]): p for p in ours}
+        for f in foes:
+            if f["id"] in throwers and _aimed(f):
+                last_aim[f["id"]] = (_aimed(f), f["x"], f["z"])
+        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()}
+        for i, (kind, x, z) in projs.items():
+            if i in seen:
+                continue
+            seen[i] = (x, z)
+            # who threw it: the thrower nearest to where it first appeared
+            src = min(((math.dist((x, z), (a[1], a[2])), a[0]) for a in last_aim.values()), default=(99, None))
+            who = src[1] if src[0] <= 6 else None
+            if who is None:                                  # fall back: nearest standing pawn
+                cand = [p for p in ours if not p.get("downed")]
+                who = min(cand, key=lambda p: math.dist((x, z), (p["x"], p["z"]))) if cand else None
+                who = short_name(who["label"]) if who else None
+            me = byname.get(who)
+            if not me or who in keep or me.get("downed"):
+                continue
+            c = _dodge_cell(me, me["x"], me["z"], ours, [f for f in foes if not f.get("downed")])
+            go(who, *c)
+            dodging[i] = who
+            if not quiet:
+                print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} thrown at {who} -> sidestep {c}")
+        for i in [i for i in dodging if i not in projs]:     # exploded or gone: back to the errand
+            who = dodging.pop(i)
+            if who in resume:
+                resume[who]()
+                if not quiet:
+                    print(f"   {who} back to its errand")
+        ev = [f"{n_} DOWN" for n_, p in byname.items() if p.get("downed") and not ours0.get(n_)]
+        ev += [f"{n_} gone" for n_ in ours0 if n_ not in byname]
+        fn = {short_name(p["label"]): bool(p.get("downed")) for p in foes}
+        ev += [f"raider {n_} down" for n_, d in fn.items() if d and not foes0.get(n_)]
+        ev += [f"raider {n_} dead/gone" for n_ in foes0 if n_ not in fn]
+        if near and near[0] in byname:
+            me = byname[near[0]]
+            ev += [f"{short_name(f['label'])} within {near[1]} of {near[0]}" for f in foes
+                   if not f.get("downed") and math.dist((f["x"], f["z"]), (me["x"], me["z"])) <= near[1]]
+        if k % hp_every == hp_every - 1:
+            h1 = hp()
+            ev += [f"{n_} {h0[n_]}->{h1[n_]}" for n_ in h1 if h0.get(n_) and h1.get(n_) is not None
+                   and h0[n_] - h1[n_] >= hp_drop]
         if ev:
             print(f"   t{rm.call('get_status')['ticksGame'] - 383}: " + "; ".join(ev))
             return ev

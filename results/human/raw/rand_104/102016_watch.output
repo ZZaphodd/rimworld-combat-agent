@@ -1,0 +1,22 @@
+tick 5213 (game 5596) | paused=True | ours 6 (down 1) | them 7 (down 2)
+OURS
+   Cheetah     @101,96 87% Pila | watching for targets. | nearest foe 12
+   Goenaban    @96,132 30% DOWN - | downed. | nearest foe 14
+   Crica       @95,127 42% Recurve bow | watching for targets. | nearest foe 14
+   Cambiar     @92,124 100% Greatbow | watching for targets. | nearest foe 17
+   Roamb       @89,103 42% Recurve bow | watching for targets. | nearest foe 18
+   White       @90,116 100% Recurve bow | attacking Bishop. | nearest foe 20
+THEM
+   Annie       @107,106 54% Frag grenades | moving. | nearest foe 12
+   Bishop      @109,128 57% Pump shotgun | watching for targets. | nearest foe 14
+   Sammy       @115,105 49% Autopistol | watching for targets. | nearest foe 17
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 17
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 21
+   Lady        @117,125 77% Revolver | watching for targets. | nearest foe 22
+   Mac         @119,125 100% Autopistol | watching for targets. | nearest foe 24
+fires 11 | grenades in the air 0
+rect x82-126 z89-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-102011-013.png
+frame results/human/hands_watch_5213.jpg
+
+[exited with code 0]

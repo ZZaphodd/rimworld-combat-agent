@@ -1,0 +1,21 @@
+tick 5655 (game 6038) | paused=True | ours 6 (down 2) | them 6 (down 2)
+OURS
+   Cheetah     @101,96 61% Pila | moving. | nearest foe 11
+   White       @95,116 100% Recurve bow | attacking Sammy. | nearest foe 16
+   Roamb       @89,103 43% Recurve bow | watching for targets. | nearest foe 18
+   Crica       @95,127 32% DOWN - | downed. | nearest foe 21
+   Goenaban    @96,132 30% DOWN - | downed. | nearest foe 22
+   Cambiar     @92,124 100% Greatbow | watching for targets. | nearest foe 23
+THEM
+   Annie       @107,105 54% Frag grenades | watching for targets. | nearest foe 11
+   Sammy       @115,105 49% Autopistol | watching for targets. | nearest foe 17
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 17
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 19
+   Lady        @117,125 60% Revolver | watching for targets. | nearest foe 24
+   Mac         @119,125 79% Autopistol | watching for targets. | nearest foe 26
+fires 16 | grenades in the air 1
+rect x82-126 z89-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-102039-280.png
+frame results/human/hands_watch_5655.jpg
+
+[exited with code 0]

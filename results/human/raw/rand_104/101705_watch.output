@@ -1,0 +1,25 @@
+tick 2806 (game 3189) | paused=True | ours 8 (down 0) | them 8 (down 1)
+OURS
+   Donkey      @99,113 100% Recurve bow | watching for targets. | nearest foe 13
+   Goenaban    @104,132 100% Short bow | watching for targets. | nearest foe 14
+   Roamb       @95,108 100% Recurve bow | watching for targets. | nearest foe 17
+   Rrodoañocer @104,137 100% Short bow | watching for targets. | nearest foe 18
+   Cheetah     @95,104 100% Pila | watching for targets. | nearest foe 19
+   Crica       @95,127 100% Recurve bow | watching for targets. | nearest foe 21
+   White       @90,116 100% Recurve bow | watching for targets. | nearest foe 22
+   Cambiar     @92,124 100% Greatbow | watching for targets. | nearest foe 23
+THEM
+   Cholaky     @112,112 81% Frag grenades | moving. | nearest foe 13
+   Bishop      @116,124 100% Pump shotgun | watching for targets. | nearest foe 14
+   Annie       @114,112 100% Frag grenades | watching for targets. | nearest foe 15
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 16
+   Georgette   @124,123 100% Steel knife | melee attacking Cambiar. | nearest foe 22
+   Mac         @125,122 100% Autopistol | watching for targets. | nearest foe 23
+   Sammy       @124,110 100% Autopistol | moving. | nearest foe 25
+   Lady        @128,119 100% Revolver | watching for targets. | nearest foe 27
+fires 6 | grenades in the air 0
+rect x83-135 z97-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-101700-979.png
+frame results/human/hands_watch_2806.jpg
+
+[exited with code 0]

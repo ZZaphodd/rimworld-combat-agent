@@ -1,0 +1,24 @@
+tick 3499 (game 3882) | paused=True | ours 7 (down 0) | them 8 (down 2)
+OURS
+   Crica       @95,127 100% Recurve bow | watching for targets. | nearest foe 4
+   Goenaban    @98,132 44% Short bow | watching for targets. | nearest foe 6
+   Cambiar     @92,124 100% Greatbow | attacking Georgette. | nearest foe 7
+   Rrodoañocer @99,136 100% Short bow | watching for targets. | nearest foe 10
+   White       @90,116 100% Recurve bow | watching for targets. | nearest foe 13
+   Roamb       @95,108 100% Recurve bow | watching for targets. | nearest foe 16
+   Cheetah     @95,104 100% Pila | watching for targets. | nearest foe 17
+THEM
+   Georgette   @99,126 79% Steel knife | melee attacking Crica. | nearest foe 4
+   Bishop      @112,127 100% Pump shotgun | watching for targets. | nearest foe 15
+   Cholaky     @111,110 36% DOWN - | downed. | nearest foe 16
+   Annie       @114,112 100% Frag grenades | moving. | nearest foe 19
+   Rabbit      @114,119 34% DOWN - | downed. | nearest foe 21
+   Sammy       @123,109 100% Autopistol | watching for targets. | nearest foe 28
+   Lady        @123,118 100% Revolver | watching for targets. | nearest foe 29
+   Mac         @125,122 100% Autopistol | watching for targets. | nearest foe 29
+fires 9 | grenades in the air 0
+rect x83-132 z97-143
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-101818-496.png
+frame results/human/hands_watch_3499.jpg
+
+[exited with code 0]
