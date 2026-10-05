@@ -61,6 +61,7 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 | rand_015 | **Claude alone** (no human game first) | loadout; west rock pocket, corner ambush at rock B's tip; four raiders out with no loss, then shot at the tip by gunners holding at 15–20; molotov grass fire; kidnapping | defeat (captive) | 1 dead + 1 kidnapped (1 downed) | 61.4 (agent 105.2) |
 | rand_015 | Claude alone, attempts 2–3 | 2: same pocket (79.9); 3: big-ruin rooms, all six lost (no row: harness crash on the man-in-black removal, fixed) | defeat | 3 / 6 | 79.9 / – |
 | rand_023 | Claude alone | breach the NE walled hall to hide in its blind cells; the breach failed (orders re-issued too fast) and a blind wait loop let the raid catch the squad outside | squad down (defeat) | 4 (6 downed) | 100.2 (agent 101.8) |
+| rand_126 | Claude alone | loadout (rifle to the shooting-16 club holder); west rock pocket; tip ambush 3–4 on 1; Max's rifle, machine pistols and a Fire spew on the raiders holding north of the pocket | **repelled** | **0** (0 downed) | **13.6** (agent 99.8) |
 
 Turn logs of Claude's plays (orders by tick, what followed): `raw/<id>/claude_turns.md`; the
 operating facts they rely on are in RIMMOLT_API.md (verb gizmo on buildings, melee/carry
