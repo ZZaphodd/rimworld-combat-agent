@@ -1553,7 +1553,7 @@
   }
  },
  {
-  "title": "rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — won by the human",
+  "title": "rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — won by the human, then by Claude with the user's play",
   "situation": [
    "forest-arena",
    "raid-far",
@@ -1594,6 +1594,13 @@
     "result": "defeat, raid left with 3 captives (t9836)",
     "lost": "1 dead, 3 kidnapped, 5 downed",
     "badness": "124.7"
+   },
+   {
+    "who": "**Claude, attempt 2** (the user's play, south wall)",
+    "play": "bait paced like the user's; the spears on the south wall cell the user said they had marked (209, 167), then deconstruction when the attack orders started nothing; the whole raid followed the bait; four came into the breach one at a time, the last two waited outside and fled",
+    "result": "**repelled**, 3 dead, 1 downed, 2 fled",
+    "lost": "0 lost, 1 downed",
+    "badness": "**9.4**"
    }
   ],
   "id": "rand_164",

@@ -1,4 +1,4 @@
-# rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — won by the human
+# rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — won by the human, then by Claude with the user's play
 
 **Situation:** `forest-arena` `raid-far` `raid-melee` `raid-strong-1v1` `us-outnumber` `us-melee-pawns` `us-low-skill` `raid-split`
 **Plays seen:** `loadout` `decoy-kite` `breach` `mouth-hold` `corner-ambush` (rock pocket, failed) `gang-melee` `rotation`
@@ -19,6 +19,7 @@
 | agent `close` | close in | – | defeat, raid left with 4 captives | 3 dead, 4 kidnapped | 173.3 |
 | **human** (Claude's loadout) | Lercroi (the player's bait, picked for lowest melee damage, low value, sound legs) drew three raiders away on a long loop while the three spears broke one cell of the walled hall's east wall; all inside, the strongest at the breach; the bait came back with the other three | NE ridge + walled hall, breach (214, 177) | **repelled**, 4 dead, 2 fled | 0 lost, 3 downed, 15 permanent | **53.2** |
 | Claude | spears to the best three; west rock pocket; everyone on one raider at a time, overflow on a second; step back under 38% | west rock pocket | defeat, raid left with 3 captives (t9836) | 1 dead, 3 kidnapped, 5 downed | 124.7 |
+| **Claude, attempt 2** (the user's play, south wall) | bait paced like the user's; the spears on the south wall cell the user said they had marked (209, 167), then deconstruction when the attack orders started nothing; the whole raid followed the bait; four came into the breach one at a time, the last two waited outside and fled | NE ridge + walled hall, breach (209, 167) | **repelled**, 3 dead, 1 downed, 2 fled | 0 lost, 1 downed | **9.4** |
 
 ## Scenes
 - **Human, intents (told after the battle):**
@@ -62,6 +63,21 @@
   - The other four raiders hit freely and stayed at 100%.
   - Eight of ours went down; Lercroi died.
 
+- **Claude attempt 2, t230–5004** `decoy-kite` `breach`:
+  - Lercroi turned at a 20-cell front (~t2295). Two raiders took him as their target from
+    t2215–2243 and all six from t2636. He brought them north and round by a short way to the
+    south breach, and went in at ~t5000.
+  - The spears' attack orders started nothing after the wall reached 451/510. The wall was
+    designated for deconstruction, and Frog opened it in ~675 ticks (t3239–3914).
+- **Claude attempt 2, t5079–7674** `mouth-hold`:
+  - Four raiders stood in (209, 167) one at a time: Gacan, Blue, Grasshopper, Ambas. Hornet and
+    Mamen waited outside.
+  - The three spears hit each from (208–210, 168); from t7081 (Hakuja downed) only Bacchus and
+    Red did.
+  - All three kills and the one downing (Blue) came from the two diagonal cells, across the wall
+    corners.
+  - Mamen and Hornet fled at t7674.
+
 ## What the play stood on (observed)
 - Site (human): the **NE ridge + walled hall** (sites.md). No door; one cell of its east wall
   broken by three spears in ~1100 ticks (t2001–~3100); the inside cells next to the breach
@@ -69,6 +85,8 @@
 - The bait split the raid in two. Three raiders followed it for ~3300 ticks (t2171–~5573). The
   other three reached the breach ~400 ticks after it opened. Whether the breach needed the bait,
   the trace does not show.
+- In Claude's attempt 2 all six raiders followed the bait (all six from t2636 to ~t5000). The
+  breach was done by deconstruction, after the attack orders started nothing at 451/510.
 - Claude, before its own game, had weighed the hall in the session (75 steps for us, 160 for the
   raid, to its south-west corner) and ruled it out: a granite breach by three hitters looked too
   slow.
@@ -79,5 +97,5 @@
 - Neanderthals fought on at 17–27%; our pawns went down at 30–40%.
 
 ## Sources
-report `results/human/reports/rand_164.md` · journal `journals/rand_164_claude_20261005.md` · sheet `sheets/rand_164_start.md` · traces
-`results/human/traces/rand_164_human_20261006-044240.jsonl.gz`, `rand_164_claude_20261005-210916.jsonl.gz` · agent row `results/night/router.jsonl`
+report `results/human/reports/rand_164.md` · journal `journals/rand_164_claude_20261005.md` (attempts 1–2) · sheet `sheets/rand_164_start.md` · traces
+`results/human/traces/rand_164_human_20261006-044240.jsonl.gz`, `rand_164_claude_20261005-210916.jsonl.gz`, `rand_164_claude_20261006-051406.jsonl.gz` · agent row `results/night/router.jsonl`
