@@ -391,6 +391,8 @@ the retrieval prompts are in `results/cases/README.md`.
    the user before LESSONS.md).
 9. **Commit** on a branch and merge into main; don't push.
 
+**Grenades and our own pawns:** never send pawns to a raider a grenade of ours is aimed at (rand_058: our frag downed our own locker); throw first, lock after the blast.
+
 **Never advance time blind:** every loop that moves time uses `hands.guard()` or `hands.wait_safe()` (they stop when a raider comes near or one of ours goes down). Two plain `wait()` loops let the raid arrive unseen (rand_015 attempt 2, rand_023). Check that a repeated order works (a wall's %, a target's health) after the first rounds.
 
 A battle in which the context was compacted is discarded, not resumed: move its row to

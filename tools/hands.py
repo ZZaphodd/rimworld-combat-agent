@@ -264,7 +264,9 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
     raid, clear of squadmates); once the grenade is gone the pawn's errand is re-issued from
     `resume` {name: callable}. Pawns in `keep` never dodge. Returns early on an event: one of
     ours down or -hp_drop % (checked every hp_every steps), a raider down or gone, or
-    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls. NB: a wait(dt)
+    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls. No dodging when the
+    raid has no throwers; a grenade first seen next to one of our throwers is ours (2026-10-05:
+    our own frag sent Trev into the raid). NB: a wait(dt)
     advances by the mod's wait speed (~15 ticks per step at the current setting, RIMMOLT_API),
     so dt below that is not honoured."""
     resume = resume or {}
@@ -283,11 +285,15 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
         for f in foes:
             if f["id"] in throwers and _aimed(f):
                 last_aim[f["id"]] = (_aimed(f), f["x"], f["z"])
-        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()}
+        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()} if throwers else {}
+        our_throwers = [p for p in ours if not p.get("downed") and any(
+            k in (rm.call("get_pawn", id=p["id"]).get("weapon") or "").lower() for k in THROWN)] if projs else []
         for i, (kind, x, z) in projs.items():
             if i in seen:
                 continue
             seen[i] = (x, z)
+            if any(math.dist((x, z), (p["x"], p["z"])) <= 2.5 for p in our_throwers):
+                continue                                     # one of ours, just thrown
             # who threw it: the thrower nearest to where it first appeared
             src = min(((math.dist((x, z), (a[1], a[2])), a[0]) for a in last_aim.values()), default=(99, None))
             who = src[1] if src[0] <= 6 else None
