@@ -19,6 +19,7 @@
 |---|---|---|---|---|---|
 | agent `turtle` (no loadout) | hold a tree line | forest near the start | squad down | 4 dead, 4 downed, 8 permanent | 105.5 |
 | human (Claude's loadout) | one north–south line in the forest 24 cells west of the start; centre stepped back into an arc | forest, x 90–104, z 103–137 | decisive, raid fled t6457, 8 of 8 out | 2 dead, 2 downed, 1 permanent | 46.0 |
+| Claude (replay of the user's plan) | same line and loadout; early melee locks on Bishop and Cholaky | same | repelled, raid fled t4907, 6 of 8 out | 1 dead, 3 downed | 35.3 |
 
 ## Scenes
 - **t0–75** `us-skill-mismatch` → `loadout`: the greatbow to Cambiar (12), Cambiar's recurve to
@@ -47,6 +48,17 @@
   t5573 (Mac); Sammy dead t5699.
 - **t6425–6710** → `melee-lock`: Cheetah (pila, Tough) locked Annie, the last thrower, in
   melee so she could not throw (the player's intent); Roamb joined; Annie downed t6710. Lady dead, raid fled t6457; Mac killed t7128.
+
+## Scenes of Claude's replay (journal: `journals/rand_104_claude_20261005.md`)
+- **t1786–2370** `thrower-close` → `frag-dodge`: Rabbit's molotov and two frags thrown at White
+  (sidestepped); Rabbit downed t2370.
+- **t2370–3807** → `melee-lock`: Crica locked Bishop, Cheetah (+ White) locked Cholaky; Annie
+  dead t2919 (bows). Georgette joined Bishop against Crica: Crica down t3425; Bishop, free,
+  downed Cambiar (the greatbow) t3732. Georgette dead t3792, Cholaky dead t3807.
+- **t3734–3867** `no-enemy-melee` → `melee-lock`: Goenaban + Rrodoañocer on Bishop: dead t3867.
+- **t3867–4917** `raid-holds`: three gunners at 20–24 cells shot whoever walked or carried
+  (Rrodoañocer down carrying Crica, Goenaban dead walking back); all bows on Sammy, standing
+  still: Sammy dead, raid fled t4907.
 
 ## What the play stood on (observed)
 - No site, but a range mark: the line was placed by the greatbow's range to rock chunks beside
