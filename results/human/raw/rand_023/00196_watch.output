@@ -1,0 +1,26 @@
+tick 196 (game 579) | paused=True | ours 10 (down 0) | them 8 (down 0)
+OURS
+   Hornet      @121,123 100% Steel spear | watching for targets. | nearest foe 133
+   Salamander  @123,123 100% Steel ikwa | watching for targets. | nearest foe 134
+   Emsea       @121,125 100% Steel ikwa | watching for targets. | nearest foe 135
+   Ram         @125,123 100% Wooden club | watching for targets. | nearest foe 135
+   Colmea      @123,125 100% Steel knife | watching for targets. | nearest foe 136
+   Gorilla     @127,123 100% Steel ikwa | watching for targets. | nearest foe 136
+   Emñobi      @125,125 100% Wooden club | watching for targets. | nearest foe 137
+   Tiger       @129,123 100% Steel knife | watching for targets. | nearest foe 138
+   Whale       @127,125 100% Steel spear | watching for targets. | nearest foe 138
+   Bustba      @129,125 100% Steel knife | watching for targets. | nearest foe 139
+THEM
+   Toni        @45,14 100% Steel knife | moving. | nearest foe 133
+   Furr        @44,13 100% Autopistol | moving. | nearest foe 134
+   Van         @42,13 100% Pump shotgun | moving. | nearest foe 135
+   Cholaky     @42,13 100% Autopistol | moving. | nearest foe 135
+   Nytro       @40,14 100% Machine pistol | moving. | nearest foe 136
+   Jenn        @41,10 100% Pump shotgun | moving. | nearest foe 138
+   Werner      @40,9 100% Revolver | moving. | nearest foe 140
+   Lissa       @38,7 100% Revolver | moving. | nearest foe 143
+fires 0 | grenades in the air 0
+rect x105-145 z109-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-185226-207.png
+frame results/human/hands_watch_196.jpg
+

@@ -1,0 +1,20 @@
+tick 3547 (game 3930) | paused=True | ours 9 (down 0) | them 3 (down 0)
+OURS
+   Whale       @142,109 82% Steel spear | melee attacking Cholaky. | nearest foe 1
+   Hornet      @132,117 53% Steel spear | melee attacking Werner. | nearest foe 1
+   Tiger       @131,114 88% Steel knife | watching for targets. | nearest foe 2
+   Ram         @132,114 55% Wooden club | watching for targets. | nearest foe 2
+   Bustba      @142,111 87% Steel knife | watching for targets. | nearest foe 3
+   Colmea      @142,112 100% Steel knife | watching for targets. | nearest foe 4
+   Emsea       @144,112 56% Steel ikwa | watching for targets. | nearest foe 4
+   Emñobi      @144,113 69% Wooden club | watching for targets. | nearest foe 5
+   Gorilla     @134,101 68% Steel ikwa | melee attacking Lissa. | nearest foe 11
+THEM
+   Cholaky     @142,108 41% Autopistol | melee attacking Whale. | nearest foe 1
+   Werner      @131,116 54% Revolver | melee attacking Hornet. | nearest foe 1
+   Lissa       @128,88 100% Revolver | watching for targets. | nearest foe 14
+fires 0 | grenades in the air 0
+rect x116-156 z81-124
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-185814-156.png
+frame results/human/hands_watch_3547.jpg
+

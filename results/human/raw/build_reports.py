@@ -142,6 +142,18 @@ if __name__ == "__main__":
             (7454, "Annie down, Lady dead, the raid fled; Mac the last one"),
         ], notes=[(125, 129, "start")],
            trace_file="results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz")
+    if "rand_023" in which:
+        build("rand_023", [
+            (1708, "all ten packed and hidden at the small ruin (145-150, 108-111); the raid 65 cells away, Lissa far behind"),
+            (2710, "the raid strung out: Toni (knife) 4, Furr 6, the shotguns 9-11; Lissa (shooting 19) 53 cells behind"),
+            (2961, "contact: one of ours on each shooter; Whale's group of four goes round the south"),
+            (3140, "Toni dead (he came in before we moved out); two groups, each with a dealer (Whale, Hornet)"),
+            (3570, "Van dead; Salamander dead; Lissa holds at 23 cells; Gorilla sent to lock her"),
+            (3930, "Furr, Jenn, Nytro dead; Cholaky 41%, Werner 54%; Lissa untouched"),
+            (4366, "Werner dead; everyone after Lissa, who backs off south"),
+            (6824, "decisive: Lissa caught in the south; all eight dead, one of ours lost"),
+        ], notes=[(150, 118, "small ruin")],
+           trace_file="results/human/traces/rand_023_human_20261005-184759.jsonl.gz")
     if "rand_015" in which:
         build("rand_015", [
             (3355, "all six inside the pocket by the south-west gap; Seizz 14 cells ahead along rock B's south face"),

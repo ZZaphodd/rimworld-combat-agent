@@ -1,0 +1,17 @@
+tick 6441 (game 6824) | paused=True | ours 9 (down 0) | them 0 (down 0)
+OURS
+   Emsea       @127,26 56% Steel ikwa | watching for targets. | nearest foe 999
+   Colmea      @127,27 100% Steel knife | watching for targets. | nearest foe 999
+   Emñobi      @123,36 69% Wooden club | watching for targets. | nearest foe 999
+   Ram         @122,60 56% Wooden club | watching for targets. | nearest foe 999
+   Bustba      @129,27 87% Steel knife | watching for targets. | nearest foe 999
+   Hornet      @123,49 53% Steel spear | watching for targets. | nearest foe 999
+   Whale       @136,58 58% Steel spear | watching for targets. | nearest foe 999
+   Gorilla     @128,72 41% Steel ikwa | watching for targets. | nearest foe 999
+   Tiger       @128,27 89% Steel knife | watching for targets. | nearest foe 999
+THEM
+fires 0 | grenades in the air 0
+rect x109-149 z21-77
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-185920-873.png
+frame results/human/hands_watch_6441.jpg
+

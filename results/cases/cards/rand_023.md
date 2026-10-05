@@ -1,7 +1,7 @@
-# rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest
+# rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human
 
 **Situation:** `forest-arena` `raid-far` `raid-outranges` `us-outnumber` `us-melee-pawns` `top-threat`
-**Plays seen:** `loadout` `breach` (failed) `carry-downed` `melee-lock`
+**Plays seen:** `concealed-wait` `mark-shooters` `dealer-shields` `loadout` `breach` (failed) `carry-downed` `melee-lock`
 **Numbers:** ours 10 (all melee), range median 1.5 · raid 8 (short 7, melee 1), 415 pt, outrange share 0.88, no explosives · count ratio 1.25 · raid from the south-west corner (32–44, 0–6), ~151 cells
 
 ## Sides
@@ -17,9 +17,21 @@
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
 | agent `amove` | mass charge | near the start | squad down at t3051 | 2 dead, 8 downed, 9 permanent | 101.8 |
+| **human** (Claude's loadout) | waited hidden and packed in the small ruin so the raid strung out (worst threat last); at contact one of ours on each shooter, two groups each led by a dealer (Whale, Hornet) with meat shields; Gorilla (low damage) locked the revolver ace; then all chased her | small ruin | **decisive**, all 8 dead | 1 dead, 0 downed | **25.6** |
 | Claude (alone) | breach the NE walled hall to hide in its blind cells (breach failed); fought outside | NE walled hall, south-east corner | squad down | 4 dead, 6 downed | 100.2 |
 
 ## Scenes
+- **Human, intents (told after the battle):** the small ruin was chosen both to hide and to let the
+  raid string out; the worst threat (Lissa) arrived late as a result. Two teams on purpose: Whale
+  and Hornet the dealers, the rest meat shields. Gorilla, low damage, was a good pawn to send to lock
+  Lissa. Toni was handled passively: he came in before we left the hidden spot and died for free;
+  with our numbers he was not counted a big threat.
+- **Human, t1325–2578** `raid-strung-out` → `concealed-wait`: ten packed in the small ruin
+  (145–150, 108–111); the raid's front reached them with Lissa 50 cells behind.
+- **Human, t2578–3983** → `mark-shooters` `dealer-shields`: one of ours on each shooter, Whale's group
+  of four round the south; Toni, Van, Furr, Jenn, Nytro, Werner, Cholaky dead; Salamander lost.
+- **Human, t3187–5889** `raid-holds` → `melee-lock`: Lissa held at ~23 cells; Gorilla sent to lock her,
+  then everyone chased her ~80 cells south: dead t5889.
 - **t1650–4729** → `breach` (failed): three pawns hit the hall's granite wall at (213, 167) with
   the order re-issued every 45 ticks (cancelling the swings): 95 → 93%; the loop did not watch
   the raid, which arrived unseen and caught the squad outside.

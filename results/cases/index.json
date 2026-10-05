@@ -324,7 +324,7 @@
   }
  },
  {
-  "title": "rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest",
+  "title": "rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human",
   "situation": [
    "forest-arena",
    "raid-far",
@@ -334,6 +334,9 @@
    "top-threat"
   ],
   "plays": [
+   "concealed-wait",
+   "mark-shooters",
+   "dealer-shields",
    "loadout",
    "breach",
    "carry-downed",
@@ -348,6 +351,13 @@
     "badness": "101.8"
    },
    {
+    "who": "**human** (Claude's loadout)",
+    "play": "waited hidden and packed in the small ruin so the raid strung out (worst threat last); at contact one of ours on each shooter, two groups each led by a dealer (Whale, Hornet) with meat shields; Gorilla (low damage) locked the revolver ace; then all chased her",
+    "result": "**decisive**, all 8 dead",
+    "lost": "1 dead, 0 downed",
+    "badness": "**25.6**"
+   },
+   {
     "who": "Claude (alone)",
     "play": "breach the NE walled hall to hide in its blind cells (breach failed); fought outside",
     "result": "squad down",
@@ -356,7 +366,9 @@
    }
   ],
   "id": "rand_023",
-  "sites": [],
+  "sites": [
+   "small ruin"
+  ],
   "arena": "arena_forest_night",
   "ours": "TribeSavage",
   "raid": "OutlanderRough",

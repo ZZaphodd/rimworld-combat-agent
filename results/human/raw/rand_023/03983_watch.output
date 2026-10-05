@@ -1,0 +1,19 @@
+tick 3983 (game 4366) | paused=True | ours 9 (down 0) | them 2 (down 0)
+OURS
+   Whale       @143,108 58% Steel spear | melee attacking Lissa. | nearest foe 1
+   Emsea       @143,109 56% Steel ikwa | melee attacking Lissa. | nearest foe 1
+   Emñobi      @141,109 69% Wooden club | melee attacking Lissa. | nearest foe 1
+   Bustba      @139,107 87% Steel knife | melee attacking Lissa. | nearest foe 3
+   Colmea      @138,105 100% Steel knife | melee attacking Lissa. | nearest foe 5
+   Ram         @130,113 55% Wooden club | melee attacking Lissa. | nearest foe 13
+   Gorilla     @133,95 40% Steel ikwa | melee attacking Lissa. | nearest foe 13
+   Hornet      @132,117 53% Steel spear | melee attacking Lissa. | nearest foe 13
+   Tiger       @128,107 88% Steel knife | melee attacking Lissa. | nearest foe 14
+THEM
+   Cholaky     @142,108 21% Autopistol | melee attacking Colmea. | nearest foe 1
+   Lissa       @128,83 100% Revolver | moving. | nearest foe 13
+fires 0 | grenades in the air 0
+rect x115-155 z76-124
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-185838-641.png
+frame results/human/hands_watch_3983.jpg
+

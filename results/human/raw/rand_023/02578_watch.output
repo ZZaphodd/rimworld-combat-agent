@@ -1,0 +1,26 @@
+tick 2578 (game 2961) | paused=True | ours 10 (down 0) | them 8 (down 0)
+OURS
+   Emsea       @144,112 100% Steel ikwa | melee attacking Furr. | nearest foe 1
+   Emñobi      @148,111 88% Wooden club | watching for targets. | nearest foe 1
+   Colmea      @148,112 100% Steel knife | melee attacking Toni. | nearest foe 1
+   Tiger       @148,110 100% Steel knife | watching for targets. | nearest foe 1
+   Hornet      @145,112 100% Steel spear | melee attacking Van. | nearest foe 2
+   Bustba      @149,110 93% Steel knife | watching for targets. | nearest foe 2
+   Ram         @145,106 100% Wooden club | moving. | nearest foe 5
+   Salamander  @145,106 100% Steel ikwa | moving. | nearest foe 5
+   Whale       @145,106 100% Steel spear | melee attacking Jenn. | nearest foe 5
+   Gorilla     @145,106 100% Steel ikwa | moving. | nearest foe 5
+THEM
+   Toni        @147,111 66% Steel knife | melee attacking Tiger. | nearest foe 1
+   Furr        @143,112 83% Autopistol | melee attacking Emsea. | nearest foe 1
+   Van         @143,111 100% Pump shotgun | watching for targets. | nearest foe 1
+   Werner      @143,113 100% Revolver | moving. | nearest foe 1
+   Nytro       @142,110 100% Machine pistol | watching for targets. | nearest foe 3
+   Jenn        @141,112 100% Pump shotgun | moving. | nearest foe 3
+   Cholaky     @140,110 100% Autopistol | moving. | nearest foe 4
+   Lissa       @109,85 100% Revolver | moving. | nearest foe 42
+fires 0 | grenades in the air 0
+rect x102-156 z78-120
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-185543-908.png
+frame results/human/hands_watch_2578.jpg
+
