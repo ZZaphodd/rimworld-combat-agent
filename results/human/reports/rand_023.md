@@ -57,6 +57,8 @@ Raid (8 civil outlanders):
    The signal was Toni, the raid's front: the squad did not set off until he had come in and was
    hitting ours (his first blow t2397 at the ruin's west edge, the squad off at t2459). Where he
    died, inside the ruin at (147, 111), shows the fight with him happened before the squad left.
+   Team 1 went round clockwise and team 2 counter-clockwise; team 2 was sent first, so that both
+   came into the shooters' sight at the same moment.
 
 ## Route
 
