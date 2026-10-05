@@ -44,6 +44,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_118](cards/rand_118.md) | open | tribal bows vs Yttakin blades ×6 + machine pistol + autopistol + boar | `raid-melee` `us-bows` `us-low-skill` | **repelled**: breach the nook, mouth hold, every bow on the raider in the mouth, two rotations (attempt 2; attempt 1 discarded) | 93.2 / – / 28.2 |
 | [rand_115](cards/rand_115.md) | open | Waster tox throwers ×8 (no guns) vs Neanderthal melee ×6 | `raid-melee` `raid-strong-1v1` `us-outnumber` | (none yet) ruin room R2 + tox: 5 of 6 raiders down, lost to kidnaps mid-fight; open-ground gas kite failed | 84.8 / – / 80.8 (best of 3) |
 | [rand_012](cards/rand_012.md) | open | Neanderthal melee ×5 vs Yttakin ×5 (rifle, Vikinger melee 15) + 3 boars | `raid-outnumbers` `raid-strong-1v1` `us-melee-pawns` | **won (pyrrhic)**: hold ruin room R2's doors, one raider per door (attempt 2; open-ground gang lost) | 84.4 / – / 55.6 |
+| [rand_018](cards/rand_018.md) | open | tribal melee ×11 vs Neanderthal melee ×6 | `raid-melee` `raid-strong-1v1` `us-outnumber` `us-melee-pawns` | (none yet) rock-pocket tip ambush and R1+R2 door hold both lost | 83.3 / – / 153.0 (best of 2) |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
