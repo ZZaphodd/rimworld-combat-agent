@@ -69,6 +69,8 @@ third cell touching the mouth, and rotation. Coding each intention as an agent i
 (user, 2026-10-05), so the next replays are played directly; the Python replay rows stay in
 `replay.jsonl` as the "plan only" control. Caveat: Claude knew the plan and the raid's timing.
 
+Since 2026-10-05 Claude plays new problems directly with a case library of these battles (one card per problem, sites, tags, journals): `results/cases/`, PROCEDURES §16.
+
 ## What the human games say so far (hypotheses for the gate)
 
 1. **Kidnapping decides Strive battles.** Every defeat above ended with captives. Keep the downed

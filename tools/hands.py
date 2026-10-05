@@ -66,12 +66,14 @@ def thing_at(x, z, d="Wall"):
                                verbose=True, confirm=True).get("things", []) if t.get("def") == d]
 
 
-def shot(x0, z0, w=40, h=30, out="cp.jpg", caption=""):
+def shot(x0, z0, w=40, h=30, out="cp.jpg", caption="", keep=None, ppc=18):
+    """A labelled frame. keep="rand_011_t2600.jpg" writes it to results/cases/img/ (versioned,
+    for a journal) instead of the scratch results/human/hands_<out>."""
     from rca.eval import frames
-    r = rm.call("screenshot", x=x0, z=z0, w=w, h=h, include_ui=False, pixels_per_cell=18)
+    r = rm.call("screenshot", x=x0, z=z0, w=w, h=h, include_ui=False, pixels_per_cell=ppc)
     ps = [{"n": short_name(p["label"]), "x": p["x"], "z": p["z"], "side": "ours" if s == "player" else "them",
            "d": bool(p.get("downed"))} for s in ("player", "hostile") for p in pawns(s)]
-    o = f"{ROOT}/results/human/hands_{out}"
+    o = f"{ROOT}/results/cases/img/{keep}" if keep else f"{ROOT}/results/human/hands_{out}"
     frames.annotate(r["path"], (x0, x0 + w, z0, z0 + h), o, ps, caption=caption, gamma=1.3)
     print(o)
 
@@ -82,3 +84,29 @@ def melee(name, enemy):
     opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
     m = next((o for o in opts if o["label"].lower().startswith("melee attack") and not o["disabled"]), None)
     return bool(m) and bool(rm.call("order_pawn", id=ids()[name], targetId=e, index=m["index"]).get("executed"))
+
+
+KEEP_TRAITS = ("Brawler", "Tough", "Nimble", "Jogger", "Slowpoke", "Trigger-happy", "Careful shooter",
+               "Wimp", "Iron-willed", "Bloodlust", "Fast walker", "Kind", "Psychopath")
+ARMOUR = ("flak", "recon", "marine", "cataphract", "plate", "shield", "helmet", "armor", "armour")
+
+
+def brief(side="player"):
+    """One line per pawn for the battle card: shooting/melee, combat traits, weapon, armour,
+    carried items, position (get_pawn tab=all: bio.skills, bio.traits, gear)."""
+    for p in pawns(side):
+        g = rm.call("get_pawn", id=p["id"], tab="all")
+        bio, gear = g.get("bio") or {}, g.get("gear") or {}
+        sk = {s["skill"]: ("-" if s.get("disabled") else s["level"]) for s in bio.get("skills") or []}
+        tr = [t["label"] for t in bio.get("traits") or [] if t["label"] in KEEP_TRAITS]
+        arm = [a["label"].split(" (")[0] for a in gear.get("apparel") or []
+               if any(k in a["label"].lower() for k in ARMOUR)]
+        inv = [i["label"].split(" (")[0] for i in gear.get("inventory") or []
+               if "smoke" in i["label"].lower() or "pack" in i["label"].lower()]
+        w = ", ".join(e["label"] for e in gear.get("equipment") or []) or "-"
+        kind = " ".join(v for v, plain in ((p.get("def"), "Human"), (p.get("kind"), "Colonist"))
+                        if v and v != plain)            # race if not human, kind if not ours
+        print(f"{short_name(p['label'])[:12]:12} {kind:22} "
+              f"sh {sk.get('Shooting', '?'):>2} me {sk.get('Melee', '?'):>2}  {w}"
+              f"{'  [' + ', '.join(tr) + ']' if tr else ''}{'  armour: ' + ', '.join(arm) if arm else ''}"
+              f"{'  carries: ' + ', '.join(inv) if inv else ''}  @{p['x']},{p['z']}")
