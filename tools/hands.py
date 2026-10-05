@@ -88,12 +88,30 @@ def melee(name, enemy):
 
 KEEP_TRAITS = ("Brawler", "Tough", "Nimble", "Jogger", "Slowpoke", "Trigger-happy", "Careful shooter",
                "Wimp", "Iron-willed", "Bloodlust", "Fast walker", "Kind", "Psychopath")
+PLAIN_ACTIONS = {"Show information", "Draft", "Undraft", "Command_VerbTarget", "Auto attack (AI)",
+                 "Fire at will", "Pop smoke", "Melee attack", "Strip"}      # anything else on a pawn is a gene/psy ability
 ARMOUR = ("flak", "recon", "marine", "cataphract", "plate", "shield", "helmet", "armor", "armour")
 
 
 def brief(side="player"):
     """One line per pawn for the battle card: shooting/melee, combat traits, weapon, armour,
-    carried items, position (get_pawn tab=all: bio.skills, bio.traits, gear)."""
+    carried items, abilities (gizmos other than the plain ones: Fire spew, psycasts, ...),
+    position (get_pawn tab=all: bio.skills, bio.traits, gear; inspect_thing: actions)."""
+    abilities = {}
+    if side == "player":
+        # ability gizmos show only on drafted pawns: draft the undrafted ones for a moment (call
+        # this before the loadout: drafting cancels a pick-up job); raiders' abilities stay unseen
+        ours = pawns("player")
+        was = {p["id"]: rm.call("inspect_thing", id=p["id"]).get("drafted") for p in ours}
+        off = [pid for pid, d in was.items() if not d]
+        if off:
+            rm.call("draft", action="draft", ids=",".join(off))
+        for p in ours:
+            abilities[p["id"]] = [a["label"] for a in rm.call("inspect_thing", id=p["id"]).get("actions") or []
+                                  if a.get("label") not in PLAIN_ACTIONS
+                                  and not a.get("label", "").startswith("Drop ")]
+        if off:
+            rm.call("draft", action="undraft", ids=",".join(off))
     for p in pawns(side):
         g = rm.call("get_pawn", id=p["id"], tab="all")
         bio, gear = g.get("bio") or {}, g.get("gear") or {}
@@ -104,9 +122,11 @@ def brief(side="player"):
         inv = [i["label"].split(" (")[0] for i in gear.get("inventory") or []
                if "smoke" in i["label"].lower() or "pack" in i["label"].lower()]
         w = ", ".join(e["label"] for e in gear.get("equipment") or []) or "-"
+        ab = abilities.get(p["id"], [])
         kind = " ".join(v for v, plain in ((p.get("def"), "Human"), (p.get("kind"), "Colonist"))
                         if v and v != plain)            # race if not human, kind if not ours
         print(f"{short_name(p['label'])[:12]:12} {kind:22} "
               f"sh {sk.get('Shooting', '?'):>2} me {sk.get('Melee', '?'):>2}  {w}"
               f"{'  [' + ', '.join(tr) + ']' if tr else ''}{'  armour: ' + ', '.join(arm) if arm else ''}"
-              f"{'  carries: ' + ', '.join(inv) if inv else ''}  @{p['x']},{p['z']}")
+              f"{'  carries: ' + ', '.join(inv) if inv else ''}"
+              f"{'  ABILITIES: ' + ', '.join(ab) if ab else ''}  @{p['x']},{p['z']}")

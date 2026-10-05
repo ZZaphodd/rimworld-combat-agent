@@ -24,9 +24,18 @@ OVERVIEW = json.load(open(Path(__file__).parent / "overview_shots.json"))
 
 def parse(path):
     f = {"file": path.name}
+    side = None                                   # tools/watch.py: OURS / THEM sections
     for line in path.read_text().splitlines():
         s = line.strip()
-        if m := re.search(r"\| tick (\d+) \|", s):
+        if m := re.match(r"^tick -?\d+ \(game (\d+)\)", s):          # tools/watch.py header
+            f["tick"] = int(m[1])
+        elif s in ("OURS", "THEM"):
+            side = "ours" if s == "OURS" else "them"
+        elif side and (m := re.match(r"^(\S+)\s+@(\d+),(\d+) \S+%( DOWN)?", s)):
+            f.setdefault(side, []).append((m[1], int(m[2]), int(m[3]), bool(m[4])))
+        elif s.startswith("shot ") and s.endswith(".png"):
+            f["png"] = s[5:]
+        elif m := re.search(r"\| tick (\d+) \|", s):
             f["tick"] = int(m[1])
         elif s.startswith("rect "):
             f["rect"] = frames.parse_rect(s)
@@ -120,7 +129,20 @@ def build(bid, picks, notes=(), since="", gamma=1.25, trace_file=None):
 
 if __name__ == "__main__":
     which = sys.argv[1:] or ["rand_030", "rand_067", "rand_107", "rand_084", "rand_127",
-                             "rand_065", "rand_029", "rand_039"]
+                             "rand_065", "rand_029", "rand_039", "rand_011"]
+    if "rand_011" in which:
+        build("rand_011", [
+            (1256, "two lines on open ground: guns in front, clubs and weak guns 6 cells behind"),
+            (1907, "the raid's front four at 38 cells, the grenadiers 46-50 behind; nobody has moved"),
+            (2627, "Shaw (frags) inside 13; Olaf alone to the south-west, under Reid's and Zach's fire"),
+            (3188, "Pablo (knife) reaches Diver; the raid's gunners hold at 15-27 cells"),
+            (3935, "Pablo dead (Bagad held him, Diver shot him); the line 6 cells further east"),
+            (4362, "Olaf down in the middle; Shaw dead; Bagad and Mila charge the raid's back"),
+            (4833, "Bagad dead (liver shot); Maggie dead; Mila's fire spew on Navarro and Cameron"),
+            (5270, "the raid broke at t4666: four dead in 300 ticks, Reid down, Cali running"),
+            (6630, "Cali turned on Mila; all seven finish him in melee"),
+        ], notes=[(125, 133, "start"), (45, 82, "lake")],
+           trace_file="results/human/traces/rand_011_human_loadout_20261005-092131.jsonl.gz")
     if "rand_039" in which:
         build("rand_039", [
             (2401, "Elsie inside the small ruin, Powo at its corner, six behind it"),

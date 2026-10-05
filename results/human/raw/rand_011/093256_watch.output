@@ -1,0 +1,23 @@
+tick 4450 (game 4833) | paused=True | ours 8 (down 1) | them 6 (down 0)
+OURS
+   Mila        @98,126 59% Steel club | moving. | nearest foe 1
+   Olaf        @123,123 40% DOWN - | downed. | nearest foe 11
+   Far         @120,131 84% Biocoded autopistol | watching for targets. | nearest foe 15
+   Strangler   @128,113 51% Pump shotgun | watching for targets. | nearest foe 16
+   Schlitzer   @127,128 73% Bolt-action rifle | watching for targets. | nearest foe 17
+   Wanya       @119,135 100% Biocoded revolver | watching for targets. | nearest foe 18
+   Diver       @131,120 100% Revolver | attacking Maggie. | nearest foe 18
+   Boss        @130,110 75% Bolt-action rifle | watching for targets. | nearest foe 19
+THEM
+   Navarro     @98,125 42% Autopistol | melee attacking Mila. | nearest foe 1
+   Cameron     @99,124 52% Revolver | watching for targets. | nearest foe 2
+   Dennis      @103,119 38% Autopistol | watching for targets. | nearest foe 9
+   Cali        @113,118 88% Pump shotgun | watching for targets. | nearest foe 15
+   Reid        @108,114 58% Machine pistol | watching for targets. | nearest foe 16
+   Zach        @106,110 52% Machine pistol | moving. | nearest foe 18
+fires 0 | grenades in the air 1
+rect x91-138 z103-142
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-093251-420.png
+frame results/human/hands_watch_4450.jpg
+
+[exited with code 0]
