@@ -47,6 +47,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_012](cards/rand_012.md) | open | Neanderthal melee ×5 vs Yttakin ×5 (rifle, Vikinger melee 15) + 3 boars | `raid-outnumbers` `raid-strong-1v1` `us-melee-pawns` | **won (pyrrhic)**: hold ruin room R2's doors, one raider per door (attempt 2; open-ground gang lost) | 84.4 / – / 55.6 |
 | [rand_018](cards/rand_018.md) | open | tribal melee ×11 vs Neanderthal melee ×6 | `raid-melee` `raid-strong-1v1` `us-outnumber` `us-melee-pawns` | (none yet) rock-pocket tip ambush and R1+R2 door hold both lost | 83.3 / – / 153.0 (best of 2) |
 | [rand_179](cards/rand_179.md) | open | low-skill pirate guns ×8 vs tribal archers ×9 | `raid-outnumbers` `us-low-skill` `us-short` | **repelled**: west rock pocket (east part), the archers came over rock B's tip into pistol range | 132.0 / – / 15.8 |
+| [rand_130](cards/rand_130.md) | open | civil outlanders ×9 (one shooting-18 ace) vs civil ×9 with two grenadiers | `raid-throwers` `us-low-skill` | **repelled**: loadout, two rows across the lane, the ace on the grenadiers, sidesteps, carry the downed | 206.0 / – / 35.4 |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
