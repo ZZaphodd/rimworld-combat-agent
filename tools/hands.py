@@ -264,7 +264,9 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
     raid, clear of squadmates); once the grenade is gone the pawn's errand is re-issued from
     `resume` {name: callable}. Pawns in `keep` never dodge. Returns early on an event: one of
     ours down or -hp_drop % (checked every hp_every steps), a raider down or gone, or
-    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls."""
+    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls. NB: a wait(dt)
+    advances by the mod's wait speed (~15 ticks per step at the current setting, RIMMOLT_API),
+    so dt below that is not honoured."""
     resume = resume or {}
     weap = {h["id"]: (rm.call("get_pawn", id=h["id"]).get("weapon") or "").lower() for h in pawns("hostile")}
     throwers = {i for i, w in weap.items() if any(k in w for k in THROWN)}
