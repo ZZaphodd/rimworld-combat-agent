@@ -59,6 +59,8 @@ Raid (8 civil outlanders):
    died, inside the ruin at (147, 111), shows the fight with him happened before the squad left.
    Team 1 went round clockwise and team 2 counter-clockwise; team 2 was sent first, so that both
    came into the shooters' sight at the same moment.
+6. **Whale, the high-value pawn, always had sidekicks** (told after Claude's attempt 3): meat
+   shields stay with him. In the trace 2–4 of ours were within 2.5 cells of him throughout.
 
 ## Route
 
