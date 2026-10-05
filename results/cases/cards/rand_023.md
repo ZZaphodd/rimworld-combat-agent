@@ -29,7 +29,8 @@
 - **Human, t1325–2578** `raid-strung-out` → `concealed-wait`: ten packed in the small ruin
   (145–150, 108–111); the raid's front reached them with Lissa 50 cells behind.
 - **Human, t2578–3983** → `mark-shooters` `dealer-shields`: one of ours on each shooter, Whale's group
-  of four round the south; Toni, Van, Furr, Jenn, Nytro, Werner, Cholaky dead; Salamander lost.
+  of four round the south; Toni, Van, Furr, Jenn, Nytro, Werner, Cholaky dead; Salamander killed by a head shot from Lissa's
+  revolver at ~23 cells (seen by the player in the game's UI).
 - **Human, t3187–5889** `raid-holds` → `melee-lock`: Lissa held at ~23 cells; Gorilla sent to lock her,
   then everyone chased her ~80 cells south: dead t5889.
 - **t1650–4729** → `breach` (failed): three pawns hit the hall's granite wall at (213, 167) with
