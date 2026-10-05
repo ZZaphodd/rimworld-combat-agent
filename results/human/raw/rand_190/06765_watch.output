@@ -1,0 +1,17 @@
+tick 6765 (game 7148) | paused=False | ours 6 (down 5) | them 4 (down 0)
+OURS
+   Ambas       @70,93 34% DOWN - | downed. | nearest foe 1
+   Tarsier     @39,95 47% DOWN - | Crawling to safety. | nearest foe 2
+   Opossum     @45,101 34% DOWN - | Crawling to safety. | nearest foe 6
+   Mosquito    @44,90 48% Short bow | watching for targets. | nearest foe 7
+   Bee         @46,90 29% DOWN - | Crawling to safety. | nearest foe 9
+   Eagle       @50,97 44% DOWN - | downed. | nearest foe 11
+THEM
+   Riley       @38,93 61% Molotov cocktails | watching for targets. | nearest foe 7
+   Anfisa      @39,81 39% - | moving. | nearest foe 10
+   Kenny       @45,107 100% Revolver | watching for targets. | nearest foe 17
+   Valerie     @71,94 49% Bolt-action rifle | watching for targets. | nearest foe 27
+fires 14 | grenades in the air 0
+rect x31-78 z74-114
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200220-267.png
+frame results/human/hands_watch_6765.jpg

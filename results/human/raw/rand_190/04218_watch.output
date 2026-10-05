@@ -1,0 +1,21 @@
+tick 4218 (game 4601) | paused=False | ours 7 (down 0) | them 7 (down 0)
+OURS
+   Tarsier     @41,82 100% Greatbow | melee attacking Anfisa. | nearest foe 1
+   Opossum     @42,82 73% Steel ikwa | melee attacking Anfisa. | nearest foe 1
+   Ambas       @40,82 100% Recurve bow | melee attacking Anfisa. | nearest foe 1
+   Mosquito    @40,81 100% Short bow | melee attacking Anfisa. | nearest foe 2
+   Lándoa      @43,82 100% Pila | melee attacking Anfisa. | nearest foe 2
+   Eagle       @39,81 100% Pila | melee attacking Anfisa. | nearest foe 3
+   Bee         @38,80 71% Recurve bow | melee attacking Anfisa. | nearest foe 4
+THEM
+   Anfisa      @41,83 61% Pump shotgun | melee attacking Opossum. | nearest foe 1
+   Allie       @47,86 100% Revolver | watching for targets. | nearest foe 6
+   Lorentz     @46,93 100% Revolver | watching for targets. | nearest foe 11
+   Riley       @33,93 100% Molotov cocktails | watching for targets. | nearest foe 13
+   Kenny       @36,95 100% Revolver | watching for targets. | nearest foe 14
+   Speedy      @46,107 100% Machine pistol | watching for targets. | nearest foe 25
+   Valerie     @71,94 100% Bolt-action rifle | watching for targets. | nearest foe 30
+fires 1 | grenades in the air 0
+rect x26-78 z73-114
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200009-792.png
+frame results/human/hands_watch_4218.jpg

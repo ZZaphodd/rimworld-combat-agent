@@ -1,0 +1,11 @@
+tick 12179 (game 12562) | paused=False | ours 3 (down 2) | them 1 (down 0)
+OURS
+   Eagle       @28,98 44% DOWN - | being carried by Valerie. | nearest foe 0
+   Tarsier     @35,102 47% - | melee attacking Valerie. | nearest foe 8
+   Ambas       @54,94 34% DOWN - | downed. | nearest foe 26
+THEM
+   Valerie     @28,98 48% Bolt-action rifle | kidnapping Eagle. | nearest foe 8
+fires 69 | grenades in the air 0
+rect x21-61 z83-113
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200335-601.png
+frame results/human/hands_watch_12179.jpg

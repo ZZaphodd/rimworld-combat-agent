@@ -1,0 +1,14 @@
+tick 9582 (game 9965) | paused=False | ours 5 (down 4) | them 2 (down 0)
+OURS
+   Mosquito    @7,95 33% DOWN - | being carried by Riley. | nearest foe 0
+   Eagle       @50,97 44% DOWN - | downed. | nearest foe 2
+   Ambas       @50,94 34% DOWN - | downed. | nearest foe 5
+   Bee         @44,88 15% DOWN - | downed, cannot crawl. | nearest foe 12
+   Tarsier     @39,119 47% - | cowering. | nearest foe 22
+THEM
+   Valerie     @49,99 49% Bolt-action rifle | extinguishing fire on Valerie, For | nearest foe 22
+   Riley       @7,95 61% Molotov cocktails | kidnapping Mosquito. | nearest foe 40
+fires 51 | grenades in the air 0
+rect x0-57 z81-126
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200312-434.png
+frame results/human/hands_watch_9582.jpg

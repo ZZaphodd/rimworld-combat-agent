@@ -1,0 +1,15 @@
+tick 8757 (game 9140) | paused=False | ours 5 (down 4) | them 3 (down 0)
+OURS
+   Ambas       @53,92 34% DOWN - | being carried by Valerie. | nearest foe 0
+   Mosquito    @27,96 33% DOWN - | being carried by Riley. | nearest foe 0
+   Eagle       @50,97 44% DOWN - | downed. | nearest foe 6
+   Bee         @44,88 19% DOWN - | downed, cannot crawl. | nearest foe 10
+   Tarsier     @39,108 47% - | fleeing. | nearest foe 17
+THEM
+   Riley       @27,96 61% Molotov cocktails | kidnapping Mosquito. | nearest foe 17
+   Valerie     @53,92 49% Bolt-action rifle | kidnapping Ambas. | nearest foe 21
+   Anfisa      @8,85 39% - | moving. | nearest foe 39
+fires 49 | grenades in the air 0
+rect x1-60 z78-115
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200258-634.png
+frame results/human/hands_watch_8757.jpg

@@ -1,0 +1,11 @@
+tick 11207 (game 11590) | paused=False | ours 3 (down 2) | them 1 (down 0)
+OURS
+   Eagle       @38,98 44% DOWN - | being carried by Valerie. | nearest foe 0
+   Tarsier     @43,109 47% - | melee attacking Valerie. | nearest foe 12
+   Ambas       @54,94 34% DOWN - | downed. | nearest foe 16
+THEM
+   Valerie     @38,98 47% Bolt-action rifle | kidnapping Eagle. | nearest foe 12
+fires 68 | grenades in the air 0
+rect x26-66 z86-116
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200332-901.png
+frame results/human/hands_watch_11207.jpg

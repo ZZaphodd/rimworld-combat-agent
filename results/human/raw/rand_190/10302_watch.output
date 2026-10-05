@@ -1,0 +1,12 @@
+tick 10302 (game 10685) | paused=False | ours 4 (down 3) | them 1 (down 0)
+OURS
+   Eagle       @47,98 44% DOWN - | being carried by Valerie. | nearest foe 0
+   Ambas       @52,94 34% DOWN - | Crawling to safety. | nearest foe 6
+   Bee         @44,88 13% DOWN - | downed, cannot crawl. | nearest foe 10
+   Tarsier     @39,118 47% - | melee attacking Valerie. | nearest foe 22
+THEM
+   Valerie     @47,98 47% Bolt-action rifle | kidnapping Eagle. | nearest foe 22
+fires 60 | grenades in the air 0
+rect x25-65 z81-125
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200330-150.png
+frame results/human/hands_watch_10302.jpg

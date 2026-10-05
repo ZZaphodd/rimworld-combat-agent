@@ -1,0 +1,17 @@
+tick 6347 (game 6730) | paused=False | ours 6 (down 4) | them 4 (down 1)
+OURS
+   Ambas       @70,93 39% Recurve bow | melee attacking Valerie. | nearest foe 1
+   Tarsier     @39,95 47% DOWN - | downed. | nearest foe 2
+   Opossum     @45,102 34% DOWN - | Crawling to safety. | nearest foe 5
+   Mosquito    @44,90 48% Short bow | watching for targets. | nearest foe 7
+   Bee         @47,91 31% DOWN - | Crawling to safety. | nearest foe 9
+   Eagle       @50,97 43% DOWN - | downed. | nearest foe 11
+THEM
+   Valerie     @71,94 49% Bolt-action rifle | melee attacking Ambas. | nearest foe 1
+   Riley       @38,93 61% Molotov cocktails | watching for targets. | nearest foe 7
+   Anfisa      @41,83 39% DOWN - | downed. | nearest foe 8
+   Kenny       @45,107 100% Revolver | watching for targets. | nearest foe 17
+fires 13 | grenades in the air 0
+rect x31-78 z76-114
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200213-293.png
+frame results/human/hands_watch_6347.jpg

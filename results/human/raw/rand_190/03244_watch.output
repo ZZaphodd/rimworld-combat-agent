@@ -1,0 +1,23 @@
+tick 3244 (game 3627) | paused=True | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Tarsier     @38,93 100% Greatbow | attacking Riley. | nearest foe 17
+   Bee         @37,91 100% Recurve bow | watching for targets. | nearest foe 18
+   Ambas       @39,88 100% Recurve bow | watching for targets. | nearest foe 18
+   Lándoa      @35,94 100% Pila | watching for targets. | nearest foe 19
+   Opossum     @38,88 100% Steel ikwa | watching for targets. | nearest foe 19
+   Mosquito    @38,87 100% Short bow | watching for targets. | nearest foe 20
+   Eagle       @38,86 100% Pila | watching for targets. | nearest foe 21
+   Iotros      @33,94 100% Recurve bow | watching for targets. | nearest foe 21
+THEM
+   Riley       @53,100 100% Molotov cocktails | moving. | nearest foe 17
+   Speedy      @49,107 100% Machine pistol | moving. | nearest foe 18
+   Anfisa      @60,91 100% Pump shotgun | moving. | nearest foe 21
+   Lorentz     @59,103 100% Revolver | moving. | nearest foe 23
+   Kenny       @59,105 100% Revolver | moving. | nearest foe 24
+   Lucas       @63,95 100% Steel knife | moving. | nearest foe 25
+   Allie       @63,103 100% Revolver | moving. | nearest foe 27
+   Valerie     @74,95 100% Bolt-action rifle | watching for targets. | nearest foe 36
+fires 0 | grenades in the air 0
+rect x26-81 z79-114
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-195839-783.png
+frame results/human/hands_watch_3244.jpg

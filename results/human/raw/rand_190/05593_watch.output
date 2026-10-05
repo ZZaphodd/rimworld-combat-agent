@@ -1,0 +1,19 @@
+tick 5593 (game 5976) | paused=True | ours 7 (down 2) | them 5 (down 1)
+OURS
+   Mosquito    @44,90 80% Short bow | melee attacking Speedy. | nearest foe 1
+   Tarsier     @39,95 68% Greatbow | melee attacking Riley. | nearest foe 1
+   Ambas       @70,93 65% Recurve bow | melee attacking Valerie. | nearest foe 1
+   Lándoa      @45,92 50% Pila | moving. | nearest foe 3
+   Opossum     @45,104 34% DOWN - | downed. | nearest foe 3
+   Eagle       @47,88 73% Pila | melee attacking Kenny. | nearest foe 4
+   Bee         @47,92 35% DOWN - | downed. | nearest foe 4
+THEM
+   Speedy      @43,90 62% Machine pistol | melee attacking Mosquito. | nearest foe 1
+   Valerie     @71,94 89% Bolt-action rifle | melee attacking Ambas. | nearest foe 1
+   Riley       @40,96 72% Molotov cocktails | melee attacking Tarsier. | nearest foe 1
+   Anfisa      @41,83 39% DOWN - | downed. | nearest foe 8
+   Kenny       @45,107 100% Revolver | watching for targets. | nearest foe 13
+fires 3 | grenades in the air 0
+rect x32-78 z76-114
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200155-276.png
+frame results/human/hands_watch_5593.jpg

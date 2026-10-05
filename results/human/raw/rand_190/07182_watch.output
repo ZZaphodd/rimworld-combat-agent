@@ -1,0 +1,17 @@
+tick 7182 (game 7565) | paused=False | ours 6 (down 5) | them 4 (down 0)
+OURS
+   Opossum     @39,98 34% DOWN - | being carried by Kenny. | nearest foe 0
+   Ambas       @69,92 34% DOWN - | being carried by Valerie. | nearest foe 0
+   Tarsier     @39,97 47% DOWN - | Crawling to safety. | nearest foe 1
+   Mosquito    @44,90 37% Short bow | watching for targets. | nearest foe 6
+   Bee         @45,89 27% DOWN - | Crawling to safety. | nearest foe 7
+   Eagle       @50,97 44% DOWN - | downed. | nearest foe 10
+THEM
+   Riley       @40,94 61% Molotov cocktails | watching for targets. | nearest foe 6
+   Kenny       @39,98 86% Revolver | kidnapping Opossum. | nearest foe 9
+   Anfisa      @33,81 39% - | moving. | nearest foe 14
+   Valerie     @69,92 49% Bolt-action rifle | kidnapping Ambas. | nearest foe 25
+fires 22 | grenades in the air 1
+rect x26-76 z74-105
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200227-151.png
+frame results/human/hands_watch_7182.jpg
