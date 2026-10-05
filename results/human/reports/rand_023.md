@@ -54,6 +54,9 @@ Raid (8 civil outlanders):
    gun are not shot at. The player traced the raiders' sight and set off when the walk to the
    marked shooters, counting only the exposed cells, became the shortest. Both groups had to set
    off together: if the raid hugs the north side, the group going round the south has a long way.
+   The signal was Toni, the raid's front: the squad did not set off until he had come in and was
+   hitting ours (his first blow t2397 at the ruin's west edge, the squad off at t2459). Where he
+   died, inside the ruin at (147, 111), shows the fight with him happened before the squad left.
 
 ## Route
 

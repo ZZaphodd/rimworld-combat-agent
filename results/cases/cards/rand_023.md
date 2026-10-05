@@ -34,6 +34,11 @@
   way. Measured on the traces (`rca.terrain` LOS, snapshot, guns' ranges): at the player's start
   (t2459) the seven movers had 43 exposed steps in all (most 10), the low of the last 150 ticks
   (72 → 50 → 44 → 58 → 43); at Claude's replay start (t2315) ten movers had 95 (most 19).
+- **Human, the start signal (told after Claude's replay):** Toni walked at the raid's front; the
+  player did not set off until Toni had come in and was hitting ours. Traces: Toni's first melee on
+  Emñobi at t2397 at (144, 112), the ruin's west edge; the squad set off at t2459; Toni died inside
+  the ruin at (147, 111) ~t2720, where he came in. In Claude's replay the squad set off at t2315,
+  57 ticks before Toni's first blow (t2372), and Toni lived until t3556.
 - **Human, t1325–2578** `raid-strung-out` → `concealed-wait`: ten packed in the small ruin
   (145–150, 108–111); the raid's front reached them with Lissa 50 cells behind.
 - **Human, t2578–3983** → `mark-shooters` `dealer-shields`: one of ours on each shooter, Whale's group
