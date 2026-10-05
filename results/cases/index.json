@@ -1,0 +1,1388 @@
+[
+ {
+  "title": "rand_011 · Waster pirates ×9 (four good shooters) vs low-skill outlanders ×9 with two grenadiers · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers",
+   "raid-low-skill",
+   "us-outrange",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "skirmish-line",
+   "bait",
+   "frag-dodge",
+   "gang-melee",
+   "melee-lock",
+   "ability"
+  ],
+  "results": [
+   {
+    "who": "agent `close` (no loadout)",
+    "play": "closed in by ~t1130, then held",
+    "result": "defeat, captives (kidnapping from t4930)",
+    "lost": "3 kidnapped, 4 downed",
+    "badness": "106.4"
+   },
+   {
+    "who": "human (Claude's loadout)",
+    "play": "two lines on open ground west of the start, guns in front; small steps east",
+    "result": "decisive, raid broke t4666, 9 of 9 out",
+    "lost": "1 dead (Bagad)",
+    "badness": "25.8"
+   },
+   {
+    "who": "Claude (replay of the user's plan)",
+    "play": "same loadout and lines; bait; guns on the grenadiers early; melee-lock after Pablo",
+    "result": "repelled, raid fled t4558, 7 of 9 out",
+    "lost": "0 dead, 3 downed (Olaf, Strangler, Bagad)",
+    "badness": "22.4"
+   }
+  ],
+  "id": "rand_011",
+  "sites": [],
+  "arena": "arena_open_night",
+  "ours": "PirateWaster",
+  "raid": "OutlanderRough",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "short": 4,
+    "melee": 3,
+    "long": 2
+   },
+   "enemy_n": 9,
+   "enemy_classes": {
+    "short": 6,
+    "explosive": 2,
+    "melee": 1
+   },
+   "enemy_melee_share": 0.11,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.22,
+   "count_ratio": 1.0,
+   "distance": 142.0,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_012 · Neanderthal melee ×5 vs Yttakin ×5 + 3 boars (one rifle) · open — won (pyrrhic)",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-strong-1v1",
+   "us-melee-pawns",
+   "raid-strung-out"
+  ],
+  "plays": [
+   "gang-melee",
+   "mouth-hold",
+   "rotation"
+  ],
+  "results": [
+   {
+    "who": "agent `amove`",
+    "play": "attack-move",
+    "result": "squad down t2725, 0 kills",
+    "lost": "2 dead, 3 downed",
+    "badness": "84.4"
+   },
+   {
+    "who": "Claude attempt 1",
+    "play": "wait SW, gang each arrival 5 v 1",
+    "result": "defeat (2 captives)",
+    "lost": "2 dead + 2 kidnapped",
+    "badness": "92.5"
+   },
+   {
+    "who": "Claude attempt 2",
+    "play": "hold ruin room R2's doors, rotation",
+    "result": "**won, pyrrhic**",
+    "lost": "1 dead, 2 downed",
+    "badness": "**55.6**"
+   }
+  ],
+  "id": "rand_012",
+  "sites": [
+   "big-ruin room",
+   "big-ruin room R2"
+  ],
+  "arena": "arena_open_night",
+  "ours": "TribeRoughNeanderthal",
+  "raid": "PirateYttakin",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-outnumbers",
+   "raid-outranges",
+   "us-melee-pawns"
+  ],
+  "features": {
+   "squad_n": 5,
+   "squad_classes": {
+    "melee": 5
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "melee": 4,
+    "other": 3,
+    "long": 1
+   },
+   "enemy_melee_share": 0.5,
+   "enemy_outrange_share": 0.5,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 0.62,
+   "distance": 150.5,
+   "squad_range_median": 1.5,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_015 · Neanderthal melee ×6 vs Waster gunners ×9 with a molotov and a tox grenadier · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers",
+   "raid-outranges",
+   "raid-outnumbers",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "corner-ambush",
+   "notch-hold",
+   "gang-melee",
+   "melee-lock",
+   "frag-dodge",
+   "chase-carrier",
+   "carry-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine` (no loadout)",
+    "play": "melee holds until an enemy is within 20, then charges",
+    "result": "defeat, captives",
+    "lost": "3 dead, 2 kidnapped",
+    "badness": "105.2"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "loadout; west rock pocket; ambush at rock B's north tip; locks on the throwers",
+    "result": "defeat, captives (Bilegoda)",
+    "lost": "1 dead, 1 kidnapped, 1 downed",
+    "badness": "61.4"
+   },
+   {
+    "who": "Claude, attempt 2",
+    "play": "same pocket, greatbow to Crica; a move to the south face done with a blind wait",
+    "result": "defeat, captives",
+    "lost": "1 dead, 2 kidnapped",
+    "badness": "79.9"
+   },
+   {
+    "who": "Claude, attempt 3",
+    "play": "big-ruin rooms R1/R2, melee beside the doors, Crica (the raid's target) inside",
+    "result": "defeat (no row: harness crash; from the trace)",
+    "lost": "4 dead, 2 kidnapped",
+    "badness": "≈ agent"
+   }
+  ],
+  "id": "rand_015",
+  "sites": [
+   "west rock pocket",
+   "big-ruin room"
+  ],
+  "arena": "arena_open_night",
+  "ours": "TribeRoughNeanderthal",
+  "raid": "PirateWaster",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-outranges",
+   "raid-throwers",
+   "us-melee-pawns"
+  ],
+  "features": {
+   "squad_n": 6,
+   "squad_classes": {
+    "long": 1,
+    "melee": 5
+   },
+   "enemy_n": 9,
+   "enemy_classes": {
+    "explosive": 2,
+    "short": 7
+   },
+   "enemy_melee_share": 0.0,
+   "enemy_outrange_share": 1.0,
+   "enemy_explosive_share": 0.22,
+   "count_ratio": 0.67,
+   "distance": 142.4,
+   "squad_range_median": 1.5,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_018 · tribal melee ×11 vs Neanderthal melee ×6 · open — not solved",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-melee-pawns",
+   "us-low-skill"
+  ],
+  "plays": [
+   "corner-ambush",
+   "mouth-hold",
+   "rotation"
+  ],
+  "results": [
+   {
+    "who": "agent `amove`",
+    "play": "attack-move",
+    "result": "won (t3364, 2 kills)",
+    "lost": "0 lost, 4 downed, 23 permanent",
+    "badness": "83.3"
+   },
+   {
+    "who": "Claude attempt 1",
+    "play": "tip ambush, up to 5 per raider",
+    "result": "defeat, 2 raiders killed",
+    "lost": "3 dead + 4 kidnapped",
+    "badness": "187.0"
+   },
+   {
+    "who": "Claude attempt 2",
+    "play": "hold ruin rooms R1+R2 (five 1-cell entrances)",
+    "result": "defeat, 2 killed + 1 downed",
+    "lost": "2 dead + 2 kidnapped",
+    "badness": "153.0"
+   }
+  ],
+  "id": "rand_018",
+  "sites": [
+   "west rock pocket"
+  ],
+  "arena": "arena_open_night",
+  "ours": "TribeRough",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-melee-pawns",
+   "us-outnumber"
+  ],
+  "features": {
+   "squad_n": 11,
+   "squad_classes": {
+    "melee": 11
+   },
+   "enemy_n": 6,
+   "enemy_classes": {
+    "melee": 6
+   },
+   "enemy_melee_share": 1.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.83,
+   "distance": 129.7,
+   "squad_range_median": 1.5,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-outranges",
+   "us-outnumber",
+   "us-melee-pawns",
+   "top-threat"
+  ],
+  "plays": [
+   "loadout",
+   "breach",
+   "carry-downed",
+   "melee-lock"
+  ],
+  "results": [
+   {
+    "who": "agent `amove`",
+    "play": "mass charge",
+    "result": "squad down at t3051",
+    "lost": "2 dead, 8 downed, 9 permanent",
+    "badness": "101.8"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "breach the NE walled hall to hide in its blind cells (breach failed); fought outside",
+    "result": "squad down",
+    "lost": "4 dead, 6 downed",
+    "badness": "100.2"
+   }
+  ],
+  "id": "rand_023",
+  "sites": [],
+  "arena": "arena_forest_night",
+  "ours": "TribeSavage",
+  "raid": "OutlanderRough",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-outranges",
+   "us-melee-pawns"
+  ],
+  "features": {
+   "squad_n": 10,
+   "squad_classes": {
+    "melee": 10
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "short": 7,
+    "melee": 1
+   },
+   "enemy_melee_share": 0.12,
+   "enemy_outrange_share": 0.88,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.25,
+   "distance": 150.8,
+   "squad_range_median": 1.5,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_029 · tribal bows ×9 vs pig outlanders ×8 with four throwers · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers",
+   "us-bows",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "skirmish-line",
+   "chase-carrier"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine` (`vs_throwers=stand_off`)",
+    "play": "keep the throwers at 13–37 cells, focus fire",
+    "result": "enemies cleared, graded defeat",
+    "lost": "7 dead",
+    "badness": "110.0"
+   },
+   {
+    "who": "human (Claude's loadout)",
+    "play": "a spaced line east of the start; chase the kidnappers",
+    "result": "pyrrhic, raid fled t9429",
+    "lost": "2 dead, 0 kidnapped (both taken back)",
+    "badness": "55.6"
+   }
+  ],
+  "id": "rand_029",
+  "sites": [],
+  "arena": "arena_open_night",
+  "ours": "TribeRough",
+  "raid": "OutlanderRoughPig",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers",
+   "us-bows"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "bow": 5,
+    "melee": 2,
+    "thrown": 1,
+    "long": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "short": 3,
+    "melee": 1,
+    "explosive": 4
+   },
+   "enemy_melee_share": 0.12,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.5,
+   "count_ratio": 1.12,
+   "distance": 147.3,
+   "squad_range_median": 22.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_030 · pig outlanders ×8 (short guns + throwables) vs outlanders ×9 · forest",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-outranges",
+   "raid-outnumbers",
+   "us-short",
+   "us-low-skill",
+   "us-skill-mismatch",
+   "top-threat"
+  ],
+  "plays": [
+   "loadout",
+   "hide-wait",
+   "corner-ambush",
+   "smoke",
+   "molotov-into-group",
+   "focus-top-threat",
+   "melee-lock"
+  ],
+  "results": [
+   {
+    "who": "agent `close`",
+    "play": "advance to close range in forest cover",
+    "result": "defeat, captives",
+    "lost": "7 (5 dead, 2 kidnapped)",
+    "badness": "128.0"
+   },
+   {
+    "who": "human (swap)",
+    "play": "loadout; wait behind the rock hill; smoke + molotov at contact",
+    "result": "decisive, 9 of 9 out",
+    "lost": "1 dead",
+    "badness": "21.1"
+   },
+   {
+    "who": "Claude",
+    "play": "the same loadout and hill",
+    "result": "repelled t3824",
+    "lost": "1 dead, 1 downed, 7 permanent",
+    "badness": "38.8"
+   }
+  ],
+  "id": "rand_030",
+  "sites": [
+   "rock hill"
+  ],
+  "arena": "arena_forest_night",
+  "ours": "OutlanderRoughPig",
+  "raid": "OutlanderRough",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-outranges",
+   "us-short"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "explosive": 3,
+    "short": 5
+   },
+   "enemy_n": 9,
+   "enemy_classes": {
+    "short": 5,
+    "support": 1,
+    "melee": 1,
+    "long": 1,
+    "explosive": 1
+   },
+   "enemy_melee_share": 0.11,
+   "enemy_outrange_share": 0.56,
+   "enemy_explosive_share": 0.11,
+   "count_ratio": 0.89,
+   "distance": 124.4,
+   "squad_range_median": 17.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_039 · outlanders ×8 (low-skill gunners) vs civil outlanders ×8 · forest",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-throwers",
+   "top-threat",
+   "us-low-skill",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "stepped-withdrawal",
+   "carry-downed",
+   "chase-carrier",
+   "finish-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `kite`",
+    "play": "kite in a pack",
+    "result": "defeat, captives",
+    "lost": "5 (3 dead, 2 kidnapped)",
+    "badness": "108.0"
+   },
+   {
+    "who": "human (Claude's loadout)",
+    "play": "small ruin, then fall back east in bounds, killing the followers; carry the downed",
+    "result": "repelled",
+    "lost": "0 (Elsie downed, carried along)",
+    "badness": "8.0"
+   },
+   {
+    "who": "Claude",
+    "play": "the same loadout, ruin, three bounds east; carried the downed; chased three kidnappers",
+    "result": "pyrrhic",
+    "lost": "0 (5 downed, 7 permanent)",
+    "badness": "48.4"
+   }
+  ],
+  "id": "rand_039",
+  "sites": [
+   "rock hill",
+   "small ruin"
+  ],
+  "arena": "arena_forest_night",
+  "ours": "OutlanderRough",
+  "raid": "OutlanderCivil",
+  "auto": [
+   "forest-arena",
+   "raid-far"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 4,
+    "long": 1,
+    "support": 2,
+    "explosive": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "long": 2,
+    "short": 2,
+    "explosive": 2,
+    "melee": 2
+   },
+   "enemy_melee_share": 0.25,
+   "enemy_outrange_share": 0.25,
+   "enemy_explosive_share": 0.25,
+   "count_ratio": 1.0,
+   "distance": 168.8,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_058 · pig outlanders ×8 (short guns + throwables) vs civil outlanders ×8 with three shotguns · forest — repelled",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "us-short",
+   "raid-outranges",
+   "top-threat"
+  ],
+  "plays": [
+   "corner-ambush",
+   "molotov-into-group",
+   "melee-lock",
+   "carry-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "hold a tree line",
+    "result": "squad down",
+    "lost": "5 dead, 3 downed",
+    "badness": "99.1"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "west rock pocket (east part, hidden from the south); throwables on the bunch at rock B's tip; locks",
+    "result": "**repelled**, fled t4595, 5 dead",
+    "lost": "2 dead (one by our own frag), 2 downed",
+    "badness": "47.3"
+   }
+  ],
+  "id": "rand_058",
+  "sites": [
+   "west rock pocket"
+  ],
+  "arena": "arena_forest_night",
+  "ours": "OutlanderRoughPig",
+  "raid": "OutlanderCivil",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-outranges",
+   "us-short"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "explosive": 3,
+    "short": 5
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "short": 7,
+    "melee": 1
+   },
+   "enemy_melee_share": 0.12,
+   "enemy_outrange_share": 0.5,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.0,
+   "distance": 153.0,
+   "squad_range_median": 15.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_065 · civil outlanders ×9 vs Empire troopers ×6 · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-armoured",
+   "raid-outranges",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "hide-wait"
+  ],
+  "results": [
+   {
+    "who": "agent `close`",
+    "play": "charge with the knives (the best shooters held knives)",
+    "result": "defeat, captives",
+    "lost": "4 (1 dead, 3 kidnapped)",
+    "badness": "114.3"
+   },
+   {
+    "who": "human, attempt 1 (abandoned)",
+    "play": "a ruin corner in sight of the raid",
+    "result": "–",
+    "lost": "–",
+    "badness": "–"
+   },
+   {
+    "who": "human (Claude's loadout)",
+    "play": "wait in a walled room out of sight",
+    "result": "squad down (old rule: stopped there)",
+    "lost": "0 dead; 3 being carried off at the stop",
+    "badness": "64.4 (~94 with the three)"
+   }
+  ],
+  "id": "rand_065",
+  "sites": [
+   "big-ruin room"
+  ],
+  "arena": "arena_open_night",
+  "ours": "OutlanderCivil",
+  "raid": "Empire",
+  "auto": [
+   "open-arena",
+   "raid-armoured",
+   "raid-far",
+   "raid-outranges",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-short"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "short": 3,
+    "melee": 4,
+    "long": 1,
+    "support": 1
+   },
+   "enemy_n": 6,
+   "enemy_classes": {
+    "support": 4,
+    "medium": 1,
+    "long": 1
+   },
+   "enemy_melee_share": 0.0,
+   "enemy_outrange_share": 1.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.5,
+   "distance": 171.8,
+   "squad_range_median": 15.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_067 · tribal bows ×8 vs Yttakin ×7 with clubs and a boar · forest",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-melee",
+   "us-bows",
+   "us-melee-pawns"
+  ],
+  "plays": [
+   "kite",
+   "edge-block"
+  ],
+  "results": [
+   {
+    "who": "agent `kite`",
+    "play": "kite",
+    "result": "defeat, captives",
+    "lost": "6 (3 dead, 3 kidnapped)",
+    "badness": "130.5"
+   },
+   {
+    "who": "human",
+    "play": "kite east in a pack, turn south; fight when the melee arrived",
+    "result": "defeat, captives",
+    "lost": "1 (Toad kidnapped); 4 dead + Hadyott downed",
+    "badness": "58.7"
+   }
+  ],
+  "id": "rand_067",
+  "sites": [],
+  "arena": "arena_forest_night",
+  "ours": "TribeRough",
+  "raid": "PirateYttakin",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-melee"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "bow": 3,
+    "thrown": 2,
+    "melee": 2,
+    "long": 1
+   },
+   "enemy_n": 7,
+   "enemy_classes": {
+    "explosive": 1,
+    "short": 3,
+    "melee": 3
+   },
+   "enemy_melee_share": 0.43,
+   "enemy_outrange_share": 0.14,
+   "enemy_explosive_share": 0.14,
+   "count_ratio": 1.14,
+   "distance": 128.8,
+   "squad_range_median": 20.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_084 · pig outlanders ×9 (low skill) vs pirates ×8 with a sniper and two grenadiers · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-sniper",
+   "raid-throwers",
+   "top-threat",
+   "us-low-skill",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "notch-hold",
+   "gap-slip",
+   "melee-lock",
+   "molotov-into-group",
+   "finish-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine`",
+    "play": "focus fire, spacing, in the open",
+    "result": "defeat, captives",
+    "lost": "6 (4 dead, 2 kidnapped)",
+    "badness": "124.9"
+   },
+   {
+    "who": "human (Claude's loadout)",
+    "play": "notch; gap slip when the grenadiers came close; knives on the flankers",
+    "result": "repelled t4869, nobody downed",
+    "lost": "0",
+    "badness": "1.8"
+   },
+   {
+    "who": "Claude",
+    "play": "the same loadout, notch, gap slip",
+    "result": "repelled",
+    "lost": "1 dead (Alo)",
+    "badness": "20.5"
+   }
+  ],
+  "id": "rand_084",
+  "sites": [
+   "west notch"
+  ],
+  "arena": "arena_open_night",
+  "ours": "OutlanderRoughPig",
+  "raid": "Pirate",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "short": 5,
+    "explosive": 2,
+    "melee": 2
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "long": 2,
+    "melee": 1,
+    "short": 3,
+    "explosive": 2
+   },
+   "enemy_melee_share": 0.12,
+   "enemy_outrange_share": 0.25,
+   "enemy_explosive_share": 0.25,
+   "count_ratio": 1.12,
+   "distance": 140.0,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_104 · savage tribe ×8 (bows) vs civil outlanders ×8 with three throwers · forest",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-throwers",
+   "us-bows",
+   "us-outrange",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "skirmish-line",
+   "melee-lock"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle` (no loadout)",
+    "play": "hold a tree line",
+    "result": "squad down",
+    "lost": "4 dead, 4 downed, 8 permanent",
+    "badness": "105.5"
+   },
+   {
+    "who": "human (Claude's loadout)",
+    "play": "one north–south line in the forest 24 cells west of the start; centre stepped back into an arc",
+    "result": "decisive, raid fled t6457, 8 of 8 out",
+    "lost": "2 dead, 2 downed, 1 permanent",
+    "badness": "46.0"
+   },
+   {
+    "who": "Claude (replay of the user's plan)",
+    "play": "same line and loadout; early melee locks on Bishop and Cholaky",
+    "result": "repelled, raid fled t4907, 6 of 8 out",
+    "lost": "1 dead, 3 downed",
+    "badness": "35.3"
+   }
+  ],
+  "id": "rand_104",
+  "sites": [],
+  "arena": "arena_forest_night",
+  "ours": "TribeSavage",
+  "raid": "OutlanderCivil",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-throwers",
+   "us-bows"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "bow": 6,
+    "long": 1,
+    "thrown": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "short": 4,
+    "explosive": 3,
+    "melee": 1
+   },
+   "enemy_melee_share": 0.12,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.38,
+   "count_ratio": 1.0,
+   "distance": 121.8,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_107 · outlanders ×9 (low-skill gunners) vs pig outlanders ×8 with three grenadiers · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers",
+   "us-low-skill",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "cover-hold"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine`",
+    "play": "focus fire, 3-cell spacing, in the open",
+    "result": "defeat, captives",
+    "lost": "6 (2 dead, 4 kidnapped)",
+    "badness": "142.2"
+   },
+   {
+    "who": "human",
+    "play": "hold the forest edge west of the cleared ground",
+    "result": "defeat, captives",
+    "lost": "4 (2 dead, 2 kidnapped); 4 raiders out",
+    "badness": "96.4"
+   }
+  ],
+  "id": "rand_107",
+  "sites": [],
+  "arena": "arena_open_night",
+  "ours": "OutlanderRough",
+  "raid": "OutlanderRoughPig",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-throwers"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "short": 6,
+    "explosive": 1,
+    "melee": 1,
+    "support": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "explosive": 3,
+    "short": 5
+   },
+   "enemy_melee_share": 0.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.38,
+   "count_ratio": 1.12,
+   "distance": 156.8,
+   "squad_range_median": 22.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_115 · Waster tox throwers ×8 (no guns) vs Neanderthal melee ×6 · open — not solved",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-low-skill"
+  ],
+  "plays": [
+   "tox-room",
+   "mouth-hold",
+   "kite"
+  ],
+  "results": [
+   {
+    "who": "agent `kite`",
+    "play": "pack kite",
+    "result": "squad down t7796, 0 kills",
+    "lost": "1 dead, 7 downed",
+    "badness": "84.8"
+   },
+   {
+    "who": "Claude attempt 1",
+    "play": "hold ruin room R2 (three 1-cell doors), tox at the raider in each door",
+    "result": "defeat (1 captive); 5 of 6 raiders dead/down",
+    "lost": "1 dead + 1 kidnapped, 3 downed",
+    "badness": "**80.8**"
+   },
+   {
+    "who": "Claude attempt 2",
+    "play": "same room; non-immune Albert kept outside; throws from the north door before contact",
+    "result": "defeat (2 captives); 4 raiders dead",
+    "lost": "2 kidnapped, 3 downed",
+    "badness": "88.8"
+   },
+   {
+    "who": "Claude attempt 3",
+    "play": "gas kite on open ground",
+    "result": "defeat (3 captives); no raider lost",
+    "lost": "3 dead + 3 kidnapped",
+    "badness": "146.9"
+   }
+  ],
+  "id": "rand_115",
+  "sites": [
+   "nook"
+  ],
+  "arena": "arena_open_night",
+  "ours": "PirateWaster",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-short",
+   "us-throwers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "explosive": 8
+   },
+   "enemy_n": 6,
+   "enemy_classes": {
+    "melee": 6
+   },
+   "enemy_melee_share": 1.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.33,
+   "distance": 145.0,
+   "squad_range_median": 12.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_118 · tribal bows ×9 vs Yttakin blades ×6 + 2 pistols + boar · open — repelled",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "us-bows",
+   "us-low-skill"
+  ],
+  "plays": [
+   "loadout",
+   "breach",
+   "mouth-hold",
+   "rotation",
+   "kite"
+  ],
+  "results": [
+   {
+    "who": "agent `kite`",
+    "play": "pack kite",
+    "result": "squad down t4600, 1 killed",
+    "lost": "0 dead, 9 downed, 16 permanent",
+    "badness": "93.2"
+   },
+   {
+    "who": "Claude (alone), attempt 1 — discarded (compaction mid-battle)",
+    "play": "nook: breach, mouth hold; bows at the least-visible cells",
+    "result": "defeat (3 kidnapped)",
+    "lost": "3 kidnapped, 6 downed",
+    "badness": "(117.2)"
+   },
+   {
+    "who": "Claude (alone), attempt 2",
+    "play": "nook: breach at t2246, two front cells, every bow on the raider in the mouth, two rotations",
+    "result": "**repelled** (t7954)",
+    "lost": "0 (2 downed, 6 permanent)",
+    "badness": "**28.2**"
+   }
+  ],
+  "id": "rand_118",
+  "sites": [
+   "nook"
+  ],
+  "arena": "arena_open_night",
+  "ours": "TribeRough",
+  "raid": "PirateYttakin",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "us-bows"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "bow": 7,
+    "thrown": 1,
+    "long": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "melee": 6,
+    "short": 2
+   },
+   "enemy_melee_share": 0.75,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.12,
+   "distance": 169.7,
+   "squad_range_median": 22.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_126 · Waster pirates ×10 (melee mass + one rifle) vs pirates ×8 · open — won",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-outranges",
+   "us-outnumber",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "corner-ambush",
+   "gang-melee",
+   "melee-lock",
+   "focus-top-threat",
+   "ability"
+  ],
+  "results": [
+   {
+    "who": "agent `close` (no loadout)",
+    "play": "close in",
+    "result": "squad down at t4726, no raider out",
+    "lost": "2 dead, 8 downed, 9 permanent",
+    "badness": "99.8"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "loadout; west rock pocket; tip ambush 3–4 on 1; rifle + Fire spew on the northern holders",
+    "result": "**repelled**, raid fled t6098, 6 dead",
+    "lost": "0 (1 permanent)",
+    "badness": "**13.6**"
+   }
+  ],
+  "id": "rand_126",
+  "sites": [
+   "west rock pocket"
+  ],
+  "arena": "arena_open_night",
+  "ours": "PirateWaster",
+  "raid": "Pirate",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-outranges",
+   "us-melee-pawns"
+  ],
+  "features": {
+   "squad_n": 10,
+   "squad_classes": {
+    "short": 2,
+    "explosive": 1,
+    "melee": 6,
+    "long": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "melee": 2,
+    "short": 4,
+    "long": 2
+   },
+   "enemy_melee_share": 0.25,
+   "enemy_outrange_share": 0.75,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.25,
+   "distance": 164.6,
+   "squad_range_median": 1.5,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_127 · savage tribe ×10 vs Neanderthal melee ×7 · forest",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-bows",
+   "us-low-skill",
+   "us-melee-pawns",
+   "us-outnumber",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "breach",
+   "mouth-hold",
+   "rotation",
+   "finish-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `amove`",
+    "play": "bows shoot on approach, melee gangs up",
+    "result": "all 10 downed",
+    "lost": "0 dead, 10 down",
+    "badness": "116.9"
+   },
+   {
+    "who": "human, attempt 2 (discarded)",
+    "play": "loadout; packed squad in the open",
+    "result": "squad down",
+    "lost": "2 dead",
+    "badness": "99.4"
+   },
+   {
+    "who": "human",
+    "play": "loadout; nook; mouth; rotation",
+    "result": "repelled t5258",
+    "lost": "0 (1 downed)",
+    "badness": "26.0"
+   },
+   {
+    "who": "Claude",
+    "play": "the human's plan; breach with 6 pawns; urn cell; rotate below 45%",
+    "result": "repelled t6213",
+    "lost": "0 (1 downed)",
+    "badness": "10.8"
+   }
+  ],
+  "id": "rand_127",
+  "sites": [
+   "nook"
+  ],
+  "arena": "arena_forest_night",
+  "ours": "TribeSavage",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-bows",
+   "us-outnumber"
+  ],
+  "features": {
+   "squad_n": 10,
+   "squad_classes": {
+    "bow": 5,
+    "melee": 4,
+    "thrown": 1
+   },
+   "enemy_n": 7,
+   "enemy_classes": {
+    "melee": 6,
+    "bow": 1
+   },
+   "enemy_melee_share": 0.86,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.43,
+   "distance": 130.0,
+   "squad_range_median": 20.9,
+   "mech": false
+  }
+ },
+ {
+  "title": "rand_128 · pig outlanders ×8 (pistols, shotguns, frag, molotov) vs Empire ×4 with two shield-belt champions · open",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-armoured",
+   "raid-strong-1v1",
+   "raid-melee",
+   "us-outnumber",
+   "us-short",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "focus-top-threat",
+   "molotov-into-group",
+   "stepped-withdrawal",
+   "kite",
+   "carry-downed"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "packed line receives the charge",
+    "result": "defeat",
+    "lost": "3 dead, 4 downed, 9 permanent",
+    "badness": "95.4"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "focus + molotov + frag on each champion; bounds; kite the slow champion",
+    "result": "defeat (captive); both champions dead",
+    "lost": "4 dead, 1 kidnapped",
+    "badness": "94.7"
+   }
+  ],
+  "id": "rand_128",
+  "sites": [],
+  "arena": "arena_open_night",
+  "ours": "OutlanderRoughPig",
+  "raid": "Empire",
+  "auto": [
+   "open-arena",
+   "raid-armoured",
+   "raid-far",
+   "raid-melee",
+   "raid-outranges",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-short"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "explosive": 2,
+    "short": 5,
+    "melee": 1
+   },
+   "enemy_n": 4,
+   "enemy_classes": {
+    "melee": 2,
+    "support": 1,
+    "medium": 1
+   },
+   "enemy_melee_share": 0.5,
+   "enemy_outrange_share": 0.5,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 2.0,
+   "distance": 157.6,
+   "squad_range_median": 15.9,
+   "mech": false
+  }
+ }
+]
