@@ -48,3 +48,13 @@ The agents are the frozen baseline: listed here, not changed.
 ## Not covered
 `legacy/` and `.worktrees/human/`: the skeptic noted the same 120-tick idle re-order in
 `legacy/combat_agent.py`.
+
+## Re-measures with the fix
+
+| problem | first run | re-measure (`hands.Keeper`) | what changed |
+|---|---|---|---|
+| rand_227 | 19.4, repelled. Ranged runs 679, median 8 ticks, 665 switches | **73.8, squad down**. Ranged runs 16, median 834 ticks, 8 switches | The switching was gone, but the shooters stayed on the priority raider at their range edge (Lynx, 21–23 cells) while the melee arrivals fought the knives at the line. Nothing re-ranked targets when the threat changed |
+
+So keeping a target is not enough. A player re-targets when the threat picture changes (the
+user: an order only "when I want to change target"); a re-target rule is needed before more
+re-measures.

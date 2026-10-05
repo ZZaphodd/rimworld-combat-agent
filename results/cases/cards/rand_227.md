@@ -27,6 +27,7 @@
 |---|---|---|---|---|---|
 | agent `doctrine` | – | – | defeat, raid left with 5 captives | 1 dead, 5 kidnapped | 173.5 |
 | **Claude** | autopistols to the shooters, knives to the rest; one line SW of the start across the raid's approach; the knives locked what reached the line; then the line stepped 6 cells forward to bring the rifles (holding just outside 25.9) into range, knives on the rifles | near the start (forest) | **repelled**, 7 of 8 dead | 0 lost (Fernanda downed) | **19.4** |
+| Claude, re-measure (orders kept: `hands.Keeper`) | the same plan; each shooter kept its target until it fell or stalled; no re-ranking when the melee raiders reached the line | near the start (forest) | defeat, squad down | 1 dead, 8 downed | 73.8 |
 
 ## Scenes
 - **Claude, t0–500** `us-skill-mismatch` → `loadout` `skirmish-line`:
@@ -48,11 +49,14 @@
   Smog and killed him in melee (~t7039); Banshee left.
 
 ## What the play stood on (observed)
+- Re-measure: with the attack orders kept (16 attack runs, median 834 ticks, against 679 runs,
+  median 8 ticks, in the first run), the shooters stayed on Lynx at the range edge while the
+  clubs and the knife fought the knives at the line. Eight of ours went down.
 - Forest near the start; no site. The raid came strung out over ~100 cells, and its melee pawns
   walked into six guns.
 - The rifles held 1–2 cells outside the autopistols' 25.9: the gun line did nothing to them until
   it moved forward.
 
 ## Sources
-journal `journals/rand_227_claude_20261005.md` · trace `results/human/traces/rand_227_claude_20261005-204801.jsonl.gz` ·
+journal `journals/rand_227_claude_20261005.md` (run and re-measure) · traces `results/human/traces/rand_227_claude_20261005-204801.jsonl.gz`, `rand_227_claude_20261006-070654.jsonl.gz` ·
 agent row `results/night/router.jsonl`
