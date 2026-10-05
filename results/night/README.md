@@ -39,3 +39,28 @@ Mechanisms seen:
 - Low-point mechs loiter: kite never advances while melee mechs are near → stalemate (rand_004).
 - Melee brawls are decided by numbers (wins at 9 v 9, 10 v 6, 11 v 6; losses at 5 v 6, 5 v 8) and
   cost many permanent injuries (rand_018: 23).
+
+# Second mining run, 2026-10-05 13:50–~16:30 (rand_130–230)
+
+101 problems, built and played the same way (Claude routing by the table above, the frozen
+Python agents fighting, `tools/night.py`). Asked for by the user once the worst list reached
+problems the agent had won. Rows run until the raid is gone (`end_rule: raid_gone`), so
+kidnapped pawns count and badness is higher than in the first run for the same losses; the
+second run's ranking is `worst_2.md`.
+
+Grades: repelled 37, decisive 21, pyrrhic 6, defeat 35, unresolved 2 (timeouts).
+Router choices, won / lost (defeat or unresolved): close 37 / 12, kite 17 / 4, doctrine 6 / 16,
+turtle 3 / 2, amove 1 / 3. n = 1 per problem.
+
+What the second run showed (observations against the table above):
+- **Doctrine in gun duels lost 16 of 22**: civil / outlander / pirate mirrors and duels with
+  throwers (rand_130, 150, 168, 186, 221, 226, 227) mostly ended with the raid leaving with
+  captives. The first run's "even gun duel → doctrine 4 / 4" did not hold.
+- **Gun squads vs Empire raids: 2 wins in 10** (both `turtle` against melee-champion raids,
+  rand_175 and rand_202; turtle also lost twice, rand_192 and rand_215; doctrine, kite and close
+  lost).
+- **Bow and savage squads vs guns** lost again with every router choice tried, amove included
+  (rand_138, 169, 178, 190, 218).
+- `close` with melee squads, `close` vs ranged mechs (rand_132, 195, 212, 216, 223) and `kite`
+  vs melee rushes kept their records; losses there came against Neanderthals or Empire
+  champions (rand_158, 164, 165, 170, 229).

@@ -1,0 +1,283 @@
+{
+  "id": "rand_225",
+  "save": "scenario_rand_225",
+  "spec": {
+    "id": "rand_225",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "TribeSavage",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderRough",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Black Mongoose",
+      "weapon": "Greatbow (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Tribal_HeavyArcher"
+    },
+    {
+      "id": "Human44824",
+      "name": "Tasre Dolphin",
+      "weapon": "Steel club (22%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44827",
+      "name": "Hamster Lándoa",
+      "weapon": "Steel spear (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Berserker"
+    },
+    {
+      "id": "Human44832",
+      "name": "Tocri Ñogacer",
+      "weapon": "Steel club (73%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44836",
+      "name": "Trout Gorar",
+      "weapon": "Short bow (poor 53%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Archer"
+    },
+    {
+      "id": "Human44839",
+      "name": "Black Vexave",
+      "weapon": "Steel club (53%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44847",
+      "name": "Orange Caribou",
+      "weapon": "Recurve bow (normal 90%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "bow",
+      "kind": "Tribal_Hunter"
+    },
+    {
+      "id": "Human44851",
+      "name": "Blue Llama",
+      "weapon": "Wooden club (42%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44853",
+      "name": "Samantha 'Sam' Haxton",
+      "weapon": "Wooden club",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Penitent"
+    },
+    {
+      "id": "Human44855",
+      "name": "Saio Bobe",
+      "weapon": "Steel ikwa (poor)",
+      "x": 129,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Tribal_Warrior"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human44860",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 176,
+      "z": 242
+    },
+    {
+      "id": "Human44864",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 177,
+      "z": 246
+    },
+    {
+      "id": "Human44870",
+      "def": "Town_Guard",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 184,
+      "z": 249
+    },
+    {
+      "id": "Human44875",
+      "def": "Town_Councilman",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 177,
+      "z": 242
+    },
+    {
+      "id": "Human44883",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 180,
+      "z": 245
+    },
+    {
+      "id": "Human44889",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 180,
+      "z": 249
+    },
+    {
+      "id": "Human44896",
+      "def": "Town_Guard",
+      "weapon": "Machine pistol",
+      "class": "short",
+      "x": 172,
+      "z": 244
+    },
+    {
+      "id": "Human44901",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 178,
+      "z": 245
+    },
+    {
+      "id": "Human44906",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 177,
+      "z": 243
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 10,
+      "squad_classes": {
+        "long": 1,
+        "melee": 7,
+        "bow": 2
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 29.9,
+      "squad_melee": 7,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 9
+      },
+      "enemy_points": 490.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 1.0,
+      "count_ratio": 1.11,
+      "distance": 132.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.3,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.009,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.3,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.059,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

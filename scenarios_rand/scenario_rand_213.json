@@ -1,0 +1,173 @@
+{
+  "id": "rand_213",
+  "save": "scenario_rand_213",
+  "spec": {
+    "id": "rand_213",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Veneranda Kalleris",
+      "weapon": "Assault rifle (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42621",
+      "name": "Ignatios Dalassos",
+      "weapon": "Steel axe (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42627",
+      "name": "Bocas Keber",
+      "weapon": "Uranium mace (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human42633",
+      "name": "Honorius Eurpla",
+      "weapon": "Monosword (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther42642",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 36,
+      "z": 10
+    },
+    {
+      "id": "Mech_Scyther42644",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 36,
+      "z": 6
+    },
+    {
+      "id": "Mech_Scyther42643",
+      "def": "Mech_Scyther",
+      "weapon": "none",
+      "class": "melee",
+      "x": 84,
+      "z": 247
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "medium": 1,
+        "melee": 3
+      },
+      "squad_range_median": 1.5,
+      "squad_range_max": 30.9,
+      "squad_melee": 3,
+      "enemy_n": 3,
+      "enemy_classes": {
+        "melee": 3
+      },
+      "enemy_points": 450.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.33,
+      "distance": 82.0,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": false,
+          "value": 0.25,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "id": "rand_183",
+  "save": "scenario_rand_183",
+  "spec": {
+    "id": "rand_183",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Konnor 'Strange' Cornelius",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42621",
+      "name": "Brazos 'Braz' Wheeler",
+      "weapon": "Biocoded pump shotgun (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42627",
+      "name": "Bekskalp Bareek",
+      "weapon": "Revolver (awful 76%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42629",
+      "name": "Kinyn Kooyesh",
+      "weapon": "Autopistol (good)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42634",
+      "name": "Gracie Tangeline",
+      "weapon": "Pump shotgun (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42641",
+      "name": "Buxrek 'Smokes' Redez",
+      "weapon": "Bolt-action rifle (normal 73%)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "long",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42648",
+      "name": "Kathryn 'Kat' Paluszak",
+      "weapon": "Biocoded autopistol (poor 53%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42653",
+      "name": "Raymond 'Raywolfen' Wolfen",
+      "weapon": "Steel axe (poor 59%)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Thrasher"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42657",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Steel gladius",
+      "class": "melee",
+      "x": 245,
+      "z": 73
+    },
+    {
+      "id": "Human42660",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Wooden club",
+      "class": "melee",
+      "x": 242,
+      "z": 65
+    },
+    {
+      "id": "Human42663",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 244,
+      "z": 62
+    },
+    {
+      "id": "Human42666",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Steel axe",
+      "class": "melee",
+      "x": 245,
+      "z": 66
+    },
+    {
+      "id": "Human42669",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 243,
+      "z": 63
+    },
+    {
+      "id": "Human42672",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Wooden mace",
+      "class": "melee",
+      "x": 244,
+      "z": 72
+    },
+    {
+      "id": "Human42675",
+      "def": "Thrasher_Yttakin",
+      "weapon": "Marble club",
+      "class": "melee",
+      "x": 245,
+      "z": 74
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 8,
+      "squad_classes": {
+        "short": 6,
+        "long": 1,
+        "melee": 1
+      },
+      "squad_range_median": 25.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 1,
+      "enemy_n": 7,
+      "enemy_classes": {
+        "melee": 7
+      },
+      "enemy_points": 350.0,
+      "enemy_range_median": 1.5,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 1.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 1.14,
+      "distance": 132.4,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.875,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.082,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

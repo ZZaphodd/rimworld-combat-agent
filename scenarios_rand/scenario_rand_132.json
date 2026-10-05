@@ -1,0 +1,190 @@
+{
+  "id": "rand_132",
+  "save": "scenario_rand_132",
+  "spec": {
+    "id": "rand_132",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Lilith Luxemburg",
+      "weapon": "Wooden club (43%)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter_Yttakin"
+    },
+    {
+      "id": "Human44823",
+      "name": "Dyark Kuul",
+      "weapon": "Autopistol (normal 97%)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate_Yttakin"
+    },
+    {
+      "id": "Human44826",
+      "name": "Priscilla Bellerose",
+      "weapon": "Steel knife (poor 55%)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter_Yttakin"
+    },
+    {
+      "id": "Human44830",
+      "name": "Duerk Haerk",
+      "weapon": "Autopistol (poor 88%)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Pikeman44836",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 29,
+      "z": 214
+    },
+    {
+      "id": "Mech_Pikeman44838",
+      "def": "Mech_Pikeman",
+      "weapon": "Needle gun",
+      "class": "long",
+      "x": 26,
+      "z": 212
+    },
+    {
+      "id": "Mech_Militor44842",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 31,
+      "z": 217
+    },
+    {
+      "id": "Mech_Lancer44834",
+      "def": "Mech_Lancer",
+      "weapon": "Charge lance",
+      "class": "long",
+      "x": 30,
+      "z": 215
+    },
+    {
+      "id": "Mech_Militor44840",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 25,
+      "z": 217
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "melee": 2,
+        "short": 2
+      },
+      "squad_range_median": 13.7,
+      "squad_range_max": 25.9,
+      "squad_melee": 2,
+      "enemy_n": 5,
+      "enemy_classes": {
+        "long": 3,
+        "short": 2
+      },
+      "enemy_points": 500.0,
+      "enemy_range_median": 32.9,
+      "enemy_closer_share": 0.4,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.6,
+      "count_ratio": 0.8,
+      "distance": 132.2,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": false,
+          "value": 0.4,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.5,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.6,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": true,
+          "value": 0.055,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

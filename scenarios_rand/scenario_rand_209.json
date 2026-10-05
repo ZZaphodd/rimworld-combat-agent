@@ -1,0 +1,275 @@
+{
+  "id": "rand_209",
+  "save": "scenario_rand_209",
+  "spec": {
+    "id": "rand_209",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateWaster",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Sadako Hogan",
+      "weapon": "Tox grenades",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Tox"
+    },
+    {
+      "id": "Human42620",
+      "name": "Akskald Prozeek",
+      "weapon": "Pump shotgun (normal)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42625",
+      "name": "Ryan Jung",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42630",
+      "name": "Kay Scott",
+      "weapon": "Steel knife (poor 27%)",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human42634",
+      "name": "Petra Hurley",
+      "weapon": "Machine pistol (poor 48%)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger"
+    },
+    {
+      "id": "Human42640",
+      "name": "Lucya Spears",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42645",
+      "name": "Raz 'Ambush' Kuzak",
+      "weapon": "Wooden club (49%)",
+      "x": 123,
+      "z": 123,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter"
+    },
+    {
+      "id": "Human42647",
+      "name": "Prozdusk Bekeek",
+      "weapon": "Machine pistol (normal)",
+      "x": 125,
+      "z": 123,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate"
+    },
+    {
+      "id": "Human42654",
+      "name": "Heskred Baskad",
+      "weapon": "Tox grenades (81%)",
+      "x": 127,
+      "z": 123,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Tox"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42662",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 248,
+      "z": 116
+    },
+    {
+      "id": "Human42666",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 243,
+      "z": 113
+    },
+    {
+      "id": "Human42674",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 248,
+      "z": 124
+    },
+    {
+      "id": "Human42679",
+      "def": "Town_Guard",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 247,
+      "z": 121
+    },
+    {
+      "id": "Human42693",
+      "def": "Town_Councilman",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 243,
+      "z": 119
+    },
+    {
+      "id": "Human42701",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 241,
+      "z": 117
+    },
+    {
+      "id": "Human42706",
+      "def": "Town_Guard",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 246,
+      "z": 124
+    },
+    {
+      "id": "Human42712",
+      "def": "Town_Guard",
+      "weapon": "Bolt-action rifle",
+      "class": "long",
+      "x": 248,
+      "z": 123
+    },
+    {
+      "id": "Human42717",
+      "def": "Villager",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 246,
+      "z": 116
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 9,
+      "squad_classes": {
+        "explosive": 2,
+        "short": 4,
+        "long": 1,
+        "melee": 2
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 36.9,
+      "squad_melee": 2,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 7,
+        "long": 2
+      },
+      "enemy_points": 490.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 0.78,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.78,
+      "count_ratio": 1.0,
+      "distance": 121.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.778,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

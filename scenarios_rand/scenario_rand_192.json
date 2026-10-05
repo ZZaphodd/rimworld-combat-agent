@@ -1,0 +1,203 @@
+{
+  "id": "rand_192",
+  "save": "scenario_rand_192",
+  "spec": {
+    "id": "rand_192",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "PirateYttakin",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Empire",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Per Brastad",
+      "weapon": "Steel knife (poor 57%)",
+      "x": 121,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Drifter_Yttakin"
+    },
+    {
+      "id": "Human42618",
+      "name": "Meredith 'Latch' Abernathy",
+      "weapon": "Machine pistol (poor 55%)",
+      "x": 123,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    },
+    {
+      "id": "Human42621",
+      "name": "Hoysh Hoshoark",
+      "weapon": "Autopistol (poor 75%)",
+      "x": 125,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Scavenger_Yttakin"
+    },
+    {
+      "id": "Human42627",
+      "name": "Mike 'Anarchist' Mudgett",
+      "weapon": "Frag grenades",
+      "x": 127,
+      "z": 125,
+      "health": 100,
+      "class": "explosive",
+      "kind": "Grenadier_Destructive"
+    },
+    {
+      "id": "Human42633",
+      "name": "De Bandyesh",
+      "weapon": "Biocoded pump shotgun (normal)",
+      "x": 129,
+      "z": 125,
+      "health": 100,
+      "class": "short",
+      "kind": "Pirate_Yttakin"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42637",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Chain shotgun",
+      "class": "short",
+      "x": 3,
+      "z": 87
+    },
+    {
+      "id": "Human42644",
+      "def": "Empire_Fighter_Janissary",
+      "weapon": "Charge rifle",
+      "class": "medium",
+      "x": 7,
+      "z": 86
+    },
+    {
+      "id": "Human42648",
+      "def": "Empire_Fighter_Trooper",
+      "weapon": "Hellcat rifle",
+      "class": "medium",
+      "x": 3,
+      "z": 82
+    },
+    {
+      "id": "Human42654",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Uranium gladius",
+      "class": "melee",
+      "x": 4,
+      "z": 88
+    },
+    {
+      "id": "Human42661",
+      "def": "Empire_Fighter_Champion",
+      "weapon": "Monosword",
+      "class": "melee",
+      "x": 1,
+      "z": 78
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 5,
+      "squad_classes": {
+        "melee": 1,
+        "short": 3,
+        "explosive": 1
+      },
+      "squad_range_median": 15.9,
+      "squad_range_max": 25.9,
+      "squad_melee": 1,
+      "enemy_n": 5,
+      "enemy_classes": {
+        "short": 1,
+        "medium": 2,
+        "melee": 2
+      },
+      "enemy_points": 465.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 0.6,
+      "enemy_melee_share": 0.4,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.4,
+      "count_ratio": 1.0,
+      "distance": 128.1,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.8,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 0.6,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": true,
+          "value": 0.4,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.8,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": true,
+          "value": 0.4,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.014,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

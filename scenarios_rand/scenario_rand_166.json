@@ -1,0 +1,238 @@
+{
+  "id": "rand_166",
+  "save": "scenario_rand_166",
+  "spec": {
+    "id": "rand_166",
+    "tier": "rand",
+    "arena": "arena_forest_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 500,
+      "method": "faction"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human44819",
+      "name": "Rustica Deca",
+      "weapon": "Heavy SMG (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human44825",
+      "name": "Philippis Prodromus",
+      "weapon": "Assault rifle (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Trooper"
+    },
+    {
+      "id": "Human44832",
+      "name": "Alexios Taumopro",
+      "weapon": "Silver warhammer (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    },
+    {
+      "id": "Human44838",
+      "name": "Joannina Skleros",
+      "weapon": "Biocoded assault rifle (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "medium",
+      "kind": "Empire_Fighter_Trooper"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Militor44846",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 26,
+      "z": 114
+    },
+    {
+      "id": "Mech_Militor44852",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 25,
+      "z": 113
+    },
+    {
+      "id": "Mech_Militor44864",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 23,
+      "z": 111
+    },
+    {
+      "id": "Mech_Militor44854",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 22,
+      "z": 116
+    },
+    {
+      "id": "Mech_Militor44856",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 19,
+      "z": 113
+    },
+    {
+      "id": "Mech_Militor44858",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 21,
+      "z": 114
+    },
+    {
+      "id": "Mech_Militor44848",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 18,
+      "z": 109
+    },
+    {
+      "id": "Mech_Militor44850",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 20,
+      "z": 113
+    },
+    {
+      "id": "Mech_Militor44862",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 22,
+      "z": 110
+    },
+    {
+      "id": "Mech_Militor44860",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 15,
+      "z": 104
+    },
+    {
+      "id": "Mech_Militor44866",
+      "def": "Mech_Militor",
+      "weapon": "Mini-shotgun",
+      "class": "short",
+      "x": 24,
+      "z": 112
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "support": 1,
+        "medium": 2,
+        "melee": 1
+      },
+      "squad_range_median": 26.9,
+      "squad_range_max": 30.9,
+      "squad_melee": 1,
+      "enemy_n": 11,
+      "enemy_classes": {
+        "short": 11
+      },
+      "enemy_points": 495.0,
+      "enemy_range_median": 12.9,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 0.0,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 0.36,
+      "distance": 104.5,
+      "mech": true
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.01,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.015,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}

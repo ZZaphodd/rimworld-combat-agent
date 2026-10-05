@@ -1,0 +1,224 @@
+{
+  "id": "rand_220",
+  "save": "scenario_rand_220",
+  "spec": {
+    "id": "rand_220",
+    "tier": "rand",
+    "arena": "arena_open_night",
+    "squad": {
+      "faction": "Empire",
+      "points": 500,
+      "place": [
+        125,
+        125
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human42615",
+      "name": "Sophia Diomosdio",
+      "weapon": "LMG (normal)",
+      "x": 122,
+      "z": 125,
+      "health": 100,
+      "class": "support",
+      "kind": "Empire_Fighter_Trooper"
+    },
+    {
+      "id": "Human42621",
+      "name": "Therosia Mepro",
+      "weapon": "Charge lance (normal)",
+      "x": 124,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42629",
+      "name": "Arcadius Maleinos",
+      "weapon": "Charge lance (normal)",
+      "x": 126,
+      "z": 125,
+      "health": 100,
+      "class": "long",
+      "kind": "Empire_Fighter_Janissary"
+    },
+    {
+      "id": "Human42635",
+      "name": "Sophia Rhagabe",
+      "weapon": "Wooden warhammer (normal)",
+      "x": 128,
+      "z": 125,
+      "health": 100,
+      "class": "melee",
+      "kind": "Empire_Fighter_Champion"
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human42643",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 201,
+      "z": 247
+    },
+    {
+      "id": "Human42648",
+      "def": "Thrasher",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 207,
+      "z": 245
+    },
+    {
+      "id": "Human42653",
+      "def": "Scavenger",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 205,
+      "z": 243
+    },
+    {
+      "id": "Human42658",
+      "def": "Drifter",
+      "weapon": "Steel club",
+      "class": "melee",
+      "x": 207,
+      "z": 245
+    },
+    {
+      "id": "Human42662",
+      "def": "Pirate",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 209,
+      "z": 245
+    },
+    {
+      "id": "Human42668",
+      "def": "Scavenger",
+      "weapon": "Pump shotgun",
+      "class": "short",
+      "x": 208,
+      "z": 246
+    },
+    {
+      "id": "Human42673",
+      "def": "Pirate",
+      "weapon": "Revolver",
+      "class": "short",
+      "x": 206,
+      "z": 246
+    },
+    {
+      "id": "Human42679",
+      "def": "Scavenger",
+      "weapon": "Autopistol",
+      "class": "short",
+      "x": 206,
+      "z": 246
+    },
+    {
+      "id": "Human42684",
+      "def": "Scavenger",
+      "weapon": "machine pistol",
+      "class": "short",
+      "x": 200,
+      "z": 247
+    }
+  ],
+  "briefing": {
+    "features": {
+      "squad_n": 4,
+      "squad_classes": {
+        "support": 1,
+        "long": 2,
+        "melee": 1
+      },
+      "squad_range_median": 29.4,
+      "squad_range_max": 32.9,
+      "squad_melee": 1,
+      "enemy_n": 9,
+      "enemy_classes": {
+        "short": 7,
+        "melee": 2
+      },
+      "enemy_points": 465.0,
+      "enemy_range_median": 25.9,
+      "enemy_closer_share": 1.0,
+      "enemy_melee_share": 0.22,
+      "enemy_explosive_share": 0.0,
+      "enemy_outrange_share": 0.0,
+      "count_ratio": 0.44,
+      "distance": 144.9,
+      "mech": false
+    },
+    "preconditions": {
+      "doctrine": {
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "turtle": {
+        "defensible_terrain": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.1,
+          "soft": true
+        },
+        "enemy_approaches": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.5
+        }
+      },
+      "spread": {
+        "enemy_splash_heavy": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.45
+        },
+        "room_to_spread": {
+          "ok": true,
+          "value": 1.0,
+          "need": 0.7
+        }
+      },
+      "kite": {
+        "enemy_melee_heavy": {
+          "ok": false,
+          "value": 0.222,
+          "need": 0.4
+        },
+        "ranged_squad": {
+          "ok": true,
+          "value": 0.75,
+          "need": 0.5
+        }
+      },
+      "close": {
+        "enemy_outranges": {
+          "ok": false,
+          "value": 0.0,
+          "need": 0.4
+        },
+        "approach_cover": {
+          "ok": false,
+          "value": 0.025,
+          "need": 0.05
+        }
+      }
+    }
+  }
+}
