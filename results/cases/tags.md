@@ -64,6 +64,7 @@ A scene lists both for that moment.
 | `breach` | break a wall or object (several pawns, one swing per order) |
 | `gap-slip` | move through a gap so rock cuts the throwers' sight |
 | `kite` | keep moving away in a pack; the raid strings out behind |
+| `tox-room` | hold a closed room and throw tox at raiders coming through its doors, with tox-immune pawns inside |
 | `stepped-withdrawal` | fall back a bound, turn, kill whoever followed, repeat |
 | `skirmish-line` | a spaced line in the open |
 | `smoke` | pop smoke at contact |
