@@ -80,7 +80,9 @@ def shot(x0, z0, w=40, h=30, out="cp.jpg", caption="", keep=None, ppc=18):
 
 def melee(name, enemy):
     """Melee attack <enemy> from the float menu (the verb gizmo would use a gun)."""
-    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}[enemy]
+    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}.get(enemy)
+    if not e:
+        return False
     opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
     # the menu lists every pawn on the target's cell (downed ones too): pick the named one
     m = next((o for o in opts if o["label"].lower().startswith("melee attack") and not o["disabled"]
@@ -93,10 +95,173 @@ def melee(name, enemy):
 def fire(name, enemy):
     """Fire at <enemy> from the float menu. The verb gizmo can report "executed" and leave the pawn
     watching for targets (seen with bows shooting through a 1-cell gap past downed pawns)."""
-    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}[enemy]
+    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}.get(enemy)
+    if not e:
+        return False
     opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
     m = next((o for o in opts if o["label"].lower() == f"fire at {enemy}".lower() and not o["disabled"]), None)
     return bool(m) and bool(rm.call("order_pawn", id=ids()[name], targetId=e, index=m["index"]).get("executed"))
+
+
+# ---- attack orders, the player's way (the user, 2026-10-06; results/audit_attack_orders.md) ----
+# A player orders an attack only to change target; the pawn then keeps firing or swinging on its
+# own. Our controllers switched targets every 8-24 ticks (A -> B -> A), and every switch restarts the
+# aim or the swing. Repeating an order on the same target cost nothing in a test (autopistols).
+_CYCLE, _DEF = {}, {}
+SHOOT_VERBS = ("Verb_Shoot", "Verb_ShootOneUse")         # the verbs that move "Shots fired"
+
+
+def _weapon_def(name):
+    from rca.game.weapons import weapon_def
+    return weapon_def(rm.call("get_pawn", id=ids()[name]).get("weapon") or "")
+
+
+def weapon_cycle(name):
+    """Ticks from one shot of <name>'s weapon to the next: aiming time + ranged cooldown from the
+    weapon def's info card (`get_info_card def=`). Melee weapons and unknowns: 120. The def is
+    looked up once per pawn (Keeper.forget_weapon after a loadout change)."""
+    d = _DEF.setdefault(name, _weapon_def(name))
+    if d not in _CYCLE:
+        ticks = 120
+        if d:
+            card = rm.call("get_info_card", **{"def": d})
+            st_ = {x["label"]: x["value"] for c in card.get("stats") or [] for x in c.get("stats") or []}
+            sec = lambda k: float(str(st_.get(k, "0")).split()[0])
+            if "Ranged cooldown" in st_:
+                ticks = max(30, round((sec("Ranged cooldown") + sec("Aiming time")) * 60))
+        _CYCLE[d] = ticks
+    return _CYCLE[d]
+
+
+def counts_shots(name):
+    """Whether <name>'s weapon moves the "Shots fired" record (Verb_Shoot); thrown weapons, beams
+    and flame sprayers do not (data/weapon_ranges.json `verb`)."""
+    from rca.game.weapons import RANGES
+    d = _DEF.setdefault(name, _weapon_def(name))
+    w = (json.loads(RANGES.read_text())["weapons"].get(d) or {}) if RANGES.exists() and d else {}
+    return w.get("verb", "Verb_Shoot") in SHOOT_VERBS
+
+
+def shots_fired(name):
+    rec = rm.call("get_pawn", id=ids()[name], tab="records").get("records") or []
+    return next((x["value"] for x in rec if x["record"] == "Shots fired"), 0)
+
+
+def fireable(name, enemy):
+    """Whether <name>'s float menu offers an enabled "Fire at <enemy>" (in range, in sight). Lists
+    the menu only; gives no order."""
+    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}.get(enemy)
+    if not e:
+        return False
+    opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
+    return any(o["label"].lower() == f"fire at {enemy}".lower() and not o["disabled"] for o in opts)
+
+
+BUSY = ("wandering", "extinguish", "flee", "downed", "carrying", "rescu", "tending", "crawl")
+
+
+class Keeper:
+    """One attack target per pawn, ordered once and kept, the player's way.
+
+    pick(name, ranked, now, standing, job) is called every step with the pawn's current job text:
+    - the pawn is busy (held by the caller, or its job is wandering, fleeing, putting out a fire,
+      carrying, ...): nothing is ordered;
+    - its job names the kept target ("attacking X" / "melee attacking X"): kept; for a shooter
+      whose weapon moves "Shots fired", a stall is when that record has not changed for STALL
+      weapon cycles while the job names the target: the target is marked bad for BAD cycles and
+      the next one is ordered;
+    - the job does not name it (the order ended: fire at will, idle) and it still stands: the same
+      target is ordered again, which costs nothing;
+    - it fell (not in `standing`, which must exclude downed raiders): the first target of `ranked`
+      that takes the order, skipping targets marked bad.
+    better(name, priority, now) switches to a raider of the caller's fixed priority list ranked
+    above the current target, if its "Fire at" is enabled; it looks once per weapon cycle and skips
+    targets marked bad. hold(name, until) / release(name) mark a pawn busy for the caller (a move,
+    a dodge, a carry): nothing is ordered while it is held."""
+    STALL, BAD = 3, 4
+
+    def __init__(self):
+        self.s, self.held, self.bad, self.dodges = {}, {}, {}, {}
+
+    def target(self, name):
+        return (self.s.get(name) or {}).get("target")
+
+    def drop(self, name):
+        self.s.pop(name, None)
+
+    def hold(self, name, until=None):
+        self.held[name] = until if until is not None else 10 ** 9
+
+    def release(self, name):
+        self.held.pop(name, None)
+        self.drop(name)
+
+    def is_held(self, name, now):
+        u = self.held.get(name)
+        if u is None:
+            return False
+        if now >= u:
+            self.release(name)
+            return False
+        return True
+
+    def order(self, name, target, kind, now, switch=False):
+        cur = self.s.get(name)
+        if cur and cur["target"] == target and cur["kind"] == kind and not switch:
+            return False
+        ok = fire(name, target) if kind == "fire" else melee(name, target)
+        if ok:
+            sh = shots_fired(name) if kind == "fire" and counts_shots(name) else None
+            self.s[name] = {"target": target, "kind": kind, "at": now, "shots": sh, "changed": now,
+                            "checked": now}
+        return ok
+
+    def _stalled(self, name, now):
+        cur = self.s[name]
+        if cur["shots"] is None or now - cur["at"] < weapon_cycle(name):
+            return False
+        sh = shots_fired(name)
+        if sh != cur["shots"]:
+            cur["shots"], cur["changed"] = sh, now
+            return False
+        return now - cur["changed"] >= self.STALL * weapon_cycle(name)
+
+    def _bad(self, name, t, now):
+        u = self.bad.get(name, {}).get(t)
+        return u is not None and now < u
+
+    def pick(self, name, ranked, now, standing, job, kind="fire"):
+        """Keep, re-order, or switch (see the class doc). Returns the target or None."""
+        job = (job or "").lower()
+        if self.is_held(name, now) or any(b in job for b in BUSY):
+            return self.target(name)
+        cur = self.s.get(name)
+        if cur and cur["kind"] == kind and cur["target"] in standing:
+            t = cur["target"]
+            verb = "melee attacking" if kind == "melee" else "attacking"
+            if f"{verb} {t.lower()}" in job:
+                if kind != "fire" or not self._stalled(name, now):
+                    return t
+                self.bad.setdefault(name, {})[t] = now + self.BAD * weapon_cycle(name)
+            elif not self._bad(name, t, now):
+                return t if self.order(name, t, kind, now, switch=True) else None
+        for t in ranked:
+            if t in standing and not self._bad(name, t, now) and (not cur or t != cur["target"]):
+                if self.order(name, t, kind, now, switch=True):
+                    return t
+        return self.target(name) if self.target(name) in standing else None
+
+    def better(self, name, priority, now):
+        cur = self.s.get(name)
+        if not cur or cur["kind"] != "fire" or now - cur["checked"] < weapon_cycle(name):
+            return None
+        cur["checked"] = now
+        for t in priority:
+            if t == cur["target"]:
+                return None
+            if not self._bad(name, t, now) and fireable(name, t) and self.order(name, t, "fire", now, switch=True):
+                return t
+        return None
 
 
 KEEP_TRAITS = ("Brawler", "Tough", "Nimble", "Jogger", "Slowpoke", "Trigger-happy", "Careful shooter",
@@ -270,7 +435,7 @@ def _dodge_cell(me, fx, fz, ours, foes, dist=5):
     return best[1]
 
 
-def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, quiet=False):
+def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, quiet=False, keeper=None):
     """Fine-grained steps (dt ticks) with a grenade reflex, the player's way: when a grenade
     appears, its target is the colonist the nearest grenadier was aiming at (`targeting`), else
     the pawn nearest its line of flight; only that pawn sidesteps ~5 cells (same distance to the
@@ -281,7 +446,9 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
     raid has no throwers; a grenade first seen next to one of our throwers is ours (2026-10-05:
     our own frag sent Trev into the raid). NB: wait(dt) advances exactly dt ticks since the
     mod's wait setting was changed on 2026-10-05 evening (before: 15–30 ticks at least;
-    RIMMOLT_API), at ~60 ticks/s of wall time."""
+    RIMMOLT_API), at ~60 ticks/s of wall time. With `keeper` (a Keeper), a dodger is held (no attack
+    order) until its grenade is gone, across guard calls; then it is released and the caller's next
+    pick orders it again."""
     resume = resume or {}
     weap = {h["id"]: (rm.call("get_pawn", id=h["id"]).get("weapon") or "").lower() for h in pawns("hostile")}
     throwers = {i for i, w in weap.items() if any(k in w for k in THROWN)}
@@ -319,9 +486,19 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
                 continue
             c = _dodge_cell(me, me["x"], me["z"], ours, [f for f in foes if not f.get("downed")])
             go(who, *c)
+            if keeper is not None:
+                keeper.hold(who)
+                keeper.dodges[i] = who
             dodging[i] = who
             if not quiet:
                 print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} thrown at {who} -> sidestep {c}")
+        if keeper is not None:                               # dodges from earlier guard calls
+            for i, who in list(keeper.dodges.items()):
+                if i not in projs:
+                    keeper.dodges.pop(i)
+                    keeper.release(who)
+                else:
+                    seen.setdefault(i, projs[i][1:])
         for i in [i for i in dodging if i not in projs]:     # exploded or gone: back to the errand
             who = dodging.pop(i)
             if who in resume:

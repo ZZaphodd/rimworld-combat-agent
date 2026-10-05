@@ -1822,6 +1822,13 @@
     "result": "**repelled**, 7 of 8 dead",
     "lost": "0 lost (Fernanda downed)",
     "badness": "**19.4**"
+   },
+   {
+    "who": "Claude, re-measure (orders kept: `hands.Keeper`)",
+    "play": "the same plan; each shooter kept its target until it fell or stalled; no re-ranking when the melee raiders reached the line",
+    "result": "defeat, squad down",
+    "lost": "1 dead, 8 downed",
+    "badness": "73.8"
    }
   ],
   "id": "rand_227",
