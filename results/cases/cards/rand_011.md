@@ -19,6 +19,7 @@
 |---|---|---|---|---|---|
 | agent `close` (no loadout) | closed in by ~t1130, then held | open ground | defeat, captives (kidnapping from t4930) | 3 kidnapped, 4 downed | 106.4 |
 | human (Claude's loadout) | two lines on open ground west of the start, guns in front; small steps east | open ground (x 114–131, z 105–135) | decisive, raid broke t4666, 9 of 9 out | 1 dead (Bagad) | 25.8 |
+| Claude (replay of the user's plan) | same loadout and lines; bait; guns on the grenadiers early; melee-lock after Pablo | same | repelled, raid fled t4558, 7 of 9 out | 0 dead, 3 downed (Olaf, Strangler, Bagad) | 22.4 |
 
 ## Scenes
 - **t0–121** `raid-far` `us-skill-mismatch` → `loadout`: Boss ↔ Bagad (rifle to the 13),
@@ -53,6 +54,23 @@
   within 300 ticks; the raid broke at t4666. Reid downed (Boss, spine).
 - **t4900–6420** → `gang-melee`: Cali ran, then turned on Mila; all seven standing finished him
   in melee. Olaf carried to the group.
+
+## Scenes of Claude's replay (journal: `journals/rand_011_claude_20261005.md`)
+- **t1439–1709** `approach`: `targeting` showed each raider's destination cell — the cells they
+  held in the user's game, 16–23 cells from our front; grenadiers' cells 10–12 cells away.
+- **t1813–2068**: the rifles fired (records) but my repeated attack orders kept restarting
+  their aim; Boss 65%.
+- **t2260–2739** `thrower-close` → `bait` `frag-dodge`: Olaf sent to melee-lock Shaw drew a
+  frag; guns on Maggie, then Shaw: Maggie dead t2364, Shaw dead t2739. Dodges cancelled Olaf's
+  melee order; Olaf down t2680 (pulled back at 43%, too late).
+- **t2589–3011** `gang-melee`: two clubs held Pablo ~400 ticks (dead t3011); Strangler down
+  t2935 at the front under the machine pistols; Far carried him back.
+- **t2890–3220**: rifles left alone on Reid: dead t3220.
+- **t3011–4092** `no-enemy-melee` → `melee-lock` `ability`: Fire spew on a cell between Cali and
+  Zach caught Cali only; Bagad locked Cali, Mila locked Zach; both clubs lost their exchanges
+  (Bagad down t4092).
+- **t4092–4706** `raid-breaking`: Schlitzer killed Dennis and Navarro; the raid fled t4558;
+  Mila + Wanya killed Zach. Cali and Cameron escaped.
 
 ## What the play stood on (observed)
 - No site: open ground (the cleared square), 5–15 cells west of the start, across the raid's

@@ -55,6 +55,7 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 | rand_030 | Claude, directly | same loadout and hill; the raid split round both sides of the hill this time; smoke, Mushinto first, molotov + frags on the southern group, Butters tied up the grenadier late | repelled | 1 (7 permanent injuries) | 38.8 (human 21.1) |
 | rand_084 | Claude, directly | same loadout, notch, gap slip at 11 cells, knives on Rusty, both grenadiers tied up in melee; Carlson flanked round the west end and killed Alo | repelled | 1 | 20.5 (human 1.8) |
 | rand_039 | Claude, directly | same loadout, ruin, three bounds east killing the followers; carried the downed; chased three kidnappers and got all three back | pyrrhic | 0 (5 downed) | 48.4 (human 8.0) |
+| rand_011 | Claude, directly | the user's plan and intentions (card); raiders' `targeting` read for their firing cells; grenadiers killed early (t2364, t2739); frag dodging by `hands.guard()`; three pawns down (bait, front shotgun, club locking a shotgunner) | repelled | 0 (3 downed) | 22.4 (human 25.8) |
 
 Turn logs of Claude's plays (orders by tick, what followed): `raw/<id>/claude_turns.md`; the
 operating facts they rely on are in RIMMOLT_API.md (verb gizmo on buildings, melee/carry
