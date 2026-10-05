@@ -22,3 +22,10 @@ The plan is the user's winning play (`cards/rand_023.md`, report `results/human/
 - Dealers (Whale, Hornet): the most dangerous raider already locked, nearest first; spare
   pawns join their group's dealer.
 - Gorilla to Lissa once contact has started and she is within 40.
+
+## Attempt 3 additions (the user's start rules, told after attempt 2)
+- Start signal: the front raider (Toni) hitting one of ours; then go when the exposed walk to the
+  marked shooters stops getting shorter (≤150 ticks after the first blow).
+- The hit pawn and up to three next to him stay and gang him.
+- Staggered start: movers with longer hidden routes go first, so all enter the shooters' sight
+  together. Marks: per shooter in danger order, the mover with the least exposed walk.

@@ -1,4 +1,4 @@
-# rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human
+# rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human; Claude decisive on attempt 3
 
 **Situation:** `forest-arena` `raid-far` `raid-outranges` `us-outnumber` `us-melee-pawns` `top-threat`
 **Plays seen:** `concealed-wait` `cover-path-start` `mark-shooters` `dealer-shields` `loadout` `breach` (failed) `carry-downed` `melee-lock`
@@ -18,6 +18,7 @@
 |---|---|---|---|---|---|
 | agent `amove` | mass charge | near the start | squad down at t3051 | 2 dead, 8 downed, 9 permanent | 101.8 |
 | **human** (Claude's loadout) | waited hidden and packed in the small ruin so the raid strung out (worst threat last); at contact one of ours on each shooter, two groups each led by a dealer (Whale, Hornet) with meat shields; Gorilla (low damage) locked the revolver ace; then all chased her | small ruin | **decisive**, all 8 dead | 1 dead, 0 downed | **25.6** |
+| **Claude (attempt 3, the user's start rules)** | as above, plus: held until the front raider was hitting ours, left when the exposed walk stopped shrinking, the pawns next to him stayed and ganged him, movers with longer hidden routes sent first | small ruin | **decisive**, all 8 out | **0 dead**, 5 downed | **41.0** |
 | Claude (replay of the user's play) | same loadout and ruin cells; marks went out when a raider was within 5 (the rest 9–18 away); dealers on locked raiders; Gorilla on Lissa | small ruin | enemies cleared, pyrrhic | 2 dead, 4 downed | 60.4 |
 | Claude (alone) | breach the NE walled hall to hide in its blind cells (breach failed); fought outside | NE walled hall, south-east corner | squad down | 4 dead, 6 downed | 100.2 |
 
@@ -56,6 +57,12 @@
 - **Claude replay, t3285–3973** `top-threat` → `melee-lock`: Lissa held at (128, 88) as in the user's
   run; Gorilla downed on arrival (shot 100 → 39% on the walk); Lissa free for ~570 ticks, Colmea
   shot dead; Ram and Whale then locked and killed her (t4893).
+- **Claude attempt 3, t2441–2985** `raid-strung-out` → `concealed-wait` `cover-path-start`: first blow
+  t2441 (Toni → Emñobi), go t2453 (exposed walk 53 → 64), four stayed on Toni (dead t2985, no
+  loss), six movers sent t2453–2504 by hidden-route length.
+- **Claude attempt 3, t3146–5435** `top-threat` → `melee-lock`: Lissa stopped at 8 cells (128, 94);
+  Gorilla, then Tiger, Hornet, Bustba sent to her; she downed Whale (8 cells) before the lock; dead
+  t5435 (flak vest + jacket: ~800 ticks in melee).
 - **t1650–4729** → `breach` (failed): three pawns hit the hall's granite wall at (213, 167) with
   the order re-issued every 45 ticks (cancelling the swings): 95 → 93%; the loop did not watch
   the raid, which arrived unseen and caught the squad outside.
@@ -69,5 +76,5 @@
 - All raiders targeted one colonist (Hornet) and walked at him from the south-west.
 
 ## Sources
-journal `journals/rand_023_claude_20261005.md` (attempts 1–2) · traces `results/human/traces/rand_023_claude_20261005-112931.jsonl.gz`, `rand_023_claude_20261005-191247.jsonl.gz` ·
+journal `journals/rand_023_claude_20261005.md` (attempts 1–3) · traces `results/human/traces/rand_023_claude_20261005-112931.jsonl.gz`, `rand_023_claude_20261005-191247.jsonl.gz`, `rand_023_claude_20261005-193154.jsonl.gz` ·
 agent row `results/night/router.jsonl`
