@@ -142,6 +142,19 @@ if __name__ == "__main__":
             (7454, "Annie down, Lady dead, the raid fled; Mac the last one"),
         ], notes=[(125, 129, "start")],
            trace_file="results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz")
+    if "rand_015" in which:
+        build("rand_015", [
+            (3355, "all six inside the pocket by the south-west gap; Seizz 14 cells ahead along rock B's south face"),
+            (3852, "five out through the gap to rock A's south side; Bilegoda left inside; Seizz on rock B's north tip"),
+            (4045, "Bilegoda goes for Horror (tox); four come east along the south face; Alpaca sent at Seizz"),
+            (4365, "one of ours on each shooter: Manatee-Tooth, Crica-Dek, Bilegoda-Horror, Alpaca-Tasya, Curne-Tomb, Mallard-Nicole"),
+            (5038, "Dek, Tooth, Tomb dead; Alpaca burning from Seizz's fire spew; Rubisum (molotov) arrives last"),
+            (5297, "Mallard (bow) locks Rubisum; Crica on Seizz; Manatee on Davenport; Curne on Nicole"),
+            (6156, "Seizz dead; Bilegoda and Mallard down; molotov fires among ours"),
+            (8055, "Tasya, Davenport, Horror dead; Rubisum alone against Crica, Curne, Alpaca"),
+            (9576, "decisive: all nine dead (Nicole last, chased west); Crica dead"),
+        ], notes=[(32, 150, "west rock pocket")],
+           trace_file="results/human/traces/rand_015_human_20261005-181831.jsonl.gz")
     if "rand_011" in which:
         build("rand_011", [
             (1256, "two lines on open ground: guns in front, clubs and weak guns 6 cells behind"),

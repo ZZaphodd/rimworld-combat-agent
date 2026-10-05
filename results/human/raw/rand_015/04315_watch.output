@@ -1,0 +1,22 @@
+tick 4315 (game 4698) | paused=True | ours 6 (down 0) | them 8 (down 0)
+OURS
+   Curne       @48,138 95% Wooden club | melee attacking Tomb. | nearest foe 1
+   Mallard     @47,135 50% Greatbow | moving. | nearest foe 1
+   Bilegoda    @34,137 36% Steel knife | moving. | nearest foe 1
+   Manatee     @38,128 78% Steel ikwa | watching for targets. | nearest foe 1
+   Alpaca      @35,144 78% Steel ikwa | melee attacking Seizz. | nearest foe 4
+   Crica       @39,137 49% Steel ikwa | watching for targets. | nearest foe 4
+THEM
+   Nicole      @47,138 100% Revolver | watching for targets. | nearest foe 1
+   Davenport   @48,136 100% Autopistol | watching for targets. | nearest foe 1
+   Tooth       @39,129 39% Machine pistol | melee attacking Manatee. | nearest foe 1
+   Tomb        @49,137 100% Revolver | watching for targets. | nearest foe 1
+   Horror      @35,138 100% Tox grenades | watching for targets. | nearest foe 1
+   Seizz       @38,146 100% Machine pistol | using fire spew on Alpaca, Malinge | nearest foe 4
+   Tasya       @27,138 100% Pump shotgun | watching for targets. | nearest foe 7
+   Rubisum     @69,138 100% Molotov cocktails | moving. | nearest foe 21
+fires 0 | grenades in the air 0
+rect x20-76 z121-153
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182443-790.png
+frame results/human/hands_watch_4315.jpg
+

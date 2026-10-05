@@ -71,6 +71,8 @@ A scene lists both for that moment.
 | `molotov-into-group` | fire into a bunched group |
 | `focus-top-threat` | everyone on the most dangerous raider first |
 | `melee-lock` | a melee pawn engages a raider's gunner or thrower: in melee it cannot shoot (the user's term; renamed from `melee-tieup` 2026-10-05). One-sided once the raid has no melee pawn left (`no-enemy-melee`) |
+| `mark-shooters` *(new, 2026-10-05)* | one of ours locks each of the raid's shooters at once, in order of danger (the user's play in rand_015) |
+| `ability-bait` *(new, 2026-10-05)* | a cheap pawn is sent to draw a raider's ability (Fire spew) so it does not hit the group |
 | `carry-downed` | carry our downed along / inside |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
