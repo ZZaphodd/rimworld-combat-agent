@@ -327,3 +327,25 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
             return ev
     print(f"   t{rm.call('get_status')['ticksGame'] - 383}: quiet")
     return []
+
+
+def wait_safe(ticks, alarm=25, chunk=60):
+    """Advance up to `ticks` in chunks, returning early (with the reason) when a raider comes
+    within `alarm` cells of a standing pawn of ours, or one of ours goes down. Use it instead of
+    a bare wait() loop: twice on 2026-10-05 a loop without a check let the raid arrive unseen
+    (rand_015 attempt 2: ~870 ticks; rand_023: ~3000 ticks)."""
+    t0 = rm.call("get_status")["ticksGame"]
+    down0 = {short_name(p["label"]) for p in pawns("player") if p.get("downed")}
+    while rm.call("get_status")["ticksGame"] - t0 < ticks:
+        wait(chunk)
+        ours = pawns("player")
+        down = {short_name(p["label"]) for p in ours if p.get("downed")} - down0
+        if down:
+            return f"down: {sorted(down)}"
+        stand = [p for p in ours if not p.get("downed")]
+        foes = [h for h in pawns("hostile") if not h.get("downed")]
+        if stand and foes:
+            d = min(math.dist((a["x"], a["z"]), (b["x"], b["z"])) for a in stand for b in foes)
+            if d <= alarm:
+                return f"raider within {d:.0f}"
+    return None
