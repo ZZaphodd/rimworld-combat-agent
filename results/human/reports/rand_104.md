@@ -64,8 +64,8 @@ White stood in the middle to keep the line balanced.
 **Cholaky (frags) downed t2980**: two of three throwers down with nobody of ours hurt yet.
 Then the north end took Bishop's shotgun from 13–16 cells (Goenaban 76 → 44%). **Donkey
 dead** between t3188 and t3250 at (99, 113), the pawn nearest the throwers: 100% at one poll,
-dead at the next — one hit (the player recalls Lady's revolver, shooting 4, destroying his
-head, but is not sure; the shooter's log went with the dead). The player rated Bishop (shotgun)
+dead at the next — Lady's revolver (shooting 4) destroyed his head in one hit (confirmed by
+the player in the game's UI; the shooter's log went with the dead). The player rated Bishop (shotgun)
 and Georgette (knife) the top threats; both came from the north, where the pressure was heavy,
 while the south had room. Georgette (Wimp) went down without much cost, so little fire was
 taken off Bishop. Georgette (knife) ran

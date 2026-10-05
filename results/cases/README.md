@@ -41,6 +41,11 @@ Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
 squad went down compares by `squad_down.missing` (EVAL_SPEC §3).
 
+Variance: one run of a play is one draw. The user (2026-10-05): RimWorld punishes the player
+often, so repeated runs of the same play swing widely — in rand_104 a shooting-4 revolver
+destroyed Donkey's head with one bullet. A difference between two single runs (e.g. Claude
+22.4 vs the user 25.8 on rand_011) says little; read it from several runs.
+
 ## Retrieval (a subagent, so the main context stays small)
 
 **At the start**, after the battle card is written (PROCEDURES §16 step 3), launch a

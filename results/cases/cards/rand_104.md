@@ -36,7 +36,8 @@
   to keep the line balanced.
 - **t2938–4031** `raid-holds`: Bishop (shotgun) worked on the north end from 13–16 cells
   (Goenaban 100 → 44%). Donkey, nearest the throwers at (99, 113), died between t3188 and t3250
-  in one hit (the player recalls Lady's revolver, shooting 4, destroying his head; not sure).
+  in one hit: Lady's revolver (shooting 4) destroyed his head (confirmed by the player in the
+  game's UI; the player had thought for a moment the raid had been misread).
   Player: the north side was under heavy pressure, the south had room. The player rated Bishop
   (shotgun) and Georgette (knife) the top threats; both came from the same side (north). Georgette
   (Wimp) went down without much cost, so little fire was taken off Bishop. Georgette (knife) reached Crica (melee 12) and died t3753. Rrodoañocer died at
