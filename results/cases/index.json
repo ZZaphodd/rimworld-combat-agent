@@ -1553,6 +1553,74 @@
   }
  },
  {
+  "title": "rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — not solved",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-outnumber",
+   "us-melee-pawns",
+   "us-low-skill",
+   "raid-split"
+  ],
+  "plays": [
+   "loadout",
+   "corner-ambush",
+   "gang-melee",
+   "rotation"
+  ],
+  "results": [
+   {
+    "who": "agent `close`",
+    "play": "close in",
+    "result": "defeat, raid left with 4 captives",
+    "lost": "3 dead, 4 kidnapped",
+    "badness": "173.3"
+   },
+   {
+    "who": "Claude",
+    "play": "spears to the best three; west rock pocket; everyone on one raider at a time, overflow on a second; step back under 38%",
+    "result": "defeat, raid left with 3 captives (t9836)",
+    "lost": "1 dead, 3 kidnapped, 5 downed",
+    "badness": "124.7"
+   }
+  ],
+  "id": "rand_164",
+  "sites": [
+   "nook",
+   "west rock pocket"
+  ],
+  "arena": "arena_forest_night",
+  "ours": "TribeSavage",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "forest-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-melee-pawns",
+   "us-outnumber"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "melee": 9
+   },
+   "enemy_n": 6,
+   "enemy_classes": {
+    "melee": 6
+   },
+   "enemy_melee_share": 1.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.5,
+   "distance": 135.1,
+   "squad_range_median": 1.5,
+   "mech": false
+  }
+ },
+ {
   "title": "rand_179 · pirate guns ×8 (low skill) vs tribal archers ×9 · open — repelled",
   "situation": [
    "open-arena",
