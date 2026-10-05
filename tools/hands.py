@@ -82,7 +82,20 @@ def melee(name, enemy):
     """Melee attack <enemy> from the float menu (the verb gizmo would use a gun)."""
     e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}[enemy]
     opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
-    m = next((o for o in opts if o["label"].lower().startswith("melee attack") and not o["disabled"]), None)
+    # the menu lists every pawn on the target's cell (downed ones too): pick the named one
+    m = next((o for o in opts if o["label"].lower().startswith("melee attack") and not o["disabled"]
+              and enemy.lower() in o["label"].lower() and "to death" not in o["label"].lower()), None) \
+        or next((o for o in opts if o["label"].lower().startswith("melee attack") and not o["disabled"]
+                 and enemy.lower() in o["label"].lower()), None)
+    return bool(m) and bool(rm.call("order_pawn", id=ids()[name], targetId=e, index=m["index"]).get("executed"))
+
+
+def fire(name, enemy):
+    """Fire at <enemy> from the float menu. The verb gizmo can report "executed" and leave the pawn
+    watching for targets (seen with bows shooting through a 1-cell gap past downed pawns)."""
+    e = {short_name(p["label"]): p["id"] for p in pawns("hostile")}[enemy]
+    opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
+    m = next((o for o in opts if o["label"].lower() == f"fire at {enemy}".lower() and not o["disabled"]), None)
     return bool(m) and bool(rm.call("order_pawn", id=ids()[name], targetId=e, index=m["index"]).get("executed"))
 
 
