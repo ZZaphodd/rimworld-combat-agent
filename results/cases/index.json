@@ -1706,5 +1706,66 @@
    "squad_range_median": 24.4,
    "mech": false
   }
+ },
+ {
+  "title": "rand_227 · rough outlanders ×9 (guns after the loadout) vs Wasters ×8 with three rifles · forest — repelled by Claude",
+  "situation": [
+   "forest-arena",
+   "raid-far",
+   "us-skill-mismatch",
+   "raid-strung-out",
+   "raid-holds"
+  ],
+  "plays": [
+   "loadout",
+   "skirmish-line",
+   "melee-lock",
+   "close-in"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine`",
+    "play": "–",
+    "result": "defeat, raid left with 5 captives",
+    "lost": "1 dead, 5 kidnapped",
+    "badness": "173.5"
+   },
+   {
+    "who": "**Claude**",
+    "play": "autopistols to the shooters, knives to the rest; one line SW of the start across the raid's approach; the knives locked what reached the line; then the line stepped 6 cells forward to bring the rifles (holding just outside 25.9) into range, knives on the rifles",
+    "result": "**repelled**, 7 of 8 dead",
+    "lost": "0 lost (Fernanda downed)",
+    "badness": "**19.4**"
+   }
+  ],
+  "id": "rand_227",
+  "sites": [],
+  "arena": "arena_forest_night",
+  "ours": "OutlanderRough",
+  "raid": "PirateWaster",
+  "auto": [
+   "forest-arena",
+   "raid-far"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "melee": 3,
+    "short": 6
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "melee": 3,
+    "short": 2,
+    "long": 3
+   },
+   "enemy_melee_share": 0.38,
+   "enemy_outrange_share": 0.38,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.12,
+   "distance": 157.3,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
  }
 ]

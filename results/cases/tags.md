@@ -67,6 +67,7 @@ A scene lists both for that moment.
 | `tox-room` | hold a closed room and throw tox at raiders coming through its doors, with tox-immune pawns inside |
 | `stepped-withdrawal` | fall back a bound, turn, kill whoever followed, repeat |
 | `skirmish-line` | a spaced line in the open |
+| `close-in` *(new, 2026-10-05)* | the line steps forward so raiders holding just outside its weapons' range come into it (rand_227: rifles at 23–27 cells against autopistols of 25.9; "Fire at" was disabled for them until the line moved 6 cells) |
 | `smoke` | pop smoke at contact |
 | `molotov-into-group` | fire into a bunched group |
 | `focus-top-threat` | everyone on the most dangerous raider first |
