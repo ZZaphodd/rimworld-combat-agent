@@ -116,11 +116,29 @@ def _weapon_def(name):
     return weapon_def(rm.call("get_pawn", id=ids()[name]).get("weapon") or "")
 
 
+def _wdef(name):
+    """<name>'s weapon def, looked up once per pawn (forget_weapon(name) after a loadout change)."""
+    if name not in _DEF:
+        _DEF[name] = _weapon_def(name)
+    return _DEF[name]
+
+
+def forget_weapon(name=None):
+    (_DEF.clear() if name is None else _DEF.pop(name, None))
+
+
+def _verb(name):
+    from rca.game.weapons import RANGES
+    d = _wdef(name)
+    w = (json.loads(RANGES.read_text())["weapons"].get(d) or {}) if RANGES.exists() and d else {}
+    return w.get("verb")
+
+
 def weapon_cycle(name):
     """Ticks from one shot of <name>'s weapon to the next: aiming time + ranged cooldown from the
     weapon def's info card (`get_info_card def=`). Melee weapons and unknowns: 120. The def is
     looked up once per pawn (Keeper.forget_weapon after a loadout change)."""
-    d = _DEF.setdefault(name, _weapon_def(name))
+    d = _wdef(name)
     if d not in _CYCLE:
         ticks = 120
         if d:
@@ -136,10 +154,7 @@ def weapon_cycle(name):
 def counts_shots(name):
     """Whether <name>'s weapon moves the "Shots fired" record (Verb_Shoot); thrown weapons, beams
     and flame sprayers do not (data/weapon_ranges.json `verb`)."""
-    from rca.game.weapons import RANGES
-    d = _DEF.setdefault(name, _weapon_def(name))
-    w = (json.loads(RANGES.read_text())["weapons"].get(d) or {}) if RANGES.exists() and d else {}
-    return w.get("verb", "Verb_Shoot") in SHOOT_VERBS
+    return (_verb(name) or "Verb_Shoot") in SHOOT_VERBS
 
 
 def shots_fired(name):
@@ -155,6 +170,118 @@ def fireable(name, enemy):
         return False
     opts = rm.call("order_pawn", id=ids()[name], targetId=e).get("options", [])
     return any(o["label"].lower() == f"fire at {enemy}".lower() and not o["disabled"] for o in opts)
+
+
+_WSTATS, _PSTATS = {}, {}
+BANDS = (3, 12, 25, 40)                                  # the info card's close/short/medium/long distances
+
+
+def weapon_stats(name):
+    """<name>'s ranged weapon from its def's info card: damage, range, accuracy by band, aim and
+    cooldown seconds, burst count. None for melee weapons."""
+    d = _wdef(name)
+    if d not in _WSTATS:
+        w = None
+        if d:
+            card = rm.call("get_info_card", **{"def": d})
+            st_ = {x["label"]: x["value"] for c in card.get("stats") or [] for x in c.get("stats") or []}
+            num = lambda k, dflt=0.0: float(str(st_.get(k, dflt)).split()[0].rstrip("%"))
+            if "Ranged cooldown" in st_:
+                w = {"damage": num("Damage", 10), "range": num("Range"), "cooldown": num("Ranged cooldown"),
+                     "aim": num("Aiming time"), "burst": num("Burst shot count", 1) or 1,
+                     "acc": [num(f"Accuracy ({b})", 100) / 100 for b in ("close", "short", "medium", "long")]}
+        _WSTATS[d] = w
+    return _WSTATS[d]
+
+
+def pawn_aim(name):
+    """<name>'s shooting accuracy per cell and aiming-time factor, from the pawn's info card (read
+    once per pawn)."""
+    if name not in _PSTATS:
+        card = rm.call("get_info_card", id=ids()[name])
+        st_ = {x["label"]: x["value"] for c in card.get("stats") or [] for x in c.get("stats") or []}
+        pct = lambda k, dflt: float(str(st_.get(k, dflt)).split()[0].rstrip("%")) / 100
+        _PSTATS[name] = (pct("Shooting accuracy", "90%"), pct("Aiming time", "100%"))
+    return _PSTATS[name]
+
+
+def expected_dpt(name, dist):
+    """Rough damage per tick of <name>'s weapon at `dist` cells: weapon accuracy for that distance
+    (linear between the card's bands) x the pawn's accuracy per cell ^ distance x damage x burst
+    / (aim + cooldown). Cover, armour and the target's size are left out (the user: an eyeball
+    estimate is good enough; RimWorld's dice swing more)."""
+    w = weapon_stats(name)
+    if not w or dist > w["range"]:
+        return 0.0
+    acc = w["acc"]
+    if dist <= BANDS[0]:
+        a = acc[0]
+    else:
+        a = acc[-1]
+        for (d0, a0), (d1, a1) in zip(zip(BANDS, acc), zip(BANDS[1:], acc[1:])):
+            if dist <= d1:
+                a = a0 + (a1 - a0) * (dist - d0) / (d1 - d0)
+                break
+    per_cell, aimf = pawn_aim(name)
+    cycle = (w["aim"] * aimf + w["cooldown"]) * 60
+    return a * per_cell ** dist * w["damage"] * w["burst"] / max(cycle, 1)
+
+
+FF_SAFE, FF_STERILE, FF_FULL = 5.0, 5 ** 0.5, 12.0   # rimworldwiki safety radii (the user's screenshot)
+SPLASH = 3.8                              # frag: forced-miss radius 1.9 + blast 1.9 (GAME_FACTS §5b)
+
+
+def _intercept(d):
+    """The game's intercept factor for a pawn d cells from the shooter: 0 up to FF_SAFE, rising
+    in squared distance to 1 at FF_FULL (VerbUtility.InterceptChanceFactorFromDistance)."""
+    return min(1.0, max(0.0, (d * d - FF_SAFE ** 2) / (FF_FULL ** 2 - FF_SAFE ** 2)))
+
+
+def ff_risk(shooter, target, ours, explosive=False):
+    """0..1: how much a shot at `target` risks one of `ours`. Bullets: allies within 2 cells of
+    the target or within 1 cell of the shooter-to-target line, weighted by the intercept factor
+    of their distance from the shooter (none inside FF_SAFE). Explosives: any ally within SPLASH
+    of the target, no shooter-distance exemption."""
+    sx, sz, tx, tz = shooter["x"], shooter["z"], target["x"], target["z"]
+    seg = math.dist((sx, sz), (tx, tz)) or 1
+    risk = 0.0
+    for q in ours:
+        if q is shooter:
+            continue
+        qx, qz = q["x"], q["z"]
+        dt = math.dist((qx, qz), (tx, tz))
+        if explosive:
+            if dt <= SPLASH:
+                return 1.0
+            continue
+        u = ((qx - sx) * (tx - sx) + (qz - sz) * (tz - sz)) / (seg * seg)
+        near_line = 0 < u < 1 and abs((tx - sx) * (qz - sz) - (tz - sz) * (qx - sx)) / seg <= 1.0
+        if dt <= 2.0 or near_line:
+            risk = max(risk, _intercept(math.dist((qx, qz), (sx, sz))))
+    return risk
+
+
+def ff_unsafe(shooter, target, ours):
+    """One of ours within 1.5 cells of the target and more than FF_SAFE from the shooter."""
+    sp = (shooter["x"], shooter["z"])
+    return any(math.dist((q["x"], q["z"]), (target["x"], target["z"])) <= 1.5 and math.dist((q["x"], q["z"]), sp) > FF_SAFE
+               for q in ours if q is not shooter)
+
+
+_TERRAIN = []
+
+
+def cover(shooter, target):
+    """Rough cover factor on a shot: the cell next to the target on the shooter's side holds a wall
+    or rock (x0.25) or a tree (x0.75) (rca.terrain; wiki cover values ~75% / ~25%)."""
+    from rca.terrain import Terrain
+    if not _TERRAIN:
+        _TERRAIN.append(Terrain(rm))
+    T = _TERRAIN[0]
+    dx, dz = shooter["x"] - target["x"], shooter["z"] - target["z"]
+    L = max(abs(dx), abs(dz)) or 1
+    c = T.cell(target["x"] + round(dx / L), target["z"] + round(dz / L))
+    return 0.25 if c in "#%" else 0.75 if c == "*" else 1.0
 
 
 BUSY = ("wandering", "extinguish", "flee", "downed", "carrying", "rescu", "tending", "crawl")
@@ -250,6 +377,103 @@ class Keeper:
                 if self.order(name, t, kind, now, switch=True):
                     return t
         return self.target(name) if self.target(name) in standing else None
+
+    SPREAD, SWITCH, REORDER_MAX = 1.0, 1.25, 2
+
+    def assign(self, shooters, foes, ours, now, jobs, weight=None, ff=()):
+        """Ranged fire for a squad, the user's micro rules (2026-10-06).
+
+        Value of raider t for shooter n: expected_dpt at that distance x cover x the caller's
+        threat weight (hard or soft focus on top threats; default 1) x (1 - friendly-fire risk,
+        unless t is in `ff`, the raiders the tactical layer accepts the risk on) / (1 + SPREAD x
+        the active shooters of ours already on t): fire spreads evenly unless focused. A shooter
+        re-decides at most once per weapon cycle and switches when the best raider is worth
+        SWITCH x its current one (SWITCH < 1 + SPREAD, so a pair splits to an equal free raider).
+        A fallen, out-of-range, stalled or unreachable target is replaced at once. With nothing
+        worth shooting the shooter is stopped (a Go here to its own cell) and reported as None.
+
+        shooters: names; foes: {name: pawn dict}, standing only; ours: {name: pawn dict};
+        jobs: {name: job text}. Returns {shooter: target or None}."""
+        weight, ff = weight or {}, set(ff or ())
+        active = [n for n in shooters if n in ours and not self.is_held(n, now)
+                  and not any(b in (jobs.get(n) or "").lower() for b in BUSY)]
+        for n in list(self.s):
+            if n in shooters and n not in ours:
+                self.drop(n)                                # downed or gone
+        on = {}
+        for n in active:
+            cur = self.s.get(n)
+            if cur and cur["kind"] == "fire" and cur["target"] in foes:
+                on[cur["target"]] = on.get(cur["target"], 0) + 1
+        allies = list(ours.values())
+        out = {n: None for n in shooters}
+        for n in active:
+            job = (jobs.get(n) or "").lower()
+            me = ours[n]
+            explosive = (_verb(n) or "Verb_Shoot") not in SHOOT_VERBS
+            cur = self.s.get(n) if (self.s.get(n) or {}).get("kind") == "fire" else None
+            t0 = cur["target"] if cur else None
+
+            def value(t, mine):
+                f = foes[t]
+                if self._bad(n, t, now):
+                    return 0.0
+                dist = math.dist((me["x"], me["z"]), (f["x"], f["z"]))
+                v = expected_dpt(n, dist)
+                if v <= 0:
+                    return 0.0
+                risk = 0.0 if t in ff else ff_risk(me, f, allies, explosive)
+                others = on.get(t, 0) - (1 if mine else 0)
+                return v * cover(me, f) * weight.get(t, 1.0) * (1 - risk) / (1 + self.SPREAD * others)
+            cur_v = value(t0, True) if t0 in foes else 0.0
+            if cur and t0 in foes and f"attacking {t0.lower()}" in job:
+                cur["reorders"] = 0
+                if self._stalled(n, now):
+                    self.bad.setdefault(n, {})[t0] = now + self.BAD * weapon_cycle(n)
+                    cur_v = 0.0
+            due = not cur or now - cur.get("assigned", -10 ** 9) >= weapon_cycle(n) or cur_v == 0.0
+            if not due:
+                if f"attacking {t0.lower()}" not in job:            # the order ended: same target again
+                    self._reorder(n, t0, now)
+                out[n] = t0 if self.target(n) == t0 and not self._bad(n, t0, now) else None
+                continue
+            ranked = sorted(((value(t, t == t0), t) for t in foes), reverse=True)
+            chosen = t0 if cur_v > 0 else None
+            for v, t in ranked:
+                if v <= 0 or (cur_v > 0 and v <= self.SWITCH * cur_v):
+                    break
+                if t == t0:
+                    continue
+                if self.order(n, t, "fire", now, switch=True):
+                    if t0 in on:
+                        on[t0] -= 1
+                    on[t] = on.get(t, 0) + 1
+                    chosen = t
+                    break
+                self.bad.setdefault(n, {})[t] = now + weapon_cycle(n)   # no "Fire at": out of sight
+            if chosen is None:
+                if t0 is not None:                                    # nothing worth it: stop firing
+                    go(n, me["x"], me["z"])
+                    if t0 in on:
+                        on[t0] -= 1
+                    self.drop(n)
+                continue
+            if chosen == t0 and f"attacking {t0.lower()}" not in job:
+                self._reorder(n, t0, now)
+            if self.s.get(n):
+                self.s[n]["assigned"] = now
+            out[n] = self.target(n) if self.target(n) == chosen else None
+        return out
+
+    def _reorder(self, name, t, now):
+        """The same target again (the order ended), keeping the cycle and stall bookkeeping. After
+        REORDER_MAX re-orders that the job never took up, or a failed one, the target is set aside
+        for a weapon cycle."""
+        cur = self.s[name]
+        cur["reorders"] = cur.get("reorders", 0) + 1
+        if cur["reorders"] > self.REORDER_MAX or not fire(name, t):
+            self.bad.setdefault(name, {})[t] = now + weapon_cycle(name)
+            cur["reorders"] = 0
 
     def better(self, name, priority, now):
         cur = self.s.get(name)

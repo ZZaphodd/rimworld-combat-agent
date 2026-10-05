@@ -55,6 +55,10 @@ The agents are the frozen baseline: listed here, not changed.
 |---|---|---|---|
 | rand_227 | 19.4, repelled. Ranged runs 679, median 8 ticks, 665 switches | **73.8, squad down**. Ranged runs 16, median 834 ticks, 8 switches | The switching was gone, but the shooters stayed on the priority raider at their range edge (Lynx, 21–23 cells) while the melee arrivals fought the knives at the line. Nothing re-ranked targets when the threat changed |
 
+| rand_227 | (as above) | **86.6, pyrrhic** with `Keeper.assign` (expected damage, spread, focus weight, 1.25× switch, friendly-fire radii). Ranged runs 30, median 335 ticks, 20 switches | The melee arrivals died 300–1000 ticks earlier than in either other run. Two of three deaths came while the rifles held out of reach before a rule-timed close-in (1400 ticks after the arrivals died; by hand in attempt 1, ~100 ticks after) |
+
+Each row is one draw.
+
 So keeping a target is not enough. A player re-targets when the threat picture changes (the
 user: an order only "when I want to change target"); a re-target rule is needed before more
 re-measures.
