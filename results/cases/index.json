@@ -1450,6 +1450,66 @@
   }
  },
  {
+  "title": "rand_150 · civil outlanders ×9 vs rough outlanders ×9 (gun duel, no grenadiers) · open — repelled",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "us-low-skill",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "skirmish-line",
+   "melee-lock"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine`",
+    "play": "focus fire",
+    "result": "defeat (captives)",
+    "lost": "12 (incl. kidnap count)",
+    "badness": "172.7"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "loadout; two rows 40 cells east; knives and shotguns on whoever reached the line; a late rush on the holders",
+    "result": "**repelled**",
+    "lost": "2 dead",
+    "badness": "**36.4**"
+   }
+  ],
+  "id": "rand_150",
+  "sites": [],
+  "arena": "arena_open_night",
+  "ours": "OutlanderCivil",
+  "raid": "OutlanderRough",
+  "auto": [
+   "open-arena",
+   "raid-far"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "short": 6,
+    "melee": 2,
+    "long": 1
+   },
+   "enemy_n": 9,
+   "enemy_classes": {
+    "short": 5,
+    "long": 2,
+    "melee": 2
+   },
+   "enemy_melee_share": 0.22,
+   "enemy_outrange_share": 0.22,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.0,
+   "distance": 124.9,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
   "title": "rand_179 · pirate guns ×8 (low skill) vs tribal archers ×9 · open — repelled",
   "situation": [
    "open-arena",
