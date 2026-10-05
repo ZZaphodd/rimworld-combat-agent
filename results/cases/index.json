@@ -358,6 +358,13 @@
     "badness": "**25.6**"
    },
    {
+    "who": "Claude (replay of the user's play)",
+    "play": "same loadout and ruin cells; marks went out when a raider was within 5 (the rest 9–18 away); dealers on locked raiders; Gorilla on Lissa",
+    "result": "enemies cleared, pyrrhic",
+    "lost": "2 dead, 4 downed",
+    "badness": "60.4"
+   },
+   {
     "who": "Claude (alone)",
     "play": "breach the NE walled hall to hide in its blind cells (breach failed); fought outside",
     "result": "squad down",
