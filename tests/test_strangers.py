@@ -44,5 +44,38 @@ class StrangerTest(unittest.TestCase):
         self.assertEqual(removed, [{"tick": 120, "name": "Howard", "kind": "StrangerInBlack"}])
 
 
+class FlakyRm(FakeRm):
+    """The first click after arming fails as if another client's call had disarmed the tool."""
+    def __init__(self, pawns, fail_clicks=1):
+        super().__init__(pawns)
+        self.fail = fail_clicks
+
+    def call(self, tool, **kw):
+        self.calls.append((tool, kw))
+        if tool == "list_things":
+            return {"things": self.pawns}
+        if tool == "debug_menu" and kw.get("action") == "click" and self.fail:
+            self.fail -= 1
+            return {"ok": False, "error": "No debug tool is armed."}
+        return {"ok": True}
+
+
+class StrangerRaceTest(unittest.TestCase):
+    def test_a_disarmed_tool_is_armed_again(self):
+        rm = FlakyRm([SQUAD, HOWARD], fail_clicks=1)
+        self.assertEqual(harness.remove_strangers(rm, {"H1"}, log=lambda s: None),
+                         [("Howard", "StrangerInBlack")])
+        runs = [kw for t, kw in rm.calls if t == "debug_menu" and kw.get("action") == "run"]
+        self.assertEqual(len(runs), 2)
+
+    def test_a_failed_removal_does_not_end_the_episode(self):
+        rm, removed, logs = FlakyRm([SQUAD, HOWARD], fail_clicks=9), [], []
+        harness.check_strangers(rm, {"H1"}, [{"id": "H1"}, {"id": "H9"}], 120, removed,
+                                log=logs.append)
+        self.assertEqual(removed, [])
+        self.assertTrue(any("retrying" in m for m in logs))
+        self.assertEqual(rm.calls[-1], ("dev_mode", {"devMode": False, "godMode": False}))
+
+
 if __name__ == "__main__":
     unittest.main()

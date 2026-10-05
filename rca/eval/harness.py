@@ -96,9 +96,13 @@ def remove_strangers(rm, squad_ids, log=print):
 
 
 def check_strangers(rm, ids, colonists, ticks, removed, log=print):
-    """Cheap per-step check: only a colonist outside the squad triggers the removal."""
+    """Cheap per-step check: only a colonist outside the squad triggers the removal. A failed
+    removal never ends the episode: it is logged and tried again at the next check."""
     if any(c["id"] not in ids for c in colonists):
-        removed += [{"tick": ticks, "name": n, "kind": k} for n, k in remove_strangers(rm, ids, log)]
+        try:
+            removed += [{"tick": ticks, "name": n, "kind": k} for n, k in remove_strangers(rm, ids, log)]
+        except RimMoltError as e:
+            log(f"   man-in-black removal failed at tick {ticks} (retrying next check): {e}")
 
 
 class Sandbox:
