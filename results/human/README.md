@@ -68,6 +68,7 @@ discarded keep their traces (`_try1`, `_try2`); a discarded row goes to `discard
 | rand_115 | Claude alone | tox throwers, no guns, vs Neanderthal melee: 1–2 hold ruin room R2 (three 1-cell doors), tox at the raider in each door (the closed room kept the gas thick; Wasters immune, Albert not); 3 open-ground gas kite | defeat ×3 (captives) | 1+1 / 2 / 3+3 | 80.8 / 88.8 / 146.9 (agent 84.8) |
 | rand_012 | Claude alone | Neanderthal melee ×5 vs Yttakin + 3 boars: 1 gang each arrival on open ground (Ryshuk dead, then the body of the raid arrived together); 2 hold ruin room R2's three doors, all four melee raiders died in the doorways | 1 defeat (captives) / 2 **won, pyrrhic** | 2+2 / 1 | 92.5 / **55.6** (agent 84.4) |
 | rand_018 | Claude alone | tribal melee ×11 vs Neanderthal melee ×6: 1 rock-pocket tip ambush, up to 5 per raider; 2 hold ruin rooms R1+R2 (five 1-cell entrances); our pawns went down at 30–60% health, raiders kept fighting to ~25–36% | defeat ×2 (captives) | 3+4 / 2+2 | 187.0 / 153.0 (agent 83.3) |
+| rand_179 | Claude alone | low-skill pirate guns ×8 vs tribal archers ×9: rifle to the best hand; west rock pocket east part; the raid came over rock B's tip one or two at a time into pistol and mace range; molotov on two at the tip; four archers held north out of sight, then left | **repelled** | 1 | **15.8** (agent 132.0) |
 
 Turn logs of Claude's plays (orders by tick, what followed): `raw/<id>/claude_turns.md`; the
 operating facts they rely on are in RIMMOLT_API.md (verb gizmo on buildings, melee/carry

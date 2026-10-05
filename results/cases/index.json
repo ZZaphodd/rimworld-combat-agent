@@ -1384,5 +1384,70 @@
    "squad_range_median": 15.9,
    "mech": false
   }
+ },
+ {
+  "title": "rand_179 · pirate guns ×8 (low skill) vs tribal archers ×9 · open — repelled",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "us-low-skill",
+   "us-short",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "corner-ambush",
+   "molotov-into-group"
+  ],
+  "results": [
+   {
+    "who": "agent `doctrine`",
+    "play": "focus fire",
+    "result": "defeat (captives)",
+    "lost": "9",
+    "badness": "132.0"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "loadout (rifle to the best hand); west rock pocket east part; pistols, mace and molotovs at rock B's tip",
+    "result": "**repelled**",
+    "lost": "1 dead",
+    "badness": "**15.8**"
+   }
+  ],
+  "id": "rand_179",
+  "sites": [
+   "west rock pocket"
+  ],
+  "arena": "arena_open_night",
+  "ours": "Pirate",
+  "raid": "TribeRough",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 4,
+    "long": 1,
+    "melee": 1,
+    "explosive": 2
+   },
+   "enemy_n": 9,
+   "enemy_classes": {
+    "melee": 3,
+    "bow": 6
+   },
+   "enemy_melee_share": 0.33,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 0.89,
+   "distance": 161.6,
+   "squad_range_median": 24.9,
+   "mech": false
+  }
  }
 ]
