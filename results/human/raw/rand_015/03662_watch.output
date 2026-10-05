@@ -1,0 +1,23 @@
+tick 3662 (game 4045) | paused=True | ours 6 (down 0) | them 9 (down 0)
+OURS
+   Bilegoda    @29,137 67% Steel knife | melee attacking Horror. | nearest foe 6
+   Mallard     @23,136 100% Greatbow | moving. | nearest foe 11
+   Crica       @23,136 100% Steel ikwa | moving. | nearest foe 11
+   Manatee     @22,136 100% Steel ikwa | moving. | nearest foe 12
+   Curne       @22,136 100% Wooden club | moving. | nearest foe 12
+   Alpaca      @20,138 100% Steel ikwa | melee attacking Seizz. | nearest foe 13
+THEM
+   Tasya       @32,142 100% Pump shotgun | moving. | nearest foe 6
+   Horror      @35,138 100% Tox grenades | watching for targets. | nearest foe 6
+   Dek         @40,138 100% Pump shotgun | watching for targets. | nearest foe 11
+   Tooth       @39,132 100% Machine pistol | moving. | nearest foe 11
+   Seizz       @38,146 100% Machine pistol | watching for targets. | nearest foe 13
+   Nicole      @47,137 100% Revolver | moving. | nearest foe 18
+   Tomb        @49,137 100% Revolver | watching for targets. | nearest foe 20
+   Davenport   @53,136 100% Autopistol | moving. | nearest foe 24
+   Rubisum     @101,138 100% Molotov cocktails | moving. | nearest foe 72
+fires 0 | grenades in the air 0
+rect x13-60 z124-154
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182317-790.png
+frame results/human/hands_watch_3662.jpg
+

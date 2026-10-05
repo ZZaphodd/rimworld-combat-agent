@@ -1,0 +1,20 @@
+tick 4914 (game 5297) | paused=False | ours 6 (down 0) | them 6 (down 0)
+OURS
+   Mallard     @48,135 35% Greatbow | melee attacking Rubisum. | nearest foe 1
+   Manatee     @47,137 73% Steel ikwa | melee attacking Davenport. | nearest foe 1
+   Curne       @48,138 74% Wooden club | melee attacking Nicole. | nearest foe 1
+   Bilegoda    @36,137 31% Steel knife | melee attacking Horror. | nearest foe 1
+   Crica       @39,155 49% Steel ikwa | melee attacking Seizz. | nearest foe 3
+   Alpaca      @30,146 54% Steel ikwa | wandering. | nearest foe 9
+THEM
+   Rubisum     @48,134 100% Molotov cocktails | melee attacking Mallard. | nearest foe 1
+   Nicole      @47,138 100% Revolver | watching for targets. | nearest foe 1
+   Davenport   @48,136 74% Autopistol | melee attacking Manatee. | nearest foe 1
+   Horror      @35,138 81% Tox grenades | melee attacking Bilegoda. | nearest foe 1
+   Seizz       @38,158 100% Machine pistol | watching for targets. | nearest foe 3
+   Tasya       @27,138 100% Pump shotgun | watching for targets. | nearest foe 9
+fires 6 | grenades in the air 0
+rect x17-57 z127-165
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182540-807.png
+frame results/human/hands_watch_4914.jpg
+

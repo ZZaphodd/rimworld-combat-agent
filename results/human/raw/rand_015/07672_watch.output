@@ -1,0 +1,16 @@
+tick 7672 (game 8055) | paused=False | ours 6 (down 2) | them 2 (down 0)
+OURS
+   Crica       @27,137 17% Steel ikwa | melee attacking Rubisum. | nearest foe 1
+   Curne       @32,137 41% Wooden club | melee attacking Rubisum. | nearest foe 4
+   Manatee     @36,116 31% Steel ikwa | melee attacking Nicole. | nearest foe 4
+   Alpaca      @33,137 38% Steel ikwa | melee attacking Rubisum. | nearest foe 5
+   Bilegoda    @34,137 29% DOWN - | Crawling to safety. | nearest foe 6
+   Mallard     @57,135 32% DOWN - | Crawling to safety. | nearest foe 29
+THEM
+   Rubisum     @28,137 40% Molotov cocktails | melee attacking Crica. | nearest foe 1
+   Nicole      @32,117 48% Revolver | moving. | nearest foe 4
+fires 8 | grenades in the air 0
+rect x20-64 z109-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182926-118.png
+frame results/human/hands_watch_7672.jpg
+

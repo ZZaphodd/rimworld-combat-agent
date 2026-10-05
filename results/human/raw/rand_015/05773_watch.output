@@ -1,0 +1,19 @@
+tick 5773 (game 6156) | paused=True | ours 6 (down 2) | them 5 (down 0)
+OURS
+   Mallard     @48,135 32% DOWN - | downed. | nearest foe 1
+   Alpaca      @26,129 53% Steel ikwa | melee attacking Tasya. | nearest foe 1
+   Curne       @47,139 55% Wooden club | moving. | nearest foe 1
+   Manatee     @39,137 50% Steel ikwa | melee attacking Horror. | nearest foe 1
+   Bilegoda    @35,137 28% DOWN - | Crawling to safety. | nearest foe 3
+   Crica       @39,157 38% Steel ikwa | watching for targets. | nearest foe 19
+THEM
+   Nicole      @47,138 67% Revolver | melee attacking Curne. | nearest foe 1
+   Tasya       @27,129 70% Pump shotgun | watching for targets. | nearest foe 1
+   Davenport   @40,138 50% Autopistol | moving. | nearest foe 1
+   Horror      @38,138 81% Tox grenades | watching for targets. | nearest foe 1
+   Rubisum     @48,134 82% Molotov cocktails | watching for targets. | nearest foe 5
+fires 5 | grenades in the air 1
+rect x17-57 z122-164
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182655-308.png
+frame results/human/hands_watch_5773.jpg
+

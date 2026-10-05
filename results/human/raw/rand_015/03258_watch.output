@@ -1,0 +1,23 @@
+tick 3258 (game 3641) | paused=True | ours 6 (down 0) | them 9 (down 0)
+OURS
+   Bilegoda    @29,141 100% Steel knife | moving. | nearest foe 12
+   Crica       @29,142 100% Steel ikwa | moving. | nearest foe 12
+   Alpaca      @28,140 100% Steel ikwa | watching for targets. | nearest foe 13
+   Manatee     @28,141 100% Steel ikwa | moving. | nearest foe 13
+   Curne       @28,141 100% Wooden club | moving. | nearest foe 13
+   Mallard     @28,142 100% Greatbow | moving. | nearest foe 13
+THEM
+   Seizz       @41,139 100% Machine pistol | moving. | nearest foe 12
+   Tasya       @54,138 100% Pump shotgun | moving. | nearest foe 25
+   Dek         @55,137 100% Pump shotgun | moving. | nearest foe 26
+   Horror      @56,138 100% Tox grenades | moving. | nearest foe 27
+   Tooth       @60,137 100% Machine pistol | moving. | nearest foe 31
+   Tomb        @68,137 100% Revolver | moving. | nearest foe 39
+   Nicole      @71,137 100% Revolver | moving. | nearest foe 42
+   Davenport   @77,137 100% Autopistol | moving. | nearest foe 48
+   Rubisum     @121,137 100% Molotov cocktails | moving. | nearest foe 92
+fires 0 | grenades in the air 0
+rect x21-78 z124-154
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182200-238.png
+frame results/human/hands_watch_3258.jpg
+

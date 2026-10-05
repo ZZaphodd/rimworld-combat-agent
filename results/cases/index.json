@@ -149,7 +149,7 @@
   }
  },
  {
-  "title": "rand_015 · Neanderthal melee ×6 vs Waster gunners ×9 with a molotov and a tox grenadier · open",
+  "title": "rand_015 · Neanderthal melee ×6 vs Waster gunners ×9 with a molotov and a tox grenadier · open — won by the human",
   "situation": [
    "open-arena",
    "raid-far",
@@ -160,6 +160,8 @@
    "us-skill-mismatch"
   ],
   "plays": [
+   "mark-shooters",
+   "ability-bait",
    "loadout",
    "corner-ambush",
    "notch-hold",
@@ -176,6 +178,13 @@
     "result": "defeat, captives",
     "lost": "3 dead, 2 kidnapped",
     "badness": "105.2"
+   },
+   {
+    "who": "**human** (Claude's loadout)",
+    "play": "out through the pocket's south-west gap to meet the raid along rock B's south face; one of ours on each shooter in order of danger; the least useful pawn (Alpaca) sent at Seizz to draw his Fire spew; Mallard (bow) used as a locker",
+    "result": "**decisive**, all 9 dead",
+    "lost": "1 dead, 2 downed",
+    "badness": "**33.2**"
    },
    {
     "who": "Claude (alone)",

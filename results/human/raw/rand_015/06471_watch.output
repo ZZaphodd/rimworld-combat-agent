@@ -1,0 +1,19 @@
+tick 6471 (game 6854) | paused=True | ours 6 (down 2) | them 5 (down 0)
+OURS
+   Alpaca      @26,129 46% Steel ikwa | melee attacking Tasya. | nearest foe 1
+   Bilegoda    @31,137 29% DOWN - | Crawling to safety. | nearest foe 2
+   Curne       @35,137 44% Wooden club | extinguishing fire on Curne, Frame | nearest foe 2
+   Manatee     @35,128 35% Steel ikwa | wandering. | nearest foe 6
+   Crica       @27,141 38% Steel ikwa | moving. | nearest foe 7
+   Mallard     @50,135 32% DOWN - | Crawling to safety. | nearest foe 10
+THEM
+   Tasya       @27,129 42% Pump shotgun | melee attacking Alpaca. | nearest foe 1
+   Horror      @33,138 38% Tox grenades | watching for targets. | nearest foe 2
+   Rubisum     @35,134 82% Molotov cocktails | moving. | nearest foe 3
+   Nicole      @44,127 52% Revolver | wandering. | nearest foe 9
+   Davenport   @44,123 50% Autopistol | watching for targets. | nearest foe 10
+fires 8 | grenades in the air 0
+rect x18-58 z116-148
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182744-057.png
+frame results/human/hands_watch_6471.jpg
+

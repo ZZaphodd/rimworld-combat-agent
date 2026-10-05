@@ -1,0 +1,23 @@
+tick 843 (game 1226) | paused=False | ours 6 (down 0) | them 9 (down 0)
+OURS
+   Bilegoda    @103,125 100% Steel knife | moving. | nearest foe 105
+   Manatee     @91,136 100% Steel ikwa | moving. | nearest foe 114
+   Crica       @87,136 100% Steel ikwa | moving. | nearest foe 118
+   Curne       @86,136 100% Wooden club | moving. | nearest foe 119
+   Alpaca      @88,125 100% Steel ikwa | moving. | nearest foe 119
+   Mallard     @85,136 100% Greatbow | moving. | nearest foe 120
+THEM
+   Seizz       @203,156 100% Machine pistol | moving. | nearest foe 105
+   Tasya       @206,157 100% Pump shotgun | moving. | nearest foe 108
+   Horror      @207,159 100% Tox grenades | moving. | nearest foe 109
+   Dek         @208,160 100% Pump shotgun | moving. | nearest foe 111
+   Tomb        @210,160 100% Revolver | moving. | nearest foe 113
+   Tooth       @211,163 100% Machine pistol | moving. | nearest foe 114
+   Nicole      @214,166 100% Revolver | moving. | nearest foe 118
+   Davenport   @216,172 100% Autopistol | moving. | nearest foe 122
+   Rubisum     @220,177 100% Molotov cocktails | moving. | nearest foe 128
+fires 0 | grenades in the air 0
+rect x74-114 z115-145
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-182030-772.png
+frame results/human/hands_watch_843.jpg
+

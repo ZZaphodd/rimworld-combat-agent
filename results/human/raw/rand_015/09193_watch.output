@@ -1,0 +1,13 @@
+tick 9193 (game 9576) | paused=False | ours 5 (down 2) | them 0 (down 0)
+OURS
+   Mallard     @58,135 32% DOWN - | downed. | nearest foe 999
+   Bilegoda    @38,137 29% DOWN - | Crawling to safety. | nearest foe 999
+   Manatee     @3,115 31% Steel ikwa | watching for targets. | nearest foe 999
+   Alpaca      @9,117 38% Steel ikwa | watching for targets. | nearest foe 999
+   Curne       @10,119 41% Wooden club | watching for targets. | nearest foe 999
+THEM
+fires 9 | grenades in the air 0
+rect x0-69 z108-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-183022-437.png
+frame results/human/hands_watch_9193.jpg
+

@@ -1,0 +1,14 @@
+tick 8169 (game 8552) | paused=False | ours 5 (down 2) | them 1 (down 0)
+OURS
+   Manatee     @22,117 31% Steel ikwa | melee attacking Nicole. | nearest foe 3
+   Alpaca      @23,136 38% Steel ikwa | melee attacking Nicole. | nearest foe 19
+   Curne       @26,136 41% Wooden club | melee attacking Nicole. | nearest foe 20
+   Bilegoda    @36,137 29% DOWN - | Crawling to safety. | nearest foe 26
+   Mallard     @58,135 32% DOWN - | downed. | nearest foe 43
+THEM
+   Nicole      @19,117 48% Revolver | moving. | nearest foe 3
+fires 9 | grenades in the air 0
+rect x12-65 z110-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-183001-652.png
+frame results/human/hands_watch_8169.jpg
+
