@@ -34,7 +34,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_065](cards/rand_065.md) | open | civil outlanders vs Empire troopers | `raid-armoured` `raid-outranges` | walled room (squad down, ≈ draw) | 114.3 / 64.4 / – |
 | [rand_029](cards/rand_029.md) | open | tribal bows vs 4 throwers | `raid-throwers` `us-bows` | loadout + spaced line + chase the carriers | 110.0 / 55.6 / – |
 | [rand_039](cards/rand_039.md) | forest | low-skill gunners vs civil mixed with throwers | `raid-throwers` `top-threat` | loadout + small ruin + stepped withdrawal | 108.0 / 8.0 / 48.4 |
-| [rand_011](cards/rand_011.md) | open | 4 good shooters (after the loadout) vs low-skill raid with 2 grenadiers | `us-outrange` `raid-low-skill` `raid-throwers` | loadout + two lines on open ground across the lane | 106.4 / 25.8 / – |
+| [rand_011](cards/rand_011.md) | open | 4 good shooters (after the loadout) vs low-skill raid with 2 grenadiers | `us-outrange` `raid-low-skill` `raid-throwers` | loadout + two lines on open ground across the lane | 106.4 / 25.8 / 22.4 |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
