@@ -1,0 +1,22 @@
+tick 913 (game 1296) | paused=True | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Lercroi     @132,90 100% Steel ikwa | watching for targets. | nearest foe 59
+   Marulo      @162,136 100% Steel knife | moving. | nearest foe 94
+   Red         @160,148 100% Steel spear | moving. | nearest foe 106
+   Hakuja      @160,148 100% Steel spear | moving. | nearest foe 106
+   Frog        @161,149 100% Steel ikwa | moving. | nearest foe 107
+   Legua       @162,150 100% Steel ikwa | moving. | nearest foe 108
+   Chave       @162,150 100% Steel ikwa | moving. | nearest foe 108
+   Bacchus     @163,151 100% Steel spear | moving. | nearest foe 109
+   Neabancocan @165,152 100% Steel ikwa | moving. | nearest foe 110
+THEM
+   Ambas       @167,42 100% Steel knife | moving. | nearest foe 59
+   Mamen       @167,42 100% Steel spear | moving. | nearest foe 59
+   Hornet      @168,41 100% Steel ikwa | moving. | nearest foe 61
+   Gacan       @169,40 100% Steel ikwa | moving. | nearest foe 62
+   Blue        @170,37 100% Steel ikwa | moving. | nearest foe 65
+   Grasshopper @170,37 100% Steel ikwa | moving. | nearest foe 65
+fires 0 | grenades in the air 0
+rect x125-172 z93-149
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045033-650.png
+frame results/human/hands_watch_913.jpg

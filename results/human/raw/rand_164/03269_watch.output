@@ -1,0 +1,22 @@
+tick 3269 (game 3652) | paused=False | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Hakuja      @215,176 100% Steel spear | moving. | nearest foe 15
+   Frog        @211,176 100% Steel ikwa | moving. | nearest foe 16
+   Chave       @211,176 100% Steel ikwa | moving. | nearest foe 16
+   Bacchus     @214,177 100% Steel spear | moving. | nearest foe 16
+   Marulo      @211,177 100% Steel knife | moving. | nearest foe 16
+   Neabancocan @210,177 100% Steel ikwa | moving. | nearest foe 17
+   Legua       @210,177 100% Steel ikwa | watching for targets. | nearest foe 17
+   Red         @215,178 100% Steel spear | moving. | nearest foe 17
+   Lercroi     @157,165 100% Steel ikwa | moving. | nearest foe 25
+THEM
+   Gacan       @215,161 100% Steel ikwa | melee attacking Hakuja. | nearest foe 15
+   Ambas       @208,156 100% Steel knife | melee attacking Marulo. | nearest foe 20
+   Mamen       @216,152 100% Steel spear | melee attacking Chave. | nearest foe 24
+   Grasshopper @162,141 100% Steel ikwa | melee attacking Lercroi. | nearest foe 25
+   Blue        @160,139 100% Steel ikwa | melee attacking Lercroi. | nearest foe 26
+   Hornet      @165,139 100% Steel ikwa | melee attacking Lercroi. | nearest foe 27
+fires 0 | grenades in the air 0
+rect x150-223 z145-185
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045143-861.png
+frame results/human/hands_watch_3269.jpg

@@ -1,0 +1,18 @@
+tick 7601 (game 7984) | paused=False | ours 9 (down 3) | them 2 (down 0)
+OURS
+   Marulo      @224,178 100% Steel knife | melee attacking Grasshopper. | nearest foe 13
+   Hakuja      @218,178 52% Steel spear | melee attacking Grasshopper. | nearest foe 19
+   Legua       @216,178 100% Steel ikwa | tending to Hakuja. | nearest foe 21
+   Neabancocan @213,177 30% DOWN - | downed. | nearest foe 23
+   Bacchus     @213,177 30% DOWN - | Crawling to safety. | nearest foe 23
+   Red         @213,178 35% DOWN - | downed. | nearest foe 24
+   Chave       @212,176 51% Steel ikwa | watching for targets. | nearest foe 24
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 25
+   Lercroi     @211,177 48% Steel ikwa | watching for targets. | nearest foe 25
+THEM
+   Grasshopper @236,173 100% Steel ikwa | moving. | nearest foe 13
+   Blue        @241,179 100% Steel ikwa | moving. | nearest foe 17
+fires 0 | grenades in the air 0
+rect x204-248 z161-191
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045431-718.png
+frame results/human/hands_watch_7601.jpg

@@ -1,0 +1,19 @@
+tick 5463 (game 5846) | paused=True | ours 9 (down 0) | them 3 (down 0)
+OURS
+   Marulo      @213,179 100% Steel knife | watching for targets. | nearest foe 7
+   Lercroi     @215,178 69% Steel ikwa | watching for targets. | nearest foe 7
+   Red         @213,178 50% Steel spear | watching for targets. | nearest foe 8
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 9
+   Neabancocan @213,177 100% Steel ikwa | tending to Bacchus. | nearest foe 9
+   Chave       @213,177 51% Steel ikwa | moving. | nearest foe 9
+   Bacchus     @213,177 41% - | standing. | nearest foe 9
+   Hakuja      @213,176 51% Steel spear | watching for targets. | nearest foe 10
+   Legua       @211,176 100% Steel ikwa | watching for targets. | nearest foe 11
+THEM
+   Grasshopper @217,185 100% Steel ikwa | moving. | nearest foe 7
+   Blue        @217,188 100% Steel ikwa | melee attacking Lercroi. | nearest foe 10
+   Hornet      @217,190 100% Steel ikwa | moving. | nearest foe 12
+fires 0 | grenades in the air 0
+rect x194-234 z168-198
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045314-434.png
+frame results/human/hands_watch_5463.jpg

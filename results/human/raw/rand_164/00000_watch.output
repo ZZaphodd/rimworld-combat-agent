@@ -1,0 +1,22 @@
+tick 0 (game 383) | paused=True | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Bacchus     @127,123 100% Steel knife |  | nearest foe 129
+   Chave       @125,123 100% Steel ikwa |  | nearest foe 129
+   Hakuja      @129,125 100% Steel ikwa |  | nearest foe 130
+   Frog        @123,123 100% Steel spear |  | nearest foe 130
+   Marulo      @127,125 100% Steel spear |  | nearest foe 130
+   Lercroi     @121,123 100% Steel ikwa |  | nearest foe 131
+   Legua       @125,125 100% Steel ikwa |  | nearest foe 131
+   Red         @123,125 100% Steel ikwa |  | nearest foe 132
+   Neabancocan @121,125 100% Steel spear |  | nearest foe 133
+THEM
+   Mamen       @178,5 100% Steel spear | moving. | nearest foe 129
+   Ambas       @181,6 100% Steel knife | moving. | nearest foe 129
+   Hornet      @177,2 100% Steel ikwa | moving. | nearest foe 131
+   Gacan       @178,1 100% Steel ikwa | moving. | nearest foe 132
+   Blue        @192,0 100% Steel ikwa | moving. | nearest foe 139
+   Grasshopper @192,0 100% Steel ikwa | moving. | nearest foe 139
+fires 0 | grenades in the air 0
+rect x105-145 z109-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-044650-549.png
+frame results/human/hands_watch_0.jpg

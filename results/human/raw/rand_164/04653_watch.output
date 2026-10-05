@@ -1,0 +1,21 @@
+tick 4653 (game 5036) | paused=False | ours 9 (down 1) | them 5 (down 0)
+OURS
+   Chave       @213,177 85% Steel ikwa | watching for targets. | nearest foe 1
+   Bacchus     @213,177 34% DOWN - | Crawling to safety. | nearest foe 1
+   Red         @213,178 50% Steel spear | watching for targets. | nearest foe 1
+   Hakuja      @213,176 51% Steel spear | watching for targets. | nearest foe 1
+   Marulo      @213,179 100% Steel knife | watching for targets. | nearest foe 2
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 2
+   Neabancocan @211,177 100% Steel ikwa | watching for targets. | nearest foe 3
+   Legua       @211,176 100% Steel ikwa | watching for targets. | nearest foe 3
+   Lercroi     @215,204 100% Steel ikwa | moving. | nearest foe 19
+THEM
+   Ambas       @214,177 23% Steel knife | melee attacking Chave. | nearest foe 1
+   Mamen       @215,177 100% Steel spear | melee attacking Chave. | nearest foe 2
+   Grasshopper @196,207 100% Steel ikwa | moving. | nearest foe 19
+   Blue        @195,208 100% Steel ikwa | moving. | nearest foe 20
+   Hornet      @194,206 100% Steel ikwa | moving. | nearest foe 21
+fires 0 | grenades in the air 0
+rect x184-224 z169-215
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045246-186.png
+frame results/human/hands_watch_4653.jpg

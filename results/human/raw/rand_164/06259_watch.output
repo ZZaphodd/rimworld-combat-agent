@@ -1,0 +1,19 @@
+tick 6259 (game 6642) | paused=False | ours 9 (down 1) | them 3 (down 0)
+OURS
+   Bacchus     @214,177 30% DOWN - | downed. | nearest foe 1
+   Neabancocan @213,177 100% Steel ikwa | watching for targets. | nearest foe 2
+   Red         @213,178 50% Steel spear | watching for targets. | nearest foe 2
+   Marulo      @213,179 100% Steel knife | watching for targets. | nearest foe 2
+   Hakuja      @213,176 51% Steel spear | watching for targets. | nearest foe 2
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 3
+   Chave       @212,176 51% Steel ikwa | watching for targets. | nearest foe 3
+   Lercroi     @211,177 48% Steel ikwa | watching for targets. | nearest foe 4
+   Legua       @211,176 100% Steel ikwa | watching for targets. | nearest foe 4
+THEM
+   Hornet      @215,177 66% Steel ikwa | melee attacking Neabancocan. | nearest foe 2
+   Grasshopper @215,178 100% Steel ikwa | melee attacking Lercroi. | nearest foe 2
+   Blue        @216,178 100% Steel ikwa | melee attacking Red. | nearest foe 3
+fires 0 | grenades in the air 0
+rect x193-233 z162-192
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045342-518.png
+frame results/human/hands_watch_6259.jpg

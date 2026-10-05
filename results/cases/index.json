@@ -1553,7 +1553,7 @@
   }
  },
  {
-  "title": "rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — not solved",
+  "title": "rand_164 · savage melee ×9 vs Neanderthal melee ×6 · forest — won by the human",
   "situation": [
    "forest-arena",
    "raid-far",
@@ -1566,6 +1566,9 @@
   ],
   "plays": [
    "loadout",
+   "decoy-kite",
+   "breach",
+   "mouth-hold",
    "corner-ambush",
    "gang-melee",
    "rotation"
@@ -1579,6 +1582,13 @@
     "badness": "173.3"
    },
    {
+    "who": "**human** (Claude's loadout)",
+    "play": "Lercroi (the player's bait, picked for lowest melee damage, low value, sound legs) drew three raiders away on a long loop while the three spears broke one cell of the walled hall's east wall; all inside, the strongest at the breach; the bait came back with the other three",
+    "result": "**repelled**, 4 dead, 2 fled",
+    "lost": "0 lost, 3 downed, 15 permanent",
+    "badness": "**53.2**"
+   },
+   {
     "who": "Claude",
     "play": "spears to the best three; west rock pocket; everyone on one raider at a time, overflow on a second; step back under 38%",
     "result": "defeat, raid left with 3 captives (t9836)",
@@ -1589,7 +1599,8 @@
   "id": "rand_164",
   "sites": [
    "nook",
-   "west rock pocket"
+   "west rock pocket",
+   "NE ridge + walled hall"
   ],
   "arena": "arena_forest_night",
   "ours": "TribeSavage",

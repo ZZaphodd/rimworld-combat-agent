@@ -1,0 +1,22 @@
+tick 3915 (game 4298) | paused=True | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Bacchus     @213,177 47% Steel spear | watching for targets. | nearest foe 1
+   Red         @213,178 100% Steel spear | watching for targets. | nearest foe 1
+   Hakuja      @213,176 63% Steel spear | watching for targets. | nearest foe 1
+   Marulo      @213,179 100% Steel knife | watching for targets. | nearest foe 2
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 2
+   Chave       @212,176 100% Steel ikwa | watching for targets. | nearest foe 2
+   Neabancocan @211,177 100% Steel ikwa | watching for targets. | nearest foe 3
+   Legua       @211,176 100% Steel ikwa | watching for targets. | nearest foe 3
+   Lercroi     @183,197 100% Steel ikwa | moving. | nearest foe 28
+THEM
+   Gacan       @214,177 29% Steel ikwa | melee attacking Bacchus. | nearest foe 1
+   Ambas       @215,177 100% Steel knife | melee attacking Hakuja. | nearest foe 2
+   Mamen       @216,176 100% Steel spear | melee attacking Hakuja. | nearest foe 3
+   Grasshopper @163,177 100% Steel ikwa | melee attacking Lercroi. | nearest foe 28
+   Blue        @163,175 100% Steel ikwa | moving. | nearest foe 30
+   Hornet      @161,173 100% Steel ikwa | moving. | nearest foe 33
+fires 0 | grenades in the air 0
+rect x176-223 z169-204
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045218-034.png
+frame results/human/hands_watch_3915.jpg

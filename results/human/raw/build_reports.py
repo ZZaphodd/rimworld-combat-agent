@@ -146,6 +146,20 @@ if __name__ == "__main__":
             (7454, "Annie down, Lady dead, the raid fled; Mac the last one"),
         ], notes=[(125, 129, "start")],
            trace_file="results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz")
+    if "rand_164" in which:
+        build("rand_164", [
+            (1296, "Lercroi (bait) waits alone at (132, 90); the eight head north-east for the walled hall"),
+            (2160, "seven of the eight at the hall's SE corner; Lercroi, 38 cells off, crosses the raid's path"),
+            (2874, "three spears on the hall's east wall (59%); Grasshopper, Blue, Hornet follow Lercroi"),
+            (3265, "wall at 24%; the raid split: three after Lercroi, three walking on to the hall"),
+            (3652, "the breach at (214, 177) open; ours going in (all in by t3380); Gacan 15 cells off"),
+            (4298, "Gacan (melee 11) in the breach at 29%; Ambas and Mamen queue behind him"),
+            (4656, "Gacan dead; Bacchus down inside; Ambas in the breach"),
+            (5448, "Ambas dead; Mamen in the breach, Lercroi back and closing on him from outside"),
+            (6265, "Mamen dead; Blue and Grasshopper catch Lercroi outside the breach"),
+            (7984, "Hornet dead; Blue and Grasshopper flee east, Marulo and Hakuja after them"),
+        ], notes=[(208, 175, "walled hall"), (125, 125, "start")],
+           trace_file="results/human/traces/rand_164_human_20261006-044240.jsonl.gz")
     if "rand_190" in which:
         build("rand_190", [
             (2762, "the squad ~90 cells west, behind the west wall ruin; the raid strung out 62-79 cells east"),
