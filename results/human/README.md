@@ -31,6 +31,7 @@ A person plays a scenario; the harness only watches and grades it like an agent 
 | rand_065 (#6) | human_loadout | squad down (≈ draw) | 0 + 3 being carried off | 3 of 6 | close: lost 4, 3 out | [rand_065](reports/rand_065.md) |
 | rand_029 (#7) | human_loadout | **pyrrhic** | 2 (both captives taken back) | 7 of 8 | doctrine: 7 dead, 5 out | [rand_029](reports/rand_029.md) |
 | rand_039 (#8) | human_loadout | **repelled** | 0 (1 downed, carried along) | 6 of 8 | kite: lost 5, 2 out | [rand_039](reports/rand_039.md) |
+| rand_011 (#9) | human_loadout | **decisive** | 1 | 9 of 9 | close: lost 3 (kidnapped), 4 downed | [rand_011](reports/rand_011.md) |
 
 **Batch 1 (worst list #1–#8, 2026-10-05), in one line each:** the human beat the agent on all
 eight by badness (8.0–96 vs 108–142); five wins (030, 084, 127, 029, 039 — four of them with

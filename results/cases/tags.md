@@ -26,6 +26,8 @@ A scene lists both for that moment.
 | `us-short` | our median range ≤ 18 (pistols, shotguns, throwables) |
 | `us-melee-pawns` | ≥ 2 of ours with melee ≥ 8 or Brawler |
 | `us-skill-mismatch` | weapons start in the wrong hands (fixable by a loadout) |
+| `us-outrange` *(new, 2026-10-05)* | our good shooters outrange the raid (rand_011: two 37-cell rifles vs a median of 20) |
+| `raid-low-skill` *(new, 2026-10-05)* | everyone in the raid shoots ≤ 5 |
 
 ## Situation: the moment (scene level)
 
@@ -71,3 +73,6 @@ A scene lists both for that moment.
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
 | `finish-downed` | kill downed raiders in melee |
+| `melee-charge` *(new, 2026-10-05)* | melee pawns run through or round the raid to hit its back (rand_011: Bagad and Mila on the wounded back pair) |
+| `ability` *(new, 2026-10-05)* | a gene or psychic ability used (rand_011: Mila's Fire spew); `hands.brief()` lists them |
+| `gang-melee` *(new, 2026-10-05)* | everyone standing piles onto one raider in melee |

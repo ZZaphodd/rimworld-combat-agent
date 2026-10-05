@@ -1,0 +1,27 @@
+tick 2244 (game 2627) | paused=False | ours 9 (down 0) | them 9 (down 0)
+OURS
+   Strangler   @116,120 100% Pump shotgun | moving. | nearest foe 13
+   Mila        @115,106 91% Steel club | watching for targets. | nearest foe 13
+   Diver       @116,121 100% Revolver | moving. | nearest foe 13
+   Schlitzer   @114,124 72% Bolt-action rifle | moving. | nearest foe 13
+   Bagad       @118,109 100% Granite club | watching for targets. | nearest foe 14
+   Boss        @119,115 75% Bolt-action rifle | moving. | nearest foe 14
+   Olaf        @105,97 100% Marble club | moving. | nearest foe 17
+   Far         @117,130 100% Biocoded autopistol | watching for targets. | nearest foe 20
+   Wanya       @115,132 100% Biocoded revolver | watching for targets. | nearest foe 21
+THEM
+   Shaw        @105,114 100% Frag grenades | moving. | nearest foe 13
+   Cali        @101,115 100% Pump shotgun | watching for targets. | nearest foe 16
+   Zach        @100,116 100% Machine pistol | watching for targets. | nearest foe 16
+   Maggie      @98,120 76% Frag grenades | moving. | nearest foe 16
+   Reid        @98,114 100% Machine pistol | watching for targets. | nearest foe 18
+   Dennis      @97,115 84% Autopistol | watching for targets. | nearest foe 19
+   Cameron     @92,123 68% Revolver | watching for targets. | nearest foe 22
+   Navarro     @91,123 44% Autopistol | watching for targets. | nearest foe 23
+   Pablo       @91,122 100% Steel knife | melee attacking Diver. | nearest foe 23
+fires 0 | grenades in the air 0
+rect x84-126 z90-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-092831-317.png
+frame results/human/hands_watch_2244.jpg
+
+[exited with code 0]

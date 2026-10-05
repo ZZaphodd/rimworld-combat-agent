@@ -1,0 +1,25 @@
+tick 3979 (game 4362) | paused=True | ours 9 (down 1) | them 7 (down 0)
+OURS
+   Olaf        @123,123 40% DOWN - | downed. | nearest foe 7
+   Bagad       @111,125 50% Granite club | melee attacking Cameron. | nearest foe 7
+   Mila        @109,126 91% Steel club | melee attacking Navarro. | nearest foe 9
+   Far         @120,131 84% Biocoded autopistol | watching for targets. | nearest foe 12
+   Schlitzer   @127,128 73% Bolt-action rifle | watching for targets. | nearest foe 13
+   Strangler   @130,115 51% Pump shotgun | watching for targets. | nearest foe 14
+   Diver       @131,120 100% Revolver | moving. | nearest foe 14
+   Boss        @130,110 75% Bolt-action rifle | watching for targets. | nearest foe 16
+   Wanya       @119,135 100% Biocoded revolver | watching for targets. | nearest foe 16
+THEM
+   Cali        @113,118 88% Pump shotgun | watching for targets. | nearest foe 7
+   Maggie      @117,119 56% Frag grenades | moving. | nearest foe 8
+   Cameron     @99,124 68% Revolver | watching for targets. | nearest foe 10
+   Dennis      @102,118 50% Autopistol | moving. | nearest foe 11
+   Zach        @107,115 60% Machine pistol | moving. | nearest foe 11
+   Navarro     @98,125 44% Autopistol | watching for targets. | nearest foe 11
+   Reid        @108,114 100% Machine pistol | watching for targets. | nearest foe 11
+fires 0 | grenades in the air 2
+rect x91-138 z103-142
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-093217-935.png
+frame results/human/hands_watch_3979.jpg
+
+[exited with code 0]

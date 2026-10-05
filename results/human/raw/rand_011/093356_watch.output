@@ -1,0 +1,19 @@
+tick 4887 (game 5270) | paused=False | ours 8 (down 1) | them 2 (down 0)
+OURS
+   Mila        @94,120 59% Steel club | moving. | nearest foe 12
+   Far         @120,131 84% Biocoded autopistol | attacking Cali. | nearest foe 15
+   Olaf        @123,123 40% DOWN - | downed. | nearest foe 16
+   Wanya       @119,135 100% Biocoded revolver | attacking Cali. | nearest foe 17
+   Strangler   @122,115 52% Pump shotgun | watching for targets. | nearest foe 17
+   Diver       @127,119 100% Revolver | moving. | nearest foe 20
+   Schlitzer   @127,128 73% Bolt-action rifle | attacking Cali. | nearest foe 21
+   Boss        @130,108 76% Bolt-action rifle | attacking Reid. | nearest foe 27
+THEM
+   Reid        @104,114 49% Machine pistol | moving. | nearest foe 12
+   Cali        @107,123 78% Pump shotgun | moving. | nearest foe 13
+fires 11 | grenades in the air 0
+rect x87-137 z101-142
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-093352-552.png
+frame results/human/hands_watch_4887.jpg
+
+[exited with code 0]

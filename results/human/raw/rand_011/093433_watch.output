@@ -1,0 +1,19 @@
+tick 6247 (game 6630) | paused=False | ours 8 (down 1) | them 2 (down 1)
+OURS
+   Mila        @93,123 59% Steel club | melee attacking Cali. | nearest foe 1
+   Diver       @92,124 100% Revolver | melee attacking Cali. | nearest foe 1
+   Wanya       @93,124 100% Biocoded revolver | melee attacking Cali. | nearest foe 1
+   Far         @93,122 85% Biocoded autopistol | melee attacking Cali. | nearest foe 1
+   Boss        @101,115 76% Bolt-action rifle | melee attacking Cali. | nearest foe 2
+   Schlitzer   @95,126 73% Bolt-action rifle | melee attacking Cali. | nearest foe 4
+   Strangler   @95,120 52% Pump shotgun | melee attacking Cali. | nearest foe 4
+   Olaf        @123,123 41% DOWN - | downed. | nearest foe 22
+THEM
+   Cali        @92,123 47% Pump shotgun | melee attacking Mila. | nearest foe 1
+   Reid        @103,114 29% DOWN - | downed. | nearest foe 2
+fires 1 | grenades in the air 0
+rect x85-130 z105-135
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-093427-368.png
+frame results/human/hands_watch_6247.jpg
+
+[exited with code 0]
