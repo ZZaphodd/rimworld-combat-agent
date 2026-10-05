@@ -78,8 +78,9 @@ Whale's group of four (Whale, Ram, Salamander, Gorilla) went round the south sid
 dealer: Whale's on Nytro and Cholaky, Hornet's on Werner. Lissa 30 cells out.
 
 ![5](img/rand_023_5_t3187.jpg)
-**Van dead; Salamander dead.** Lissa stopped at ~23 cells (128, 88) and shot. Gorilla (melee 0)
-was sent to lock her.
+**Van dead; Salamander dead**: a head shot from Lissa's revolver (shooting 19) at ~23 cells, as the
+player saw in the game's UI. Lissa had stopped at (128, 88) and was shooting from there. Gorilla
+(melee 0) was sent to lock her.
 
 ![6](img/rand_023_6_t3547.jpg)
 **Furr, Jenn and Nytro dead.** Whale held Cholaky (41%), Hornet held Werner (54%). Lissa was still
@@ -99,7 +100,8 @@ at 100%, out of reach.
    four. Two dealers (Whale melee 11, Hornet) led groups of meat shields.
 3. **The revolver ace held at range** (23 cells) and was left to a low-damage locker (Gorilla)
    until the rest were dead, then hunted down by everyone.
-4. The only loss (Salamander) came in the brawl at the ruin; no one was downed.
+4. The only loss (Salamander) was the worst threat's: Lissa's revolver hit him in the head from
+   ~23 cells while the rest were locked at the ruin. No one was downed.
 
 ## Data
 
