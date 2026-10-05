@@ -140,9 +140,16 @@ class Debug:
                 self.teleport(pid, *slots[pid], rounds=1)
         raise RimMoltError(f"could not place {off}")
 
-    def destroy_at(self, x, z):
-        self.run("T: Destroy")
-        self.dbg(action="click", x=x, z=z)
+    def destroy_at(self, x, z, tries=3):
+        """Arm "T: Destroy" and click the cell. Another client's call between the two (Claude's
+        hands during an observed episode, 2026-10-05) disarms the tool: arm again and retry."""
+        for k in range(tries):
+            self.run("T: Destroy")
+            try:
+                return self.dbg(action="click", x=x, z=z)
+            except RimMoltError as e:
+                if "armed" not in str(e) or k == tries - 1:
+                    raise
 
     def clear_area(self, x0, z0, x1, z1):
         self.run("Clear area (rect)")
