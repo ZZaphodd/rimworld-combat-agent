@@ -1,0 +1,16 @@
+tick 8173 (game 8556) | paused=True | ours 9 (down 3) | them 0 (down 0)
+OURS
+   Neabancocan @213,177 30% DOWN - | downed. | nearest foe 999
+   Red         @213,178 35% DOWN - | downed. | nearest foe 999
+   Legua       @213,177 100% Steel ikwa | tending to Neabancocan. | nearest foe 999
+   Marulo      @235,174 100% Steel knife | watching for targets. | nearest foe 999
+   Hakuja      @227,177 52% Steel spear | watching for targets. | nearest foe 999
+   Lercroi     @213,177 48% Steel ikwa | tending to Bacchus. | nearest foe 999
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 999
+   Chave       @212,176 51% Steel ikwa | watching for targets. | nearest foe 999
+   Bacchus     @213,177 30% DOWN - | downed. | nearest foe 999
+THEM
+fires 0 | grenades in the air 0
+rect x203-243 z161-191
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045454-852.png
+frame results/human/hands_watch_8173.jpg

@@ -1,0 +1,19 @@
+tick 6916 (game 7299) | paused=False | ours 9 (down 2) | them 3 (down 0)
+OURS
+   Bacchus     @214,177 30% DOWN - | downed. | nearest foe 0
+   Neabancocan @213,177 30% DOWN - | downed. | nearest foe 1
+   Red         @213,178 50% Steel spear | watching for targets. | nearest foe 1
+   Hakuja      @213,176 52% Steel spear | watching for targets. | nearest foe 1
+   Marulo      @213,179 100% Steel knife | watching for targets. | nearest foe 2
+   Frog        @212,178 100% Steel ikwa | watching for targets. | nearest foe 2
+   Chave       @212,176 51% Steel ikwa | watching for targets. | nearest foe 2
+   Lercroi     @211,177 48% Steel ikwa | watching for targets. | nearest foe 3
+   Legua       @211,176 100% Steel ikwa | watching for targets. | nearest foe 3
+THEM
+   Hornet      @214,177 17% Steel ikwa | melee attacking Red. | nearest foe 1
+   Grasshopper @215,177 100% Steel ikwa | melee attacking Hakuja. | nearest foe 2
+   Blue        @216,178 100% Steel ikwa | melee attacking Red. | nearest foe 3
+fires 0 | grenades in the air 0
+rect x193-233 z162-192
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045345-368.png
+frame results/human/hands_watch_6916.jpg

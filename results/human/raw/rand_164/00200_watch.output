@@ -1,0 +1,22 @@
+tick 200 (game 583) | paused=True | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Marulo      @127,123 100% Steel knife | watching for targets. | nearest foe 117
+   Chave       @125,123 100% Steel ikwa | watching for targets. | nearest foe 118
+   Neabancocan @129,125 100% Steel ikwa | watching for targets. | nearest foe 118
+   Red         @123,123 100% Steel spear | watching for targets. | nearest foe 119
+   Bacchus     @127,125 100% Steel spear | watching for targets. | nearest foe 119
+   Lercroi     @121,123 100% Steel ikwa | watching for targets. | nearest foe 119
+   Legua       @125,125 100% Steel ikwa | watching for targets. | nearest foe 120
+   Frog        @123,125 100% Steel ikwa | watching for targets. | nearest foe 120
+   Hakuja      @121,125 100% Steel spear | watching for targets. | nearest foe 121
+THEM
+   Mamen       @172,15 100% Steel spear | moving. | nearest foe 117
+   Ambas       @175,16 100% Steel knife | moving. | nearest foe 117
+   Hornet      @172,12 100% Steel ikwa | moving. | nearest foe 120
+   Gacan       @173,11 100% Steel ikwa | moving. | nearest foe 121
+   Blue        @185,9 100% Steel ikwa | moving. | nearest foe 128
+   Grasshopper @185,9 100% Steel ikwa | moving. | nearest foe 128
+fires 0 | grenades in the air 0
+rect x105-145 z109-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045001-367.png
+frame results/human/hands_watch_200.jpg

@@ -1,0 +1,22 @@
+tick 1777 (game 2160) | paused=True | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Lercroi     @160,104 100% Steel ikwa | watching for targets. | nearest foe 38
+   Marulo      @203,156 100% Steel knife | moving. | nearest foe 78
+   Hakuja      @211,165 100% Steel spear | moving. | nearest foe 88
+   Red         @212,165 100% Steel spear | moving. | nearest foe 88
+   Frog        @212,165 100% Steel ikwa | moving. | nearest foe 88
+   Bacchus     @213,165 100% Steel spear | moving. | nearest foe 88
+   Chave       @214,166 100% Steel ikwa | moving. | nearest foe 89
+   Legua       @215,166 100% Steel ikwa | moving. | nearest foe 90
+   Neabancocan @217,168 100% Steel ikwa | moving. | nearest foe 92
+THEM
+   Ambas       @186,76 100% Steel knife | moving. | nearest foe 38
+   Mamen       @188,78 100% Steel spear | moving. | nearest foe 38
+   Blue        @191,77 100% Steel ikwa | moving. | nearest foe 41
+   Gacan       @192,78 100% Steel ikwa | moving. | nearest foe 41
+   Hornet      @193,79 100% Steel ikwa | moving. | nearest foe 41
+   Grasshopper @190,75 100% Steel ikwa | moving. | nearest foe 42
+fires 0 | grenades in the air 0
+rect x153-224 z108-164
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045055-750.png
+frame results/human/hands_watch_1777.jpg

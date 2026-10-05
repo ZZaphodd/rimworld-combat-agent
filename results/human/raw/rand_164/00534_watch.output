@@ -1,0 +1,22 @@
+tick 534 (game 917) | paused=False | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Lercroi     @137,110 100% Steel ikwa | moving. | nearest foe 87
+   Marulo      @143,130 100% Steel knife | moving. | nearest foe 104
+   Legua       @143,136 100% Steel ikwa | moving. | nearest foe 109
+   Chave       @142,136 100% Steel ikwa | moving. | nearest foe 110
+   Neabancocan @146,137 100% Steel ikwa | moving. | nearest foe 110
+   Bacchus     @144,137 100% Steel spear | moving. | nearest foe 110
+   Red         @140,136 100% Steel spear | moving. | nearest foe 110
+   Frog        @140,136 100% Steel ikwa | moving. | nearest foe 110
+   Hakuja      @139,136 100% Steel spear | moving. | nearest foe 110
+THEM
+   Ambas       @170,30 100% Steel knife | moving. | nearest foe 87
+   Mamen       @172,29 100% Steel spear | moving. | nearest foe 88
+   Hornet      @172,28 100% Steel ikwa | moving. | nearest foe 89
+   Gacan       @172,27 100% Steel ikwa | moving. | nearest foe 90
+   Blue        @172,24 100% Steel ikwa | moving. | nearest foe 93
+   Grasshopper @173,24 100% Steel ikwa | moving. | nearest foe 93
+fires 0 | grenades in the air 0
+rect x121-161 z103-144
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045026-633.png
+frame results/human/hands_watch_534.jpg

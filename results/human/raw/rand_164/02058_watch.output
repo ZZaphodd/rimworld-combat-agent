@@ -1,0 +1,22 @@
+tick 2058 (game 2441) | paused=False | ours 9 (down 0) | them 6 (down 0)
+OURS
+   Lercroi     @175,105 100% Steel ikwa | moving. | nearest foe 25
+   Marulo      @216,167 100% Steel knife | moving. | nearest foe 75
+   Legua       @221,173 100% Steel ikwa | watching for targets. | nearest foe 82
+   Chave       @222,173 100% Steel ikwa | watching for targets. | nearest foe 82
+   Neabancocan @223,173 100% Steel ikwa | watching for targets. | nearest foe 83
+   Frog        @221,174 100% Steel ikwa | watching for targets. | nearest foe 83
+   Hakuja      @215,176 100% Steel spear | melee attacking granite wall (86%) | nearest foe 84
+   Bacchus     @215,177 100% Steel spear | melee attacking granite wall (86%) | nearest foe 85
+   Red         @215,178 100% Steel spear | melee attacking granite wall (86%) | nearest foe 86
+THEM
+   Ambas       @194,89 100% Steel knife | moving. | nearest foe 25
+   Mamen       @197,92 100% Steel spear | moving. | nearest foe 26
+   Blue        @200,91 100% Steel ikwa | moving. | nearest foe 29
+   Grasshopper @199,89 100% Steel ikwa | moving. | nearest foe 29
+   Hornet      @202,93 100% Steel ikwa | moving. | nearest foe 30
+   Gacan       @202,93 100% Steel ikwa | moving. | nearest foe 30
+fires 0 | grenades in the air 0
+rect x168-230 z113-169
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261006-045106-800.png
+frame results/human/hands_watch_2058.jpg
