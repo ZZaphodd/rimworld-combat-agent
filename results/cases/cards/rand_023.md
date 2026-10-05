@@ -1,7 +1,7 @@
 # rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human
 
 **Situation:** `forest-arena` `raid-far` `raid-outranges` `us-outnumber` `us-melee-pawns` `top-threat`
-**Plays seen:** `concealed-wait` `mark-shooters` `dealer-shields` `loadout` `breach` (failed) `carry-downed` `melee-lock`
+**Plays seen:** `concealed-wait` `cover-path-start` `mark-shooters` `dealer-shields` `loadout` `breach` (failed) `carry-downed` `melee-lock`
 **Numbers:** ours 10 (all melee), range median 1.5 · raid 8 (short 7, melee 1), 415 pt, outrange share 0.88, no explosives · count ratio 1.25 · raid from the south-west corner (32–44, 0–6), ~151 cells
 
 ## Sides
@@ -27,6 +27,13 @@
   and Hornet the dealers, the rest meat shields. Gorilla, low damage, was a good pawn to send to lock
   Lissa. Toni was handled passively: he came in before we left the hidden spot and died for free;
   with our numbers he was not counted a big threat.
+- **Human, when to leave the ruin (told after Claude's replay):** cells hidden from a raider's gun
+  by cover are not shot at, so the player traced the raiders' sight and set off when the walk to
+  the marked shooters, counting the exposed cells only, became the shortest. Both groups had to
+  set off together: if the raid hugs the north side, the group going round the south has a long
+  way. Measured on the traces (`rca.terrain` LOS, snapshot, guns' ranges): at the player's start
+  (t2459) the seven movers had 43 exposed steps in all (most 10), the low of the last 150 ticks
+  (72 → 50 → 44 → 58 → 43); at Claude's replay start (t2315) ten movers had 95 (most 19).
 - **Human, t1325–2578** `raid-strung-out` → `concealed-wait`: ten packed in the small ruin
   (145–150, 108–111); the raid's front reached them with Lissa 50 cells behind.
 - **Human, t2578–3983** → `mark-shooters` `dealer-shields`: one of ours on each shooter, Whale's group

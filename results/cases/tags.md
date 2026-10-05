@@ -75,6 +75,7 @@ A scene lists both for that moment.
 | `ability-bait` *(new, 2026-10-05)* | a cheap pawn is sent to draw a raider's ability (Fire spew) so it does not hit the group |
 | `dealer-shields` *(new, 2026-10-05)* | the squad split into groups, each led by one damage dealer with meat shields around it (the user's rand_023) |
 | `concealed-wait` *(new, 2026-10-05)* | wait hidden and packed so the raid strings out on the way in and its slow, dangerous members arrive last |
+| `cover-path-start` *(new, 2026-10-05)* | leave cover for the marks when the walk to the raid's shooters, counting only the cells their guns can see (cells behind cover are free), is at its shortest, for the groups on both sides at once (the user's rand_023: if the raid hugs one side of the cover, the group going round the other side has a long way) |
 | `carry-downed` | carry our downed along / inside |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
