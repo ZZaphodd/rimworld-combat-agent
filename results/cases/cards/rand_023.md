@@ -44,6 +44,13 @@
   counter-clockwise, and team 2 was sent first, so that both teams came into the raid's shooters'
   sight at the same moment. The trace (one poll per ~12 ticks) shows both moving between t2447 and
   t2459.
+- **Human, sidekicks for the high-value pawn (told after Claude's attempt 3):** Whale, our most
+  valuable pawn, needs a meat-shield sidekick with him. Traces: in the user's run 2–4 of ours were
+  always within 2.5 cells of Whale (Ram, Salamander, Gorilla, later Bustba, Emsea, Colmea), he held
+  near the ruin (142, 109) with Lissa ~25 cells off, at 100% until t3316 and 58% at the end. In
+  attempt 3 he walked alone from t2613 ~15 cells south-west to Nytro, was shot by Jenn on the way
+  (100 → 78%), fought Nytro 7.8 cells from Lissa, then stood there ~260 ticks (job "moving", towards
+  Furr) under her fire: 55 → 33%, down t3656.
 - **Human, t1325–2578** `raid-strung-out` → `concealed-wait`: ten packed in the small ruin
   (145–150, 108–111); the raid's front reached them with Lissa 50 cells behind.
 - **Human, t2578–3983** → `mark-shooters` `dealer-shields`: one of ours on each shooter, Whale's group
