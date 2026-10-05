@@ -1,4 +1,4 @@
-# Worst problems of the second mining run (rand_130–230, 2026-10-05 afternoon)
+# Worst problems of the second mining run (rand_130–230, 2026-10-05 13:57–16:49)
 
 Rows since rand_130 run until the raid is gone (`end_rule: raid_gone`): a kidnapped pawn counts in `deaths` and `squad_kidnapped`, so these badness values are higher than the first run's for the same losses; rank the two runs separately.
 

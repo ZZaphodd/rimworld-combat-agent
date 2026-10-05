@@ -40,7 +40,7 @@ Mechanisms seen:
 - Melee brawls are decided by numbers (wins at 9 v 9, 10 v 6, 11 v 6; losses at 5 v 6, 5 v 8) and
   cost many permanent injuries (rand_018: 23).
 
-# Second mining run, 2026-10-05 13:50–~16:30 (rand_130–230)
+# Second mining run, 2026-10-05 13:57–16:49 (rand_130–230)
 
 101 problems, built and played the same way (Claude routing by the table above, the frozen
 Python agents fighting, `tools/night.py`). Asked for by the user once the worst list reached
