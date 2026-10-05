@@ -1,0 +1,23 @@
+tick 583 (game 966) | paused=True | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Tarsier     @129,123 100% Recurve bow | watching for targets. | nearest foe 87
+   Eagle       @129,121 100% - | watching for targets. | nearest foe 87
+   Opossum     @127,122 100% Steel ikwa | watching for targets. | nearest foe 89
+   Ambas       @126,126 100% Recurve bow | watching for targets. | nearest foe 90
+   Mosquito    @127,119 100% - | watching for targets. | nearest foe 90
+   Lándoa      @126,125 100% Pila | watching for targets. | nearest foe 90
+   Bee         @126,123 100% Greatbow | watching for targets. | nearest foe 90
+   Iotros      @120,122 100% Recurve bow | watching for targets. | nearest foe 96
+THEM
+   Riley       @215,136 100% Molotov cocktails | moving. | nearest foe 87
+   Allie       @217,125 100% Revolver | moving. | nearest foe 88
+   Speedy      @217,138 100% Machine pistol | moving. | nearest foe 89
+   Anfisa      @220,125 100% Pump shotgun | moving. | nearest foe 91
+   Lorentz     @220,125 100% Revolver | moving. | nearest foe 91
+   Kenny       @220,125 100% Revolver | moving. | nearest foe 91
+   Valerie     @220,131 100% Bolt-action rifle | moving. | nearest foe 91
+   Lucas       @221,125 100% Steel knife | moving. | nearest foe 92
+fires 0 | grenades in the air 0
+rect x104-144 z107-137
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-195410-982.png
+frame results/human/hands_watch_583.jpg

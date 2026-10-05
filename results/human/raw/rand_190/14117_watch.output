@@ -1,0 +1,11 @@
+tick 14117 (game 14500) | paused=False | ours 3 (down 3) | them 1 (down 0)
+OURS
+   Eagle       @10,98 45% DOWN - | being carried by Valerie. | nearest foe 0
+   Tarsier     @30,99 48% DOWN - | downed. | nearest foe 20
+   Ambas       @54,94 35% DOWN - | downed, unconscious. | nearest foe 44
+THEM
+   Valerie     @10,98 48% Bolt-action rifle | kidnapping Eagle. | nearest foe 0
+fires 75 | grenades in the air 0
+rect x3-61 z81-111
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200341-017.png
+frame results/human/hands_watch_14117.jpg

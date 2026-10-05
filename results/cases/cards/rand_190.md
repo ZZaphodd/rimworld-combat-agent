@@ -1,0 +1,72 @@
+# rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human (raid left with captives)
+
+**Situation:** `open-arena` `raid-far` `us-bows` `raid-strung-out` `top-threat` `raid-holds` `fire` `kidnap`
+**Plays seen:** `loadout` `hide-wait` `gang-melee` `mark-shooters` `melee-lock` `piecemeal` (failed)
+**Numbers:** ours 8 (bows 4, thrown 2, melee 1, long 1), range median 24.4 · raid 8 (short 5,
+long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid from the east edge
+(244–249, 143–158), ~125 cells
+
+## Sides
+- Ours (shooting/melee, weapon): Tarsier 10/10 recurve bow → greatbow (Bee's), Fast walker,
+  Bloodlust; Eagle 3/12 short bow (poor) → pila (Mosquito's); Opossum 0/8 steel ikwa, Brawler;
+  Lándoa 5/2 pila; Mosquito 0/3 pila → short bow; Bee 2/4 greatbow → recurve; Iotros 3/2 and
+  Ambas 3/2 recurve bows. No armour.
+- Raid: **Kenny** revolver (poor), 8/11, a **Hussar** (the player, from the game UI; RimMolt does
+  not show xenotypes); **Valerie** bolt-action rifle (good), 1/5; **Riley** molotovs, helmet;
+  Allie revolver (good), 7/0, flak jacket and pants; Anfisa pump shotgun, 5/5, flak vest; Speedy
+  machine pistol, 3/2, Trigger-happy, Jogger, flak jacket; Lorentz revolver (awful), 2/4;
+  Lucas steel knife, 0/1.
+
+## Plays and results
+| who | play | site | result | lost | badness |
+|---|---|---|---|---|---|
+| agent `amove` | mass advance | – | defeat, raid left with 7 captives (t7496) | 1 dead, 7 kidnapped | 192.0 |
+| human | ~90 cells west to hide behind a ruin wall; all on the raid's front (Anfisa), then one or two of ours on each shooter, Ambas alone on the rifle; three lockers one after another at Kenny | west wall ruin | defeat, raid left with 2 captives (t13967) | 3 dead, 2 kidnapped, 3 downed | 129.9 |
+
+## Scenes
+- **Human, intents (told after the battle):**
+  - The west wall ruin was chosen to be hidden from part of the raid's lines of fire,
+    whatever happened.
+  - The pila went to Eagle (melee 12) because the game's stats showed its melee damage
+    higher than the short bow's.
+  - Ambas went to Valerie because the bolt-action rifle should not keep dealing free damage
+    from long range (like Gorilla on Lissa in rand_023).
+  - The player did not recall who Anfisa was.
+  - What went wrong: the Hussar pistol shooter (Kenny) did too much damage. A melee lock on
+    him was expected to work, and three of ours were lost one after another.
+- **Human, t2379–3546** `raid-strung-out` → `hide-wait`: the squad west of the wall (34–38,
+  79–94); the raid strung out over 30–50 cells, Valerie last.
+- **Human, t3736–4480** `thrower-close` `melee-contact` → `gang-melee`:
+  - Riley's first molotov landed next to ours (t3736).
+  - Lucas (knife) ran in and died.
+  - Iotros was shot by Anfisa's shotgun at 4.5 cells (dead t4000).
+  - All seven went on Anfisa: downed t4480, not finished.
+- **Human, t4480–6448** → `mark-shooters` `melee-lock`:
+  - Tarsier went to Riley (13 cells; he threw again at t4941), Eagle and Bee to Allie,
+    Lándoa and Opossum to Lorentz, Mosquito to Kenny (stopped by Speedy), Ambas to Valerie
+    (26 cells).
+  - Allie, Lorentz and Speedy died.
+  - Ambas held Valerie ~1200 ticks (100 → 49%) until he went down (t6448).
+- **Human, t4627–6219** `top-threat` `raid-holds` → `piecemeal` (failed):
+  - Kenny held at (45, 107) and shot. Opossum was downed at (45, 104) (t5295), Eagle at
+    (50, 97) on the way (t6002), and Lándoa at (45, 104) (t6219).
+  - Lándoa burned to death there (t6275).
+  - Kenny stayed at 100%.
+- **Human, t5154–10993** `fire` `our-downed-exposed`: the grass strip burned from 1 to 75 fire cells; Bee,
+  downed and unable to crawl, died of burns (t10993).
+- **Human, t6817–13967** `kidnap` `enemy-downed` → `chase-carrier` (Tarsier alone, late):
+  - The raid chose to kidnap and leave. Kenny took Opossum, and Riley took Mosquito.
+  - Valerie dropped Ambas and took Eagle.
+  - Anfisa got up ~2300 ticks after she was downed and left.
+
+## What the play stood on (observed)
+- Site: the **west wall ruin** (sites.md). A north–south ruin wall at x 39–43, z 82–94, with
+  doors at (40, 84) and (40, 92), on the open arena's west grass strip; a lake to the
+  south-east (42–55, 75–79). The raid came round its north end (Riley at (33, 93)).
+- The grass strip burns: a molotov there grew a fire of 75 cells.
+- Kenny (8/11, Hussar, revolver) shot each locker on the approach from one spot. Nothing reached
+  him in melee.
+
+## Sources
+report `results/human/reports/rand_190.md` · trace `results/human/traces/rand_190_human_20261005-194933.jsonl.gz` ·
+watcher `results/human/raw/rand_190/` · agent row `results/night/router.jsonl`

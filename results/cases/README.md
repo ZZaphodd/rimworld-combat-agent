@@ -49,6 +49,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [rand_179](cards/rand_179.md) | open | low-skill pirate guns ×8 vs tribal archers ×9 | `raid-outnumbers` `us-low-skill` `us-short` | **repelled**: west rock pocket (east part), the archers came over rock B's tip into pistol range | 132.0 / – / 15.8 |
 | [rand_130](cards/rand_130.md) | open | civil outlanders ×9 (one shooting-18 ace) vs civil ×9 with two grenadiers | `raid-throwers` `us-low-skill` | **repelled**: loadout, two rows across the lane, the ace on the grenadiers, sidesteps, carry the downed | 206.0 / – / 35.4 |
 | [rand_150](cards/rand_150.md) | open | civil outlanders ×9 vs rough outlanders ×9, no grenadiers | `us-low-skill` | **repelled**: loadout, two rows east of the start; close-range raiders died at the line; a rush on the holders | 172.7 / – / 36.4 |
+| [rand_190](cards/rand_190.md) | open | savage bows + pila ×8 vs rough outlanders ×8 (molotov, rifle, a Hussar revolver 8/11) | `us-bows` `top-threat` `fire` | (none yet) **human: lost** — west wall ruin, gang on the front, a locker on each shooter; three lockers one at a time at the Hussar, each shot on the approach; grass fire; two kidnapped | 192.0 / 129.9 / – |
 
 Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole

@@ -142,6 +142,20 @@ if __name__ == "__main__":
             (7454, "Annie down, Lady dead, the raid fled; Mac the last one"),
         ], notes=[(125, 129, "start")],
            trace_file="results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz")
+    if "rand_190" in which:
+        build("rand_190", [
+            (2762, "the squad ~90 cells west, behind the west wall ruin; the raid strung out 62-79 cells east"),
+            (3319, "waiting west of the wall; Speedy 29 cells, Valerie (rifle) 50"),
+            (4255, "contact: Riley's first molotov next to ours (t3736); Lucas dead; Iotros hit by Anfisa's shotgun"),
+            (4601, "Iotros dead (t4000); all seven on Anfisa (shotgun, the front)"),
+            (4930, "Anfisa down; marks: Tarsier-Riley, Eagle+Bee-Allie, Landoa+Opossum-Lorentz, Mosquito-Kenny, Ambas-Valerie"),
+            (5632, "fire in the grass; Bee down; Opossum walks at Kenny (100%), who holds at (45, 107) and shoots"),
+            (5976, "Allie and Lorentz dead; Opossum down 3 cells from Kenny"),
+            (6730, "Speedy dead; Eagle down on the way to Kenny; Landoa down by him, then burned; Kenny still 100%"),
+            (7969, "kidnap and leave: Kenny carries Opossum, Valerie Ambas; Anfisa up again"),
+            (11590, "Valerie dropped Ambas, carries Eagle; Tarsier alone after her"),
+        ], notes=[(41, 88, "west wall ruin"), (125, 125, "start")],
+           trace_file="results/human/traces/rand_190_human_20261005-194933.jsonl.gz")
     if "rand_023" in which:
         build("rand_023", [
             (1708, "all ten packed and hidden at the small ruin (145-150, 108-111); the raid 65 cells away, Lissa far behind"),

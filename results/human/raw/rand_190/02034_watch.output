@@ -1,0 +1,23 @@
+tick 2034 (game 2417) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Ambas       @59,108 100% Recurve bow | moving. | nearest foe 68
+   Eagle       @52,100 100% Pila | moving. | nearest foe 75
+   Mosquito    @46,97 100% Short bow | moving. | nearest foe 82
+   Opossum     @45,97 100% Steel ikwa | moving. | nearest foe 83
+   Lándoa      @45,97 100% Pila | moving. | nearest foe 83
+   Tarsier     @44,97 100% Recurve bow | moving. | nearest foe 84
+   Bee         @44,97 100% Greatbow | moving. | nearest foe 84
+   Iotros      @42,96 100% Recurve bow | moving. | nearest foe 86
+THEM
+   Speedy      @127,107 100% Machine pistol | moving. | nearest foe 68
+   Riley       @129,108 100% Molotov cocktails | moving. | nearest foe 70
+   Lorentz     @132,109 100% Revolver | moving. | nearest foe 73
+   Allie       @133,108 100% Revolver | moving. | nearest foe 74
+   Kenny       @133,108 100% Revolver | moving. | nearest foe 74
+   Anfisa      @134,109 100% Pump shotgun | moving. | nearest foe 75
+   Lucas       @137,108 100% Steel knife | moving. | nearest foe 78
+   Valerie     @140,108 100% Bolt-action rifle | moving. | nearest foe 81
+fires 0 | grenades in the air 0
+rect x30-70 z87-117
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-195550-192.png
+frame results/human/hands_watch_2034.jpg

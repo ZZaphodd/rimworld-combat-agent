@@ -84,3 +84,4 @@ A scene lists both for that moment.
 | `bait` *(new, 2026-10-05)* | a cheap pawn sent out alone to draw the raid's fire, so the shooters in the line need not move and keep shooting (rand_011: Olaf, the player's intent) |
 | `ability` *(new, 2026-10-05)* | a gene or psychic ability used (rand_011: Mila's Fire spew); `hands.brief()` lists them |
 | `gang-melee` *(new, 2026-10-05)* | everyone standing piles onto one raider in melee |
+| `piecemeal` *(new, 2026-10-05)* | ours sent at one raider one at a time, each arriving alone (rand_190: three lockers in turn at a Hussar revolver 8/11 holding one spot; each was shot on the approach and none reached him) |

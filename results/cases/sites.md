@@ -25,6 +25,7 @@ Walking pace seen (drafted squad): 16–18 ticks per cell in the open, ~30 throu
 | **big-ruin room** | squad waited at (100–106, 39–41); ruin ~(98–110, 38–58) | walled rooms south-west of the start | 88 SSW | rand_065 (human) |
 | **big-ruin room R2** | inside (104–107, 46–47), 8 cells; doors N (105, 48), W (103, 46), inner S (106, 45) from R1 (104–107, 43–44), which has a W door (103, 44), a S door (106, 42) and a gap (105, 42) | three one-cell doors, no breach needed; every inside cell touches a door except (107, 47); closed doors block sight, so throws from inside go only through an open door; a closed room keeps tox gas thick | 82 S-SW | rand_115 (Claude ×2), rand_012 (Claude: won; a corpse in a doorway keeps the door open), rand_018 (Claude, R1+R2: lost) |
 | W forest edge | (35–51, 118–137) | the treeline west of the cleared square (open arena only: on the forest arena it is just forest) | 83 W | rand_107 (human) |
+| **west wall ruin** | wall x 39–43, z 82–94 (north–south, broken), doors (40, 84) and (40, 92); squad cells west of it (34–38, 79–94) | a ruin wall on the open arena's west grass strip, facing east; open at both ends (the raid came round the north end, Riley at (33, 93)); a lake south-east (42–55, 75–79). The grass strip burns: a molotov grew a 75-cell fire there | 90 W | rand_190 (human, lost) |
 | SE pocket | (212–216, 28–40) | south-east, by the lake and ruins near the edge | 130 SE | rand_067 (human, end of a kite) |
 
 Not a site but recorded: rand_029 (open) held a north–south line at x 138–144, z 107–148, east

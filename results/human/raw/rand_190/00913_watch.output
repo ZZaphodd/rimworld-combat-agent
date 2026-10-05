@@ -1,0 +1,23 @@
+tick 913 (game 1296) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Mosquito    @117,109 100% Short bow | moving. | nearest foe 81
+   Opossum     @115,110 100% Steel ikwa | moving. | nearest foe 83
+   Lándoa      @114,113 100% Pila | moving. | nearest foe 84
+   Bee         @114,111 100% Greatbow | moving. | nearest foe 84
+   Ambas       @113,126 100% Recurve bow | moving. | nearest foe 84
+   Tarsier     @112,123 100% Recurve bow | moving. | nearest foe 85
+   Eagle       @112,119 100% Pila | moving. | nearest foe 85
+   Iotros      @108,110 100% Recurve bow | moving. | nearest foe 90
+THEM
+   Riley       @197,123 100% Molotov cocktails | moving. | nearest foe 81
+   Allie       @199,120 100% Revolver | moving. | nearest foe 83
+   Speedy      @200,124 100% Machine pistol | moving. | nearest foe 84
+   Lorentz     @202,120 100% Revolver | moving. | nearest foe 86
+   Kenny       @202,120 100% Revolver | moving. | nearest foe 86
+   Anfisa      @203,119 100% Pump shotgun | moving. | nearest foe 87
+   Lucas       @204,120 100% Steel knife | moving. | nearest foe 88
+   Valerie     @205,121 100% Bolt-action rifle | moving. | nearest foe 89
+fires 0 | grenades in the air 0
+rect x92-132 z102-133
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-195448-471.png
+frame results/human/hands_watch_913.jpg

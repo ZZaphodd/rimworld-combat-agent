@@ -1,0 +1,21 @@
+tick 5249 (game 5632) | paused=True | ours 7 (down 1) | them 7 (down 1)
+OURS
+   Mosquito    @44,90 89% Short bow | melee attacking Speedy. | nearest foe 1
+   Tarsier     @39,95 67% Greatbow | melee attacking Riley. | nearest foe 1
+   Lándoa      @45,92 59% Pila | melee attacking Lorentz. | nearest foe 1
+   Bee         @47,92 38% DOWN - | downed. | nearest foe 1
+   Ambas       @70,93 100% Recurve bow | melee attacking Valerie. | nearest foe 1
+   Eagle       @47,90 73% Pila | extinguishing fire on Eagle, Treeh | nearest foe 2
+   Opossum     @45,104 38% Steel ikwa | melee attacking Kenny. | nearest foe 3
+THEM
+   Speedy      @43,90 62% Machine pistol | melee attacking Mosquito. | nearest foe 1
+   Lorentz     @46,93 53% Revolver | melee attacking Lándoa. | nearest foe 1
+   Valerie     @71,94 100% Bolt-action rifle | watching for targets. | nearest foe 1
+   Riley       @40,96 89% Molotov cocktails | melee attacking Tarsier. | nearest foe 1
+   Allie       @46,88 48% Revolver | wandering. | nearest foe 2
+   Kenny       @45,107 100% Revolver | watching for targets. | nearest foe 3
+   Anfisa      @41,83 39% DOWN - | downed. | nearest foe 8
+fires 6 | grenades in the air 0
+rect x32-78 z76-114
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-200131-975.png
+frame results/human/hands_watch_5249.jpg

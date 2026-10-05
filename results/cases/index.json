@@ -1616,5 +1616,77 @@
    "squad_range_median": 24.9,
    "mech": false
   }
+ },
+ {
+  "title": "rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human (raid left with captives)",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "us-bows",
+   "raid-strung-out",
+   "top-threat",
+   "raid-holds",
+   "fire",
+   "kidnap"
+  ],
+  "plays": [
+   "loadout",
+   "hide-wait",
+   "gang-melee",
+   "mark-shooters",
+   "melee-lock",
+   "piecemeal"
+  ],
+  "results": [
+   {
+    "who": "agent `amove`",
+    "play": "mass advance",
+    "result": "defeat, raid left with 7 captives (t7496)",
+    "lost": "1 dead, 7 kidnapped",
+    "badness": "192.0"
+   },
+   {
+    "who": "human",
+    "play": "~90 cells west to hide behind a ruin wall; all on the raid's front (Anfisa), then one or two of ours on each shooter, Ambas alone on the rifle; three lockers one after another at Kenny",
+    "result": "defeat, raid left with 2 captives (t13967)",
+    "lost": "3 dead, 2 kidnapped, 3 downed",
+    "badness": "129.9"
+   }
+  ],
+  "id": "rand_190",
+  "sites": [
+   "west wall ruin"
+  ],
+  "arena": "arena_open_night",
+  "ours": "TribeSavage",
+  "raid": "OutlanderRough",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "us-bows"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "thrown": 2,
+    "bow": 4,
+    "melee": 1,
+    "long": 1
+   },
+   "enemy_n": 8,
+   "enemy_classes": {
+    "melee": 1,
+    "short": 5,
+    "long": 1,
+    "explosive": 1
+   },
+   "enemy_melee_share": 0.12,
+   "enemy_outrange_share": 0.12,
+   "enemy_explosive_share": 0.12,
+   "count_ratio": 1.0,
+   "distance": 125.6,
+   "squad_range_median": 24.4,
+   "mech": false
+  }
  }
 ]
