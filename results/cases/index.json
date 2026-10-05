@@ -324,7 +324,7 @@
   }
  },
  {
-  "title": "rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human",
+  "title": "rand_023 · savage tribe ×10 (all melee) vs outlanders ×8 with a shooting-19 revolver · forest — won by the human; Claude decisive on attempt 3",
   "situation": [
    "forest-arena",
    "raid-far",
@@ -357,6 +357,13 @@
     "result": "**decisive**, all 8 dead",
     "lost": "1 dead, 0 downed",
     "badness": "**25.6**"
+   },
+   {
+    "who": "**Claude (attempt 3, the user's start rules)**",
+    "play": "as above, plus: held until the front raider was hitting ours, left when the exposed walk stopped shrinking, the pawns next to him stayed and ganged him, movers with longer hidden routes sent first",
+    "result": "**decisive**, all 8 out",
+    "lost": "**0 dead**, 5 downed",
+    "badness": "**41.0**"
    },
    {
     "who": "Claude (replay of the user's play)",
