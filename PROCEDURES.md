@@ -371,9 +371,10 @@ the retrieval prompts are in `results/cases/README.md`.
    traits, weapon, armour, smoke packs, positions; read them before the battle, skills grow
    during it), the raid's edge and distance, `briefing.features(manifest)`, situation tags from
    `results/cases/tags.md`. Show the user a short card in chat.
-4. **Retrieval (start):** the subagent prompt in `results/cases/README.md` writes
-   `results/cases/sheets/<id>_start.md`. Read it, decide (loadout, site, play), and tell the
-   user the plan in a few lines.
+4. **Retrieval (start):** `python3 tools/cases.py similar <id>` lists the closest cards (0.1 s).
+   Read the top 3 cards and the journal scenes they point to, and write
+   `results/cases/sheets/<id>_start.md` (steps in `results/cases/README.md`). Decide (loadout,
+   site, play), and tell the user the plan in a few lines.
 5. **Loadout** before anyone is drafted (drafting cancels the pick-up job): `manage_gear` drop,
    then equip by ThingID (RIMMOLT_API.md), ~100–200 ticks.
 6. **Play:** draft and order with `go`, `attack`, `melee`, `hit` (walls, urns), float-menu
