@@ -1,7 +1,7 @@
-# rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human (raid left with captives)
+# rand_190 · savage tribe ×8 (bows, pila) vs rough outlanders ×8 with a molotov, a rifle and a Hussar revolver · open — lost by the human ×2 (raid left with captives)
 
 **Situation:** `open-arena` `raid-far` `us-bows` `raid-strung-out` `top-threat` `raid-holds` `fire` `kidnap`
-**Plays seen:** `loadout` `hide-wait` `gang-melee` `mark-shooters` `melee-lock` `piecemeal` (failed)
+**Plays seen:** `loadout` `hide-wait` `gang-melee` `mark-shooters` `melee-lock` `piecemeal` (failed) `mouth-hold` (failed, room doors)
 **Numbers:** ours 8 (bows 4, thrown 2, melee 1, long 1), range median 24.4 · raid 8 (short 5,
 long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid from the east edge
 (244–249, 143–158), ~125 cells
@@ -22,6 +22,7 @@ long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid fr
 |---|---|---|---|---|---|
 | agent `amove` | mass advance | – | defeat, raid left with 7 captives (t7496) | 1 dead, 7 kidnapped | 192.0 |
 | human | ~90 cells west to hide behind a ruin wall; all on the raid's front (Anfisa), then one or two of ours on each shooter, Ambas alone on the rifle; three lockers one after another at Kenny | west wall ruin | defeat, raid left with 2 captives (t13967) | 3 dead, 2 kidnapped, 3 downed | 129.9 |
+| human, attempt 2 | no loadout (melee locks decide, not bows); all eight in the big ruin's rooms R1/R2 as a choke point, hoping the raid splits between the sides | big-ruin rooms R1/R2 | defeat, raid left with 5 captives (t9479) | 3 dead, 5 kidnapped | 172.0 |
 
 ## Scenes
 - **Human, intents (told after the battle):**
@@ -59,14 +60,35 @@ long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid fr
   - Valerie dropped Ambas and took Eagle.
   - Anfisa got up ~2300 ticks after she was downed and left.
 
+- **Human attempt 2, intents (told after the battle):**
+  - The rooms were chosen as a choke point. The molotov and the shotgun were hard counters to it.
+  - No loadout: ranged weapons mean almost nothing here; the fight is about how well the melee
+    locks are made.
+  - The raid was hoped to split in half between the rooms' sides. It took positions that were
+    bad for us.
+  - It was a strategic choice with a very narrow window, and the squad did not get into it.
+- **Human attempt 2, t2752–3461** `melee-contact` `thrower-close` → `mouth-hold` (failed):
+  - All eight were in R2 (104–107, 46–47).
+  - Lucas came to the north door and Lorentz into R1; both died there.
+  - Two molotovs landed at R2's north door (t3217, t3461).
+  - Anfisa (shotgun), Riley, Allie, Kenny and Valerie stood 1–4 cells off that door and shot in.
+- **Human attempt 2, t3630–5075** `our-downed` → `melee-lock`:
+  - Eagle went at Kenny and was shot dead by the door (t3939); Mosquito killed Riley (t4065).
+  - Mosquito (t4281) and Iotros (t4757) were shot dead.
+  - Tarsier, the last standing, went down to Kenny in melee (t5075).
+- **Human attempt 2, t5075–8753** `kidnap`: four kidnappers carried four of ours south;
+  Anfisa came back for Bee, crawling alone: all eight lost.
+
 ## What the play stood on (observed)
 - Site: the **west wall ruin** (sites.md). A north–south ruin wall at x 39–43, z 82–94, with
   doors at (40, 84) and (40, 92), on the open arena's west grass strip; a lake to the
   south-east (42–55, 75–79). The raid came round its north end (Riley at (33, 93)).
 - The grass strip burns: a molotov there grew a fire of 75 cells.
 - Kenny (8/11, Hussar, revolver) shot each locker on the approach from one spot. Nothing reached
-  him in melee.
+  him in melee. In attempt 2, Eagle reached him and was shot dead next to him.
+- The big-ruin rooms (sites.md): a molotov at R2's north door and gunners 1–4 cells outside it
+  (a shotgun among them) beat the door hold; raiders also came in by R1.
 
 ## Sources
-report `results/human/reports/rand_190.md` · trace `results/human/traces/rand_190_human_20261005-194933.jsonl.gz` ·
+report `results/human/reports/rand_190.md` (attempts 1–2) · traces `results/human/traces/rand_190_human_20261005-194933.jsonl.gz`, `rand_190_human_20261005-201645.jsonl.gz` ·
 watcher `results/human/raw/rand_190/` · agent row `results/night/router.jsonl`

@@ -1,0 +1,17 @@
+tick 4860 (game 5243) | paused=False | ours 5 (down 4) | them 5 (down 0)
+OURS
+   Tarsier     @98,43 56% Recurve bow | watching for targets. | nearest foe 1
+   Lándoa      @106,44 30% DOWN - | Crawling to safety. | nearest foe 1
+   Opossum     @105,49 26% DOWN - | Crawling to safety. | nearest foe 2
+   Ambas       @106,46 29% DOWN - | Crawling to safety. | nearest foe 3
+   Bee         @109,51 30% DOWN - | Crawling to safety. | nearest foe 6
+THEM
+   Kenny       @99,44 74% Revolver | melee attacking Tarsier. | nearest foe 1
+   Anfisa      @101,47 100% Pump shotgun | moving. | nearest foe 5
+   Speedy      @105,43 66% Machine pistol | watching for targets. | nearest foe 7
+   Valerie     @103,50 100% Bolt-action rifle | watching for targets. | nearest foe 9
+   Allie       @103,51 81% Revolver | watching for targets. | nearest foe 9
+fires 7 | grenades in the air 0
+rect x83-123 z32-62
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202223-383.png
+frame results/human/hands_watch_4860.jpg

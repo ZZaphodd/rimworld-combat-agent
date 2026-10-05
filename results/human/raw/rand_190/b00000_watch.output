@@ -1,0 +1,23 @@
+tick 0 (game 383) | paused=True | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Eagle       @129,125 100% Short bow |  | nearest foe 118
+   Opossum     @127,125 100% Steel ikwa |  | nearest foe 120
+   Iotros      @125,125 100% Recurve bow |  | nearest foe 122
+   Ambas       @125,123 100% Recurve bow |  | nearest foe 122
+   Tarsier     @123,125 100% Recurve bow |  | nearest foe 124
+   Bee         @123,123 100% Greatbow |  | nearest foe 124
+   Mosquito    @121,125 100% Pila |  | nearest foe 126
+   Lándoa      @121,123 100% Pila |  | nearest foe 126
+THEM
+   Allie       @245,146 100% Revolver | moving. | nearest foe 118
+   Riley       @244,155 100% Molotov cocktails | moving. | nearest foe 119
+   Lucas       @249,143 100% Steel knife | moving. | nearest foe 121
+   Anfisa      @249,143 100% Pump shotgun | moving. | nearest foe 121
+   Lorentz     @249,143 100% Revolver | moving. | nearest foe 121
+   Kenny       @249,143 100% Revolver | moving. | nearest foe 121
+   Valerie     @247,156 100% Bolt-action rifle | moving. | nearest foe 122
+   Speedy      @248,158 100% Machine pistol | moving. | nearest foe 123
+fires 0 | grenades in the air 0
+rect x105-145 z109-139
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-201745-820.png
+frame results/human/hands_watch_0.jpg

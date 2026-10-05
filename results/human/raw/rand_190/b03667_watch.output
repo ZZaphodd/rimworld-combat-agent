@@ -1,0 +1,21 @@
+tick 3667 (game 4050) | paused=True | ours 8 (down 1) | them 6 (down 0)
+OURS
+   Opossum     @105,48 32% DOWN - | downed. | nearest foe 1
+   Eagle       @105,51 60% Short bow | melee attacking Kenny. | nearest foe 1
+   Mosquito    @104,50 78% Pila | melee attacking Riley. | nearest foe 1
+   Lándoa      @106,44 76% Pila | melee attacking Speedy. | nearest foe 1
+   Ambas       @106,47 51% Recurve bow | extinguishing fire on Ambas, Butch | nearest foe 2
+   Tarsier     @106,46 100% Recurve bow | melee attacking Kenny. | nearest foe 3
+   Iotros      @106,46 43% Recurve bow | watching for targets. | nearest foe 3
+   Bee         @104,46 84% Greatbow | wandering. | nearest foe 3
+THEM
+   Kenny       @106,51 100% Revolver | watching for targets. | nearest foe 1
+   Speedy      @105,43 100% Machine pistol | watching for targets. | nearest foe 1
+   Allie       @106,50 100% Revolver | watching for targets. | nearest foe 1
+   Riley       @105,49 65% Molotov cocktails | melee attacking Mosquito. | nearest foe 1
+   Anfisa      @106,49 100% Pump shotgun | watching for targets. | nearest foe 2
+   Valerie     @107,51 100% Bolt-action rifle | watching for targets. | nearest foe 2
+fires 5 | grenades in the air 0
+rect x85-125 z32-62
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202159-483.png
+frame results/human/hands_watch_3667.jpg

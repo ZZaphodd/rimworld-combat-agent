@@ -1,0 +1,16 @@
+tick 6551 (game 6934) | paused=False | ours 5 (down 4) | them 4 (down 0)
+OURS
+   Lándoa      @102,18 30% DOWN - | being carried by Allie. | nearest foe 0
+   Tarsier     @97,6 32% DOWN - | being carried by Kenny. | nearest foe 0
+   Opossum     @110,9 25% DOWN - | being carried by Valerie. | nearest foe 0
+   Bee         @113,51 22% DOWN - | Crawling to safety. | nearest foe 32
+   Nails       @219,223 100% Revolver | wandering. | nearest foe 170
+THEM
+   Anfisa      @131,77 100% Pump shotgun | moving. | nearest foe 170
+   Allie       @102,18 82% Revolver | kidnapping Lándoa. | nearest foe 236
+   Valerie     @110,9 100% Bolt-action rifle | kidnapping Opossum. | nearest foe 240
+   Kenny       @97,6 66% Revolver | kidnapping Tarsier. | nearest foe 249
+fires 11 | grenades in the air 0
+rect x118-198 z86-142
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202231-017.png
+frame results/human/hands_watch_6551.jpg

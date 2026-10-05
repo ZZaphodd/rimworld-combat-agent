@@ -1,0 +1,23 @@
+tick 1676 (game 2059) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Iotros      @107,44 100% Recurve bow | watching for targets. | nearest foe 65
+   Lándoa      @107,43 100% Pila | watching for targets. | nearest foe 65
+   Ambas       @106,44 100% Recurve bow | watching for targets. | nearest foe 66
+   Tarsier     @106,43 100% Recurve bow | watching for targets. | nearest foe 66
+   Opossum     @106,42 100% Steel ikwa | watching for targets. | nearest foe 67
+   Bee         @105,44 100% Greatbow | watching for targets. | nearest foe 67
+   Mosquito    @105,43 100% Pila | watching for targets. | nearest foe 67
+   Eagle       @105,42 100% Short bow | watching for targets. | nearest foe 68
+THEM
+   Lorentz     @167,69 100% Revolver | moving. | nearest foe 65
+   Kenny       @167,69 100% Revolver | moving. | nearest foe 65
+   Speedy      @160,84 100% Machine pistol | moving. | nearest foe 66
+   Riley       @160,84 100% Molotov cocktails | moving. | nearest foe 66
+   Allie       @166,75 100% Revolver | moving. | nearest foe 67
+   Anfisa      @167,75 100% Pump shotgun | moving. | nearest foe 68
+   Lucas       @169,71 100% Steel knife | moving. | nearest foe 68
+   Valerie     @172,86 100% Bolt-action rifle | moving. | nearest foe 77
+fires 0 | grenades in the air 0
+rect x86-126 z28-58
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-201814-753.png
+frame results/human/hands_watch_1676.jpg

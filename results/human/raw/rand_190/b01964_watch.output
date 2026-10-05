@@ -1,0 +1,23 @@
+tick 1964 (game 2347) | paused=True | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Iotros      @107,44 100% Recurve bow | watching for targets. | nearest foe 45
+   Lándoa      @107,43 100% Pila | watching for targets. | nearest foe 46
+   Ambas       @106,44 100% Recurve bow | watching for targets. | nearest foe 46
+   Tarsier     @106,43 100% Recurve bow | watching for targets. | nearest foe 47
+   Bee         @105,44 100% Greatbow | watching for targets. | nearest foe 47
+   Opossum     @106,42 100% Steel ikwa | watching for targets. | nearest foe 47
+   Mosquito    @105,43 100% Pila | watching for targets. | nearest foe 48
+   Eagle       @105,42 100% Short bow | watching for targets. | nearest foe 48
+THEM
+   Speedy      @145,69 100% Machine pistol | moving. | nearest foe 45
+   Lorentz     @151,58 100% Revolver | moving. | nearest foe 46
+   Kenny       @151,58 100% Revolver | moving. | nearest foe 46
+   Riley       @146,70 100% Molotov cocktails | moving. | nearest foe 47
+   Allie       @152,61 100% Revolver | moving. | nearest foe 48
+   Lucas       @156,58 100% Steel knife | moving. | nearest foe 51
+   Anfisa      @148,75 100% Pump shotgun | moving. | nearest foe 51
+   Valerie     @159,73 100% Bolt-action rifle | moving. | nearest foe 60
+fires 0 | grenades in the air 0
+rect x86-126 z28-58
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-201902-384.png
+frame results/human/hands_watch_1964.jpg

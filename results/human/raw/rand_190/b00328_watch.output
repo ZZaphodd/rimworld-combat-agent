@@ -1,0 +1,23 @@
+tick 328 (game 711) | paused=False | ours 8 (down 0) | them 8 (down 0)
+OURS
+   Eagle       @129,106 100% Short bow | moving. | nearest foe 104
+   Ambas       @125,106 100% Recurve bow | moving. | nearest foe 108
+   Tarsier     @123,103 100% Recurve bow | moving. | nearest foe 110
+   Opossum     @112,110 100% Steel ikwa | moving. | nearest foe 119
+   Iotros      @110,110 100% Recurve bow | moving. | nearest foe 121
+   Bee         @108,108 100% Greatbow | moving. | nearest foe 124
+   Mosquito    @106,109 100% Pila | moving. | nearest foe 126
+   Lándoa      @106,108 100% Pila | moving. | nearest foe 126
+THEM
+   Allie       @229,134 100% Revolver | moving. | nearest foe 104
+   Riley       @227,145 100% Molotov cocktails | moving. | nearest foe 105
+   Lucas       @234,130 100% Steel knife | moving. | nearest foe 108
+   Anfisa      @234,130 100% Pump shotgun | moving. | nearest foe 108
+   Lorentz     @234,130 100% Revolver | moving. | nearest foe 108
+   Kenny       @234,130 100% Revolver | moving. | nearest foe 108
+   Speedy      @230,147 100% Machine pistol | moving. | nearest foe 109
+   Valerie     @232,143 100% Bolt-action rifle | moving. | nearest foe 109
+fires 0 | grenades in the air 0
+rect x97-137 z91-121
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-201804-954.png
+frame results/human/hands_watch_328.jpg

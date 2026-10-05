@@ -1,0 +1,22 @@
+tick 3329 (game 3712) | paused=True | ours 8 (down 0) | them 7 (down 0)
+OURS
+   Lándoa      @106,45 100% Pila | melee attacking Lorentz. | nearest foe 1
+   Iotros      @106,46 100% Recurve bow | melee attacking Lorentz. | nearest foe 2
+   Opossum     @105,47 71% Steel ikwa | watching for targets. | nearest foe 2
+   Ambas       @106,47 76% Recurve bow | watching for targets. | nearest foe 2
+   Tarsier     @107,47 100% Recurve bow | watching for targets. | nearest foe 2
+   Eagle       @104,47 84% Short bow | wandering. | nearest foe 2
+   Bee         @105,46 100% Greatbow | melee attacking Lorentz. | nearest foe 2
+   Mosquito    @98,48 92% Pila | melee attacking Riley. | nearest foe 7
+THEM
+   Lorentz     @106,44 62% Revolver | melee attacking Lándoa. | nearest foe 1
+   Anfisa      @106,49 100% Pump shotgun | watching for targets. | nearest foe 2
+   Riley       @105,49 100% Molotov cocktails | watching for targets. | nearest foe 2
+   Speedy      @105,43 100% Machine pistol | moving. | nearest foe 2
+   Allie       @106,50 100% Revolver | watching for targets. | nearest foe 3
+   Kenny       @106,51 100% Revolver | watching for targets. | nearest foe 4
+   Valerie     @107,51 100% Bolt-action rifle | watching for targets. | nearest foe 4
+fires 2 | grenades in the air 0
+rect x82-122 z32-62
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202132-200.png
+frame results/human/hands_watch_3329.jpg

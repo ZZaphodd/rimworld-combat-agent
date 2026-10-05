@@ -1,0 +1,10 @@
+tick 7223 (game 7606) | paused=False | ours 2 (down 1) | them 1 (down 0)
+OURS
+   Bee         @115,53 19% DOWN - | Crawling to safety. | nearest foe 9
+   Nails       @209,211 100% Revolver | wandering. | nearest foe 187
+THEM
+   Anfisa      @121,46 100% Pump shotgun | kidnapping Bee. | nearest foe 187
+fires 12 | grenades in the air 0
+rect x122-202 z104-160
+shot ~/Library/Application Support/RimWorld/RimMoltScreenshots/screenshot-20261005-202233-684.png
+frame results/human/hands_watch_7223.jpg
