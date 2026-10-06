@@ -20,6 +20,50 @@ Method:
 - Shots fired were equal in all four phases: 4/4, 6/6, 4/4 and 3/3, over 230–540 ticks.
 - Long-aim weapons (bolt-action, greatbow) were not tested.
 
+**Dummy targets (rand_227 map, 2026-10-06, no harness row).**
+- Setup with the debug menu (dev mode, turned off afterwards). The raiders were killed. Two
+  `Tribal_Farmer` pawns were spawned 10–16 cells in front of the six shooters and given:
+  - Neanderthal, Tough, a painstopper and two peg legs;
+  - `T: Toggle Movement`, and the faction set to a pirate faction;
+  - a deep-water ring (2 cells wide) around them (the user's idea).
+- Each way was run for 600 ticks, with a poll every 8 ticks. The dummies were healed when below
+  70%. "Shots fired" and "Damage dealt" come from the pawn records.
+- The max is ticks / (aim + cooldown).
+- Warm-up (aim) times: autopistol 18 ticks, revolver 18 ticks, pump shotgun 54 ticks.
+
+| way | orders | shots (max 38.4) | shotgun (max 4.7) |
+|---|---|---|---|
+| no order (fire at will) | 0 | 39 | 5 |
+| one "Fire at" each | 6 | 39 | 5 |
+| same target again every 24 ticks | 156 | 39 | 5 |
+| the other dummy every 60 ticks | 60 | 36 | 5 |
+| the other dummy every 24 ticks | 156 | 31 | **0** |
+| the other dummy every 8 ticks | 456 | **0** | 0 |
+| `Keeper.assign` (run 1) | 6 | 41 | 5 |
+| `Keeper.assign` (run 2) | 6 | 39 | 5 |
+
+- A switch restarts the aim; the cooldown carries on. A pawn switched faster than its
+  weapon's aim time never fires.
+- Its job still reads "attacking <name>" all the time: only "Shots fired" shows the loss.
+- Repeating the same target costs nothing (as in the autopistol test above).
+- In both runs, `assign` gave one order per shooter and split them three and three.
+- Damage per run (66–134) swung with the dice more than with the ordering, apart from the
+  8-tick switch.
+
+**Hold fire (same dummies, Barr and Pentaryl teleported 2 cells from each).**
+- Fire at will kept shooting: 18 shots in 300 ticks. No hit on ours in that sample.
+- `assign` found nothing worth shooting (friendly-fire risk 1 for every shooter):
+  - The first version stopped a shooter with a Go here on its own cell. The float menu does not
+    offer that ("No order matched 'Go here'"), so the shooter kept firing on its order.
+  - Now the order is ended (undraft and draft again, `hands.stop`) and Fire at will is turned off
+    after it, because drafting turns it back on.
+  - Result: the six shooters were ordered onto a dummy, then stopped at the first step (tick 8):
+    0 shots in 300 ticks.
+  - After the two were teleported away, the same Keeper ordered targets again, three and three,
+    and Fire at will was back on. 20 shots in 300 ticks (max ~20).
+- No failed stop shows in the rand_227 `assign` re-measure's output: the old branch did not run
+  there.
+
 **Wall (rand_164 map, `Command_VerbTarget`).**
 - One swing per pawn (11 damage), then nothing for 450 ticks. This held whether the order was
   given once, again every 90 ticks, or after the pawn stepped away and back.
