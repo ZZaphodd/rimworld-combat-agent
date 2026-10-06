@@ -70,9 +70,9 @@ Method:
 - So a grenade still in flight or lying on its fuse was "new" again at every step. Each time,
   the pawn it was aimed at, or the one nearest to it, was sent ~5 cells from **its own current
   cell**.
-- In the re-measure a frag lay at (125, 132) for ~110 ticks (t2252–2364), and Zhang's job read
-  "moving." the whole time:
-  - x 125 → 128 → 125 at z 132, 0–3 cells from the frag;
+- In the re-measure's stopped attempt a frag flew ~110 ticks (t2163–2273), then lay at (125, 132)
+  for ~90 ticks (t2276–2364). Zhang's job read "moving." the whole time:
+  - x 127 → 128 → 125 → 126 at z 132, 0–3 cells from the frag;
   - "Death: Zhang … died in an explosion" at t2369.
 - With a Keeper, a second pawn overwrote the first in `keeper.dodges`, and the first stayed held
   (Beatriz, until the run was stopped).
@@ -85,13 +85,28 @@ Method:
   - all held pawns are released when it goes off.
 - Tests: `GuardTest` (the old guard fails them; the moved pawn goes back and forth
   (2, 6) ↔ (2, 1) beside a frag at (0, 1)).
-- Exposure: the per-step `guard(n=2..3, keep=())` controllers were `duel.py` (rand_130),
-  `duel150.py` (rand_150) and `gun227*.py` (rand_227). The others pass `keep` = the whole squad,
-  so nobody dodges.
-  - Only rand_130 had grenades: 19 trace polls with a frag or molotov.
-  - In its first play, frags lay 1–3 cells from Zhang, Petra and Beatriz at t2430–2475 and
-    t2654–2670. Zhang's job read "moving." in some of those polls, and his cell changed by at
-    most one. Beatriz went down at t2475.
+- Exposure: the per-step `guard(n=2..3, keep=())` controllers on the old guard were `duel.py`
+  (rand_130 first play), `duel130a.py` (the stopped rand_130 attempt), `duel150.py` and
+  `duel150a.py` (rand_150, no grenades) and `gun227*.py` (rand_227, no grenades). The others pass
+  `keep` = the whole squad, so nobody dodges.
+  - In rand_130's first play the per-call memory re-issued sidesteps for the same frag. But
+    `duel.py` gave the dodger a "Fire at" order in the same step, so every sidestep was cancelled:
+    Zhang read "attacking …" on his own cell one poll later (t2385 → t2400, t2654 → t2670), and no
+    pawn moved more than one cell.
+  - Frags lay at (123,132) for t2430–2475 (Zhang 1 cell, Petra 3, Beatriz 3.6) and at (125,131)
+    for t2654–2670 (Zhang 1, Beatriz 1.4, already down, Petra 2.8).
+  - Beatriz went down at t2475 while the first frag still lay 3.6 cells away; her health had
+    been falling under fire since t2400 (75 → 65 → 46 → 39).
+- Later guard changes, from the same re-measure and the grenade drill below:
+  - grenades are polled after their thrower falls (a molotov thrown as Athequart died went
+    unwatched);
+  - a grenade counts as lying after 15 ticks on one cell (in flight a frag stays ~10 ticks on a
+    cell);
+  - sightings are kept across calls (a one-poll call never saw a second cell);
+  - with no readable target, the line of flight is read after 3 cells, and every pawn within 3
+    cells of it moves (at most 3). From one cell, the line on rand_130's molotovs named Hakuja or
+    Missy; they landed beside Rae;
+  - the dodge cell and the walk there keep clear of lying grenades.
 
 **Wall (rand_164 map, `Command_VerbTarget`).**
 - One swing per pawn (11 damage), then nothing for 450 ticks. This held whether the order was
@@ -131,7 +146,7 @@ The agents are the frozen baseline: listed here, not changed.
 | rand_227 | (as above) | **86.6, pyrrhic** with `Keeper.assign` (expected damage, spread, focus weight, 1.25× switch, friendly-fire radii). Ranged runs 30, median 335 ticks, 20 switches | The melee arrivals died 300–1000 ticks earlier than in either other run. Two of three deaths came while the rifles held out of reach before a rule-timed close-in (1400 ticks after the arrivals died; by hand in attempt 1, ~100 ticks after) |
 
 | rand_150 | 36.4, repelled, 2 dead. Lover (bolt-action, aim 102 + cooldown 90 ticks) switched targets at least 27 times (Lawman ↔ Paul, Meach, Brock, Kipper): 5 shots all fight | **6.4, repelled, none lost or downed** with `Keeper.assign` (after the hold-fire fix). Lover 12 shots, 134 damage; damage dealt ≥405 (Nytro and Ash not read) → 536 | The same plan and line. Lawman (the raid's best pistol) died at t2842 with Lover's kept order on him; in the first play he lived past t5224. The raid's knives died 3–6 cells out, so our knives never went out (trigger: a raider within 2 of the squad), and no rush was ordered. Not the same: the control step was ~6–7 ticks against ~30 in the first play (played before the wait-setting change) |
-| rand_130 | 35.4, repelled, 1 dead, 3 downed. Played before the wait-setting change: the stall rule was ~100 ticks, longer than the shotguns' 54-tick aim | **21.8, repelled, 1 dead (Zhang, shot), 1 downed** with `Keeper.assign` (Sammy weighted onto the grenadiers) and the guard memory fix. A first try was stopped with no row after Zhang died beside a lying frag (guard bug, above) | The shotguns fired 8 and 6 shots in both plays. Both grenadiers died 10–11 cells out. Not the same: guard memory, Sammy's weight, the control step (~6 vs ~35 ticks). This run does not separate the ordering's share |
+| rand_130 | 35.4, repelled, 1 dead, 3 downed. Played before the wait-setting change: the stall rule was ~100 ticks, longer than the shotguns' 54-tick aim | **21.8, repelled, 1 dead (Zhang, shot), 1 downed** with `Keeper.assign` (Sammy weighted onto the grenadiers) and the guard memory fix. A first try was stopped with no row after Zhang died beside a lying frag (guard bug, above) | The shotguns fired 8 and 6 shots in both plays. Both grenadiers died 10–11 cells out. Not the same: guard (memory across calls; a step-away from a lying grenade that also fired on a frag paused in flight and moved Zhang to (121,134), where he was later shot; dodgers held by the Keeper, where in the first play duel.py's next fire order cancelled every sidestep), Sammy's weight 10 and 1.5 on both grenadiers for the others (first play: only Sammy had a priority list), the control step (~6 vs ~35 ticks). This run does not separate the ordering's share |
 
 Each row is one draw.
 

@@ -713,10 +713,16 @@ _PENDING = set()  # grenades with no known target, waiting for a second cell to 
 
 
 LINE_R = 3.0     # a grenade with no known target: the pawn within this of its line of flight, ahead of it
+LINE_MIN = 3.0   # cells flown before its line is read: from a one-cell step the direction is too rough
+                 # (rand_130 re-measure flights: a cell held 6-22 ticks, first steps straight south for
+                 # a molotov that landed 2 cells east of that line)
 
 
-def _on_line(ours, a, b, keep=()):
-    """The standing pawn of `ours` nearest the line of flight a -> b, ahead of b and within LINE_R."""
+def _on_line(ours, a, b, keep=(), most=3):
+    """The standing pawns of `ours` within LINE_R of the line of flight a -> b and ahead of b,
+    nearest the line first, at most `most`: read from a few cells the line is still rough
+    (rand_130 re-measure: a molotov flew straight south for 3 cells and landed 2 cells east of
+    that line, beside the second pawn on it), so every pawn near it steps aside."""
     dx, dz = b[0] - a[0], b[1] - a[1]
     L = math.hypot(dx, dz)
     best = None
@@ -727,9 +733,9 @@ def _on_line(ours, a, b, keep=()):
         vx, vz = p["x"] - b[0], p["z"] - b[1]
         ahead = (vx * dx + vz * dz) / L
         off = abs(vx * dz - vz * dx) / L
-        if ahead >= -1 and off <= LINE_R and (best is None or off < best[0]):
-            best = (off, nm)
-    return best[1] if best else None
+        if ahead >= -1 and off <= LINE_R:
+            best = (best or []) + [(off, nm)]
+    return [nm for _, nm in sorted(best or [])[:most]]
 
 
 def _moved(keeper, i):
@@ -809,9 +815,8 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
                         send(i, nm, c, "@")
                         if not quiet:
                             print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} lying at {(x, z)}: {nm} -> {c}")
-                elif i in pending and not done and seen[i] != (x, z):   # in flight, target unknown: on its line?
-                    who = _on_line(ours, seen[i], (x, z), keep)
-                    if who:
+                elif i in pending and not done and math.dist(seen[i], (x, z)) >= LINE_MIN:   # target unknown: its line
+                    for who in _on_line(ours, seen[i], (x, z), keep):
                         me = byname[who]
                         c = _dodge_cell(me, me["x"], me["z"], ours, live, avoid=avoid)
                         send(i, who, c)

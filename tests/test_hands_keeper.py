@@ -303,7 +303,7 @@ class GuardWorld:
         self.t = 0
         self.ours = {"Z": {"x": 0, "z": 0}, "Y": {"x": 2, "z": 1}, "W": {"x": 0, "z": 12}}
         self.gone = []
-        self.aim, self.thrower_alive, self.flight = "targeting colonist Z", True, [(18, 0)]
+        self.aim, self.thrower_alive, self.flight, self.land = "targeting colonist Z", True, [(18, 0)], (0, 1)
 
     def call(self, name, **kw):
         if name == "get_status":
@@ -322,7 +322,7 @@ class GuardWorld:
             x, z = self.flight[min((self.t - 3) // 3, len(self.flight) - 1)]
             return [("G1", "Frag", x, z)]
         if 3 <= self.t < 60:
-            return [("G1", "Frag", 0, 1)]
+            return [("G1", "Frag", *self.land)]
         return []
 
     def go(self, name, x, z):
@@ -363,6 +363,16 @@ class GuardTest(Restored):
         self.assertEqual(moves[0], "Z", self.w.gone)
         self.assertNotIn("Y", moves)
         self.assertNotIn("W", moves)
+
+    def test_the_line_is_read_after_three_cells_not_one(self):
+        self.w.aim = None
+        self.w.ours = {"Z": {"x": 0, "z": 0}, "V": {"x": 0, "z": 7}, "W": {"x": 0, "z": 20}}
+        self.w.flight = [(18, 0), (17, 0), (16, 1), (15, 1), (12, 2), (9, 3), (6, 4)]   # bound for V
+        self.w.land = (0, 7)
+        self.run_calls(hands.Keeper())
+        moves = [g[1] for g in self.w.gone]
+        self.assertEqual(moves[0], "V", self.w.gone)
+        self.assertNotIn("Z", moves)
 
     def test_grenade_still_watched_after_its_thrower_fell(self):
         self.w.thrower_alive = False
