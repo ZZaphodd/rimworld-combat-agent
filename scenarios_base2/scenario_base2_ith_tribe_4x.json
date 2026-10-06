@@ -1,0 +1,237 @@
+{
+  "id": "base2_ith_tribe_4x",
+  "save": "scenario_base2_ith_tribe_4x",
+  "spec": {
+    "id": "base2_ith_tribe_4x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Lucas 'Blackjack' Wakefield",
+      "weapon": "Pump shotgun (normal)",
+      "x": 114,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957098",
+      "name": "Daina Allens",
+      "weapon": "Machine pistol (normal)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957105",
+      "name": "Dennis Richtarski",
+      "weapon": "Autopistol (good)",
+      "x": 117,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957120",
+      "name": "Alex Collige",
+      "weapon": "Revolver (normal)",
+      "x": 122,
+      "z": 167,
+      "health": 100
+    },
+    {
+      "id": "Human1957124",
+      "name": "Nina Hull",
+      "weapon": "Revolver (poor 48%)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957128",
+      "name": "Elida Watson",
+      "weapon": "Autopistol (normal)",
+      "x": 113,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1957133",
+      "name": "Lidia Key",
+      "weapon": "Machine pistol (poor 92%)",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1957138",
+      "name": "Vicky Mercado",
+      "weapon": "Pump shotgun (normal)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957149",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 50
+    },
+    {
+      "id": "Human1957152",
+      "def": "Tribal_HeavyArcher",
+      "x": 9,
+      "z": 46
+    },
+    {
+      "id": "Human1957157",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 35
+    },
+    {
+      "id": "Human1957162",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 50
+    },
+    {
+      "id": "Human1957167",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 36
+    },
+    {
+      "id": "Human1957170",
+      "def": "Tribal_Berserker",
+      "x": 2,
+      "z": 50
+    },
+    {
+      "id": "Human1957175",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 50
+    },
+    {
+      "id": "Human1957178",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 41
+    },
+    {
+      "id": "Human1957182",
+      "def": "Tribal_ChiefRanged",
+      "x": 5,
+      "z": 37
+    },
+    {
+      "id": "Human1957187",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 47
+    },
+    {
+      "id": "Human1957191",
+      "def": "Tribal_Penitent",
+      "x": 5,
+      "z": 37
+    },
+    {
+      "id": "Human1957194",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 50
+    },
+    {
+      "id": "Human1957196",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 35
+    },
+    {
+      "id": "Human1957200",
+      "def": "Tribal_Penitent",
+      "x": 5,
+      "z": 37
+    },
+    {
+      "id": "Human1957202",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 37
+    },
+    {
+      "id": "Human1957206",
+      "def": "Tribal_Berserker",
+      "x": 2,
+      "z": 39
+    },
+    {
+      "id": "Human1957211",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 50
+    },
+    {
+      "id": "Human1957215",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 51
+    },
+    {
+      "id": "Human1957217",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 36
+    },
+    {
+      "id": "Human1957230",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 50
+    },
+    {
+      "id": "Human1957234",
+      "def": "Tribal_Penitent",
+      "x": 8,
+      "z": 42
+    },
+    {
+      "id": "Human1957236",
+      "def": "Tribal_Berserker",
+      "x": 2,
+      "z": 36
+    },
+    {
+      "id": "Human1957241",
+      "def": "Tribal_Penitent",
+      "x": 1,
+      "z": 37
+    },
+    {
+      "id": "Human1957243",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 36
+    }
+  ]
+}

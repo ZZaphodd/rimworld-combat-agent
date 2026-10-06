@@ -1,0 +1,233 @@
+{
+  "id": "base2_mon_mech_2x",
+  "save": "scenario_base2_mon_mech_2x",
+  "spec": {
+    "id": "base2_mon_mech_2x",
+    "tier": "base",
+    "arena": "arena_col_monler2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1267202",
+      "name": "Hans 'L' Lambda",
+      "weapon": "Autopistol (poor)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267208",
+      "name": "Semyon Carbogite",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1267214",
+      "name": "Alyona Sullivan",
+      "weapon": "Machine pistol (normal 81%)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267219",
+      "name": "Ang 'Codex' Gao",
+      "weapon": "Autopistol (good)",
+      "x": 125,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1267226",
+      "name": "Mia 'Valkyrie' Hawke",
+      "weapon": "Machine pistol (normal)",
+      "x": 131,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267241",
+      "name": "Luca 'Luke' D'Amato",
+      "weapon": "Pump shotgun (poor)",
+      "x": 119,
+      "z": 127,
+      "health": 100
+    },
+    {
+      "id": "Human1267246",
+      "name": "Metroa Hermerez",
+      "weapon": "Autopistol (normal 62%)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267251",
+      "name": "Sam 'Sammy' Gerador",
+      "weapon": "Revolver (poor)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267256",
+      "name": "Matthew 'Watcher' Potter",
+      "weapon": "Steel knife (poor)",
+      "x": 127,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Militor1267262",
+      "def": "Mech_Militor",
+      "x": 192,
+      "z": 241
+    },
+    {
+      "id": "Mech_Militor1267264",
+      "def": "Mech_Militor",
+      "x": 191,
+      "z": 242
+    },
+    {
+      "id": "Mech_Militor1267266",
+      "def": "Mech_Militor",
+      "x": 191,
+      "z": 242
+    },
+    {
+      "id": "Mech_Militor1267268",
+      "def": "Mech_Militor",
+      "x": 188,
+      "z": 245
+    },
+    {
+      "id": "Mech_Militor1267270",
+      "def": "Mech_Militor",
+      "x": 192,
+      "z": 241
+    },
+    {
+      "id": "Mech_Militor1267272",
+      "def": "Mech_Militor",
+      "x": 189,
+      "z": 244
+    },
+    {
+      "id": "Mech_Militor1267274",
+      "def": "Mech_Militor",
+      "x": 191,
+      "z": 247
+    },
+    {
+      "id": "Mech_Militor1267276",
+      "def": "Mech_Militor",
+      "x": 189,
+      "z": 244
+    },
+    {
+      "id": "Mech_Militor1267278",
+      "def": "Mech_Militor",
+      "x": 191,
+      "z": 242
+    },
+    {
+      "id": "Mech_Militor1267280",
+      "def": "Mech_Militor",
+      "x": 192,
+      "z": 244
+    },
+    {
+      "id": "Mech_Militor1267282",
+      "def": "Mech_Militor",
+      "x": 190,
+      "z": 245
+    },
+    {
+      "id": "Mech_Militor1267284",
+      "def": "Mech_Militor",
+      "x": 188,
+      "z": 245
+    },
+    {
+      "id": "Mech_Militor1267286",
+      "def": "Mech_Militor",
+      "x": 193,
+      "z": 247
+    },
+    {
+      "id": "Mech_Militor1267288",
+      "def": "Mech_Militor",
+      "x": 188,
+      "z": 246
+    },
+    {
+      "id": "Mech_Militor1267290",
+      "def": "Mech_Militor",
+      "x": 188,
+      "z": 245
+    },
+    {
+      "id": "Mech_Militor1267292",
+      "def": "Mech_Militor",
+      "x": 189,
+      "z": 246
+    },
+    {
+      "id": "Mech_Militor1267294",
+      "def": "Mech_Militor",
+      "x": 191,
+      "z": 246
+    },
+    {
+      "id": "Mech_Militor1267296",
+      "def": "Mech_Militor",
+      "x": 194,
+      "z": 248
+    },
+    {
+      "id": "Mech_Militor1267298",
+      "def": "Mech_Militor",
+      "x": 190,
+      "z": 243
+    },
+    {
+      "id": "Mech_Militor1267300",
+      "def": "Mech_Militor",
+      "x": 190,
+      "z": 243
+    },
+    {
+      "id": "Mech_Militor1267302",
+      "def": "Mech_Militor",
+      "x": 188,
+      "z": 246
+    },
+    {
+      "id": "Mech_Militor1267304",
+      "def": "Mech_Militor",
+      "x": 191,
+      "z": 245
+    }
+  ]
+}

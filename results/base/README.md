@@ -46,6 +46,53 @@ Raid sizes (our pawns / raiders), from the manifests:
 - `turtle` stands in the yard and does not use the rooms, doors or valleys. These rows are a
   baseline for play that does.
 
+## v2: without shelves, hydroponics basins and workbenches (2026-10-06)
+The user saw the v1 raids spend the battles wrecking the colony's furniture (PROCEDURES §1c
+step 8).
+- Arenas: `arena_col_ithfunda2` and `arena_col_monler2` are the same bases without that
+  furniture, indoors and out.
+- Problems: the same 30 specs were rebuilt as `base2_*` (`scenarios_base2/`). 29 were built;
+  Monler mechanoid 6× loitered in all three builds, as in v1.
+- Rebuilding drew new raids and new squads: a v1 rung and its v2 rung share the points, not the
+  pawns.
+- Runs: `turtle`, one run per rung, rows in `ladder2.jsonl`.
+
+v1 → v2 (– not run: two defeats below; bold: the grade went up):
+
+| base | raid | 2× | 3× | 4× | 6× | 8× |
+|---|---|---|---|---|---|---|
+| Ithfunda | tribe | defeat 109.7 → **repelled 20.1** | defeat 100.1 → defeat 129.1 | – → defeat 140.2 | – | – |
+| Ithfunda | pirate | defeat 57.4 → defeat 103.1 | defeat 124.4 → defeat 62.1 | – | – | – |
+| Ithfunda | mech | pyrrhic 90.3 → **decisive 28.1** | (not built) → defeat 91.2 | defeat 97.8 → defeat 113.5 | defeat 133.3 → – | (not built) → – |
+| Monler | tribe | repelled 20.0 → repelled 5.2 | defeat 69.8 → **repelled 10.5** | defeat 89.8 → defeat 149.6 | – → defeat 88.0 | – |
+| Monler | pirate | repelled 29.9 → repelled 24.4 | unresolved 72.4 → defeat 77.7 | repelled 0.8 → pyrrhic 84.9 | defeat 107.0 → defeat 134.8 | defeat 78.8 → defeat 172.4 |
+| Monler | mech | defeat 85.4 → defeat 68.6 | (not built) → defeat 123.5 | defeat 86.9 → – | (not built) | – |
+
+Raid sizes v1 → v2 (our pawns / raiders):
+
+| base | raid | 2× | 3× | 4× | 6× | 8× |
+|---|---|---|---|---|---|---|
+| Ithfunda | tribe | 8/10 → 9/10 | 9/17 → 8/18 | 8/22 → 8/24 | 8/35 → 8/34 | 8/42 → 9/46 |
+| Ithfunda | pirate | 8/25 → 8/11 | 9/13 → 9/13 | 9/16 → 8/19 | 9/25 → 8/26 | 7/34 → 7/35 |
+| Ithfunda | mech | 9/6 → 9/6 | – → 7/10 | 9/13 → 8/14 | 9/16 → 9/7 | – → 8/13 |
+| Monler | tribe | 8/18 → 9/17 | 8/27 → 8/25 | 8/36 → 7/38 | 8/54 → 8/50 | 8/63 → 9/66 |
+| Monler | pirate | 8/13 → 9/11 | 8/13 → 8/13 | 8/14 → 9/15 | 8/24 → 8/28 | 8/34 → 9/30 |
+| Monler | mech | 8/22 → 9/22 | – → 9/11 | 9/11 → 9/13 | – | 9/20 → 9/20 |
+
+Observations:
+- 15 rungs ran in both ladders.
+  - The grade went up on 3: Ithfunda tribe 2× and mech 2×, Monler tribe 3×.
+  - It went down on 2: Monler pirate 3× (unresolved → defeat) and 4× (repelled → pyrrhic).
+  - It stayed the same on 10.
+- v2 battles ended sooner on 10 of the 15 (ticks to the row's end).
+  - Monler tribe 2×: 16871 → 9474. Ithfunda tribe 2×: 12459 → 8501.
+  - The largest change went the other way: Monler pirate 4×, 10060 → 22754.
+- A change can come from the furniture or from the new draw: one run per rung does not separate
+  them.
+  - For example, Ithfunda pirates 2× were 25 raiders in v1 and 11 in v2, and v2 went worse
+    (badness 103.1 against 57.4).
+- The direct plays below are on the v1 arenas.
+
 ## Direct plays: Claude and the user (PROCEDURES §15–16)
 Scope (the user, 2026-10-06): win the battle using the base, by any method; furniture that takes
 firing cells is uninstalled (PROCEDURES §1c). Claude, and at times the user, plays the rungs where `turtle` first lost (rows in `results/human/play.jsonl`;

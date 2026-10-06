@@ -1,0 +1,201 @@
+{
+  "id": "base2_ith_tribe_3x",
+  "save": "scenario_base2_ith_tribe_3x",
+  "spec": {
+    "id": "base2_ith_tribe_3x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "MJ Shen",
+      "weapon": "Autopistol (good)",
+      "x": 114,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957087",
+      "name": "Esther 'Pepper' Russo",
+      "weapon": "Autopistol (normal)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957092",
+      "name": "Robert 'Gnugfur' Krondorfer",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 118,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957097",
+      "name": "Edouard 'Lumpy' Bautista",
+      "weapon": "Pump shotgun (normal)",
+      "x": 123,
+      "z": 167,
+      "health": 100
+    },
+    {
+      "id": "Human1957101",
+      "name": "Binx Diaz",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957106",
+      "name": "Kjelt Karlsen",
+      "weapon": "Heavy SMG (poor)",
+      "x": 113,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1957113",
+      "name": "Boyle Schaefer",
+      "weapon": "Pump shotgun (normal)",
+      "x": 116,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957119",
+      "name": "Val Solo",
+      "weapon": "Steel knife (poor)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957123",
+      "def": "Tribal_Berserker",
+      "x": 110,
+      "z": 6
+    },
+    {
+      "id": "Human1957127",
+      "def": "Tribal_Archer",
+      "x": 95,
+      "z": 3
+    },
+    {
+      "id": "Human1957130",
+      "def": "Tribal_Penitent",
+      "x": 96,
+      "z": 2
+    },
+    {
+      "id": "Human1957133",
+      "def": "Tribal_Penitent",
+      "x": 96,
+      "z": 2
+    },
+    {
+      "id": "Human1957135",
+      "def": "Tribal_Archer",
+      "x": 96,
+      "z": 2
+    },
+    {
+      "id": "Human1957140",
+      "def": "Tribal_Penitent",
+      "x": 112,
+      "z": 2
+    },
+    {
+      "id": "Human1957142",
+      "def": "Tribal_Penitent",
+      "x": 111,
+      "z": 7
+    },
+    {
+      "id": "Human1957144",
+      "def": "Tribal_Penitent",
+      "x": 109,
+      "z": 4
+    },
+    {
+      "id": "Human1957147",
+      "def": "Tribal_HeavyArcher",
+      "x": 110,
+      "z": 2
+    },
+    {
+      "id": "Human1957152",
+      "def": "Tribal_Warrior",
+      "x": 112,
+      "z": 4
+    },
+    {
+      "id": "Human1957156",
+      "def": "Tribal_ChiefMelee",
+      "x": 103,
+      "z": 7
+    },
+    {
+      "id": "Human1957162",
+      "def": "Tribal_Warrior",
+      "x": 107,
+      "z": 2
+    },
+    {
+      "id": "Human1957166",
+      "def": "Tribal_Warrior",
+      "x": 96,
+      "z": 2
+    },
+    {
+      "id": "Human1957170",
+      "def": "Tribal_Penitent",
+      "x": 108,
+      "z": 7
+    },
+    {
+      "id": "Human1957173",
+      "def": "Tribal_Warrior",
+      "x": 105,
+      "z": 2
+    },
+    {
+      "id": "Human1957178",
+      "def": "Tribal_Berserker",
+      "x": 96,
+      "z": 2
+    },
+    {
+      "id": "Human1957182",
+      "def": "Tribal_Penitent",
+      "x": 98,
+      "z": 5
+    },
+    {
+      "id": "Human1957193",
+      "def": "Tribal_Berserker",
+      "x": 112,
+      "z": 5
+    }
+  ]
+}

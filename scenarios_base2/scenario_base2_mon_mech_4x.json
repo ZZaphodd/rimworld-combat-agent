@@ -1,0 +1,179 @@
+{
+  "id": "base2_mon_mech_4x",
+  "save": "scenario_base2_mon_mech_4x",
+  "spec": {
+    "id": "base2_mon_mech_4x",
+    "tier": "base",
+    "arena": "arena_col_monler2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 2000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1267202",
+      "name": "Icarus 'Perseus' Richardson",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267208",
+      "name": "Midori Zeovein",
+      "weapon": "Machine pistol (good)",
+      "x": 125,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1267230",
+      "name": "Yuntian 'Yun' Li",
+      "weapon": "Autopistol (good)",
+      "x": 123,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1267238",
+      "name": "Vonriel 'Von' Vimes",
+      "weapon": "Steel knife (poor)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267243",
+      "name": "Lieven 'Jago' Peeraer",
+      "weapon": "Revolver (normal)",
+      "x": 131,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1267257",
+      "name": "Yu 'LuoQianYu' Luo",
+      "weapon": "Steel knife (poor)",
+      "x": 119,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267262",
+      "name": "Selintha 'Sel' Silvertome",
+      "weapon": "Revolver (poor)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267267",
+      "name": "Zlata Henderson",
+      "weapon": "Revolver (normal)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267272",
+      "name": "Inna Dunlap",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther1267277",
+      "def": "Mech_Scyther",
+      "x": 220,
+      "z": 247
+    },
+    {
+      "id": "Mech_Scyther1267278",
+      "def": "Mech_Scyther",
+      "x": 217,
+      "z": 245
+    },
+    {
+      "id": "Mech_Scyther1267279",
+      "def": "Mech_Scyther",
+      "x": 219,
+      "z": 244
+    },
+    {
+      "id": "Mech_Scyther1267280",
+      "def": "Mech_Scyther",
+      "x": 214,
+      "z": 248
+    },
+    {
+      "id": "Mech_Scyther1267281",
+      "def": "Mech_Scyther",
+      "x": 219,
+      "z": 248
+    },
+    {
+      "id": "Mech_Scyther1267282",
+      "def": "Mech_Scyther",
+      "x": 217,
+      "z": 245
+    },
+    {
+      "id": "Mech_Scyther1267283",
+      "def": "Mech_Scyther",
+      "x": 213,
+      "z": 245
+    },
+    {
+      "id": "Mech_Scyther1267284",
+      "def": "Mech_Scyther",
+      "x": 218,
+      "z": 244
+    },
+    {
+      "id": "Mech_Scyther1267285",
+      "def": "Mech_Scyther",
+      "x": 218,
+      "z": 248
+    },
+    {
+      "id": "Mech_Scyther1267286",
+      "def": "Mech_Scyther",
+      "x": 216,
+      "z": 246
+    },
+    {
+      "id": "Mech_Scyther1267287",
+      "def": "Mech_Scyther",
+      "x": 218,
+      "z": 243
+    },
+    {
+      "id": "Mech_Scyther1267288",
+      "def": "Mech_Scyther",
+      "x": 218,
+      "z": 243
+    },
+    {
+      "id": "Mech_Scyther1267289",
+      "def": "Mech_Scyther",
+      "x": 218,
+      "z": 244
+    }
+  ]
+}

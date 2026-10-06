@@ -1,0 +1,145 @@
+{
+  "id": "base2_ith_mech_3x",
+  "save": "scenario_base2_ith_mech_3x",
+  "spec": {
+    "id": "base2_ith_mech_3x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1500,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Rebecca 'Lynx' Edwards",
+      "weapon": "Revolver (good)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957085",
+      "name": "Jonathan 'Jonny' Reyes",
+      "weapon": "Revolver (poor 49%)",
+      "x": 115,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957089",
+      "name": "Merlin Shepard",
+      "weapon": "Revolver (normal 88%)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957093",
+      "name": "Otis Dixon",
+      "weapon": "Molotov cocktails",
+      "x": 119,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957114",
+      "name": "Viktor Johns",
+      "weapon": "Machine pistol (normal)",
+      "x": 122,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957120",
+      "name": "Peter 'Pete' Marshall",
+      "weapon": "Bolt-action rifle (normal 82%)",
+      "x": 113,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1400119",
+      "name": "Hiroko Pittman",
+      "weapon": "Molotov cocktails",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther1957135",
+      "def": "Mech_Scyther",
+      "x": 145,
+      "z": 3
+    },
+    {
+      "id": "Mech_Scyther1957136",
+      "def": "Mech_Scyther",
+      "x": 150,
+      "z": 4
+    },
+    {
+      "id": "Mech_Scyther1957137",
+      "def": "Mech_Scyther",
+      "x": 147,
+      "z": 4
+    },
+    {
+      "id": "Mech_Scyther1957138",
+      "def": "Mech_Scyther",
+      "x": 149,
+      "z": 9
+    },
+    {
+      "id": "Mech_Scyther1957139",
+      "def": "Mech_Scyther",
+      "x": 140,
+      "z": 3
+    },
+    {
+      "id": "Mech_Scyther1957140",
+      "def": "Mech_Scyther",
+      "x": 144,
+      "z": 5
+    },
+    {
+      "id": "Mech_Scyther1957141",
+      "def": "Mech_Scyther",
+      "x": 145,
+      "z": 8
+    },
+    {
+      "id": "Mech_Scyther1957142",
+      "def": "Mech_Scyther",
+      "x": 144,
+      "z": 9
+    },
+    {
+      "id": "Mech_Scyther1957143",
+      "def": "Mech_Scyther",
+      "x": 151,
+      "z": 6
+    },
+    {
+      "id": "Mech_Scyther1957144",
+      "def": "Mech_Scyther",
+      "x": 142,
+      "z": 4
+    }
+  ]
+}

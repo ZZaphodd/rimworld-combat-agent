@@ -1,0 +1,313 @@
+{
+  "id": "base2_mon_tribe_4x",
+  "save": "scenario_base2_mon_tribe_4x",
+  "spec": {
+    "id": "base2_mon_tribe_4x",
+    "tier": "base",
+    "arena": "arena_col_monler2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1267202",
+      "name": "Chiyo Dianate",
+      "weapon": "Machine pistol (normal)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267207",
+      "name": "Joseph 'Kell' Kelliran",
+      "weapon": "Pump shotgun (normal)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267212",
+      "name": "Evelyn 'Eva' Hale",
+      "weapon": "Pump shotgun (poor 83%)",
+      "x": 124,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1267217",
+      "name": "Erik 'Nytro' Nystrom",
+      "weapon": "Autopistol (good)",
+      "x": 125,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1267220",
+      "name": "Jordan Jaeger",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267226",
+      "name": "Elliott Muscorock",
+      "weapon": "Bolt-action rifle (poor 90%)",
+      "x": 119,
+      "z": 127,
+      "health": 100
+    },
+    {
+      "id": "Human1267232",
+      "name": "Matthew 'Cynapse' Ritchie",
+      "weapon": "Bolt-action rifle (normal 83%)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1267239",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 105
+    },
+    {
+      "id": "Human1267243",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 113
+    },
+    {
+      "id": "Human1267247",
+      "def": "Tribal_Berserker",
+      "x": 4,
+      "z": 118
+    },
+    {
+      "id": "Human1267251",
+      "def": "Tribal_Penitent",
+      "x": 1,
+      "z": 121
+    },
+    {
+      "id": "Human1267253",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 123
+    },
+    {
+      "id": "Human1267256",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 121
+    },
+    {
+      "id": "Human1267261",
+      "def": "Tribal_Warrior",
+      "x": 1,
+      "z": 122
+    },
+    {
+      "id": "Human1267265",
+      "def": "Tribal_Penitent",
+      "x": 1,
+      "z": 122
+    },
+    {
+      "id": "Human1267277",
+      "def": "Tribal_ChiefMelee",
+      "x": 1,
+      "z": 121
+    },
+    {
+      "id": "Human1267283",
+      "def": "Tribal_Warrior",
+      "x": 7,
+      "z": 108
+    },
+    {
+      "id": "Human1267287",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 122
+    },
+    {
+      "id": "Human1267290",
+      "def": "Tribal_Penitent",
+      "x": 6,
+      "z": 120
+    },
+    {
+      "id": "Human1267292",
+      "def": "Tribal_Berserker",
+      "x": 4,
+      "z": 116
+    },
+    {
+      "id": "Human1267296",
+      "def": "Tribal_Penitent",
+      "x": 3,
+      "z": 105
+    },
+    {
+      "id": "Human1267298",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 105
+    },
+    {
+      "id": "Human1267303",
+      "def": "Tribal_Penitent",
+      "x": 3,
+      "z": 122
+    },
+    {
+      "id": "Human1267305",
+      "def": "Tribal_Berserker",
+      "x": 1,
+      "z": 117
+    },
+    {
+      "id": "Human1267309",
+      "def": "Tribal_Berserker",
+      "x": 1,
+      "z": 121
+    },
+    {
+      "id": "Human1267312",
+      "def": "Tribal_Berserker",
+      "x": 4,
+      "z": 116
+    },
+    {
+      "id": "Human1267316",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 122
+    },
+    {
+      "id": "Human1267320",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 123
+    },
+    {
+      "id": "Human1267323",
+      "def": "Tribal_Penitent",
+      "x": 1,
+      "z": 118
+    },
+    {
+      "id": "Human1267325",
+      "def": "Tribal_Penitent",
+      "x": 6,
+      "z": 120
+    },
+    {
+      "id": "Human1267327",
+      "def": "Tribal_Warrior",
+      "x": 5,
+      "z": 121
+    },
+    {
+      "id": "Human1267331",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 122
+    },
+    {
+      "id": "Human1267334",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 119
+    },
+    {
+      "id": "Human1267338",
+      "def": "Tribal_Warrior",
+      "x": 6,
+      "z": 120
+    },
+    {
+      "id": "Human1267342",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 122
+    },
+    {
+      "id": "Human1267347",
+      "def": "Tribal_Berserker",
+      "x": 0,
+      "z": 119
+    },
+    {
+      "id": "Human1267352",
+      "def": "Tribal_Berserker",
+      "x": 2,
+      "z": 122
+    },
+    {
+      "id": "Human1267356",
+      "def": "Tribal_Penitent",
+      "x": 1,
+      "z": 121
+    },
+    {
+      "id": "Human1267359",
+      "def": "Tribal_Berserker",
+      "x": 1,
+      "z": 111
+    },
+    {
+      "id": "Human1267364",
+      "def": "Tribal_Warrior",
+      "x": 2,
+      "z": 122
+    },
+    {
+      "id": "Human1267368",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 113
+    },
+    {
+      "id": "Human1267370",
+      "def": "Tribal_Penitent",
+      "x": 1,
+      "z": 106
+    },
+    {
+      "id": "Human1267373",
+      "def": "Tribal_Berserker",
+      "x": 1,
+      "z": 121
+    },
+    {
+      "id": "Human1267378",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 116
+    },
+    {
+      "id": "Human1267381",
+      "def": "Tribal_Warrior",
+      "x": 3,
+      "z": 121
+    }
+  ]
+}

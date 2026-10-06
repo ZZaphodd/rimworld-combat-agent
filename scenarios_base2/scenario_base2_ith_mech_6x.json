@@ -1,0 +1,143 @@
+{
+  "id": "base2_ith_mech_6x",
+  "save": "scenario_base2_ith_mech_6x",
+  "spec": {
+    "id": "base2_ith_mech_6x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 3000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Chaz Targrin",
+      "weapon": "Molotov cocktails (93%)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957087",
+      "name": "Paul Paulson",
+      "weapon": "Revolver (good)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1754882",
+      "name": "Bonotti 'Coppis' Coppini",
+      "weapon": "Machine pistol (normal)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957099",
+      "name": "Lada Huffman",
+      "weapon": "Steel knife (poor)",
+      "x": 119,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957104",
+      "name": "Gabby 'Smelly' Marquez",
+      "weapon": "Frag grenades",
+      "x": 121,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957112",
+      "name": "Dmitry Mayo",
+      "weapon": "Heavy SMG (normal)",
+      "x": 113,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1957118",
+      "name": "Henri 'Man' Wolf",
+      "weapon": "Machine pistol (normal)",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1957123",
+      "name": "Yuna Santos",
+      "weapon": "Steel knife (poor 88%)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957125",
+      "name": "Jared 'J Roc' Camirand",
+      "weapon": "Autopistol (poor)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_CentipedeBlaster1957132",
+      "def": "Mech_CentipedeBlaster",
+      "x": 246,
+      "z": 56
+    },
+    {
+      "id": "Mech_CentipedeBurner1957134",
+      "def": "Mech_CentipedeBurner",
+      "x": 244,
+      "z": 52
+    },
+    {
+      "id": "Mech_CentipedeBurner1957136",
+      "def": "Mech_CentipedeBurner",
+      "x": 248,
+      "z": 51
+    },
+    {
+      "id": "Mech_CentipedeBurner1957138",
+      "def": "Mech_CentipedeBurner",
+      "x": 241,
+      "z": 55
+    },
+    {
+      "id": "Mech_CentipedeBlaster1957140",
+      "def": "Mech_CentipedeBlaster",
+      "x": 243,
+      "z": 57
+    },
+    {
+      "id": "Mech_CentipedeGunner1957142",
+      "def": "Mech_CentipedeGunner",
+      "x": 243,
+      "z": 51
+    },
+    {
+      "id": "Mech_CentipedeGunner1957144",
+      "def": "Mech_CentipedeGunner",
+      "x": 241,
+      "z": 55
+    }
+  ]
+}

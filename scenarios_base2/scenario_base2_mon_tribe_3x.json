@@ -1,0 +1,243 @@
+{
+  "id": "base2_mon_tribe_3x",
+  "save": "scenario_base2_mon_tribe_3x",
+  "spec": {
+    "id": "base2_mon_tribe_3x",
+    "tier": "base",
+    "arena": "arena_col_monler2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1267202",
+      "name": "Jarod 'Docky' Duesing",
+      "weapon": "Bolt-action rifle (normal 72%)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267207",
+      "name": "George Crouch",
+      "weapon": "Heavy SMG (good)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267212",
+      "name": "Yefim Peck",
+      "weapon": "Pump shotgun (poor)",
+      "x": 124,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1267219",
+      "name": "Tyrone 'Bobo' Hancock",
+      "weapon": "Pump shotgun (normal 94%)",
+      "x": 125,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1267226",
+      "name": "Tassilo Manges",
+      "weapon": "Autopistol (excellent)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267234",
+      "name": "Penelope Matthews",
+      "weapon": "Revolver (awful 37%)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267238",
+      "name": "Chris Brewer",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267242",
+      "name": "Hadley Sellachite",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1267250",
+      "def": "Tribal_Archer",
+      "x": 247,
+      "z": 136
+    },
+    {
+      "id": "Human1267264",
+      "def": "Tribal_HeavyArcher",
+      "x": 245,
+      "z": 132
+    },
+    {
+      "id": "Human1267268",
+      "def": "Tribal_HeavyArcher",
+      "x": 244,
+      "z": 134
+    },
+    {
+      "id": "Human1267275",
+      "def": "Tribal_Warrior",
+      "x": 247,
+      "z": 134
+    },
+    {
+      "id": "Human1267279",
+      "def": "Tribal_ChiefRanged",
+      "x": 246,
+      "z": 135
+    },
+    {
+      "id": "Human1267284",
+      "def": "Tribal_Archer",
+      "x": 246,
+      "z": 133
+    },
+    {
+      "id": "Human1267289",
+      "def": "Tribal_Berserker",
+      "x": 248,
+      "z": 126
+    },
+    {
+      "id": "Human1267293",
+      "def": "Tribal_Archer",
+      "x": 242,
+      "z": 136
+    },
+    {
+      "id": "Human1267298",
+      "def": "Tribal_Hunter",
+      "x": 245,
+      "z": 133
+    },
+    {
+      "id": "Human1267312",
+      "def": "Tribal_Hunter",
+      "x": 246,
+      "z": 135
+    },
+    {
+      "id": "Human1267316",
+      "def": "Tribal_Penitent",
+      "x": 243,
+      "z": 133
+    },
+    {
+      "id": "Human1267320",
+      "def": "Tribal_Hunter",
+      "x": 244,
+      "z": 134
+    },
+    {
+      "id": "Human1267333",
+      "def": "Tribal_Hunter",
+      "x": 243,
+      "z": 134
+    },
+    {
+      "id": "Human1267337",
+      "def": "Tribal_Hunter",
+      "x": 248,
+      "z": 136
+    },
+    {
+      "id": "Human1267341",
+      "def": "Tribal_Hunter",
+      "x": 245,
+      "z": 134
+    },
+    {
+      "id": "Human1267345",
+      "def": "Tribal_Berserker",
+      "x": 247,
+      "z": 134
+    },
+    {
+      "id": "Human1267350",
+      "def": "Tribal_Archer",
+      "x": 247,
+      "z": 137
+    },
+    {
+      "id": "Human1267354",
+      "def": "Tribal_HeavyArcher",
+      "x": 244,
+      "z": 134
+    },
+    {
+      "id": "Human1267359",
+      "def": "Tribal_Hunter",
+      "x": 247,
+      "z": 128
+    },
+    {
+      "id": "Human1267364",
+      "def": "Tribal_Warrior",
+      "x": 243,
+      "z": 133
+    },
+    {
+      "id": "Human1267368",
+      "def": "Tribal_Hunter",
+      "x": 244,
+      "z": 134
+    },
+    {
+      "id": "Human1267372",
+      "def": "Tribal_Warrior",
+      "x": 247,
+      "z": 129
+    },
+    {
+      "id": "Human1267376",
+      "def": "Tribal_HeavyArcher",
+      "x": 248,
+      "z": 136
+    },
+    {
+      "id": "Human1267381",
+      "def": "Tribal_Hunter",
+      "x": 244,
+      "z": 135
+    },
+    {
+      "id": "Human1267385",
+      "def": "Tribal_Berserker",
+      "x": 247,
+      "z": 137
+    }
+  ]
+}
