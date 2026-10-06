@@ -1,4 +1,5 @@
-"""rca.game.builders.base.edit_save: items out by id at any depth, storyteller and difficulty set."""
+"""rca.game.builders.base: edit_save (items out by id at any depth, storyteller set), the make/strip
+name guards, strip_targets (shelves, basins and bill-takers; one list_recipes per def)."""
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
@@ -36,6 +37,39 @@ class EditSaveTest(unittest.TestCase):
     def test_only_arena_col_names(self):
         with self.assertRaises(Exception):
             base.make(None, "Ithfunda", "Ithfunda", (1, 1))
+
+
+class FakeRm:
+    """list_recipes answers from a table; other calls are not expected."""
+    def __init__(self, bills):
+        self.bills, self.asked = bills, []
+
+    def call(self, name, **kw):
+        assert name == "list_recipes", name
+        self.asked.append(kw["id"])
+        if kw["id"] not in self.bills:
+            raise base.RimMoltError("not a work table")
+        return {"recipes": self.bills[kw["id"]]}
+
+
+class StripTargetsTest(unittest.TestCase):
+    def test_shelves_hydroponics_and_bill_takers_go(self):
+        b = [{"id": "Shelf1", "def": "Shelf"}, {"id": "Shelf2", "def": "Shelf"},
+             {"id": "Bookcase3", "def": "Bookcase"}, {"id": "Hydro4", "def": "HydroponicsBasin"},
+             {"id": "Smithy5", "def": "ElectricSmithy"}, {"id": "Smithy6", "def": "ElectricSmithy"},
+             {"id": "Research7", "def": "HiTechResearchBench"}, {"id": "Wall8", "def": "Wall"},
+             {"id": "Turret9", "def": "Turret_MiniTurret"}, {"id": "Barrel10", "def": "FermentingBarrel"},
+             {"id": "Bookcase11", "def": "BookcaseSmall"}]
+        rm = FakeRm({"Smithy5": ["MakeSword"], "Research7": [], "Barrel10": []})
+        gone = {t["id"] for t in base.strip_targets(rm, b)}
+        self.assertEqual(gone, {"Shelf1", "Shelf2", "Bookcase3", "Hydro4", "Smithy5", "Smithy6", "Bookcase11"})
+        self.assertEqual(sorted(rm.asked), sorted({"Smithy5", "Research7", "Wall8", "Turret9", "Barrel10"}))
+
+    def test_strip_reads_and_writes_arena_col_only(self):
+        for src, name in (("Ithfunda", "Ithfunda2"), ("arena_col_x", "Ithfunda2"), ("arena_col_x", "arena_col_x"),
+                          ("arena_col_x", "arena_col_X"), ("arena_col_x2", "arena_col_x"), ("arena_col_y", "arena_col_x2")):
+            with self.assertRaises(base.RimMoltError):
+                base.strip(None, src, name)
 
 
 if __name__ == "__main__":

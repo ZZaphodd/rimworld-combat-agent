@@ -20,6 +20,11 @@ from .arena import DIFFICULTY, STORYTELLER, strip_anomaly
 
 SAVES = Path(os.environ.get("RIMWORLD_SAVES", Path.home() / "Library/Application Support/RimWorld/Saves"))
 KEEP_ITEMS = re.compile(r"^Chunk")       # stone and slag chunks: map clutter, not supplies
+# Second version of the base arenas (the user, 2026-10-06): raiders spent the battles wrecking the
+# colony's furniture, which dragged them out and turned them into mood management. Every shelf,
+# hydroponics basin and workbench goes, indoors and out; a workbench is any building that takes
+# production bills (list_recipes), so research benches stay.
+STRIP_DEFS = re.compile(r"^(Shelf|ShelfSmall|Bookcase|BookcaseSmall|HydroponicsBasin)$")
 
 
 def item_ids(rm):
@@ -128,10 +133,63 @@ def make_hostile(rm, d, defs, log=print):
     d.close()
 
 
+def colony_buildings(rm):
+    """Buildings owned by the colony (the observer's faction) on the current map."""
+    me = next((p.get("faction") for p in rm.call("list_things", category="pawn", faction="player",
+                                                verbose=True, confirm=True)["things"]), None)
+    return [t for t in rm.call("list_things", category="building", verbose=True, confirm=True,
+                               limit=100000)["things"] if t.get("faction") == me]
+
+
+def takes_bills(rm, thing_id):
+    """True if the building takes production bills (RimMolt list_recipes)."""
+    try:
+        return bool(rm.call("list_recipes", id=thing_id).get("recipes"))
+    except RimMoltError:
+        return False
+
+
+def strip_targets(rm, buildings):
+    """The colony buildings that STRIP_DEFS names or that take bills (one bills check per def)."""
+    first = {}
+    for t in buildings:
+        first.setdefault(t["def"], t)
+    defs = {d for d, t in first.items() if STRIP_DEFS.match(d) or takes_bills(rm, t["id"])}
+    return [t for t in buildings if t["def"] in defs]
+
+
+def strip(rm, source, name, log=print):
+    """A base arena without shelves, hydroponics basins and workbenches, made from an existing
+    base arena (`source`, an arena_col_* save, only loaded) and saved as `name`."""
+    if not source.startswith("arena_col_") or name.lower() != source.lower() + "2":
+        raise RimMoltError(f"strip reads arena_col_<name> and writes arena_col_<name>2, not {source!r} -> {name!r}")
+    src = SAVES / f"{source}.rws"
+    digest = hashlib.md5(src.read_bytes()).hexdigest()
+    session.load(rm, source)
+    gone = strip_targets(rm, colony_buildings(rm))
+    defs = sorted({t["def"] for t in gone})
+    session.save(rm, name)
+    path = SAVES / f"{name}.rws"
+    n = edit_save(path, {t["id"] for t in gone})
+    log(f"{name}: {n} of {len(gone)} buildings removed in the file: {defs}")
+    session.load(rm, name)                       # check the edited file as the game reads it
+    left = [t["def"] for t in colony_buildings(rm) if t["def"] in defs]
+    st = rm.call("get_status")
+    if left or "phoebe" not in (st.get("storyteller") or "").lower() \
+            or (st.get("difficulty") or "").lower() != "strive to survive" or item_ids(rm):
+        raise RimMoltError(f"{name} check failed: left {left[:10]}, {st.get('storyteller')} / {st.get('difficulty')}")
+    rm.call("dev_mode", devMode=False)
+    session.save(rm, name)
+    if hashlib.md5(src.read_bytes()).hexdigest() != digest:
+        raise RimMoltError(f"the source arena {source} changed")
+    log(f"{name}: checked and saved; {source} unchanged")
+    return {"name": name, "source": source, "removed": n, "defs": defs}
+
+
 def make(rm, source, name, observer, hostile=(), log=print):
     if not name.startswith("arena_col_"):
         raise RimMoltError(f"base arenas are named arena_col_*, not {name!r}")
-    if (SAVES / f"{source}.rws").resolve() == (SAVES / f"{name}.rws").resolve():
+    if source.lower() == name.lower():          # the Saves folder ignores case (APFS)
         raise RimMoltError("the arena must not be the source save")
     src = SAVES / f"{source}.rws"
     digest = hashlib.md5(src.read_bytes()).hexdigest()

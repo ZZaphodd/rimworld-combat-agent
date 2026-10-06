@@ -87,10 +87,20 @@ matter, left for much later.
 7. Ladder specs in `scenarios_base.json` (squad OutlanderCivil 500, the only faction hostile
    in both first worlds; enemy ×2–×8), built with `tools/build_scenarios.py --specs
    scenarios_base.json --out scenarios_base` (§6, assault check included).
+8. **v2 arenas** (the user, 2026-10-06: the raids spent the battles wrecking the colony's
+   furniture, which dragged them out into mood management): `tools/make_base_arena.py
+   --strip-from arena_col_<name> --name arena_col_<name>2` copies a base arena without every
+   shelf (Shelf, ShelfSmall, Bookcase, BookcaseSmall), hydroponics basin and workbench, indoors and out. A
+   workbench is any colony building that takes production bills (`list_recipes`): stoves,
+   smithies, tailoring benches, the brewery, drug lab, crematorium, campfire and the Biotech
+   gestator and subcore encoder go; research benches stay. They are removed by id in the copy's
+   file, which is reloaded and checked; the source arena's hash is checked unchanged. The same
+   specs with ids `base2_*` on the `*2` arenas are in `scenarios_base2.json`, built into
+   `scenarios_base2/`; `tools/base_ladder.py --v2` runs them into `results/base/ladder2.jsonl`.
 
-The `arena_col_*` and `scenario_base_*` saves stay in the local Saves folder only: they come
+The `arena_col_*` (v1 and `*2`) and `scenario_base*` saves (`scenario_base_*`, `scenario_base2_*`) stay in the local Saves folder only: they come
 from the user's own colonies, so not even a gzipped copy enters the repo (manifests do, in
-`scenarios_base/`). Mechanoid raids have no `ImmediateAttack`; their specs use
+`scenarios_base/` and `scenarios_base2/`). Mechanoid raids have no `ImmediateAttack`; their specs use
 `StageThenAttack` (breaching is left for a later ladder with sappers).
 
 **Scope when Claude or the user plays a base problem (the user, 2026-10-06):** win the battle
@@ -104,6 +114,14 @@ untested so far).
 Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
 valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
 (240,240); squad at (125,130), the walled yard of a mountain base with tunnels).
+Built (v2, 2026-10-06): `arena_col_ithfunda2` (134 buildings removed: Bookcase, BookcaseSmall,
+Brewery, DrugLab, ElectricCrematorium, ElectricSmelter, ElectricSmithy, ElectricStove,
+FabricationBench, HandTailoringBench, HydroponicsBasin, MechGestator, Shelf, ShelfSmall,
+SubcoreEncoder, TableButcher, TableMachining, TableSculpting, TableStonecutter) and
+`arena_col_monler2` (108: the same less HandTailoringBench, HydroponicsBasin, MechGestator,
+SubcoreEncoder and BookcaseSmall, plus Campfire and ElectricTailoringBench). Kept: research
+benches, tool cabinets, plant pots, three shelf blueprints on Monler (raiders do not target
+blueprints). Same squad places.
 
 ## 1b. Difficulty conversion (superseded 2026-10-04: the saves are rebuilt instead; UNVERIFIED)
 

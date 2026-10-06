@@ -61,8 +61,9 @@ def ready(rm, loads):
 
 
 def manifest(pid):
-    """scenarios_rand/ for the mined problems, scenarios_base/ for the base-defense ladder."""
-    for d in (problem.OUT, ROOT / "scenarios_base"):
+    """scenarios_rand/ for the mined problems, scenarios_base/ and scenarios_base2/ (shelves,
+    hydroponics and workbenches removed) for the base-defense ladders."""
+    for d in (problem.OUT, ROOT / "scenarios_base", ROOT / "scenarios_base2"):
         f = d / f"scenario_{pid}.json"
         if f.exists():
             return json.loads(f.read_text())
@@ -157,7 +158,7 @@ def main():
     r.add_argument("--why", default="")
     r.add_argument("--max-ticks", type=int, default=15000)
     r.add_argument("--rows", type=__import__("pathlib").Path, default=ROWS,
-                   help="where the row goes (results/base/ladder.jsonl for the base ladder)")
+                   help="where the row goes (results/base/ladder.jsonl, or ladder2.jsonl for the v2 base ladder)")
     k = sub.add_parser("rank")
     k.add_argument("--top", type=int, default=100)
     a = ap.parse_args()
