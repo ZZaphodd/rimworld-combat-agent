@@ -30,6 +30,7 @@
 | Claude, re-measure (orders kept: `hands.Keeper`) | the same plan; each shooter kept its target until it fell or stalled; no re-ranking when the melee raiders reached the line | near the start (forest) | defeat, squad down | 1 dead, 8 downed | 73.8 |
 | Claude, re-measure 2 (`Keeper.assign`: expected damage, spread, focus weight, 1.25× switch, friendly-fire radii) | the same plan; fire spread over the arrivals; the close-in rule waited for no raider in reach (t4786) | near the start (forest) | enemies cleared, pyrrhic | 3 dead, 3 downed | 86.6 |
 | Claude, re-measure 3 (`Keeper.assign`, close-in by hand) | the same plan, but the close-in was only attempt 1's first move (no second move, no knives on the rifles); Barr and Pentaryl went down behind the old line | near the start (forest) | defeat, raid left with 2 captives | 4 dead, 2 kidnapped | 132.4 |
+| Claude, re-measure 4 (`Keeper.assign`, attempt 1's close-in) | the same plan; two moves forward and the knives sent at Diver and Banshee, as in attempt 1 | near the start (forest) | **repelled**, 5 dead, 2 downed | 0 lost (2 downed) | **33.5** |
 
 ## Scenes
 - **Claude, t0–500** `us-skill-mismatch` → `loadout` `skirmish-line`:
@@ -55,7 +56,13 @@
   fire, but Mocha, Carol and Diana were shot dead at 17–22 cells and Roach's late rush on
   Banshee and Smog went down there.
 
+- **Re-measure 4, t3634–5436** `raid-holds` → `close-in`: attempt 1's two moves, with Barr sent at
+  Diver and Fernanda at Banshee. The holders closed to 1–2 cells; Diver (t4726) and Lynx (t4768)
+  died, Vector went down; Barr downed Smog as he backed off (t5436); Banshee left.
+
 ## What the play stood on (observed)
+- The two runs that followed attempt 1's close-in (two moves, knives on the rifles) lost none
+  (attempt 1 switching 19.4, re-measure 4 assign 33.5). The three that did not lost 1–4 dead.
 - Re-measure 2 (assign): the melee arrivals died 300–1000 ticks earlier than in the other runs; two
   of three deaths came while the rifles held at 21–27 cells, before a close-in that came 1400 ticks
   after the arrivals died (attempt 1: by hand, ~100 ticks after).
@@ -68,5 +75,5 @@
   it moved forward.
 
 ## Sources
-journal `journals/rand_227_claude_20261005.md` (run and re-measure) · traces `results/human/traces/rand_227_claude_20261005-204801.jsonl.gz`, `rand_227_claude_20261006-070654.jsonl.gz`, `rand_227_claude_20261006-080127.jsonl.gz`, `rand_227_claude_20261006-112307.jsonl.gz` ·
+journal `journals/rand_227_claude_20261005.md` (run and re-measure) · traces `results/human/traces/rand_227_claude_20261005-204801.jsonl.gz`, `rand_227_claude_20261006-070654.jsonl.gz`, `rand_227_claude_20261006-080127.jsonl.gz`, `rand_227_claude_20261006-112307.jsonl.gz`, `rand_227_claude_20261006-114302.jsonl.gz` ·
 agent row `results/night/router.jsonl`

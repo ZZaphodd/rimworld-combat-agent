@@ -1857,6 +1857,13 @@
     "result": "defeat, raid left with 2 captives",
     "lost": "4 dead, 2 kidnapped",
     "badness": "132.4"
+   },
+   {
+    "who": "Claude, re-measure 4 (`Keeper.assign`, attempt 1's close-in)",
+    "play": "the same plan; two moves forward and the knives sent at Diver and Banshee, as in attempt 1",
+    "result": "**repelled**, 5 dead, 2 downed",
+    "lost": "0 lost (2 downed)",
+    "badness": "**33.5**"
    }
   ],
   "id": "rand_227",
