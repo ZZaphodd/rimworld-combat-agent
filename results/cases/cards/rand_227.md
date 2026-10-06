@@ -25,12 +25,12 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` | – | – | defeat, raid left with 5 captives | 1 dead, 5 kidnapped | 173.5 |
-| **Claude** | autopistols to the shooters, knives to the rest; one line SW of the start across the raid's approach; the knives locked what reached the line; then the line stepped 6 cells forward to bring the rifles (holding just outside 25.9) into range, knives on the rifles | near the start (forest) | **repelled**, 7 of 8 dead | 0 lost (Fernanda downed) | **19.4** |
+| agent `doctrine` | – | – | defeat, raid left with 5 captives | 1 dead, 5 kidnapped | 173.5 (123.5 without the kidnap double count) |
+| **Claude** | autopistols to the shooters, knives to the rest; one line SW of the start across the raid's approach; the knives locked what reached the line; then the line moved ~8–10 cells forward in one step to bring the rifles (holding just outside 25.9) into range, knives on the rifles | near the start (forest) | **repelled**, 7 of 8 dead | 0 lost (Fernanda downed) | **19.4** |
 | Claude, re-measure (orders kept: `hands.Keeper`) | the same plan; each shooter kept its target until it fell or stalled; no re-ranking when the melee raiders reached the line | near the start (forest) | defeat, squad down | 1 dead, 8 downed | 73.8 |
 | Claude, re-measure 2 (`Keeper.assign`: expected damage, spread, focus weight, 1.25× switch, friendly-fire radii) | the same plan; fire spread over the arrivals; the close-in rule waited for no raider in reach (t4786) | near the start (forest) | enemies cleared, pyrrhic | 3 dead, 3 downed | 86.6 |
-| Claude, re-measure 3 (`Keeper.assign`, close-in by hand) | the same plan, but the close-in was only attempt 1's first move (no second move, no knives on the rifles); Barr and Pentaryl went down behind the old line | near the start (forest) | defeat, raid left with 2 captives | 4 dead, 2 kidnapped | 132.4 |
-| Claude, re-measure 4 (`Keeper.assign`, attempt 1's close-in) | the same plan; two moves forward and the knives sent at Diver and Banshee, as in attempt 1 | near the start (forest) | **repelled**, 5 dead, 2 downed | 0 lost (2 downed) | **33.5** |
+| Claude, re-measure 3 (`Keeper.assign`, close-in by hand) | the same plan, but the line went only to the cells of attempt 1's first, cancelled order, and no knife was sent at the rifles; Barr (behind the old line) and Pentaryl (where he had held Vera) were left and went down to fire | near the start (forest) | defeat, raid left with 2 captives | 4 dead, 2 kidnapped | 132.4 (112.4 without the kidnap double count) |
+| Claude, re-measure 4 (`Keeper.assign`, attempt 1's close-in) | the same plan; the line to the cells attempt 1 reached (Mocha and Carol stopped 6–7 short) and the knives sent at Diver and Banshee, as in attempt 1; Lynx still stood | near the start (forest) | **repelled**, 5 dead, 2 downed | 0 lost (2 downed) | **33.5** |
 
 ## Scenes
 - **Claude, t0–500** `us-skill-mismatch` → `loadout` `skirmish-line`:
@@ -46,23 +46,26 @@
 - **Claude, t4290–5494** `raid-holds` → `close-in`:
   - Diver, Smog, Banshee and Vector held at 20–27 cells, just outside our range ("Fire at"
     disabled). The shooters kept firing at the raider in melee instead.
-  - The line stepped 6 cells forward. Barr (knife, flak) went at Diver and Pentaryl at Banshee.
+  - The line moved ~8–10 cells forward in one step (~t4390; an earlier order to ~6 cells was
+    cancelled by the controller before anyone moved). Barr (knife, flak) was sent at Diver and
+    Pentaryl at Banshee in the same call.
   - Diver died at t5116, Vector at t5494.
 - **Claude, t5494–8055** `raid-breaking`: Smog and Banshee (62–64%) backed off east. Barr followed
   Smog and killed him in melee (~t7039); Banshee left.
 
-- **Re-measure 3, t3890–7727** `raid-holds` → `close-in` (first move only): the knives stayed
-  behind and went down to fire (t4117, t4357); Lynx (t5036) and Vector (t6112) died to focused
-  fire, but Mocha, Carol and Diana were shot dead at 17–22 cells and Roach's late rush on
-  Banshee and Smog went down there.
-
-- **Re-measure 4, t3634–5436** `raid-holds` → `close-in`: attempt 1's two moves, with Barr sent at
-  Diver and Fernanda at Banshee. The holders closed to 1–2 cells; Diver (t4726) and Lynx (t4768)
-  died, Vector went down; Barr downed Smog as he backed off (t5436); Banshee left.
+- **Re-measure 3, t3890–7719** `raid-holds` → `close-in` (to the cells of attempt 1's cancelled first
+  order, no knife sent): Barr and Pentaryl were left and went down to fire (t4117, t4349); Lynx
+  (t5036) and Vector (t6112) died to focused fire, but Mocha, Carol and Diana were shot dead at
+  18–23 cells, and Roach's late rush on Banshee and Smog went down there.
+- **Re-measure 4, t3634–5428** `raid-holds` → `close-in`: the line to attempt 1's far cells, Barr sent
+  at Diver and Fernanda at Banshee. The holders stayed on their cells and the knives reached them
+  (t4100–4515); Diver (t4726) and Lynx (t4768) died, Vector went down; Barr downed Smog as he
+  backed off (t5428); Banshee left.
 
 ## What the play stood on (observed)
-- The two runs that followed attempt 1's close-in (two moves, knives on the rifles) lost none
-  (attempt 1 switching 19.4, re-measure 4 assign 33.5). The three that did not lost 1–4 dead.
+- The two runs that lost none (attempt 1 switching 19.4, re-measure 4 assign 33.5) had the line on
+  attempt 1's far cells 100–150 ticks after the last melee arrival died and two knives sent at
+  Diver and Banshee. The other three lost 1, 3 and 6 (re-measure 3: 4 dead, 2 kidnapped).
 - Re-measure 2 (assign): the melee arrivals died 300–1000 ticks earlier than in the other runs; two
   of three deaths came while the rifles held at 21–27 cells, before a close-in that came 1400 ticks
   after the arrivals died (attempt 1: by hand, ~100 ticks after).
