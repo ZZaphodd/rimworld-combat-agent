@@ -71,7 +71,10 @@ def assaults(rm, save, squad_ids, ticks=3000, min_close=0.3, log=print):
 
     session.load(rm, save)
     d0 = median_gap()
-    rm.wait(ticks, max_seconds=90)
+    t0 = rm.call("get_status")["ticksGame"]
+    while (left := ticks - (rm.call("get_status")["ticksGame"] - t0)) > 0:   # a wait may end early
+        rm.wait(min(left, 600), max_seconds=30)
+    rm.call("set_speed", action="pause")
     d1 = median_gap()
     aiming = any((t.get("targeting") or "").startswith(("targeting colonist", "attacking colonist"))
                  for t in hostiles(rm))
@@ -84,9 +87,11 @@ def assaults(rm, save, squad_ids, ticks=3000, min_close=0.3, log=print):
 
 
 def build_checked(rm, spec, out_dir, tries=3, log=print):
+    """`assault_ticks` in the spec lengthens the check: on a colony map the raid walks a long way
+    and smashes the outlying furniture on the way in (base arenas, 2026-10-06)."""
     for attempt in range(tries):
         m = build(rm, spec, out_dir, log)
-        if assaults(rm, m["save"], [p["id"] for p in m["squad"]], log=log):
+        if assaults(rm, m["save"], [p["id"] for p in m["squad"]], ticks=spec.get("assault_ticks", 3000), log=log):
             return m
         log(f"   rebuilding {spec['id']} (attempt {attempt + 2})")
     raise RimMoltError(f"{spec['id']}: enemy never assaulted in {tries} builds")

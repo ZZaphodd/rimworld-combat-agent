@@ -16,9 +16,15 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--specs", type=Path, default=ROOT / "scenarios.json")
 ap.add_argument("--only")
 ap.add_argument("--out", type=Path, default=ROOT / "scenarios_out")
+ap.add_argument("--keep-going", action="store_true", help="log a failed spec and go on")
 a = ap.parse_args()
 rm = RimMolt()
 for spec in json.loads(a.specs.read_text()):
     if spec.get("tier") in ("theme", "check") or (a.only and spec["id"] != a.only):
         continue
-    scenario.build_checked(rm, spec, a.out)
+    try:
+        scenario.build_checked(rm, spec, a.out)
+    except Exception as e:                       # noqa: BLE001
+        if not a.keep_going:
+            raise
+        print(f"   FAILED {spec['id']}: {e}", flush=True)

@@ -17,7 +17,8 @@
    "points": 1000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_tribe_3x",
@@ -37,7 +38,8 @@
    "points": 1500,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_tribe_4x",
@@ -57,7 +59,8 @@
    "points": 2000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_tribe_6x",
@@ -77,7 +80,8 @@
    "points": 3000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_tribe_8x",
@@ -97,7 +101,8 @@
    "points": 4000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_pirate_2x",
@@ -117,7 +122,8 @@
    "points": 1000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_pirate_3x",
@@ -137,7 +143,8 @@
    "points": 1500,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_pirate_4x",
@@ -157,7 +164,8 @@
    "points": 2000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_pirate_6x",
@@ -177,7 +185,8 @@
    "points": 3000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_pirate_8x",
@@ -197,7 +206,8 @@
    "points": 4000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_mech_2x",
@@ -217,7 +227,8 @@
    "points": 1000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_mech_3x",
@@ -237,7 +248,8 @@
    "points": 1500,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_mech_4x",
@@ -257,7 +269,8 @@
    "points": 2000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_mech_6x",
@@ -277,7 +290,8 @@
    "points": 3000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_ith_mech_8x",
@@ -297,7 +311,8 @@
    "points": 4000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_tribe_2x",
@@ -317,7 +332,8 @@
    "points": 1000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_tribe_3x",
@@ -337,7 +353,8 @@
    "points": 1500,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_tribe_4x",
@@ -357,7 +374,8 @@
    "points": 2000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_tribe_6x",
@@ -377,7 +395,8 @@
    "points": 3000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_tribe_8x",
@@ -397,7 +416,8 @@
    "points": 4000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_pirate_2x",
@@ -417,7 +437,8 @@
    "points": 1000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_pirate_3x",
@@ -437,7 +458,8 @@
    "points": 1500,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_pirate_4x",
@@ -457,7 +479,8 @@
    "points": 2000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_pirate_6x",
@@ -477,7 +500,8 @@
    "points": 3000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_pirate_8x",
@@ -497,7 +521,8 @@
    "points": 4000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_mech_2x",
@@ -517,7 +542,8 @@
    "points": 1000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_mech_3x",
@@ -537,7 +563,8 @@
    "points": 1500,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_mech_4x",
@@ -557,7 +584,8 @@
    "points": 2000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_mech_6x",
@@ -577,7 +605,8 @@
    "points": 3000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  },
  {
   "id": "base_mon_mech_8x",
@@ -597,6 +626,7 @@
    "points": 4000,
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
-  }
+  },
+  "assault_ticks": 6000
  }
 ]
