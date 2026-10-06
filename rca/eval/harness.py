@@ -207,6 +207,9 @@ def engagement_kpis(tracker, avail_ours, avail_theirs):
 
 def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, options=None,
                 difficulty=STANDARD_DIFFICULTY):
+    if hasattr(agent, "preflight"):              # per-problem input (turtle_at's plan): fails before the load,
+        agent.options = dict(options or {})      # so a bad one writes no row
+        agent.preflight(manifest)
     session.start_episode(rm, manifest["save"])
     found = (rm.call("get_status").get("difficulty") or "").lower()
     if difficulty and found != difficulty:

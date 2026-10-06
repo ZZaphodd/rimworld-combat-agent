@@ -48,7 +48,8 @@ Raid sizes (our pawns / raiders), from the manifests:
 
 ## v2: without shelves, hydroponics basins and workbenches (2026-10-06)
 The user saw the v1 raids spend the battles wrecking the colony's furniture (PROCEDURES §1c
-step 8).
+step 8). The user's judgment: v2 is the fair measurement of a battle, and the v1 rows, run with
+the colony's stockpile shelves still standing, are contaminated.
 - Arenas: `arena_col_ithfunda2` and `arena_col_monler2` are the same bases without that
   furniture, indoors and out.
 - Problems: the same 30 specs were rebuilt as `base2_*` (`scenarios_base2/`). 29 were built;

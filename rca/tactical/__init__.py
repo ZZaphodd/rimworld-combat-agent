@@ -13,8 +13,9 @@ from .kite import Kite
 from .replay import Replay
 from .spread import Spread
 from .turtle import Turtle
+from .turtle_at import TurtleAt
 
-AGENTS = {a.name: a for a in (Idle, Amove, Focus, Turtle, Spread, Kite, Close, Replay)}
+AGENTS = {a.name: a for a in (Idle, Amove, Focus, Turtle, TurtleAt, Spread, Kite, Close, Replay)}
 
 
 def make(name):

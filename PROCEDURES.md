@@ -111,6 +111,23 @@ only unassigned in the default work settings, and no squad pawn is incapable of 
 `set_work_priority`); `set_hostility_response` keeps undrafted workers from fleeing (both calls
 untested so far).
 
+**Where turtle holds: the strategic layer's pick (the user, 2026-10-06).** v2 is the fair
+measurement and the v1 rows, run with the stockpile shelves standing, are contaminated. Even
+turtle needs the strategic layer to mark where to hold, and rules can't pick yet, so Claude picks:
+1. From start information only (the manifest's squad and raid, the save map, `sites.md`, the base
+   cards): `python3 tools/site_plan.py show <problem>` prints the problem's save map offline (no
+   game: `rca/game/savemap.py`).
+2. One entry per problem in a plan file `results/base/plans/base2_r<N>.json`
+   (`rca/strategic/siteplan.py`): the site, why, every pawn's cell and role, the room, the doors
+   to hold open, rear cells for the wounded. `python3 tools/site_plan.py check <plan>` must pass.
+3. Commit the plan before the first row. A plan rows cite is frozen: a changed pick is a new
+   revision file, never an edit.
+4. `python3 tools/base_ladder.py --v2 --agent turtle_at --option plan=<plan> --all-rungs` runs agent
+   `turtle_at` (turtle v9 at the pick; in a room, turtle's rules that walk the squad out are
+   replaced: `rca/tactical/turtle_at.py`) into `results/base/ladder2_turtle_at.jsonl`. Every rung
+   is checked against the plan before the first run. turtle itself runs the same rungs with
+   `--agent turtle --all-rungs` for the pairs.
+
 Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
 valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
 (240,240); squad at (125,130), the walled yard of a mountain base with tunnels).
@@ -428,7 +445,8 @@ a value lives while a process holds the name, and the overlay holds both); a dif
 value is a new battle, and the problem and player come from that process's command line
 (`night.py run <id> --agent`, `run_human.py --manifest … --player`; other harnesses show their
 script name), the in-game date and hour (`get_conditions`),
-the raid standing/downed (our pawns are in the game's colonist bar), the latest messages, each side's combat strength and the latest 4 v2 ladder rows, all in one bottom bar.
+the raid standing/downed (our pawns are in the game's colonist bar), the latest messages, each side's combat strength and the latest 4 v2 ladder rows of the agent last seen (turtle's
+`ladder2.jsonl` or `ladder2_<agent>.jsonl`), all in one bottom bar.
 Strength (the user's tug-of-war): a pawn is worth its kind's combatPower × xenotype factor
 (`data/xenotypes.json`; raiders: the raid faction's expected factor, as RimMolt does not show a
 raider's xenotype; ours: the manifest's kinds, else an equal share of the squad's point budget);

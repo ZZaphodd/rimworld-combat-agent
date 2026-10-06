@@ -9,7 +9,8 @@ holds the names, so a change of start time is a new battle, and the problem and 
 that process's command line (night.py run <id> --agent <a>, run_human.py --manifest ...
 --player <p>; another harness shows its script name). Our pawns are left to the game's own
 colonist bar. The
-v2 base ladder's rows (results/base/ladder2.jsonl) are shown beside it. Binds to 127.0.0.1 only.
+v2 base ladder's rows of the last agent seen (results/base/ladder2.jsonl for turtle,
+ladder2_<agent>.jsonl for another) are shown beside it. Binds to 127.0.0.1 only.
 """
 import argparse
 import json
@@ -64,9 +65,19 @@ def battle():
     return (start, *parse(cmd.strip()))
 
 
-def ladder():
-    rows = [json.loads(l) for l in LADDER.read_text().splitlines() if l.strip()] if LADDER.exists() else []
-    return [{"id": r["scenario"], "grade": r.get("grade"), "badness": r.get("badness")} for r in rows]
+LAST = {"agent": "turtle"}                     # the ladder shown between battles: the last agent seen
+
+
+def ladder(player=None):
+    """(agent, rows) of the v2 ladder the live agent writes: ladder2.jsonl for turtle,
+    ladder2_<agent>.jsonl for another agent (tools/base_ladder.py)."""
+    if player and player not in ("you", "claude", "human"):
+        LAST["agent"] = player
+    agent = LAST["agent"]
+    f = LADDER if agent == "turtle" else LADDER.with_name(f"{LADDER.stem}_{agent}.jsonl")
+    rows = [json.loads(l) for l in f.read_text().splitlines() if l.strip()] if f.exists() else []
+    return agent, [{"id": r["scenario"], "grade": r.get("grade"), "badness": r.get("badness")}
+                   for r in rows if r.get("outcome") != "invalid"]
 
 
 def manifest(pid):
@@ -162,10 +173,12 @@ def poll(rm, period):
             if pid and strength is None:
                 strength = Strength(rm, pid)
             power = strength.update(rm, tick, MODE["strength"]) if pid and strength else None
+            ladder_agent, rows = ladder(player)
             STATE.clear()
             STATE.update({"ok": True, "pid": pid, "player": player, "date": cond.get("date"), "hour": cond.get("hour"),
                           "paused": bool(st.get("paused")), "power": power,
-                          "msgs": [m[:90] for m in msgs[-3:]], "ladder": ladder(), "at": time.time()})
+                          "msgs": [m[:90] for m in msgs[-3:]], "ladder": rows, "ladder_agent": ladder_agent,
+                          "at": time.time()})
         except Exception as e:                   # loads, restarts, odd replies: keep the last state, marked stale
             STATE.update({"ok": False, "note": type(e).__name__})
         time.sleep(period)

@@ -101,11 +101,17 @@ def cmd_new(a):
 
 
 def cmd_run(a):
-    rm = RimMolt()
-    ready(rm, 1)
     m = manifest(a.pid)
     options = dict(o.split("=", 1) for o in a.option)
     agent = make(a.agent)
+    if hasattr(agent, "preflight"):              # per-problem input (turtle_at's plan): checked before the
+        agent.options = dict(options)            # game is touched; no row if it is bad
+        try:
+            agent.preflight(m)
+        except Exception as e:
+            sys.exit(f"{a.pid} {canonical(a.agent)}: preflight failed: {e}")
+    rm = RimMolt()
+    ready(rm, 1)
     row = run_episode(rm, m, agent, a.max_ticks, Cycle(), True, log, options)
     sp = m["spec"]
     row["problem"] = {"arena": sp["arena"], "squad": sp["squad"]["faction"],

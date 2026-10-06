@@ -1,6 +1,7 @@
 """Re-extract the XML tables: data/combat_power.json (PawnKindDef combatPower)
 data/weapon_ranges.json (weapon verb ranges, mech kind -> weapons) and data/xenotypes.json
-(xenotype combatPowerFactor, each faction's expected factor).
+(xenotype combatPowerFactor, each faction's expected factor) and data/buildings.json
+(building passability, fill, size, door/rock flags).
 
   python3 tools/combat_points.py [--game /path/to/RimWorldMac.app]
 """
@@ -23,3 +24,6 @@ print(f"{len(w['weapons'])} weapons, {len(w['mech_kinds'])} mech kinds -> {defs.
 x = defs.extract_xenotypes(a.game)
 defs.XENOS.write_text(json.dumps(x, indent=1) + "\n")
 print(f"{len(x['xenotype'])} xenotypes, {len(x['faction'])} factions -> {defs.XENOS}")
+b = defs.extract_buildings(a.game)
+defs.BUILDINGS.write_text(json.dumps(b, indent=1) + "\n")
+print(f"{len(b)} buildings -> {defs.BUILDINGS}")
