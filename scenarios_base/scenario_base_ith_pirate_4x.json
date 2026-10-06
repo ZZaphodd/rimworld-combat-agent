@@ -1,0 +1,197 @@
+{
+  "id": "base_ith_pirate_4x",
+  "save": "scenario_base_ith_pirate_4x",
+  "spec": {
+    "id": "base_ith_pirate_4x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Hooke Nash",
+      "weapon": "Autopistol (normal)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human784825",
+      "name": "Samuel Pyrelight",
+      "weapon": "Autopistol (normal 80%)",
+      "x": 116,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899758",
+      "name": "Penny Thulivel",
+      "weapon": "Revolver (good)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899765",
+      "name": "Emily LaFleur",
+      "weapon": "Steel knife (poor 44%)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899770",
+      "name": "Albert Vargas",
+      "weapon": "Machine pistol (poor)",
+      "x": 120,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899775",
+      "name": "Sayuri Conway",
+      "weapon": "Revolver (poor 63%)",
+      "x": 113,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899780",
+      "name": "Jane 'Belle' Ball",
+      "weapon": "Pump shotgun (normal 98%)",
+      "x": 116,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899785",
+      "name": "Nestor Biogite",
+      "weapon": "Autopistol (normal)",
+      "x": 118,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899791",
+      "name": "Irwin Caldwell",
+      "weapon": "Autopistol (normal 41%)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1899799",
+      "def": "Mercenary_EliteTox",
+      "x": 4,
+      "z": 0
+    },
+    {
+      "id": "Human1899808",
+      "def": "Mercenary_Sniper",
+      "x": 7,
+      "z": 3
+    },
+    {
+      "id": "Human1899814",
+      "def": "Pirate",
+      "x": 8,
+      "z": 7
+    },
+    {
+      "id": "Human1899834",
+      "def": "Mercenary_EliteTox",
+      "x": 5,
+      "z": 4
+    },
+    {
+      "id": "Human1899842",
+      "def": "Mercenary_HeavyTox",
+      "x": 2,
+      "z": 11
+    },
+    {
+      "id": "Human1899846",
+      "def": "PirateBossTox",
+      "x": 3,
+      "z": 9
+    },
+    {
+      "id": "Human1899854",
+      "def": "Mercenary_SlasherTox",
+      "x": 3,
+      "z": 9
+    },
+    {
+      "id": "Human1899861",
+      "def": "Mercenary_GunnerTox",
+      "x": 7,
+      "z": 3
+    },
+    {
+      "id": "Human1899868",
+      "def": "Mercenary_Heavy",
+      "x": 9,
+      "z": 8
+    },
+    {
+      "id": "Human1899873",
+      "def": "Mercenary_Elite",
+      "x": 3,
+      "z": 4
+    },
+    {
+      "id": "Human1899879",
+      "def": "Mercenary_Sniper",
+      "x": 2,
+      "z": 7
+    },
+    {
+      "id": "Human1899885",
+      "def": "Mercenary_GunnerTox",
+      "x": 7,
+      "z": 3
+    },
+    {
+      "id": "Human1899892",
+      "def": "Mercenary_Sniper",
+      "x": 5,
+      "z": 11
+    },
+    {
+      "id": "Human1899898",
+      "def": "Mercenary_HeavyTox",
+      "x": 1,
+      "z": 3
+    },
+    {
+      "id": "Human1899904",
+      "def": "Mercenary_Sniper",
+      "x": 2,
+      "z": 2
+    },
+    {
+      "id": "Human1899911",
+      "def": "Mercenary_Sniper",
+      "x": 7,
+      "z": 4
+    }
+  ]
+}

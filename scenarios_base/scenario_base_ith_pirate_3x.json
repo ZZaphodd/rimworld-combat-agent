@@ -1,0 +1,179 @@
+{
+  "id": "base_ith_pirate_3x",
+  "save": "scenario_base_ith_pirate_3x",
+  "spec": {
+    "id": "base_ith_pirate_3x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Willo Jinx",
+      "weapon": "Revolver (good)",
+      "x": 113,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899755",
+      "name": "James Lamp",
+      "weapon": "Machine pistol (normal)",
+      "x": 116,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899773",
+      "name": "Haruto Mann",
+      "weapon": "Machine pistol (normal)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899778",
+      "name": "Balder Hougaard",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899796",
+      "name": "Zoey 'Zozo' Amon",
+      "weapon": "Revolver (poor)",
+      "x": 124,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899802",
+      "name": "Zachary 'Zach' Gebheart",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 114,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899808",
+      "name": "Dominic 'Dodo' Yasin",
+      "weapon": "Machine pistol (normal)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899813",
+      "name": "Vance 'Gemini' Gordon",
+      "weapon": "Autopistol (normal)",
+      "x": 118,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899817",
+      "name": "Rhaemir 'Rhae' Moryn",
+      "weapon": "Machine pistol (poor 65%)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1899824",
+      "def": "PirateBossTox",
+      "x": 82,
+      "z": 6
+    },
+    {
+      "id": "Human1899832",
+      "def": "Mercenary_Sniper",
+      "x": 81,
+      "z": 4
+    },
+    {
+      "id": "Human1899842",
+      "def": "Mercenary_HeavyTox",
+      "x": 78,
+      "z": 0
+    },
+    {
+      "id": "Human1899846",
+      "def": "Mercenary_GunnerTox",
+      "x": 85,
+      "z": 8
+    },
+    {
+      "id": "Human1899854",
+      "def": "Mercenary_Sniper",
+      "x": 85,
+      "z": 2
+    },
+    {
+      "id": "Human1899861",
+      "def": "Pirate",
+      "x": 83,
+      "z": 3
+    },
+    {
+      "id": "Human1899866",
+      "def": "Mercenary_EliteTox",
+      "x": 95,
+      "z": 5
+    },
+    {
+      "id": "Human1899875",
+      "def": "Mercenary_HeavyTox",
+      "x": 83,
+      "z": 3
+    },
+    {
+      "id": "Human1899880",
+      "def": "Scavenger",
+      "x": 92,
+      "z": 7
+    },
+    {
+      "id": "Human1899885",
+      "def": "Mercenary_Gunner",
+      "x": 84,
+      "z": 2
+    },
+    {
+      "id": "Human1899892",
+      "def": "Mercenary_Sniper",
+      "x": 94,
+      "z": 2
+    },
+    {
+      "id": "Human1899899",
+      "def": "Mercenary_Sniper",
+      "x": 95,
+      "z": 3
+    },
+    {
+      "id": "Human1899905",
+      "def": "Pirate",
+      "x": 85,
+      "z": 2
+    }
+  ]
+}

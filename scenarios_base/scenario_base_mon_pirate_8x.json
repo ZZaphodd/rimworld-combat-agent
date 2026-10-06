@@ -1,0 +1,297 @@
+{
+  "id": "base_mon_pirate_8x",
+  "save": "scenario_base_mon_pirate_8x",
+  "spec": {
+    "id": "base_mon_pirate_8x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 4000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212584",
+      "name": "Yusonara 'Yuso' Vaia",
+      "weapon": "Revolver (normal)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212590",
+      "name": "Emma 'Ems' Glasgow",
+      "weapon": "Heavy SMG (normal)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212595",
+      "name": "Anton 'Waltz' Walther",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212597",
+      "name": "Yuliya Meza",
+      "weapon": "Autopistol (good)",
+      "x": 126,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212604",
+      "name": "Ludmila Wolfe",
+      "weapon": "Steel knife (poor)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212608",
+      "name": "Yuto Estes",
+      "weapon": "Revolver (normal)",
+      "x": 119,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212614",
+      "name": "Rhaemir 'Rhae' Moryn",
+      "weapon": "Steel knife (poor)",
+      "x": 124,
+      "z": 127,
+      "health": 100
+    },
+    {
+      "id": "Human1212619",
+      "name": "Valentin Henry",
+      "weapon": "Revolver (normal)",
+      "x": 127,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1212627",
+      "def": "Mercenary_Gunner",
+      "x": 70,
+      "z": 245
+    },
+    {
+      "id": "Human1212633",
+      "def": "Mercenary_Heavy",
+      "x": 67,
+      "z": 247
+    },
+    {
+      "id": "Human1212637",
+      "def": "Mercenary_Slasher",
+      "x": 68,
+      "z": 249
+    },
+    {
+      "id": "Human1212642",
+      "def": "Mercenary_Elite",
+      "x": 81,
+      "z": 248
+    },
+    {
+      "id": "Human1212649",
+      "def": "Mercenary_Heavy",
+      "x": 77,
+      "z": 248
+    },
+    {
+      "id": "Human1212654",
+      "def": "Mercenary_Sniper",
+      "x": 77,
+      "z": 245
+    },
+    {
+      "id": "Human1212661",
+      "def": "PirateBoss",
+      "x": 67,
+      "z": 246
+    },
+    {
+      "id": "Human1015437",
+      "def": "Mercenary_Elite",
+      "x": 71,
+      "z": 247
+    },
+    {
+      "id": "Human1212670",
+      "def": "Mercenary_Sniper",
+      "x": 82,
+      "z": 248
+    },
+    {
+      "id": "Human1212676",
+      "def": "Mercenary_Elite",
+      "x": 77,
+      "z": 244
+    },
+    {
+      "id": "Human1212683",
+      "def": "Mercenary_Heavy",
+      "x": 70,
+      "z": 248
+    },
+    {
+      "id": "Human1212688",
+      "def": "Mercenary_Heavy",
+      "x": 79,
+      "z": 247
+    },
+    {
+      "id": "Human1212692",
+      "def": "Mercenary_Gunner",
+      "x": 67,
+      "z": 249
+    },
+    {
+      "id": "Human1212699",
+      "def": "Mercenary_Slasher",
+      "x": 68,
+      "z": 249
+    },
+    {
+      "id": "Human1212706",
+      "def": "Mercenary_Gunner",
+      "x": 75,
+      "z": 247
+    },
+    {
+      "id": "Human1212713",
+      "def": "Mercenary_Elite",
+      "x": 75,
+      "z": 248
+    },
+    {
+      "id": "Human1212733",
+      "def": "Mercenary_Heavy",
+      "x": 75,
+      "z": 248
+    },
+    {
+      "id": "Human1212738",
+      "def": "Mercenary_Heavy",
+      "x": 71,
+      "z": 246
+    },
+    {
+      "id": "Human1212743",
+      "def": "Mercenary_Elite",
+      "x": 68,
+      "z": 249
+    },
+    {
+      "id": "Human1212749",
+      "def": "Grenadier_Destructive",
+      "x": 70,
+      "z": 243
+    },
+    {
+      "id": "Human1212755",
+      "def": "Mercenary_Gunner",
+      "x": 80,
+      "z": 248
+    },
+    {
+      "id": "Human1212757",
+      "def": "Mercenary_Gunner",
+      "x": 77,
+      "z": 248
+    },
+    {
+      "id": "Human1212763",
+      "def": "Mercenary_Heavy",
+      "x": 78,
+      "z": 246
+    },
+    {
+      "id": "Human1212768",
+      "def": "Mercenary_Elite",
+      "x": 79,
+      "z": 247
+    },
+    {
+      "id": "Human1212775",
+      "def": "Scavenger",
+      "x": 68,
+      "z": 244
+    },
+    {
+      "id": "Human1212781",
+      "def": "Grenadier_Smoke",
+      "x": 78,
+      "z": 246
+    },
+    {
+      "id": "Human1212787",
+      "def": "Mercenary_Slasher",
+      "x": 79,
+      "z": 247
+    },
+    {
+      "id": "Human1212794",
+      "def": "Mercenary_Sniper",
+      "x": 75,
+      "z": 248
+    },
+    {
+      "id": "Human1212800",
+      "def": "Mercenary_Gunner",
+      "x": 72,
+      "z": 248
+    },
+    {
+      "id": "Human1212807",
+      "def": "Mercenary_Elite",
+      "x": 67,
+      "z": 247
+    },
+    {
+      "id": "Human1212813",
+      "def": "Scavenger",
+      "x": 67,
+      "z": 246
+    },
+    {
+      "id": "Human1212818",
+      "def": "Mercenary_Gunner",
+      "x": 74,
+      "z": 247
+    },
+    {
+      "id": "Human1212826",
+      "def": "Mercenary_Sniper",
+      "x": 68,
+      "z": 249
+    },
+    {
+      "id": "Human1212834",
+      "def": "Scavenger",
+      "x": 76,
+      "z": 247
+    }
+  ]
+}

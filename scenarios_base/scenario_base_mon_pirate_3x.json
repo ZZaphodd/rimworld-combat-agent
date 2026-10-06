@@ -1,0 +1,171 @@
+{
+  "id": "base_mon_pirate_3x",
+  "save": "scenario_base_mon_pirate_3x",
+  "spec": {
+    "id": "base_mon_pirate_3x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212584",
+      "name": "Rada Farley",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212590",
+      "name": "Souta Galloway",
+      "weapon": "Revolver (good)",
+      "x": 121,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1212597",
+      "name": "Bacopa 'Pinky' Martinez",
+      "weapon": "Autopistol (normal 75%)",
+      "x": 123,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1212613",
+      "name": "Gennady Gonzales",
+      "weapon": "Revolver (normal 69%)",
+      "x": 125,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1212617",
+      "name": "Erik 'Nytro' Nystrom",
+      "weapon": "Molotov cocktails",
+      "x": 129,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212623",
+      "name": "Ingrid Hoover",
+      "weapon": "Machine pistol (normal)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212628",
+      "name": "Ignacio Sandoval",
+      "weapon": "Autopistol (poor 92%)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212633",
+      "name": "Marat Suarez",
+      "weapon": "Autopistol (normal)",
+      "x": 124,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1212642",
+      "def": "PirateBoss",
+      "x": 41,
+      "z": 242
+    },
+    {
+      "id": "Human1212648",
+      "def": "Mercenary_Heavy",
+      "x": 38,
+      "z": 243
+    },
+    {
+      "id": "Human1212652",
+      "def": "Pirate",
+      "x": 34,
+      "z": 246
+    },
+    {
+      "id": "Human1212659",
+      "def": "Pirate",
+      "x": 35,
+      "z": 245
+    },
+    {
+      "id": "Human1212665",
+      "def": "Mercenary_Sniper",
+      "x": 36,
+      "z": 248
+    },
+    {
+      "id": "Human1212673",
+      "def": "Mercenary_Gunner",
+      "x": 36,
+      "z": 246
+    },
+    {
+      "id": "Human1212679",
+      "def": "Mercenary_Heavy",
+      "x": 36,
+      "z": 245
+    },
+    {
+      "id": "Human1212683",
+      "def": "Mercenary_Elite",
+      "x": 36,
+      "z": 243
+    },
+    {
+      "id": "Human1212689",
+      "def": "Mercenary_Elite",
+      "x": 47,
+      "z": 248
+    },
+    {
+      "id": "Human1212696",
+      "def": "Grenadier_Destructive",
+      "x": 33,
+      "z": 247
+    },
+    {
+      "id": "Human1212701",
+      "def": "Mercenary_Heavy",
+      "x": 35,
+      "z": 245
+    },
+    {
+      "id": "Human1212705",
+      "def": "Mercenary_Sniper",
+      "x": 41,
+      "z": 247
+    },
+    {
+      "id": "Human1212711",
+      "def": "Mercenary_Sniper",
+      "x": 48,
+      "z": 248
+    }
+  ]
+}

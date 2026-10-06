@@ -88,6 +88,11 @@ matter, left for much later.
    in both first worlds; enemy ×2–×8), built with `tools/build_scenarios.py --specs
    scenarios_base.json --out scenarios_base` (§6, assault check included).
 
+The `arena_col_*` and `scenario_base_*` saves stay in the local Saves folder only: they come
+from the user's own colonies, so not even a gzipped copy enters the repo (manifests do, in
+`scenarios_base/`). Mechanoid raids have no `ImmediateAttack`; their specs use
+`StageThenAttack` (breaching is left for a later ladder with sappers).
+
 Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
 valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
 (240,240); squad at (125,130), the walled yard of a mountain base with tunnels).

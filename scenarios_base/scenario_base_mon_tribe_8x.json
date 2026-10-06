@@ -1,0 +1,471 @@
+{
+  "id": "base_mon_tribe_8x",
+  "save": "scenario_base_mon_tribe_8x",
+  "spec": {
+    "id": "base_mon_tribe_8x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 4000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212584",
+      "name": "Joseph 'Joe' Shipley",
+      "weapon": "Pump shotgun (normal 75%)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212590",
+      "name": "Yuuka Leach",
+      "weapon": "Machine pistol (normal)",
+      "x": 122,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212603",
+      "name": "Lane Villa",
+      "weapon": "Molotov cocktails (79%)",
+      "x": 124,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1212608",
+      "name": "Jenniferium 'Jenni' Chenni",
+      "weapon": "Steel knife (poor 47%)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212625",
+      "name": "Cecelia 'Cee-Oh' Thierry",
+      "weapon": "Revolver (good)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212632",
+      "name": "Sven 'Rock' Reek",
+      "weapon": "Revolver (normal)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212637",
+      "name": "Svetlana Kennedy",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212643",
+      "name": "Cody Schaefer",
+      "weapon": "Pump shotgun (normal 64%)",
+      "x": 126,
+      "z": 126,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1212654",
+      "def": "Tribal_Hunter",
+      "x": 179,
+      "z": 246
+    },
+    {
+      "id": "Human1212658",
+      "def": "Tribal_HeavyArcher",
+      "x": 174,
+      "z": 241
+    },
+    {
+      "id": "Human1212662",
+      "def": "Tribal_Archer",
+      "x": 178,
+      "z": 243
+    },
+    {
+      "id": "Human1212666",
+      "def": "Tribal_ChiefRanged",
+      "x": 181,
+      "z": 247
+    },
+    {
+      "id": "Human1212671",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 245
+    },
+    {
+      "id": "Human1212676",
+      "def": "Tribal_HeavyArcher",
+      "x": 180,
+      "z": 244
+    },
+    {
+      "id": "Human1212681",
+      "def": "Tribal_HeavyArcher",
+      "x": 182,
+      "z": 249
+    },
+    {
+      "id": "Human1212686",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 245
+    },
+    {
+      "id": "Human1212689",
+      "def": "Tribal_HeavyArcher",
+      "x": 182,
+      "z": 244
+    },
+    {
+      "id": "Human1212694",
+      "def": "Tribal_HeavyArcher",
+      "x": 172,
+      "z": 241
+    },
+    {
+      "id": "Human1212697",
+      "def": "Tribal_HeavyArcher",
+      "x": 182,
+      "z": 244
+    },
+    {
+      "id": "Human1212702",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 246
+    },
+    {
+      "id": "Human1212707",
+      "def": "Tribal_Hunter",
+      "x": 181,
+      "z": 246
+    },
+    {
+      "id": "Human1212711",
+      "def": "Tribal_HeavyArcher",
+      "x": 175,
+      "z": 244
+    },
+    {
+      "id": "Human1212716",
+      "def": "Tribal_Hunter",
+      "x": 182,
+      "z": 249
+    },
+    {
+      "id": "Human1212732",
+      "def": "Tribal_Archer",
+      "x": 182,
+      "z": 249
+    },
+    {
+      "id": "Human1212745",
+      "def": "Tribal_Archer",
+      "x": 180,
+      "z": 241
+    },
+    {
+      "id": "Human1212750",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 246
+    },
+    {
+      "id": "Human1212755",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 247
+    },
+    {
+      "id": "Human1212773",
+      "def": "Tribal_Archer",
+      "x": 181,
+      "z": 245
+    },
+    {
+      "id": "Human1212777",
+      "def": "Tribal_HeavyArcher",
+      "x": 183,
+      "z": 248
+    },
+    {
+      "id": "Human1212793",
+      "def": "Tribal_Hunter",
+      "x": 180,
+      "z": 247
+    },
+    {
+      "id": "Human1212798",
+      "def": "Tribal_Hunter",
+      "x": 181,
+      "z": 247
+    },
+    {
+      "id": "Human1212803",
+      "def": "Tribal_Archer",
+      "x": 176,
+      "z": 241
+    },
+    {
+      "id": "Human1212808",
+      "def": "Tribal_Hunter",
+      "x": 176,
+      "z": 241
+    },
+    {
+      "id": "Human1212813",
+      "def": "Tribal_Hunter",
+      "x": 175,
+      "z": 244
+    },
+    {
+      "id": "Human1212817",
+      "def": "Tribal_Hunter",
+      "x": 182,
+      "z": 245
+    },
+    {
+      "id": "Human1212821",
+      "def": "Tribal_Hunter",
+      "x": 179,
+      "z": 245
+    },
+    {
+      "id": "Human1212825",
+      "def": "Tribal_HeavyArcher",
+      "x": 177,
+      "z": 248
+    },
+    {
+      "id": "Human1212830",
+      "def": "Tribal_Hunter",
+      "x": 173,
+      "z": 241
+    },
+    {
+      "id": "Human1212834",
+      "def": "Tribal_Archer",
+      "x": 174,
+      "z": 245
+    },
+    {
+      "id": "Human1212850",
+      "def": "Tribal_HeavyArcher",
+      "x": 178,
+      "z": 246
+    },
+    {
+      "id": "Human1212854",
+      "def": "Tribal_Hunter",
+      "x": 182,
+      "z": 249
+    },
+    {
+      "id": "Human1212858",
+      "def": "Tribal_HeavyArcher",
+      "x": 179,
+      "z": 242
+    },
+    {
+      "id": "Human1212875",
+      "def": "Tribal_HeavyArcher",
+      "x": 175,
+      "z": 246
+    },
+    {
+      "id": "Human1212880",
+      "def": "Tribal_Hunter",
+      "x": 182,
+      "z": 244
+    },
+    {
+      "id": "Human1212884",
+      "def": "Tribal_Hunter",
+      "x": 175,
+      "z": 242
+    },
+    {
+      "id": "Human1212888",
+      "def": "Tribal_Archer",
+      "x": 183,
+      "z": 248
+    },
+    {
+      "id": "Human1212891",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 247
+    },
+    {
+      "id": "Human1212896",
+      "def": "Tribal_HeavyArcher",
+      "x": 183,
+      "z": 248
+    },
+    {
+      "id": "Human1212912",
+      "def": "Tribal_Hunter",
+      "x": 183,
+      "z": 248
+    },
+    {
+      "id": "Human1212917",
+      "def": "Tribal_Archer",
+      "x": 178,
+      "z": 243
+    },
+    {
+      "id": "Human1212738",
+      "def": "Tribal_HeavyArcher",
+      "x": 173,
+      "z": 244
+    },
+    {
+      "id": "Human1212924",
+      "def": "Tribal_Archer",
+      "x": 182,
+      "z": 246
+    },
+    {
+      "id": "Human1212927",
+      "def": "Tribal_Archer",
+      "x": 181,
+      "z": 245
+    },
+    {
+      "id": "Human1212931",
+      "def": "Tribal_Hunter",
+      "x": 178,
+      "z": 244
+    },
+    {
+      "id": "Human1212935",
+      "def": "Tribal_Hunter",
+      "x": 176,
+      "z": 245
+    },
+    {
+      "id": "Human1212940",
+      "def": "Tribal_Hunter",
+      "x": 175,
+      "z": 241
+    },
+    {
+      "id": "Human1212944",
+      "def": "Tribal_Hunter",
+      "x": 181,
+      "z": 244
+    },
+    {
+      "id": "Human1212948",
+      "def": "Tribal_HeavyArcher",
+      "x": 173,
+      "z": 241
+    },
+    {
+      "id": "Human1212952",
+      "def": "Tribal_Hunter",
+      "x": 182,
+      "z": 249
+    },
+    {
+      "id": "Human1212956",
+      "def": "Tribal_HeavyArcher",
+      "x": 181,
+      "z": 247
+    },
+    {
+      "id": "Human1212961",
+      "def": "Tribal_HeavyArcher",
+      "x": 179,
+      "z": 243
+    },
+    {
+      "id": "Human1212967",
+      "def": "Tribal_Hunter",
+      "x": 181,
+      "z": 246
+    },
+    {
+      "id": "Human1212971",
+      "def": "Tribal_Hunter",
+      "x": 177,
+      "z": 241
+    },
+    {
+      "id": "Human1212976",
+      "def": "Tribal_Hunter",
+      "x": 181,
+      "z": 245
+    },
+    {
+      "id": "Human1212980",
+      "def": "Tribal_Archer",
+      "x": 176,
+      "z": 242
+    },
+    {
+      "id": "Human1212985",
+      "def": "Tribal_Archer",
+      "x": 182,
+      "z": 246
+    },
+    {
+      "id": "Human1213002",
+      "def": "Tribal_Archer",
+      "x": 183,
+      "z": 248
+    },
+    {
+      "id": "Human1213017",
+      "def": "Tribal_Archer",
+      "x": 175,
+      "z": 241
+    },
+    {
+      "id": "Human1213021",
+      "def": "Tribal_HeavyArcher",
+      "x": 175,
+      "z": 242
+    },
+    {
+      "id": "Human1213026",
+      "def": "Tribal_HeavyArcher",
+      "x": 174,
+      "z": 245
+    },
+    {
+      "id": "Human1213031",
+      "def": "Tribal_Hunter",
+      "x": 182,
+      "z": 245
+    }
+  ]
+}

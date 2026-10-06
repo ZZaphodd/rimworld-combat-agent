@@ -1,0 +1,171 @@
+{
+  "id": "base_mon_pirate_2x",
+  "save": "scenario_base_mon_pirate_2x",
+  "spec": {
+    "id": "base_mon_pirate_2x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212585",
+      "name": "Wallis Haas",
+      "weapon": "Autopistol (normal)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212590",
+      "name": "Olha 'Ola' Ryzhkova",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1212595",
+      "name": "Barry Bailey",
+      "weapon": "Molotov cocktails (90%)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212601",
+      "name": "Patrick McGill",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 126,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212621",
+      "name": "Aisu Sutoraika",
+      "weapon": "Pump shotgun (poor)",
+      "x": 131,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212636",
+      "name": "Tuomi Hoikka",
+      "weapon": "Revolver (good)",
+      "x": 120,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212643",
+      "name": "Ratten Cuevas",
+      "weapon": "Machine pistol (normal)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212660",
+      "name": "Shendra 'Shenny' Bellark",
+      "weapon": "Autopistol (normal 99%)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1212670",
+      "def": "Grenadier_EMP",
+      "x": 2,
+      "z": 124
+    },
+    {
+      "id": "Human1212677",
+      "def": "Grenadier_Destructive",
+      "x": 6,
+      "z": 118
+    },
+    {
+      "id": "Human1212683",
+      "def": "Grenadier_Destructive",
+      "x": 3,
+      "z": 122
+    },
+    {
+      "id": "Human1212686",
+      "def": "Grenadier_Destructive",
+      "x": 4,
+      "z": 125
+    },
+    {
+      "id": "Human1212693",
+      "def": "Grenadier_Destructive",
+      "x": 4,
+      "z": 114
+    },
+    {
+      "id": "Human1212699",
+      "def": "Grenadier_Destructive",
+      "x": 6,
+      "z": 123
+    },
+    {
+      "id": "Human1212704",
+      "def": "Grenadier_Destructive",
+      "x": 3,
+      "z": 124
+    },
+    {
+      "id": "Human1212709",
+      "def": "Grenadier_Destructive",
+      "x": 2,
+      "z": 122
+    },
+    {
+      "id": "Human1212715",
+      "def": "Grenadier_Destructive",
+      "x": 4,
+      "z": 119
+    },
+    {
+      "id": "Human1212720",
+      "def": "Grenadier_Destructive",
+      "x": 6,
+      "z": 123
+    },
+    {
+      "id": "Human1212726",
+      "def": "Grenadier_Destructive",
+      "x": 9,
+      "z": 118
+    },
+    {
+      "id": "Human1212732",
+      "def": "Grenadier_Destructive",
+      "x": 5,
+      "z": 116
+    },
+    {
+      "id": "Human1212737",
+      "def": "Grenadier_Destructive",
+      "x": 3,
+      "z": 123
+    }
+  ]
+}
