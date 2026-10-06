@@ -2,13 +2,19 @@
 island ringed by deep water, one colonist with full Moving 10 cells off. How often does a frag
 hit it, with Claude's dodge (hands.guard, the battle code) and with a human playing?
 
-  python3 tools/grenade_dance.py setup --pawn Hakuja        # dev mode; on the map that is loaded
-  python3 tools/grenade_dance.py claude --pawn Hakuja --ticks 3000
-  python3 tools/grenade_dance.py watch --pawn Hakuja --ticks 3000   # a human plays; read-only
+  python3 tools/grenade_dance.py setup --pawn new --save    # dev mode; on the map that is loaded
+  python3 tools/grenade_dance.py load                       # the saved drill (drill_grenade_dance)
+  python3 tools/grenade_dance.py claude --ticks 3000        # Claude dodges
+  python3 tools/grenade_dance.py watch --ticks 3000         # a human plays; read-only
+
+setup writes results/drills/grenade_dance_setup.json (pawn, cells, save); the other modes read the
+pawn from it unless --pawn is given. --save stores the drill as the save drill_grenade_dance
+(PROCEDURES save guard: only arena_/scenario_/theme_base/drill_ names are written).
 
 setup: three single-cell islands at (x-2|x|x+2, z), --at (default 152,100), each closed in by
 deep water (two cells wide outside, one between them). A Grenadier_Destructive carrying frags
-stands on each. The pawn is healed (debug), drafted with fire at will off (so nobody kills the throwers) and
+stands on each. `--pawn new` spawns a fresh Colonist (same start every run: debug healing does
+not undo lost parts or scars) and prints its name for the other modes; a named pawn is healed (debug), drafted with fire at will off (so nobody kills the throwers) and
 put at the home cell 10 cells north. Every other colonist is moved far away. Dev mode is turned
 off at the end. The grenadiers throw on their own (no lord): a frag flies ~10 cells in ~105
 ticks, lies ~100 ticks on its fuse, and each grenadier throws again ~245 ticks later.
@@ -34,6 +40,7 @@ from pathlib import Path
 import _path  # noqa: F401
 from rca import ROOT
 from rca.eval.results import git_commit
+from rca.game import session
 from rca.game.debug import Debug
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -43,6 +50,8 @@ from hands import Keeper, guard, go, ids, pawns, rm, short_name  # noqa: E402
 KIND = "Grenadier_Destructive"
 HIT_R = 1.9                     # frag blast reach (rca/micro/reflex.HIT_R)
 OUT = ROOT / "results/drills/grenade_dance.jsonl"
+SETUP = ROOT / "results/drills/grenade_dance_setup.json"
+SAVE = "drill_grenade_dance"
 
 
 def now():
@@ -95,6 +104,11 @@ def setup(a):
             if "frag" not in w:
                 d.destroy_at(t["x"], t["z"])
     th = throwers(cx, cz)
+    if a.pawn == "new":
+        before = {p["id"] for p in pawns("player")}
+        d.run("Spawn Pawn... > Colonist", x=cx, z=cz + 40)
+        d.close()
+        a.pawn = next(short_name(p["label"]) for p in pawns("player") if p["id"] not in before)
     me = ids()[a.pawn]
     for p in pawns("player"):                           # nobody carries anybody
         for act in rm.call("inspect_thing", id=p["id"]).get("actions") or []:
@@ -118,8 +132,19 @@ def setup(a):
     rm.call("draft", action="draft", ids=me)
     hands.fire_at_will(a.pawn, False)
     rm.call("dev_mode", devMode=False)
-    print(json.dumps({"throwers": [(short_name(h["label"]), h["x"], h["z"]) for h in th], "pawn": a.pawn,
-                      "home": home, "health": health(me), "others_moved": len(others)}))
+    info = {"throwers": [(short_name(h["label"]), h["x"], h["z"]) for h in th], "pawn": a.pawn,
+            "at": [cx, cz], "home": home, "health": health(me), "others_moved": len(others),
+            "save": SAVE if a.save else None, "commit": git_commit()}
+    if a.save:
+        session.save(rm, SAVE)
+    SETUP.write_text(json.dumps(info, indent=1) + "\n")
+    print(json.dumps(info))
+
+
+def load(a):
+    session.load(rm, SAVE)
+    rm.call("dev_mode", devMode=False, godMode=False)
+    print(json.loads(SETUP.read_text()) if SETUP.exists() else SAVE)
 
 
 class Log:
@@ -128,7 +153,7 @@ class Log:
     def __init__(self, a, mode):
         self.a, self.mode, self.pid = a, mode, ids()[a.pawn]
         self.g = {}                                     # id -> {first, pos, landed, threatened}
-        self.rows, self.t0 = [], now()
+        self.rows, self.t0, self.commit = [], now(), git_commit()   # the code this process runs
         hp, moving, frag, _ = health(self.pid)
         self.start = {"hp": hp, "moving": moving, "frag_hediffs": frag}
         self.prev_hp, self.pos = hp, None
@@ -188,7 +213,7 @@ class Log:
                 "near_at_blast": sum(r["near_at_blast"] for r in ev), "hits": sum(r["hit"] for r in ev),
                 "start": self.start, "end": {"hp": hp, "moving": moving, "frag_hediffs": frag,
                                              "downed": downed},
-                "commit": git_commit(), **extra}
+                "commit": self.commit, **extra}
         OUT.parent.mkdir(parents=True, exist_ok=True)
         with OUT.open("a") as f:
             for r in ev + [summ]:
@@ -232,12 +257,18 @@ def watch(a):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=("setup", "claude", "watch"))
-    ap.add_argument("--pawn", required=True)
-    ap.add_argument("--at", type=lambda s: tuple(int(v) for v in s.split(",")), default=(152, 100))
+    ap.add_argument("mode", choices=("setup", "load", "claude", "watch"))
+    ap.add_argument("--pawn", help="setup: a colonist's name or 'new'; others: default from the setup file")
+    ap.add_argument("--at", type=lambda s: tuple(int(v) for v in s.split(",")), default=None)
     ap.add_argument("--ticks", type=int, default=3000)
+    ap.add_argument("--save", action="store_true", help="setup: save the drill as " + SAVE)
     a = ap.parse_args()
-    {"setup": setup, "claude": claude, "watch": watch}[a.mode](a)
+    known = json.loads(SETUP.read_text()) if SETUP.exists() else {}
+    if a.mode == "setup" and not a.pawn:
+        ap.error("setup needs --pawn (a name or 'new')")
+    a.pawn = a.pawn or known.get("pawn")
+    a.at = a.at or tuple(known.get("at") or (152, 100))
+    {"setup": setup, "load": load, "claude": claude, "watch": watch}[a.mode](a)
 
 
 if __name__ == "__main__":
