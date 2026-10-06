@@ -3,6 +3,7 @@ import subprocess
 import time
 
 from ..rimmolt import RimMoltError
+from . import live
 
 STEAM_URL = "steam://rungameid/294100"
 PROCESS = "RimWorld by Ludeon Studios"     # macOS process name (pgrep -f)
@@ -58,10 +59,15 @@ def never_force_normal_speed(rm):
 
 
 def start_episode(rm, save_name):
-    """PROCEDURES §9: load, Never Force Normal Speed, dev mode off for the agent."""
+    """PROCEDURES §9: load, Never Force Normal Speed, dev mode off for the agent; then announce
+    the battle to watchers (rca.game.live: the overlay)."""
     load(rm, save_name)
     never_force_normal_speed(rm)
     rm.call("dev_mode", devMode=False, godMode=False)
+    try:
+        live.announce()
+    except Exception:                       # a watcher's signal never stops an episode
+        pass
 
 
 def game_process():

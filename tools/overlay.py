@@ -2,14 +2,18 @@
 
   python3 tools/overlay.py                  # http://127.0.0.1:8765/  -> OBS Browser source, 1920x1080
 
-It polls the game the way tools/watch.py does (status, pawns, health, messages; never orders,
-pauses or moves the camera) and reads which problem is running and who plays it from the process
-list (tools/night.py run <id> --agent <a>, tools/run_human.py --manifest ... --player <p>). Our
-pawns are left to the game's own colonist bar. The
+It polls the game the way tools/watch.py does (status, raid, messages, the HUD's date; never
+orders, pauses or moves the camera). A battle is announced by session.start_episode through
+macOS's notify system (rca.game.live: start time and the harness's process id); the overlay
+holds the names, so a change of start time is a new battle, and the problem and player come from
+that process's command line (night.py run <id> --agent <a>, run_human.py --manifest ...
+--player <p>; another harness shows its script name). Our pawns are left to the game's own
+colonist bar. The
 v2 base ladder's rows (results/base/ladder2.jsonl) are shown beside it. Binds to 127.0.0.1 only.
 """
 import argparse
 import json
+import os
 import re
 import subprocess
 import threading
@@ -19,6 +23,7 @@ from pathlib import Path
 
 import _path  # noqa: F401
 from rca import ROOT
+from rca.game import live
 from rca.rimmolt import RimMolt
 
 PAGE = Path(__file__).with_name("overlay.html")
@@ -27,17 +32,31 @@ STATE = {"ok": False, "note": "starting"}
 NOISE = re.compile(r"Auto-attack target is down or gone")   # the mod's per-pawn notices
 
 
-def running():
-    """(problem id, player) of the battle in progress, from the process list; (None, None) if none."""
-    out = subprocess.run(["ps", "-axo", "command"], capture_output=True, text=True).stdout
-    for line in out.splitlines():
-        m = re.search(r"night\.py run (\S+)\s+--agent (\S+)", line)
-        if m:
-            return m.group(1), m.group(2)
-        m = re.search(r"run_human\.py --manifest \S*scenario_(\S+?)\.json.*?--player (\S+)", line)
-        if m:
-            return m.group(1), "you" if m.group(2) == "human" else m.group(2)
-    return None, None
+def parse(cmd):
+    """(problem id, player) from a harness's command line; an unknown harness gives its script."""
+    m = re.search(r"night\.py run (\S+)\s+--agent (\S+)", cmd)
+    if m:
+        return m.group(1), m.group(2)
+    m = re.search(r"run_human\.py .*?--(?:manifest \S*?scenario_(\S+?)\.json|scenario (\S+))", cmd)
+    if m:
+        p = re.search(r"--player (\S+)", cmd)
+        player = p.group(1) if p else "human"
+        return m.group(1) or m.group(2), "you" if player == "human" else player
+    m = re.search(r"(\w+)\.py\b", cmd)
+    return (m.group(1) if m else cmd[:40]), None
+
+
+def battle():
+    """(start ms, problem id, player) of the announced battle; id None when its process has ended."""
+    start, pid = live.read()
+    if not start or not pid:
+        return start, None, None
+    try:
+        os.kill(pid, 0)
+    except OSError:
+        return start, None, None
+    cmd = subprocess.run(["ps", "-p", str(pid), "-o", "command="], capture_output=True, text=True).stdout.strip()
+    return (start, *parse(cmd)) if cmd else (start, None, None)
 
 
 def ladder():
@@ -54,15 +73,15 @@ def raid(rm):
 
 
 def poll(rm, period):
-    seen_from = last_pid = last_tick = None
+    seen_from = last_start = last_tick = None
     while True:
         try:
-            pid, player = running()
+            start, pid, player = battle()
             st = rm.call("get_status")
             tick = st.get("ticksGame") or 0
-            # a new battle, or a load (the clock goes back): only messages from here on
-            if pid != last_pid or last_tick is None or tick < last_tick:
-                seen_from, last_pid = tick, pid
+            # a new battle (another start value), or a load (the clock goes back): messages from here on
+            if start != last_start or last_tick is None or tick < last_tick:
+                seen_from, last_start = tick, start
             last_tick = tick
             cond = rm.call("get_conditions")         # the HUD's date and hour
             msgs = [m.get("text") for m in (rm.call("get_alerts").get("recentMessages") or [])
