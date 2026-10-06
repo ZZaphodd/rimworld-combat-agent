@@ -7,6 +7,7 @@ arenas. The source save is only loaded, never written: the arena is saved under 
 
     make(rm, "Ithfunda", "arena_col_ithfunda", observer=(10, 10))
 """
+import hashlib
 import os
 import re
 import xml.etree.ElementTree as ET
@@ -132,6 +133,8 @@ def make(rm, source, name, observer, hostile=(), log=print):
         raise RimMoltError(f"base arenas are named arena_col_*, not {name!r}")
     if (SAVES / f"{source}.rws").resolve() == (SAVES / f"{name}.rws").resolve():
         raise RimMoltError("the arena must not be the source save")
+    src = SAVES / f"{source}.rws"
+    digest = hashlib.md5(src.read_bytes()).hexdigest()
     session.load(rm, source)                     # read only
     rm.call("dev_mode", devMode=True)
     d = Debug(rm, log)
@@ -155,5 +158,7 @@ def make(rm, source, name, observer, hostile=(), log=print):
                            f"{st.get('storyteller')} / {st.get('difficulty')}")
     rm.call("dev_mode", devMode=False)
     session.save(rm, name)
-    log(f"{name}: checked and saved ({st.get('storyteller')}, {st.get('difficulty')})")
+    if hashlib.md5(src.read_bytes()).hexdigest() != digest:
+        raise RimMoltError(f"the source save {source} changed")
+    log(f"{name}: checked and saved ({st.get('storyteller')}, {st.get('difficulty')}); {source} unchanged")
     return {"name": name, "source": source, "items_removed": n, "observer": observer, "hostile": list(hostile)}
