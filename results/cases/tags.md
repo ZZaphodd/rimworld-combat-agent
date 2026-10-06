@@ -28,6 +28,7 @@ A scene lists both for that moment.
 | `us-skill-mismatch` | weapons start in the wrong hands (fixable by a loadout) |
 | `us-outrange` *(new, 2026-10-05)* | our good shooters outrange the raid (rand_011: two 37-cell rifles vs a median of 20) |
 | `raid-low-skill` *(new, 2026-10-05)* | everyone in the raid shoots ≤ 5 |
+| `base-arena` *(new, 2026-10-06)* | a colony base arena (PROCEDURES §1c): the player's buildings, doors and traps, no items |
 
 ## Situation: the moment (scene level)
 
@@ -49,6 +50,7 @@ A scene lists both for that moment.
 | `top-threat` | one raider is clearly the most dangerous (skill, weapon) |
 | `raid-breaking` | the raid flees or gives up |
 | `no-enemy-melee` *(new, 2026-10-05)* | the raid has no melee pawn left standing: ours can lock its shooters and none of ours can be locked (rand_011, the player's reasoning after Pablo died) |
+| `raid-wrecking` *(new, 2026-10-06)* | the raid smashes and burns the base's furniture instead of coming at us (base_ith_pirate_2x: ~3600 ticks before the first raider reached the door, a ~2400-tick lull later) |
 
 ## Plays: what was done
 

@@ -99,7 +99,7 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
 `order_pawn` option label formats seen [log]:
 - `Go here`
 - `Auto attack (AI): <target short label>` (e.g. `pikeman`, a raider's nickname)
-- `Fire at <target>`; when disabled: `Fire at <target>: Cannot hit target` or `...: Out of range`
+- `Fire at <target>`; when disabled: `Fire at <target>: Cannot hit target`, `...: Out of range`, or `...: Too close` (a standing hostile on a neighbouring cell, diagonal ones too; [obs 2026-10-06, base_ith_pirate_2x])
 - `Melee attack <target>`
 - On a downed colonist: `Rescue <name>`, `Carry <name>`, `Tend <name> (without medicine)`, `Strip <name>`,
   `Try to arrest <name> (100% chance)`
@@ -112,6 +112,10 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
   `Carry <name>`, then `Go here` walks the carrier with it [obs 2026-10-05]. The carrier's job reads
   `carrying <name>` already while it walks to the victim: a `Go here` before the victim's own job
   reads `being carried by …` cancels the carry (twice in rand_011, Claude's game) [obs 2026-10-05].
+  **[obs 2026-10-06, base_ith_pirate_2x]** a carrier on a cell diagonal to the victim (who lay under a
+  standing squadmate) kept the job `carrying Leslie` ~110 ticks without picking her up; sent with `Go here`
+  to the orthogonal neighbouring cell and given `Carry` again, it picked her up at once. `Tend <name>
+  (without medicine)` works from a drafted pawn (job `tending to <name>`).
 - `Cannot go here: No path` for a cell behind a wall: break the wall first (verb gizmo above).
 - Disabled options keep their text with a reason, e.g.
   `Cannot rescue: No reachable, un-reserved non-prisoner bed in safe temperature.` (no beds in the arenas),

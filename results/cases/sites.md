@@ -31,6 +31,14 @@ Walking pace seen (drafted squad): 16–18 ticks per cell in the open, ~30 throu
 | **west wall ruin** | wall x 39–43, z 82–94 (north–south, broken), doors (40, 84) and (40, 92); squad cells west of it (34–38, 79–94) | a ruin wall on the open arena's west grass strip, facing east; open at both ends (the raid came round the north end, Riley at (33, 93)); a lake south-east (42–55, 75–79). The grass strip burns: a molotov grew a 75-cell fire there | 90 W | rand_190 (human, lost) |
 | SE pocket | (212–216, 28–40) | south-east, by the lake and ruins near the edge | 130 SE | rand_067 (human, end of a kite) |
 
+## Base arenas (PROCEDURES §1c)
+
+Each base is its own map; our squad starts in a different place on each.
+
+| site | cells | what is there | from start | used in |
+|---|---|---|---|---|
+| **Ithfunda east room** | room x 129–137, z 188–196; door (133, 187); corridor x 133, z 179–186; nook (126–133, 175–181) | a room cut in the rock, a dead end (the rooms behind it, to z 227, open only into it through doors at (133, 197), (133, 207) and an opening at (133, 218)); its one door is at the top of a 1-wide, 8-cell corridor from the nook off the yard. Only (133, 188) is a cell a raider in the doorway can step to straight, but John stepped diagonally from the doorway onto (132, 188) past the rock at (132, 187) while (133, 188) was held. Guns on (133, 189–191) see down the corridor; cells off that axis see only the doorway. A torch lamp stands on (133, 192), a royal bed on (136, 190) | ~33 NE of the yard (113–120, 162–166) in a straight line; all inside ~900 ticks after the start | base_ith_pirate_2x (Claude) |
+
 Not a site but recorded: rand_029 (open) held a north–south line at x 138–144, z 107–148, east
 of the start.
 
