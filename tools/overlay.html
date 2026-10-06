@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>Battle overlay</title>
+<style>
+  :root {
+    --panel: rgba(14, 17, 22, 0.78);
+    --line: rgba(255, 255, 255, 0.10);
+    --text: #e9edf2;
+    --muted: #9aa6b2;
+    --ours: #4ea1ff;
+    --them: #ff6b5e;
+    --good: #5fd38d;
+    --warn: #f2c14e;
+    --bad: #ff6b5e;
+  }
+  html, body { margin: 0; width: 1920px; height: 1080px; background: transparent; overflow: hidden;
+    font-family: -apple-system, "SF Pro Text", "Helvetica Neue", "Apple SD Gothic Neo", sans-serif; color: var(--text); }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,0.35); }
+  #bar { position: absolute; left: 24px; right: 24px; bottom: 20px; height: 128px; display: grid;
+    grid-template-columns: 360px 1fr 300px 420px; gap: 0; }
+  #bar > div { padding: 14px 20px; border-right: 1px solid var(--line); min-width: 0; }
+  #bar > div:last-child { border-right: none; }
+  .label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  .big { font-size: 26px; font-weight: 650; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sub { font-size: 16px; color: var(--muted); margin-top: 6px; }
+  #ours { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px 14px; margin-top: 8px; }
+  .pawn { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hp { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.12); margin-top: 3px; overflow: hidden; }
+  .hp > i { display: block; height: 100%; background: var(--ours); }
+  .down .hp > i { background: var(--bad); }
+  .down { color: var(--bad); }
+  .count { display: inline-block; margin-right: 18px; }
+  .count b { font-size: 30px; font-weight: 700; }
+  .them b { color: var(--them); }
+  #msgs div { font-size: 14px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 5px; }
+  #ladder { position: absolute; right: 24px; top: 20px; width: 360px; padding: 14px 18px; }
+  #ladder table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
+  #ladder td { padding: 3px 0; border-bottom: 1px solid var(--line); }
+  #ladder td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  .g-decisive, .g-repelled { color: var(--good); }
+  .g-pyrrhic, .g-unresolved { color: var(--warn); }
+  .g-defeat { color: var(--bad); }
+  .stale { opacity: 0.55; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div id="ladder" class="panel hidden">
+  <div class="label">Base ladder v2 · turtle</div>
+  <table id="rows"></table>
+</div>
+<div id="bar" class="panel hidden">
+  <div>
+    <div class="label" id="who">—</div>
+    <div class="big" id="pid">—</div>
+    <div class="sub" id="time">—</div>
+  </div>
+  <div>
+    <div class="label">Ours</div>
+    <div id="ours"></div>
+  </div>
+  <div>
+    <div class="label">Raid</div>
+    <div style="margin-top:8px">
+      <span class="count them"><b id="standing">0</b> standing</span>
+      <span class="count"><b id="downed">0</b> downed</span>
+    </div>
+  </div>
+  <div>
+    <div class="label">Messages</div>
+    <div id="msgs"></div>
+  </div>
+</div>
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const pretty = id => (id || "").replace(/^base2?_/, "").replace(/_/g, " ").replace(/\b(\d+)x\b/, "$1×");
+function clock(t) {
+  const s = Math.floor(t / 60);
+  return `t${t.toLocaleString()} · ${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")} game time`;
+}
+async function tick() {
+  let st;
+  try { st = await (await fetch("/state.json", {cache: "no-store"})).json(); } catch (e) { return; }
+  const live = !!st.pid;
+  $("bar").classList.toggle("hidden", !live && !st.ladder?.length);
+  $("bar").classList.toggle("stale", !st.ok);
+  if (live) {
+    const who = {turtle: "Agent: turtle", you: "Played by the user", claude: "Played by Claude"}[st.player] || `Agent: ${st.player}`;
+    $("who").textContent = who + (st.paused ? " · paused" : "");
+    $("pid").textContent = pretty(st.pid);
+    $("time").textContent = clock(st.tick || 0);
+    $("ours").innerHTML = (st.ours || []).map(p =>
+      `<div class="pawn ${p.down ? "down" : ""}">${esc(p.n)}${p.down ? " ✕" : ""}` +
+      `<div class="hp"><i style="width:${Math.max(0, Math.min(100, p.hp ?? 0))}%"></i></div></div>`).join("");
+    $("standing").textContent = st.them?.standing ?? 0;
+    $("downed").textContent = st.them?.downed ?? 0;
+    $("msgs").innerHTML = (st.msgs || []).map(m => `<div>${esc(m)}</div>`).join("") || `<div style="color:var(--muted)">—</div>`;
+  } else {
+    $("who").textContent = "Between battles";
+    $("pid").textContent = "—"; $("time").textContent = ""; $("ours").innerHTML = ""; $("msgs").innerHTML = "";
+    $("standing").textContent = "0"; $("downed").textContent = "0";
+  }
+  const rows = st.ladder || [];
+  $("ladder").classList.toggle("hidden", !rows.length);
+  $("rows").innerHTML = rows.slice(-12).map(r =>
+    `<tr><td>${esc(pretty(r.id))}</td><td class="g-${esc(r.grade)}">${esc(r.grade)} ${r.badness ?? ""}</td></tr>`).join("");
+}
+tick(); setInterval(tick, 2000);
+</script>
+</body>
+</html>
