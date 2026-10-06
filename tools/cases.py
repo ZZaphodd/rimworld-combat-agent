@@ -18,18 +18,28 @@ import sys
 
 import _path  # noqa: F401
 from rca import ROOT
+from rca.game.weapons import weapon_class
+from rca.strategic.briefing import features
 
 CASES = ROOT / "results/cases"
 INDEX = CASES / "index.json"
-SCEN = ROOT / "scenarios_rand"
+SCENS = (ROOT / "scenarios_rand", ROOT / "scenarios_base")
 CLASSES = ("melee", "bow", "thrown", "short", "medium", "long", "support", "explosive", "other")
 THROWN = ("grenade", "molotov")
 STRONG_1V1 = ("Neanderthal", "Empire")          # raids whose pawns won one-on-one melee in the cards
 
 
 def manifest(pid):
-    p = SCEN / f"scenario_{pid}.json"
-    return json.loads(p.read_text()) if p.exists() else None
+    """The problem's manifest; base manifests carry no briefing, so its features are computed."""
+    for d in SCENS:
+        p = d / f"scenario_{pid}.json"
+        if p.exists():
+            m = json.loads(p.read_text())
+            for x in m["squad"]:                         # base manifests: no weapon class recorded
+                x.setdefault("class", weapon_class(x.get("weapon") or ""))
+            m.setdefault("briefing", {"features": features(m)})   # (their raiders' weapons neither)
+            return m
+    return None
 
 
 def shares(classes, n):
@@ -39,7 +49,8 @@ def shares(classes, n):
 def auto_tags(m):
     """The situation tags (tags.md) that a manifest alone decides."""
     f, sp = m["briefing"]["features"], m["spec"]
-    t = {"open-arena" if "open" in sp["arena"] else "forest-arena"}
+    arena = sp["arena"]
+    t = {"base-arena" if arena.startswith("arena_col_") else "open-arena" if "open" in arena else "forest-arena"}
     if (f.get("distance") or 0) >= 120:
         t.add("raid-far")
     if (f.get("enemy_melee_share") or 0) >= 0.4:

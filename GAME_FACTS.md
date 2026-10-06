@@ -277,6 +277,7 @@ saves are still Peaceful (conversion: TODO Now 1). Values from
 | A raid leaves when broken (**"... are fleeing"**) or after enough damage dealt (**"... satisfied with the damage done and are leaving"**). Satisfied raids had lost ≤ 46% of their pawns, fleeing ones ≥ 71% | grade_check.jsonl (12 runs) | measured, small n |
 | A raid can turn "satisfied" without fighting a passive defender: turtle vs pirate_mixed, 14/14 escaped, 0 killed | grade_check.jsonl | measured, n=3 |
 | Raiders kidnap downed colonists (job `kidnapping <name>.`) and leave the map with them | tracker, theme_report (3/5 kite runs left with captives) | observed |
+| On a colony base arena a Waster melee raid (ImmediateAttack) smashed and set fire to furniture across the base (shelves, hydroponics, devilstrand, beds) for ~3600 ticks before its first raider reached our door, and again for ~2400 ticks between assaults; a melee raider (melee 15) on its way to a colonist deeper in the room stepped diagonally from a doorway into the room past a rock corner while a colonist held the cell straight ahead; the raid fled with 13–14 of 25 dead or downed (52–56%) | base_ith_pirate_2x attempt 2 (journal) | observed, one battle |
 | Mechs never walk off the map | tracker design | observed, not counted |
 | Mechs may park out of sight 13–28 cells from a static line and not attack | execution_report §3 (hold v3 traces) | observed |
 | Mech raids sometimes don't assault at all (strategy chosen by the game); at 500 pt almost never (1 of 43 approached) | assault check rejects; themes/t500/build.log | measured at 500 pt |
@@ -285,7 +286,7 @@ saves are still Peaceful (conversion: TODO Now 1). Values from
 | Melee raiders show their target: `targeting = "attacking colonist <name>"` (kite v3 uses it) | [code], execution_report | observed |
 | Raiders mostly stop throwing frags when we hold beyond 13 cells (frags seen fell to ~0) | threatmap_report verdict | measured, n=10 |
 | Throwers need LOS (by defs) | threatmap_report §5 | XML read, not measured |
-| Melee lock: a pawn with an adjacent enemy can't use its ranged attack (both sides). Adjacency rule (diagonals?), weapon exceptions, friendly fire into melee and mech behaviour are **UNVERIFIED** | TODO | belief |
+| Melee lock: a pawn with an adjacent enemy can't use its ranged attack (both sides). **Diagonals count:** the float menu showed "Fire at Paul: Too close" (disabled) to colonists on the orthogonal cell and on both diagonal cells of a standing raider in a doorway, the diagonals across rock corners; at 2 cells it was enabled. Weapon exceptions, friendly fire into melee and mech behaviour are **UNVERIFIED** | TODO; base_ith_pirate_2x (Claude, 2026-10-06; journal ~t9900) | diagonals: observed, one raider, three colonists |
 | Directional cover; LOS-break relocation; fire avoidance; berserk ignoring cover | TODO hypotheses | **UNVERIFIED** |
 
 Our own colonists: undrafted pawns follow the hostility response (flee). Drafted pawns that stand
