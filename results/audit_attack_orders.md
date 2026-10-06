@@ -101,6 +101,8 @@ The agents are the frozen baseline: listed here, not changed.
 
 | rand_227 | (as above) | **86.6, pyrrhic** with `Keeper.assign` (expected damage, spread, focus weight, 1.25× switch, friendly-fire radii). Ranged runs 30, median 335 ticks, 20 switches | The melee arrivals died 300–1000 ticks earlier than in either other run. Two of three deaths came while the rifles held out of reach before a rule-timed close-in (1400 ticks after the arrivals died; by hand in attempt 1, ~100 ticks after) |
 
+| rand_150 | 36.4, repelled, 2 dead. Lover (bolt-action, aim 102 ticks) 5 shots all fight | **6.4, repelled, none lost or downed** with `Keeper.assign` (after the hold-fire fix). Lover 12 shots, 134 damage; damage dealt ≥405 → 536 | The same plan and line. Lawman (the raid's best pistol, weight 1.5) died at t2842; in the first play he lived past t5224. The raid's knives died 4–6 cells out, so our knives never went out and there was no rush |
+
 Each row is one draw.
 
 So keeping a target is not enough. A player re-targets when the threat picture changes (the

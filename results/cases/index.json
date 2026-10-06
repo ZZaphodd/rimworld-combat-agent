@@ -1518,7 +1518,14 @@
     "play": "loadout; two rows 40 cells east; knives and shotguns on whoever reached the line; a late rush on the holders",
     "result": "**repelled**",
     "lost": "2 dead",
-    "badness": "**36.4**"
+    "badness": "36.4"
+   },
+   {
+    "who": "Claude, re-measure 2026-10-06",
+    "play": "the same plan; ranged fire by `Keeper.assign` (one kept order per target, spread, Lawman and the rifles weighted, hold fire when nothing is worth it)",
+    "result": "**repelled**",
+    "lost": "**0**",
+    "badness": "**6.4**"
    }
   ],
   "id": "rand_150",
