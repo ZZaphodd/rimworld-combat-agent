@@ -300,6 +300,7 @@ class GuardWorld:
         self.t = 0
         self.ours = {"Z": {"x": 0, "z": 0}, "Y": {"x": 2, "z": 1}, "W": {"x": 0, "z": 12}}
         self.gone = []
+        self.aim, self.thrower_alive, self.flight = "targeting colonist Z", True, [(18, 0)]
 
     def call(self, name, **kw):
         if name == "get_status":
@@ -310,13 +311,14 @@ class GuardWorld:
 
     def pawns(self, side):
         if side == "hostile":
-            return [{"id": "R", "label": "R", "x": 20, "z": 0, "targeting": "targeting colonist Z"}]
+            return [{"id": "R", "label": "R", "x": 20, "z": 0, "targeting": self.aim}] if self.thrower_alive else []
         return [{"id": n, "label": n, "x": p["x"], "z": p["z"]} for n, p in self.ours.items()]
 
     def projectiles(self):
-        if 3 <= self.t < 6:
-            return [("G1", "Frag", 18, 0)]
-        if 6 <= self.t < 60:
+        if 3 <= self.t < 6 + 3 * (len(self.flight) - 1):
+            x, z = self.flight[min((self.t - 3) // 3, len(self.flight) - 1)]
+            return [("G1", "Frag", x, z)]
+        if 3 <= self.t < 60:
             return [("G1", "Frag", 0, 1)]
         return []
 
@@ -348,6 +350,21 @@ class GuardTest(Restored):
             if n == "Y":
                 self.assertGreaterEqual(math.dist(c, (0, 1)), 4)
         self.assertEqual((k.held, k.dodges), ({}, {}))      # released once it went off
+
+    def test_unknown_target_is_read_from_the_line_of_flight(self):
+        self.w.aim = None                                    # the grenadier's targeting is not readable
+        self.w.ours["Y"] = {"x": 16, "z": 6}                 # nearest to where it first shows, off its line
+        self.w.flight = [(18, 0), (12, 0), (6, 0)]           # straight at Z (0, 0)
+        self.run_calls(hands.Keeper())
+        moves = [g[1] for g in self.w.gone]
+        self.assertEqual(moves[0], "Z", self.w.gone)
+        self.assertNotIn("Y", moves)
+        self.assertNotIn("W", moves)
+
+    def test_grenade_still_watched_after_its_thrower_fell(self):
+        self.w.thrower_alive = False
+        self.run_calls(hands.Keeper())
+        self.assertIn("Z", [g[1] for g in self.w.gone])
 
     def test_without_a_keeper_too(self):
         self.run_calls(None)

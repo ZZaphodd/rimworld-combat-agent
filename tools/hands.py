@@ -691,6 +691,26 @@ _HANDLED = {}     # grenade id -> the pawns already sent away from it (this proc
 LYING_R = 3.0     # a pawn this close to a grenade lying on its fuse steps away from it (frag blast ~1.9)
 
 
+LINE_R = 3.0     # a grenade with no known target: the pawn within this of its line of flight, ahead of it
+
+
+def _on_line(ours, a, b, keep=()):
+    """The standing pawn of `ours` nearest the line of flight a -> b, ahead of b and within LINE_R."""
+    dx, dz = b[0] - a[0], b[1] - a[1]
+    L = math.hypot(dx, dz)
+    best = None
+    for p in ours:
+        nm = short_name(p["label"])
+        if p.get("downed") or nm in keep:
+            continue
+        vx, vz = p["x"] - b[0], p["z"] - b[1]
+        ahead = (vx * dx + vz * dz) / L
+        off = abs(vx * dz - vz * dx) / L
+        if ahead >= -1 and off <= LINE_R and (best is None or off < best[0]):
+            best = (off, nm)
+    return best[1] if best else None
+
+
 def _moved(keeper, i):
     v = (keeper.dodges.get(i) if keeper is not None else None) or _HANDLED.get(i) or []
     return [v] if isinstance(v, str) else list(v)
@@ -699,7 +719,8 @@ def _moved(keeper, i):
 def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, quiet=False, keeper=None):
     """Fine-grained steps (dt ticks) with a grenade reflex, the player's way: when a grenade
     appears, its target is the colonist the nearest grenadier was aiming at (`targeting`), else
-    the pawn nearest its line of flight; only that pawn sidesteps ~5 cells (same distance to the
+    the pawn nearest its line of flight at the next poll (`_on_line`; grenades are polled even
+    after their thrower fell); only that pawn sidesteps ~5 cells (same distance to the
     raid, clear of squadmates); once the grenade is gone the pawn's errand is re-issued from
     `resume` {name: callable}. A grenade lying on its fuse moves every pawn within LYING_R of it
     away from it, once. A grenade is handled once: the pawns sent away from it are kept in
@@ -708,8 +729,9 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
     cell, and Zhang walked back and forth beside a lying frag until it went off). Pawns in `keep`
     never dodge. Returns early on an event: one of
     ours down or -hp_drop % (checked every hp_every steps), a raider down or gone, or
-    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls. No dodging when the
-    raid has no throwers; a grenade first seen next to one of our throwers is ours (2026-10-05:
+    near=(name, d) a raider within d of that pawn. Per step: 4 calls and the 3 grenade queries
+    (rand_130 re-measure: a molotov still in flight when its thrower died went unwatched under
+    the old "only while a thrower stands" rule). A grenade first seen next to one of our throwers is ours (2026-10-05:
     our own frag sent Trev into the raid). NB: wait(dt) advances exactly dt ticks since the
     mod's wait setting was changed on 2026-10-05 evening (before: 15–30 ticks at least;
     RIMMOLT_API), at ~60 ticks/s of wall time. With `keeper` (a Keeper), a dodger is held (no attack
@@ -723,7 +745,7 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
     h0 = hp()
     ours0 = {short_name(p["label"]): bool(p.get("downed")) for p in pawns("player")}
     foes0 = {short_name(p["label"]): bool(p.get("downed")) for p in pawns("hostile")}
-    seen, dodging, last_aim = {}, {}, {}
+    seen, dodging, last_aim, pending = {}, {}, {}, set()
     for k in range(n):
         wait(dt)
         ours, foes = pawns("player"), pawns("hostile")
@@ -731,7 +753,7 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
         for f in foes:
             if f["id"] in throwers and _aimed(f):
                 last_aim[f["id"]] = (_aimed(f), f["x"], f["z"])
-        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()} if throwers else {}
+        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()}   # also after the thrower fell
         our_throwers = [p for p in ours if not p.get("downed") and any(
             k in (rm.call("get_pawn", id=p["id"]).get("weapon") or "").lower() for k in THROWN)] if projs else []
         def send(i, who, c, tag=""):
@@ -754,6 +776,15 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
                         send(i, nm, c, "@")
                         if not quiet:
                             print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} lying at {(x, z)}: {nm} -> {c}")
+                elif i in pending and not done:              # in flight, target unknown: who is on its line
+                    who = _on_line(ours, seen[i], (x, z), keep)
+                    if who:
+                        me = byname[who]
+                        c = _dodge_cell(me, me["x"], me["z"], ours, live)
+                        send(i, who, c)
+                        if not quiet:
+                            print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} flying at {who} -> sidestep {c}")
+                pending.discard(i)
                 seen[i] = (x, z)
                 continue
             seen[i] = (x, z)
@@ -765,10 +796,9 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
             # who threw it: the thrower nearest to where it first appeared
             src = min(((math.dist((x, z), (a[1], a[2])), a[0]) for a in last_aim.values()), default=(99, None))
             who = src[1] if src[0] <= 6 else None
-            if who is None:                                  # fall back: nearest standing pawn
-                cand = [p for p in ours if not p.get("downed")]
-                who = min(cand, key=lambda p: math.dist((x, z), (p["x"], p["z"]))) if cand else None
-                who = short_name(who["label"]) if who else None
+            if who is None:                                  # unknown: decide on its line at the next poll
+                pending.add(i)
+                continue
             me = byname.get(who)
             if not me or who in keep or me.get("downed"):
                 continue
