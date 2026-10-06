@@ -28,7 +28,7 @@ A scene lists both for that moment.
 | `us-skill-mismatch` | weapons start in the wrong hands (fixable by a loadout) |
 | `us-outrange` *(new, 2026-10-05)* | our good shooters outrange the raid (rand_011: two 37-cell rifles vs a median of 20) |
 | `raid-low-skill` *(new, 2026-10-05)* | everyone in the raid shoots ≤ 5 |
-| `base-arena` *(new, 2026-10-06)* | a colony base arena (PROCEDURES §1c): the player's buildings, doors and traps, no items |
+| `base-arena` *(new, 2026-10-06)* | a colony base arena (PROCEDURES §1c): the player's buildings, doors and traps; no items but chunks |
 
 ## Situation: the moment (scene level)
 

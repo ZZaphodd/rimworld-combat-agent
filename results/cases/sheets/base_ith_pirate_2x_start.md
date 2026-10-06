@@ -1,6 +1,6 @@
-# base_ith_pirate_2x start sheet: 8 civil outlanders (guns + 4 throwers) vs 25 Waster melee, Ithfunda base
+# base_ith_pirate_2x start sheet: 8 civil outlanders (guns + 3 throwers) vs 25 Waster melee, Ithfunda base
 
-New battle: ours 8, shooting 0–5, no armour, start in the walled yard (113–120, 162–166). Raid: 25 Drifters, all knives and clubs (seven at melee 10–15), from the west edge, ~110 cells. Count ratio ~3.1; no card has a raid this big (rand_012 was 8 v 5).
+New battle: ours 8, shooting 0–5, no armour, start in the walled yard (113–120, 162–166). Raid: 25 Drifters, all knives and clubs (seven at melee 10–15), from the west edge, ~110 cells. Count ratio 0.32 (8 of ours to 25 raiders); no card has a raid this big (rand_012 was 8 v 5).
 Turtle (stood in the yard, 57.4): first contact **t1666**; squad down t5177 with 9 raiders out and 16 standing; "decided to kidnap" at t7427; raiders smashed furniture and set a wooden shelf alight.
 `cases.py similar` has no base manifests; the cards below were picked from its rand_118 / rand_012 / rand_018 lists.
 
