@@ -93,6 +93,14 @@ from the user's own colonies, so not even a gzipped copy enters the repo (manife
 `scenarios_base/`). Mechanoid raids have no `ImmediateAttack`; their specs use
 `StageThenAttack` (breaching is left for a later ladder with sappers).
 
+**Scope when Claude or the user plays a base problem (the user, 2026-10-06):** win the battle
+using the base, by any method; the base is not something to protect. Furniture and benches that
+take firing cells in the held room are uninstalled before the raid comes (building action
+`Uninstall`, then a pawn's undrafted float menu "Prioritize uninstalling …"). Constructing is
+only unassigned in the default work settings, and no squad pawn is incapable of it (RimMolt
+`set_work_priority`); `set_hostility_response` keeps undrafted workers from fleeing (both calls
+untested so far).
+
 Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
 valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
 (240,240); squad at (125,130), the walled yard of a mountain base with tunnels).
