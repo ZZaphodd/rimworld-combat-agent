@@ -35,9 +35,15 @@ def manifest(pid):
         p = d / f"scenario_{pid}.json"
         if p.exists():
             m = json.loads(p.read_text())
-            for x in m["squad"]:                         # base manifests: no weapon class recorded
-                x.setdefault("class", weapon_class(x.get("weapon") or ""))
-            m.setdefault("briefing", {"features": features(m)})   # (their raiders' weapons neither)
+            if "briefing" not in m:                      # base manifests: computed here
+                for x in m["squad"]:                     # (no weapon class recorded for ours)
+                    x.setdefault("class", weapon_class(x.get("weapon") or ""))
+                f = features(m)
+                if not any(e.get("weapon") or e.get("class") for e in m["enemy"]):
+                    for k in ("enemy_classes", "enemy_range_median", "enemy_closer_share", "enemy_melee_share",
+                              "enemy_explosive_share", "enemy_outrange_share"):
+                        f[k] = None                      # raiders' weapons not recorded: unknown
+                m["briefing"] = {"features": f}
             return m
     return None
 
@@ -138,8 +144,9 @@ def score(q, c):
     l1 = lambda a, b: sum(abs(a[k] - b[k]) for k in CLASSES)
     parts["our mix"] = -1.5 * l1(shares(qf.get("squad_classes"), qf.get("squad_n")),
                                  shares(cf.get("squad_classes"), cf.get("squad_n")))
-    parts["raid mix"] = -1.5 * l1(shares(qf.get("enemy_classes"), qf.get("enemy_n")),
-                                  shares(cf.get("enemy_classes"), cf.get("enemy_n")))
+    if qf.get("enemy_classes") is not None and cf.get("enemy_classes") is not None:   # unknown on base problems
+        parts["raid mix"] = -1.5 * l1(shares(qf.get("enemy_classes"), qf.get("enemy_n")),
+                                      shares(cf.get("enemy_classes"), cf.get("enemy_n")))
     parts["count"] = -1.0 * abs(math.log((qf.get("count_ratio") or 1) / (cf.get("count_ratio") or 1)))
     return round(sum(parts.values()), 2), {k: round(v, 2) for k, v in parts.items() if v}
 

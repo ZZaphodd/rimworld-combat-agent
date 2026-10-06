@@ -113,8 +113,9 @@ as `*` (GAME_FACTS §6). rca/terrain.py is the one implementation of this legend
   `carrying <name>` already while it walks to the victim: a `Go here` before the victim's own job
   reads `being carried by …` cancels the carry (twice in rand_011, Claude's game) [obs 2026-10-05].
   **[obs 2026-10-06, base_ith_pirate_2x]** a carrier on a cell diagonal to the victim (who lay under a
-  standing squadmate) kept the job `carrying Leslie` ~110 ticks without picking her up; sent with `Go here`
-  to the orthogonal neighbouring cell and given `Carry` again, it picked her up at once. `Tend <name>
+  standing squadmate, with a raider's job still on her) kept the job `carrying Leslie` ~90–135 ticks
+  without picking her up; after `Go here` toward the orthogonal neighbouring cell and `Carry` again, the
+  next poll showed it on her cell carrying her. Why the first carry stalled is not known. `Tend <name>
   (without medicine)` works from a drafted pawn (job `tending to <name>`).
 - `Cannot go here: No path` for a cell behind a wall: break the wall first (verb gizmo above).
 - Disabled options keep their text with a reason, e.g.

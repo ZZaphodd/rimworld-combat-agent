@@ -18,9 +18,9 @@
   "results": [
    {
     "who": "agent `turtle`",
-    "play": "hold the start and fire",
+    "play": "hold a planned concave ~11 cells west of the start and fire",
     "result": "defeat: squad down t5177, 9 of 25 out",
-    "lost": "0 dead, 8 downed",
+    "lost": "0 dead, 8 downed, 1 permanent",
     "badness": "57.4"
    },
    {
@@ -39,15 +39,16 @@
    }
   ],
   "id": "base_ith_pirate_2x",
-  "sites": [],
+  "sites": [
+   "Ithfunda east room"
+  ],
   "arena": "arena_col_ithfunda",
   "ours": "OutlanderCivil",
   "raid": "PirateWaster",
   "auto": [
    "base-arena",
    "raid-far",
-   "raid-outnumbers",
-   "raid-outranges"
+   "raid-outnumbers"
   ],
   "features": {
    "squad_n": 8,
@@ -58,12 +59,10 @@
     "support": 1
    },
    "enemy_n": 25,
-   "enemy_classes": {
-    "other": 25
-   },
-   "enemy_melee_share": 0.0,
-   "enemy_outrange_share": 1.0,
-   "enemy_explosive_share": 0.0,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
    "count_ratio": 0.32,
    "distance": 130.4,
    "squad_range_median": 19.4,
@@ -120,12 +119,10 @@
     "melee": 1
    },
    "enemy_n": 10,
-   "enemy_classes": {
-    "other": 10
-   },
-   "enemy_melee_share": 0.0,
-   "enemy_outrange_share": 0.0,
-   "enemy_explosive_share": 0.0,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
    "count_ratio": 0.8,
    "distance": 175.3,
    "squad_range_median": 25.9,
