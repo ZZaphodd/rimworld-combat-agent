@@ -1,0 +1,37 @@
+{
+ "throwers": [
+  [
+   "Bowman",
+   152,
+   100
+  ],
+  [
+   "Carson",
+   150,
+   100
+  ],
+  [
+   "Xiaoer",
+   154,
+   100
+  ]
+ ],
+ "pawn": "Kitt",
+ "at": [
+  152,
+  100
+ ],
+ "home": [
+  152,
+  110
+ ],
+ "health": [
+  100,
+  100,
+  0,
+  false
+ ],
+ "others_moved": 9,
+ "save": "drill_grenade_dance",
+ "commit": "a37e29a27c39"
+}

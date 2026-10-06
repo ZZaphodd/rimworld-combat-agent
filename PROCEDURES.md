@@ -16,6 +16,7 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 | §9 episodes | `tools/run_eval.py` | `rca/eval/harness.py` |
 | §10 watchdog | (in-process) | `rca/game/session.Watchdog` |
 | §12 micro drills | `tools/run_drill.py` | `rca/micro/drills.py` |
+| §12b grenade dance | `tools/grenade_dance.py` | `tools/hands.py` (`guard`) |
 | §14 threat montage | `tools/build_montage.py` | `rca/game/builders/montage.py` |
 | §15–16 human / Claude play | `tools/run_human.py`, `tools/hands.py` | `rca/eval/harness.run_observed_episode` |
 | combat points | `tools/combat_points.py` | `rca/game/defs.py` |
@@ -288,6 +289,24 @@ Per WORKFLOW test layers: micro is judged per event, with positioning and target
 5. A session ends after `events` exploded frags, when fewer than half the squad stands, or at
    `max_ticks` (6000); the next session reloads the base. Modes alternate per session.
 6. Output: `results/drills/<name>.jsonl`, one `event` row per exploded frag + one `session` row.
+
+## 12b. Grenade dance (`tools/grenade_dance.py`, the user's idea, 2026-10-06)
+
+One colonist with full Moving against three frag grenadiers that cannot move. Claude's dodge
+(`hands.guard`, the battle code) and a human's dodging are measured the same way.
+
+1. `setup --pawn new --save` on any loaded map:
+   - three single-cell islands of deep water at (x−2|x|x+2, z) with a Grenadier_Destructive on each;
+   - a freshly spawned Colonist, drafted, fire at will off, at the home cell 10 cells north;
+   - everyone else moved far away; dev mode off.
+   It writes `results/drills/grenade_dance_setup.json` and the save `drill_grenade_dance`.
+2. `load` reloads that save. Use a fresh load for every run: frag wounds are lasting (lost toes,
+   a kidney), and debug healing does not undo them.
+3. `claude --ticks 3000`: guard each step, and walk home when no grenade lies near the way.
+4. `watch --ticks 3000`: the human unpauses and plays. It only reads, every game tick it sees. Stay
+   within ~12 cells of the islands, or they stop throwing.
+5. Output: `results/drills/grenade_dance.jsonl`, one `event` row per exploded frag
+   (`threatened`, `near_at_blast`, `hit` = a new frag wound) and one `run` row.
 
 ## 14. Threat montage (`montage_threats`, 2026-10-04)
 

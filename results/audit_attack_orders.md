@@ -64,6 +64,50 @@ Method:
 - No failed stop shows in the rand_227 `assign` re-measure's output: the old branch did not run
   there.
 
+**Grenade sidestep re-issued every call (found 2026-10-06, rand_130 re-measure).**
+- Controllers call `hands.guard(n=2)` once per step. guard kept the grenades it had handled
+  only for one call.
+- So a grenade still in flight or lying on its fuse was "new" again at every step. Each time,
+  the pawn it was aimed at, or the one nearest to it, was sent ~5 cells from **its own current
+  cell**.
+- In the re-measure's stopped attempt a frag flew ~110 ticks (t2163–2273), then lay at (125, 132)
+  for ~90 ticks (t2276–2364). Zhang's job read "moving." the whole time:
+  - x 127 → 128 → 125 → 126 at z 132, 0–3 cells from the frag;
+  - "Death: Zhang … died in an explosion" at t2369.
+- With a Keeper, a second pawn overwrote the first in `keeper.dodges`, and the first stayed held
+  (Beatriz, until the run was stopped).
+- That attempt was stopped and the harness killed, so no row was written. The partial trace was
+  moved to the session scratchpad.
+- Fixed in `hands.guard`:
+  - a grenade is handled once per pawn across calls (`_HANDLED`, and `keeper.dodges` holds every
+    pawn moved);
+  - a grenade lying on its fuse moves each pawn within 3 cells away from the grenade, once;
+  - all held pawns are released when it goes off.
+- Tests: `GuardTest` (the old guard fails them; the moved pawn goes back and forth
+  (2, 6) ↔ (2, 1) beside a frag at (0, 1)).
+- Exposure: the per-step `guard(n=2..3, keep=())` controllers on the old guard were `duel.py`
+  (rand_130 first play), `duel130a.py` (the stopped rand_130 attempt), `duel150.py` and
+  `duel150a.py` (rand_150, no grenades) and `gun227*.py` (rand_227, no grenades). The others pass
+  `keep` = the whole squad, so nobody dodges.
+  - In rand_130's first play the per-call memory re-issued sidesteps for the same frag. But
+    `duel.py` gave the dodger a "Fire at" order in the same step, so every sidestep was cancelled:
+    Zhang read "attacking …" on his own cell one poll later (t2385 → t2400, t2654 → t2670), and no
+    pawn moved more than one cell.
+  - Frags lay at (123,132) for t2430–2475 (Zhang 1 cell, Petra 3, Beatriz 3.6) and at (125,131)
+    for t2654–2670 (Zhang 1, Beatriz 1.4, already down, Petra 2.8).
+  - Beatriz went down at t2475 while the first frag still lay 3.6 cells away; her health had
+    been falling under fire since t2400 (75 → 65 → 46 → 39).
+- Later guard changes, from the same re-measure and the grenade drill below:
+  - grenades are polled after their thrower falls (a molotov thrown as Athequart died went
+    unwatched);
+  - a grenade counts as lying after 15 ticks on one cell (in flight a frag stays ~10 ticks on a
+    cell);
+  - sightings are kept across calls (a one-poll call never saw a second cell);
+  - with no readable target, the line of flight is read after 3 cells, and every pawn within 3
+    cells of it moves (at most 3). From one cell, the line on rand_130's molotovs named Hakuja or
+    Missy; they landed beside Rae;
+  - the dodge cell and the walk there keep clear of lying grenades.
+
 **Wall (rand_164 map, `Command_VerbTarget`).**
 - One swing per pawn (11 damage), then nothing for 450 ticks. This held whether the order was
   given once, again every 90 ticks, or after the pawn stepped away and back.
@@ -76,7 +120,7 @@ starts a new aim or swing.
 
 | where | what makes it switch | measured in the trace |
 |---|---|---|
-| Claude: `gun227.py`, `duel150.py`, `duel.py` | stall rule ("Shots fired" unchanged for 3 steps = 18–24 ticks, shorter than an aim + cooldown cycle). Priority targets in range of the squad but out of the shooter's own range, so "Fire at" is disabled and it falls through to another raider every step | rand_227: 663 of 679 attack runs ended in a switch, median run 16 ticks. rand_150: Lover (bolt-action) went Lawman ↔ Paul ~30 times and fired 5 shots in the fight |
+| Claude: `gun227.py`, `duel150.py`, `duel.py` | stall rule ("Shots fired" unchanged for 3 steps). gun227 (rand_227, after the wait-setting change of 2026-10-05 ~18:00): 3 steps = ~24 ticks, shorter than an aim + cooldown cycle. duel150/duel (rand_150, rand_130, played ~17:00, before it): a step was ~30 ticks, so ~90 ticks, about one cycle of a pistol and shorter than the bolt-action's 192. Priority targets in range of the squad but out of the shooter's own range, so "Fire at" is disabled and it falls through to another raider every step | rand_227: 663 of 679 attack runs ended in a switch, median run 16 ticks. rand_150: Lover (bolt-action) switched at least 27 times (Lawman ↔ Paul, Meach, Brock, Kipper) and fired 5 shots in the fight |
 | Claude: `focus190.py` (bows) | "stalled" = no new shot in one 15-tick step | rand_190: 77 of 80 runs ended in a switch, median 15 ticks; Bee switched 40 times |
 | Claude: `pocket.py`, `mouth2.py` / `rand_118_mouth_loop.py` | stall rule; nearest-raider and distance-to-mouth orders flip | rand_179: median run 134 ticks (old 15–30-tick waits) |
 | Claude: `focus164.py`, `mark23b.py`, `mark190.py`, `hall164.py` | a "Go here" to a touch cell replaces a melee job that was still chasing, then the melee order again; two raiders in reach give alternating orders | rand_164 attempt 1: median melee run 34 ticks; rand_023 attempt 3: 15 melee → moving → melee cycles |
@@ -100,6 +144,9 @@ The agents are the frozen baseline: listed here, not changed.
 | rand_227 | 19.4, repelled. Ranged runs 679, median 8 ticks, 665 switches | **73.8, squad down**. Ranged runs 16, median 834 ticks, 8 switches | The switching was gone, but the shooters stayed on the priority raider at their range edge (Lynx, 21–23 cells) while the melee arrivals fought the knives at the line. Nothing re-ranked targets when the threat changed |
 
 | rand_227 | (as above) | **86.6, pyrrhic** with `Keeper.assign` (expected damage, spread, focus weight, 1.25× switch, friendly-fire radii). Ranged runs 30, median 335 ticks, 20 switches | The melee arrivals died 300–1000 ticks earlier than in either other run. Two of three deaths came while the rifles held out of reach before a rule-timed close-in (1400 ticks after the arrivals died; by hand in attempt 1, ~100 ticks after) |
+
+| rand_150 | 36.4, repelled, 2 dead. Lover (bolt-action, aim 102 + cooldown 90 ticks) switched targets at least 27 times (Lawman ↔ Paul, Meach, Brock, Kipper): 5 shots all fight | **6.4, repelled, none lost or downed** with `Keeper.assign` (after the hold-fire fix). Lover 12 shots, 134 damage; damage dealt ≥405 (Nytro and Ash not read) → 536 | The same plan and line. Lawman (the raid's best pistol) died at t2842 with Lover's kept order on him; in the first play he lived past t5224. The raid's knives died 3–6 cells out, so our knives never went out (trigger: a raider within 2 of the squad), and no rush was ordered. Not the same: the control step was ~6–7 ticks against ~30 in the first play (played before the wait-setting change) |
+| rand_130 | 35.4, repelled, 1 dead, 3 downed. Played before the wait-setting change: the stall rule was ~100 ticks, longer than the shotguns' 54-tick aim | **21.8, repelled, 1 dead (Zhang, shot), 1 downed** with `Keeper.assign` (Sammy weighted onto the grenadiers) and the guard memory fix. A first try was stopped with no row after Zhang died beside a lying frag (guard bug, above) | The shotguns fired 8 and 6 shots in both plays. Both grenadiers died 10–11 cells out. Not the same: guard (memory across calls; a step-away from a lying grenade that also fired on a frag paused in flight and moved Zhang to (121,134), where he was later shot; dodgers held by the Keeper, where in the first play duel.py's next fire order cancelled every sidestep), Sammy's weight 10 and 1.5 on both grenadiers for the others (first play: only Sammy had a priority list), the control step (~6 vs ~35 ticks). This run does not separate the ordering's share |
 
 Each row is one draw.
 

@@ -406,7 +406,8 @@ class Keeper:
         """Ranged fire for a squad, the user's micro rules (2026-10-06).
 
         Value of raider t for shooter n: expected_dpt at that distance x cover x the caller's
-        threat weight (hard or soft focus on top threats; default 1) x (1 - friendly-fire risk,
+        threat weight (hard or soft focus on top threats; default 1; a (shooter, raider) key
+        overrides the raider's own, for one shooter's priority) x (1 - friendly-fire risk,
         unless t is in `ff`, the raiders the tactical layer accepts the risk on) / (1 + SPREAD x
         the active shooters of ours already on t): fire spreads evenly unless focused. A shooter
         re-decides at most once per weapon cycle and switches when the best raider is worth
@@ -447,7 +448,8 @@ class Keeper:
                     return 0.0
                 risk = 0.0 if t in ff else ff_risk(me, f, allies, explosive)
                 others = on.get(t, 0) - (1 if mine else 0)
-                return v * cover(me, f) * weight.get(t, 1.0) * (1 - risk) / (1 + self.SPREAD * others)
+                w = weight.get((n, t), weight.get(t, 1.0))
+                return v * cover(me, f) * w * (1 - risk) / (1 + self.SPREAD * others)
             cur_v = value(t0, True) if t0 in foes else 0.0
             if cur and t0 in foes and f"attacking {t0.lower()}" in job:
                 cur["reorders"] = 0
@@ -665,9 +667,20 @@ def _aimed(h):
     return t.split("colonist ", 1)[1].strip() if "colonist " in t else None
 
 
-def _dodge_cell(me, fx, fz, ours, foes, dist=5):
+def _seg_dist(p, a, b):
+    """Distance from point p to the segment a-b."""
+    dx, dz = b[0] - a[0], b[1] - a[1]
+    L2 = dx * dx + dz * dz
+    u = 0.0 if L2 == 0 else max(0.0, min(1.0, ((p[0] - a[0]) * dx + (p[1] - a[1]) * dz) / L2))
+    return math.dist(p, (a[0] + u * dx, a[1] + u * dz))
+
+
+def _dodge_cell(me, fx, fz, ours, foes, dist=5, avoid=()):
     """A cell ~dist from (fx, fz): keeps about the same distance to the raid (a sidestep, so the
-    pawn can keep shooting), stays 2+ cells from other squadmates, never closer to the raid."""
+    pawn can keep shooting), stays 2+ cells from other squadmates, never closer to the raid, and
+    clear of the grenades lying in `avoid`: the cell beyond LYING_R + 1 of each, and the straight
+    walk there beyond LYING_R (2026-10-06 drill: a pawn sent from one frag walked past another
+    lying one and was caught in its blast)."""
     ex = sum(f["x"] for f in foes) / len(foes) if foes else me["x"]
     ez = sum(f["z"] for f in foes) / len(foes) if foes else me["z"]
     d0 = math.dist((me["x"], me["z"]), (ex, ez))
@@ -680,20 +693,72 @@ def _dodge_cell(me, fx, fz, ours, foes, dist=5):
         de = math.dist(c, (ex, ez))
         crowd = sum(1 for o in ours if o is not me and math.dist(c, (o["x"], o["z"])) < 2)
         score = abs(de - d0) + (8 if de < d0 - 1 else 0) + 5 * crowd + 0.2 * math.dist(c, (me["x"], me["z"]))
+        score += 20 * sum(1 for a in avoid if math.dist(c, a) <= LYING_R + 1)
+        start = (me["x"], me["z"])                          # a walk that comes closer than LYING_R,
+        score += 20 * sum(1 for a in avoid                   # and closer than where it starts
+                          if _seg_dist(a, start, c) <= LYING_R and _seg_dist(a, start, c) < math.dist(start, a) - 0.5)
         if best is None or score < best[0]:
             best = (score, c)
     return best[1]
 
 
+_HANDLED = {}     # grenade id -> the pawns already sent away from it (this process; Keeper.dodges across calls)
+LYING_R = 3.0     # a pawn this close to a grenade lying on its fuse steps away from it (frag blast ~1.9)
+STILL = 15        # ticks on one cell before a grenade counts as lying: in flight a frag takes ~10
+                  # ticks per cell (2026-10-06 drill: 10 cells in ~105 ticks), so 3-tick polls see
+                  # the same cell several times while it flies
+_POS = {}         # grenade id -> (cell, tick it got there)
+_SEEN = {}        # grenade id -> its first cell seen (kept across guard calls)
+_PENDING = set()  # grenades with no known target, waiting for a second cell to read their line
+
+
+LINE_R = 3.0     # a grenade with no known target: the pawn within this of its line of flight, ahead of it
+LINE_MIN = 3.0   # cells flown before its line is read: from a one-cell step the direction is too rough
+                 # (rand_130 re-measure flights: a cell held 6-22 ticks, first steps straight south for
+                 # a molotov that landed 2 cells east of that line)
+
+
+def _on_line(ours, a, b, keep=(), most=3):
+    """The standing pawns of `ours` within LINE_R of the line of flight a -> b and ahead of b,
+    nearest the line first, at most `most`: read from a few cells the line is still rough
+    (rand_130 re-measure: a molotov flew straight south for 3 cells and landed 2 cells east of
+    that line, beside the second pawn on it), so every pawn near it steps aside."""
+    dx, dz = b[0] - a[0], b[1] - a[1]
+    L = math.hypot(dx, dz)
+    best = None
+    for p in ours:
+        nm = short_name(p["label"])
+        if p.get("downed") or nm in keep:
+            continue
+        vx, vz = p["x"] - b[0], p["z"] - b[1]
+        ahead = (vx * dx + vz * dz) / L
+        off = abs(vx * dz - vz * dx) / L
+        if ahead >= -1 and off <= LINE_R:
+            best = (best or []) + [(off, nm)]
+    return [nm for _, nm in sorted(best or [])[:most]]
+
+
+def _moved(keeper, i):
+    v = (keeper.dodges.get(i) if keeper is not None else None) or _HANDLED.get(i) or []
+    return [v] if isinstance(v, str) else list(v)
+
+
 def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, quiet=False, keeper=None):
     """Fine-grained steps (dt ticks) with a grenade reflex, the player's way: when a grenade
     appears, its target is the colonist the nearest grenadier was aiming at (`targeting`), else
-    the pawn nearest its line of flight; only that pawn sidesteps ~5 cells (same distance to the
+    the pawn nearest its line of flight at the next poll (`_on_line`; grenades are polled even
+    after their thrower fell); only that pawn sidesteps ~5 cells (same distance to the
     raid, clear of squadmates); once the grenade is gone the pawn's errand is re-issued from
-    `resume` {name: callable}. Pawns in `keep` never dodge. Returns early on an event: one of
+    `resume` {name: callable}. A grenade lying on its fuse moves every pawn within LYING_R of it
+    away from it, once. A grenade is handled once: the pawns sent away from it are kept in
+    _HANDLED (and in keeper.dodges across guard calls), so a later call does not send them again
+    (2026-10-06: the old per-call memory re-sidestepped the same pawn every call, from its own
+    cell, and Zhang walked back and forth beside a lying frag until it went off). Pawns in `keep`
+    never dodge. Returns early on an event: one of
     ours down or -hp_drop % (checked every hp_every steps), a raider down or gone, or
-    near=(name, d) a raider within d of that pawn. Cheap per step: 4 calls. No dodging when the
-    raid has no throwers; a grenade first seen next to one of our throwers is ours (2026-10-05:
+    near=(name, d) a raider within d of that pawn. Per step: 4 calls and the 3 grenade queries
+    (rand_130 re-measure: a molotov still in flight when its thrower died went unwatched under
+    the old "only while a thrower stands" rule). A grenade first seen next to one of our throwers is ours (2026-10-05:
     our own frag sent Trev into the raid). NB: wait(dt) advances exactly dt ticks since the
     mod's wait setting was changed on 2026-10-05 evening (before: 15–30 ticks at least;
     RIMMOLT_API), at ~60 ticks/s of wall time. With `keeper` (a Keeper), a dodger is held (no attack
@@ -707,7 +772,7 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
     h0 = hp()
     ours0 = {short_name(p["label"]): bool(p.get("downed")) for p in pawns("player")}
     foes0 = {short_name(p["label"]): bool(p.get("downed")) for p in pawns("hostile")}
-    seen, dodging, last_aim = {}, {}, {}
+    seen, dodging, last_aim, pending = _SEEN, {}, {}, _PENDING
     for k in range(n):
         wait(dt)
         ours, foes = pawns("player"), pawns("hostile")
@@ -715,46 +780,83 @@ def guard(n=60, dt=3, hp_every=10, hp_drop=12, near=None, keep=(), resume=None, 
         for f in foes:
             if f["id"] in throwers and _aimed(f):
                 last_aim[f["id"]] = (_aimed(f), f["x"], f["z"])
-        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()} if throwers else {}
+        projs = {i: (kind, x, z) for i, kind, x, z in projectiles()}   # also after the thrower fell
+        tick = rm.call("get_status")["ticksGame"] if projs else 0
+        lying = set()
+        for i, (kind, x, z) in projs.items():
+            cell, since = _POS.get(i, ((x, z), tick))
+            _POS[i] = ((x, z), since if cell == (x, z) else tick)
+            if tick - _POS[i][1] >= STILL:
+                lying.add(i)
+        for i in [i for i in _POS if i not in projs]:
+            _POS.pop(i)
+            _SEEN.pop(i, None)
+            _PENDING.discard(i)
+        avoid = [projs[i][1:] for i in lying]
         our_throwers = [p for p in ours if not p.get("downed") and any(
             k in (rm.call("get_pawn", id=p["id"]).get("weapon") or "").lower() for k in THROWN)] if projs else []
+        def send(i, who, c, tag=""):
+            go(who, *c)
+            _HANDLED.setdefault(i, []).append(who + tag)
+            if keeper is not None:
+                keeper.hold(who)
+                keeper.dodges[i] = list(_HANDLED[i])
+            dodging.setdefault(i, []).append(who)
+        live = [f for f in foes if not f.get("downed")]
         for i, (kind, x, z) in projs.items():
+            done = _moved(keeper, i)
             if i in seen:
+                if i in lying:                               # lying on its fuse: clear the cells around it
+                    for p in ours:
+                        nm = short_name(p["label"])
+                        if nm in keep or p.get("downed") or nm + "@" in done or math.dist((x, z), (p["x"], p["z"])) > LYING_R:
+                            continue
+                        c = _dodge_cell(p, x, z, ours, live, avoid=avoid)
+                        send(i, nm, c, "@")
+                        if not quiet:
+                            print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} lying at {(x, z)}: {nm} -> {c}")
+                elif i in pending and not done and math.dist(seen[i], (x, z)) >= LINE_MIN:   # target unknown: its line
+                    for who in _on_line(ours, seen[i], (x, z), keep):
+                        me = byname[who]
+                        c = _dodge_cell(me, me["x"], me["z"], ours, live, avoid=avoid)
+                        send(i, who, c)
+                        if not quiet:
+                            print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} flying at {who} -> sidestep {c}")
+                    pending.discard(i)
+                if i not in pending:
+                    seen[i] = (x, z)
                 continue
             seen[i] = (x, z)
+            if done:
+                continue                                     # handled in an earlier call
             if any(math.dist((x, z), (p["x"], p["z"])) <= 2.5 for p in our_throwers):
+                _HANDLED[i] = ["ours"]
                 continue                                     # one of ours, just thrown
             # who threw it: the thrower nearest to where it first appeared
             src = min(((math.dist((x, z), (a[1], a[2])), a[0]) for a in last_aim.values()), default=(99, None))
             who = src[1] if src[0] <= 6 else None
-            if who is None:                                  # fall back: nearest standing pawn
-                cand = [p for p in ours if not p.get("downed")]
-                who = min(cand, key=lambda p: math.dist((x, z), (p["x"], p["z"]))) if cand else None
-                who = short_name(who["label"]) if who else None
+            if who is None:                                  # unknown: decide on its line at the next poll
+                pending.add(i)
+                continue
             me = byname.get(who)
             if not me or who in keep or me.get("downed"):
                 continue
-            c = _dodge_cell(me, me["x"], me["z"], ours, [f for f in foes if not f.get("downed")])
-            go(who, *c)
-            if keeper is not None:
-                keeper.hold(who)
-                keeper.dodges[i] = who
-            dodging[i] = who
+            c = _dodge_cell(me, me["x"], me["z"], ours, live, avoid=avoid)   # in flight: it lands on `who`
+            send(i, who, c)
             if not quiet:
                 print(f"   t{rm.call('get_status')['ticksGame'] - 383} {kind} thrown at {who} -> sidestep {c}")
         if keeper is not None:                               # dodges from earlier guard calls
-            for i, who in list(keeper.dodges.items()):
+            for i in list(keeper.dodges):
                 if i not in projs:
+                    for who in {w.rstrip("@") for w in _moved(keeper, i)} - {"ours"}:
+                        keeper.release(who)
                     keeper.dodges.pop(i)
-                    keeper.release(who)
-                else:
-                    seen.setdefault(i, projs[i][1:])
         for i in [i for i in dodging if i not in projs]:     # exploded or gone: back to the errand
-            who = dodging.pop(i)
-            if who in resume:
-                resume[who]()
-                if not quiet:
-                    print(f"   {who} back to its errand")
+            for who in dodging.pop(i):
+                if who in resume:
+                    resume[who]()
+                    if not quiet:
+                        print(f"   {who} back to its errand")
         ev = [f"{n_} DOWN" for n_, p in byname.items() if p.get("downed") and not ours0.get(n_)]
         ev += [f"{n_} gone" for n_ in ours0 if n_ not in byname]
         fn = {short_name(p["label"]): bool(p.get("downed")) for p in foes}
