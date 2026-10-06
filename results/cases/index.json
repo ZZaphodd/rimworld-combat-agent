@@ -156,7 +156,7 @@
    },
    {
     "who": "Claude, attempt — discarded (the user changed the scope mid-battle)",
-    "play": "R2 door hold, benches left in place; a loadout (Sammy the heavy SMG)",
+    "play": "R2 door hold, benches left in place until the scope change (Ana began uninstalling the smelter at t7467); a loadout (Sammy the heavy SMG)",
     "result": "stopped at t8186: none of ours down, 18 raiders listed",
     "lost": "–",
     "badness": "–"
@@ -164,13 +164,13 @@
    {
     "who": "the user, attempt 1 — discarded (the user restarted)",
     "play": "R2 door hold, benches uninstalled; Brianna's frag on an area order",
-    "result": "stopped at t7221: Cutillas 42%, Sammy 31% (likely our own frag; no raider near the door)",
+    "result": "stopped at t7221: Cutillas 42%, Sammy 31% and downed (likely our own frag; no raider near the door)",
     "lost": "–",
     "badness": "–"
    },
    {
     "who": "**the user, attempt 2**",
-    "play": "uninstall R1/R2 furniture with everyone on Constructing; all eight packed in three rows behind the door; frags on an area order up the passage; a mid-battle loadout",
+    "play": "uninstall R1/R2 furniture with everyone on Constructing; all eight in three rows behind the door (Philly away t10513–11242); frags on an area order up the passage; a mid-battle loadout",
     "result": "**repelled** (raid fled t11437; cleared t19427)",
     "lost": "0 (0 downed, 0 permanent), HP 47%",
     "badness": "**1.9**"
