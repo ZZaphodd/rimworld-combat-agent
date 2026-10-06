@@ -1,5 +1,6 @@
 """hands.Keeper: attack orders only on a change of target (results/audit_attack_orders.md)."""
 import importlib.util
+import math
 import pathlib
 import unittest
 
@@ -8,12 +9,14 @@ spec = importlib.util.spec_from_file_location("hands", ROOT / "tools" / "hands.p
 hands = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(hands)
 ORIG = {k: getattr(hands, k) for k in ("fire", "melee", "shots_fired", "weapon_cycle", "counts_shots", "fireable",
-                                       "expected_dpt", "_verb", "cover", "go", "_wdef", "fire_at_will", "stop")}
+                                       "expected_dpt", "_verb", "cover", "go", "_wdef", "fire_at_will", "stop",
+                                       "rm", "pawns", "ids", "wait", "projectiles")}
 
 
 def restore():
     for k, v in ORIG.items():
         setattr(hands, k, v)
+    hands._HANDLED.clear()
 
 
 class Restored(unittest.TestCase):
@@ -151,6 +154,14 @@ class AssignTest(Restored):
         out = self.k.assign(["A", "B"], foes, ours, 0, {}, weight={"X": 3.0})
         self.assertEqual(list(out.values()), ["X", "X"])
 
+    def test_one_shooters_priority_overrides_the_raider_weight(self):
+        ours = {"A": self.p(0, 0), "B": self.p(0, 1)}
+        foes = {"X": self.p(5, 0), "Y": self.p(25, 1)}             # Y far: B would share X (0.42 > 0.17)
+        out = hands.Keeper().assign(["A", "B"], foes, ours, 0, {})
+        self.assertEqual((out["A"], out["B"]), ("X", "X"))
+        out = self.k.assign(["A", "B"], foes, ours, 0, {}, weight={("B", "Y"): 3.0, "X": 1.0})
+        self.assertEqual((out["A"], out["B"]), ("X", "Y"))
+
     def test_focus_then_unfocus_splits_again(self):
         ours = {"A": self.p(0, 0), "B": self.p(0, 1)}
         foes = {"X": self.p(10, 0), "Y": self.p(10, 1)}
@@ -279,6 +290,68 @@ class FriendlyFireTest(unittest.TestCase):
         self.assertGreater(hands.ff_risk(a, x, [a, p(10, 0)]), 0.5)          # in the lane, 10 out
         self.assertEqual(hands.ff_risk(a, x, [a, p(3, 0)]), 0.0)             # inside the safe radius
         self.assertEqual(hands.ff_risk(a, p(6, 0), [a, p(3, 0)], explosive=True), 1.0)   # splash
+
+
+
+class GuardWorld:
+    """A frag thrown by R (at 20,0) at Z (0,0): in flight at t3, lying at (0,1) from t6 to t60."""
+
+    def __init__(self):
+        self.t = 0
+        self.ours = {"Z": {"x": 0, "z": 0}, "Y": {"x": 2, "z": 1}, "W": {"x": 0, "z": 12}}
+        self.gone = []
+
+    def call(self, name, **kw):
+        if name == "get_status":
+            return {"ticksGame": 383 + self.t}
+        if name == "get_pawn":
+            return {"weapon": "Frag grenades" if kw["id"] == "R" else "Revolver", "health": 100}
+        return {}
+
+    def pawns(self, side):
+        if side == "hostile":
+            return [{"id": "R", "label": "R", "x": 20, "z": 0, "targeting": "targeting colonist Z"}]
+        return [{"id": n, "label": n, "x": p["x"], "z": p["z"]} for n, p in self.ours.items()]
+
+    def projectiles(self):
+        if 3 <= self.t < 6:
+            return [("G1", "Frag", 18, 0)]
+        if 6 <= self.t < 60:
+            return [("G1", "Frag", 0, 1)]
+        return []
+
+    def go(self, name, x, z):
+        self.gone.append((self.t, name, (x, z)))
+        self.ours[name] = {"x": x, "z": z}
+
+
+class GuardTest(Restored):
+    def setUp(self):
+        self.w = GuardWorld()
+        hands.rm = self.w
+        hands.pawns, hands.projectiles, hands.go = self.w.pawns, self.w.projectiles, self.w.go
+        hands.ids = lambda: {n: n for n in self.w.ours}
+        hands.wait = lambda dt: setattr(self.w, "t", self.w.t + dt)
+
+    def run_calls(self, k):
+        for _ in range(25):                                  # one guard call per controller step
+            hands.guard(n=2, dt=3, quiet=True, keeper=k)
+
+    def test_a_grenade_moves_each_pawn_once_across_calls(self):
+        k = hands.Keeper()
+        self.run_calls(k)
+        moves = [g[1] for g in self.w.gone]
+        self.assertEqual(moves.count("Z"), 1, self.w.gone)   # the target, at the throw
+        self.assertEqual(moves.count("Y"), 1, self.w.gone)   # 1.0 from where it lies
+        self.assertNotIn("W", moves)
+        for t, n, c in self.w.gone:
+            if n == "Y":
+                self.assertGreaterEqual(math.dist(c, (0, 1)), 4)
+        self.assertEqual((k.held, k.dodges), ({}, {}))      # released once it went off
+
+    def test_without_a_keeper_too(self):
+        self.run_calls(None)
+        self.assertEqual([g[1] for g in self.w.gone].count("Z"), 1, self.w.gone)
 
 
 if __name__ == "__main__":

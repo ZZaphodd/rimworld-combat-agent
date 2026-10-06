@@ -64,6 +64,35 @@ Method:
 - No failed stop shows in the rand_227 `assign` re-measure's output: the old branch did not run
   there.
 
+**Grenade sidestep re-issued every call (found 2026-10-06, rand_130 re-measure).**
+- Controllers call `hands.guard(n=2)` once per step. guard kept the grenades it had handled
+  only for one call.
+- So a grenade still in flight or lying on its fuse was "new" again at every step. Each time,
+  the pawn it was aimed at, or the one nearest to it, was sent ~5 cells from **its own current
+  cell**.
+- In the re-measure a frag lay at (125, 132) for ~110 ticks (t2252–2364), and Zhang's job read
+  "moving." the whole time:
+  - x 125 → 128 → 125 at z 132, 0–3 cells from the frag;
+  - "Death: Zhang … died in an explosion" at t2369.
+- With a Keeper, a second pawn overwrote the first in `keeper.dodges`, and the first stayed held
+  (Beatriz, until the run was stopped).
+- That attempt was stopped and the harness killed, so no row was written. The partial trace was
+  moved to the session scratchpad.
+- Fixed in `hands.guard`:
+  - a grenade is handled once per pawn across calls (`_HANDLED`, and `keeper.dodges` holds every
+    pawn moved);
+  - a grenade lying on its fuse moves each pawn within 3 cells away from the grenade, once;
+  - all held pawns are released when it goes off.
+- Tests: `GuardTest` (the old guard fails them; the moved pawn goes back and forth
+  (2, 6) ↔ (2, 1) beside a frag at (0, 1)).
+- Exposure: the per-step `guard(n=2..3, keep=())` controllers were `duel.py` (rand_130),
+  `duel150.py` (rand_150) and `gun227*.py` (rand_227). The others pass `keep` = the whole squad,
+  so nobody dodges.
+  - Only rand_130 had grenades: 19 trace polls with a frag or molotov.
+  - In its first play, frags lay 1–3 cells from Zhang, Petra and Beatriz at t2430–2475 and
+    t2654–2670. Zhang's job read "moving." in some of those polls, and his cell changed by at
+    most one. Beatriz went down at t2475.
+
 **Wall (rand_164 map, `Command_VerbTarget`).**
 - One swing per pawn (11 damage), then nothing for 450 ticks. This held whether the order was
   given once, again every 90 ticks, or after the pawn stepped away and back.
