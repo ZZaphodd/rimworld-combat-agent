@@ -23,15 +23,22 @@
 - **t3650–5224** `raid-holds`: two pistols held at 16–19 cells and the rifles at 35; one of ours
   died in the trade, one in the rush that killed Paul; then the raid left.
 
-- **Re-measure t2367–2842** `raid-holds` → `focus-top-threat`: Lover, Axle and Nytro on Lawman;
-  **Lawman dead t2842**. The raid's knives died 4–6 cells out (t2939, t3457); our knives never
-  went out. Kipper, Paul and Pavel died at 13–18 cells (t3748–4005); Hyf walked east through the
-  line and died (t4486). None of ours went down.
+- **Re-measure t2304–2842** `raid-holds`: Lover kept Lawman from t2304 (Nytro and Axle joined
+  for a while). **Lawman dead t2842**. The raid's knives died 3–6 cells out (t2939, t3457); our
+  knives never went out.
+- **Re-measure t3457–4486**: Kipper and Paul died where they held, at 14 and 18 cells (t3748,
+  t3859); the raid fled at t3859. Pavel walked in from 13 to 9 cells and died there (~t3972).
+  Hyf walked east, stopped 10 cells out at (155,121) and died there (t4486). None of ours went
+  down.
 
 ## What the play stood on (observed)
-- The raiders who closed died; the ones who held cost us both dead.
-- Rifle in the best hand: 5 shots all fight in the first play (target switches every ~20 ticks,
-  shorter than its 102-tick aim). In the re-measure with kept orders: 12 shots, 134 damage.
+- First play: the raiders who closed died; the ones who held at 16–19 cells cost us both dead
+  (Nytro in the trade, Ash in the rush). Re-measure: the holders (Lawman, Kipper, Paul) died to
+  fire at 14–22 cells; none of ours lost.
+- Rifle in the best hand: 5 shots all fight in the first play (at least 27 target switches; the
+  stall rule was ~90 ticks, shorter than the rifle's aim + cooldown of 192). In the re-measure
+  with kept orders: 12 shots, 134 damage. The re-measure's control step was also ~4× shorter
+  (the wait-setting change).
 
 ## Sources
 journal `journals/rand_150_claude_20261005.md` · trace `results/human/traces/rand_150_claude_20261005-170343.jsonl.gz` ·

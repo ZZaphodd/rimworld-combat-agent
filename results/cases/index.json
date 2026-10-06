@@ -1458,7 +1458,14 @@
     "play": "loadout; two rows across the lane; the ace on the grenadiers; grenade sidesteps; carry the downed",
     "result": "**repelled**",
     "lost": "1 dead, 3 downed",
-    "badness": "**35.4**"
+    "badness": "35.4"
+   },
+   {
+    "who": "Claude, re-measure 2026-10-06",
+    "play": "the same plan; ranged fire by `Keeper.assign` (Sammy weighted onto the grenadiers); guard's grenade memory fixed",
+    "result": "**repelled**",
+    "lost": "1 dead, 1 downed",
+    "badness": "**21.8**"
    }
   ],
   "id": "rand_130",

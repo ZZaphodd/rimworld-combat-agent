@@ -85,7 +85,7 @@ long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid fr
   - The raid came as one body (13–30 cells at t2602), not strung out.
   - The stagger sent Mosquito and Ambas out alone first; the core went 136–187 ticks later.
 - **Claude, t2783–3419** `melee-contact` → `mark-shooters` (failed):
-  - Speedy caught Eagle, so Eagle never reached Kenny. Riley's molotov hit our cluster (t3068).
+  - Speedy caught Eagle, so Eagle never reached Kenny. Riley's molotov hit our cluster (thrown ~t3068; fire on Mosquito's and Iotros's cells from t3142).
     Mosquito was downed first (t3174).
   - Kenny, Allie and Riley kept shooting point blank with bow-holders adjacent on melee jobs:
     damage dealt by Bee and Lándoa was 0, Tarsier 13.
