@@ -86,21 +86,23 @@
   "results": [
    {
     "who": "agent `turtle`",
-    "play": "hold the start and fire",
+    "play": "hold a planned concave ~14 cells south of the start (plan center (116, 151)) and fire",
     "result": "defeat: squad down t6436 with 3 of 10 out",
     "lost": "2 dead, 6 downed, 9 permanent",
     "badness": "109.7"
    },
    {
     "who": "Claude (alone)",
-    "play": "door hold: three melee pawns on the plug and the doorway's two diagonal cells, five guns 2+ cells back, one swap",
+    "play": "door hold: three melee pawns on the plug and the doorway's two diagonal cells, five guns 2+ cells back (four after the one swap, which put Graves's shotgun on the plug)",
     "result": "**decisive** (t24014)",
     "lost": "0 (0 downed)",
     "badness": "**4.8**"
    }
   ],
   "id": "base_ith_tribe_2x",
-  "sites": [],
+  "sites": [
+   "Ithfunda east room"
+  ],
   "arena": "arena_col_ithfunda",
   "ours": "OutlanderCivil",
   "raid": "TribeRoughNeanderthal",

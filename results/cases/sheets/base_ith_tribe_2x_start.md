@@ -1,7 +1,7 @@
-# base_ith_tribe_2x start sheet: 8 civil outlanders (short guns, 1 molotov, 1 knife) vs 10 Neanderthal tribals (8 melee, bow, pila), Ithfunda base
+# base_ith_tribe_2x start sheet: 8 civil outlanders (5 short guns, 1 bolt-action rifle, 1 molotov, 1 knife) vs 10 Neanderthal tribals (8 melee, bow, pila), Ithfunda base
 
-New battle: ours 8, shooting 1–8, flak on Vang and Tina; melee 9+ only Graves 12, Semyon 11, Phat 9 (the thrower). Start in the yard (113–122, 163–166). Raid: 10 TribeRoughNeanderthal from the south edge (48–52, 2–5), ~165 cells; 8 melee (spears, ikwas, a knife; melee 2–8), chief Ñabaigo in steel plate; Raven short bow, Jaguar pila. Count ratio 0.8.
-Turtle (stood in the yard, 109.7): first contact **t2866**; "decided to kidnap" t6106 with 3 of 10 out; squad down t6436 (8 downed, 7 raiders standing); fled t8566 carrying Vang and Graves (both "Death" messages later, t11725, t12033). Raiders out: Komodo killed, 2 inferred, the chief downed. Leaving jobs included "igniting wooden shelf".
+New battle: ours 8, shooting 1–8, flak on Vang and Tina; melee 9+ only Graves 12, Semyon 11, Phat 9 (the thrower). Start in the yard (114–122, 163–166). Raid: 10 TribeRoughNeanderthal from the south edge (48–52, 2–5), ~175 cells; 8 melee (spears, ikwas, a knife; melee 2–8), chief Ñabaigo in steel plate; Raven short bow, Jaguar pila. Count ratio 0.8.
+Turtle (a planned concave ~14 cells south of the start, 109.7): first contact **t2866**; "decided to kidnap" t6106 with 3 of 10 out; squad down t6436 (8 downed, 7 raiders standing); fled t8566 carrying Vang and Graves (both "Death" messages later, t11725, t12033). Raiders out: Komodo killed, 2 inferred, the chief downed. Leaving jobs included "igniting wooden shelf".
 `cases.py similar` put gun-duel cards on top (rand_150, rand_130); picked by hand: the same site, then two Neanderthal mouth holds.
 
 ## 1. base_ith_pirate_2x: east room door, plug alone + guns 2+ back. Claude 12.3 (repelled); turtle 57.4
