@@ -17,6 +17,9 @@ def restore():
     for k, v in ORIG.items():
         setattr(hands, k, v)
     hands._HANDLED.clear()
+    hands._POS.clear()
+    hands._SEEN.clear()
+    hands._PENDING.clear()
 
 
 class Restored(unittest.TestCase):
@@ -335,9 +338,9 @@ class GuardTest(Restored):
         hands.ids = lambda: {n: n for n in self.w.ours}
         hands.wait = lambda dt: setattr(self.w, "t", self.w.t + dt)
 
-    def run_calls(self, k):
-        for _ in range(25):                                  # one guard call per controller step
-            hands.guard(n=2, dt=3, quiet=True, keeper=k)
+    def run_calls(self, k, n=2):
+        for _ in range(50 // n):                             # one guard call per controller step
+            hands.guard(n=n, dt=3, quiet=True, keeper=k)
 
     def test_a_grenade_moves_each_pawn_once_across_calls(self):
         k = hands.Keeper()
@@ -365,6 +368,29 @@ class GuardTest(Restored):
         self.w.thrower_alive = False
         self.run_calls(hands.Keeper())
         self.assertIn("Z", [g[1] for g in self.w.gone])
+
+    def test_a_slow_flight_is_not_a_lying_grenade(self):
+        self.w.ours["Y"] = {"x": 10, "z": 2}                 # beside its path, far from where it lands
+        self.w.flight = [(18, 0), (14, 0), (10, 0), (10, 0), (10, 0), (6, 0), (3, 0)]   # 9 ticks on (10, 0)
+        self.run_calls(hands.Keeper())
+        self.assertNotIn("Y", [g[1] for g in self.w.gone], self.w.gone)
+
+    def test_one_poll_per_call_works_too(self):
+        self.w.aim = None
+        self.w.ours["Y"] = {"x": 2, "z": 1}
+        self.run_calls(hands.Keeper(), n=1)
+        moves = [g[1] for g in self.w.gone]
+        self.assertEqual((moves.count("Z"), moves.count("Y")), (1, 1), self.w.gone)
+
+    def test_dodge_cell_keeps_its_walk_clear_of_a_lying_grenade(self):
+        me = {"x": 50, "z": 50}                              # a frag lies 2 cells east of it
+        foes = [{"x": 50, "z": 38}]
+        c = hands._dodge_cell(me, 50, 50, [me], foes, avoid=[(52, 50)])
+        self.assertGreaterEqual(hands._seg_dist((52, 50), (50, 50), c), 2.0, c)   # never walks past it
+        self.assertGreater(math.dist(c, (52, 50)), hands.LYING_R + 1, c)
+        me = {"x": 50, "z": 50}                              # a frag lies 5 cells east: do not cross it
+        c = hands._dodge_cell(me, 50, 50, [me], foes, avoid=[(55, 51)])
+        self.assertGreater(hands._seg_dist((55, 51), (50, 50), c), hands.LYING_R, c)
 
     def test_without_a_keeper_too(self):
         self.run_calls(None)
