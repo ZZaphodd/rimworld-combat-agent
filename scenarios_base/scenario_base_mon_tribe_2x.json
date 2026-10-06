@@ -1,0 +1,201 @@
+{
+  "id": "base_mon_tribe_2x",
+  "save": "scenario_base_mon_tribe_2x",
+  "spec": {
+    "id": "base_mon_tribe_2x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212584",
+      "name": "Renata 'Gumpy' Vance",
+      "weapon": "Pump shotgun (normal 70%)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212591",
+      "name": "Aleksander 'Fjellsmel' Fjellanger",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212598",
+      "name": "Mark Calvert",
+      "weapon": "Autopistol (poor)",
+      "x": 123,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1212603",
+      "name": "Andree Reisch",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 125,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human1212609",
+      "name": "Kazuko Blackburn",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212613",
+      "name": "Greg 'Bicep' Wash",
+      "weapon": "Autopistol (normal)",
+      "x": 119,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212619",
+      "name": "Helene Stevenson",
+      "weapon": "Machine pistol (normal 87%)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212623",
+      "name": "Andrei 'Andos' Ionescu",
+      "weapon": "Steel knife (poor)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1212634",
+      "def": "Tribal_Penitent",
+      "x": 46,
+      "z": 245
+    },
+    {
+      "id": "Human1212637",
+      "def": "Tribal_HeavyArcher",
+      "x": 51,
+      "z": 244
+    },
+    {
+      "id": "Human1212642",
+      "def": "Tribal_Hunter",
+      "x": 44,
+      "z": 248
+    },
+    {
+      "id": "Human385256",
+      "def": "Tribal_Penitent",
+      "x": 54,
+      "z": 246
+    },
+    {
+      "id": "Human1212647",
+      "def": "Tribal_Hunter",
+      "x": 49,
+      "z": 245
+    },
+    {
+      "id": "Human1212651",
+      "def": "Tribal_Berserker",
+      "x": 47,
+      "z": 243
+    },
+    {
+      "id": "Human1212655",
+      "def": "Tribal_Penitent",
+      "x": 51,
+      "z": 244
+    },
+    {
+      "id": "Human1212657",
+      "def": "Tribal_Warrior",
+      "x": 57,
+      "z": 249
+    },
+    {
+      "id": "Human1212668",
+      "def": "Tribal_Archer",
+      "x": 57,
+      "z": 246
+    },
+    {
+      "id": "Human1212672",
+      "def": "Tribal_Warrior",
+      "x": 48,
+      "z": 245
+    },
+    {
+      "id": "Human1212676",
+      "def": "Tribal_HeavyArcher",
+      "x": 55,
+      "z": 246
+    },
+    {
+      "id": "Human1212681",
+      "def": "Tribal_HeavyArcher",
+      "x": 50,
+      "z": 245
+    },
+    {
+      "id": "Human1212686",
+      "def": "Tribal_Archer",
+      "x": 53,
+      "z": 243
+    },
+    {
+      "id": "Human1212690",
+      "def": "Tribal_Hunter",
+      "x": 52,
+      "z": 248
+    },
+    {
+      "id": "Human1212695",
+      "def": "Tribal_Penitent",
+      "x": 45,
+      "z": 245
+    },
+    {
+      "id": "Human1212697",
+      "def": "Tribal_Penitent",
+      "x": 44,
+      "z": 244
+    },
+    {
+      "id": "Human1212700",
+      "def": "Tribal_HeavyArcher",
+      "x": 57,
+      "z": 249
+    },
+    {
+      "id": "Human1212703",
+      "def": "Tribal_Archer",
+      "x": 51,
+      "z": 248
+    }
+  ]
+}

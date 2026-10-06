@@ -1,0 +1,303 @@
+{
+  "id": "base_ith_tribe_6x",
+  "save": "scenario_base_ith_tribe_6x",
+  "spec": {
+    "id": "base_ith_tribe_6x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 3000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Paula Ramirez",
+      "weapon": "Machine pistol (poor 77%)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899753",
+      "name": "Dennis Richtarski",
+      "weapon": "Revolver (good)",
+      "x": 115,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899759",
+      "name": "Daniela 'Dana' Rusu",
+      "weapon": "Heavy SMG (poor)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899765",
+      "name": "Maria Preston",
+      "weapon": "Machine pistol (poor)",
+      "x": 120,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899771",
+      "name": "Isabel Warner",
+      "weapon": "Autopistol (normal)",
+      "x": 124,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899776",
+      "name": "Jeremy 'Jerm' Clark",
+      "weapon": "Steel knife (awful)",
+      "x": 114,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899780",
+      "name": "Wendy 'Pepper' Sajaki",
+      "weapon": "Pump shotgun (normal)",
+      "x": 116,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899785",
+      "name": "Jonathan 'John' Medcalf",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1899793",
+      "def": "Tribal_Warrior",
+      "x": 28,
+      "z": 4
+    },
+    {
+      "id": "Human1749757",
+      "def": "Tribal_Warrior",
+      "x": 28,
+      "z": 5
+    },
+    {
+      "id": "Human1899800",
+      "def": "Tribal_Penitent",
+      "x": 28,
+      "z": 7
+    },
+    {
+      "id": "Human1899802",
+      "def": "Tribal_Warrior",
+      "x": 28,
+      "z": 5
+    },
+    {
+      "id": "Human1899806",
+      "def": "Tribal_Penitent",
+      "x": 26,
+      "z": 4
+    },
+    {
+      "id": "Human1899809",
+      "def": "Tribal_Warrior",
+      "x": 28,
+      "z": 3
+    },
+    {
+      "id": "Human1899813",
+      "def": "Tribal_Berserker",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899818",
+      "def": "Tribal_Berserker",
+      "x": 26,
+      "z": 4
+    },
+    {
+      "id": "Human1899823",
+      "def": "Tribal_Warrior",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899827",
+      "def": "Tribal_Warrior",
+      "x": 27,
+      "z": 2
+    },
+    {
+      "id": "Human1899831",
+      "def": "Tribal_Berserker",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899836",
+      "def": "Tribal_Warrior",
+      "x": 28,
+      "z": 6
+    },
+    {
+      "id": "Human1899840",
+      "def": "Tribal_Berserker",
+      "x": 29,
+      "z": 3
+    },
+    {
+      "id": "Human1899845",
+      "def": "Tribal_Berserker",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899850",
+      "def": "Tribal_Warrior",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899854",
+      "def": "Tribal_Berserker",
+      "x": 28,
+      "z": 5
+    },
+    {
+      "id": "Human1899859",
+      "def": "Tribal_Berserker",
+      "x": 27,
+      "z": 5
+    },
+    {
+      "id": "Human1899864",
+      "def": "Tribal_ChiefMelee",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899869",
+      "def": "Tribal_Penitent",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899873",
+      "def": "Tribal_Penitent",
+      "x": 26,
+      "z": 3
+    },
+    {
+      "id": "Human1899877",
+      "def": "Tribal_Berserker",
+      "x": 28,
+      "z": 4
+    },
+    {
+      "id": "Human1899882",
+      "def": "Tribal_Warrior",
+      "x": 28,
+      "z": 9
+    },
+    {
+      "id": "Human1899887",
+      "def": "Tribal_Penitent",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899890",
+      "def": "Tribal_Penitent",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899893",
+      "def": "Tribal_Warrior",
+      "x": 26,
+      "z": 6
+    },
+    {
+      "id": "Human1899897",
+      "def": "Tribal_Warrior",
+      "x": 27,
+      "z": 5
+    },
+    {
+      "id": "Human1899901",
+      "def": "Tribal_Berserker",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899905",
+      "def": "Tribal_Warrior",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899909",
+      "def": "Tribal_Warrior",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899913",
+      "def": "Tribal_Berserker",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899917",
+      "def": "Tribal_Penitent",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899920",
+      "def": "Tribal_Penitent",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899923",
+      "def": "Tribal_Berserker",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1899929",
+      "def": "Tribal_Berserker",
+      "x": 26,
+      "z": 4
+    },
+    {
+      "id": "Human1899934",
+      "def": "Tribal_Penitent",
+      "x": 28,
+      "z": 4
+    }
+  ]
+}

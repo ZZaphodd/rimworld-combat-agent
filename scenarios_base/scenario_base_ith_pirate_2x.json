@@ -1,0 +1,242 @@
+{
+  "id": "base_ith_pirate_2x",
+  "save": "scenario_base_ith_pirate_2x",
+  "spec": {
+    "id": "base_ith_pirate_2x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    }
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Caitlin Watson",
+      "weapon": "Frag grenades",
+      "x": 113,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899753",
+      "name": "Fumiko Noble",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 116,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899759",
+      "name": "Rowan Park",
+      "weapon": "Revolver (good)",
+      "x": 118,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899775",
+      "name": "Leslie Chung",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899781",
+      "name": "Wendy Haney",
+      "weapon": "Heavy SMG (normal 76%)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899783",
+      "name": "Jahames Giles",
+      "weapon": "Pump shotgun (normal)",
+      "x": 113,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899806",
+      "name": "Susumu Garrett",
+      "weapon": "Molotov cocktails",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899811",
+      "name": "Jibjib Christ",
+      "weapon": "Molotov cocktails",
+      "x": 117,
+      "z": 162,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1899819",
+      "def": "Drifter",
+      "x": 6,
+      "z": 100
+    },
+    {
+      "id": "Human1899823",
+      "def": "Drifter",
+      "x": 4,
+      "z": 98
+    },
+    {
+      "id": "Human1899825",
+      "def": "Drifter",
+      "x": 8,
+      "z": 93
+    },
+    {
+      "id": "Human1899828",
+      "def": "Drifter",
+      "x": 8,
+      "z": 94
+    },
+    {
+      "id": "Human1899832",
+      "def": "Drifter",
+      "x": 3,
+      "z": 89
+    },
+    {
+      "id": "Human1899836",
+      "def": "Drifter",
+      "x": 8,
+      "z": 99
+    },
+    {
+      "id": "Human1899840",
+      "def": "Drifter",
+      "x": 3,
+      "z": 98
+    },
+    {
+      "id": "Human1899844",
+      "def": "Drifter",
+      "x": 4,
+      "z": 99
+    },
+    {
+      "id": "Human1899849",
+      "def": "Drifter",
+      "x": 6,
+      "z": 97
+    },
+    {
+      "id": "Human1899852",
+      "def": "Drifter",
+      "x": 3,
+      "z": 92
+    },
+    {
+      "id": "Human1899856",
+      "def": "Drifter",
+      "x": 2,
+      "z": 93
+    },
+    {
+      "id": "Human1899859",
+      "def": "Drifter",
+      "x": 3,
+      "z": 98
+    },
+    {
+      "id": "Human1899863",
+      "def": "Drifter",
+      "x": 9,
+      "z": 96
+    },
+    {
+      "id": "Human1899867",
+      "def": "Drifter",
+      "x": 3,
+      "z": 97
+    },
+    {
+      "id": "Human1899870",
+      "def": "Drifter",
+      "x": 4,
+      "z": 87
+    },
+    {
+      "id": "Human1899875",
+      "def": "Drifter",
+      "x": 9,
+      "z": 93
+    },
+    {
+      "id": "Human1899878",
+      "def": "Drifter",
+      "x": 4,
+      "z": 94
+    },
+    {
+      "id": "Human1899882",
+      "def": "Drifter",
+      "x": 5,
+      "z": 100
+    },
+    {
+      "id": "Human1899886",
+      "def": "Drifter",
+      "x": 8,
+      "z": 96
+    },
+    {
+      "id": "Human1899890",
+      "def": "Drifter",
+      "x": 3,
+      "z": 100
+    },
+    {
+      "id": "Human1899894",
+      "def": "Drifter",
+      "x": 2,
+      "z": 102
+    },
+    {
+      "id": "Human1899897",
+      "def": "Drifter",
+      "x": 9,
+      "z": 90
+    },
+    {
+      "id": "Human1899901",
+      "def": "Drifter",
+      "x": 5,
+      "z": 91
+    },
+    {
+      "id": "Human1899905",
+      "def": "Drifter",
+      "x": 7,
+      "z": 100
+    },
+    {
+      "id": "Human1899908",
+      "def": "Drifter",
+      "x": 6,
+      "z": 99
+    }
+  ]
+}

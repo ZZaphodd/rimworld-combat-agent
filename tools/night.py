@@ -61,7 +61,12 @@ def ready(rm, loads):
 
 
 def manifest(pid):
-    return json.loads((problem.OUT / f"scenario_{pid}.json").read_text())
+    """scenarios_rand/ for the mined problems, scenarios_base/ for the base-defense ladder."""
+    for d in (problem.OUT, ROOT / "scenarios_base"):
+        f = d / f"scenario_{pid}.json"
+        if f.exists():
+            return json.loads(f.read_text())
+    raise FileNotFoundError(f"no manifest for {pid}")
 
 
 def cmd_new(a):
@@ -108,7 +113,7 @@ def cmd_run(a):
     row["router"] = {"agent": canonical(a.agent), "options": options, "why": a.why}
     score, parts = badness(row)
     row["badness"], row["badness_parts"] = score, parts
-    append_row(ROWS, row)
+    append_row(a.rows, row)
     log(f"{a.pid} {canonical(a.agent)} -> {row['outcome']} grade={row['grade']} lost="
         f"{row['deaths'] + row.get('squad_kidnapped', 0)} downed={row['downed_at_end']} "
         f"perm={row['new_permanent_injuries']} hp={row['hp_lost_pct']}% killed="
@@ -151,6 +156,8 @@ def main():
     r.add_argument("--option", action="append", default=[])
     r.add_argument("--why", default="")
     r.add_argument("--max-ticks", type=int, default=15000)
+    r.add_argument("--rows", type=__import__("pathlib").Path, default=ROWS,
+                   help="where the row goes (results/base/ladder.jsonl for the base ladder)")
     k = sub.add_parser("rank")
     k.add_argument("--top", type=int, default=100)
     a = ap.parse_args()

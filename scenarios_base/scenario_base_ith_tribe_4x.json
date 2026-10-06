@@ -1,0 +1,225 @@
+{
+  "id": "base_ith_tribe_4x",
+  "save": "scenario_base_ith_tribe_4x",
+  "spec": {
+    "id": "base_ith_tribe_4x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Rebecca 'Lynx' Edwards",
+      "weapon": "Autopistol (poor)",
+      "x": 114,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899753",
+      "name": "Orlene Riddle",
+      "weapon": "Pump shotgun (good)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899758",
+      "name": "Lili Bell",
+      "weapon": "Pump shotgun (poor)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899778",
+      "name": "Julia 'Lulu' Lulamoon",
+      "weapon": "Autopistol (good)",
+      "x": 119,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899785",
+      "name": "Paola 'Pao' Falcon",
+      "weapon": "Pump shotgun (normal)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899791",
+      "name": "Ileana Murphy",
+      "weapon": "Pump shotgun (normal)",
+      "x": 114,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899795",
+      "name": "Keiran 'Grizzly' Hopkins",
+      "weapon": "Frag grenades (89%)",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899816",
+      "name": "Sally Sexton",
+      "weapon": "Machine pistol (normal)",
+      "x": 118,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1899830",
+      "def": "Tribal_ChiefMelee",
+      "x": 62,
+      "z": 2
+    },
+    {
+      "id": "Human1899835",
+      "def": "Tribal_Penitent",
+      "x": 60,
+      "z": 7
+    },
+    {
+      "id": "Human1899837",
+      "def": "Tribal_Warrior",
+      "x": 71,
+      "z": 2
+    },
+    {
+      "id": "Human1899842",
+      "def": "Tribal_Berserker",
+      "x": 59,
+      "z": 3
+    },
+    {
+      "id": "Human1899847",
+      "def": "Tribal_Penitent",
+      "x": 70,
+      "z": 3
+    },
+    {
+      "id": "Human1749757",
+      "def": "Tribal_Berserker",
+      "x": 66,
+      "z": 9
+    },
+    {
+      "id": "Human1899854",
+      "def": "Tribal_Warrior",
+      "x": 66,
+      "z": 6
+    },
+    {
+      "id": "Human1899858",
+      "def": "Tribal_Warrior",
+      "x": 61,
+      "z": 8
+    },
+    {
+      "id": "Human1899863",
+      "def": "Tribal_Berserker",
+      "x": 67,
+      "z": 5
+    },
+    {
+      "id": "Human1899868",
+      "def": "Tribal_Berserker",
+      "x": 67,
+      "z": 8
+    },
+    {
+      "id": "Human1899872",
+      "def": "Tribal_Penitent",
+      "x": 62,
+      "z": 7
+    },
+    {
+      "id": "Human1899874",
+      "def": "Tribal_Warrior",
+      "x": 64,
+      "z": 9
+    },
+    {
+      "id": "Human1899878",
+      "def": "Tribal_Warrior",
+      "x": 57,
+      "z": 5
+    },
+    {
+      "id": "Human1899883",
+      "def": "Tribal_Penitent",
+      "x": 67,
+      "z": 2
+    },
+    {
+      "id": "Human1899886",
+      "def": "Tribal_Berserker",
+      "x": 61,
+      "z": 5
+    },
+    {
+      "id": "Human1899891",
+      "def": "Tribal_Berserker",
+      "x": 56,
+      "z": 2
+    },
+    {
+      "id": "Human1899897",
+      "def": "Tribal_Warrior",
+      "x": 60,
+      "z": 8
+    },
+    {
+      "id": "Human1899901",
+      "def": "Tribal_Warrior",
+      "x": 67,
+      "z": 5
+    },
+    {
+      "id": "Human1899906",
+      "def": "Tribal_Berserker",
+      "x": 61,
+      "z": 5
+    },
+    {
+      "id": "Human1899911",
+      "def": "Tribal_Berserker",
+      "x": 68,
+      "z": 3
+    },
+    {
+      "id": "Human1899915",
+      "def": "Tribal_Berserker",
+      "x": 62,
+      "z": 6
+    },
+    {
+      "id": "Human1899920",
+      "def": "Tribal_Warrior",
+      "x": 60,
+      "z": 2
+    }
+  ]
+}

@@ -8,6 +8,7 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
 | Runbook | CLI | Code |
 |---|---|---|
 | §1–2 arenas | `tools/make_arena.py [--resume\|--fort]` | `rca/game/builders/arena.py` |
+| §1c base-defense arenas | `tools/make_base_arena.py` | `rca/game/builders/base.py` |
 | §3 load + ready wait | – | `rca/game/session.load` |
 | §4 raid spawning | – | `rca/game/debug.py` |
 | §5–6 squad, scenarios, assault check | `tools/build_scenarios.py` | `rca/game/builders/scenario.py` |
@@ -58,6 +59,43 @@ marked UNVERIFIED. Code: `rca/game/` (session, debug, builders, census) behind t
    saves on 2026-10-04).
 10. `save_game("arena_forest")`.
 11. `Clear area (rect)` over (50,50)–(200,200), then `save_game("arena_open")`.
+
+## 1c. Base-defense arenas from a colony save (`tools/make_base_arena.py`, 2026-10-06)
+
+The user's colony maps as base-defense problems: how many times our points the base holds
+against. Asked for by the user: keep the buildings (power, turrets, traps, walls, doors), clear
+weapons, consumables, food and materials, storyteller Phoebe at Strive to Survive. Mortars are
+out on both sides: their shells go with the items, and a raid that comes as a mortar siege is
+rebuilt (specs use `ImmediateAttack`, which never sieges). Mortar sieges are a strategic-layer
+matter, left for much later.
+
+1. The source save is only **loaded**, never written. The result is saved as `arena_col_<name>`
+   (the save guard accepts `arena_`), and the source file's hash is checked unchanged.
+2. Dev mode; `Clear All Fog`.
+3. Pawns: `Destroy non-colonists`, `Destroy player animals`, `Destroy factionless animals`; every
+   colonist but one is teleported to the observer cell (a clear cell away from the base) and
+   destroyed there; the last one stays there as the observer (§5 removes it).
+4. `strip_anomaly` (§1); then every building owned by another faction (insect hives: they
+   breed insects that the next spawned raid then counts as its own; ancient security turrets;
+   mech clusters).
+5. The squads' faction is set **hostile** (`Set Faction Relations`; from an ally it takes two
+   picks). A squad is spawned as a raid of its faction and recruited, and in a colony's world
+   that faction can be an ally: its raid then arrives as "Friendlies" and is not found.
+6. Save, then edit the new file: every item but chunks removed by id (at any depth: shelves,
+   minified buildings, corpses), and the storyteller block set to `Phoebe` / `Rough`. Reload
+   and check: no item but chunks, one colonist, `Phoebe Chillax` / `strive to survive`.
+7. Ladder specs in `scenarios_base.json` (squad OutlanderCivil 500, the only faction hostile
+   in both first worlds; enemy ×2–×8), built with `tools/build_scenarios.py --specs
+   scenarios_base.json --out scenarios_base` (§6, assault check included).
+
+The `arena_col_*` and `scenario_base_*` saves stay in the local Saves folder only: they come
+from the user's own colonies, so not even a gzipped copy enters the repo (manifests do, in
+`scenarios_base/`). Mechanoid raids have no `ImmediateAttack`; their specs use
+`StageThenAttack` (breaching is left for a later ladder with sappers).
+
+Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
+valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
+(240,240); squad at (125,130), the walled yard of a mountain base with tunnels).
 
 ## 1b. Difficulty conversion (superseded 2026-10-04: the saves are rebuilt instead; UNVERIFIED)
 

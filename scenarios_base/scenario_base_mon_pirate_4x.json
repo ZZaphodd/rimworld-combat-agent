@@ -1,0 +1,177 @@
+{
+  "id": "base_mon_pirate_4x",
+  "save": "scenario_base_mon_pirate_4x",
+  "spec": {
+    "id": "base_mon_pirate_4x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212584",
+      "name": "Andrew 'Mack' Drake",
+      "weapon": "Pump shotgun (normal)",
+      "x": 123,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human622597",
+      "name": "Oskar Potocki",
+      "weapon": "Autopistol (poor)",
+      "x": 121,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1212594",
+      "name": "Ivan Hartman",
+      "weapon": "Revolver (poor)",
+      "x": 125,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212598",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Revolver (good)",
+      "x": 127,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212605",
+      "name": "Aleksander 'Sale' Chiki",
+      "weapon": "Pump shotgun (good 73%)",
+      "x": 126,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212611",
+      "name": "Buffy Schmidt",
+      "weapon": "Pump shotgun (normal)",
+      "x": 120,
+      "z": 127,
+      "health": 100
+    },
+    {
+      "id": "Human1212616",
+      "name": "Katia Weiss",
+      "weapon": "Autopistol (poor 20%)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212621",
+      "name": "Phillip Vector",
+      "weapon": "Machine pistol (poor)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1212633",
+      "def": "PirateBoss",
+      "x": 248,
+      "z": 192
+    },
+    {
+      "id": "Human1212639",
+      "def": "Mercenary_Slasher",
+      "x": 243,
+      "z": 197
+    },
+    {
+      "id": "Human1212645",
+      "def": "Mercenary_Slasher",
+      "x": 243,
+      "z": 202
+    },
+    {
+      "id": "Human1212653",
+      "def": "Mercenary_Slasher",
+      "x": 245,
+      "z": 190
+    },
+    {
+      "id": "Human1212657",
+      "def": "Mercenary_Slasher",
+      "x": 246,
+      "z": 192
+    },
+    {
+      "id": "Human1212663",
+      "def": "Mercenary_Slasher",
+      "x": 244,
+      "z": 190
+    },
+    {
+      "id": "Human632340",
+      "def": "Mercenary_Slasher",
+      "x": 248,
+      "z": 192
+    },
+    {
+      "id": "Human1212674",
+      "def": "Mercenary_Slasher",
+      "x": 244,
+      "z": 191
+    },
+    {
+      "id": "Human1212680",
+      "def": "Mercenary_Slasher",
+      "x": 246,
+      "z": 192
+    },
+    {
+      "id": "Human1212685",
+      "def": "Mercenary_Slasher",
+      "x": 249,
+      "z": 189
+    },
+    {
+      "id": "Human1212690",
+      "def": "Mercenary_Slasher",
+      "x": 243,
+      "z": 193
+    },
+    {
+      "id": "Human1212709",
+      "def": "Mercenary_Slasher",
+      "x": 243,
+      "z": 196
+    },
+    {
+      "id": "Human1212716",
+      "def": "Mercenary_Slasher",
+      "x": 248,
+      "z": 187
+    },
+    {
+      "id": "Human1212721",
+      "def": "Thrasher",
+      "x": 245,
+      "z": 189
+    }
+  ]
+}

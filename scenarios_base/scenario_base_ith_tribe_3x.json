@@ -1,0 +1,203 @@
+{
+  "id": "base_ith_tribe_3x",
+  "save": "scenario_base_ith_tribe_3x",
+  "spec": {
+    "id": "base_ith_tribe_3x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Lexi Decker",
+      "weapon": "Molotov cocktails",
+      "x": 114,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899753",
+      "name": "Reuben 'Roo' James",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 115,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899773",
+      "name": "Margarita Velez",
+      "weapon": "Steel knife (awful 84%)",
+      "x": 117,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human583",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Revolver (good)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899784",
+      "name": "Kay Thompson",
+      "weapon": "Machine pistol (poor)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899789",
+      "name": "Noémie 'No' da Silva",
+      "weapon": "Heavy SMG (good)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899794",
+      "name": "Zoey 'Zozo' Amon",
+      "weapon": "Frag grenades",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899801",
+      "name": "Greg Athesum",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 118,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899806",
+      "name": "Kazumi Peters",
+      "weapon": "Revolver (poor)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1899834",
+      "def": "Tribal_Berserker",
+      "x": 6,
+      "z": 47
+    },
+    {
+      "id": "Human1899839",
+      "def": "Tribal_Warrior",
+      "x": 5,
+      "z": 44
+    },
+    {
+      "id": "Human1899843",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 37
+    },
+    {
+      "id": "Human1899847",
+      "def": "Tribal_Warrior",
+      "x": 0,
+      "z": 48
+    },
+    {
+      "id": "Human1899851",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 50
+    },
+    {
+      "id": "Human1899855",
+      "def": "Tribal_ChiefRanged",
+      "x": 1,
+      "z": 40
+    },
+    {
+      "id": "Human1899860",
+      "def": "Tribal_Warrior",
+      "x": 7,
+      "z": 49
+    },
+    {
+      "id": "Human1749757",
+      "def": "Tribal_Berserker",
+      "x": 4,
+      "z": 37
+    },
+    {
+      "id": "Human1899867",
+      "def": "Tribal_Penitent",
+      "x": 7,
+      "z": 41
+    },
+    {
+      "id": "Human1899870",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 50
+    },
+    {
+      "id": "Human1899883",
+      "def": "Tribal_Warrior",
+      "x": 2,
+      "z": 36
+    },
+    {
+      "id": "Human1899887",
+      "def": "Tribal_Berserker",
+      "x": 9,
+      "z": 44
+    },
+    {
+      "id": "Human1899892",
+      "def": "Tribal_Berserker",
+      "x": 2,
+      "z": 50
+    },
+    {
+      "id": "Human1899876",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 50
+    },
+    {
+      "id": "Human1899897",
+      "def": "Tribal_Penitent",
+      "x": 3,
+      "z": 36
+    },
+    {
+      "id": "Human1899871",
+      "def": "Tribal_Archer",
+      "x": 1,
+      "z": 37
+    },
+    {
+      "id": "Human1899902",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 44
+    }
+  ]
+}

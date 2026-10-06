@@ -1,0 +1,225 @@
+{
+  "id": "base_mon_mech_2x",
+  "save": "scenario_base_mon_mech_2x",
+  "spec": {
+    "id": "base_mon_mech_2x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212598",
+      "name": "Darcy Hooper",
+      "weapon": "Revolver (good)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212602",
+      "name": "Yuto Camacho",
+      "weapon": "Heavy SMG (normal 87%)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212608",
+      "name": "Samantha von Aachen",
+      "weapon": "Pump shotgun (normal)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212613",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Autopistol (excellent)",
+      "x": 126,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212621",
+      "name": "Teresa Norris",
+      "weapon": "Revolver (normal 89%)",
+      "x": 129,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212627",
+      "name": "Dina Bartlett",
+      "weapon": "Bolt-action rifle (normal 82%)",
+      "x": 119,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212633",
+      "name": "Chiyo Esparza",
+      "weapon": "Steel knife (poor 87%)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212650",
+      "name": "Samantha 'Sam' Haxton",
+      "weapon": "Pump shotgun (normal)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Militor1212658",
+      "def": "Mech_Militor",
+      "x": 246,
+      "z": 218
+    },
+    {
+      "id": "Mech_Militor1212660",
+      "def": "Mech_Militor",
+      "x": 249,
+      "z": 217
+    },
+    {
+      "id": "Mech_Militor1212662",
+      "def": "Mech_Militor",
+      "x": 249,
+      "z": 221
+    },
+    {
+      "id": "Mech_Militor1212664",
+      "def": "Mech_Militor",
+      "x": 245,
+      "z": 232
+    },
+    {
+      "id": "Mech_Militor1212666",
+      "def": "Mech_Militor",
+      "x": 249,
+      "z": 217
+    },
+    {
+      "id": "Mech_Militor1212668",
+      "def": "Mech_Militor",
+      "x": 246,
+      "z": 217
+    },
+    {
+      "id": "Mech_Militor1212670",
+      "def": "Mech_Militor",
+      "x": 249,
+      "z": 218
+    },
+    {
+      "id": "Mech_Militor1212672",
+      "def": "Mech_Militor",
+      "x": 242,
+      "z": 231
+    },
+    {
+      "id": "Mech_Militor1212674",
+      "def": "Mech_Militor",
+      "x": 247,
+      "z": 220
+    },
+    {
+      "id": "Mech_Militor1212676",
+      "def": "Mech_Militor",
+      "x": 245,
+      "z": 221
+    },
+    {
+      "id": "Mech_Militor1212678",
+      "def": "Mech_Militor",
+      "x": 248,
+      "z": 231
+    },
+    {
+      "id": "Mech_Militor1212680",
+      "def": "Mech_Militor",
+      "x": 246,
+      "z": 231
+    },
+    {
+      "id": "Mech_Militor1212682",
+      "def": "Mech_Militor",
+      "x": 248,
+      "z": 232
+    },
+    {
+      "id": "Mech_Militor1212684",
+      "def": "Mech_Militor",
+      "x": 249,
+      "z": 218
+    },
+    {
+      "id": "Mech_Militor1212686",
+      "def": "Mech_Militor",
+      "x": 249,
+      "z": 216
+    },
+    {
+      "id": "Mech_Militor1212688",
+      "def": "Mech_Militor",
+      "x": 246,
+      "z": 218
+    },
+    {
+      "id": "Mech_Militor1212690",
+      "def": "Mech_Militor",
+      "x": 246,
+      "z": 231
+    },
+    {
+      "id": "Mech_Militor1212692",
+      "def": "Mech_Militor",
+      "x": 248,
+      "z": 231
+    },
+    {
+      "id": "Mech_Militor1212694",
+      "def": "Mech_Militor",
+      "x": 243,
+      "z": 224
+    },
+    {
+      "id": "Mech_Militor1212696",
+      "def": "Mech_Militor",
+      "x": 247,
+      "z": 233
+    },
+    {
+      "id": "Mech_Militor1212698",
+      "def": "Mech_Militor",
+      "x": 244,
+      "z": 221
+    },
+    {
+      "id": "Mech_Militor1212700",
+      "def": "Mech_Militor",
+      "x": 248,
+      "z": 229
+    }
+  ]
+}

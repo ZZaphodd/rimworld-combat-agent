@@ -1,0 +1,632 @@
+[
+ {
+  "id": "base_ith_tribe_2x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRoughNeanderthal",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_tribe_3x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRoughNeanderthal",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_tribe_4x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRoughNeanderthal",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_tribe_6x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRoughNeanderthal",
+   "points": 3000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_tribe_8x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRoughNeanderthal",
+   "points": 4000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_pirate_2x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "PirateWaster",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_pirate_3x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "PirateWaster",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_pirate_4x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "PirateWaster",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_pirate_6x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "PirateWaster",
+   "points": 3000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_pirate_8x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "PirateWaster",
+   "points": 4000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_mech_2x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_mech_3x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1500,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_mech_4x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 2000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_mech_6x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 3000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_ith_mech_8x",
+  "tier": "base",
+  "arena": "arena_col_ithfunda",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    118,
+    165
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 4000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_tribe_2x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_tribe_3x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_tribe_4x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_tribe_6x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 3000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_tribe_8x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 4000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_pirate_2x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_pirate_3x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_pirate_4x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_pirate_6x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 3000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_pirate_8x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 4000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_mech_2x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_mech_3x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1500,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_mech_4x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 2000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_mech_6x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 3000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base_mon_mech_8x",
+  "tier": "base",
+  "arena": "arena_col_monler",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 4000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ }
+]
