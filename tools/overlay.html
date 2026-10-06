@@ -20,15 +20,20 @@
   .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
     backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,0.35); }
   #bar { position: absolute; left: 24px; right: 24px; bottom: 20px; height: 128px; display: grid;
-    grid-template-columns: 400px 280px 1fr 440px; gap: 0; }
+    grid-template-columns: 360px 620px 1fr 400px; gap: 0; }
   #bar > div { padding: 14px 20px; border-right: 1px solid var(--line); min-width: 0; }
   #bar > div:last-child { border-right: none; }
   .label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
   .big { font-size: 26px; font-weight: 650; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .sub { font-size: 16px; color: var(--muted); margin-top: 6px; }
-  .count { display: inline-block; margin-right: 18px; }
-  .count b { font-size: 30px; font-weight: 700; }
-  .them b { color: var(--them); }
+  .tug { display: flex; height: 14px; border-radius: 7px; overflow: hidden; margin-top: 8px;
+    background: rgba(255,255,255,0.10); }
+  .tug i { display: block; height: 100%; transition: width 0.8s ease; }
+  .tug .o { background: #4ea1ff; } .tug .r { background: var(--them); }
+  .sides { display: flex; justify-content: space-between; font-size: 15px; margin-top: 6px; font-variant-numeric: tabular-nums; }
+  .sides .o b { color: #4ea1ff; } .sides .r b { color: var(--them); }
+  .sides small { color: var(--muted); font-size: 13px; }
+  #spark { display: block; margin-top: 4px; }
   #msgs div { font-size: 14px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 5px; }
   #rows { width: 100%; border-collapse: collapse; margin-top: 4px; font-size: 14px; }
   #rows td { padding: 2px 0; white-space: nowrap; }
@@ -48,11 +53,16 @@
     <div class="sub" id="time">—</div>
   </div>
   <div>
-    <div class="label">Raid</div>
-    <div style="margin-top:8px">
-      <span class="count them"><b id="standing">0</b> standing</span>
-      <span class="count"><b id="downed">0</b> downed</span>
+    <div class="label" id="strengthLabel">Strength</div>
+    <div class="tug"><i class="o" id="tugO" style="width:50%"></i><i class="r" id="tugR" style="width:50%"></i></div>
+    <div class="sides">
+      <span class="o">Ours <b id="oNow">–</b> pt <small id="oPct"></small></span>
+      <span class="r"><small id="rPct"></small> Raid <b id="rNow">–</b> pt</span>
     </div>
+    <svg id="spark" width="580" height="34" viewBox="0 0 580 34" preserveAspectRatio="none">
+      <polyline id="lineO" fill="none" stroke="#4ea1ff" stroke-width="2" points=""/>
+      <polyline id="lineR" fill="none" stroke="#ff6b5e" stroke-width="2" points=""/>
+    </svg>
   </div>
   <div>
     <div class="label">Messages</div>
@@ -67,6 +77,23 @@
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const pretty = id => (id || "").replace(/^base2?_/, "").replace(/_/g, " ").replace(/\b(\d+)x\b/, "$1×");
+function drawPower(pw) {
+  if (!pw) {
+    ["oNow", "rNow"].forEach(id => $(id).textContent = "–"); ["oPct", "rPct"].forEach(id => $(id).textContent = "");
+    $("lineO").setAttribute("points", ""); $("lineR").setAttribute("points", ""); return;
+  }
+  const o = pw.ours.now, r = pw.raid.now, sum = o + r;
+  $("tugO").style.width = (sum ? 100 * o / sum : 50) + "%";
+  $("tugR").style.width = (sum ? 100 * r / sum : 50) + "%";
+  $("oNow").textContent = o; $("rNow").textContent = r;
+  $("oPct").textContent = `${pw.ours.pct}% · ${pw.ours.standing} up${pw.ours.downed ? ", " + pw.ours.downed + " down" : ""}`;
+  $("rPct").textContent = `${pw.raid.standing} up${pw.raid.downed ? ", " + pw.raid.downed + " down" : ""} · ${pw.raid.pct}%`;
+  $("strengthLabel").textContent = `Strength · ${pw.mode === "health" ? "health-weighted" : "standing pawns"}` +
+    (pw.approx ? " · approx" : pw.basis === "squad budget" ? " · ours from squad budget" : "");
+  const s = pw.series || [], T = Math.max(1, s.length ? s[s.length - 1][0] : 1);
+  const pts = i => s.map(p => `${(580 * p[0] / T).toFixed(1)},${(32 - 30 * Math.min(100, p[i]) / 100).toFixed(1)}`).join(" ");
+  $("lineO").setAttribute("points", pts(1)); $("lineR").setAttribute("points", pts(2));
+}
 async function tick() {
   let st;
   try { st = await (await fetch("/state.json", {cache: "no-store"})).json(); } catch (e) { return; }
@@ -78,13 +105,12 @@ async function tick() {
     $("who").textContent = who + (st.paused ? " · paused" : "");
     $("pid").textContent = pretty(st.pid);
     $("time").textContent = st.date ? `${st.date} · ${st.hour}h` : "";
-    $("standing").textContent = st.them?.standing ?? 0;
-    $("downed").textContent = st.them?.downed ?? 0;
+    drawPower(st.power);
     $("msgs").innerHTML = (st.msgs || []).map(m => `<div>${esc(m)}</div>`).join("") || `<div style="color:var(--muted)">—</div>`;
   } else {
     $("who").textContent = "Between battles";
     $("pid").textContent = "—"; $("time").textContent = ""; $("msgs").innerHTML = "";
-    $("standing").textContent = "0"; $("downed").textContent = "0";
+    drawPower(null);
   }
   const rows = st.ladder || [];
   $("rows").innerHTML = (rows.length ? rows.slice(-4) : []).map(r =>
