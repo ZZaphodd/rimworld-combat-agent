@@ -421,8 +421,13 @@ with who stood where (blue ours, red enemies, dashed downed) and draws route map
 Quick Look + ffmpeg).
 
 **Stream overlay** (`tools/overlay.py`, 2026-10-06): a local page at `http://127.0.0.1:8765/` for an
-OBS Browser source (1920×1080, transparent): the problem and who plays it (from the process list:
-`night.py run <id> --agent`, `run_human.py --manifest … --player`), the in-game date and hour (`get_conditions`),
+OBS Browser source (1920×1080, transparent): the problem and who plays it. `session.start_episode`
+announces each battle through macOS's notify system (`rca/game/live.py`: names
+`org.rca.episode.start` = start time in ms, `org.rca.episode.pid` = the harness's process id;
+a value lives while a process holds the name, and the overlay holds both); a different start
+value is a new battle, and the problem and player come from that process's command line
+(`night.py run <id> --agent`, `run_human.py --manifest … --player`; other harnesses show their
+script name), the in-game date and hour (`get_conditions`),
 the raid standing/downed (our pawns are in the game's colonist bar), the latest messages and the latest 4 v2 ladder rows, all in one bottom bar. Read-only polling
 like `tools/watch.py`; binds to 127.0.0.1 only; OBS itself is not controlled.
 
