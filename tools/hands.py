@@ -162,6 +162,25 @@ def shots_fired(name):
     return next((x["value"] for x in rec if x["record"] == "Shots fired"), 0)
 
 
+def fire_at_will(name, on):
+    """Set <name>'s Fire at will toggle (a gizmo: read its state, press it only to change it).
+    False when the pawn shows no such gizmo (undrafted, unarmed)."""
+    acts = rm.call("inspect_thing", id=ids()[name]).get("actions") or []
+    cur = next((a.get("active") for a in acts if a.get("label") == "Fire at will"), None)
+    if cur is not None and cur != on:
+        rm.call("do_thing_action", id=ids()[name], label="Fire at will")
+    return cur is not None
+
+
+def stop(name):
+    """End <name>'s order where it stands: undraft and draft again. The float menu offers no
+    Go here on the pawn's own cell, and drafting turns Fire at will back on (both measured
+    2026-10-06)."""
+    i = ids()[name]
+    rm.call("draft", action="undraft", ids=i)
+    rm.call("draft", action="draft", ids=i)
+
+
 def fireable(name, enemy):
     """Whether <name>'s float menu offers an enabled "Fire at <enemy>" (in range, in sight). Lists
     the menu only; gives no order."""
@@ -304,11 +323,12 @@ class Keeper:
     better(name, priority, now) switches to a raider of the caller's fixed priority list ranked
     above the current target, if its "Fire at" is enabled; it looks once per weapon cycle and skips
     targets marked bad. hold(name, until) / release(name) mark a pawn busy for the caller (a move,
-    a dodge, a carry): nothing is ordered while it is held."""
+    a dodge, a carry): nothing is ordered while it is held. `quiet` holds the shooters assign()
+    told to hold fire; their Fire at will goes back on with their next fire order."""
     STALL, BAD = 3, 4
 
     def __init__(self):
-        self.s, self.held, self.bad, self.dodges = {}, {}, {}, {}
+        self.s, self.held, self.bad, self.dodges, self.quiet = {}, {}, {}, {}, {}
 
     def target(self, name):
         return (self.s.get(name) or {}).get("target")
@@ -337,6 +357,8 @@ class Keeper:
         if cur and cur["target"] == target and cur["kind"] == kind and not switch:
             return False
         ok = fire(name, target) if kind == "fire" else melee(name, target)
+        if ok and kind == "fire" and self.quiet.pop(name, None) is not None:
+            fire_at_will(name, True)
         if ok:
             sh = shots_fired(name) if kind == "fire" and counts_shots(name) else None
             self.s[name] = {"target": target, "kind": kind, "at": now, "shots": sh, "changed": now,
@@ -390,7 +412,8 @@ class Keeper:
         re-decides at most once per weapon cycle and switches when the best raider is worth
         SWITCH x its current one (SWITCH < 1 + SPREAD, so a pair splits to an equal free raider).
         A fallen, out-of-range, stalled or unreachable target is replaced at once. With nothing
-        worth shooting the shooter is stopped (a Go here to its own cell) and reported as None.
+        worth shooting the shooter holds fire: Fire at will off and its order ended (stop()), else
+        the game's own targeting would pick a raider, the risky one too. Reported as None.
 
         shooters: names; foes: {name: pawn dict}, standing only; ours: {name: pawn dict};
         jobs: {name: job text}. Returns {shooter: target or None}."""
@@ -451,12 +474,15 @@ class Keeper:
                     chosen = t
                     break
                 self.bad.setdefault(n, {})[t] = now + weapon_cycle(n)   # no "Fire at": out of sight
-            if chosen is None:
-                if t0 is not None:                                    # nothing worth it: stop firing
-                    go(n, me["x"], me["z"])
-                    if t0 in on:
-                        on[t0] -= 1
-                    self.drop(n)
+            if chosen is None:                                        # nothing worth it: hold fire
+                if n not in self.quiet:
+                    if t0 is not None or "attacking" in job:           # our order or the game's own pick
+                        stop(n)
+                    fire_at_will(n, False)                             # after stop(): drafting turns it on
+                    self.quiet[n] = now
+                if t0 in on:
+                    on[t0] -= 1
+                self.drop(n)
                 continue
             if chosen == t0 and f"attacking {t0.lower()}" not in job:
                 self._reorder(n, t0, now)

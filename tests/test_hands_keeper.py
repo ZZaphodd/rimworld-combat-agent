@@ -8,7 +8,7 @@ spec = importlib.util.spec_from_file_location("hands", ROOT / "tools" / "hands.p
 hands = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(hands)
 ORIG = {k: getattr(hands, k) for k in ("fire", "melee", "shots_fired", "weapon_cycle", "counts_shots", "fireable",
-                                       "expected_dpt", "_verb", "cover", "go", "_wdef")}
+                                       "expected_dpt", "_verb", "cover", "go", "_wdef", "fire_at_will", "stop")}
 
 
 def restore():
@@ -126,8 +126,10 @@ class AssignTest(Restored):
         hands.expected_dpt = lambda n, dist: max(0.0, 1.0 - dist / 30)    # closer is better, 0 at 30
         hands._verb = lambda n: "Verb_Shoot"
         hands.cover = lambda a, b: 1.0
-        self.gone = []
-        hands.go = lambda n, x, z: self.gone.append((n, x, z))
+        self.calls = []
+        hands.go = lambda n, x, z: self.calls.append(("go", n))
+        hands.fire_at_will = lambda n, on: self.calls.append(("fire at will", n, on))
+        hands.stop = lambda n: self.calls.append(("stop", n))
         self.k = hands.Keeper()
 
     @staticmethod
@@ -158,12 +160,33 @@ class AssignTest(Restored):
             out = self.k.assign(["A", "B"], foes, ours, now, self.jobs())
         self.assertEqual(sorted(out.values()), ["X", "Y"])
 
-    def test_nothing_worth_it_stops_the_shooter(self):
+    def test_nothing_worth_it_holds_fire_until_the_next_order(self):
         ours = {"A": self.p(0, 0)}
         self.k.assign(["A"], {"X": self.p(10, 0)}, ours, 0, {})
         out = self.k.assign(["A"], {"X": self.p(40, 0)}, ours, 10, {"A": "attacking X."})   # out of reach
         self.assertIsNone(out["A"])
-        self.assertEqual(self.gone, [("A", 0, 0)])
+        self.assertEqual(self.calls, [("stop", "A"), ("fire at will", "A", False)])   # no Go here on its own cell
+        out = self.k.assign(["A"], {"X": self.p(40, 0)}, ours, 20, {})
+        self.assertIsNone(out["A"])
+        self.assertEqual(len(self.calls), 2)                                          # held, nothing more
+        out = self.k.assign(["A"], {"X": self.p(10, 0)}, ours, 30, {})                # back in reach
+        self.assertEqual(out["A"], "X")
+        self.assertEqual(self.calls[2:], [("fire at will", "A", True)])
+        self.assertEqual(self.k.quiet, {})
+
+    def test_game_fire_at_will_on_a_risky_raider_is_stopped(self):
+        ours = {"A": self.p(0, 0), "K": self.p(12, 0)}            # K 2 from X, 12 from A: full risk
+        out = self.k.assign(["A"], {"X": self.p(10, 0)}, ours, 0, {"A": "attacking X."})
+        self.assertIsNone(out["A"])
+        self.assertEqual(self.calls, [("stop", "A"), ("fire at will", "A", False)])
+        self.assertEqual(self.f.orders, [])
+        self.k.assign(["A"], {"X": self.p(10, 0)}, ours, 10, {})
+        self.assertEqual(len(self.calls), 2)
+
+    def test_idle_shooter_with_nothing_in_reach_is_not_stopped(self):
+        out = self.k.assign(["A"], {"X": self.p(40, 0)}, {"A": self.p(0, 0)}, 0, {"A": "standing."})
+        self.assertIsNone(out["A"])
+        self.assertEqual(self.calls, [("fire at will", "A", False)])
 
     def test_small_gain_does_not_switch_big_gain_does_after_a_cycle(self):
         ours = {"A": self.p(0, 0)}
