@@ -72,5 +72,27 @@ class StripTargetsTest(unittest.TestCase):
                 base.strip(None, src, name)
 
 
+
+class ClearConditionsTest(unittest.TestCase):
+    XML = ("<?xml version='1.0' encoding='utf-8'?><savegame><game><world><gameConditionManager><activeConditions>"
+           "<li Class='GameCondition_DisableElectricity'><def>SolarFlare</def><startTick>1</startTick></li>"
+           "<li><def>Aurora</def></li></activeConditions></gameConditionManager></world></game></savegame>")
+
+    def test_removes_only_the_named_condition_and_backs_up(self):
+        import tempfile
+        from pathlib import Path
+        d = Path(tempfile.mkdtemp())
+        (d / "scenario_base2_x.rws").write_text(self.XML)
+        out = base.clear_conditions(["scenario_base2_x"], ("SolarFlare",), backup=d / "bk", saves=d, log=lambda *_: None)
+        self.assertEqual(out, {"scenario_base2_x": ["SolarFlare"]})
+        text = (d / "scenario_base2_x.rws").read_text()
+        self.assertNotIn("SolarFlare", text)
+        self.assertIn("Aurora", text)
+        self.assertIn("SolarFlare", (d / "bk" / "scenario_base2_x.rws").read_text())
+
+    def test_refuses_a_colony_save(self):
+        with self.assertRaises(base.RimMoltError):
+            base.clear_conditions(["Monler Alliance"], log=lambda *_: None)
+
 if __name__ == "__main__":
     unittest.main()

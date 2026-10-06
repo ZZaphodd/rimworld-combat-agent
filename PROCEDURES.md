@@ -131,6 +131,11 @@ turtle needs the strategic layer to mark where to hold, and rules can't pick yet
 Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
 valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
 (240,240); squad at (125,130), the walled yard of a mountain base with tunnels).
+Stored game conditions: a colony saved during one keeps it in the arena and every scenario built
+from it (Monler: a solar flare, power off for the first ~12,500 battle ticks). Remove them offline
+(the user, 2026-10-07): `python3 tools/make_base_arena.py --clear-conditions SolarFlare --saves
+arena_col_<name>2 --manifests scenarios_base2/scenario_base2_<map>_*.json` (builder saves only;
+each file backed up outside the Saves folder first).
 Built (v2, 2026-10-06): `arena_col_ithfunda2` (134 buildings removed: Bookcase, BookcaseSmall,
 Brewery, DrugLab, ElectricCrematorium, ElectricSmelter, ElectricSmithy, ElectricStove,
 FabricationBench, HandTailoringBench, HydroponicsBasin, MechGestator, Shelf, ShelfSmall,

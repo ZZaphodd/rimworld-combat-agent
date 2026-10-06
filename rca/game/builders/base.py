@@ -10,6 +10,8 @@ arenas. The source save is only loaded, never written: the arena is saved under 
 import hashlib
 import os
 import re
+import shutil
+import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -56,6 +58,43 @@ def edit_save(path, drop_ids, storyteller=STORYTELLER, difficulty=DIFFICULTY):
         st.remove(custom)
     tree.write(path, encoding="utf-8", xml_declaration=True)
     return removed
+
+
+OURS = ("arena_col_", "scenario_base")     # saves the builders made: never the user's own
+
+
+def clear_conditions(names, conds=("SolarFlare",), backup=None, saves=None, log=print):
+    """Remove active game conditions stored in base saves, offline (the user, 2026-10-07: the
+    Monler colony was saved during a solar flare, so every Monler battle started under it, with
+    the base's power off). Only arena_col_* and scenario_base* saves; each file that changes is
+    copied to `backup` first (default: RimWorld/rca_backup/<time>/, outside the Saves folder).
+    Returns {name: [condition defs removed]}."""
+    folder = Path(saves or SAVES)
+    backup = Path(backup or folder.parent / "rca_backup" / time.strftime("%Y%m%d-%H%M%S"))
+    out = {}
+    for name in names:
+        if not name.startswith(OURS):
+            raise RimMoltError(f"{name}: only builder saves ({', '.join(OURS)}*) are edited")
+        path = folder / f"{name}.rws"
+        tree = ET.parse(path)
+        removed = []
+        for gcm in tree.getroot().iter("gameConditionManager"):
+            active = gcm.find("activeConditions")
+            for li in list(active if active is not None else []):
+                if li.findtext("def") in conds:
+                    active.remove(li)
+                    removed.append(li.findtext("def"))
+        if removed:
+            backup.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, backup / path.name)
+            tree.write(path, encoding="utf-8", xml_declaration=True)
+            left = [li.findtext("def") for g in ET.parse(path).getroot().iter("gameConditionManager")
+                    for li in (g.find("activeConditions") if g.find("activeConditions") is not None else [])]
+            if any(d in conds for d in left):
+                raise RimMoltError(f"{name}: {left} still active after the edit")
+        out[name] = removed
+        log(f"{name}: removed {removed or 'nothing'}")
+    return out
 
 
 def _clear_cell(rm, x, z):
