@@ -220,6 +220,7 @@ See results/hazards.md (reaction windows) and results/reflex_report.md. Addition
 | Source | `combatPower` of the PawnKindDef (XML, with `ParentName` inheritance); not exposed by RimMolt | `rca/game/defs.py` → `data/combat_power.json` (290 kinds, game 1.6.4871 rev595) |
 | Examples | Mercenary_Gunner 85, Mercenary_Sniper 110, Grenadier_Destructive 70, Tribal_Warrior 50, Town_Guard 60, Mech_Militor 45, Mech_Pikeman 110, Mech_Termite_Breach 110, Mech_Scyther 150, Mech_Lancer 190, Mech_CentipedeBlaster 400, Mech_Warqueen 600, Warg 160 | XML |
 | Raid points vs kind points | theme raids spawned at 1500 pt sum to 1260–1485 points of kinds (pirate_mixed 1455, tribal_archers 1485); theme_mechs 1000 (4 Pikeman, 3 Scyther, 1 Termite_Breach) | manifests × table |
+| Xenotype cost | a raid pays combatPower × the xenotype's `combatPowerFactor` (game code `PawnGenOptionWithXenotype.Cost`; XenotypeDefs: Neanderthal 1.6, Yttakin 1.3, Hussar 1.5, Sanguophage 2.5, Impid 1.2, Highmate 0.8, others 1). Kind points alone undercount such raids: base_ith_tribe_2x (Neanderthal, budget 1000) 590 by kinds, 944 with the factor; base_ith_pirate_2x (Wasters, factor 1) 875 of 1000. RimMolt does not expose a raider's xenotype (ours: `list_genes`); `data/xenotypes.json` holds the factors and each faction's expected factor from its xenotypeSet | game XML, manifests | read and checked against three budgets |
 | Mean points per raider | tribal 54–59, pirates 104–115, frag_check grenadiers 70, mechs 125–248 by scenario | `scoring.manifest_mean_points` |
 
 ## 6c. Difficulty

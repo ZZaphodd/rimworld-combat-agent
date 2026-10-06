@@ -5,6 +5,11 @@ only takes ThingDefs), but list_things(verbose) gives each pawn's `kind`
 (PawnKindDef) and the XML ships with the game. Tables are extracted once into
 data/*.json and versioned, so agents and scoring never need the game files.
 
+Xenotypes (2026-10-06): a raid pays a pawn's combatPower times its xenotype's combatPowerFactor
+(PawnGenOptionWithXenotype.Cost); data/xenotypes.json holds each xenotype's factor and each
+faction's expected factor from its xenotypeSet chances (weights; a set summing below 1 leaves the
+rest to baseliners at 1; no set: 1). RimMolt does not expose a raider's xenotype.
+
 Weapon ranges (LESSONS bug 3): the first verb with a <range> of every concrete
 weapon ThingDef (parent chain reaches BaseWeapon, or it has weaponTags), with
 ParentName inheritance; weaponTags lists are appended along the chain as the
@@ -19,6 +24,7 @@ GAME = Path.home() / "Library/Application Support/Steam/steamapps/common/RimWorl
 DATA = Path(__file__).resolve().parents[2] / "data"
 TABLE = DATA / "combat_power.json"
 RANGES = DATA / "weapon_ranges.json"
+XENOS = DATA / "xenotypes.json"
 
 
 def _all_nodes(data_dir, tags=None):
@@ -140,7 +146,44 @@ def extract_weapons(game=GAME):
     return {"weapons": dict(sorted(weapons.items())), "mech_kinds": dict(sorted(mechs.items()))}
 
 
+def extract_xenotypes(game=GAME):
+    """{"xenotype": {defName: combatPowerFactor}, "faction": {defName: expected factor}}."""
+    data = Path(game) / "Data"
+    xeno = {}
+    for n in _all_nodes(data, lambda t: t == "XenotypeDef"):
+        if n.findtext("defName"):
+            xeno[n.findtext("defName")] = float(n.findtext("combatPowerFactor") or 1.0)
+    fac_nodes = list(_all_nodes(data, lambda t: t == "FactionDef"))
+    ch = _Chain(fac_nodes)
+    faction = {}
+    for n in fac_nodes:
+        name = n.findtext("defName")
+        if not name:
+            continue
+        xs = ch.first(n, "xenotypeSet/xenotypeChances")
+        chances = {c.tag: float(c.text) for c in (xs if xs is not None else []) if c.text}
+        total = sum(chances.values())
+        if not total:
+            faction[name] = 1.0
+            continue
+        weight = max(total, 1.0)                 # below 1: the rest are baseliners
+        faction[name] = round((sum(w * xeno.get(x, 1.0) for x, w in chances.items())
+                               + (weight - total) * 1.0) / weight, 4)
+    return {"xenotype": dict(sorted(xeno.items())), "faction": dict(sorted(faction.items()))}
+
+
 _cache = None
+_xenos = None
+
+
+def xenotype_factor(xenotype=None, faction=None):
+    """A xenotype's combatPowerFactor, or a faction's expected one; 1.0 when unknown."""
+    global _xenos
+    if _xenos is None:
+        _xenos = json.loads(XENOS.read_text()) if XENOS.exists() else {"xenotype": {}, "faction": {}}
+    if xenotype:
+        return _xenos["xenotype"].get(xenotype, 1.0)
+    return _xenos["faction"].get(faction, 1.0) if faction else 1.0
 
 
 def combat_power(kind, default=None):
@@ -164,3 +207,6 @@ if __name__ == "__main__":
     w = extract_weapons()
     RANGES.write_text(json.dumps(w, indent=1) + "\n")
     print(f"{len(w['weapons'])} weapons, {len(w['mech_kinds'])} mech kinds -> {RANGES}")
+    x = extract_xenotypes()
+    XENOS.write_text(json.dumps(x, indent=1) + "\n")
+    print(f"{len(x['xenotype'])} xenotypes, {len(x['faction'])} factions -> {XENOS}")

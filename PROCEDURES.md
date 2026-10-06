@@ -428,7 +428,13 @@ a value lives while a process holds the name, and the overlay holds both); a dif
 value is a new battle, and the problem and player come from that process's command line
 (`night.py run <id> --agent`, `run_human.py --manifest … --player`; other harnesses show their
 script name), the in-game date and hour (`get_conditions`),
-the raid standing/downed (our pawns are in the game's colonist bar), the latest messages and the latest 4 v2 ladder rows, all in one bottom bar. Read-only polling
+the raid standing/downed (our pawns are in the game's colonist bar), the latest messages, each side's combat strength and the latest 4 v2 ladder rows, all in one bottom bar.
+Strength (the user's tug-of-war): a pawn is worth its kind's combatPower × xenotype factor
+(`data/xenotypes.json`; raiders: the raid faction's expected factor, as RimMolt does not show a
+raider's xenotype; ours: the manifest's kinds, else an equal share of the squad's point budget);
+now = standing pawns × health % (mode `health`, a get_pawn each) or full points (mode `standing`),
+switched live with `http://127.0.0.1:8765/set?strength=standing` (or `--strength`); a tug bar, each
+side's % of its start and a sparkline per battle. Read-only polling
 like `tools/watch.py`; binds to 127.0.0.1 only; OBS itself is not controlled.
 
 **Router night run** (`tools/night.py`): `new` builds a random problem
