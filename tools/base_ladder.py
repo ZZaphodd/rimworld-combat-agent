@@ -6,6 +6,10 @@ results/base/ladder.jsonl (tools/night.py run --rows).
 
   python3 tools/base_ladder.py --agent turtle
   python3 tools/base_ladder.py --summary
+  python3 tools/base_ladder.py --v2 --agent turtle     # the v2 arenas: scenarios_base2, ladder2.jsonl
+
+v2 (the user, 2026-10-06): the same specs on arenas without shelves, hydroponics basins and
+workbenches, which the raids spent their time wrecking.
 """
 import argparse
 import json
@@ -19,14 +23,21 @@ from rca import ROOT
 
 ROWS = ROOT / "results/base/ladder.jsonl"
 SPECS = ROOT / "scenarios_base.json"
+SCEN = ROOT / "scenarios_base"
 LOST = ("defeat",)
+
+
+def use_v2():
+    """Point ROWS/SPECS/SCEN at the v2 arenas (scenarios_base2, ladder2.jsonl)."""
+    global ROWS, SPECS, SCEN
+    ROWS, SPECS, SCEN = ROOT / "results/base/ladder2.jsonl", ROOT / "scenarios_base2.json", ROOT / "scenarios_base2"
 
 
 def ladders():
     out = defaultdict(list)
     for s in json.loads(SPECS.read_text()):
-        m = re.match(r"base_(\w+?)_(\w+?)_(\d+)x$", s["id"])
-        if m and (ROOT / "scenarios_base" / f"scenario_{s['id']}.json").exists():
+        m = re.match(r"base2?_(\w+?)_(\w+?)_(\d+)x$", s["id"])
+        if m and (SCEN / f"scenario_{s['id']}.json").exists():
             out[(m.group(1), m.group(2))].append((int(m.group(3)), s["id"]))
     return {k: sorted(v) for k, v in out.items()}
 
@@ -50,7 +61,10 @@ def main():
     ap.add_argument("--agent", default="turtle")
     ap.add_argument("--max-ticks", type=int, default=30000)
     ap.add_argument("--summary", action="store_true")
+    ap.add_argument("--v2", action="store_true", help="the v2 arenas (scenarios_base2, ladder2.jsonl)")
     a = ap.parse_args()
+    if a.v2:
+        use_v2()
     if a.summary:
         return summary()
     ROWS.parent.mkdir(parents=True, exist_ok=True)

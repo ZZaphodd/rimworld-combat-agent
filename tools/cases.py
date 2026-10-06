@@ -23,7 +23,7 @@ from rca.strategic.briefing import features
 
 CASES = ROOT / "results/cases"
 INDEX = CASES / "index.json"
-SCENS = (ROOT / "scenarios_rand", ROOT / "scenarios_base")
+SCENS = (ROOT / "scenarios_rand", ROOT / "scenarios_base", ROOT / "scenarios_base2")
 CLASSES = ("melee", "bow", "thrown", "short", "medium", "long", "support", "explosive", "other")
 THROWN = ("grenade", "molotov")
 STRONG_1V1 = ("Neanderthal", "Empire")          # raids whose pawns won one-on-one melee in the cards
@@ -128,6 +128,11 @@ def cmd_index(_):
     print(f"{INDEX.relative_to(ROOT)}: {len(out)} cards")
 
 
+def same_map(arena):
+    """A base arena and its v2 copy (arena_col_<name>2) are the same map."""
+    return re.sub(r"^(arena_col_\w+?)2$", r"\1", arena or "")
+
+
 def score(q, c):
     """Higher = closer. q: a manifest; c: an index row."""
     if "features" not in c:
@@ -136,7 +141,7 @@ def score(q, c):
     parts = {
         "raid faction": 3.0 * (q["spec"]["enemy"]["faction"] == c["raid"]),
         "our faction": 2.0 * (q["spec"]["squad"]["faction"] == c["ours"]),
-        "arena": 0.5 * (q["spec"]["arena"] == c["arena"]),
+        "arena": 0.5 * (same_map(q["spec"]["arena"]) == same_map(c["arena"])),
         "sides swapped": 2.0 * (q["spec"]["enemy"]["faction"] == c["ours"] and q["spec"]["squad"]["faction"] == c["raid"]),
     }
     qa, ca = auto_tags(q), set(c["auto"])
