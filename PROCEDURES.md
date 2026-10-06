@@ -422,7 +422,7 @@ Quick Look + ffmpeg).
 
 **Stream overlay** (`tools/overlay.py`, 2026-10-06): a local page at `http://127.0.0.1:8765/` for an
 OBS Browser source (1920×1080, transparent): the problem and who plays it (from the process list:
-`night.py run <id> --agent`, `run_human.py --manifest … --player`), game time,
+`night.py run <id> --agent`, `run_human.py --manifest … --player`), the in-game date and hour (`get_conditions`),
 the raid standing/downed (our pawns are in the game's colonist bar), the latest messages and the latest 4 v2 ladder rows, all in one bottom bar. Read-only polling
 like `tools/watch.py`; binds to 127.0.0.1 only; OBS itself is not controlled.
 

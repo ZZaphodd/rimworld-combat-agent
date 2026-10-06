@@ -54,20 +54,23 @@ def raid(rm):
 
 
 def poll(rm, period):
-    seen_from = None
-    last_pid = None
+    seen_from = last_pid = last_tick = None
     while True:
         try:
             pid, player = running()
             st = rm.call("get_status")
             tick = st.get("ticksGame") or 0
-            if pid != last_pid:                      # a new battle: only its own messages
+            # a new battle, or a load (the clock goes back): only messages from here on
+            if pid != last_pid or last_tick is None or tick < last_tick:
                 seen_from, last_pid = tick, pid
+            last_tick = tick
+            cond = rm.call("get_conditions")         # the HUD's date and hour
             msgs = [m.get("text") for m in (rm.call("get_alerts").get("recentMessages") or [])
-                    if (m.get("tick") or 0) >= (seen_from or 0) and m.get("text") and not NOISE.search(m["text"])]
+                    if (seen_from or 0) <= (m.get("tick") or 0) <= tick      # later than now: from before a load
+                    and m.get("text") and not NOISE.search(m["text"])]
             them = raid(rm) if pid else {"standing": 0, "downed": 0}
             STATE.clear()
-            STATE.update({"ok": True, "pid": pid, "player": player, "tick": tick - (seen_from or tick),
+            STATE.update({"ok": True, "pid": pid, "player": player, "date": cond.get("date"), "hour": cond.get("hour"),
                           "paused": bool(st.get("paused")), "them": them,
                           "msgs": [m[:90] for m in msgs[-3:]], "ladder": ladder(), "at": time.time()})
         except Exception as e:                   # loads, restarts, odd replies: keep the last state, marked stale
