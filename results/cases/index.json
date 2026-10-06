@@ -1462,7 +1462,7 @@
    },
    {
     "who": "Claude, re-measure 2026-10-06",
-    "play": "the same plan; ranged fire by `Keeper.assign` (Sammy weighted onto the grenadiers); guard's grenade memory fixed",
+    "play": "the same plan; ranged fire by `Keeper.assign` (Sammy weighted onto the grenadiers); guard changed (grenade memory across calls, a step-away from a lying grenade, dodgers held through the Keeper so a fire order no longer cancels a sidestep; in the first play no sidestep moved a pawn more than 1 cell)",
     "result": "**repelled**",
     "lost": "1 dead, 1 downed",
     "badness": "**21.8**"
@@ -1828,11 +1828,11 @@
     "play": "–",
     "result": "defeat, raid left with 5 captives",
     "lost": "1 dead, 5 kidnapped",
-    "badness": "173.5"
+    "badness": "173.5 (123.5 without the kidnap double count)"
    },
    {
     "who": "**Claude**",
-    "play": "autopistols to the shooters, knives to the rest; one line SW of the start across the raid's approach; the knives locked what reached the line; then the line stepped 6 cells forward to bring the rifles (holding just outside 25.9) into range, knives on the rifles",
+    "play": "autopistols to the shooters, knives to the rest; one line SW of the start across the raid's approach; the knives locked what reached the line; then the line moved ~8–10 cells forward in one step to bring the rifles (holding just outside 25.9) into range, knives on the rifles",
     "result": "**repelled**, 7 of 8 dead",
     "lost": "0 lost (Fernanda downed)",
     "badness": "**19.4**"
@@ -1850,6 +1850,20 @@
     "result": "enemies cleared, pyrrhic",
     "lost": "3 dead, 3 downed",
     "badness": "86.6"
+   },
+   {
+    "who": "Claude, re-measure 3 (`Keeper.assign`, close-in by hand)",
+    "play": "the same plan, but the line went only to the cells of attempt 1's first, cancelled order, and no knife was sent at the rifles; Barr (behind the old line) and Pentaryl (where he had held Vera) were left and went down to fire",
+    "result": "defeat, raid left with 2 captives",
+    "lost": "4 dead, 2 kidnapped",
+    "badness": "132.4 (112.4 without the kidnap double count)"
+   },
+   {
+    "who": "Claude, re-measure 4 (`Keeper.assign`, attempt 1's close-in)",
+    "play": "the same plan; the line to the cells attempt 1 reached (Mocha and Carol stopped 6–7 short) and the knives sent at Diver and Banshee, as in attempt 1; Lynx still stood",
+    "result": "**repelled**, 5 dead, 2 downed",
+    "lost": "0 lost (2 downed)",
+    "badness": "**33.5**"
    }
   ],
   "id": "rand_227",
