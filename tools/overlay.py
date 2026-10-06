@@ -4,7 +4,8 @@
 
 It polls the game the way tools/watch.py does (status, pawns, health, messages; never orders,
 pauses or moves the camera) and reads which problem is running and who plays it from the process
-list (tools/night.py run <id> --agent <a>, tools/run_human.py --manifest ... --player <p>). The
+list (tools/night.py run <id> --agent <a>, tools/run_human.py --manifest ... --player <p>). Our
+pawns are left to the game's own colonist bar. The
 v2 base ladder's rows (results/base/ladder2.jsonl) are shown beside it. Binds to 127.0.0.1 only.
 """
 import argparse
@@ -18,12 +19,12 @@ from pathlib import Path
 
 import _path  # noqa: F401
 from rca import ROOT
-from rca.eval.tracker import short_name
 from rca.rimmolt import RimMolt
 
 PAGE = Path(__file__).with_name("overlay.html")
 LADDER = ROOT / "results/base/ladder2.jsonl"
 STATE = {"ok": False, "note": "starting"}
+NOISE = re.compile(r"Auto-attack target is down or gone")   # the mod's per-pawn notices
 
 
 def running():
@@ -44,14 +45,12 @@ def ladder():
     return [{"id": r["scenario"], "grade": r.get("grade"), "badness": r.get("badness")} for r in rows]
 
 
-def side(rm, faction):
-    out = []
-    for p in rm.call("list_things", category="pawn", faction=faction, verbose=True, confirm=True).get("things") or []:
-        if p.get("dead"):
-            continue
-        hp = rm.call("get_pawn", id=p["id"]).get("health")
-        out.append({"n": short_name(p["label"]), "hp": hp, "down": bool(p.get("downed"))})
-    return out
+def raid(rm):
+    """Standing and downed raiders (one call; no per-pawn queries)."""
+    them = [p for p in rm.call("list_things", category="pawn", faction="hostile", verbose=True,
+                               confirm=True).get("things") or [] if not p.get("dead")]
+    return {"standing": sum(1 for p in them if not p.get("downed")),
+            "downed": sum(1 for p in them if p.get("downed"))}
 
 
 def poll(rm, period):
@@ -65,13 +64,11 @@ def poll(rm, period):
             if pid != last_pid:                      # a new battle: only its own messages
                 seen_from, last_pid = tick, pid
             msgs = [m.get("text") for m in (rm.call("get_alerts").get("recentMessages") or [])
-                    if (m.get("tick") or 0) >= (seen_from or 0) and m.get("text")]
-            ours, them = (side(rm, "player"), side(rm, "hostile")) if pid else ([], [])
+                    if (m.get("tick") or 0) >= (seen_from or 0) and m.get("text") and not NOISE.search(m["text"])]
+            them = raid(rm) if pid else {"standing": 0, "downed": 0}
             STATE.clear()
             STATE.update({"ok": True, "pid": pid, "player": player, "tick": tick - (seen_from or tick),
-                          "paused": bool(st.get("paused")), "ours": ours,
-                          "them": {"standing": sum(1 for h in them if not h["down"]),
-                                   "downed": sum(1 for h in them if h["down"])},
+                          "paused": bool(st.get("paused")), "them": them,
                           "msgs": [m[:90] for m in msgs[-3:]], "ladder": ladder(), "at": time.time()})
         except Exception as e:                   # loads, restarts, odd replies: keep the last state, marked stale
             STATE.update({"ok": False, "note": type(e).__name__})
