@@ -69,6 +69,14 @@ v1 → v2 (– not run: two defeats below; bold: the grade went up):
 | Monler | pirate | repelled 29.9 → repelled 24.4 | unresolved 72.4 → defeat 77.7 | repelled 0.8 → pyrrhic 84.9 | defeat 107.0 → defeat 134.8 | defeat 78.8 → defeat 172.4 |
 | Monler | mech | defeat 85.4 → defeat 68.6 | (not built) → defeat 123.5 | defeat 86.9 → – | (not built) | – |
 
+Monler's colony was saved during a solar flare (13,972 ticks from tick 19,852,000), so every
+Monler battle above, v1 and v2, started under it with the base's power off (its four autodoors,
+lights) for about the first 12,500 ticks ("The solar flare is ending." in 9 v1 and 5 v2 rows).
+The user, 2026-10-07: remove it. It was removed from `arena_col_monler2` and its 14 v2 scenario
+saves (`tools/make_base_arena.py --clear-conditions SolarFlare`, originals backed up outside the
+Saves folder). The 11 Monler turtle v2 rows moved to `ladder2_monler_flare.jsonl`; turtle reruns
+those rungs on the saves without the flare.
+
 Raid sizes v1 → v2 (our pawns / raiders):
 
 | base | raid | 2× | 3× | 4× | 6× | 8× |
