@@ -46,12 +46,13 @@ Raid sizes (our pawns / raiders), from the manifests:
 - `turtle` stands in the yard and does not use the rooms, doors or valleys. These rows are a
   baseline for play that does.
 
-## Claude's plays (PROCEDURES §16)
+## Direct plays: Claude and the user (PROCEDURES §15–16)
 Scope (the user, 2026-10-06): win the battle using the base, by any method; furniture that takes
-firing cells is uninstalled (PROCEDURES §1c). Claude plays the rungs where `turtle` first lost, one run each (rows in `results/human/play.jsonl`;
+firing cells is uninstalled (PROCEDURES §1c). Claude, and at times the user, plays the rungs where `turtle` first lost (rows in `results/human/play.jsonl`;
 journals and cards in `results/cases/`).
 
-| problem | turtle | Claude | play |
+| problem | turtle | direct play | play |
 |---|---|---|---|
 | base_ith_pirate_2x | defeat 57.4 | **repelled 12.3** (attempt 2; attempt 1 discarded) | the east room's door ([card](../cases/cards/base_ith_pirate_2x.md)); 7 of the 20 raider deaths were the colony's spike traps (turtle's row has 6 inferred kills and no trace, so its trap deaths are not known) |
 | base_ith_tribe_2x | defeat 109.7 | **decisive 4.8** | the same door, melee pawns on its two diagonal cells too ([card](../cases/cards/base_ith_tribe_2x.md)); 3 raiders died away from us on the stretches where the pirates died on spike traps, and 1 lost health on one (z 122) and went down further east at (186, 110) |
+| base_mon_tribe_3x | defeat 69.8 | (Claude's run discarded) · **the user: repelled 1.9** | room R2 at the end of the straight passage x 145, cleared of benches, all eight within 3 cells of the door, frags on an area order up the passage ([card](../cases/cards/base_mon_tribe_3x.md)) |

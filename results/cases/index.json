@@ -132,6 +132,83 @@
   }
  },
  {
+  "title": "base_mon_tribe_3x · civil outlanders ×8 vs 27 tribals (half of them archers) · Monler base — repelled (the user)",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "us-low-skill"
+  ],
+  "plays": [
+   "furniture-cleared",
+   "mouth-hold",
+   "area-frags",
+   "loadout",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "its planned hold near the start, firing",
+    "result": "defeat: \"decided to kidnap\" t5921, fled t7152 with Sammy and Penny",
+    "lost": "2 kidnapped (counted as deaths), 1 downed, 1 permanent",
+    "badness": "69.8"
+   },
+   {
+    "who": "Claude, attempt — discarded (the user changed the scope mid-battle)",
+    "play": "R2 door hold, benches left in place; a loadout (Sammy the heavy SMG)",
+    "result": "stopped at t8186: none of ours down, 18 raiders listed",
+    "lost": "–",
+    "badness": "–"
+   },
+   {
+    "who": "the user, attempt 1 — discarded (the user restarted)",
+    "play": "R2 door hold, benches uninstalled; Brianna's frag on an area order",
+    "result": "stopped at t7221: Cutillas 42%, Sammy 31% (likely our own frag; no raider near the door)",
+    "lost": "–",
+    "badness": "–"
+   },
+   {
+    "who": "**the user, attempt 2**",
+    "play": "uninstall R1/R2 furniture with everyone on Constructing; all eight packed in three rows behind the door; frags on an area order up the passage; a mid-battle loadout",
+    "result": "**repelled** (raid fled t11437; cleared t19427)",
+    "lost": "0 (0 downed, 0 permanent), HP 47%",
+    "badness": "**1.9**"
+   }
+  ],
+  "id": "base_mon_tribe_3x",
+  "sites": [
+   "Monler R2"
+  ],
+  "arena": "arena_col_monler",
+  "ours": "OutlanderCivil",
+  "raid": "TribeRough",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 3,
+    "long": 2,
+    "support": 1,
+    "melee": 1,
+    "explosive": 1
+   },
+   "enemy_n": 27,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
+   "count_ratio": 0.3,
+   "distance": 136.3,
+   "squad_range_median": 24.4,
+   "mech": false
+  }
+ },
+ {
   "title": "rand_011 · Waster pirates ×9 (four good shooters) vs low-skill outlanders ×9 with two grenadiers · open",
   "situation": [
    "open-arena",
