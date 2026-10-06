@@ -1,0 +1,137 @@
+{
+  "id": "base_ith_mech_2x",
+  "save": "scenario_base_ith_mech_2x",
+  "spec": {
+    "id": "base_ith_mech_2x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Paul-Olivier 'Paulo' Bouchard",
+      "weapon": "Autopistol (normal)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899755",
+      "name": "April 'App' Martin",
+      "weapon": "Steel knife (poor)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899760",
+      "name": "Adrian Norman",
+      "weapon": "Autopistol (good)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899784",
+      "name": "Katia Pope",
+      "weapon": "Steel knife (poor 35%)",
+      "x": 120,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899788",
+      "name": "Mitchell 'Mitch' Everson",
+      "weapon": "Frag grenades",
+      "x": 120,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899795",
+      "name": "Teelina 'Tee' Von Teich",
+      "weapon": "Steel knife (poor)",
+      "x": 114,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899800",
+      "name": "Paul Paulson",
+      "weapon": "Machine pistol (normal)",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899806",
+      "name": "Fernanda 'Philly' Edwards",
+      "weapon": "Steel knife (poor 25%)",
+      "x": 117,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899811",
+      "name": "Onaji 'Ona' Stuvo",
+      "weapon": "Pump shotgun (normal)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther1899821",
+      "def": "Mech_Scyther",
+      "x": 248,
+      "z": 195
+    },
+    {
+      "id": "Mech_Scyther1899822",
+      "def": "Mech_Scyther",
+      "x": 248,
+      "z": 180
+    },
+    {
+      "id": "Mech_Scyther1899823",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 194
+    },
+    {
+      "id": "Mech_Scyther1899824",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 189
+    },
+    {
+      "id": "Mech_Scyther1899825",
+      "def": "Mech_Scyther",
+      "x": 248,
+      "z": 191
+    },
+    {
+      "id": "Mech_Scyther1899826",
+      "def": "Mech_Scyther",
+      "x": 248,
+      "z": 195
+    }
+  ]
+}

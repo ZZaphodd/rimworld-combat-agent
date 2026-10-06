@@ -1,0 +1,197 @@
+{
+  "id": "base_ith_mech_6x",
+  "save": "scenario_base_ith_mech_6x",
+  "spec": {
+    "id": "base_ith_mech_6x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 3000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Carrie Jones",
+      "weapon": "Autopistol (normal 65%)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899753",
+      "name": "Carlotta Bena",
+      "weapon": "Incendiary launcher (normal 77%)",
+      "x": 115,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899758",
+      "name": "Demirkan 'DemDemz' Demir",
+      "weapon": "Steel knife (awful)",
+      "x": 118,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899763",
+      "name": "Zachary 'Zack' Floerke",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899768",
+      "name": "Lidia Yates",
+      "weapon": "Pump shotgun (normal)",
+      "x": 120,
+      "z": 167,
+      "health": 100
+    },
+    {
+      "id": "Human1899774",
+      "name": "Apolline 'Po' Canivet",
+      "weapon": "Autopistol (poor 80%)",
+      "x": 114,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899779",
+      "name": "Henry 'Lawman' Jensen",
+      "weapon": "Autopistol (poor)",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1899786",
+      "name": "Mike 'Anarchist' Mudgett",
+      "weapon": "Revolver (good)",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1400259",
+      "name": "Jo 'Queen' Goddess",
+      "weapon": "Revolver (poor 33%)",
+      "x": 120,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Legionary1899797",
+      "def": "Mech_Legionary",
+      "x": 172,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1899799",
+      "def": "Mech_Lancer",
+      "x": 179,
+      "z": 7
+    },
+    {
+      "id": "Mech_Lancer1899801",
+      "def": "Mech_Lancer",
+      "x": 179,
+      "z": 9
+    },
+    {
+      "id": "Mech_Lancer1899803",
+      "def": "Mech_Lancer",
+      "x": 169,
+      "z": 3
+    },
+    {
+      "id": "Mech_Lancer1899805",
+      "def": "Mech_Lancer",
+      "x": 178,
+      "z": 5
+    },
+    {
+      "id": "Mech_Lancer1899807",
+      "def": "Mech_Lancer",
+      "x": 179,
+      "z": 5
+    },
+    {
+      "id": "Mech_Lancer1899809",
+      "def": "Mech_Lancer",
+      "x": 175,
+      "z": 8
+    },
+    {
+      "id": "Mech_Tesseron1899811",
+      "def": "Mech_Tesseron",
+      "x": 176,
+      "z": 9
+    },
+    {
+      "id": "Mech_Lancer1899813",
+      "def": "Mech_Lancer",
+      "x": 180,
+      "z": 6
+    },
+    {
+      "id": "Mech_Pikeman1899815",
+      "def": "Mech_Pikeman",
+      "x": 178,
+      "z": 5
+    },
+    {
+      "id": "Mech_Lancer1899817",
+      "def": "Mech_Lancer",
+      "x": 170,
+      "z": 3
+    },
+    {
+      "id": "Mech_Diabolus1899819",
+      "def": "Mech_Diabolus",
+      "x": 175,
+      "z": 0
+    },
+    {
+      "id": "Mech_Pikeman1899822",
+      "def": "Mech_Pikeman",
+      "x": 171,
+      "z": 4
+    },
+    {
+      "id": "Mech_Tesseron1899824",
+      "def": "Mech_Tesseron",
+      "x": 181,
+      "z": 6
+    },
+    {
+      "id": "Mech_Tesseron1899826",
+      "def": "Mech_Tesseron",
+      "x": 174,
+      "z": 8
+    },
+    {
+      "id": "Mech_Tesseron1899828",
+      "def": "Mech_Tesseron",
+      "x": 179,
+      "z": 9
+    }
+  ]
+}

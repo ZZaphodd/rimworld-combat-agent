@@ -1,0 +1,167 @@
+{
+  "id": "base_mon_mech_4x",
+  "save": "scenario_base_mon_mech_4x",
+  "spec": {
+    "id": "base_mon_mech_4x",
+    "tier": "base",
+    "arena": "arena_col_monler",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 2000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1212584",
+      "name": "Carter Fitzi",
+      "weapon": "Revolver (poor 30%)",
+      "x": 123,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1212614",
+      "name": "Katsumi Delgado",
+      "weapon": "Autopistol (normal 79%)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212619",
+      "name": "Troy Leblanc",
+      "weapon": "Revolver (good)",
+      "x": 124,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212635",
+      "name": "Mason Simpson",
+      "weapon": "Molotov cocktails",
+      "x": 127,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212641",
+      "name": "Sam 'Sammy' Gerador",
+      "weapon": "Revolver (normal)",
+      "x": 126,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1212646",
+      "name": "Samantha 'Sam' Haxton",
+      "weapon": "Steel knife (normal 46%)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212660",
+      "name": "John Silver",
+      "weapon": "Molotov cocktails",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212666",
+      "name": "Lewinsai 'Lewin' Williams",
+      "weapon": "Revolver (poor)",
+      "x": 123,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1212669",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Steel knife (poor 42%)",
+      "x": 127,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Lancer1212677",
+      "def": "Mech_Lancer",
+      "x": 188,
+      "z": 245
+    },
+    {
+      "id": "Mech_Centurion1212679",
+      "def": "Mech_Centurion",
+      "x": 193,
+      "z": 248
+    },
+    {
+      "id": "Mech_Lancer1212681",
+      "def": "Mech_Lancer",
+      "x": 192,
+      "z": 241
+    },
+    {
+      "id": "Mech_CentipedeBlaster1212683",
+      "def": "Mech_CentipedeBlaster",
+      "x": 189,
+      "z": 246
+    },
+    {
+      "id": "Mech_Lancer1212685",
+      "def": "Mech_Lancer",
+      "x": 189,
+      "z": 240
+    },
+    {
+      "id": "Mech_Scyther1212687",
+      "def": "Mech_Scyther",
+      "x": 188,
+      "z": 245
+    },
+    {
+      "id": "Mech_Militor1212688",
+      "def": "Mech_Militor",
+      "x": 193,
+      "z": 240
+    },
+    {
+      "id": "Mech_Scyther1212690",
+      "def": "Mech_Scyther",
+      "x": 191,
+      "z": 245
+    },
+    {
+      "id": "Mech_Lancer1212691",
+      "def": "Mech_Lancer",
+      "x": 192,
+      "z": 241
+    },
+    {
+      "id": "Mech_Lancer1212693",
+      "def": "Mech_Lancer",
+      "x": 191,
+      "z": 243
+    },
+    {
+      "id": "Mech_Militor1212695",
+      "def": "Mech_Militor",
+      "x": 189,
+      "z": 246
+    }
+  ]
+}

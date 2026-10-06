@@ -1,0 +1,179 @@
+{
+  "id": "base_ith_mech_4x",
+  "save": "scenario_base_ith_mech_4x",
+  "spec": {
+    "id": "base_ith_mech_4x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 2000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1899748",
+      "name": "Catherine 'Cady' Silaska",
+      "weapon": "Molotov cocktails",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1899754",
+      "name": "Aleksander 'Sale' Chiki",
+      "weapon": "Machine pistol (normal)",
+      "x": 116,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899759",
+      "name": "Jonathan 'John' Medcalf",
+      "weapon": "Steel knife (poor)",
+      "x": 118,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899763",
+      "name": "Sakura Hopkins",
+      "weapon": "Frag grenades",
+      "x": 119,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1899768",
+      "name": "Anna Stevens",
+      "weapon": "Pump shotgun (normal)",
+      "x": 120,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1899774",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Revolver (poor 58%)",
+      "x": 114,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899778",
+      "name": "Nonni Fredda",
+      "weapon": "Autopistol (poor)",
+      "x": 116,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899782",
+      "name": "Staci Conner",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1899788",
+      "name": "Nebulys Strike",
+      "weapon": "Revolver (good)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther1899801",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 188
+    },
+    {
+      "id": "Mech_Scyther1899802",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 188
+    },
+    {
+      "id": "Mech_Scyther1899803",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 187
+    },
+    {
+      "id": "Mech_Scyther1899804",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 173
+    },
+    {
+      "id": "Mech_Scyther1899805",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 188
+    },
+    {
+      "id": "Mech_Scyther1899806",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 174
+    },
+    {
+      "id": "Mech_Scyther1899807",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 187
+    },
+    {
+      "id": "Mech_Scyther1899808",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 188
+    },
+    {
+      "id": "Mech_Scyther1899809",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 187
+    },
+    {
+      "id": "Mech_Scyther1899810",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 187
+    },
+    {
+      "id": "Mech_Scyther1899811",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 188
+    },
+    {
+      "id": "Mech_Scyther1899812",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 187
+    },
+    {
+      "id": "Mech_Scyther1899813",
+      "def": "Mech_Scyther",
+      "x": 249,
+      "z": 188
+    }
+  ]
+}
