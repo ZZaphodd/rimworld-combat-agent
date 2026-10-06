@@ -20,7 +20,7 @@
   .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
     backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,0.35); }
   #bar { position: absolute; left: 24px; right: 24px; bottom: 20px; height: 128px; display: grid;
-    grid-template-columns: 420px 320px 1fr; gap: 0; }
+    grid-template-columns: 400px 280px 1fr 440px; gap: 0; }
   #bar > div { padding: 14px 20px; border-right: 1px solid var(--line); min-width: 0; }
   #bar > div:last-child { border-right: none; }
   .label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
@@ -30,10 +30,9 @@
   .count b { font-size: 30px; font-weight: 700; }
   .them b { color: var(--them); }
   #msgs div { font-size: 14px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 5px; }
-  #ladder { position: absolute; right: 24px; top: 20px; width: 360px; padding: 14px 18px; }
-  #ladder table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 15px; }
-  #ladder td { padding: 3px 0; border-bottom: 1px solid var(--line); }
-  #ladder td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+  #rows { width: 100%; border-collapse: collapse; margin-top: 4px; font-size: 14px; }
+  #rows td { padding: 2px 0; white-space: nowrap; }
+  #rows td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
   .g-decisive, .g-repelled { color: var(--good); }
   .g-pyrrhic, .g-unresolved { color: var(--warn); }
   .g-defeat { color: var(--bad); }
@@ -42,10 +41,6 @@
 </style>
 </head>
 <body>
-<div id="ladder" class="panel hidden">
-  <div class="label">Base ladder v2 · turtle</div>
-  <table id="rows"></table>
-</div>
 <div id="bar" class="panel hidden">
   <div>
     <div class="label" id="who">—</div>
@@ -62,6 +57,10 @@
   <div>
     <div class="label">Messages</div>
     <div id="msgs"></div>
+  </div>
+  <div>
+    <div class="label">Base ladder v2 · turtle</div>
+    <table id="rows"></table>
   </div>
 </div>
 <script>
@@ -92,9 +91,9 @@ async function tick() {
     $("standing").textContent = "0"; $("downed").textContent = "0";
   }
   const rows = st.ladder || [];
-  $("ladder").classList.toggle("hidden", !rows.length);
-  $("rows").innerHTML = rows.slice(-12).map(r =>
-    `<tr><td>${esc(pretty(r.id))}</td><td class="g-${esc(r.grade)}">${esc(r.grade)} ${r.badness ?? ""}</td></tr>`).join("");
+  $("rows").innerHTML = (rows.length ? rows.slice(-4) : []).map(r =>
+    `<tr><td>${esc(pretty(r.id))}</td><td class="g-${esc(r.grade)}">${esc(r.grade)} ${r.badness ?? ""}</td></tr>`).join("") ||
+    `<tr><td style="color:var(--muted)">no results yet</td><td></td></tr>`;
 }
 tick(); setInterval(tick, 2000);
 </script>
