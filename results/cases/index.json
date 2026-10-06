@@ -39,7 +39,98 @@
    }
   ],
   "id": "base_ith_pirate_2x",
-  "sites": []
+  "sites": [],
+  "arena": "arena_col_ithfunda",
+  "ours": "OutlanderCivil",
+  "raid": "PirateWaster",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-outranges"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "explosive": 3,
+    "long": 2,
+    "short": 2,
+    "support": 1
+   },
+   "enemy_n": 25,
+   "enemy_classes": {
+    "other": 25
+   },
+   "enemy_melee_share": 0.0,
+   "enemy_outrange_share": 1.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 0.32,
+   "distance": 130.4,
+   "squad_range_median": 19.4,
+   "mech": false
+  }
+ },
+ {
+  "title": "base_ith_tribe_2x · civil outlanders ×8 vs 10 Neanderthal tribals · Ithfunda base — decisive",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "raid-outnumbers"
+  ],
+  "plays": [
+   "mouth-hold",
+   "rotation",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "hold the start and fire",
+    "result": "defeat: squad down t6436 with 3 of 10 out",
+    "lost": "2 dead, 6 downed, 9 permanent",
+    "badness": "109.7"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "door hold: three melee pawns on the plug and the doorway's two diagonal cells, five guns 2+ cells back, one swap",
+    "result": "**decisive** (t24014)",
+    "lost": "0 (0 downed)",
+    "badness": "**4.8**"
+   }
+  ],
+  "id": "base_ith_tribe_2x",
+  "sites": [],
+  "arena": "arena_col_ithfunda",
+  "ours": "OutlanderCivil",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-strong-1v1"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 5,
+    "long": 1,
+    "explosive": 1,
+    "melee": 1
+   },
+   "enemy_n": 10,
+   "enemy_classes": {
+    "other": 10
+   },
+   "enemy_melee_share": 0.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 0.8,
+   "distance": 175.3,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
  },
  {
   "title": "rand_011 · Waster pirates ×9 (four good shooters) vs low-skill outlanders ×9 with two grenadiers · open",

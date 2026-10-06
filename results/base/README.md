@@ -53,3 +53,4 @@ journals and cards in `results/cases/`).
 | problem | turtle | Claude | play |
 |---|---|---|---|
 | base_ith_pirate_2x | defeat 57.4 | **repelled 12.3** (attempt 2; attempt 1 discarded) | the east room's door ([card](../cases/cards/base_ith_pirate_2x.md)); 7 of the 20 raider deaths were the colony's spike traps (turtle's row has 6 inferred kills and no trace, so its trap deaths are not known) |
+| base_ith_tribe_2x | defeat 109.7 | **decisive 4.8** | the same door, melee pawns on its two diagonal cells too ([card](../cases/cards/base_ith_tribe_2x.md)); 3 raiders died and 1 went down away from us, on the stretches where the pirates died on spike traps |
