@@ -1,0 +1,167 @@
+{
+  "id": "base2_mon_pirate_2x",
+  "save": "scenario_base2_mon_pirate_2x",
+  "spec": {
+    "id": "base2_mon_pirate_2x",
+    "tier": "base",
+    "arena": "arena_col_monler2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1267202",
+      "name": "Ashe 'Rose' Osiria",
+      "weapon": "Machine pistol (normal)",
+      "x": 120,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267208",
+      "name": "Paola 'Pepper' Sutton",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267215",
+      "name": "Debby Anderson",
+      "weapon": "Machine pistol (normal)",
+      "x": 124,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267220",
+      "name": "Greg Burch",
+      "weapon": "Machine pistol (normal)",
+      "x": 126,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267226",
+      "name": "Arshes Ludenval",
+      "weapon": "Autopistol (normal)",
+      "x": 127,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267237",
+      "name": "Rodrigo 'Rodri' Rubin",
+      "weapon": "Revolver (poor 47%)",
+      "x": 120,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267242",
+      "name": "Susanne 'Catlady' Bogen",
+      "weapon": "Revolver (normal)",
+      "x": 121,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267247",
+      "name": "Kelly Kim",
+      "weapon": "Heavy SMG (normal)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267254",
+      "name": "Crink Frey",
+      "weapon": "Autopistol (poor 38%)",
+      "x": 129,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1267259",
+      "def": "Mercenary_Sniper",
+      "x": 26,
+      "z": 247
+    },
+    {
+      "id": "Human1267265",
+      "def": "Mercenary_Gunner",
+      "x": 26,
+      "z": 247
+    },
+    {
+      "id": "Human1267272",
+      "def": "Mercenary_Sniper",
+      "x": 30,
+      "z": 248
+    },
+    {
+      "id": "Human1267278",
+      "def": "Mercenary_Sniper",
+      "x": 29,
+      "z": 249
+    },
+    {
+      "id": "Human1267283",
+      "def": "Grenadier_Destructive",
+      "x": 22,
+      "z": 246
+    },
+    {
+      "id": "Human1267289",
+      "def": "Mercenary_Gunner",
+      "x": 32,
+      "z": 243
+    },
+    {
+      "id": "Human1267313",
+      "def": "Mercenary_Sniper",
+      "x": 20,
+      "z": 247
+    },
+    {
+      "id": "Human1267318",
+      "def": "Mercenary_Gunner",
+      "x": 33,
+      "z": 247
+    },
+    {
+      "id": "Human1267324",
+      "def": "Mercenary_Gunner",
+      "x": 20,
+      "z": 246
+    },
+    {
+      "id": "Human1267330",
+      "def": "Pirate",
+      "x": 33,
+      "z": 247
+    },
+    {
+      "id": "Human1267336",
+      "def": "Pirate",
+      "x": 27,
+      "z": 247
+    }
+  ]
+}

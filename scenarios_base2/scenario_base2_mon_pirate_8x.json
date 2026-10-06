@@ -1,0 +1,281 @@
+{
+  "id": "base2_mon_pirate_8x",
+  "save": "scenario_base2_mon_pirate_8x",
+  "spec": {
+    "id": "base2_mon_pirate_8x",
+    "tier": "base",
+    "arena": "arena_col_monler2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        125,
+        130
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 4000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1267202",
+      "name": "Drew 'Strapping' Logan",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267207",
+      "name": "Sam 'Sammy' Gerador",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267214",
+      "name": "Halley Orion",
+      "weapon": "Molotov cocktails",
+      "x": 123,
+      "z": 129,
+      "health": 100
+    },
+    {
+      "id": "Human1267220",
+      "name": "Beau Bear",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 125,
+      "z": 131,
+      "health": 100
+    },
+    {
+      "id": "Human622597",
+      "name": "Oskar Potocki",
+      "weapon": "Machine pistol (poor)",
+      "x": 129,
+      "z": 130,
+      "health": 100
+    },
+    {
+      "id": "Human1267229",
+      "name": "John 'Blitz' Kriegsler",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267234",
+      "name": "Rebecca 'Lynx' Edwards",
+      "weapon": "Machine pistol (normal 73%)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267239",
+      "name": "Juliano 'Jay' Teixeira",
+      "weapon": "Autopistol (good)",
+      "x": 126,
+      "z": 128,
+      "health": 100
+    },
+    {
+      "id": "Human1267244",
+      "name": "Carlotta 'Madam' Sanford",
+      "weapon": "Autopistol (poor 66%)",
+      "x": 125,
+      "z": 128,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1267251",
+      "def": "Mercenary_Heavy",
+      "x": 89,
+      "z": 248
+    },
+    {
+      "id": "Human1267256",
+      "def": "PirateBoss",
+      "x": 87,
+      "z": 246
+    },
+    {
+      "id": "Human1267279",
+      "def": "Mercenary_Slasher",
+      "x": 88,
+      "z": 246
+    },
+    {
+      "id": "Human1267287",
+      "def": "Mercenary_Heavy",
+      "x": 86,
+      "z": 248
+    },
+    {
+      "id": "Human1267291",
+      "def": "Mercenary_Elite",
+      "x": 80,
+      "z": 248
+    },
+    {
+      "id": "Human1267299",
+      "def": "Mercenary_Heavy",
+      "x": 88,
+      "z": 246
+    },
+    {
+      "id": "Human1267303",
+      "def": "Mercenary_Sniper",
+      "x": 86,
+      "z": 248
+    },
+    {
+      "id": "Human1267311",
+      "def": "Mercenary_Elite",
+      "x": 77,
+      "z": 245
+    },
+    {
+      "id": "Human1267318",
+      "def": "Pirate",
+      "x": 90,
+      "z": 246
+    },
+    {
+      "id": "Human1267323",
+      "def": "Mercenary_Elite",
+      "x": 87,
+      "z": 248
+    },
+    {
+      "id": "Human1267326",
+      "def": "Mercenary_Elite",
+      "x": 76,
+      "z": 244
+    },
+    {
+      "id": "Human1267341",
+      "def": "Mercenary_Elite",
+      "x": 75,
+      "z": 248
+    },
+    {
+      "id": "Human1267347",
+      "def": "Mercenary_Sniper",
+      "x": 88,
+      "z": 246
+    },
+    {
+      "id": "Human1267353",
+      "def": "Mercenary_Gunner",
+      "x": 86,
+      "z": 248
+    },
+    {
+      "id": "Human1267359",
+      "def": "Mercenary_Sniper",
+      "x": 84,
+      "z": 248
+    },
+    {
+      "id": "Human1267366",
+      "def": "Mercenary_Elite",
+      "x": 90,
+      "z": 248
+    },
+    {
+      "id": "Human1267369",
+      "def": "Mercenary_Slasher",
+      "x": 78,
+      "z": 246
+    },
+    {
+      "id": "Human1267374",
+      "def": "Mercenary_Elite",
+      "x": 83,
+      "z": 248
+    },
+    {
+      "id": "Human1267382",
+      "def": "Mercenary_Elite",
+      "x": 86,
+      "z": 248
+    },
+    {
+      "id": "Human1267388",
+      "def": "Mercenary_Elite",
+      "x": 89,
+      "z": 248
+    },
+    {
+      "id": "Human1267394",
+      "def": "Mercenary_Heavy",
+      "x": 88,
+      "z": 246
+    },
+    {
+      "id": "Human1267396",
+      "def": "Mercenary_Slasher",
+      "x": 80,
+      "z": 248
+    },
+    {
+      "id": "Human1267400",
+      "def": "Mercenary_Elite",
+      "x": 89,
+      "z": 243
+    },
+    {
+      "id": "Human1267406",
+      "def": "Mercenary_Sniper",
+      "x": 75,
+      "z": 248
+    },
+    {
+      "id": "Human1267412",
+      "def": "Mercenary_Slasher",
+      "x": 83,
+      "z": 248
+    },
+    {
+      "id": "Human1267420",
+      "def": "Mercenary_Elite",
+      "x": 77,
+      "z": 248
+    },
+    {
+      "id": "Human1267428",
+      "def": "Mercenary_Elite",
+      "x": 77,
+      "z": 248
+    },
+    {
+      "id": "Human1267434",
+      "def": "Mercenary_Sniper",
+      "x": 80,
+      "z": 248
+    },
+    {
+      "id": "Human1267441",
+      "def": "Mercenary_Gunner",
+      "x": 79,
+      "z": 248
+    },
+    {
+      "id": "Human1267443",
+      "def": "Drifter",
+      "x": 78,
+      "z": 248
+    }
+  ]
+}

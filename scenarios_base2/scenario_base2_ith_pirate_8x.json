@@ -1,0 +1,295 @@
+{
+  "id": "base2_ith_pirate_8x",
+  "save": "scenario_base2_ith_pirate_8x",
+  "spec": {
+    "id": "base2_ith_pirate_8x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 4000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Morrigan 'Morri' Stuart",
+      "weapon": "Machine pistol (normal)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957082",
+      "name": "Celia 'Squint' Holloway",
+      "weapon": "Revolver (normal 67%)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957087",
+      "name": "Nonna Ayers",
+      "weapon": "Molotov cocktails",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957089",
+      "name": "Tyler 'Ty' Molacek",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human707597",
+      "name": "Lubov Berry",
+      "weapon": "Steel knife (normal)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957097",
+      "name": "Lucya Marquez",
+      "weapon": "Bolt-action rifle (normal 90%)",
+      "x": 113,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1957102",
+      "name": "Sam 'Sammy' Gerador",
+      "weapon": "Frag grenades",
+      "x": 116,
+      "z": 164,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957110",
+      "def": "Pirate",
+      "x": 244,
+      "z": 60
+    },
+    {
+      "id": "Human1957116",
+      "def": "Mercenary_EliteTox",
+      "x": 243,
+      "z": 60
+    },
+    {
+      "id": "Human1957125",
+      "def": "Mercenary_HeavyTox",
+      "x": 246,
+      "z": 58
+    },
+    {
+      "id": "Human1957129",
+      "def": "Pirate",
+      "x": 244,
+      "z": 57
+    },
+    {
+      "id": "Human1957137",
+      "def": "PirateBossTox",
+      "x": 245,
+      "z": 58
+    },
+    {
+      "id": "Human1957146",
+      "def": "Scavenger",
+      "x": 241,
+      "z": 56
+    },
+    {
+      "id": "Human1957151",
+      "def": "Mercenary_EliteTox",
+      "x": 241,
+      "z": 58
+    },
+    {
+      "id": "Human1957160",
+      "def": "Mercenary_GunnerTox",
+      "x": 246,
+      "z": 55
+    },
+    {
+      "id": "Human1957168",
+      "def": "Mercenary_EliteTox",
+      "x": 244,
+      "z": 56
+    },
+    {
+      "id": "Human1957175",
+      "def": "Mercenary_EliteTox",
+      "x": 249,
+      "z": 54
+    },
+    {
+      "id": "Human1957184",
+      "def": "Pirate",
+      "x": 244,
+      "z": 60
+    },
+    {
+      "id": "Human1957189",
+      "def": "Mercenary_Sniper",
+      "x": 245,
+      "z": 57
+    },
+    {
+      "id": "Human1957196",
+      "def": "Mercenary_HeavyTox",
+      "x": 244,
+      "z": 56
+    },
+    {
+      "id": "Human1957201",
+      "def": "Mercenary_GunnerTox",
+      "x": 243,
+      "z": 56
+    },
+    {
+      "id": "Human1957209",
+      "def": "Mercenary_HeavyTox",
+      "x": 246,
+      "z": 56
+    },
+    {
+      "id": "Human1957214",
+      "def": "Mercenary_EliteTox",
+      "x": 243,
+      "z": 58
+    },
+    {
+      "id": "Human1957222",
+      "def": "Mercenary_GunnerTox",
+      "x": 247,
+      "z": 57
+    },
+    {
+      "id": "Human1957229",
+      "def": "Mercenary_GunnerTox",
+      "x": 245,
+      "z": 55
+    },
+    {
+      "id": "Human1957234",
+      "def": "Mercenary_Sniper",
+      "x": 245,
+      "z": 61
+    },
+    {
+      "id": "Human1957240",
+      "def": "Mercenary_GunnerTox",
+      "x": 244,
+      "z": 56
+    },
+    {
+      "id": "Human1957248",
+      "def": "Mercenary_GunnerTox",
+      "x": 245,
+      "z": 62
+    },
+    {
+      "id": "Human1957255",
+      "def": "Mercenary_GunnerTox",
+      "x": 248,
+      "z": 59
+    },
+    {
+      "id": "Human1957263",
+      "def": "Mercenary_Elite",
+      "x": 245,
+      "z": 57
+    },
+    {
+      "id": "Human1957271",
+      "def": "Mercenary_GunnerTox",
+      "x": 243,
+      "z": 57
+    },
+    {
+      "id": "Human1957279",
+      "def": "Mercenary_Gunner",
+      "x": 243,
+      "z": 58
+    },
+    {
+      "id": "Human1957286",
+      "def": "Mercenary_Sniper",
+      "x": 246,
+      "z": 58
+    },
+    {
+      "id": "Human1957292",
+      "def": "Mercenary_HeavyTox",
+      "x": 243,
+      "z": 60
+    },
+    {
+      "id": "Human1957296",
+      "def": "Mercenary_EliteTox",
+      "x": 248,
+      "z": 65
+    },
+    {
+      "id": "Human1957306",
+      "def": "Mercenary_Gunner",
+      "x": 247,
+      "z": 57
+    },
+    {
+      "id": "Human1957312",
+      "def": "Mercenary_Sniper",
+      "x": 243,
+      "z": 55
+    },
+    {
+      "id": "Human1957318",
+      "def": "Mercenary_EliteTox",
+      "x": 246,
+      "z": 64
+    },
+    {
+      "id": "Human1957328",
+      "def": "Mercenary_EliteTox",
+      "x": 245,
+      "z": 56
+    },
+    {
+      "id": "Human1957337",
+      "def": "Mercenary_SlasherTox",
+      "x": 246,
+      "z": 56
+    },
+    {
+      "id": "Human1957342",
+      "def": "Mercenary_HeavyTox",
+      "x": 241,
+      "z": 57
+    },
+    {
+      "id": "Human1957346",
+      "def": "Mercenary_Gunner",
+      "x": 246,
+      "z": 56
+    }
+  ]
+}

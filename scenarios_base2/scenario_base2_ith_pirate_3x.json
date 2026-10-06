@@ -1,0 +1,179 @@
+{
+  "id": "base2_ith_pirate_3x",
+  "save": "scenario_base2_ith_pirate_3x",
+  "spec": {
+    "id": "base2_ith_pirate_3x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Greg McDaniel",
+      "weapon": "Incendiary launcher (normal 65%)",
+      "x": 114,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957086",
+      "name": "Manabu Gutierrez",
+      "weapon": "Steel knife (poor 80%)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957091",
+      "name": "Yuu 'Hakuja' Ito",
+      "weapon": "Revolver (good)",
+      "x": 117,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957097",
+      "name": "Jesse 'Jess' Spence",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 119,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957103",
+      "name": "Tyler 'Dog' Decker",
+      "weapon": "Machine pistol (poor)",
+      "x": 122,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957124",
+      "name": "Noah Peck",
+      "weapon": "Revolver (poor 77%)",
+      "x": 113,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1957126",
+      "name": "Eric Everson",
+      "weapon": "Pump shotgun (normal)",
+      "x": 116,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957132",
+      "name": "Darcey Powers",
+      "weapon": "Molotov cocktails (97%)",
+      "x": 118,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957138",
+      "name": "James Lamp",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 122,
+      "z": 161,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957145",
+      "def": "Mercenary_GunnerTox",
+      "x": 130,
+      "z": 10
+    },
+    {
+      "id": "Human1957153",
+      "def": "Pirate",
+      "x": 125,
+      "z": 3
+    },
+    {
+      "id": "Human1957160",
+      "def": "Mercenary_Sniper",
+      "x": 129,
+      "z": 3
+    },
+    {
+      "id": "Human1957167",
+      "def": "Mercenary_Slasher",
+      "x": 136,
+      "z": 2
+    },
+    {
+      "id": "Human1957171",
+      "def": "Mercenary_SlasherTox",
+      "x": 135,
+      "z": 2
+    },
+    {
+      "id": "Human1957176",
+      "def": "Mercenary_SlasherTox",
+      "x": 131,
+      "z": 2
+    },
+    {
+      "id": "Human1957183",
+      "def": "Mercenary_HeavyTox",
+      "x": 128,
+      "z": 8
+    },
+    {
+      "id": "Human1957190",
+      "def": "PirateBossTox",
+      "x": 123,
+      "z": 1
+    },
+    {
+      "id": "Human1957197",
+      "def": "Mercenary_Gunner",
+      "x": 124,
+      "z": 5
+    },
+    {
+      "id": "Human1957204",
+      "def": "Mercenary_GunnerTox",
+      "x": 123,
+      "z": 5
+    },
+    {
+      "id": "Human1957211",
+      "def": "Mercenary_Sniper",
+      "x": 140,
+      "z": 3
+    },
+    {
+      "id": "Human1957217",
+      "def": "Mercenary_Sniper",
+      "x": 130,
+      "z": 3
+    },
+    {
+      "id": "Human1957223",
+      "def": "Mercenary_GunnerTox",
+      "x": 128,
+      "z": 8
+    }
+  ]
+}

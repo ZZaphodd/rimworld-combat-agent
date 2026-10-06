@@ -1,0 +1,207 @@
+{
+  "id": "base2_ith_pirate_4x",
+  "save": "scenario_base2_ith_pirate_4x",
+  "spec": {
+    "id": "base2_ith_pirate_4x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 2000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957081",
+      "name": "Raph 'Rapha' Ahmbo",
+      "weapon": "Revolver (normal)",
+      "x": 113,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957086",
+      "name": "Daiki Tanner",
+      "weapon": "Revolver (normal 99%)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957092",
+      "name": "Selyn Shu",
+      "weapon": "Revolver (normal)",
+      "x": 118,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957098",
+      "name": "Paul Paulson",
+      "weapon": "Autopistol (good)",
+      "x": 121,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957106",
+      "name": "Josh 'Siso' Sisson",
+      "weapon": "Revolver (poor 33%)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957110",
+      "name": "Miesha 'Mie' Aldemar",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 113,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1957115",
+      "name": "Valentin 'Starry' Atkinson",
+      "weapon": "Pump shotgun (good)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957121",
+      "name": "Kev 'Minnow' Mize",
+      "weapon": "Bolt-action rifle (normal 70%)",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957129",
+      "def": "Mercenary_HeavyTox",
+      "x": 115,
+      "z": 7
+    },
+    {
+      "id": "Human1957134",
+      "def": "Mercenary_SlasherTox",
+      "x": 118,
+      "z": 3
+    },
+    {
+      "id": "Human1957138",
+      "def": "Mercenary_GunnerTox",
+      "x": 122,
+      "z": 4
+    },
+    {
+      "id": "Human1957146",
+      "def": "Mercenary_GunnerTox",
+      "x": 120,
+      "z": 8
+    },
+    {
+      "id": "Human1957152",
+      "def": "Mercenary_GunnerTox",
+      "x": 120,
+      "z": 4
+    },
+    {
+      "id": "Human1957159",
+      "def": "Mercenary_SlasherTox",
+      "x": 114,
+      "z": 6
+    },
+    {
+      "id": "Human1957164",
+      "def": "Mercenary_HeavyTox",
+      "x": 116,
+      "z": 2
+    },
+    {
+      "id": "Human1957170",
+      "def": "Mercenary_Sniper",
+      "x": 118,
+      "z": 4
+    },
+    {
+      "id": "Human1957177",
+      "def": "Mercenary_Slasher",
+      "x": 122,
+      "z": 4
+    },
+    {
+      "id": "Human1957183",
+      "def": "Mercenary_Heavy",
+      "x": 120,
+      "z": 3
+    },
+    {
+      "id": "Human1957188",
+      "def": "PirateBossTox",
+      "x": 110,
+      "z": 3
+    },
+    {
+      "id": "Human1957194",
+      "def": "Mercenary_EliteTox",
+      "x": 116,
+      "z": 2
+    },
+    {
+      "id": "Human1957201",
+      "def": "Mercenary_EliteTox",
+      "x": 114,
+      "z": 1
+    },
+    {
+      "id": "Human1957209",
+      "def": "Mercenary_GunnerTox",
+      "x": 119,
+      "z": 6
+    },
+    {
+      "id": "Human1957217",
+      "def": "Scavenger",
+      "x": 122,
+      "z": 4
+    },
+    {
+      "id": "Human1957222",
+      "def": "Mercenary_GunnerTox",
+      "x": 121,
+      "z": 9
+    },
+    {
+      "id": "Human1957230",
+      "def": "Scavenger",
+      "x": 112,
+      "z": 6
+    },
+    {
+      "id": "Human1957234",
+      "def": "Mercenary_GunnerTox",
+      "x": 108,
+      "z": 4
+    },
+    {
+      "id": "Human1957241",
+      "def": "Drifter",
+      "x": 121,
+      "z": 7
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "id": "base2_ith_tribe_6x",
+  "save": "scenario_base2_ith_tribe_6x",
+  "spec": {
+    "id": "base2_ith_tribe_6x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRoughNeanderthal",
+      "points": 3000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Elsie Farmer",
+      "weapon": "Steel knife (poor 34%)",
+      "x": 114,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957099",
+      "name": "Kate Todd",
+      "weapon": "Revolver (good 70%)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957104",
+      "name": "Connor Smith",
+      "weapon": "Steel knife (poor)",
+      "x": 118,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957108",
+      "name": "Janik 'Jeyce' Mester",
+      "weapon": "Revolver (excellent)",
+      "x": 119,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957116",
+      "name": "Paul-Olivier 'Paulo' Bouchard",
+      "weapon": "Machine pistol (normal 84%)",
+      "x": 122,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957122",
+      "name": "Felix Mellor",
+      "weapon": "Frag grenades",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957127",
+      "name": "Honorio 'Hono' Colipano",
+      "weapon": "Heavy SMG (normal 60%)",
+      "x": 115,
+      "z": 162,
+      "health": 100
+    },
+    {
+      "id": "Human1957142",
+      "name": "Ursula 'Kuma' Auberon",
+      "weapon": "Machine pistol (normal 88%)",
+      "x": 118,
+      "z": 162,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957149",
+      "def": "Tribal_ChiefMelee",
+      "x": 246,
+      "z": 132
+    },
+    {
+      "id": "Human1957154",
+      "def": "Tribal_Warrior",
+      "x": 244,
+      "z": 134
+    },
+    {
+      "id": "Human1957158",
+      "def": "Tribal_Berserker",
+      "x": 242,
+      "z": 130
+    },
+    {
+      "id": "Human1957163",
+      "def": "Tribal_Berserker",
+      "x": 245,
+      "z": 130
+    },
+    {
+      "id": "Human1957167",
+      "def": "Tribal_HeavyArcher",
+      "x": 247,
+      "z": 135
+    },
+    {
+      "id": "Human1957182",
+      "def": "Tribal_Warrior",
+      "x": 242,
+      "z": 129
+    },
+    {
+      "id": "Human1957186",
+      "def": "Tribal_Berserker",
+      "x": 242,
+      "z": 133
+    },
+    {
+      "id": "Human1957190",
+      "def": "Tribal_Berserker",
+      "x": 244,
+      "z": 135
+    },
+    {
+      "id": "Human1957195",
+      "def": "Tribal_Penitent",
+      "x": 241,
+      "z": 131
+    },
+    {
+      "id": "Human1957198",
+      "def": "Tribal_Penitent",
+      "x": 246,
+      "z": 131
+    },
+    {
+      "id": "Human1957200",
+      "def": "Tribal_Berserker",
+      "x": 245,
+      "z": 132
+    },
+    {
+      "id": "Human1957206",
+      "def": "Tribal_Berserker",
+      "x": 247,
+      "z": 134
+    },
+    {
+      "id": "Human1957211",
+      "def": "Tribal_Penitent",
+      "x": 247,
+      "z": 133
+    },
+    {
+      "id": "Human1957213",
+      "def": "Tribal_Berserker",
+      "x": 247,
+      "z": 132
+    },
+    {
+      "id": "Human1957217",
+      "def": "Tribal_Berserker",
+      "x": 247,
+      "z": 130
+    },
+    {
+      "id": "Human1957222",
+      "def": "Tribal_Warrior",
+      "x": 244,
+      "z": 135
+    },
+    {
+      "id": "Human1957226",
+      "def": "Tribal_Penitent",
+      "x": 243,
+      "z": 130
+    },
+    {
+      "id": "Human1957229",
+      "def": "Tribal_Berserker",
+      "x": 244,
+      "z": 132
+    },
+    {
+      "id": "Human1957233",
+      "def": "Tribal_Berserker",
+      "x": 240,
+      "z": 128
+    },
+    {
+      "id": "Human1957238",
+      "def": "Tribal_Warrior",
+      "x": 244,
+      "z": 129
+    },
+    {
+      "id": "Human1957242",
+      "def": "Tribal_Warrior",
+      "x": 244,
+      "z": 133
+    },
+    {
+      "id": "Human1957246",
+      "def": "Tribal_Berserker",
+      "x": 246,
+      "z": 128
+    },
+    {
+      "id": "Human1957262",
+      "def": "Tribal_Berserker",
+      "x": 243,
+      "z": 130
+    },
+    {
+      "id": "Human1957267",
+      "def": "Tribal_Warrior",
+      "x": 243,
+      "z": 130
+    },
+    {
+      "id": "Human1957271",
+      "def": "Tribal_Warrior",
+      "x": 246,
+      "z": 133
+    },
+    {
+      "id": "Human1957275",
+      "def": "Tribal_Warrior",
+      "x": 245,
+      "z": 131
+    },
+    {
+      "id": "Human1957279",
+      "def": "Tribal_Archer",
+      "x": 245,
+      "z": 137
+    },
+    {
+      "id": "Human1957283",
+      "def": "Tribal_Warrior",
+      "x": 244,
+      "z": 133
+    },
+    {
+      "id": "Human1957286",
+      "def": "Tribal_Warrior",
+      "x": 244,
+      "z": 129
+    },
+    {
+      "id": "Human1957290",
+      "def": "Tribal_Warrior",
+      "x": 242,
+      "z": 130
+    },
+    {
+      "id": "Human1957294",
+      "def": "Tribal_Penitent",
+      "x": 248,
+      "z": 134
+    },
+    {
+      "id": "Human1957297",
+      "def": "Tribal_Warrior",
+      "x": 245,
+      "z": 132
+    },
+    {
+      "id": "Human1957301",
+      "def": "Tribal_Penitent",
+      "x": 242,
+      "z": 132
+    },
+    {
+      "id": "Human1957304",
+      "def": "Tribal_Penitent",
+      "x": 244,
+      "z": 134
+    }
+  ]
+}

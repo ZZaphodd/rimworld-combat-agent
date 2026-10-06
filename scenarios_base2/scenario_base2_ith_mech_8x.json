@@ -1,0 +1,171 @@
+{
+  "id": "base2_ith_mech_8x",
+  "save": "scenario_base2_ith_mech_8x",
+  "spec": {
+    "id": "base2_ith_mech_8x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 4000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957081",
+      "name": "Nana Prince",
+      "weapon": "Steel knife (poor)",
+      "x": 114,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957085",
+      "name": "Antonino 'Toni' Cefalu",
+      "weapon": "Molotov cocktails",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957090",
+      "name": "Sarah Craig",
+      "weapon": "Autopistol (normal)",
+      "x": 118,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957095",
+      "name": "Maia Dodd",
+      "weapon": "Machine pistol (normal)",
+      "x": 122,
+      "z": 167,
+      "health": 100
+    },
+    {
+      "id": "Human1957100",
+      "name": "Sergio 'Dweeb' Moses",
+      "weapon": "Revolver (normal)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957106",
+      "name": "Gil Gould",
+      "weapon": "Revolver (poor)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957111",
+      "name": "Jessica 'Jesse' Hooten",
+      "weapon": "Pump shotgun (normal)",
+      "x": 114,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1957117",
+      "name": "Frank 'Man' Jackson",
+      "weapon": "Autopistol (good)",
+      "x": 117,
+      "z": 163,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_CentipedeBlaster1957125",
+      "def": "Mech_CentipedeBlaster",
+      "x": 6,
+      "z": 33
+    },
+    {
+      "id": "Mech_CentipedeBlaster1957127",
+      "def": "Mech_CentipedeBlaster",
+      "x": 5,
+      "z": 39
+    },
+    {
+      "id": "Mech_Centurion1957129",
+      "def": "Mech_Centurion",
+      "x": 2,
+      "z": 38
+    },
+    {
+      "id": "Mech_CentipedeBlaster1957131",
+      "def": "Mech_CentipedeBlaster",
+      "x": 6,
+      "z": 30
+    },
+    {
+      "id": "Mech_CentipedeBlaster1957133",
+      "def": "Mech_CentipedeBlaster",
+      "x": 1,
+      "z": 37
+    },
+    {
+      "id": "Mech_Lancer1957135",
+      "def": "Mech_Lancer",
+      "x": 10,
+      "z": 38
+    },
+    {
+      "id": "Mech_CentipedeBlaster1957137",
+      "def": "Mech_CentipedeBlaster",
+      "x": 0,
+      "z": 39
+    },
+    {
+      "id": "Mech_Scyther1957139",
+      "def": "Mech_Scyther",
+      "x": 5,
+      "z": 36
+    },
+    {
+      "id": "Mech_CentipedeBlaster1957140",
+      "def": "Mech_CentipedeBlaster",
+      "x": 4,
+      "z": 38
+    },
+    {
+      "id": "Mech_Lancer1957142",
+      "def": "Mech_Lancer",
+      "x": 5,
+      "z": 41
+    },
+    {
+      "id": "Mech_Apocriton1957144",
+      "def": "Mech_Apocriton",
+      "x": 2,
+      "z": 32
+    },
+    {
+      "id": "Mech_Scyther1957146",
+      "def": "Mech_Scyther",
+      "x": 5,
+      "z": 39
+    },
+    {
+      "id": "Mech_Militor1957147",
+      "def": "Mech_Militor",
+      "x": 1,
+      "z": 34
+    }
+  ]
+}

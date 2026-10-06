@@ -1,0 +1,249 @@
+{
+  "id": "base2_ith_pirate_6x",
+  "save": "scenario_base2_ith_pirate_6x",
+  "spec": {
+    "id": "base2_ith_pirate_6x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "PirateWaster",
+      "points": 3000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Layne Baum",
+      "weapon": "Heavy SMG (normal)",
+      "x": 113,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957085",
+      "name": "Gideon McPherson",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 117,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957090",
+      "name": "Kyle 'Hanna' Hannibal",
+      "weapon": "Autopistol (good)",
+      "x": 119,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957110",
+      "name": "Ban 'Ace' Wynn",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 121,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957116",
+      "name": "Ludmila Mann",
+      "weapon": "Pump shotgun (normal)",
+      "x": 122,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957122",
+      "name": "Waldo Downs",
+      "weapon": "Machine pistol (good)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957127",
+      "name": "Malvina Vulcamite",
+      "weapon": "Steel knife (poor)",
+      "x": 116,
+      "z": 163,
+      "health": 100
+    },
+    {
+      "id": "Human1957132",
+      "name": "Matthew Browne",
+      "weapon": "Revolver (normal)",
+      "x": 118,
+      "z": 164,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1957138",
+      "def": "Mercenary_Elite",
+      "x": 1,
+      "z": 9
+    },
+    {
+      "id": "Human1957145",
+      "def": "Mercenary_HeavyTox",
+      "x": 2,
+      "z": 13
+    },
+    {
+      "id": "Human1957149",
+      "def": "Mercenary_EliteTox",
+      "x": 0,
+      "z": 26
+    },
+    {
+      "id": "Human1957157",
+      "def": "Pirate",
+      "x": 7,
+      "z": 26
+    },
+    {
+      "id": "Human1957163",
+      "def": "Mercenary_EliteTox",
+      "x": 0,
+      "z": 7
+    },
+    {
+      "id": "Human1957172",
+      "def": "Mercenary_HeavyTox",
+      "x": 1,
+      "z": 24
+    },
+    {
+      "id": "Human1957178",
+      "def": "Mercenary_SlasherTox",
+      "x": 3,
+      "z": 26
+    },
+    {
+      "id": "Human1957184",
+      "def": "Mercenary_HeavyTox",
+      "x": 2,
+      "z": 13
+    },
+    {
+      "id": "Human1957188",
+      "def": "Mercenary_Gunner",
+      "x": 4,
+      "z": 13
+    },
+    {
+      "id": "Human1957195",
+      "def": "Mercenary_Gunner",
+      "x": 8,
+      "z": 19
+    },
+    {
+      "id": "Human1957202",
+      "def": "Mercenary_Heavy",
+      "x": 4,
+      "z": 9
+    },
+    {
+      "id": "Human1957210",
+      "def": "Pirate",
+      "x": 2,
+      "z": 13
+    },
+    {
+      "id": "Human1957217",
+      "def": "Mercenary_HeavyTox",
+      "x": 3,
+      "z": 13
+    },
+    {
+      "id": "Human1957222",
+      "def": "Mercenary_GunnerTox",
+      "x": 3,
+      "z": 13
+    },
+    {
+      "id": "Human1957230",
+      "def": "Mercenary_Sniper",
+      "x": 3,
+      "z": 21
+    },
+    {
+      "id": "Human1957237",
+      "def": "Pirate",
+      "x": 5,
+      "z": 25
+    },
+    {
+      "id": "Human1957243",
+      "def": "Pirate",
+      "x": 7,
+      "z": 26
+    },
+    {
+      "id": "Human1957249",
+      "def": "Mercenary_GunnerTox",
+      "x": 4,
+      "z": 13
+    },
+    {
+      "id": "Human1957256",
+      "def": "Mercenary_Elite",
+      "x": 3,
+      "z": 23
+    },
+    {
+      "id": "Human1957265",
+      "def": "Mercenary_Gunner",
+      "x": 4,
+      "z": 14
+    },
+    {
+      "id": "Human1957272",
+      "def": "PirateBossTox",
+      "x": 1,
+      "z": 7
+    },
+    {
+      "id": "Human1957294",
+      "def": "Mercenary_Sniper",
+      "x": 4,
+      "z": 27
+    },
+    {
+      "id": "Human1957296",
+      "def": "Mercenary_Sniper",
+      "x": 2,
+      "z": 13
+    },
+    {
+      "id": "Human1957303",
+      "def": "Mercenary_Sniper",
+      "x": 3,
+      "z": 13
+    },
+    {
+      "id": "Human1957310",
+      "def": "Mercenary_EliteTox",
+      "x": 3,
+      "z": 10
+    },
+    {
+      "id": "Human1957319",
+      "def": "Grenadier_Tox",
+      "x": 2,
+      "z": 26
+    }
+  ]
+}

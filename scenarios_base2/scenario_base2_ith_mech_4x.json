@@ -1,0 +1,177 @@
+{
+  "id": "base2_ith_mech_4x",
+  "save": "scenario_base2_ith_mech_4x",
+  "spec": {
+    "id": "base2_ith_mech_4x",
+    "tier": "base",
+    "arena": "arena_col_ithfunda2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        118,
+        165
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 2000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1957080",
+      "name": "Emily Novak",
+      "weapon": "Bolt-action rifle (normal 74%)",
+      "x": 113,
+      "z": 166,
+      "health": 100
+    },
+    {
+      "id": "Human1957082",
+      "name": "Ren Olsen",
+      "weapon": "Autopistol (good)",
+      "x": 114,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957089",
+      "name": "Oleg Anatoliev",
+      "weapon": "Pump shotgun (normal)",
+      "x": 117,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957094",
+      "name": "Chris Draper",
+      "weapon": "Revolver (poor 51%)",
+      "x": 120,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957098",
+      "name": "Orlene 'Lover' O'Brien",
+      "weapon": "Revolver (normal)",
+      "x": 122,
+      "z": 165,
+      "health": 100
+    },
+    {
+      "id": "Human1957103",
+      "name": "Jade Hunter",
+      "weapon": "Machine pistol (normal)",
+      "x": 115,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957109",
+      "name": "Sam 'Dipp' Donivin",
+      "weapon": "Revolver (normal)",
+      "x": 116,
+      "z": 164,
+      "health": 100
+    },
+    {
+      "id": "Human1957113",
+      "name": "James Lamp",
+      "weapon": "Pump shotgun (normal)",
+      "x": 118,
+      "z": 165,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Tesseron1957120",
+      "def": "Mech_Tesseron",
+      "x": 49,
+      "z": 4
+    },
+    {
+      "id": "Mech_Pikeman1957122",
+      "def": "Mech_Pikeman",
+      "x": 49,
+      "z": 4
+    },
+    {
+      "id": "Mech_Tesseron1957124",
+      "def": "Mech_Tesseron",
+      "x": 51,
+      "z": 6
+    },
+    {
+      "id": "Mech_Lancer1957126",
+      "def": "Mech_Lancer",
+      "x": 53,
+      "z": 4
+    },
+    {
+      "id": "Mech_Lancer1957128",
+      "def": "Mech_Lancer",
+      "x": 54,
+      "z": 4
+    },
+    {
+      "id": "Mech_Tesseron1957130",
+      "def": "Mech_Tesseron",
+      "x": 51,
+      "z": 5
+    },
+    {
+      "id": "Mech_Tesseron1957132",
+      "def": "Mech_Tesseron",
+      "x": 51,
+      "z": 4
+    },
+    {
+      "id": "Mech_Tesseron1957134",
+      "def": "Mech_Tesseron",
+      "x": 54,
+      "z": 6
+    },
+    {
+      "id": "Mech_Tesseron1957136",
+      "def": "Mech_Tesseron",
+      "x": 54,
+      "z": 4
+    },
+    {
+      "id": "Mech_Lancer1957138",
+      "def": "Mech_Lancer",
+      "x": 54,
+      "z": 5
+    },
+    {
+      "id": "Mech_Scorcher1957140",
+      "def": "Mech_Scorcher",
+      "x": 54,
+      "z": 6
+    },
+    {
+      "id": "Mech_Scorcher1957142",
+      "def": "Mech_Scorcher",
+      "x": 51,
+      "z": 4
+    },
+    {
+      "id": "Mech_Legionary1957144",
+      "def": "Mech_Legionary",
+      "x": 52,
+      "z": 5
+    },
+    {
+      "id": "Mech_Scorcher1957146",
+      "def": "Mech_Scorcher",
+      "x": 49,
+      "z": 4
+    }
+  ]
+}
