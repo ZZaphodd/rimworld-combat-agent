@@ -10,7 +10,6 @@
     --line: rgba(255, 255, 255, 0.10);
     --text: #e9edf2;
     --muted: #9aa6b2;
-    --ours: #4ea1ff;
     --them: #ff6b5e;
     --good: #5fd38d;
     --warn: #f2c14e;
@@ -21,18 +20,12 @@
   .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
     backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,0.35); }
   #bar { position: absolute; left: 24px; right: 24px; bottom: 20px; height: 128px; display: grid;
-    grid-template-columns: 360px 1fr 300px 420px; gap: 0; }
+    grid-template-columns: 420px 320px 1fr; gap: 0; }
   #bar > div { padding: 14px 20px; border-right: 1px solid var(--line); min-width: 0; }
   #bar > div:last-child { border-right: none; }
   .label { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
   .big { font-size: 26px; font-weight: 650; margin-top: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .sub { font-size: 16px; color: var(--muted); margin-top: 6px; }
-  #ours { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px 14px; margin-top: 8px; }
-  .pawn { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .hp { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.12); margin-top: 3px; overflow: hidden; }
-  .hp > i { display: block; height: 100%; background: var(--ours); }
-  .down .hp > i { background: var(--bad); }
-  .down { color: var(--bad); }
   .count { display: inline-block; margin-right: 18px; }
   .count b { font-size: 30px; font-weight: 700; }
   .them b { color: var(--them); }
@@ -58,10 +51,6 @@
     <div class="label" id="who">—</div>
     <div class="big" id="pid">—</div>
     <div class="sub" id="time">—</div>
-  </div>
-  <div>
-    <div class="label">Ours</div>
-    <div id="ours"></div>
   </div>
   <div>
     <div class="label">Raid</div>
@@ -94,15 +83,12 @@ async function tick() {
     $("who").textContent = who + (st.paused ? " · paused" : "");
     $("pid").textContent = pretty(st.pid);
     $("time").textContent = clock(st.tick || 0);
-    $("ours").innerHTML = (st.ours || []).map(p =>
-      `<div class="pawn ${p.down ? "down" : ""}">${esc(p.n)}${p.down ? " ✕" : ""}` +
-      `<div class="hp"><i style="width:${Math.max(0, Math.min(100, p.hp ?? 0))}%"></i></div></div>`).join("");
     $("standing").textContent = st.them?.standing ?? 0;
     $("downed").textContent = st.them?.downed ?? 0;
     $("msgs").innerHTML = (st.msgs || []).map(m => `<div>${esc(m)}</div>`).join("") || `<div style="color:var(--muted)">—</div>`;
   } else {
     $("who").textContent = "Between battles";
-    $("pid").textContent = "—"; $("time").textContent = ""; $("ours").innerHTML = ""; $("msgs").innerHTML = "";
+    $("pid").textContent = "—"; $("time").textContent = ""; $("msgs").innerHTML = "";
     $("standing").textContent = "0"; $("downed").textContent = "0";
   }
   const rows = st.ladder || [];
