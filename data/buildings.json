@@ -1,0 +1,7658 @@
+{
+ "ActivatorCountdown": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ActivatorProximity": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Altar_Grand": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Altar_Large": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Altar_Medium": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Altar_Small": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientAPC": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientATM": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientAirConditioner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientAmmoStack": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientAntenna": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientArmchair": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientAutocannonTurret": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBandNode": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBarrel": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBarrierLong": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.3,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBasicRecharger": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBathtub": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBed": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBlastDoor": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBox_ComponentIndustrial": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBox_ComponentSpacer": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientBox_SteelSlag": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCardboardBox": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientChembarrel": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientChembarrelPallet": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientChemfuelCanister": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientChemtruck": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientColdStorage": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCommsConsole": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientConcreteBarrier": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCraneArm": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCraneArmSmall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCraneBase": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCraneColumn": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCratePallet": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCryptosleepCasket": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientCryptosleepPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientDestroyedConsole": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientDestroyedConsoleLarge": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientDisplayBank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientDoubleBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientDrillPlatform": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientDropshipEngine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientEmergencyLight_Blue": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientEmergencyLight_Green": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientEmergencyLight_Red": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientEnemyTerminal": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientEquipmentBlocks": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   4,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientExcavator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   3,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientExostriderCannon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientExostriderHead": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientExostriderLeg": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientExostriderRemains": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientExplosivesCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.9,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientFence": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.55,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientFilingCabinet": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientForklift": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientFortifiedWall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientFuelNode": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientGiantWheel": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientGravEngine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientGravReactor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.6,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientHatch": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientHatchExit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientHeatVent": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientHermeticCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientHydrant": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientIndustrialShelf": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientIndustrialTruck": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientJetEngine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientKitchenSink": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLamp": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLamppost": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLargeContainer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLargeCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLargeMechGestator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   4,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLargeRustedEngineBlock": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLockerBank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLockers": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientLongCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMachine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMechDropBeacon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMechGestator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMechGestatorTank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMediumContainer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMegaCannonBarrel": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMegaCannonTripod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMetalCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMicrowave": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMilitaryBarrier": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.3,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMilitaryCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMilitaryGeneratorSmall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMiniWarwalkerRemains": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMiningCharge": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientMortar": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientOpenContainer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   4,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientOperatingTable": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientOven": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPallet_SteelSlag": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPipe": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPipelineSection": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPipes": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPlantPot": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPodCar": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientPostbox": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRazorWire": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRefrigerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedCar": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedCarFrame": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedDropship": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   6,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedEngineBlock": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedJeep": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedMicrowave": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientRustedTruck": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSafe": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSealedContainer": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSealedContainer_GravshipUpgrade": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSealedCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSealedCrate_Gravlite": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSealedCrate_Shells": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSecurityCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSecurityTerminal": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSecurityTurret": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientShelf": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientShipBeacon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientShoppingCart": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientShower": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSimpleResearchBench": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSingleBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSmallContainer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSmallCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSmallShelf": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSmokeVent": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSpacerCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientStandardRecharger": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientStorageCylinder": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientStove": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientSystemRack": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTV": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableBrewery": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableButcher": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableDrugLab": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableMachining": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableSmithingElectric": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableSmithingFueled": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableStoveElectric": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableStoveFueled": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableTailorElectric": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTableTailorHand": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTankTrap": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTerminal": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTerminal_Worshipful": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTerraformer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientToilet": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientToxVent": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientToxifierGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTransportPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTunnelerClaw": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientTunnelerHusk": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.7,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientUplink": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientUraniumSlugTurret": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientVendingMachine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWarspiderRemains": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWarwalkerClaw": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWarwalkerFoot": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWarwalkerLeg": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWarwalkerShell": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWarwalkerTorso": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   4,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWashingMachine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWheel": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWindTurbineBody": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   5,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AncientWoodenCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.1,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnimalBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnimalFlap": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "AnimalSleepingBox": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnimalSleepingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnimalistSlab_Broad": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnimalistSlab_Medium": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnimusStone": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AnticraftBeam": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   9,
+   9
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ArchonexusCore": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   11,
+   11
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ArchotechTower": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Armchair": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "AtmosphericHeater": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.75,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Autobong": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Autodoor": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "BabyDecoration": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BabySleepingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BandNode": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Barricade": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.55,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BasicRecharger": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Battery": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Bed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Bedroll": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BedrollDouble": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BilliardsTable": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BioferriteGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.75,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BioferriteHarvester": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BioferriteShaper": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BiofuelRefinery": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BiosculpterPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Blackboard": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Bookcase": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BookcaseSmall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Brazier": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Brewery": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BroadshieldProjector": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Building_KidOutfitStand": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Building_OutfitStand": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Burnbong": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BurnedTree": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BurningPowerCell": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BurnoutMechlinkBooster": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "BurrowWall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ButcherSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Campfire": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CannibalPlatter": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   2,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CaravanPackingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CaveExit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CerebrexCore": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CerebrexCore_Destroyed": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CerebrexStabilizer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.7,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChemfuelPoweredGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.9,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChemfuelTank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChessTable": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump_Anima": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump_Archean": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump_Gauranlen": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump_Harbinger": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump_Polluted": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChoppedStump_Polux": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChristmasTree": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChunkGranite": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ChunkLimestone": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ChunkMarble": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ChunkMechanoidSlag": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ChunkSandstone": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ChunkSlagSteel": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ChunkSlate": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ChunkVacstone": {
+  "kind": "item",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": true
+ },
+ "ClimateAdjuster": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CocoonLocust": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CocoonMegascarab": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CocoonMegaspider": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CocoonSpelopede": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CollapsedRocks": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "Column": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CommsConsole": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Cooler": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Couch": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CraftingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CraterLarge": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CraterMedium": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CraterSmall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Crib": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "CryptosleepCasket": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DarklightBrazier": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Darktorch": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DarktorchFungus": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DeathrestAccelerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DeathrestCasket": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DeepDrill": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Defoliator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DefoliatorShipPart": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DiningChair": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DirtCubeSculpture": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Door": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "DoubleBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DoubleSleepingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Drape": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Dresser": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DrugLab": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Drum": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DryadCocoon": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "DryadHealingPod": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EMIDynamo": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Effigy": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EggBox": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EggSac": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ElectricCrematorium": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ElectricInhibitor": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ElectricSmelter": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ElectricSmithy": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ElectricStove": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ElectricTailoringBench": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Electroharvester": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EndTable": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EndlessPit2x2c": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EndlessPit3x2c": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "EndlessPit3x3c": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FabricationBench": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Fence": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FenceGate": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "FermentingBarrel": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.45,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FirefoamPopper": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FlatscreenTelevision": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FleshSack": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.75,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Fleshbulb": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Fleshmass": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FleshmassHeart": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.75,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FleshmassSpitter": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.75,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Fleshmass_Active": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FloodLight": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FloorEtching": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FloorEtchingRambling": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FrenzyInducer": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FuelOptimizer": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FueledSmithy": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "FueledStove": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GameOfUrBoard": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GaumakerCocoon": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GaussCannon": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   9,
+   9
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GeneAssembler": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GeneBank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GeneExtractor": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GeneProcessor": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GeothermalGenerator": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GeothermalVent": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GibbetCage": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Gloomlight": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GlowPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GlucosoidPump": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrandArchotechStructure": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   9,
+   9
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrandThrone": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Granite": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "GravAnchor": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GravEngine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GravFieldExtender": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GravcorePowerCell": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Grave": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GravshipHull": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GravshipShieldGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrayBox": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrayDoor": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "GrayStatueDeadlifeDust": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrayStatueTeleporter": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrayWall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GroundPenetratingScanner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "GrowthVat": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HandTailoringBench": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Harp": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Harpsichord": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   2,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Heater": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HemogenAmplifier": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Hemopump": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HiTechResearchBench": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   5,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HiddenConduit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Hive": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HoldingPlatform": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HoldingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HoopstoneRing": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Hopper": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HorseshoesPin": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HospitalBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HunterDroneTrap": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "HydroponicsBasin": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ideogram": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "IncenseShrine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "InfiniteChemreactor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "InsectLairEntrance": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   6,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "KneelPillow": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.05,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "KneelSheet": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.05,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "LargeChemfuelTank": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "LargeMechGestator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   4,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "LargeThruster": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Lectern": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "LifeSupportUnit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "LightBall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Limestone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "LongRangeMineralScanner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Loudspeaker": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MajorArchotechStructure": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MajorArchotechStructureStudiable": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MalfunctioningTransportPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Marble": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MarriageSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechAssembler": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechBooster": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechCapsule": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 1.0,
+  "size": [
+   2,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechDropBeacon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechGestator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechPylon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechRelay": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechRelay_Crashed": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechStabilizer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechanoidDropPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechanoidProcessor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechbandDish": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MechhiveAssembler": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MeditationSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MegascreenTelevision": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MineableComponentsIndustrial": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineableGold": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineableJade": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineableObsidian": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineablePlasteel": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineableSilver": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineableSteel": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MineableUranium": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "MoisturePump": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MorbidSlab_Broad": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MorbidSlab_Medium": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "MultiAnalyzer": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "NatureShrine_Large": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "NatureShrine_Small": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "NerveBundle": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.75,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "NeuralSupercharger": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Noctolith": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "NutrientPasteDispenser": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "OrbitalAncientFortifiedWall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "OrbitalScanner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "OrbitalTradeBeacon": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "OrnateDoor": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   2,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "OxygenPump": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Pallet_Medicine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Pallet_SurvivalMeals": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PartySpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PassengerShuttle": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PassiveCooler": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PenMarker": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Pew": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.35,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Piano": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PilotConsole": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PilotSubpersonaCore": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PitBurrow": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PitGate": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   8,
+   8
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PitGateExit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PlantPot": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PlantPot_Bonsai": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_PebbleCactus": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_RatPalm": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_SaguaroCactus": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_Timbershroom": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeAnima": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeArchean": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeBamboo": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeBirch": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeBonsai": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.01,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeCecropia": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeCocoa": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeCocoa_Wild": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeCypress": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeDrago": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeGauranlen": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeGrayPine": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeHarbinger": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeMaple": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeOak": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreePalm": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreePine": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreePolux": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreePoplar": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeSnagroot": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeTeak": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_TreeWillow": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Plant_Witchwood": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PodLauncher": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PokerTable": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PollutionPump": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PowerConduit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PowerSwitch": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ProximityDetector": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.25,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PsychicDroner": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PsychicDronerShipPart": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PsychicEmanator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PsychicRitualSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PsychicSuppressor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "PsychofluidPump": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Pyre": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "RaisedRocks": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "Reliquary": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "RitualSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "RoyalBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "RubblePile": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "RusticRug_Broad": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "RusticRug_Medium": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SacrificialFlag": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SandCubeSculpture": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Sandbags": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.55,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Sandstone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "SanguphageMeetingTorch": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Sarcophagus": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SchoolDesk": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ScrapCubeSculpture": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SculptureGrand": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SculptureLarge": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SculptureSmall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SculptureTerror": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SealedCrate": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SecurityDoor": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   2,
+   1
+  ],
+  "door": true,
+  "rock": false,
+  "packed": false
+ },
+ "SerumCentrifuge": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShardBeacon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShardInhibitor": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Shelf": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShelfSmall": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShieldGeneratorBullets": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShieldGeneratorMortar": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShipChunk": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShipChunk_Mech": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShipLandingBeacon": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ship_Beam": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ship_ComputerCore": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ship_CryptosleepCasket": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ship_Engine": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ship_Reactor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Ship_SensorCluster": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Shuttle": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShuttleCrashed": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShuttleCrashed_Exitable": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ShuttleCrashed_Exitable_Mechanitor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SignalJammer": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.6,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SimpleResearchBench": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Skullspike": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SlabBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SlabDoubleBed": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Slate": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "SleepAccelerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SleepSuppressor": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SleepingSpot": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmallThruster": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump_Anima": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump_Archean": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump_Gauranlen": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump_Harbinger": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump_Polluted": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmashedStump_Polux": {
+  "kind": "plant",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmokeSpewer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SmoothedGranite": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "SmoothedLimestone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "SmoothedMarble": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "SmoothedSandstone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "SmoothedSlate": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "SmoothedSolidIce": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "SmoothedVacstone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": false
+ },
+ "Snowman": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SolarGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SolidIce": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "Spacedrone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SpikecoreFloorStar_Broad": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SpikecoreFloorStar_Medium": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "StandardRecharger": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "StandingLamp": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Statue": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SteamGeyser": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SteleGrand": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SteleLarge": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "StoneCubeSculpture": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Stool": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "StylingStation": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SubcoreEncoder": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SubcoreRipscanner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SubcoreSoftscanner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SunBlocker": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SunLamp": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "SurveyScanner": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Table1x2c": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Table2x2c": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Table2x4c": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Table3x3c": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TableButcher": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TableMachining": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TableSculpting": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TableStonecutter": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Telescope": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Throne": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ToolCabinet": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TorchLamp": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TorchWallLamp": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.15,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TotemicSlab_Broad": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   4,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TotemicSlab_Medium": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ToxicSpewer": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ToxifierGenerator": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "ToyBox": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.3,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TransportPod": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_AntigrainWarhead": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_Deadlife": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_EMP": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_Firefoam": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_HighExplosive": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_Incendiary": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_Smoke": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapIED_ToxGas": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TrapSpike": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TubeTelevision": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_AncientArmoredTurret": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_AutoChargeBlaster": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_AutoInferno": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_AutoMiniTurret": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_AutoMortar": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_Autocannon": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_FoamTurret": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_MiniTurret": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_Mortar": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_RocketswarmLauncher": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_Sniper": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Turret_TacticalTurret": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TwistedArchotechSupport_Large": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   3,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TwistedArchotechSupport_Small": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   3,
+   4
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "TwistedArchotechSupport_Vertical": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "UnstablePowerCell": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Urn": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VacBarrier": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Vacstone": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": true,
+  "packed": true
+ },
+ "VanometricPowerCell": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.4,
+  "size": [
+   1,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Vent": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VitalsMonitor": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidMonolith": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidMonolithAttachmentBottomLeft": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidMonolithAttachmentBottomRight": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidMonolithAttachmentLeft": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidMonolithAttachmentRight": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidMonolithAttachmentTop": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidNode": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 0.0,
+  "size": [
+   7,
+   7
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidSculpture": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.35,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidStructure": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   5
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidmetalMassLarge": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidmetalMassMedium": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidmetalMassSmall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "VoidmetalWall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "Wall": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WallLamp": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.2,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WarpedObelisk_Abductor": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WarpedObelisk_Duplicator": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WarpedObelisk_Labyrinth": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WarpedObelisk_Mutator": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   3,
+   3
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WaspDroneTrap": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WastepackAtomizer": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   3,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WatermillGenerator": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   5,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WaterproofConduit": {
+  "kind": "building",
+  "pass": "Standable",
+  "fill": 0.0,
+  "size": [
+   1,
+   1
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WeatherController": {
+  "kind": "building",
+  "pass": "Impassable",
+  "fill": 1.0,
+  "size": [
+   6,
+   6
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WindTurbine": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.5,
+  "size": [
+   7,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ },
+ "WoodFiredGenerator": {
+  "kind": "building",
+  "pass": "PassThroughOnly",
+  "fill": 0.9,
+  "size": [
+   2,
+   2
+  ],
+  "door": false,
+  "rock": false,
+  "packed": false
+ }
+}

@@ -1,0 +1,3633 @@
+{
+ "format": 1,
+ "for": "scenarios_base2",
+ "by": "claude",
+ "made": "2026-10-06",
+ "basis": "start information only: the manifests (squad weapons, raid spawn and composition), the v2 save maps (tools/site_plan.py show), results/cases/sites.md and the base cards; picked once, before any turtle_at row",
+ "problems": {
+  "base2_ith_mech_2x": {
+   "site": "Ithfunda east room",
+   "why": "6 Scythers, all fast melee, from the south. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. The plug and both diagonals stop a Scyther from stepping past the plug into the room.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957100": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Susan 'Sooze' Crawford",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1957138": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Sam 'Sammy' Gerador",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957096": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Luke 'Ludo' Horne",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1957080": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Naoko Winters",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957116": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Rin Moreno",
+     "weapon": "Revolver (normal 89%)"
+    },
+    "Human1957124": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Ripley Abbott",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957130": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Hadley 'Hairy' Farley",
+     "weapon": "Revolver (poor)"
+    },
+    "Human1957120": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Shouta Noble",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957134": {
+     "cell": [
+      134,
+      190
+     ],
+     "role": "gun",
+     "name": "Fauna 'Furr' Wells",
+     "weapon": "Autopistol (poor)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_mech_3x": {
+   "site": "Ithfunda east room",
+   "why": "10 Scythers from the south, 7 of us and no knife: two molotov carriers (fire held) and the machine pistol hold the doorway cells as blockers, the three revolvers fire from 2 cells and the bolt-action rifle from 3. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. ",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957093": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Otis Dixon",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1400119": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Hiroko Pittman",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957114": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Viktor Johns",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957080": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Rebecca 'Lynx' Edwards",
+     "weapon": "Revolver (good)"
+    },
+    "Human1957085": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Jonathan 'Jonny' Reyes",
+     "weapon": "Revolver (poor 49%)"
+    },
+    "Human1957089": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Merlin Shepard",
+     "weapon": "Revolver (normal 88%)"
+    },
+    "Human1957120": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Peter 'Pete' Marshall",
+     "weapon": "Bolt-action rifle (normal 82%)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_mech_4x": {
+   "site": "Ithfunda east room",
+   "why": "14 mixed mechs from the south (6 Tesserons, 3 Lancers, 3 Scorchers, a Pikeman, a Legionary): in the yard the Lancers and the Pikeman outrange our pistols and shotguns. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Risk: Scorcher flames at the doorway.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957082": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Ren Olsen",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1957103": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Jade Hunter",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957080": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Emily Novak",
+     "weapon": "Bolt-action rifle (normal 74%)"
+    },
+    "Human1957089": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Oleg Anatoliev",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957113": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "James Lamp",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957094": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Chris Draper",
+     "weapon": "Revolver (poor 51%)"
+    },
+    "Human1957098": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Orlene 'Lover' O'Brien",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957109": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Sam 'Dipp' Donivin",
+     "weapon": "Revolver (normal)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_mech_6x": {
+   "site": "Ithfunda east room",
+   "why": "7 centipedes from the east (3 Burners, 2 Blasters, 2 Gunners): heavy armour against pistols and knives; in the yard they shoot us from range, in the room they must come down the corridor axis. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. ",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957099": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Lada Huffman",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1957123": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Yuna Santos",
+     "weapon": "Steel knife (poor 88%)"
+    },
+    "Human1957080": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Chaz Targrin",
+     "weapon": "Molotov cocktails (93%)",
+     "fire": "hold"
+    },
+    "Human1957112": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Dmitry Mayo",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1957087": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Paul Paulson",
+     "weapon": "Revolver (good)"
+    },
+    "Human1754882": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Bonotti 'Coppis' Coppini",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957118": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Henri 'Man' Wolf",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957125": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Jared 'J Roc' Camirand",
+     "weapon": "Autopistol (poor)"
+    },
+    "Human1957104": {
+     "cell": [
+      134,
+      190
+     ],
+     "role": "gun",
+     "name": "Gabby 'Smelly' Marquez",
+     "weapon": "Frag grenades",
+     "fire": "hold"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_mech_8x": {
+   "site": "Ithfunda east room",
+   "why": "13 mechs from the west (6 centipede Blasters, 2 Lancers, 2 Scythers, a Centurion, an Apocriton, a Militor). Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Nothing else on this map makes the long-range mechs come close.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957081": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Nana Prince",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1957085": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Antonino 'Toni' Cefalu",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957090": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Sarah Craig",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1957111": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Jessica 'Jesse' Hooten",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957100": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Sergio 'Dweeb' Moses",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957106": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Gil Gould",
+     "weapon": "Revolver (poor)"
+    },
+    "Human1957095": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Maia Dodd",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957117": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Frank 'Man' Jackson",
+     "weapon": "Autopistol (good)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_pirate_2x": {
+   "site": "Ithfunda east room",
+   "why": "11 Waster gunners and snipers from the south: they outrange our pistols in the yard. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Claude's v1 play of this rung held this room (repelled 12.3).",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957087": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Sam Edwinson",
+     "weapon": "Frag grenades",
+     "fire": "hold"
+    },
+    "Human1957102": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Aimi Walton",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957111": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Joshua 'Zug' Hamby",
+     "weapon": "Autopistol (good 82%)"
+    },
+    "Human1957093": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Valentina Flowers",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957097": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Alex Ferreira",
+     "weapon": "Heavy SMG (normal 60%)"
+    },
+    "Human1957106": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Alex Leatherman",
+     "weapon": "Revolver (poor 80%)"
+    },
+    "Human1957080": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Antonino 'Toni' Cefalu",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957116": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Sam 'Sammy' Gerador",
+     "weapon": "Autopistol (good)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_pirate_3x": {
+   "site": "Ithfunda east room",
+   "why": "13 Wasters from the south, 10 ranged (snipers, a HeavyTox, the boss) and 3 slashers. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. The knife plugs the doorway against the slashers.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957086": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Manabu Gutierrez",
+     "weapon": "Steel knife (poor 80%)"
+    },
+    "Human1957080": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Greg McDaniel",
+     "weapon": "Incendiary launcher (normal 65%)",
+     "fire": "hold"
+    },
+    "Human1957132": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Darcey Powers",
+     "weapon": "Molotov cocktails (97%)",
+     "fire": "hold"
+    },
+    "Human1957126": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Eric Everson",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957091": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Yuu 'Hakuja' Ito",
+     "weapon": "Revolver (good)"
+    },
+    "Human1957124": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Noah Peck",
+     "weapon": "Revolver (poor 77%)"
+    },
+    "Human1957097": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Jesse 'Jess' Spence",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957138": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "James Lamp",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957103": {
+     "cell": [
+      134,
+      190
+     ],
+     "role": "gun",
+     "name": "Tyler 'Dog' Decker",
+     "weapon": "Machine pistol (poor)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_pirate_4x": {
+   "site": "Ithfunda east room",
+   "why": "19 Wasters from the south, about 15 ranged and 4 melee. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. No knife or thrower: the autopistol and the two bolt-action rifles hold the doorway cells.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957098": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Paul Paulson",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1957110": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Miesha 'Mie' Aldemar",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957121": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Kev 'Minnow' Mize",
+     "weapon": "Bolt-action rifle (normal 70%)"
+    },
+    "Human1957115": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Valentin 'Starry' Atkinson",
+     "weapon": "Pump shotgun (good)"
+    },
+    "Human1957081": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Raph 'Rapha' Ahmbo",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957086": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Daiki Tanner",
+     "weapon": "Revolver (normal 99%)"
+    },
+    "Human1957092": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Selyn Shu",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957106": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Josh 'Siso' Sisson",
+     "weapon": "Revolver (poor 33%)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_pirate_6x": {
+   "site": "Ithfunda east room",
+   "why": "26 Wasters from the south-west edge, mostly ranged, one tox grenadier. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Risk: tox grenades into the packed room.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957127": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Malvina Vulcamite",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1957090": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Kyle 'Hanna' Hannibal",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1957122": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Waldo Downs",
+     "weapon": "Machine pistol (good)"
+    },
+    "Human1957116": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Ludmila Mann",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957080": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Layne Baum",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1957132": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Matthew Browne",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957085": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Gideon McPherson",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957110": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Ban 'Ace' Wynn",
+     "weapon": "Bolt-action rifle (normal)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_pirate_8x": {
+   "site": "Ithfunda east room",
+   "why": "35 Wasters from the east, mostly ranged (8 EliteTox, 8 GunnerTox, 5 HeavyTox), 7 of us. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. ",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human707597": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Lubov Berry",
+     "weapon": "Steel knife (normal)"
+    },
+    "Human1957087": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Nonna Ayers",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957102": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Sam 'Sammy' Gerador",
+     "weapon": "Frag grenades",
+     "fire": "hold"
+    },
+    "Human1957082": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Celia 'Squint' Holloway",
+     "weapon": "Revolver (normal 67%)"
+    },
+    "Human1957089": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Tyler 'Ty' Molacek",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957097": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Lucya Marquez",
+     "weapon": "Bolt-action rifle (normal 90%)"
+    },
+    "Human1957080": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Morrigan 'Morri' Stuart",
+     "weapon": "Machine pistol (normal)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_tribe_2x": {
+   "site": "Ithfunda east room",
+   "why": "10 Neanderthal tribals from the south-west corner, 5 melee and 5 archers. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Claude's v1 play of this rung held this door with melee on the plug and both diagonals (decisive 4.8).",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957119": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Szilard Drake",
+     "weapon": "Steel knife (poor 38%)"
+    },
+    "Human1957092": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Alexander 'Silly' Stones",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957098": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Yuu 'Hakuja' Ito",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1957081": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Sofia Howard",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1957086": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Konnor 'Strange' Cornelius",
+     "weapon": "Revolver (good)"
+    },
+    "Human1957123": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Francesca 'Speedy' Martino",
+     "weapon": "Revolver (awful 39%)"
+    },
+    "Human1957103": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Elena Wiley",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957108": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Ralph 'Humps' Brock",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957113": {
+     "cell": [
+      134,
+      190
+     ],
+     "role": "gun",
+     "name": "Iosif Gillespie",
+     "weapon": "Machine pistol (normal)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_tribe_3x": {
+   "site": "Ithfunda east room",
+   "why": "18 tribals from the south, 15 melee (7 penitents, 3 berserkers). Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Shotguns at 2 cells behind the knife plug.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957119": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Val Solo",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1957080": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "MJ Shen",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1957087": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Esther 'Pepper' Russo",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1957097": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Edouard 'Lumpy' Bautista",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957113": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Boyle Schaefer",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957106": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Kjelt Karlsen",
+     "weapon": "Heavy SMG (poor)"
+    },
+    "Human1957092": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Robert 'Gnugfur' Krondorfer",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1957101": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Binx Diaz",
+     "weapon": "Bolt-action rifle (normal)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_tribe_4x": {
+   "site": "Ithfunda east room",
+   "why": "24 tribals from the west, 22 melee (11 penitents, 6 berserkers). Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. No knife: the weakest guns hold the doorway cells, both shotguns 2 cells back.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957105": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Dennis Richtarski",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1957128": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Elida Watson",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1957098": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Daina Allens",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1957080": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Lucas 'Blackjack' Wakefield",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957138": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Vicky Mercado",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1957120": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Alex Collige",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1957124": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Nina Hull",
+     "weapon": "Revolver (poor 48%)"
+    },
+    "Human1957133": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Lidia Key",
+     "weapon": "Machine pistol (poor 92%)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_tribe_6x": {
+   "site": "Ithfunda east room",
+   "why": "34 tribals from the east, 32 melee (12 berserkers, 12 warriors). Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. Two knives and a frag carrier on the doorway cells.",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957080": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "Elsie Farmer",
+     "weapon": "Steel knife (poor 34%)"
+    },
+    "Human1957104": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Connor Smith",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1957122": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Felix Mellor",
+     "weapon": "Frag grenades",
+     "fire": "hold"
+    },
+    "Human1957127": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Honorio 'Hono' Colipano",
+     "weapon": "Heavy SMG (normal 60%)"
+    },
+    "Human1957099": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Kate Todd",
+     "weapon": "Revolver (good 70%)"
+    },
+    "Human1957108": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "Janik 'Jeyce' Mester",
+     "weapon": "Revolver (excellent)"
+    },
+    "Human1957116": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Paul-Olivier 'Paulo' Bouchard",
+     "weapon": "Machine pistol (normal 84%)"
+    },
+    "Human1957142": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Ursula 'Kuma' Auberon",
+     "weapon": "Machine pistol (normal 88%)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_ith_tribe_8x": {
+   "site": "Ithfunda east room",
+   "why": "46 tribals from the west, 35 melee and 11 archers or hunters. Dead-end room behind one door at the top of a 1-wide corridor (x 133, z 179-186): raiders reach us only through the doorway or along the corridor axis, one at a time, while every gun 2+ cells back covers the doorway. ",
+   "room": [
+    [
+     129,
+     188,
+     137,
+     196
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      133,
+      187
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1957096": {
+     "cell": [
+      133,
+      188
+     ],
+     "role": "front",
+     "name": "William 'Will' Woelk",
+     "weapon": "Incendiary launcher (normal 98%)",
+     "fire": "hold"
+    },
+    "Human1957112": {
+     "cell": [
+      132,
+      188
+     ],
+     "role": "front",
+     "name": "Holly 'Holster' Jessome",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1957085": {
+     "cell": [
+      134,
+      188
+     ],
+     "role": "front",
+     "name": "Jennifer Rich",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1957080": {
+     "cell": [
+      133,
+      189
+     ],
+     "role": "gun",
+     "name": "Beanie 'F' Rebelo",
+     "weapon": "Pump shotgun (normal 88%)"
+    },
+    "Human1957107": {
+     "cell": [
+      132,
+      189
+     ],
+     "role": "gun",
+     "name": "Hernan Nixon",
+     "weapon": "Revolver (poor)"
+    },
+    "Human1957101": {
+     "cell": [
+      134,
+      189
+     ],
+     "role": "gun",
+     "name": "April 'App' Martin",
+     "weapon": "Bolt-action rifle (normal 62%)"
+    },
+    "Human1957118": {
+     "cell": [
+      133,
+      190
+     ],
+     "role": "gun",
+     "name": "Kane Wilkins",
+     "weapon": "Bolt-action rifle (poor)"
+    },
+    "Human1957116": {
+     "cell": [
+      132,
+      190
+     ],
+     "role": "gun",
+     "name": "Lexi Shea",
+     "weapon": "Machine pistol (normal 60%)"
+    },
+    "Human1957092": {
+     "cell": [
+      134,
+      190
+     ],
+     "role": "gun",
+     "name": "QiLing 'Lingmei' Feng",
+     "weapon": "Autopistol (poor)"
+    }
+   },
+   "rear": [
+    [
+     137,
+     195
+    ],
+    [
+     137,
+     196
+    ],
+    [
+     129,
+     196
+    ],
+    [
+     130,
+     196
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_mech_2x": {
+   "site": "Monler R2",
+   "why": "22 Militors (light ranged) from the north. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267256": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Matthew 'Watcher' Potter",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1267202": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Hans 'L' Lambda",
+     "weapon": "Autopistol (poor)"
+    },
+    "Human1267219": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Ang 'Codex' Gao",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267241": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Luca 'Luke' D'Amato",
+     "weapon": "Pump shotgun (poor)"
+    },
+    "Human1267208": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Semyon Carbogite",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267251": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Sam 'Sammy' Gerador",
+     "weapon": "Revolver (poor)"
+    },
+    "Human1267214": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Alyona Sullivan",
+     "weapon": "Machine pistol (normal 81%)"
+    },
+    "Human1267226": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Mia 'Valkyrie' Hawke",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267246": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Metroa Hermerez",
+     "weapon": "Autopistol (normal 62%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_mech_3x": {
+   "site": "Monler R2",
+   "why": "11 mechs from the north-east (3 Pikemen, 3 Lancers, 2 Cyclops, 2 Tesserons, a Scorcher): the long-range ones would shoot us in the yard. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267207": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Briege 'Beach' Loughran",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267242": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Loreen Paradies",
+     "weapon": "Autopistol (awful)"
+    },
+    "Human1267232": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Kaori Rodriguez",
+     "weapon": "Machine pistol (normal 85%)"
+    },
+    "Human1267202": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Rodion Jimenez",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267213": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Rhaemir 'Rhae' Moryn",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human625730": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Darya Rowland",
+     "weapon": "Pump shotgun (good)"
+    },
+    "Human1267218": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Penny House",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1267223": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Valery Touvel",
+     "weapon": "Revolver (poor 85%)"
+    },
+    "Human1267227": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Vance McGrath",
+     "weapon": "Bolt-action rifle (normal)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_mech_4x": {
+   "site": "Monler R2",
+   "why": "13 Scythers from the north, fast melee. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. Two knives and an autopistol on the doorway cells.",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267238": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Vonriel 'Von' Vimes",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1267257": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Yu 'LuoQianYu' Luo",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1267230": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Yuntian 'Yun' Li",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267243": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Lieven 'Jago' Peeraer",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267262": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Selintha 'Sel' Silvertome",
+     "weapon": "Revolver (poor)"
+    },
+    "Human1267267": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Zlata Henderson",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267202": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Icarus 'Perseus' Richardson",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267272": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Inna Dunlap",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267208": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Midori Zeovein",
+     "weapon": "Machine pistol (good)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_mech_8x": {
+   "site": "Monler R2",
+   "why": "20 mechs from the east (15 Lancers, 3 Tesserons, a Diabolus, a Legionary). Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267240": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Henriette 'Happy' Jacobson",
+     "weapon": "Frag grenades",
+     "fire": "hold"
+    },
+    "Human1267202": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Daniel 'Dan' Dempster",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1267206": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Cathryn Trobert",
+     "weapon": "Autopistol (normal 84%)"
+    },
+    "Human1267216": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Kjelt Karlsen",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267229": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Keisuke Meadows",
+     "weapon": "Revolver (poor 31%)"
+    },
+    "Human1267246": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Iggy Fowler",
+     "weapon": "Revolver (poor)"
+    },
+    "Human1267211": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Greg Gilmore",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267222": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Paul-Olivier 'Paulo' Bouchard",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267235": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Lexa 'LF' Fantom",
+     "weapon": "Autopistol (poor)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_pirate_2x": {
+   "site": "Monler R2",
+   "why": "11 pirates from the north (4 snipers, 4 gunners, a frag grenadier). Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267208": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Paola 'Pepper' Sutton",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267226": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Arshes Ludenval",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1267254": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Crink Frey",
+     "weapon": "Autopistol (poor 38%)"
+    },
+    "Human1267247": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Kelly Kim",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1267237": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Rodrigo 'Rodri' Rubin",
+     "weapon": "Revolver (poor 47%)"
+    },
+    "Human1267242": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Susanne 'Catlady' Bogen",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267202": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Ashe 'Rose' Osiria",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267215": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Debby Anderson",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267220": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Greg Burch",
+     "weapon": "Machine pistol (normal)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_pirate_3x": {
+   "site": "Monler R2",
+   "why": "13 pirates from the east, all ranged (boss, 2 elites, 3 snipers, a heavy). Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. No knife or thrower: the machine pistol and two revolvers hold the doorway cells.",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267255": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Wanda Bender",
+     "weapon": "Machine pistol (poor)"
+    },
+    "Human1267215": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Peter 'Pete' Marshall",
+     "weapon": "Revolver (good)"
+    },
+    "Human1267242": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Hiroto Decadrite",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267231": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Jonathan 'John' Medcalf",
+     "weapon": "Pump shotgun (normal 70%)"
+    },
+    "Human314001": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Sharrone 'Shar' Jussil",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267204": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Harvey Rivers",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1267209": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Richard Stevens",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1267249": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Genevieve 'Maverick' Sampson",
+     "weapon": "Revolver (normal 68%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_pirate_4x": {
+   "site": "Monler R2",
+   "why": "15 pirates from the north: 11 heavies, 3 frag grenadiers and the boss. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. Risk: frags into the packed room.",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267230": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Erane 'Kitty' Wolves",
+     "weapon": "Steel knife (poor 29%)"
+    },
+    "Human1267224": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Lucya Shaw",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1267235": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Erik 'Nytro' Nystrom",
+     "weapon": "Autopistol (excellent)"
+    },
+    "Human1267209": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Cosme 'Lady' Carson",
+     "weapon": "Pump shotgun (good)"
+    },
+    "Human1267252": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Solveig 'Solange' Harrison",
+     "weapon": "Revolver (poor 42%)"
+    },
+    "Human1267257": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Tempest 'Kat' Venesare",
+     "weapon": "Revolver (poor 87%)"
+    },
+    "Human1267204": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Julian Ison",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267242": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Kai Leister",
+     "weapon": "Machine pistol (poor)"
+    },
+    "Human1267247": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Joshua 'Zug' Hamby",
+     "weapon": "Autopistol (poor 67%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_pirate_6x": {
+   "site": "Monler R2",
+   "why": "28 pirates from the west, about 24 ranged and 4 melee, a frag grenadier. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267250": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Willow Terra",
+     "weapon": "Incendiary launcher (normal 90%)",
+     "fire": "hold"
+    },
+    "Human1267260": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Kieri Sovara",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267255": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Thomas Merlicek",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267202": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Rutana Blades",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267216": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Eric Egan",
+     "weapon": "Pump shotgun (normal 90%)"
+    },
+    "Human1267244": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Stewart 'Willy' Wilson",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1267212": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Danny 'Dan' Zitro",
+     "weapon": "Revolver (poor 95%)"
+    },
+    "Human1267207": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Adam Melvin",
+     "weapon": "Bolt-action rifle (normal)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_pirate_8x": {
+   "site": "Monler R2",
+   "why": "30 pirates from the north, 25 ranged (12 elites) and 5 melee. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267214": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Halley Orion",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1267207": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Sam 'Sammy' Gerador",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267239": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Juliano 'Jay' Teixeira",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267202": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Drew 'Strapping' Logan",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267220": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Beau Bear",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267229": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "John 'Blitz' Kriegsler",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human622597": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Oskar Potocki",
+     "weapon": "Machine pistol (poor)"
+    },
+    "Human1267234": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Rebecca 'Lynx' Edwards",
+     "weapon": "Machine pistol (normal 73%)"
+    },
+    "Human1267244": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Carlotta 'Madam' Sanford",
+     "weapon": "Autopistol (poor 66%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_tribe_2x": {
+   "site": "Monler R2",
+   "why": "17 tribals from the north, 7 melee and 10 archers or hunters. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. Two knives and an autopistol on the doorway cells, three shotguns 2 cells back.",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267202": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Zhaoxiang Luo",
+     "weapon": "Steel knife (poor 59%)"
+    },
+    "Human1267220": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Ayaka Gratite",
+     "weapon": "Steel knife (poor 95%)"
+    },
+    "Human1267238": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Noah Betzen",
+     "weapon": "Autopistol (poor)"
+    },
+    "Human1267228": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Finn Collier",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267233": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Emre Pamuk",
+     "weapon": "Pump shotgun (poor)"
+    },
+    "Human1267250": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Sam 'Sammy' Gerador",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267207": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Luke Geeman",
+     "weapon": "Revolver (good)"
+    },
+    "Human1267244": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Carys Fluovein",
+     "weapon": "Revolver (normal)"
+    },
+    "Human1267215": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "David Dulude",
+     "weapon": "Bolt-action rifle (normal 85%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_tribe_3x": {
+   "site": "Monler R2",
+   "why": "25 tribals from the east, 18 archers or hunters and 7 melee: the user's attempt-2 layout on this site (v1, repelled 1.9). Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267242": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Hadley Sellachite",
+     "weapon": "Steel knife (poor)"
+    },
+    "Human1267226": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Tassilo Manges",
+     "weapon": "Autopistol (excellent)"
+    },
+    "Human1267202": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Jarod 'Docky' Duesing",
+     "weapon": "Bolt-action rifle (normal 72%)"
+    },
+    "Human1267212": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Yefim Peck",
+     "weapon": "Pump shotgun (poor)"
+    },
+    "Human1267219": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Tyrone 'Bobo' Hancock",
+     "weapon": "Pump shotgun (normal 94%)"
+    },
+    "Human1267238": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Chris Brewer",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267207": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "George Crouch",
+     "weapon": "Heavy SMG (good)"
+    },
+    "Human1267234": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Penelope Matthews",
+     "weapon": "Revolver (awful 37%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_tribe_4x": {
+   "site": "Monler R2",
+   "why": "38 melee tribals from the west (14 penitents, 12 berserkers, 11 warriors), 7 of us. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267217": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Erik 'Nytro' Nystrom",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267202": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Chiyo Dianate",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267220": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Jordan Jaeger",
+     "weapon": "Bolt-action rifle (normal)"
+    },
+    "Human1267207": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Joseph 'Kell' Kelliran",
+     "weapon": "Pump shotgun (normal)"
+    },
+    "Human1267212": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Evelyn 'Eva' Hale",
+     "weapon": "Pump shotgun (poor 83%)"
+    },
+    "Human1267226": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Elliott Muscorock",
+     "weapon": "Bolt-action rifle (poor 90%)"
+    },
+    "Human1267232": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Matthew 'Cynapse' Ritchie",
+     "weapon": "Bolt-action rifle (normal 83%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_tribe_6x": {
+   "site": "Monler R2",
+   "why": "50 archers and hunters from the north: in the yard their bows outnumber our guns; here they must come down the passage to see us. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human1267248": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Daniel 'Danielos' Kania",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1267254": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Stanislav 'Philly' Edwards",
+     "weapon": "Molotov cocktails",
+     "fire": "hold"
+    },
+    "Human1267202": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Yoko Snyder",
+     "weapon": "Autopistol (good)"
+    },
+    "Human1267220": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Kiyoshi Moses",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human1267230": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Malvina Vasquez",
+     "weapon": "Heavy SMG (normal)"
+    },
+    "Human245718": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Georgette Randall",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267242": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Lexi Gilbert",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267225": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Simon 'Last' Sikyotis",
+     "weapon": "Autopistol (poor 46%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  },
+  "base2_mon_tribe_8x": {
+   "site": "Monler R2",
+   "why": "66 archers and hunters from the north-east. Room behind the door (145,84) at the end of the straight passage x 145, its doors (145,86) and (145,94) held open as in the user's attempt 2 (v1 tribe 3x, repelled 1.9): raiders come down a 1-wide passage onto the doorway; the guns on the axis see up it. ",
+   "room": [
+    [
+     141,
+     75,
+     149,
+     83
+    ]
+   ],
+   "doors": [
+    {
+     "at": [
+      145,
+      84
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      86
+     ],
+     "hold_open": true
+    },
+    {
+     "at": [
+      145,
+      94
+     ],
+     "hold_open": true
+    }
+   ],
+   "cells": {
+    "Human314100": {
+     "cell": [
+      145,
+      83
+     ],
+     "role": "front",
+     "name": "Milo Patton",
+     "weapon": "Steel knife (normal 96%)"
+    },
+    "Human1267240": {
+     "cell": [
+      144,
+      83
+     ],
+     "role": "front",
+     "name": "Scott Nelson",
+     "weapon": "Incendiary launcher (normal)",
+     "fire": "hold"
+    },
+    "Human1267202": {
+     "cell": [
+      146,
+      83
+     ],
+     "role": "front",
+     "name": "Cory 'Stomp' Gustafson",
+     "weapon": "Autopistol (normal)"
+    },
+    "Human1267232": {
+     "cell": [
+      145,
+      82
+     ],
+     "role": "gun",
+     "name": "Anya Velazquez",
+     "weapon": "Revolver (good)"
+    },
+    "Human1267221": {
+     "cell": [
+      144,
+      82
+     ],
+     "role": "gun",
+     "name": "Lucia Sanders",
+     "weapon": "Bolt-action rifle (normal 76%)"
+    },
+    "Human1267227": {
+     "cell": [
+      146,
+      82
+     ],
+     "role": "gun",
+     "name": "Brittni 'Brit' Moffatt",
+     "weapon": "Machine pistol (normal)"
+    },
+    "Human1267245": {
+     "cell": [
+      145,
+      81
+     ],
+     "role": "gun",
+     "name": "Leland 'Pants' Marmon",
+     "weapon": "Machine pistol (normal 82%)"
+    },
+    "Human1267208": {
+     "cell": [
+      144,
+      81
+     ],
+     "role": "gun",
+     "name": "Haruto Adaphite",
+     "weapon": "Autopistol (poor 91%)"
+    },
+    "Human1267212": {
+     "cell": [
+      146,
+      81
+     ],
+     "role": "gun",
+     "name": "Ivan 'Diesel' Sergeev",
+     "weapon": "Autopistol (normal 78%)"
+    }
+   },
+   "rear": [
+    [
+     149,
+     75
+    ],
+    [
+     141,
+     75
+    ],
+    [
+     143,
+     76
+    ],
+    [
+     147,
+     76
+    ]
+   ],
+   "notes": "doors not listed stay as saved (closed); front = plug and the doorway's diagonals (knives, then throwers with fire held, then the weakest guns); the best guns on the corridor axis 2 cells back"
+  }
+ }
+}

@@ -10,6 +10,9 @@ Xenotypes (2026-10-06): a raid pays a pawn's combatPower times its xenotype's co
 faction's expected factor from its xenotypeSet chances (weights; a set summing below 1 leaves the
 rest to baseliners at 1; no set: 1). RimMolt does not expose a raider's xenotype.
 
+Buildings (2026-10-06): data/buildings.json holds each building def's passability, fill,
+size and door/rock flags, so a base map can be read from a save without the game.
+
 Weapon ranges (LESSONS bug 3): the first verb with a <range> of every concrete
 weapon ThingDef (parent chain reaches BaseWeapon, or it has weaponTags), with
 ParentName inheritance; weaponTags lists are appended along the chain as the
@@ -25,6 +28,7 @@ DATA = Path(__file__).resolve().parents[2] / "data"
 TABLE = DATA / "combat_power.json"
 RANGES = DATA / "weapon_ranges.json"
 XENOS = DATA / "xenotypes.json"
+BUILDINGS = DATA / "buildings.json"
 
 
 def _all_nodes(data_dir, tags=None):
@@ -172,8 +176,52 @@ def extract_xenotypes(game=GAME):
     return {"xenotype": dict(sorted(xeno.items())), "faction": dict(sorted(faction.items()))}
 
 
+def extract_buildings(game=GAME):
+    """{defName: {kind, pass, fill, size, door, rock, packed}} for maps read from a save without
+    the game (rca.game.savemap): every concrete Building ThingDef, every save-compressible one
+    (natural rock, stone chunks) and every plant or item a pawn cannot stand on (trees, chunks).
+    kind is the category (building, item, plant); passability is Standable, PassThroughOnly or
+    Impassable; fillPercent (the game's line of sight stops at a building filled >= 0.99 and at a
+    closed door); size [x, z]; door (a Building_Door class); rock (mineable natural rock or its
+    smoothed wall); packed (saveCompressible: stored in the compressed thing grid by short hash)."""
+    things = _Chain(_all_nodes(Path(game) / "Data", lambda t: t == "ThingDef"))
+    out = {}
+    for n in things.nodes:
+        name = n.findtext("defName")
+        if not name or n.get("Abstract", "").lower() == "true":
+            continue
+        cat = things.text(n, "category") or ""
+        packed = (things.text(n, "saveCompressible") or "").lower() == "true"
+        passing = things.text(n, "passability") or "Standable"
+        if cat != "Building" and not packed and not (cat in ("Plant", "Item") and passing != "Standable"):
+            continue
+        size = (things.text(n, "size") or "(1,1)").strip("() ").split(",")
+        cls = things.text(n, "thingClass") or ""
+        out[name] = {"kind": cat.lower(), "pass": passing,
+                     "fill": _num(things.text(n, "fillPercent")) or 0.0,
+                     "size": [int(size[0]), int(size[1])] if len(size) == 2 else [1, 1],
+                     "door": "Door" in cls,
+                     "rock": cls == "Mineable" or (things.text(n, "building/isNaturalRock") or "").lower() == "true",
+                     "packed": packed}
+    return dict(sorted(out.items()))
+
+
 _cache = None
 _xenos = None
+_buildings = None
+
+
+def buildings():
+    """data/buildings.json (rca.game.savemap's def table), loaded once."""
+    global _buildings
+    if _buildings is None:
+        _buildings = json.loads(BUILDINGS.read_text()) if BUILDINGS.exists() else {}
+    return _buildings
+
+
+def building(def_name):
+    """One def's entry from data/buildings.json, or None."""
+    return buildings().get(def_name)
 
 
 def xenotype_factor(xenotype=None, faction=None):

@@ -69,7 +69,7 @@
     <div id="msgs"></div>
   </div>
   <div>
-    <div class="label">Base ladder v2 · turtle</div>
+    <div class="label" id="ladderLabel">Base ladder v2 · turtle</div>
     <table id="rows"></table>
   </div>
 </div>
@@ -112,6 +112,7 @@ async function tick() {
     $("pid").textContent = "—"; $("time").textContent = ""; $("msgs").innerHTML = "";
     drawPower(null);
   }
+  $("ladderLabel").textContent = `Base ladder v2 · ${st.ladder_agent || "turtle"}`;
   const rows = st.ladder || [];
   $("rows").innerHTML = (rows.length ? rows.slice(-4) : []).map(r =>
     `<tr><td>${esc(pretty(r.id))}</td><td class="g-${esc(r.grade)}">${esc(r.grade)} ${r.badness ?? ""}</td></tr>`).join("") ||
