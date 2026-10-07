@@ -27,11 +27,12 @@ pack, bolt-action rifle, incendiary launcher), 500 pt · raid 28 Pirate (6×: 30
   downed by t3206 before any contact (not seen how).
 - **t6674–7065** `melee-lock`: Ross and Carboturf (Elites) walked through the doorway to (145, 83);
   the two adjacent pawns meleed, the rest fired; each down within ~60–90 ticks.
-- **t11148–11458** `top-threat` `fire`: Codex stood in the inner door (145, 86), which sees four of the
-  cells; Egan downed; Willow's incendiary shot downed Codex and lit (145, 86–87).
+- **t11088–11458** `top-threat` `fire`: Codex stood in the inner door (145, 86), which sees four of the
+  cells; fires appeared at once on (144, 78–82) and (145, 84–85) (Hellcat rifle mini-burner); Egan
+  downed; Willow's incendiary shot downed Codex.
 - **t11610–13216**: Smog, Wan and Vas came into the room (Vas past the line); all down. Kieri downed on
   (144, 80), a cell seen from (145, 87). **t13165 the raid fled** (9 killed + 5 inferred of 28).
-- **t13817–20524** `fire`: the fire spread into R2 (superheated air): Willy and Dan downed by heat;
+- **t13817–20524** `fire`: the fire in R2 spread (superheated air): Willy and Dan downed by heat;
   carrying out stalled (Drop before arrival, Go here before pickup, Rescue routed through R2).
   After the row ended, two more went down in the heat.
 
