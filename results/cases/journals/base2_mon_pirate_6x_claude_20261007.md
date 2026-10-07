@@ -40,9 +40,13 @@ Two more raiders down at the doorway; Egan 68 %. The raid went back to the yard 
 saw: Egan 51 % (a sniper gunshot in the foot, pain 77 %); Codex (boss, Hellcat) standing in the inner
 door (145, 86), which sees Egan's, Rutana's, Kieri's and Willow's cells. chose: Egan back to (149, 76).
 followed: Egan downed on his cell (t11215) before he moved.
-### t11215–11458 `fire`
-chose: Willow's incendiary launcher at Codex in the inner door (explicit Fire at). followed: Codex down;
-the shot started a fire at (145, 86–87).
+### t11088–11458 `fire`
+t11088 (trace): fires appeared at once on (144, 78–82) and (145, 84–85) while Codex (Hellcat rifle)
+stood in the inner door (145, 86) — the Hellcat rifle carries a mini-burner with two flame blasts
+(Anomaly `Gun_HellcatRifle`); Egan had burns by t11148. chose (t11215): Willow's incendiary launcher
+at Codex in the inner door (explicit Fire at). followed: Codex down by t11458.
+*(Corrected 2026-10-07: this journal first said our incendiary shot started the R2 fire; the trace
+shows the fire 130 ticks before the shot.)*
 ### t11610–12000
 Smog (gunner) walked in to (145, 83): Rutana and Willow meleed, down by t12000. Kieri downed on (144, 80)
 by Wan from (145, 87): (144, 80) is one of the few room cells seen from the passage. The low shield was
@@ -53,8 +57,7 @@ Willow carried Egan, Dan carried Kieri to the back (149, 76–77); both then cra
 Vas (sniper) walked into the room past the line to (146, 80), Wan to (145, 83); meleed and shot down.
 Willy 44 %. **t13165 "Pirates from The Gray Vipers are fleeing."** 9 killed + 5 inferred of 28 by the end.
 ### t13817–20524 `fire` after the raid broke
-Willow and Dan tended the downed. The fire from the incendiary spread into R2 (fires at (142–145,
-76–87)): "being burned by superheated air", heatstroke and burns on everyone in R2; Willy (t ~17000)
+Willow and Dan tended the downed. The fire in R2 kept spreading (fires at (142–145, 76–87)): "being burned by superheated air", heatstroke and burns on everyone in R2; Willy (t ~17000)
 and Dan (~t20000) downed. Carrying out to R3 (through the east door (150, 79)):
 - a Drop given before arrival left two downed in R2;
 - a Go here given before pickup cancelled a carry;
@@ -70,8 +73,8 @@ After the end (not in the row): Willow and Merlicek went down in R2's heat while
   Vas past the line); adjacent pawns meleed, the rest shot.
 - Downs of ours: Egan (sniper in the foot, then shot from the inner door), Kieri (a passage-visible
   cell), then two to heat after the fire.
-- The fire came from our incendiary shot, as the heat in turtle_at's run of this problem came from a
-  fire in R2.
+- The fire in R2 started with Codex's Hellcat flame blast from the inner door (t11088); turtle_at's
+  run of this problem also ended with two of ours burned by superheated air in R2.
 
 ## New tags / sites (for the user to look at)
 - tag `off-axis-hold` *(new, 2026-10-07)*: inside a room behind an open door, every pawn on a cell

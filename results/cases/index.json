@@ -1,5 +1,70 @@
 [
  {
+  "title": "base2_mon_pirate_3x · civil outlanders ×8 vs 13 pirates (boss + Elites with Hellcats, snipers, rockets) · Monler base v2 — repelled",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-outranges",
+   "us-low-skill"
+  ],
+  "plays": [
+   "off-axis-hold",
+   "melee-lock",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "concave at the spawn in the yard",
+    "result": "defeat: squad down",
+    "lost": "4 (2 dead, 2 kidnapped)",
+    "badness": "87.5"
+   },
+   {
+    "who": "agent `turtle_at` (plan base2_r1)",
+    "play": "R2 door hold on the passage axis",
+    "result": "defeat: squad down",
+    "lost": "4",
+    "badness": "90.4"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "off-axis hold, John and Pete (melee 16, 20) on the doorway diagonals",
+    "result": "**repelled** (fled t10725)",
+    "lost": "0 (0 downed)",
+    "badness": "**4.5**"
+   }
+  ],
+  "id": "base2_mon_pirate_3x",
+  "sites": [
+   "Monler R2"
+  ],
+  "arena": "arena_col_monler2",
+  "ours": "OutlanderCivil",
+  "raid": "Pirate",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "support": 2,
+    "short": 6
+   },
+   "enemy_n": 13,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
+   "count_ratio": 0.62,
+   "distance": 134.1,
+   "squad_range_median": 22.9,
+   "mech": false
+  }
+ },
+ {
   "title": "base2_mon_pirate_6x · civil outlanders ×8 vs 28 pirates (Elites, snipers, Doomsday) · Monler base v2 — repelled",
   "situation": [
    "base-arena",
