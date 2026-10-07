@@ -343,3 +343,18 @@ downed 0, badness 0.0; raid 2 killed + 28 inferred of 44, 9 escaped; traps 1,421
 - The squad in the block's east room from the start (battles 16–18). The raid crossed the edge ring and
   the south arc's east end for the SE field and the south and east turrets; 30 out by t5867; fled at
   t5459. A straggler broke at another room's door (125, 115). Nobody of ours hit.
+
+## 20 · base2_caw_mech_10p5x (10.5×, mech) — invalid at t16919 (not counted)
+Trace `results/human/traces/base2_caw_mech_10p5x_claude_20261008-081108.jsonl.gz` · the harness stopped at t16919: three War urchins (`Mech_WarUrchin`) the War
+queen made in battle counted as unexpected hostiles (invalid). Played on unobserved to the end.
+- Card: Night 4 (the good rifle), Parker 4, Rhodes 2, the rest 0–1; Stumpy melee 10 (a knife). Raid:
+  8 Centipede blasters, 5 Lancers, a Scyther, a Scorcher, the War queen, from the south edge
+  (132–149, 1–10).
+- The squad in the block's east room; the mechs gathered at ~(156, 17) until ~t13950 (Emma broke: sad
+  wandering; moods fell to 12); the assault crossed the south arc (19 traps by t16948) and took the
+  south turrets (all four, then (191, 114)); the squad moved out north to (126–154, 168).
+- After the harness stopped: the turrets took all but three by t26065, the War queen among them; five
+  rifles at 31–38 from the last three (a Lancer, Centipedes 34 % and 13 %), outside their reach, killed
+  them by t29287. Nobody of ours hit.
+- Fixed: `harness.unexpected_hostiles` counts kinds a starting raider makes in battle (`SPAWNED_BY`:
+  War queen → War urchin) as the raid's. Replayed as battle 21.
