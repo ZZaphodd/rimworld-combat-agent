@@ -175,3 +175,25 @@ Trace `results/human/traces/base2_caw_mech_6x_claude_20261008-060756.jsonl.gz` �
   t21435. Stomp and Rosa broke (wandering) during this.
 - Observed: stepping back every 30 ticks at 6 cells kept interrupting the rifles' aim (2,500 ticks on
   a 24 % Centipede); with 8-cell steps it fell in ~1,000.
+
+## 10 · base2_caw_tribe_6p5x (6.5×, tribe)
+Trace `results/human/traces/base2_caw_tribe_6p5x_claude_20261008-061949.jsonl.gz` · result **repelled**
+(fled t4008, cleared t9780), lost 1 (Prokop), downed 2 (Flebe, Trofim), badness 26.0; raid 6 killed +
+27 inferred of 61, 25 escaped; traps 1,421 → 1,355.
+- Card: Lissa 18 (a revolver), Linder 10/11, Furr 8 (a revolver), Flebe 6, the rest 2–4. Raid: 61 tribal
+  melee (22 warriors, 19 berserkers, 19 penitents, the chief) from the SW corner (2–17, 1–10).
+- Loadout: rifles to Lissa and Furr (from Prokop and Zach).
+- Plan: no raider could shoot, so a zigzag across the south arc: the group (2–3 apart) north of the
+  arc at (120, 66); when a standing raider came within 22, cross to the other side 20 cells along.
+- t0–1370: the raid wrecked the SW field and went north past the SW patch toward the turret (88, 98)
+  (21 traps by t1373).
+- t1370–1840: the rifles fired from z 66 as the raid came within 37; 15 out by t1841 (31 traps).
+- t1841–3307: the controller ordered a crossing every 20 ticks while the leading raider stayed within
+  22, reversing at the band's ends, so the group turned back and forth inside the band (x 116–129,
+  z 54–57) instead of crossing; the leaders closed from 21 to 1 cell; 26 of 61 out by t3307 (48 traps).
+- t3307–4255: six raiders on the group in the band; stood and shot point blank at the one on the
+  weakest pawn; Prokop dead, Flebe and Trofim down; the six out by t4255. The raid had begun to flee at
+  ~t3423 and fled at t4008; the main body was at the small building north (126, 100).
+- t4255–5160: Flebe and Trofim carried east to (150, 62), out of the flight path south.
+- Observed: the crossing order was re-sent before the group had moved; the trigger needs to wait for
+  the group to arrive.
