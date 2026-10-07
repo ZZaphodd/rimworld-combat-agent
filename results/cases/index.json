@@ -1,5 +1,74 @@
 [
  {
+  "title": "base2_mon_pirate_6x · civil outlanders ×8 vs 28 pirates (Elites, snipers, Doomsday) · Monler base v2 — repelled",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-outranges",
+   "us-low-skill"
+  ],
+  "plays": [
+   "off-axis-hold",
+   "melee-lock",
+   "carry-downed",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "concave at the spawn in the yard",
+    "result": "defeat: raid left with captives (t11737)",
+    "lost": "1 dead, 5 kidnapped, 2 downed",
+    "badness": "119.6"
+   },
+   {
+    "who": "agent `turtle_at` (plan base2_r1)",
+    "play": "R2 door hold on the passage axis (plug, guns 2 back)",
+    "result": "defeat: raid left with captives (t17535); two burned by superheated air",
+    "lost": "4 dead, 3 kidnapped, 1 downed",
+    "badness": "113.3"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "off-axis hold in R2, doors as the user's attempt 2, nobody on x 145",
+    "result": "**repelled** (fled t13165, cleared t20524)",
+    "lost": "0 (4 downed at the end)",
+    "badness": "**24.9**"
+   }
+  ],
+  "id": "base2_mon_pirate_6x",
+  "sites": [
+   "Monler R2"
+  ],
+  "arena": "arena_col_monler2",
+  "ours": "OutlanderCivil",
+  "raid": "Pirate",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 5,
+    "long": 1,
+    "support": 1,
+    "explosive": 1
+   },
+   "enemy_n": 28,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
+   "count_ratio": 0.29,
+   "distance": 120.0,
+   "squad_range_median": 23.4,
+   "mech": false
+  }
+ },
+ {
   "title": "base_ith_pirate_2x · civil outlanders ×8 (guns + 3 throwers) vs 25 Waster melee · Ithfunda base — repelled",
   "situation": [
    "base-arena",

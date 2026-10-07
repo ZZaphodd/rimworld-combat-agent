@@ -81,6 +81,7 @@ A scene lists both for that moment.
 | `cover-path-start` *(new, 2026-10-05)* | leave cover for the marks when the walk to the raid's shooters, counting only the cells their guns can see (cells behind cover are free), is at its shortest, for the groups on both sides at once (the user's rand_023: if the raid hugs one side of the cover, the group going round the other side has a long way) |
 | `carry-downed` | carry our downed along / inside |
 | `furniture-cleared` *(new, 2026-10-06)* | benches and furniture in the held room uninstalled before the raid comes so more guns fit near the door (the user's rule for base arenas; base_mon_tribe_3x) |
+| `off-axis-hold` *(new, 2026-10-07)* | inside a room behind an open door, every pawn on a cell that sees the doorway but not the approach corridor (save-map line of sight); raiders with long guns have to step into the doorway or the room to shoot (base2_mon_pirate_6x) |
 | `area-frags` *(new, 2026-10-06)* | a frag thrower on an "attack area" order keeps throwing at that area: the user's base_mon_tribe_3x: frags up the passage toward the outer door, held open so they would reach the raiders outside (the user); the furthest sightings (145–146, 94–96); most raiders nearby stood at z 98–105 |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
