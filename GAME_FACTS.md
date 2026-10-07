@@ -183,6 +183,7 @@ Scorcher/Diabolus explosive, WarUrchin/Militor short, Tesseron/Legionary medium.
 | Explosives | Splash ignores the safe radius (grenades, incendiary bolts, rockets) | wiki; not measured in game |
 | Chance | Not a difficulty factor: absent from Difficulties.xml, so every preset uses the same value (40% per the difficulty documentation; only a Custom difficulty changes it) | XML read 2026-10-04; value not measured |
 | Where the danger lies | A missed shot lands around its target, so an ally standing near the target (in melee, or a short-range shooter that walked up to the raiders) is the likely victim rather than one in the middle of the lane | hypothesis; near-target drill pending (TODO Now 2) |
+| Throws ordered at a raider | The throw follows the raider: when it comes in close, the thrower throws at it in front of our own. The user throws at the ground instead — a cell or a rock far down the raid's way in, near the end of the frags' range | the user (2026-10-07); base2_ith_tribe_6x, Claude: frag bursts at the doorway (133, 186–188) next to our plug, two of ours dead (with Fire at will turned back on by `stop()`) |
 
 ## 6. Hazards
 
@@ -269,6 +270,10 @@ saves are still Peaceful (conversion: TODO Now 1). Values from
   "wandering", `Go here` → "No order matched"]. An agent that tracks drafted pawns in its own set
   must forget a pawn once it is downed (rca/tactical/squad.py). Walking while carrying looked
   slow (~1 cell per 30 ticks in that probe; one sample, UNVERIFIED).
+- **Chairs let the back row lean out** (the user, 2026-10-07): chairs placed in a held room let the
+  pawns behind them lean out and shoot down a straight corridor. base2_ith_tribe_6x (the user):
+  dining chairs in the Ithfunda east room; Smith, on the corridor axis behind the plug, made 6 kills.
+  The mechanism as the user states it; not measured by us.
 - Equal raid points ≠ equal headcount: tribal raids at 1500 pt are ~26 pawns vs our 14 (theme_report).
 
 ## 8. Built-in enemy AI behaviour (becomes / merges into ENEMY_AI.md)
@@ -288,7 +293,7 @@ saves are still Peaceful (conversion: TODO Now 1). Values from
 | Raiders mostly stop throwing frags when we hold beyond 13 cells (frags seen fell to ~0) | threatmap_report verdict | measured, n=10 |
 | Throwers need LOS (by defs) | threatmap_report §5 | XML read, not measured |
 | A frag thrown from the cell right behind a wall passes it; thrown from one cell further back it hits the wall and drops short. The user's attempt 1 on base_mon_tribe_3x fits: thrown from (144, 81) up the passage past the wall (144, 84), frags were seen at (144, 83), (144, 84), (145, 82) and two of the packed front lost 58 and 69 points with no raider near; from (146, 83) in attempt 2 none of that | the user (knowledge), base_mon_tribe_3x attempts 1–2 (traces) | the user's knowledge; one consistent observation |
-| A "Fire at <raider>" order (float menu) to one of our frag/molotov throwers is a standing attack job: the throwers kept the job "attacking <raider>" for ~1250 ticks (t7240–8483) and threw another round at him with no new order, at his cell then (3–5 cells from ours); molotovs burst on our own cells twice. The throw leaves ~90–100 ticks after the order. End it with stop() (undraft, draft) | base_ith_pirate_2x attempt 2 trace (jobs, projectiles; journal) | observed, one battle, three throwers |
+| A "Fire at <raider>" order (float menu) to one of our frag/molotov throwers is a standing attack job: the throwers kept the job "attacking <raider>" for ~1250 ticks (t7240–8483) and threw another round at him with no new order, at his cell then (3–5 cells from ours); molotovs burst on our own cells twice. The throw leaves ~90–100 ticks after the order. End it with stop() (undraft, draft; drafting turns Fire at will on, and `hands.stop()` now turns it back off when it was off) | base_ith_pirate_2x attempt 2 trace (jobs, projectiles; journal) | observed, one battle, three throwers |
 | Melee lock: a pawn with an adjacent enemy can't use its ranged attack (both sides) — belief. **Firing at an adjacent standing hostile is disabled, diagonals included:** the float menu showed "Fire at Paul: Too close" (disabled) to colonists on the orthogonal cell and on both diagonal cells of a standing raider in a doorway (the diagonals across rock corners); at 2 cells it was enabled. Whether an adjacent enemy also blocks shots at farther targets, weapon exceptions, friendly fire into melee and mech behaviour are **UNVERIFIED** | TODO; base_ith_pirate_2x (Claude, 2026-10-06; journal ~t9900) | diagonals: observed, one raider, three colonists |
 | The Hellcat rifle (Anomaly, `Gun_HellcatRifle`) carries a mini-burner: "a blast of flame from pressurized bioferrite charges", two uses before refuelling (def description). Pirate bosses and Elites carry it; in two Monler R2 battles fires appeared on several room cells at once when a Hellcat holder reached the inner door or the doorway (base2_mon_pirate_6x t11088: (144, 78–82), (145, 84–85) from Codex at (145, 86); base2_mon_pirate_3x t9545: (146–148, 79–83) with Griffith at (145, 84)), and our pawns caught fire and ran while drafted | game data; traces (Claude, 2026-10-07) | def: read; blast in play: observed twice, the blast itself not seen |
 | Directional cover; LOS-break relocation; fire avoidance; berserk ignoring cover | TODO hypotheses | **UNVERIFIED** |
