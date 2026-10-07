@@ -1,5 +1,7 @@
 # base2_mon_pirate_4x · civil outlanders ×9 vs 15 pirates (miniguns, rockets, grenadiers) · Monler base v2 — repelled
 
+> **Stale set (2026-10-08):** played on Monler v2 with its three mortars. The same problem without them is `base2_monp_pirate_4x` (Monler prime).
+
 **Situation:** `base-arena` `raid-far` `raid-throwers` `raid-outranges` `us-low-skill`
 **Plays seen:** `yard-line` `carry-downed` `chair-lean` `mouth-hold` `area-frags` (agents: `turtle`, `turtle_at`)
 **Numbers:** ours 9 (bolt-action rifle, pump shotgun, molotovs, steel knife, 2 autopistols, machine

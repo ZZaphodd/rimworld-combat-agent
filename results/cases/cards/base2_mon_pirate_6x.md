@@ -1,5 +1,7 @@
 # base2_mon_pirate_6x · civil outlanders ×8 vs 28 pirates (Elites, snipers, Doomsday) · Monler base v2 — repelled
 
+> **Stale set (2026-10-08):** played on Monler v2 with its three mortars. The same problem without them is `base2_monp_pirate_6x` (Monler prime).
+
 **Situation:** `base-arena` `raid-far` `raid-outnumbers` `raid-outranges` `us-low-skill`
 **Plays seen:** `off-axis-hold` `melee-lock` `carry-downed` (agents: `turtle`, `turtle_at`)
 **Numbers:** ours 8 (2 pump shotguns, heavy SMG, machine pistol, revolver, autopistol + low-shield

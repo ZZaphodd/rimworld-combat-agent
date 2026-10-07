@@ -1,0 +1,191 @@
+{
+ "id": "base2_monp_pirate_4x",
+ "save": "scenario_base2_monp_pirate_4x",
+ "spec": {
+  "id": "base2_monp_pirate_4x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ "squad": [
+  {
+   "id": "Human1267204",
+   "name": "Julian Ison",
+   "weapon": "Bolt-action rifle (normal)",
+   "x": 119,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267209",
+   "name": "Cosme 'Lady' Carson",
+   "weapon": "Pump shotgun (good)",
+   "x": 123,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267224",
+   "name": "Lucya Shaw",
+   "weapon": "Molotov cocktails",
+   "x": 124,
+   "z": 131,
+   "health": 100
+  },
+  {
+   "id": "Human1267230",
+   "name": "Erane 'Kitty' Wolves",
+   "weapon": "Steel knife (poor 29%)",
+   "x": 125,
+   "z": 131,
+   "health": 100
+  },
+  {
+   "id": "Human1267235",
+   "name": "Erik 'Nytro' Nystrom",
+   "weapon": "Autopistol (excellent)",
+   "x": 128,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267242",
+   "name": "Kai Leister",
+   "weapon": "Machine pistol (poor)",
+   "x": 120,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267247",
+   "name": "Joshua 'Zug' Hamby",
+   "weapon": "Autopistol (poor 67%)",
+   "x": 121,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267252",
+   "name": "Solveig 'Solange' Harrison",
+   "weapon": "Revolver (poor 42%)",
+   "x": 123,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267257",
+   "name": "Tempest 'Kat' Venesare",
+   "weapon": "Revolver (poor 87%)",
+   "x": 125,
+   "z": 128,
+   "health": 100
+  }
+ ],
+ "enemy": [
+  {
+   "id": "Human1267263",
+   "def": "Grenadier_Destructive",
+   "x": 73,
+   "z": 248
+  },
+  {
+   "id": "Human1267269",
+   "def": "Mercenary_Heavy",
+   "x": 73,
+   "z": 246
+  },
+  {
+   "id": "Human1267274",
+   "def": "Grenadier_Destructive",
+   "x": 74,
+   "z": 245
+  },
+  {
+   "id": "Human1267280",
+   "def": "Mercenary_Heavy",
+   "x": 85,
+   "z": 248
+  },
+  {
+   "id": "Human1267285",
+   "def": "Mercenary_Heavy",
+   "x": 86,
+   "z": 248
+  },
+  {
+   "id": "Human1267290",
+   "def": "Mercenary_Heavy",
+   "x": 87,
+   "z": 248
+  },
+  {
+   "id": "Human1267294",
+   "def": "Mercenary_Heavy",
+   "x": 86,
+   "z": 248
+  },
+  {
+   "id": "Human1267298",
+   "def": "Mercenary_Heavy",
+   "x": 85,
+   "z": 248
+  },
+  {
+   "id": "Human1267303",
+   "def": "Mercenary_Heavy",
+   "x": 72,
+   "z": 246
+  },
+  {
+   "id": "Human1267308",
+   "def": "Mercenary_Heavy",
+   "x": 82,
+   "z": 248
+  },
+  {
+   "id": "Human1267313",
+   "def": "Mercenary_Heavy",
+   "x": 73,
+   "z": 244
+  },
+  {
+   "id": "Human1267318",
+   "def": "Mercenary_Heavy",
+   "x": 87,
+   "z": 248
+  },
+  {
+   "id": "Human1267323",
+   "def": "Grenadier_Destructive",
+   "x": 73,
+   "z": 248
+  },
+  {
+   "id": "Human1267329",
+   "def": "Mercenary_Heavy",
+   "x": 78,
+   "z": 246
+  },
+  {
+   "id": "Human1267333",
+   "def": "PirateBoss",
+   "x": 86,
+   "z": 248
+  }
+ ]
+}

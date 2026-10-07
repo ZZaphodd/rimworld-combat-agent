@@ -1,0 +1,203 @@
+{
+ "id": "base2_monp_tribe_2x",
+ "save": "scenario_base2_monp_tribe_2x",
+ "spec": {
+  "id": "base2_monp_tribe_2x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ "squad": [
+  {
+   "id": "Human1267202",
+   "name": "Zhaoxiang Luo",
+   "weapon": "Steel knife (poor 59%)",
+   "x": 119,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267207",
+   "name": "Luke Geeman",
+   "weapon": "Revolver (good)",
+   "x": 125,
+   "z": 129,
+   "health": 100
+  },
+  {
+   "id": "Human1267215",
+   "name": "David Dulude",
+   "weapon": "Bolt-action rifle (normal 85%)",
+   "x": 124,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267220",
+   "name": "Ayaka Gratite",
+   "weapon": "Steel knife (poor 95%)",
+   "x": 125,
+   "z": 131,
+   "health": 100
+  },
+  {
+   "id": "Human1267228",
+   "name": "Finn Collier",
+   "weapon": "Pump shotgun (normal)",
+   "x": 131,
+   "z": 129,
+   "health": 100
+  },
+  {
+   "id": "Human1267233",
+   "name": "Emre Pamuk",
+   "weapon": "Pump shotgun (poor)",
+   "x": 119,
+   "z": 127,
+   "health": 100
+  },
+  {
+   "id": "Human1267238",
+   "name": "Noah Betzen",
+   "weapon": "Autopistol (poor)",
+   "x": 123,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267244",
+   "name": "Carys Fluovein",
+   "weapon": "Revolver (normal)",
+   "x": 123,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267250",
+   "name": "Sam 'Sammy' Gerador",
+   "weapon": "Pump shotgun (normal)",
+   "x": 125,
+   "z": 128,
+   "health": 100
+  }
+ ],
+ "enemy": [
+  {
+   "id": "Human1267259",
+   "def": "Tribal_Archer",
+   "x": 218,
+   "z": 248
+  },
+  {
+   "id": "Human1267263",
+   "def": "Tribal_Hunter",
+   "x": 213,
+   "z": 245
+  },
+  {
+   "id": "Human1267268",
+   "def": "Tribal_Berserker",
+   "x": 215,
+   "z": 245
+  },
+  {
+   "id": "Human1267272",
+   "def": "Tribal_Penitent",
+   "x": 216,
+   "z": 246
+  },
+  {
+   "id": "Human1267274",
+   "def": "Tribal_HeavyArcher",
+   "x": 214,
+   "z": 245
+  },
+  {
+   "id": "Human1267279",
+   "def": "Tribal_Berserker",
+   "x": 219,
+   "z": 243
+  },
+  {
+   "id": "Human1267284",
+   "def": "Tribal_ChiefRanged",
+   "x": 213,
+   "z": 242
+  },
+  {
+   "id": "Human1267289",
+   "def": "Tribal_HeavyArcher",
+   "x": 220,
+   "z": 243
+  },
+  {
+   "id": "Human1267293",
+   "def": "Tribal_Archer",
+   "x": 214,
+   "z": 247
+  },
+  {
+   "id": "Human1267297",
+   "def": "Tribal_Warrior",
+   "x": 222,
+   "z": 245
+  },
+  {
+   "id": "Human1267301",
+   "def": "Tribal_Warrior",
+   "x": 216,
+   "z": 242
+  },
+  {
+   "id": "Human1267305",
+   "def": "Tribal_Hunter",
+   "x": 218,
+   "z": 245
+  },
+  {
+   "id": "Human1267309",
+   "def": "Tribal_HeavyArcher",
+   "x": 216,
+   "z": 246
+  },
+  {
+   "id": "Human1267314",
+   "def": "Tribal_Hunter",
+   "x": 220,
+   "z": 246
+  },
+  {
+   "id": "Human1267318",
+   "def": "Tribal_Penitent",
+   "x": 216,
+   "z": 246
+  },
+  {
+   "id": "Human1267321",
+   "def": "Tribal_Hunter",
+   "x": 223,
+   "z": 248
+  },
+  {
+   "id": "Human1267325",
+   "def": "Tribal_Warrior",
+   "x": 216,
+   "z": 247
+  }
+ ]
+}

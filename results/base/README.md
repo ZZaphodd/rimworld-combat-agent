@@ -86,6 +86,13 @@ raiders were breaking and setting fire to them, and the user read part of the ra
 coming from that. Every Monler v2 row before this, the agents' and the direct plays, ran with the
 mortars on the map. Ithfunda has no mortar or turret on its map.
 
+**Monler prime and the stale Monler set (the user, 2026-10-08).** The mortar-less Monler is named
+**Monler prime**: `arena_col_monlerp2` and its 14 scenarios `base2_monp_*` (saves copied from the
+edited ones; manifests and specs alongside the old). The Monler set itself (`base2_mon_*`) is
+**stale**: its saves were put back from the backup, mortars and all, so they match the rows played on
+them, and `tools/base_ladder.py` skips stale specs. Cawalia's specs carry `"ladder": false`: no agent
+ladder there; Claude plays it directly on a raid-size staircase.
+
 Raid sizes v1 → v2 (our pawns / raiders):
 
 | base | raid | 2× | 3× | 4× | 6× | 8× |
@@ -214,7 +221,7 @@ Raid sizes (our pawns / raiders), built 2026-10-07 into `scenarios_base2/scenari
 | pirate | 9 / 12 | 9 / 13 | 8 / 16 | 8 / 24 | 8 / 31 |
 | mech | 9 / 8 | 8 / 10 | 8 / 15 | 9 / 12 | 9 / 25 |
 
-No agent or direct play has run on it yet.
+No agent ladder runs on it (the user, 2026-10-08): Claude plays it directly, raising the raid by 0.5× after a win and lowering it by 0.5× after a loss, and counts the spike traps left as a second measure.
 
 ## Direct plays: Claude and the user (PROCEDURES §15–16)
 Scope (the user, 2026-10-06): win the battle using the base, by any method; furniture that takes
