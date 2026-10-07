@@ -14,6 +14,7 @@ is checked at every episode start and stored in the row.
 """
 import json
 import math
+import re
 import time
 from collections import Counter
 
@@ -345,6 +346,21 @@ def run_episode(rm, manifest, agent, max_ticks, cycle, reflex=True, log=print, o
     return m
 
 
+TRAP_DEFS = ("TrapSpike",)
+
+
+def trap_census(rm):
+    """The spike traps on the map: how many, and how many below full hit points (a label ends in
+    "(NN%)" when a building is damaged). Cawalia Union's second measure (the user, 2026-10-08):
+    a loss with many traps left reads as too little maneuvering. None when the map has none."""
+    things = [t for d in TRAP_DEFS for t in rm.call("list_things", category="building", defName=d,
+                                                    verbose=True, confirm=True, limit=100000).get("things", [])]
+    if not things:
+        return None
+    hp = [int(m.group(1)) for t in things if (m := re.search(r"\((\d+)%\)\s*$", t.get("label") or ""))]
+    return {"count": len(things), "damaged": len(hp), "hp_lost_pct": sum(100 - h for h in hp)}
+
+
 def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
                          difficulty=STANDARD_DIFFICULTY, player="human", trace=None):
     """Observe-only episode: a person plays, the harness never pauses or
@@ -365,6 +381,7 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
     strangers = []                                # man-in-black pawns removed (tick, name, kind)
     squad_down = None                             # state when the whole squad first went down
     start_ids, intruders = set(tracker.enemy), {}
+    traps0 = trap_census(rm)
     t0 = rm.call("get_status")["ticksGame"]
     wall0, polls, ticks, last, outcome = time.time(), 0, 0, -1, "timeout"
     progress, avail_o, avail_t = ProgressMeter(), {}, {}
@@ -457,6 +474,11 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         **progress.summary(),
         "options": {}, "signals": [], "unattainable_tick": None, "unattainable_reason": None,
         "kpis": {"observed": True, "poll_s": poll_s, "polls": polls}})
+    if traps0:
+        try:
+            m["traps"] = {"start": traps0, "end": trap_census(rm)}
+        except RimMoltError:
+            m["traps"] = {"start": traps0, "end": None}
     m.update(verdict(m, scoring.manifest_mean_points(manifest)))
     if trace:
         trace.end(m)
