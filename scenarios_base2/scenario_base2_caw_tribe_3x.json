@@ -1,0 +1,231 @@
+{
+  "id": "base2_caw_tribe_3x",
+  "save": "scenario_base2_caw_tribe_3x",
+  "spec": {
+    "id": "base2_caw_tribe_3x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 1500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1962088",
+      "name": "Rowan Boone",
+      "weapon": "Revolver (poor 51%)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962096",
+      "name": "Johnson Doyle",
+      "weapon": "Molotov cocktails (90%)",
+      "x": 101,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962101",
+      "name": "Tawny Lure",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 103,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962106",
+      "name": "Vadim Joseph",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962114",
+      "name": "Marcus 'Breakfast' Koh",
+      "weapon": "Revolver (good)",
+      "x": 106,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962121",
+      "name": "Nicole Stout",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962126",
+      "name": "Zane 'Pacer' Bahrs",
+      "weapon": "Steel knife (poor)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962132",
+      "name": "Rick 'Starry' Kerr",
+      "weapon": "Autopistol (poor)",
+      "x": 100,
+      "z": 106,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962142",
+      "def": "Tribal_ChiefRanged",
+      "x": 190,
+      "z": 269
+    },
+    {
+      "id": "Human1962148",
+      "def": "Tribal_HeavyArcher",
+      "x": 178,
+      "z": 269
+    },
+    {
+      "id": "Human1962154",
+      "def": "Tribal_Archer",
+      "x": 175,
+      "z": 268
+    },
+    {
+      "id": "Human1962158",
+      "def": "Tribal_HeavyArcher",
+      "x": 191,
+      "z": 272
+    },
+    {
+      "id": "Human1962162",
+      "def": "Tribal_HeavyArcher",
+      "x": 190,
+      "z": 270
+    },
+    {
+      "id": "Human1962168",
+      "def": "Tribal_HeavyArcher",
+      "x": 177,
+      "z": 268
+    },
+    {
+      "id": "Human1962173",
+      "def": "Tribal_Hunter",
+      "x": 179,
+      "z": 270
+    },
+    {
+      "id": "Human1962178",
+      "def": "Tribal_HeavyArcher",
+      "x": 190,
+      "z": 269
+    },
+    {
+      "id": "Human1962183",
+      "def": "Tribal_HeavyArcher",
+      "x": 179,
+      "z": 270
+    },
+    {
+      "id": "Human1962201",
+      "def": "Tribal_HeavyArcher",
+      "x": 179,
+      "z": 270
+    },
+    {
+      "id": "Human1962206",
+      "def": "Tribal_Hunter",
+      "x": 178,
+      "z": 269
+    },
+    {
+      "id": "Human1962211",
+      "def": "Tribal_Hunter",
+      "x": 190,
+      "z": 270
+    },
+    {
+      "id": "Human1962216",
+      "def": "Tribal_Hunter",
+      "x": 177,
+      "z": 272
+    },
+    {
+      "id": "Human1962221",
+      "def": "Tribal_Hunter",
+      "x": 176,
+      "z": 269
+    },
+    {
+      "id": "Human1962226",
+      "def": "Tribal_Archer",
+      "x": 190,
+      "z": 270
+    },
+    {
+      "id": "Human1962231",
+      "def": "Tribal_HeavyArcher",
+      "x": 188,
+      "z": 267
+    },
+    {
+      "id": "Human1962236",
+      "def": "Tribal_HeavyArcher",
+      "x": 190,
+      "z": 271
+    },
+    {
+      "id": "Human1962241",
+      "def": "Tribal_Hunter",
+      "x": 180,
+      "z": 272
+    },
+    {
+      "id": "Human1962246",
+      "def": "Tribal_Archer",
+      "x": 184,
+      "z": 267
+    },
+    {
+      "id": "Human1962251",
+      "def": "Tribal_HeavyArcher",
+      "x": 187,
+      "z": 266
+    },
+    {
+      "id": "Human1962256",
+      "def": "Tribal_Hunter",
+      "x": 177,
+      "z": 268
+    },
+    {
+      "id": "Human1962261",
+      "def": "Tribal_Archer",
+      "x": 190,
+      "z": 272
+    },
+    {
+      "id": "Human1962276",
+      "def": "Tribal_Hunter",
+      "x": 190,
+      "z": 270
+    }
+  ]
+}

@@ -193,6 +193,29 @@ Observations:
 - Every plan door was set (Hold open read and pressed only to change it); no agent errors, no
   invalid rows.
 
+## A third base: Cawalia Union (2026-10-07)
+
+The user's pick from their colony saves (`arena_col_cawalia` → `arena_col_cawalia2`, PROCEDURES §1c):
+a 275×275 map with no mountain; the colony is one walled block of rooms in the middle (x 79–144,
+z 114–139, 42 doors) on open ground. **1,421 spike traps**: an unbroken ring round the map edge
+(x 10–265, z 9–264) and arcs about 50 cells out from the block. Turrets kept as in the other bases:
+13 sniper turrets and 7 mini-turrets around the block; its 5 mortars were removed (as Monler's).
+The v2 copy dropped 230 shelves, hydroponics basins and workbenches. The colony's own colonists, 11
+ancient cryptosleep caskets, an insect hive and 780 items went; a caravan of four colonists away
+from home was removed (they would have walked in mid-battle). The squads (OutlanderCivil) and the
+tribe (TribeRough) were the colony's allies and were set hostile. Squad start (100, 108), the open
+ground south of the block.
+
+Raid sizes (our pawns / raiders), built 2026-10-07 into `scenarios_base2/scenario_base2_caw_*`:
+
+| raid | 2× | 3× | 4× | 6× | 8× |
+|---|---|---|---|---|---|
+| tribe | 8 / 16 | 8 / 23 | 9 / 36 | 8 / 54 | 9 / 67 |
+| pirate | 9 / 12 | 9 / 13 | 8 / 16 | 8 / 24 | 8 / 31 |
+| mech | 9 / 8 | 8 / 10 | 8 / 15 | 9 / 12 | 9 / 25 |
+
+No agent or direct play has run on it yet.
+
 ## Direct plays: Claude and the user (PROCEDURES §15–16)
 Scope (the user, 2026-10-06): win the battle using the base, by any method; furniture that takes
 firing cells is uninstalled (PROCEDURES §1c). Claude, and at times the user, plays the rungs where `turtle` first lost (rows in `results/human/play.jsonl`;

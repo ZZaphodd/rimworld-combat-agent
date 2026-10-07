@@ -125,8 +125,11 @@ class Debug:
             if p is None:
                 return False
             self.run("T: Teleport")
-            if self.dbg(action="click", x=p[0], z=p[1]).get("armedTool"):
-                self.dbg(action="click", x=x, z=z)
+            try:
+                if self.dbg(action="click", x=p[0], z=p[1]).get("armedTool"):
+                    self.dbg(action="click", x=x, z=z)
+            except RimMoltError:                # the tool disarmed after the pick (Cawalia,
+                continue                        # 2026-10-07): try the round again
         return self.pos(pid) == (x, z)
 
     def place(self, slots, rounds=4):
@@ -146,10 +149,14 @@ class Debug:
         for k in range(tries):
             self.run("T: Destroy")
             try:
-                return self.dbg(action="click", x=x, z=z)
+                r = self.dbg(action="click", x=x, z=z)
             except RimMoltError as e:
                 if "armed" not in str(e) or k == tries - 1:
                     raise
+                continue
+            clicks = r.get("clicks") or [{}]
+            if clicks[0].get("clicked", True) or k == tries - 1:   # "no debug tool was armed at
+                return r                                           # this point": arm again (2026-10-07)
 
     def clear_area(self, x0, z0, x1, z1):
         self.run("Clear area (rect)")

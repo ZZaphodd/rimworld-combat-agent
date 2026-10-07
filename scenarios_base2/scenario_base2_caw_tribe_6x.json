@@ -1,0 +1,417 @@
+{
+  "id": "base2_caw_tribe_6x",
+  "save": "scenario_base2_caw_tribe_6x",
+  "spec": {
+    "id": "base2_caw_tribe_6x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 3000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Adalia Kalili",
+      "weapon": "Revolver (good)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962094",
+      "name": "Olesya 'Cella' Whitaker",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962099",
+      "name": "Steven Wilcox",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962104",
+      "name": "Robert 'Gnugfur' Krondorfer",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 105,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962123",
+      "name": "Suzune Horiya",
+      "weapon": "Bolt-action rifle (normal 65%)",
+      "x": 106,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962129",
+      "name": "Ernest 'Chef' Szoka",
+      "weapon": "Bolt-action rifle (normal 79%)",
+      "x": 94,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962135",
+      "name": "Devin 'D' Wahl",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962141",
+      "name": "Zoey 'Zozo' Amon",
+      "weapon": "Bolt-action rifle (good 97%)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962149",
+      "def": "Tribal_Archer",
+      "x": 6,
+      "z": 245
+    },
+    {
+      "id": "Human1962154",
+      "def": "Tribal_Berserker",
+      "x": 6,
+      "z": 249
+    },
+    {
+      "id": "Human1962159",
+      "def": "Tribal_Berserker",
+      "x": 4,
+      "z": 254
+    },
+    {
+      "id": "Human1962164",
+      "def": "Tribal_Archer",
+      "x": 7,
+      "z": 247
+    },
+    {
+      "id": "Human1962168",
+      "def": "Tribal_Archer",
+      "x": 4,
+      "z": 247
+    },
+    {
+      "id": "Human1962172",
+      "def": "Tribal_Archer",
+      "x": 4,
+      "z": 253
+    },
+    {
+      "id": "Human1962177",
+      "def": "Tribal_Hunter",
+      "x": 8,
+      "z": 248
+    },
+    {
+      "id": "Human1962193",
+      "def": "Tribal_Hunter",
+      "x": 6,
+      "z": 244
+    },
+    {
+      "id": "Human1962198",
+      "def": "Tribal_Hunter",
+      "x": 7,
+      "z": 247
+    },
+    {
+      "id": "Human1962202",
+      "def": "Tribal_Berserker",
+      "x": 8,
+      "z": 252
+    },
+    {
+      "id": "Human1962207",
+      "def": "Tribal_Archer",
+      "x": 7,
+      "z": 256
+    },
+    {
+      "id": "Human1962211",
+      "def": "Tribal_Hunter",
+      "x": 9,
+      "z": 252
+    },
+    {
+      "id": "Human1962217",
+      "def": "Tribal_Hunter",
+      "x": 7,
+      "z": 248
+    },
+    {
+      "id": "Human1962222",
+      "def": "Tribal_Berserker",
+      "x": 2,
+      "z": 251
+    },
+    {
+      "id": "Human1962226",
+      "def": "Tribal_HeavyArcher",
+      "x": 3,
+      "z": 252
+    },
+    {
+      "id": "Human1962231",
+      "def": "Tribal_Penitent",
+      "x": 6,
+      "z": 249
+    },
+    {
+      "id": "Human1962236",
+      "def": "Tribal_Hunter",
+      "x": 4,
+      "z": 249
+    },
+    {
+      "id": "Human1962241",
+      "def": "Tribal_Archer",
+      "x": 2,
+      "z": 245
+    },
+    {
+      "id": "Human1962246",
+      "def": "Tribal_ChiefRanged",
+      "x": 3,
+      "z": 248
+    },
+    {
+      "id": "Human1962251",
+      "def": "Tribal_Warrior",
+      "x": 2,
+      "z": 254
+    },
+    {
+      "id": "Human1962256",
+      "def": "Tribal_Warrior",
+      "x": 7,
+      "z": 256
+    },
+    {
+      "id": "Human1962261",
+      "def": "Tribal_Archer",
+      "x": 7,
+      "z": 249
+    },
+    {
+      "id": "Human1962265",
+      "def": "Tribal_Penitent",
+      "x": 7,
+      "z": 251
+    },
+    {
+      "id": "Human1962275",
+      "def": "Tribal_Hunter",
+      "x": 9,
+      "z": 254
+    },
+    {
+      "id": "Human1962280",
+      "def": "Tribal_Archer",
+      "x": 5,
+      "z": 249
+    },
+    {
+      "id": "Human1962285",
+      "def": "Tribal_Archer",
+      "x": 8,
+      "z": 247
+    },
+    {
+      "id": "Human1962290",
+      "def": "Tribal_Berserker",
+      "x": 5,
+      "z": 254
+    },
+    {
+      "id": "Human1962295",
+      "def": "Tribal_Berserker",
+      "x": 7,
+      "z": 248
+    },
+    {
+      "id": "Human1962300",
+      "def": "Tribal_Archer",
+      "x": 4,
+      "z": 247
+    },
+    {
+      "id": "Human1962304",
+      "def": "Tribal_Berserker",
+      "x": 8,
+      "z": 255
+    },
+    {
+      "id": "Human1962309",
+      "def": "Tribal_Hunter",
+      "x": 6,
+      "z": 252
+    },
+    {
+      "id": "Human1962314",
+      "def": "Tribal_Hunter",
+      "x": 8,
+      "z": 250
+    },
+    {
+      "id": "Human1962318",
+      "def": "Tribal_Archer",
+      "x": 6,
+      "z": 257
+    },
+    {
+      "id": "Human1962333",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 257
+    },
+    {
+      "id": "Human1962338",
+      "def": "Tribal_Penitent",
+      "x": 8,
+      "z": 248
+    },
+    {
+      "id": "Human1962343",
+      "def": "Tribal_Hunter",
+      "x": 4,
+      "z": 249
+    },
+    {
+      "id": "Human1962348",
+      "def": "Tribal_Hunter",
+      "x": 6,
+      "z": 245
+    },
+    {
+      "id": "Human1962353",
+      "def": "Tribal_Hunter",
+      "x": 6,
+      "z": 249
+    },
+    {
+      "id": "Human1962364",
+      "def": "Tribal_Hunter",
+      "x": 4,
+      "z": 247
+    },
+    {
+      "id": "Human1962393",
+      "def": "Tribal_Archer",
+      "x": 5,
+      "z": 251
+    },
+    {
+      "id": "Human1962398",
+      "def": "Tribal_Hunter",
+      "x": 3,
+      "z": 254
+    },
+    {
+      "id": "Human1962402",
+      "def": "Tribal_Archer",
+      "x": 6,
+      "z": 244
+    },
+    {
+      "id": "Human1962407",
+      "def": "Tribal_Archer",
+      "x": 7,
+      "z": 253
+    },
+    {
+      "id": "Human1962412",
+      "def": "Tribal_Warrior",
+      "x": 2,
+      "z": 244
+    },
+    {
+      "id": "Human1962416",
+      "def": "Tribal_HeavyArcher",
+      "x": 6,
+      "z": 246
+    },
+    {
+      "id": "Human1962421",
+      "def": "Tribal_Archer",
+      "x": 2,
+      "z": 258
+    },
+    {
+      "id": "Human1962426",
+      "def": "Tribal_Penitent",
+      "x": 8,
+      "z": 250
+    },
+    {
+      "id": "Human1962430",
+      "def": "Tribal_HeavyArcher",
+      "x": 6,
+      "z": 254
+    },
+    {
+      "id": "Human1962435",
+      "def": "Tribal_Warrior",
+      "x": 9,
+      "z": 250
+    },
+    {
+      "id": "Human1962440",
+      "def": "Tribal_HeavyArcher",
+      "x": 4,
+      "z": 244
+    },
+    {
+      "id": "Human1962445",
+      "def": "Tribal_Hunter",
+      "x": 7,
+      "z": 250
+    },
+    {
+      "id": "Human1962450",
+      "def": "Tribal_Archer",
+      "x": 9,
+      "z": 249
+    },
+    {
+      "id": "Human1962454",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 255
+    },
+    {
+      "id": "Human1962459",
+      "def": "Tribal_Archer",
+      "x": 6,
+      "z": 250
+    }
+  ]
+}
