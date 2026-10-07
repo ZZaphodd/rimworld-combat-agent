@@ -375,3 +375,19 @@ game paused on the letter. Lost 0, downed 0; by then 7 of the raid's pawns were 
   scenario's (`harness.remove_hostiles`), books them in the row's `storyteller_removed`, and plays on;
   an arrival that survives 10 polls still makes the run invalid. Battles 12 and 13 were **invalid at
   t29529 for the same reason**, not stopped by the 30,000-tick cap as first reported.
+
+## 22 · base2_caw_mech_10p5x, third try (10.5×, mech; cap 60,000; storyteller arrivals removed)
+Trace `results/human/traces/base2_caw_mech_10p5x_claude_20261008-082536.jsonl.gz` · result **decisive** (cleared t42415), lost 0, downed 1 (Rhodes), badness 10.0;
+34 of 34 killed (the War queen's urchins counted with the raid); traps 1,420 → 1,387.
+- Same squad, loadout and plan as battles 20–21. The harness removed the storyteller's 11 tribals
+  (3 at t29595, 8 at t33028) and played on.
+- t9660–11250: Rhodes and Squint fought each other (a social fight; Squint 60 %, Rhodes 77 %, cracks and
+  bruises); the watch loop read it as damage and sent the squad north early; most stayed north of the
+  block from then on, Rhodes and Squint in the east room.
+- t14460–34037: the assault crossed the south arc and took the south and east turrets; the War queen
+  (killed by ~t22663) made 7+ War urchins; 13 left at t16060, 5 at t26263, 3 Centipedes (15–23 %) at
+  t34037 at the block's NW corner.
+- t34037–42415: four rifles 28–34 from the last three Centipedes (outside 26.9) killed them by t42415.
+- Rhodes, in the room with no mech within 43, fell 81 → 22 % from t39566 and went down; no fire or
+  projectile near him in the trace. At the end every pawn's food was 3–4 % (drafted ~40,000 ticks).
+- Observed: a 40,000-tick battle starves a squad kept drafted; Megumi lost a part ("shot off").
