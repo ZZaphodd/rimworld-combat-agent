@@ -97,6 +97,46 @@ def clear_conditions(names, conds=("SolarFlare",), backup=None, saves=None, log=
     return out
 
 
+def remove_defs(names, defs, backup=None, saves=None, log=print):
+    """Remove every thing of the given defs from base saves, offline (the user, 2026-10-07: Monler's
+    mortars, which raiders broke and died by). Only arena_col_* and scenario_base* saves; each file
+    that changes is copied to `backup` first (default: RimWorld/rca_backup/<time>/). References to a
+    removed thing elsewhere in the file ("Thing_<id>", e.g. a colonist's lastMannedThing) become
+    null. Returns {name: {def: count}}."""
+    folder = Path(saves or SAVES)
+    backup = Path(backup or folder.parent / "rca_backup" / time.strftime("%Y%m%d-%H%M%S"))
+    out = {}
+    for name in names:
+        if not name.startswith(OURS):
+            raise RimMoltError(f"{name}: only builder saves ({', '.join(OURS)}*) are edited")
+        path = folder / f"{name}.rws"
+        tree = ET.parse(path)
+        root = tree.getroot()
+        gone, counts = set(), {}
+        for things in root.iter("things"):
+            for th in list(things):
+                d = th.findtext("def")
+                if d in defs:
+                    things.remove(th)
+                    gone.add(th.findtext("id"))
+                    counts[d] = counts.get(d, 0) + 1
+        if gone:
+            refs = {f"Thing_{i}" for i in gone}
+            for el in root.iter():
+                if (el.text or "").strip() in refs:
+                    el.text = "null"
+            backup.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(path, backup / path.name)
+            tree.write(path, encoding="utf-8", xml_declaration=True)
+            text = path.read_text(encoding="utf-8")
+            left = [d for d in defs if f"<def>{d}</def>" in text] + [r for r in refs if r in text]
+            if left:
+                raise RimMoltError(f"{name}: {left} still in the file after the edit")
+        out[name] = counts
+        log(f"{name}: removed {counts or 'nothing'}")
+    return out
+
+
 def _clear_cell(rm, x, z):
     """No building or item on (x, z) (a pawn is destroyed there, and T: Destroy takes the cell)."""
     things = rm.call("list_things", category="all", nearX=x, nearZ=z, radius=0.5, verbose=True,

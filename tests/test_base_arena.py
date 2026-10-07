@@ -94,5 +94,33 @@ class ClearConditionsTest(unittest.TestCase):
         with self.assertRaises(base.RimMoltError):
             base.clear_conditions(["Monler Alliance"], log=lambda *_: None)
 
+
+class RemoveDefsTest(unittest.TestCase):
+    XML = ("<?xml version='1.0' encoding='utf-8'?><savegame><game><maps><li><things>"
+           "<thing Class='Building_TurretGun'><def>Turret_Mortar</def><id>Turret_Mortar7</id>"
+           "<gun><def>Artillery_Mortar</def><id>Artillery_Mortar8</id></gun></thing>"
+           "<thing><def>Wall</def><id>Wall9</id></thing></things></li></maps>"
+           "<world><pawn><mindState><lastMannedThing>Thing_Turret_Mortar7</lastMannedThing></mindState></pawn>"
+           "</world></game></savegame>")
+
+    def test_removes_the_def_and_nulls_its_references(self):
+        import tempfile
+        from pathlib import Path
+        d = Path(tempfile.mkdtemp())
+        (d / "arena_col_x2.rws").write_text(self.XML)
+        out = base.remove_defs(["arena_col_x2"], ("Turret_Mortar",), backup=d / "bk", saves=d, log=lambda *_: None)
+        self.assertEqual(out, {"arena_col_x2": {"Turret_Mortar": 1}})
+        text = (d / "arena_col_x2.rws").read_text()
+        self.assertNotIn("Turret_Mortar", text)
+        self.assertNotIn("Artillery_Mortar", text)                 # the gun went with its turret
+        self.assertIn("<def>Wall</def>", text)
+        self.assertIn("<lastMannedThing>null</lastMannedThing>", text)
+        self.assertIn("Turret_Mortar7", (d / "bk" / "arena_col_x2.rws").read_text())
+
+    def test_refuses_a_colony_save(self):
+        with self.assertRaises(base.RimMoltError):
+            base.remove_defs(["Monler Alliance"], ("Turret_Mortar",), log=lambda *_: None)
+
+
 if __name__ == "__main__":
     unittest.main()

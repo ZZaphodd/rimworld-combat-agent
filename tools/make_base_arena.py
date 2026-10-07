@@ -27,13 +27,16 @@ def main():
     ap.add_argument("--strip-from", help="an arena_col_* save to copy without shelves, hydroponics, workbenches")
     ap.add_argument("--name", help="arena_col_<name>")
     ap.add_argument("--clear-conditions", help="condition defs to remove, e.g. SolarFlare (offline)")
-    ap.add_argument("--saves", nargs="*", default=[], help="with --clear-conditions: save names")
-    ap.add_argument("--manifests", nargs="*", default=[], help="with --clear-conditions: their saves too")
+    ap.add_argument("--remove-defs", help="thing defs to remove, e.g. Turret_Mortar (offline)")
+    ap.add_argument("--saves", nargs="*", default=[], help="with --clear-conditions/--remove-defs: save names")
+    ap.add_argument("--manifests", nargs="*", default=[], help="with --clear-conditions/--remove-defs: their saves too")
     ap.add_argument("--observer", help="x,z of a clear cell away from the base (with --source)")
     ap.add_argument("--hostile", default="", help="faction defs to set hostile (the squads' factions)")
     a = ap.parse_args()
-    if a.clear_conditions:
+    if a.clear_conditions or a.remove_defs:
         names = list(a.saves) + [json.loads(open(m).read())["save"] for m in a.manifests]
+        if a.remove_defs:
+            return print(json.dumps(base.remove_defs(names, tuple(a.remove_defs.split(",")))))
         return print(json.dumps(base.clear_conditions(names, tuple(a.clear_conditions.split(",")))))
     if not a.name:
         ap.error("--name")
