@@ -116,7 +116,7 @@ Construction unassigned the delivery never finishes (the user). Observed 2026-10
 spike traps across the map; give it to the haulers only and draft the rest. Things that skew a base
 battle are removed offline from the builder saves with a backup: `tools/make_base_arena.py
 --remove-defs <def,...> --saves ... --manifests ...` (Monler's mortars, 2026-10-07), like
-`--clear-conditions` for stored conditions. Chairs from the dining
+`--clear-conditions` for stored conditions. A changed base becomes a new set (Monler → Monler prime, `base2_monp_*`, 2026-10-08): copy the edited saves under new names, restore the old set from the backup so it still matches its rows, and mark its specs `"stale"` (the ladder skips them; `"ladder": false` keeps a set Claude-only, as Cawalia). Chairs from the dining
 room west of the Ithfunda east room took the long way round through the yard and stalled; the
 user's chairs near the nook (117–124, 177–188) arrived in time.
 

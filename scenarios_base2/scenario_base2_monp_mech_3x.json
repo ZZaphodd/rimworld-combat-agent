@@ -1,0 +1,167 @@
+{
+ "id": "base2_monp_mech_3x",
+ "save": "scenario_base2_monp_mech_3x",
+ "spec": {
+  "id": "base2_monp_mech_3x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1500,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ "squad": [
+  {
+   "id": "Human1267202",
+   "name": "Rodion Jimenez",
+   "weapon": "Pump shotgun (normal)",
+   "x": 119,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267207",
+   "name": "Briege 'Beach' Loughran",
+   "weapon": "Autopistol (good)",
+   "x": 124,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267213",
+   "name": "Rhaemir 'Rhae' Moryn",
+   "weapon": "Pump shotgun (normal)",
+   "x": 127,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267218",
+   "name": "Penny House",
+   "weapon": "Heavy SMG (normal)",
+   "x": 125,
+   "z": 129,
+   "health": 100
+  },
+  {
+   "id": "Human1267223",
+   "name": "Valery Touvel",
+   "weapon": "Revolver (poor 85%)",
+   "x": 129,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267227",
+   "name": "Vance McGrath",
+   "weapon": "Bolt-action rifle (normal)",
+   "x": 119,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267232",
+   "name": "Kaori Rodriguez",
+   "weapon": "Machine pistol (normal 85%)",
+   "x": 121,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human625730",
+   "name": "Darya Rowland",
+   "weapon": "Pump shotgun (good)",
+   "x": 123,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267242",
+   "name": "Loreen Paradies",
+   "weapon": "Autopistol (awful)",
+   "x": 125,
+   "z": 128,
+   "health": 100
+  }
+ ],
+ "enemy": [
+  {
+   "id": "Mech_Scorcher1267247",
+   "def": "Mech_Scorcher",
+   "x": 245,
+   "z": 233
+  },
+  {
+   "id": "Mech_Tesseron1267249",
+   "def": "Mech_Tesseron",
+   "x": 243,
+   "z": 228
+  },
+  {
+   "id": "Mech_Lancer1267251",
+   "def": "Mech_Lancer",
+   "x": 245,
+   "z": 232
+  },
+  {
+   "id": "Mech_Tesseron1267253",
+   "def": "Mech_Tesseron",
+   "x": 241,
+   "z": 227
+  },
+  {
+   "id": "Mech_Cyclops1267255",
+   "def": "Mech_Cyclops",
+   "x": 245,
+   "z": 233
+  },
+  {
+   "id": "Mech_Cyclops1267257",
+   "def": "Mech_Cyclops",
+   "x": 245,
+   "z": 233
+  },
+  {
+   "id": "Mech_Lancer1267259",
+   "def": "Mech_Lancer",
+   "x": 246,
+   "z": 234
+  },
+  {
+   "id": "Mech_Pikeman1267261",
+   "def": "Mech_Pikeman",
+   "x": 243,
+   "z": 231
+  },
+  {
+   "id": "Mech_Pikeman1267263",
+   "def": "Mech_Pikeman",
+   "x": 248,
+   "z": 223
+  },
+  {
+   "id": "Mech_Pikeman1267265",
+   "def": "Mech_Pikeman",
+   "x": 248,
+   "z": 232
+  },
+  {
+   "id": "Mech_Lancer1267267",
+   "def": "Mech_Lancer",
+   "x": 248,
+   "z": 224
+  }
+ ]
+}

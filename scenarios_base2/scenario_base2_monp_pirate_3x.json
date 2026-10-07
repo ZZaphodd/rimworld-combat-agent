@@ -1,0 +1,171 @@
+{
+ "id": "base2_monp_pirate_3x",
+ "save": "scenario_base2_monp_pirate_3x",
+ "spec": {
+  "id": "base2_monp_pirate_3x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ "squad": [
+  {
+   "id": "Human1267204",
+   "name": "Harvey Rivers",
+   "weapon": "Heavy SMG (normal)",
+   "x": 122,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267209",
+   "name": "Richard Stevens",
+   "weapon": "Heavy SMG (normal)",
+   "x": 121,
+   "z": 129,
+   "health": 100
+  },
+  {
+   "id": "Human1267215",
+   "name": "Peter 'Pete' Marshall",
+   "weapon": "Revolver (good)",
+   "x": 124,
+   "z": 131,
+   "health": 100
+  },
+  {
+   "id": "Human1267231",
+   "name": "Jonathan 'John' Medcalf",
+   "weapon": "Pump shotgun (normal 70%)",
+   "x": 126,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human314001",
+   "name": "Sharrone 'Shar' Jussil",
+   "weapon": "Pump shotgun (normal)",
+   "x": 127,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267242",
+   "name": "Hiroto Decadrite",
+   "weapon": "Revolver (normal)",
+   "x": 121,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267249",
+   "name": "Genevieve 'Maverick' Sampson",
+   "weapon": "Revolver (normal 68%)",
+   "x": 122,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267255",
+   "name": "Wanda Bender",
+   "weapon": "Machine pistol (poor)",
+   "x": 123,
+   "z": 128,
+   "health": 100
+  }
+ ],
+ "enemy": [
+  {
+   "id": "Human1267262",
+   "def": "PirateBoss",
+   "x": 249,
+   "z": 181
+  },
+  {
+   "id": "Human1267269",
+   "def": "Pirate",
+   "x": 246,
+   "z": 185
+  },
+  {
+   "id": "Human1267275",
+   "def": "Pirate",
+   "x": 241,
+   "z": 184
+  },
+  {
+   "id": "Human1267281",
+   "def": "Mercenary_Elite",
+   "x": 244,
+   "z": 183
+  },
+  {
+   "id": "Human1267288",
+   "def": "Mercenary_Gunner",
+   "x": 243,
+   "z": 182
+  },
+  {
+   "id": "Human1267296",
+   "def": "Mercenary_Gunner",
+   "x": 244,
+   "z": 185
+  },
+  {
+   "id": "Human1267303",
+   "def": "Mercenary_Sniper",
+   "x": 248,
+   "z": 190
+  },
+  {
+   "id": "Human1267309",
+   "def": "Mercenary_Gunner",
+   "x": 248,
+   "z": 180
+  },
+  {
+   "id": "Human1267317",
+   "def": "Pirate",
+   "x": 245,
+   "z": 182
+  },
+  {
+   "id": "Human1267323",
+   "def": "Mercenary_Sniper",
+   "x": 245,
+   "z": 188
+  },
+  {
+   "id": "Human1267330",
+   "def": "Mercenary_Heavy",
+   "x": 245,
+   "z": 188
+  },
+  {
+   "id": "Human1267335",
+   "def": "Mercenary_Elite",
+   "x": 247,
+   "z": 188
+  },
+  {
+   "id": "Human1267342",
+   "def": "Mercenary_Sniper",
+   "x": 244,
+   "z": 187
+  }
+ ]
+}

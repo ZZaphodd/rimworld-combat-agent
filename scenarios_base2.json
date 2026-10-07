@@ -333,7 +333,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_tribe_3x",
@@ -354,7 +355,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_tribe_4x",
@@ -375,7 +377,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_tribe_6x",
@@ -396,7 +399,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_tribe_8x",
@@ -417,7 +421,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_pirate_2x",
@@ -438,7 +443,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_pirate_3x",
@@ -459,7 +465,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_pirate_4x",
@@ -480,7 +487,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_pirate_6x",
@@ -501,7 +509,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_pirate_8x",
@@ -522,7 +531,8 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_mech_2x",
@@ -543,7 +553,8 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_mech_3x",
@@ -564,7 +575,8 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_mech_4x",
@@ -585,7 +597,8 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_mech_6x",
@@ -606,7 +619,8 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_mon_mech_8x",
@@ -627,13 +641,14 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "stale": "stale (the user, 2026-10-08): Monler with its three mortars; Monler prime (base2_monp_*) replaces it"
  },
  {
   "id": "base2_caw_mech_2x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -648,13 +663,14 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_mech_3x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -669,13 +685,14 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_mech_4x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -690,13 +707,14 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_mech_6x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -711,13 +729,14 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_mech_8x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -732,13 +751,14 @@
    "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_pirate_2x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -753,13 +773,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_pirate_3x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -774,13 +795,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_pirate_4x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -795,13 +817,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_pirate_6x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -816,13 +839,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_pirate_8x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -837,13 +861,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_tribe_2x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -858,13 +883,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_tribe_3x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -879,13 +905,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_tribe_4x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -900,13 +927,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_tribe_6x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -921,13 +949,14 @@
    "strategy": "ImmediateAttack",
    "arrival": "EdgeWalkIn"
   },
-  "assault_ticks": 6000
+  "assault_ticks": 6000,
+  "ladder": false
  },
  {
   "id": "base2_caw_tribe_8x",
   "tier": "base",
   "arena": "arena_col_cawalia2",
-  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
   "squad": {
    "faction": "OutlanderCivil",
    "points": 500,
@@ -940,6 +969,322 @@
    "faction": "TribeRough",
    "points": 4000,
    "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000,
+  "ladder": false
+ },
+ {
+  "id": "base2_monp_tribe_2x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_tribe_3x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_tribe_4x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_tribe_6x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 3000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_tribe_8x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "TribeRough",
+   "points": 4000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_pirate_2x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 1000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_pirate_3x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 1500,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_pirate_4x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 2000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_pirate_6x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 3000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_pirate_8x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 4000,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_mech_2x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_mech_3x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 1500,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_mech_4x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 2000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_mech_6x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 3000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ {
+  "id": "base2_monp_mech_8x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 4000,
+   "strategy": "StageThenAttack",
    "arrival": "EdgeWalkIn"
   },
   "assault_ticks": 6000

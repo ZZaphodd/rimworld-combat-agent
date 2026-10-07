@@ -40,6 +40,8 @@ def use_v2():
 def ladders():
     out = defaultdict(list)
     for s in json.loads(SPECS.read_text()):
+        if s.get("stale") or s.get("ladder") is False:     # Monler with mortars; Cawalia (Claude only)
+            continue
         m = re.match(r"base2?_(\w+?)_(\w+?)_(\d+)x$", s["id"])
         if m and (SCEN / f"scenario_{s['id']}.json").exists():
             out[(m.group(1), m.group(2))].append((int(m.group(3)), s["id"]))

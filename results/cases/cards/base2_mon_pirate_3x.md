@@ -1,5 +1,7 @@
 # base2_mon_pirate_3x · civil outlanders ×8 vs 13 pirates (boss + Elites with Hellcats, snipers, rockets) · Monler base v2 — repelled
 
+> **Stale set (2026-10-08):** played on Monler v2 with its three mortars. The same problem without them is `base2_monp_pirate_3x` (Monler prime).
+
 **Situation:** `base-arena` `raid-far` `raid-outranges` `us-low-skill`
 **Plays seen:** `off-axis-hold` `melee-lock` (agents: `turtle`, `turtle_at`)
 **Numbers:** ours 8 (2 heavy SMGs, 3 revolvers, 2 pump shotguns, machine pistol), 500 pt · raid 13

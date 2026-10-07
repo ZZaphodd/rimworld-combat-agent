@@ -1,0 +1,221 @@
+{
+ "id": "base2_monp_mech_8x",
+ "save": "scenario_base2_monp_mech_8x",
+ "spec": {
+  "id": "base2_monp_mech_8x",
+  "tier": "base",
+  "arena": "arena_col_monlerp2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Monler prime (2026-10-08): Monler v2 without its three mortars (removed 2026-10-07, the user), saves copied from the edited base2_mon_* ones",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    125,
+    130
+   ]
+  },
+  "enemy": {
+   "faction": "Mechanoid",
+   "points": 4000,
+   "strategy": "StageThenAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000
+ },
+ "squad": [
+  {
+   "id": "Human1267202",
+   "name": "Daniel 'Dan' Dempster",
+   "weapon": "Autopistol (normal)",
+   "x": 121,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267206",
+   "name": "Cathryn Trobert",
+   "weapon": "Autopistol (normal 84%)",
+   "x": 124,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267211",
+   "name": "Greg Gilmore",
+   "weapon": "Bolt-action rifle (normal)",
+   "x": 127,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267216",
+   "name": "Kjelt Karlsen",
+   "weapon": "Revolver (normal)",
+   "x": 125,
+   "z": 129,
+   "health": 100
+  },
+  {
+   "id": "Human1267222",
+   "name": "Paul-Olivier 'Paulo' Bouchard",
+   "weapon": "Autopistol (good)",
+   "x": 127,
+   "z": 130,
+   "health": 100
+  },
+  {
+   "id": "Human1267229",
+   "name": "Keisuke Meadows",
+   "weapon": "Revolver (poor 31%)",
+   "x": 119,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267235",
+   "name": "Lexa 'LF' Fantom",
+   "weapon": "Autopistol (poor)",
+   "x": 123,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267240",
+   "name": "Henriette 'Happy' Jacobson",
+   "weapon": "Frag grenades",
+   "x": 127,
+   "z": 128,
+   "health": 100
+  },
+  {
+   "id": "Human1267246",
+   "name": "Iggy Fowler",
+   "weapon": "Revolver (poor)",
+   "x": 127,
+   "z": 128,
+   "health": 100
+  }
+ ],
+ "enemy": [
+  {
+   "id": "Mech_Tesseron1267256",
+   "def": "Mech_Tesseron",
+   "x": 248,
+   "z": 197
+  },
+  {
+   "id": "Mech_Lancer1267258",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 184
+  },
+  {
+   "id": "Mech_Lancer1267260",
+   "def": "Mech_Lancer",
+   "x": 241,
+   "z": 192
+  },
+  {
+   "id": "Mech_Lancer1267262",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 193
+  },
+  {
+   "id": "Mech_Lancer1267264",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 197
+  },
+  {
+   "id": "Mech_Diabolus1267266",
+   "def": "Mech_Diabolus",
+   "x": 249,
+   "z": 183
+  },
+  {
+   "id": "Mech_Lancer1267269",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 195
+  },
+  {
+   "id": "Mech_Legionary1267271",
+   "def": "Mech_Legionary",
+   "x": 244,
+   "z": 186
+  },
+  {
+   "id": "Mech_Lancer1267273",
+   "def": "Mech_Lancer",
+   "x": 248,
+   "z": 196
+  },
+  {
+   "id": "Mech_Tesseron1267275",
+   "def": "Mech_Tesseron",
+   "x": 244,
+   "z": 196
+  },
+  {
+   "id": "Mech_Lancer1267277",
+   "def": "Mech_Lancer",
+   "x": 248,
+   "z": 197
+  },
+  {
+   "id": "Mech_Lancer1267279",
+   "def": "Mech_Lancer",
+   "x": 248,
+   "z": 197
+  },
+  {
+   "id": "Mech_Lancer1267281",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 198
+  },
+  {
+   "id": "Mech_Lancer1267283",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 197
+  },
+  {
+   "id": "Mech_Lancer1267285",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 197
+  },
+  {
+   "id": "Mech_Lancer1267287",
+   "def": "Mech_Lancer",
+   "x": 246,
+   "z": 187
+  },
+  {
+   "id": "Mech_Lancer1267289",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 185
+  },
+  {
+   "id": "Mech_Lancer1267291",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 192
+  },
+  {
+   "id": "Mech_Tesseron1267293",
+   "def": "Mech_Tesseron",
+   "x": 244,
+   "z": 192
+  },
+  {
+   "id": "Mech_Lancer1267295",
+   "def": "Mech_Lancer",
+   "x": 244,
+   "z": 197
+  }
+ ]
+}
