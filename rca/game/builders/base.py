@@ -179,12 +179,13 @@ def remove_caravans(rm, log=print):
     away = [c for c in rm.call("list_colonists")["colonists"] if c.get("inCaravan")]
     gone = []
     for c in away:
-        r = rm.call("debug_menu", action="run", path="Kill World Pawn")
-        opts = [o for o in (r.get("optionList") or {}).get("options") or [] if o.endswith("(colonist)")
-                and o[:-len("(colonist)")] in c["name"]]
-        if not opts:
-            raise RimMoltError(f"{c['name']}: not in Kill World Pawn")
-        rm.call("debug_menu", action="pick", option=opts[0])
+        with rm.exclusive():                    # run -> pick: nobody in between (rca/rimmolt.py)
+            r = rm.call("debug_menu", action="run", path="Kill World Pawn")
+            opts = [o for o in (r.get("optionList") or {}).get("options") or [] if o.endswith("(colonist)")
+                    and o[:-len("(colonist)")] in c["name"]]
+            if not opts:
+                raise RimMoltError(f"{c['name']}: not in Kill World Pawn")
+            rm.call("debug_menu", action="pick", option=opts[0])
         gone.append(c["name"])
     rm.call("debug_menu", action="close")
     left = [c["name"] for c in rm.call("list_colonists")["colonists"] if c.get("inCaravan")]
@@ -233,9 +234,10 @@ def make_hostile(rm, d, defs, log=print):
             raise RimMoltError(f"no {fdef} faction in this world")
         for name in names:
             for _ in range(3):              # from an ally the first pick stops at Neutral (goodwill 84)
-                d.run("Set Faction Relations")
-                menu = next(w for w in rm.call("list_windows")["windows"] if w["type"] == "FloatMenu")
-                rm.call("window_action", index=menu["index"], option=f"{name} - Hostile")
+                with d.held():
+                    d.run("Set Faction Relations")
+                    menu = next(w for w in rm.call("list_windows")["windows"] if w["type"] == "FloatMenu")
+                    rm.call("window_action", index=menu["index"], option=f"{name} - Hostile")
                 if {f["name"]: f.get("relation") for f in rm.call("get_world")["factions"]}.get(name) == "Hostile":
                     break
         rel = {f["name"]: f.get("relation") for f in rm.call("get_world")["factions"]}

@@ -1,14 +1,31 @@
 """Debug-menu helpers (RIMMOLT_API.md §3). Every rule there was learned by
 failure: option lists and armed tools close on ANY other call, so look things
 up before `run`, and issue picks back to back."""
+import contextlib
+import functools
+
 from ..rimmolt import RimMoltError, hostiles, things_of
 
 PODS = ("DropPodIncoming", "ActiveDropPod")
 
 
+def _held(f):
+    """Run a debug sequence (run -> pick/click ...) with the game held exclusive: another
+    client's call in between closes the option list or disarms the tool (rca/rimmolt.py)."""
+    @functools.wraps(f)
+    def wrapped(self, *a, **k):
+        with self.held():
+            return f(self, *a, **k)
+    return wrapped
+
+
 class Debug:
     def __init__(self, rm, log=print):
         self.rm, self.log = rm, log
+
+    def held(self):
+        ex = getattr(self.rm, "exclusive", None)
+        return ex() if ex else contextlib.nullcontext()
 
     def dbg(self, **args):
         r = self.rm.call("debug_menu", **args)
@@ -43,6 +60,7 @@ class Debug:
         opts = [o for o in r["optionList"]["options"] if o.endswith(" points")]
         return min(opts, key=lambda o: abs(int(o.split()[0]) - points))
 
+    @_held
     def spawn_raid(self, faction, points, strategy="ImmediateAttack", arrival="EdgeWalkIn",
                    instant=False):
         """'Execute raid with specifics': we choose strategy and arrival.
@@ -65,6 +83,7 @@ class Debug:
             return new
         return self.settle(before, f"{faction}/{points}")
 
+    @_held
     def spawn_raid_by_faction(self, faction, points, max_steps=20):
         """'Execute raid with faction': game-chosen strategy/arrival; the only
         route for mechs. Fails silently ~25% for mechs: no letter + 'empty
@@ -101,6 +120,7 @@ class Debug:
             raise RimMoltError(f"raid {what} spawned nobody")
         return list(new.values())
 
+    @_held
     def spawn_pawn(self, kind, cells):
         """Lordless spawn ('Spawn Pawn... > Kind'): no raid lord, so the game
         never posts fleeing/satisfied for these pawns. Returns the new hostiles."""
@@ -111,10 +131,12 @@ class Debug:
         return [t for k, t in self.hostile_ids().items() if k not in before]
 
     # ------------------------------------------------------------ pawns
+    @_held
     def recruit(self, pawn):
         self.run("T: Recruit")
         self.dbg(action="click", x=pawn["x"], z=pawn["z"])
 
+    @_held
     def teleport(self, pid, x, z, rounds=5):
         """3-call teleport; the first click misses a walking or stacked pawn, so
         verify with get_pawn and retry."""
@@ -132,6 +154,7 @@ class Debug:
                 continue                        # 2026-10-07): try the round again
         return self.pos(pid) == (x, z)
 
+    @_held
     def place(self, slots, rounds=4):
         """Re-teleport until every pawn is verified on its slot."""
         off = []
@@ -143,6 +166,7 @@ class Debug:
                 self.teleport(pid, *slots[pid], rounds=1)
         raise RimMoltError(f"could not place {off}")
 
+    @_held
     def destroy_at(self, x, z, tries=3):
         """Arm "T: Destroy" and click the cell. Another client's call between the two (Claude's
         hands during an observed episode, 2026-10-05) disarms the tool: arm again and retry."""
@@ -158,10 +182,12 @@ class Debug:
             if clicks[0].get("clicked", True) or k == tries - 1:   # "no debug tool was armed at
                 return r                                           # this point": arm again (2026-10-07)
 
+    @_held
     def clear_area(self, x0, z0, x1, z1):
         self.run("Clear area (rect)")
         self.dbg(action="click", cells=f"{x0},{z0};{x1},{z1}")
 
+    @_held
     def remove_observers(self, observers, squad_ids):
         """Destroy each observer, after checking no squad pawn shares its cell;
         the colony must then equal the squad exactly."""
@@ -176,6 +202,7 @@ class Debug:
         if cols != set(squad_ids):
             raise RimMoltError(f"colony after cleanup {cols} != squad {set(squad_ids)}")
 
+    @_held
     def remove_loose_weapons(self):
         """Ruins hold weapons (even persona ones) a squad would pick up."""
         groups = self.rm.call("list_things", category="item", summary=True, confirm=True)["groups"]
