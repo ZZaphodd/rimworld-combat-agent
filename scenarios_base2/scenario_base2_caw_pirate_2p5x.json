@@ -1,0 +1,162 @@
+{
+  "id": "base2_caw_pirate_2p5x",
+  "save": "scenario_base2_caw_pirate_2p5x",
+  "spec": {
+    "id": "base2_caw_pirate_2p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1250,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Martin 'Tini' Luppold",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 99,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Jack 'Rocket' Varney",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 100,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962098",
+      "name": "Rozalina Morgan",
+      "weapon": "Revolver (poor 27%)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962106",
+      "name": "Veronika Adkins",
+      "weapon": "Revolver (poor)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962111",
+      "name": "Johnson Carson",
+      "weapon": "Steel knife (poor 78%)",
+      "x": 104,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962118",
+      "name": "Mike 'Anarchist' Mudgett",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 99,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962123",
+      "name": "Laila 'Philly' Robbins",
+      "weapon": "Autopistol (good)",
+      "x": 100,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962130",
+      "name": "Renn Tharen",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 103,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962135",
+      "name": "Elvira Combs",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 106,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962147",
+      "def": "PirateBoss",
+      "x": 171,
+      "z": 3
+    },
+    {
+      "id": "Human1962152",
+      "def": "Mercenary_Heavy",
+      "x": 169,
+      "z": 5
+    },
+    {
+      "id": "Human1962158",
+      "def": "Mercenary_Sniper",
+      "x": 182,
+      "z": 5
+    },
+    {
+      "id": "Human1962165",
+      "def": "Mercenary_Elite",
+      "x": 182,
+      "z": 2
+    },
+    {
+      "id": "Human1962171",
+      "def": "Mercenary_Sniper",
+      "x": 171,
+      "z": 8
+    },
+    {
+      "id": "Human1962178",
+      "def": "Mercenary_Gunner",
+      "x": 169,
+      "z": 2
+    },
+    {
+      "id": "Human1962185",
+      "def": "Mercenary_Gunner",
+      "x": 181,
+      "z": 8
+    },
+    {
+      "id": "Human1962192",
+      "def": "Mercenary_Elite",
+      "x": 182,
+      "z": 4
+    },
+    {
+      "id": "Human1962199",
+      "def": "Mercenary_Sniper",
+      "x": 168,
+      "z": 3
+    },
+    {
+      "id": "Human1962206",
+      "def": "Mercenary_Sniper",
+      "x": 167,
+      "z": 2
+    }
+  ]
+}

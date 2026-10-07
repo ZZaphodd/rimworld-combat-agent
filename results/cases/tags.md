@@ -87,6 +87,9 @@ A scene lists both for that moment.
 | `focus-fire` *(new, 2026-10-07)* | every pawn that can see it fires at one raider (a gas, rocket or incendiary holder at the doorway) |
 | `frag-into-queue` *(new, 2026-10-07)* | a frag thrower on the corridor axis behind the plug throws at the raid queued in the corridor below the doorway while the doorway fight holds it still (base2_ith_tribe_6x) |
 | `friendly-fire` *(new, 2026-10-07)* | our own explosive downs or kills our own (base2_ith_tribe_6x: a throw from off the axis struck the rock by the doorway; the thrower's own picks at raiders next to the plug) |
+| `traps-many` *(new, 2026-10-08)* | the base has trap fields the raid has to cross (Cawalia Union: 1,421 spike traps in a ring round the map edge and arcs ~50 cells out) |
+| `turrets` *(new, 2026-10-08)* | powered turrets of the base join the fight (Cawalia Union: 13 sniper and 7 mini-turrets) |
+| `arc-lure` *(new, 2026-10-08)* | a line set so far behind a trap arc that the raid's firing cells lie past it: every raider walks the arc before it can shoot (base2_caw_staircase 1: archers, 30 cells behind the north arc) |
 | `chair-lean` *(new, 2026-10-07)* | chairs placed in the held room so the back row can lean out and shoot down the straight approach (the user's base2_ith_tribe_6x: dining chairs in the east room for the corridor) |
 | `frag-max-range` *(new, 2026-10-07)* | frags thrown toward the far end of their range on the raid's way in, to hit whoever is coming, far from our own because the throw's scatter is hard to judge (the user's base2_ith_tribe_6x: the target cell was rock down the corridor) |
 | `area-frags` *(new, 2026-10-06)* | a frag thrower on an "attack area" order keeps throwing at that area: the user's base_mon_tribe_3x: frags up the passage toward the outer door, held open so they would reach the raiders outside (the user); the furthest sightings (145–146, 94–96); most raiders nearby stood at z 98–105 |
