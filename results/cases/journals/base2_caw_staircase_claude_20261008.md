@@ -272,3 +272,34 @@ user); lost 4 (Wayne, Mad, Hardin, Blake), downed 3, badness 83.2; 12 of 15 kill
 One multiplier still moves by 0.5×, but from here the step comes from a sliding window of the last 6
 counted battles (2 per raid kind): more wins than losses → up, more losses → down, a tie → hold.
 After 14: battles 7–11 won, 14 lost → 5 of 6 → up: next tribe 8×.
+
+## 15 · base2_caw_tribe_8x (8×, tribe)
+Trace `results/human/traces/base2_caw_tribe_8x_claude_20261008-072559.jsonl.gz` · result **repelled**
+(fled t3501, cleared t8044), lost 0, downed 0, badness 0.0; raid 2 killed + 33 inferred of 67, 23 escaped;
+traps 1,420 → 1,351.
+- Card: Kitkat 9, Karina 8 with rifles; Jude 4 (frags), Izzai 3 (a revolver); the rest 0–1. Raid: 67
+  tribal archers (24 short bows, 21 heavy archers with pila and greatbows, 21 recurves, the chief) from
+  the north edge (97–114, 264–273), above the north arc's west part.
+- Loadout: rifles to Izzai and Jude (from Carlotta and Tetsuya).
+- Plan: a line just behind the north turrets (z 146, 5 apart; the short guns at z 143), the block's north
+  wall behind it: an archer must cross the whole arc and stand inside four full turrets' reach.
+- t0–1690: the raid wrecked the north field (z 204–214) and crossed the arc; 19 out or down by t1686,
+  49 traps used.
+- t1690–3500: archers past the arc at z 150–190 on both flanks (the block's NW corner, the ship area);
+  the rifles shot whoever came within 26 (a greatbow at 14); 36 out by t3207; the raid fled at t3501.
+  Nobody of ours hit.
+
+## 16 · base2_caw_pirate_8p5x (8.5×, pirate)
+Trace `results/human/traces/base2_caw_pirate_8p5x_claude_20261008-073245.jsonl.gz` · result **repelled**
+(fled t5528, cleared t9093), lost 0, downed 0, badness 0.0 (Rads 84 %, Tamara 86 %); raid 2 killed + 22
+inferred of 34, 7 escaped; traps 1,421 → 1,351.
+- Card: Fitz 17 (an awful knife), Karlsen 12 (incendiary launcher), Leonard 7 (a revolver), the rest 0–4.
+  Raid: 34 pirates from the west edge (0–8, 186–205): 8 sniper rifles, 3 triple rocket launchers,
+  2 incendiary launchers, 4 LMGs, 3 miniguns, shotguns, 3 slashers, the boss.
+- Loadout: Elena's good rifle to Fitz, Theo's rifle to Leonard.
+- Plan: 8 sniper rifles (44.9) outrange the rifles and nearly match the turrets: the squad inside the
+  block's east room (132–143, 115–131; doors south (132, 114), north (132, 132)), out of their sight.
+- t0–4555: the raid crossed the edge ring and the arc's west end and went for the NW field, the west
+  turrets and the block's west side; 15 out by t4374 (55 traps).
+- t4555–9093: the raid around the block's west and north; fled at t5528; the rest out by t9093.
+  Nobody came into the room; two pawns lost 14–16 % inside it.

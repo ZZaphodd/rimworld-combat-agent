@@ -30,6 +30,8 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 12 | 7.5× | 15 mechs (7 Scythers, 5 Centipede blasters, 2 Lancers, a Centurion) from the NE corner | parked far south; the turrets took 14; five rifles walked ~130 cells to the last Centipede and backed off every 30 ticks | **unresolved** (cap; not counted) | 0 / 0 | 30 | 5.8 |
 | 13 | 7.5× | the same | undrafted through the gathering; a leash along the arc's north side, then turrets at the block's north wall; stood at 28.5 from the last Centipede | **unresolved** (cap; not counted) | 1 / 2 | 38 | 32.2 |
 | 14 | 7.5× | the same (cap 60,000) | killed all seven Scythers near the south turrets; the rest kited south and west; downed pawns left untended | **conceded** (a loss; squad down t47655) | 4 / 3 | 54 | 83.2 |
+| 15 | 8× | 67 tribal archers from the north edge | a line just behind the north turrets, the block's north wall behind it; rifles on whoever came within 26 | **repelled** (fled t3501) | 0 / 0 | 69 | **0.0** |
+| 16 | 8.5× | 34 pirates (8 sniper rifles, 3 triple rocket launchers, 2 incendiary launchers, LMGs, miniguns) from the west edge | rifles to the sh 7–17 with a knife and a revolver; the squad inside the block's east room, out of the snipers' sight | **repelled** (fled t5528) | 0 / 0 | 70 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -81,3 +83,8 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 - **14 · mech 7.5× (cap 60,000)**: the Scythers died to the rifles near the south turrets, but breaks sent
   two pawns wandering into the mechs, three downed pawns bled out untended over ~10,000–20,000 ticks,
   and two full-health Centipedes plus the Centurion were left with the turrets dry; conceded.
+- **15 · t0–3501** `arc-lure`: 67 archers crossed the north arc into four full turrets (49 traps by
+  t1686, 69 in all, the most so far); the line behind the turrets took no hit; fled at t3501.
+- **16 · t0–9093**: the squad sheltered in the block's east room; the raid spent itself on the NW
+  field, the west and north turrets and the block's west side (70 traps, the most so far); fled at
+  t5528.
