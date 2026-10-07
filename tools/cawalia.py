@@ -3,10 +3,19 @@ after a win the raid grows by 0.5x, after a loss it shrinks by 0.5x, so the run 
 size the base can hold with active maneuvering. The raid kind rotates (tribe, pirate, mech): the
 amount matters more than the kind. Spike traps left is the second measure.
 
+From battle 14 on (the user, after mech 7.5x was lost) one multiplier still moves by 0.5x, but the
+step comes from a sliding window of the last 6 counted battles (2 per raid kind): more wins than
+losses in it -> up, more losses -> down, a tie -> the same. One kind's loss no longer pulls the
+others down on its own.
+
   python3 tools/cawalia.py next             # the next multiplier and kind
   python3 tools/cawalia.py prepare          # build that scenario if it is missing; print the manifest path
   python3 tools/cawalia.py record           # append the last Claude row on a base2_caw problem
+  python3 tools/cawalia.py record --concede # the same, booked as a loss (a battle given up)
   python3 tools/cawalia.py show
+
+Play each battle with tools/run_human.py --player claude --max-ticks 30000; 60000 for a mech battle
+(the user, 2026-10-08: mech raids gather ~7,000 ticks and never flee).
 
 State: results/base/cawalia_staircase.jsonl (one line per battle). A win is the row's `win`
 (decisive or repelled, EVAL_SPEC); an unresolved or invalid row does not move the staircase.
@@ -25,6 +34,7 @@ SPECS = ROOT / "scenarios_base2.json"
 SCEN = ROOT / "scenarios_base2"
 KINDS = ("tribe", "pirate", "mech")
 START, STEP, FLOOR = 2.0, 0.5, 0.5
+WINDOW, WINDOW_FROM = 2 * len(KINDS), 14       # the window rule decides the step after battle 14 on
 
 
 def rows():
@@ -35,13 +45,23 @@ def counted(r):
     return r.get("grade") not in ("unresolved", "invalid", None)
 
 
+def step_after(played):
+    """The step after the last counted battle: its own result before WINDOW_FROM, then the balance
+    of wins and losses over the last WINDOW counted battles."""
+    last = played[-1]
+    if last.get("n", 0) < WINDOW_FROM:
+        return STEP if last["win"] else -STEP
+    w = played[-WINDOW:]
+    wins = sum(1 for r in w if r["win"])
+    return STEP if wins > len(w) - wins else -STEP if wins < len(w) - wins else 0.0
+
+
 def next_step(history):
     """(multiplier, kind) for the next battle."""
     played = [r for r in history if counted(r)]
-    mult = START
-    for r in played:
-        mult = max(FLOOR, r["mult"] + (STEP if r["win"] else -STEP))
-    return mult, KINDS[len(played) % len(KINDS)]
+    if not played:
+        return START, KINDS[0]
+    return max(FLOOR, played[-1]["mult"] + step_after(played)), KINDS[len(played) % len(KINDS)]
 
 
 def pid(kind, mult):
@@ -71,8 +91,9 @@ def prepare(kind, mult, log=print):
     return path
 
 
-def record(log=print):
-    """Append the last Claude row on a base2_caw problem to the staircase (once)."""
+def record(log=print, concede=False):
+    """Append the last Claude row on a base2_caw problem to the staircase (once). concede books it
+    as a loss whatever the harness graded it (grade "conceded")."""
     play = [json.loads(l) for l in PLAY.read_text().splitlines() if l.strip()]
     r = next((x for x in reversed(play) if x.get("agent") == "claude"
               and str(x.get("scenario", "")).startswith("base2_caw_")), None)
@@ -87,7 +108,8 @@ def record(log=print):
     traps = r.get("traps") or {}
     t0, t1 = (traps.get("start") or {}).get("count"), (traps.get("end") or {}).get("count")
     line = {"n": len(history) + 1, "scenario": r["scenario"], "kind": kind, "mult": mult,
-            "grade": r.get("grade"), "win": bool(r.get("win")), "badness": badness(r)[0],
+            "grade": "conceded" if concede else r.get("grade"),
+            "win": False if concede else bool(r.get("win")), "badness": badness(r)[0],
             "deaths": r.get("deaths"), "downed": r.get("downed_at_end"),
             "enemies_seen": r.get("enemies_seen"), "raid_fled_tick": r.get("raid_fled_tick"),
             "ticks": r.get("ticks"), "traps_start": t0, "traps_end": t1,
@@ -111,6 +133,7 @@ def show():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=("next", "prepare", "record", "show"))
+    ap.add_argument("--concede", action="store_true", help="record: book the battle as a loss")
     a = ap.parse_args()
     if a.cmd == "next":
         m, k = next_step(rows())
@@ -119,7 +142,7 @@ def main():
         m, k = next_step(rows())
         print(prepare(k, m))
     elif a.cmd == "record":
-        record()
+        record(concede=a.concede)
     else:
         show()
 
