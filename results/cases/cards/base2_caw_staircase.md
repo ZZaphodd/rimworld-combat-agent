@@ -9,8 +9,9 @@ slug turret", minimum range 12, 30 shots before rearming) and 7 mini-turrets; sq
 The user's design (2026-10-08): Claude plays every battle directly, moving so the raid walks over trap
 fields; +0.5× after a win, −0.5× after a loss; spike traps left is the second measure (a loss with many
 traps left reads as too little maneuvering). State: `results/base/cawalia_staircase.jsonl`
-(`tools/cawalia.py show`). Tick cap 30,000; 60,000 for mech battles from battle 14 (the user, after
-mech 7.5× reached 30,000 twice). From battle 15 the step comes from a sliding window of the last 6
+(`tools/cawalia.py show`). Tick cap 30,000; 60,000 for mech battles from battle 14 (the user; asked after battles 12–13, which
+Claude first reported as reaching 30,000 — they were stopped at t29529 by a storyteller raid). From
+battle 22 the storyteller's arrivals are removed and the battle plays on (`--remove-intruders`). From battle 15 the step comes from a sliding window of the last 6
 counted battles (2 per raid kind): more wins → up 0.5×, more losses → down, a tie → hold (the user).
 
 ## Battles
@@ -27,14 +28,16 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 9 | 6× | 12 mechs (4 Centipede blasters, 3 Lancers, 3 Scythers, a Centurion, a Pikeman) from the west edge | a column north of the north arc through the gathering and assault; rifles to ~32–35 of the last three (outside their reach) | **decisive** | 0 / 0 | 26 | **0.0** |
 | 10 | 6.5× | 61 tribal melee from the SW corner | a group north of the south arc; a zigzag across the arc when a raider came within 22 (re-sent every 20 ticks: the group turned back and forth in the band and was caught); then stood and shot point blank | **repelled** (fled t4008) | 1 / 2 | 66 | **26.0** |
 | 11 | 7× | 26 pirate melee (21 slashers with shield belts) from the SW corner | rifles to the sh 7–10 with short guns; the zigzag across the south arc, each crossing after the last had arrived | **repelled** (fled t2546) | 0 / 0 | 32 | **0.0** |
-| 12 | 7.5× | 15 mechs (7 Scythers, 5 Centipede blasters, 2 Lancers, a Centurion) from the NE corner | parked far south; the turrets took 14; five rifles walked ~130 cells to the last Centipede and backed off every 30 ticks | **unresolved** (cap; not counted) | 0 / 0 | 30 | 5.8 |
-| 13 | 7.5× | the same | undrafted through the gathering; a leash along the arc's north side, then turrets at the block's north wall; stood at 28.5 from the last Centipede | **unresolved** (cap; not counted) | 1 / 2 | 38 | 32.2 |
+| 12 | 7.5× | 15 mechs (7 Scythers, 5 Centipede blasters, 2 Lancers, a Centurion) from the NE corner | parked far south; the turrets took 14; five rifles walked ~130 cells to the last Centipede and backed off every 30 ticks | **invalid** (a storyteller raid at t29529; not counted) | 0 / 0 | 30 | 5.8 |
+| 13 | 7.5× | the same | undrafted through the gathering; a leash along the arc's north side, then turrets at the block's north wall; stood at 28.5 from the last Centipede | **invalid** (the same storyteller raid at t29529; not counted) | 1 / 2 | 38 | 32.2 |
 | 14 | 7.5× | the same (cap 60,000) | killed all seven Scythers near the south turrets; the rest kited south and west; downed pawns left untended | **conceded** (a loss; squad down t47655) | 4 / 3 | 54 | 83.2 |
 | 15 | 8× | 67 tribal archers from the north edge | a line just behind the north turrets, the block's north wall behind it; rifles on whoever came within 26 | **repelled** (fled t3501) | 0 / 0 | 69 | **0.0** |
 | 16 | 8.5× | 34 pirates (8 sniper rifles, 3 triple rocket launchers, 2 incendiary launchers, LMGs, miniguns) from the west edge | rifles to the sh 7–17 with a knife and a revolver; the squad inside the block's east room, out of the snipers' sight | **repelled** (fled t5528) | 0 / 0 | 70 | **0.0** |
 | 17 | 9× | 21 mechs (13 Lancers, 3 Pikemen, 3 Diabolus, a Cyclops, a Scorcher) from the north edge | the squad in the block's east room through the assault; then the Pikeman from 33 and the Lancers from 34–36 | **decisive** | 0 / 0 | 42 | **0.0** |
 | 18 | 9.5× | 76 tribal archers from the SE corner | good rifles to the sh 4–5; a line behind the south turrets, then the block's east room when the archers reached 28 | **repelled** (fled t3987) | 0 / 0 | 63 | **0.0** |
 | 19 | 10× | 44 pirates (7 sniper rifles, 3 rocket launchers, miniguns, shotguns, EMP, incinerator) from the SE corner | rifles to the sh 12–13 with short guns; the squad in the block's east room from the start | **repelled** (fled t5459) | 0 / 0 | 58 | **0.0** |
+| 20 | 10.5× | 16 mechs (8 Centipede blasters, 5 Lancers, a War queen, a Scyther, a Scorcher) from the south edge | the east room, out north at the assault; the last three from 31–38 | **invalid** (the War queen's urchins counted as intruders; fixed) | 0 / 0 | 25 | — |
+| 21 | 10.5× | the same | the same | **invalid** (a storyteller raid at t29529) | 0 / 0 | 30 | — |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -81,7 +84,8 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
   behind; 15 of 26 out by t2466 (turrets and traps); fled at t2546. No hit taken.
 - **12–13 · mech 7.5×**: the turrets took 13–14 of 15, then ran out of slugs (60 uranium on the map, one
   rearm); the last Centipede blasters stood far NW out of any loaded turret's reach; bolt-action rifles
-  barely scratched them (~1 % per 250 ticks for three); both runs hit the 30,000-tick cap. The second
+  barely scratched them (~1 % per 250 ticks for three); both runs were stopped at t29529 by a
+  storyteller raid (invalid), first reported as the 30,000-tick cap. The second
   cost Mad (a Centipede stepped 3 cells into range of the rifles at 28.5).
 - **14 · mech 7.5× (cap 60,000)**: the Scythers died to the rifles near the south turrets, but breaks sent
   two pawns wandering into the mechs, three downed pawns bled out untended over ~10,000–20,000 ticks,

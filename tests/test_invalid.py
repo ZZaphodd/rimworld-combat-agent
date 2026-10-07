@@ -39,6 +39,17 @@ class Guard(unittest.TestCase):
         self.assertEqual(harness.unexpected_hostiles({"a", "b"}, enemies), {})
         self.assertEqual(list(harness.unexpected_hostiles({"a"}, enemies)), ["b"])
 
+    def test_settle_removed(self):
+        intr = {"a": {"kind": "Tribal_Warrior", "name": "Morg"}, "b": {"kind": "Tribal_Penitent", "name": "Eel"}}
+        removed, tries = [], {}
+        self.assertEqual(harness.settle_removed(intr, {"b"}, tries, 100, removed), {})
+        self.assertEqual([r["name"] for r in removed], ["Morg"])
+        for k in range(harness.REMOVE_TRIES - 1):
+            stuck = harness.settle_removed({"b": intr["b"]}, {"b"}, tries, 101 + k, removed)
+        self.assertEqual(list(stuck), ["b"])              # survived REMOVE_TRIES polls: invalid
+        harness.settle_removed(intr, set(), tries, 200, removed)
+        self.assertEqual(sorted(r["name"] for r in removed), ["Eel", "Morg"])   # booked once each
+
     def test_war_queen_spawns_belong_to_the_raid(self):
         enemies = {"q": {"kind": "Mech_Warqueen"}, "u": {"kind": "Mech_WarUrchin"},
                    "s": {"kind": "Mech_Scyther"}}

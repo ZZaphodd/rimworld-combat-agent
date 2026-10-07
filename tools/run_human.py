@@ -36,6 +36,9 @@ def main():
                     help="for a human at the GUI: no per-pawn reads while the game runs (with RimMolt's "
                          "'Mirror AI inspection' on they change the selection); weapons read once at "
                          "load, no raider health")
+    ap.add_argument("--remove-intruders", action="store_true",
+                    help="destroy the storyteller's own arrivals and play on instead of ending the "
+                         "run as invalid (listed in the row's storyteller_removed; Cawalia, the user)")
     a = ap.parse_args()
     log = lambda s: print(s, flush=True)          # noqa: E731
     if not (a.scenario or a.manifest):
@@ -46,7 +49,7 @@ def main():
         path = a.trace_dir / f"{m['id']}_{a.player}_{time.strftime('%Y%m%d-%H%M%S')}.jsonl.gz"
         trace = Trace(path, m, a.player, light=a.trace_light)
     row = run_observed_episode(RimMolt(), m, a.max_ticks, a.poll, log, player=a.player,
-                               trace=trace)
+                               trace=trace, remove_intruders=a.remove_intruders)
     if trace:
         p = trace.path.resolve()
         row["trace"] = str(p.relative_to(ROOT) if p.is_relative_to(ROOT) else p)
