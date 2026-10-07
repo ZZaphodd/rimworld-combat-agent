@@ -137,6 +137,45 @@ class RimMolt:
         return self.call("wait_for_event", _timeout=max_seconds + 30, maxGameTicks=ticks,
                          maxSeconds=max_seconds, pause="always", force=True)
 
+    def skip(self, ticks, poll=0.1, until=None, max_seconds=900):
+        """Fast-forward through a stretch that does not matter: unpause at the speed the human last
+        chose in the game (set_speed; RimMolt's own waits run at 1x with the 1-tick setting), pause
+        a little short of the target, then finish with exact waits (the user, 2026-10-07).
+        `until(rm)`, checked every poll, ends the skip early when true; so does a pause from the
+        game itself (a letter, a dialog). Unlike wait_for_event this does not stop on letters or
+        threats: use it only where nothing needs an answer. Returns {start, end, ticks, early, rate}."""
+        tick = lambda: self.call("get_status")["ticksGame"]      # noqa: E731
+        start = tick()
+        target, early, rate = start + ticks, None, 0.0
+        last, t_last = start, time.monotonic()
+        t0 = t_last
+        if ticks > 0:
+            self.call("set_speed", action="unpause")
+            try:
+                while True:
+                    time.sleep(poll)
+                    st = self.call("get_status")
+                    now, t_now = st["ticksGame"], time.monotonic()
+                    step = now - last
+                    if t_now > t_last:
+                        rate = step / (t_now - t_last)
+                    last, t_last = now, t_now
+                    if st.get("paused"):
+                        early = "paused"
+                        break
+                    if until and until(self):
+                        early = "until"
+                        break
+                    if target - now <= 1.5 * step + 10 or t_now - t0 > max_seconds:
+                        break
+            finally:
+                self.call("set_speed", action="pause")
+        now = tick()
+        while early is None and now < target:   # exact finish (the 1-tick setting: wait(n) = n)
+            self.wait(target - now)
+            now = tick()
+        return {"start": start, "end": now, "ticks": now - start, "early": early, "rate": round(rate)}
+
     def alive(self):
         """Liveness probe for the watchdog: get_status answers at all."""
         try:

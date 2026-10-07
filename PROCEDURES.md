@@ -545,6 +545,8 @@ the retrieval prompts are in `results/cases/README.md`.
 
 **Grenades and our own pawns:** never send pawns to a raider a grenade of ours is aimed at (rand_058: our frag downed our own locker); throw first, lock after the blast.
 
+**Fast stretches:** `hands.skip(t)` fast-forwards t ticks at the speed last chosen in the game and lands exactly on t (`rm.skip`); it does not stop on letters or threats, so only for stretches where nothing needs an answer (walking to cells, the raid still far, tending after the raid left), or with `until=`. `wait`/`guard` stay exact at 1×.
+
 **Never advance time blind:** every loop that moves time uses `hands.guard()` or `hands.wait_safe()` (they stop when a raider comes near or one of ours goes down). Two plain `wait()` loops let the raid arrive unseen (rand_015 attempt 2, rand_023). Check that a repeated order works (a wall's %, a target's health) after the first rounds.
 
 A battle in which the context was compacted is discarded, not resumed: move its row to

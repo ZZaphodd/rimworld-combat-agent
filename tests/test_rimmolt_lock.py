@@ -64,3 +64,47 @@ class LockTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class FakeGame(rimmolt.RimMolt):
+    """A clock that runs at `rate` ticks/s while unpaused; wait_for_event advances exactly."""
+    def __init__(self, rate=360, pause_at=None, **kw):
+        super().__init__(lock_path=str(Path(tempfile.mkdtemp()) / "g.lock"), **kw)
+        self.rate, self.t, self.since, self.pause_at = rate, 1000.0, None, pause_at
+
+    def _now(self):
+        if self.since is not None:
+            self.t += (time.monotonic() - self.since) * self.rate
+            self.since = time.monotonic()
+            if self.pause_at and self.t >= self.pause_at:        # the game pauses itself (a letter)
+                self.t, self.since = self.pause_at, None
+        return int(self.t)
+
+    def _call(self, _tool, _timeout=None, **args):
+        if _tool == "get_status":
+            return {"ticksGame": self._now(), "paused": self.since is None}
+        if _tool == "set_speed":
+            self._now()
+            self.since = time.monotonic() if args["action"] == "unpause" else None
+            return {"ok": True}
+        if _tool == "wait_for_event":
+            self.t = int(self._now()) + args["maxGameTicks"]
+            return {"ticksWaited": args["maxGameTicks"]}
+        raise AssertionError(_tool)
+
+
+class SkipTest(unittest.TestCase):
+    def test_lands_exactly_and_ends_paused(self):
+        g = FakeGame()
+        r = g.skip(700, poll=0.02)
+        self.assertEqual((r["ticks"], r["early"]), (700, None))
+        self.assertTrue(g.call("get_status")["paused"])
+
+    def test_until_and_a_pause_from_the_game_end_it_early(self):
+        g = FakeGame()
+        r = g.skip(5000, poll=0.02, until=lambda rm: rm.call("get_status")["ticksGame"] >= 1100)
+        self.assertEqual(r["early"], "until")
+        self.assertLess(r["ticks"], 5000)
+        g = FakeGame(pause_at=1300)
+        r = g.skip(5000, poll=0.02)
+        self.assertEqual((r["early"], r["end"]), ("paused", 1300))
