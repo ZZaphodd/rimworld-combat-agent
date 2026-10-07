@@ -62,6 +62,47 @@ class TraceTest(unittest.TestCase):
         self.assertEqual((end["end"], end["t"], end["grade"]), ("enemies_cleared", 200, "decisive"))
 
 
+class LightRm(FakeRm):
+    """get_pawn allowed only while `paused` (a light trace's load-time read)."""
+    paused = True
+
+    def call(self, tool, **kw):
+        if tool == "get_pawn" and not self.paused:
+            raise AssertionError("per-pawn read while the game runs")
+        if tool == "list_colonists":
+            return {"colonists": [{"id": "H1", "health": 55, "job": "melee attacking Mushinto."}]}
+        return super().call(tool, **kw)
+
+
+class LightTraceTest(unittest.TestCase):
+    def test_weapons_once_then_bulk_reads_only(self):
+        path = Path(tempfile.mkdtemp()) / "light.jsonl.gz"
+        rm = LightRm()
+        t = trace.Trace(path, MANIFEST, "human", light=True)
+        t.ready(rm)
+        rm.paused = False
+        PAWNS[1]["targeting"] = "attacking colonist Butters"
+        try:
+            t.poll(rm, 60)
+        finally:
+            PAWNS[1].pop("targeting")
+        t.end({"outcome": "x"})
+        head, weapons, poll, _ = trace.read(path)
+        self.assertTrue(head["light"])
+        self.assertEqual(weapons["weapons"], {"H1": "Machine pistol (normal)", "H2": "Pump shotgun (normal)"})
+        self.assertEqual((poll["ours"][0]["hp"], poll["ours"][0]["j"], poll["ours"][0]["w"]),
+                         (55, "melee attacking Mushinto.", "Machine pistol (normal)"))
+        self.assertEqual((poll["them"][0]["hp"], poll["them"][0]["j"], poll["them"][0]["w"]),
+                         (None, "attacking colonist Butters", "Pump shotgun (normal)"))
+
+    def test_full_trace_has_no_weapons_line(self):
+        path = Path(tempfile.mkdtemp()) / "full.jsonl.gz"
+        t = trace.Trace(path, MANIFEST, "human")
+        t.ready(FakeRm())
+        t.end({"outcome": "x"})
+        self.assertEqual([("header" in x, "end" in x) for x in trace.read(path)], [(True, False), (False, True)])
+
+
 class TruncatedTest(unittest.TestCase):
     def test_killed_writer_is_still_readable(self):
         tmp = Path(tempfile.mkdtemp())

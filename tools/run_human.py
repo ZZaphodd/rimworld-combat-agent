@@ -32,6 +32,9 @@ def main():
     ap.add_argument("--results", type=Path, default=ROOT / "results/human/play.jsonl")
     ap.add_argument("--trace-dir", type=Path, default=ROOT / "results/human/traces")
     ap.add_argument("--no-trace", action="store_true")
+    ap.add_argument("--trace-light", action="store_true",
+                    help="for a human at the GUI: no per-pawn reads while the game runs (RimMolt's "
+                         "get_pawn changes the selection); weapons read once at load, no raider health")
     a = ap.parse_args()
     log = lambda s: print(s, flush=True)          # noqa: E731
     if not (a.scenario or a.manifest):
@@ -40,7 +43,7 @@ def main():
     trace = None
     if not a.no_trace:
         path = a.trace_dir / f"{m['id']}_{a.player}_{time.strftime('%Y%m%d-%H%M%S')}.jsonl.gz"
-        trace = Trace(path, m, a.player)
+        trace = Trace(path, m, a.player, light=a.trace_light)
     row = run_observed_episode(RimMolt(), m, a.max_ticks, a.poll, log, player=a.player,
                                trace=trace)
     if trace:
