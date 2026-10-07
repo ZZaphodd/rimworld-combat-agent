@@ -65,6 +65,74 @@
   }
  },
  {
+  "title": "base2_mon_pirate_4x · civil outlanders ×9 vs 15 pirates (miniguns, rockets, grenadiers) · Monler base v2 — repelled (turtle)",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-throwers",
+   "raid-outranges",
+   "us-low-skill"
+  ],
+  "plays": [
+   "yard-line",
+   "carry-downed",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "concave in the yard (plan centre (122, 136))",
+    "result": "**repelled** (fled t7532); enemy fire share 1.2 %, no frags",
+    "lost": "0 (0 downed)",
+    "badness": "**0.0**"
+   },
+   {
+    "who": "agent `turtle_at` (plan base2_r1)",
+    "play": "R2 door hold on the passage axis",
+    "result": "repelled (fled t12045); 6 frags, enemy fire share 18 %",
+    "lost": "2 dead, 1 downed",
+    "badness": "38.0"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "yard line near the start, spread; fall-back east",
+    "result": "defeat: squad down t10222",
+    "lost": "3 dead, 6 downed",
+    "badness": "86.5"
+   }
+  ],
+  "id": "base2_mon_pirate_4x",
+  "sites": [
+   "Monler R2"
+  ],
+  "arena": "arena_col_monler2",
+  "ours": "OutlanderCivil",
+  "raid": "Pirate",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 9,
+   "squad_classes": {
+    "long": 1,
+    "short": 6,
+    "explosive": 1,
+    "melee": 1
+   },
+   "enemy_n": 15,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
+   "count_ratio": 0.6,
+   "distance": 125.4,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
   "title": "base2_mon_pirate_6x · civil outlanders ×8 vs 28 pirates (Elites, snipers, Doomsday) · Monler base v2 — repelled",
   "situation": [
    "base-arena",
