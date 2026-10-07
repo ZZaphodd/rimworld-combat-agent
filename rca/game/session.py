@@ -1,4 +1,5 @@
 """Load + ready wait, episode setup and the crash watchdog (PROCEDURES §3, §9, §10)."""
+import contextlib
 import subprocess
 import time
 
@@ -53,9 +54,10 @@ def save(rm, name):
 def never_force_normal_speed(rm):
     """Vanilla drops to 1x whenever combat starts (~10x slower runs). The setting
     has to be set after every load."""
-    rm.call("debug_menu", action="run", tab="settings", path="Never Force Normal Speed",
-            value=True)
-    rm.call("debug_menu", action="close")
+    with (rm.exclusive() if hasattr(rm, "exclusive") else contextlib.nullcontext()):
+        rm.call("debug_menu", action="run", tab="settings", path="Never Force Normal Speed",
+                value=True)
+        rm.call("debug_menu", action="close")
 
 
 def start_episode(rm, save_name):

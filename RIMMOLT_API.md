@@ -29,6 +29,13 @@ prints one line per thing and drops the `get_status` bundle, colour tags and lon
 - Liveness probe for watchdogs: call `get_status` and look for `"result"` in the reply (curl,
   10 s timeout) [code, results/*.sh].
 
+**Shared game lock (2026-10-07).** `rca/rimmolt.py` takes a file lock (`.rimmolt.lock`,
+`fcntl.flock`) around every call: shared for one call, exclusive for a multi-step sequence
+(`with rm.exclusive():` / `rca.rimmolt.exclusive()`), because RimMolt closes an open debug option
+list and disarms an armed tool on any other client's call. `RimMolt(lock_wait=s)` raises
+`RimMoltBusy` after `s` seconds (the overlay skips that poll). Clients that bypass this module, and
+the human's clicks, are not covered.
+
 ## 2. Tools we use
 
 Coordinates are map cells `(x, z)`, with z pointing north. Pawn and thing ids are strings such as

@@ -144,9 +144,14 @@ valley yard below the mountain base) and `arena_col_monler` (from Monler Allianc
 open ground south of the walled block of rooms; 275×275, no mountain; 1,421 spike traps in a ring
 round the map edge and arcs ~50 cells out; 13 sniper and 7 mini-turrets kept, 5 mortars removed
 with `--remove-defs`). That build met three things the first two did not:
-- **Stop the overlay (and any other RimMolt client) while building.** Debug option lists and armed
-  tools close on any other call; the overlay polls every 3 s, so picks and clicks failed at random
-  ("No debug option list is open", a destroy click "no debug tool was armed").
+- **Other clients during a build.** Debug option lists and armed tools close on any other call;
+  the overlay polls every 3 s, so picks and clicks failed at random ("No debug option list is
+  open", a destroy click "no debug tool was armed"). Since 2026-10-07 every client of
+  `rca/rimmolt.py` shares a lock file (`.rimmolt.lock`, `fcntl.flock`): calls take it shared, the
+  debug sequences in `rca/game/debug.py` (and `remove_caravans`, `make_hostile`, the speed setting)
+  take it exclusive, and the overlay skips a poll it cannot get in 0.5 s. Measured with the overlay
+  polling: 3 of 12 run→pick sequences failed without the lock, 0 of 11 with it. Clicks in the
+  game's own window are not covered: leave the game alone while a build runs.
 - **Colonists away in a caravan** are listed by `list_colonists` (with `inCaravan`) and fail the
   scenario builder's colony check; the build kills them as world pawns (`remove_caravans`, debug
   "Kill World Pawn"; "Remove world pawn" only drops them from the world list and leaves the caravan).

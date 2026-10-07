@@ -24,7 +24,7 @@ from pathlib import Path
 import _path  # noqa: F401
 from rca import ROOT
 from rca.game import defs, live
-from rca.rimmolt import RimMolt
+from rca.rimmolt import RimMolt, RimMoltBusy
 
 PAGE = Path(__file__).with_name("overlay.html")
 LADDER = ROOT / "results/base/ladder2.jsonl"
@@ -175,10 +175,12 @@ def poll(rm, period):
             power = strength.update(rm, tick, MODE["strength"]) if pid and strength else None
             ladder_agent, rows = ladder(player)
             STATE.clear()
-            STATE.update({"ok": True, "pid": pid, "player": player, "date": cond.get("date"), "hour": cond.get("hour"),
+            STATE.update({"ok": True, "busy": False, "pid": pid, "player": player, "date": cond.get("date"), "hour": cond.get("hour"),
                           "paused": bool(st.get("paused")), "power": power,
                           "msgs": [m[:90] for m in msgs[-3:]], "ladder": rows, "ladder_agent": ladder_agent,
                           "at": time.time()})
+        except RimMoltBusy:                      # another client holds the game (a build's debug sequence):
+            STATE.update({"busy": True})         # keep the last state and skip this poll
         except Exception as e:                   # loads, restarts, odd replies: keep the last state, marked stale
             STATE.update({"ok": False, "note": type(e).__name__})
         time.sleep(period)
@@ -213,7 +215,7 @@ def main():
                     help="health: standing pawns' points x health %% (a get_pawn each); standing: full points")
     a = ap.parse_args()
     MODE["strength"] = a.strength
-    threading.Thread(target=poll, args=(RimMolt(), a.period), daemon=True).start()
+    threading.Thread(target=poll, args=(RimMolt(lock_wait=0.5), a.period), daemon=True).start()
     print(f"overlay on http://127.0.0.1:{a.port}/", flush=True)
     ThreadingHTTPServer(("127.0.0.1", a.port), Handler).serve_forever()
 
