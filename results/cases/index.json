@@ -292,7 +292,7 @@
   }
  },
  {
-  "title": "base2_mon_pirate_4x · civil outlanders ×9 vs 15 pirates (miniguns, rockets, grenadiers) · Monler base v2 — repelled (turtle)",
+  "title": "base2_mon_pirate_4x · civil outlanders ×9 vs 15 pirates (miniguns, rockets, grenadiers) · Monler base v2 — repelled",
   "situation": [
    "base-arena",
    "raid-far",
@@ -303,6 +303,9 @@
   "plays": [
    "yard-line",
    "carry-downed",
+   "chair-lean",
+   "mouth-hold",
+   "area-frags",
    "turtle"
   ],
   "results": [
@@ -333,6 +336,13 @@
     "result": "**repelled** (fled t10707)",
     "lost": "0 (0 downed)",
     "badness": "3.4"
+   },
+   {
+    "who": "**the user**",
+    "play": "Claude's loadout (Kitty the bolt-action rifle, Lady the knife, Ison the shotgun); dining chairs into R2; all nine in three rows of three right behind R2's door, Lady (knife) on the cell inside the doorway; molotovs, later frags, on area orders up the passage",
+    "result": "**repelled** (fled t12547)",
+    "lost": "0 (1 downed)",
+    "badness": "**5.6**"
    }
   ],
   "id": "base2_mon_pirate_4x",
