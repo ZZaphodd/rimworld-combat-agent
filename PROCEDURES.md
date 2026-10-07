@@ -108,8 +108,14 @@ using the base, by any method; the base is not something to protect. Furniture a
 take firing cells in the held room are uninstalled before the raid comes (building action
 `Uninstall`, then a pawn's undrafted float menu "Prioritize uninstalling …"). Constructing is
 only unassigned in the default work settings, and no squad pawn is incapable of it (RimMolt
-`set_work_priority`); `set_hostility_response` keeps undrafted workers from fleeing (both calls
-untested so far).
+`set_work_priority`); `set_hostility_response` keeps undrafted workers from fleeing (untested).
+Moving furniture: the building action `Reinstall` with `targetX, targetZ` places the blueprint; the
+haulers' undrafted float menu at the blueprint cell offers "Prioritize delivering to …". With
+Construction unassigned the delivery never finishes (the user). Observed 2026-10-07
+(base2_ith_tribe_6x): Construction 1 on every pawn with the area unrestricted sent three to build
+spike traps across the map; give it to the haulers only and draft the rest. Chairs from the dining
+room west of the Ithfunda east room took the long way round through the yard and stalled; the
+user's chairs near the nook (117–124, 177–188) arrived in time.
 
 **Where turtle holds: the strategic layer's pick (the user, 2026-10-06).** v2 is the fair
 measurement and the v1 rows, run with the stockpile shelves standing, are contaminated. Even

@@ -1,4 +1,4 @@
-# base2_ith_tribe_6x · civil outlanders ×8 vs 34 tribals (32 melee) · Ithfunda base v2 — repelled (the user)
+# base2_ith_tribe_6x · civil outlanders ×8 vs 34 tribals (32 melee) · Ithfunda base v2 — repelled
 
 **Situation:** `base-arena` `raid-far` `raid-melee` `raid-outnumbers` `raid-strong-1v1`
 **Plays seen:** `closed-door-hold` `chair-lean` `frag-max-range` `mouth-hold` `melee-lock` `rotation` `frag-into-queue` `carry-downed` `friendly-fire` (agents: `turtle`, `turtle_at`)
@@ -20,6 +20,7 @@ TribeRoughNeanderthal (6×: 3000 pt) · count ratio 0.24 · raid from the east e
 | agent `turtle_at` (plan base2_r1) | door hold, plug + guns 2 back | Ithfunda east room | defeat: squad down (10 killed + 5 inferred) | 2 dead, 6 downed | 73.2 |
 | Claude (alone) | loadout (best shooter the heavy SMG, frags to the weakest), door hold, melee on the plug and diagonals, frags down the corridor axis, rotation; retreat behind the next door | Ithfunda east room | **pyrrhic** (fled t10042) | 3 dead (2 by our own frags), 3 downed, 7 permanent | 80.1 |
 | **the user** | Claude's loadout; chairs hauled into the east room; door (133, 187) left **closed** (forgotten: meant to hold it open) until the raid broke it; Jeyce on the plug, Felix and Elsie (frags, against the wall) on the diagonals, five guns packed 1–2 rows behind (Smith on the axis (133, 189)); frags at the far end of their range down the corridor, then into the queue; Paulo took the frags when Elsie went down | Ithfunda east room | **repelled** (fled t9911) | 1 dead (Felix), 2 downed | **44.9** |
+| Claude, attempt 2 (the user's play reviewed) | the user's cells and chairs, door **held open**, frags only at the ground at the far end of the straight corridor ((133, 177), then (133, 178)) | Ithfunda east room | **repelled** (fled t8785) | 1 dead (Felix, after the flee: a melee order on a fleeing raider), 1 downed, 0 permanent | **19.6** |
 
 ## Scenes (Claude; trace ticks)
 - **t4119–6663** `mouth-hold` `frag-into-queue`: the raid queued in the corridor x 133; the plug
@@ -60,6 +61,18 @@ TribeRoughNeanderthal (6×: 3000 pt) · count ratio 0.24 · raid from the east e
 - No hit on our own pawns in Elsie's or Paulo's log (short logs). Records: Smith 6 kills (89 shots),
   Paulo 4 (104), Kuma 3 (139), Elsie 7,468 damage dealt. Light trace: its weapons line was read before
   the loadout, so five weapons there are the pre-swap ones.
+
+## Scenes (Claude, attempt 2: the user's play reviewed; trace ticks)
+- **t0–4567**: Construction on for all (it was unassigned): three went to build spike traps across the
+  map, two wandered (unrestricted area); drafted at t2384. Five of six chairs in place by ~t3400.
+- **t4587–5300** `frag-max-range`: throws at the rock (133, 177) broke it by ~t5300; then at the
+  ground cell (133, 178) (one-shot orders, given again every ~120 ticks).
+- **t5509–8050** `mouth-hold`: 16 of 34 out by t8785; Jeyce (plug) 100 → 57 % by t7306, down at
+  t8050; Elsie, next to the doorway raider, held her throws while one stood there; no frag hit on ours.
+- **t8050–8785** `carry-downed` `rotation`: Smith carried Jeyce out; Felix to the plug. **t8785 the raid
+  fled**, all but Jeyce at 84–100 %.
+- **t8785–9024**: Felix, sent at a fleeing raider (Gapebal) in the doorway by the "melee whoever is
+  adjacent" loop, dead by t9024.
 
 ## What the play stood on (the user's reasons, 2026-10-07)
 - The door was meant to be held open so the room could shoot; it was forgotten. (Observed: closed,
