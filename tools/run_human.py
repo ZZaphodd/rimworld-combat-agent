@@ -33,8 +33,9 @@ def main():
     ap.add_argument("--trace-dir", type=Path, default=ROOT / "results/human/traces")
     ap.add_argument("--no-trace", action="store_true")
     ap.add_argument("--trace-light", action="store_true",
-                    help="for a human at the GUI: no per-pawn reads while the game runs (RimMolt's "
-                         "get_pawn changes the selection); weapons read once at load, no raider health")
+                    help="for a human at the GUI: no per-pawn reads while the game runs (with RimMolt's "
+                         "'Mirror AI inspection' on they change the selection); weapons read once at "
+                         "load, no raider health")
     a = ap.parse_args()
     log = lambda s: print(s, flush=True)          # noqa: E731
     if not (a.scenario or a.manifest):
