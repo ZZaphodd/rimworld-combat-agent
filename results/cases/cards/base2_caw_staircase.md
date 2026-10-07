@@ -24,6 +24,9 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
 | 8 | 5.5× | 21 pirates (3 doomsday + 1 triple rocket launcher, 4 chain shotguns, 4 assault rifles, LMG, minigun, incinerator) from the NW corner | rifles to the sh 5–9 with short guns; a line south of the north arc, then north of it (z 226), 8 apart | **repelled** (fled t5924) | 0 / 0 | 26 | **0.0** |
 | 9 | 6× | 12 mechs (4 Centipede blasters, 3 Lancers, 3 Scythers, a Centurion, a Pikeman) from the west edge | a column north of the north arc through the gathering and assault; rifles to ~32–35 of the last three (outside their reach) | **decisive** | 0 / 0 | 26 | **0.0** |
 | 10 | 6.5× | 61 tribal melee from the SW corner | a group north of the south arc; a zigzag across the arc when a raider came within 22 (re-sent every 20 ticks: the group turned back and forth in the band and was caught); then stood and shot point blank | **repelled** (fled t4008) | 1 / 2 | 66 | **26.0** |
+| 11 | 7× | 26 pirate melee (21 slashers with shield belts) from the SW corner | rifles to the sh 7–10 with short guns; the zigzag across the south arc, each crossing after the last had arrived | **repelled** (fled t2546) | 0 / 0 | 32 | **0.0** |
+| 12 | 7.5× | 15 mechs (7 Scythers, 5 Centipede blasters, 2 Lancers, a Centurion) from the NE corner | parked far south; the turrets took 14; five rifles walked ~130 cells to the last Centipede and backed off every 30 ticks | **unresolved** (cap; not counted) | 0 / 0 | 30 | 5.8 |
+| 13 | 7.5× | the same | undrafted through the gathering; a leash along the arc's north side, then turrets at the block's north wall; stood at 28.5 from the last Centipede | **unresolved** (cap; not counted) | 1 / 2 | 38 | 32.2 |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -66,3 +69,9 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
 - **10 · t1370–4255**: 61 melee; the rifles thinned the front from z 66 (15 out by t1841); the zigzag
   controller re-sent its crossing every 20 ticks, so the group stayed in the band and six raiders reached
   it (Prokop dead, two down); 66 traps used, the most so far; the raid fled at t4008.
+- **11 · t1541–2748** `arc-lure`: four crossings of the south arc with the shield-belted slashers 16–30
+  behind; 15 of 26 out by t2466 (turrets and traps); fled at t2546. No hit taken.
+- **12–13 · mech 7.5×**: the turrets took 13–14 of 15, then ran out of slugs (60 uranium on the map, one
+  rearm); the last Centipede blasters stood far NW out of any loaded turret's reach; bolt-action rifles
+  barely scratched them (~1 % per 250 ticks for three); both runs hit the 30,000-tick cap. The second
+  cost Mad (a Centipede stepped 3 cells into range of the rifles at 28.5).

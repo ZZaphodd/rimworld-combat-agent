@@ -197,3 +197,53 @@ Trace `results/human/traces/base2_caw_tribe_6p5x_claude_20261008-061949.jsonl.gz
 - t4255–5160: Flebe and Trofim carried east to (150, 62), out of the flight path south.
 - Observed: the crossing order was re-sent before the group had moved; the trigger needs to wait for
   the group to arrive.
+
+## 11 · base2_caw_pirate_7x (7×, pirate)
+Trace `results/human/traces/base2_caw_pirate_7x_claude_20261008-062839.jsonl.gz` · result **repelled**
+(fled t2546, cleared t9437), lost 0, downed 0, badness 0.0; raid 17 inferred of 26, 7 escaped;
+traps 1,421 → 1,389.
+- Card: Mezzatesta 10 and Calum 10/10 the shooters, Abuela 7 (a knife), Stafford (molotovs), the rest
+  0–1. Raid: 26 pirates from the SW corner (7–21, 1–10): 21 slashers with shield belts (axes, gladii,
+  longswords, spears), 3 thrashers, the boss (chain shotgun), one more melee.
+- Loadout: rifles to Calum and Abuela (from Montes and Jerry).
+- Plan: battle 10's zigzag across the south arc, with the crossing re-ordered only once the group had
+  arrived (or after 400 ticks) and the trigger at 30.
+- t0–1540: the group at (120, 66); the raid went for the SW field's turrets and buildings at the arc's
+  west end (x 70–79, z 51–68); 7 out by t1480 (18 traps).
+- t1541–2748: four crossings (S at x 140, N at 160, S at 180, N at 160), the leading raider at 30, 20,
+  16, 29; 15 of 26 out by t2466; the raid fled at t2546.
+- t2748–4254: four went into the block and broke doors; the rest fled west. Nobody of ours hit.
+
+## 12 · base2_caw_mech_7p5x (7.5×, mech) — unresolved (not counted)
+Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-063735.jsonl.gz` · **unresolved** at the 30,000-tick cap; lost 0, downed 0; 14 of 15 mechs killed;
+traps 1,420 → 1,390.
+- Card: Fitz 10 the one shooter; Blake, Wayne 5; the rest 0–2 (Hardin frags). Raid: 7 Scythers,
+  5 Centipede blasters, 2 Lancers, a Centurion from the NE corner (264–273, 253–267).
+- Loadout: Blake took Gates's good rifle.
+- t0–7000: the squad parked north of the south arc (120, 66), ~200 cells from the NE; the mechs gathered
+  at ~(239, 239) until ~t7000.
+- t7000–20800: the assault went through the NE field and the turrets; 14 of 15 out to the turrets and
+  traps by t20772, none within 89 of the squad. Moods fell 50 → 8–13; Hardin broke (insulting spree),
+  others later went into breaks the harness counted as hostile (it saw 22 "enemies").
+- t22272–30000: the last Centipede (57 %) at (51, 212); five rifles walked ~130 cells to it and shot
+  with a step-back at 29 every 30 ticks: it kept walking at them and they fired 2–3 shots each in
+  4,000 ticks (57 → 36 %); stood and fired for the last 1,150 ticks (36 → 28 %). Cap reached.
+
+## 13 · base2_caw_mech_7p5x again (7.5×, mech) — unresolved (not counted)
+Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-065352.jsonl.gz` · **unresolved** at the 30,000-tick cap; lost 1 (Mad), downed 2 (Fitz, Blake),
+badness 32.2; 13 of 15 killed; traps 1,420 → 1,382.
+- Same squad and raid. The squad stayed undrafted through the gathering (moods fell 50 → 27 anyway);
+  drafted at t7030 when the assault began, south of the block (130, 105).
+- t7030–15100: the turrets and traps took 12 of 15 (the NE and E turrets; the north turrets (132, 152) and
+  (154, 152) used all 30 slugs; "No slugs (60x uranium)", 60 uranium on the whole map).
+- t15100–18860: two Centipedes (96 %, 84 %) far NW at (47–49, 215), out of every loaded turret's reach;
+  five rifles led them east along the north side of the arc (stand and fire while the nearest was past
+  29, move on when it came within 29): they closed to their range while the rifles stood; Fitz down,
+  Blake 59 %, Wayne 73 %.
+- t18860–21645: back south across the arc, Fitz carried; the Centipedes followed along the arc's south
+  edge (5 traps); Blake down at (124, 180) before she moved; one Centipede out at t21645.
+- t21645–28364: the rifles at the block's north wall, then at 28.4–28.7 from the last NW Centipede
+  (28 → 20 % in ~2,000 ticks, the rifles firing 12–34 shots each); it stepped 3 cells closer and Mad was
+  killed; Wayne 41 %, Howe 56 %. Pulled back; cap reached with two Centipedes (20 %, 49 %) left.
+- Observed: bolt-action rifles took ~1 % of a Centipede blaster's health per ~250 ticks for three
+  rifles; the turrets' 30 slugs ran out before the last mechs.
