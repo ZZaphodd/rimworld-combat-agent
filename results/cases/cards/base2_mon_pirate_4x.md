@@ -18,6 +18,7 @@ pistol, 2 revolvers), 500 pt · raid 15 Pirate (4×: 2000 pt) · count ratio 0.6
 | agent `turtle` | concave in the yard (plan centre (122, 136)) | Monler yard | **repelled** (fled t7532); enemy fire share 1.2 %, no frags | 0 (0 downed) | **0.0** |
 | agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis | Monler R2 | repelled (fled t12045); 6 frags, enemy fire share 18 % | 2 dead, 1 downed | 38.0 |
 | Claude (alone) | yard line near the start, spread; fall-back east | Monler yard | defeat: squad down t10222 | 3 dead, 6 downed | 86.5 |
+| agent `turtle_at` (plan base2_r1), repeat, watched by Claude | as the ladder row | Monler R2 | **repelled** (fled t10707) | 0 (0 downed) | 3.4 |
 
 ## Scenes (Claude; trace ticks)
 - **t4551–6455** `top-threat`: Bashkire at the trap lane's south mouth (101, 130) shot into the line
@@ -25,6 +26,12 @@ pistol, 2 revolvers), 500 pt · raid 15 Pirate (4×: 2000 pt) · count ratio 0.6
 - **t6849–7071** `trap`: three raiders walking down the trap lane went out.
 - **t7191–7673** `raid-throwers` `fire`: Will walked in with molotovs under six shooters; fire in the line.
 - **t7879–10222**: fall-back east; carries under fire: Ison killed, Zug downed; squad down.
+
+- **turtle_at repeat (watched; spectator ticks)** `trap`: by t5840 five raiders lay dead on the trap
+  lane's spike-trap cells (Dovrath (100, 146), Burton (100, 144), Xiatian (100, 136), Billy (100, 132),
+  Elliott (100, 130)) and Webb downed at (100, 134), without contact with our squad; t9030–9443
+  Hatfield's minigun from the outer door (144, 95) down the passage axis took the plug Kitty from 87
+  to 37 % and hit Lady (145, 82); Hatfield down and the raid fled; 2 kills credited to our pawns.
 
 ## What the play stood on (Claude's reasons)
 - turtle's row: the raid smashed buildings and barely fired; the plan was to stand where turtle stood

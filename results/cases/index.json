@@ -99,6 +99,13 @@
     "result": "defeat: squad down t10222",
     "lost": "3 dead, 6 downed",
     "badness": "86.5"
+   },
+   {
+    "who": "agent `turtle_at` (plan base2_r1), repeat, watched by Claude",
+    "play": "as the ladder row",
+    "result": "**repelled** (fled t10707)",
+    "lost": "0 (0 downed)",
+    "badness": "3.4"
    }
   ],
   "id": "base2_mon_pirate_4x",
