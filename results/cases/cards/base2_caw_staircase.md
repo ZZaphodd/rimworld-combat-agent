@@ -9,7 +9,9 @@ slug turret", minimum range 12, 30 shots before rearming) and 7 mini-turrets; sq
 The user's design (2026-10-08): Claude plays every battle directly, moving so the raid walks over trap
 fields; +0.5× after a win, −0.5× after a loss; spike traps left is the second measure (a loss with many
 traps left reads as too little maneuvering). State: `results/base/cawalia_staircase.jsonl`
-(`tools/cawalia.py show`).
+(`tools/cawalia.py show`). Tick cap 30,000; 60,000 for mech battles from battle 14 (the user, after
+mech 7.5× reached 30,000 twice). From battle 15 the step comes from a sliding window of the last 6
+counted battles (2 per raid kind): more wins → up 0.5×, more losses → down, a tie → hold (the user).
 
 ## Battles
 | n | multiplier | raid | play | result | lost / downed | traps used | badness |
@@ -27,6 +29,7 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
 | 11 | 7× | 26 pirate melee (21 slashers with shield belts) from the SW corner | rifles to the sh 7–10 with short guns; the zigzag across the south arc, each crossing after the last had arrived | **repelled** (fled t2546) | 0 / 0 | 32 | **0.0** |
 | 12 | 7.5× | 15 mechs (7 Scythers, 5 Centipede blasters, 2 Lancers, a Centurion) from the NE corner | parked far south; the turrets took 14; five rifles walked ~130 cells to the last Centipede and backed off every 30 ticks | **unresolved** (cap; not counted) | 0 / 0 | 30 | 5.8 |
 | 13 | 7.5× | the same | undrafted through the gathering; a leash along the arc's north side, then turrets at the block's north wall; stood at 28.5 from the last Centipede | **unresolved** (cap; not counted) | 1 / 2 | 38 | 32.2 |
+| 14 | 7.5× | the same (cap 60,000) | killed all seven Scythers near the south turrets; the rest kited south and west; downed pawns left untended | **conceded** (a loss; squad down t47655) | 4 / 3 | 54 | 83.2 |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -75,3 +78,6 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
   rearm); the last Centipede blasters stood far NW out of any loaded turret's reach; bolt-action rifles
   barely scratched them (~1 % per 250 ticks for three); both runs hit the 30,000-tick cap. The second
   cost Mad (a Centipede stepped 3 cells into range of the rifles at 28.5).
+- **14 · mech 7.5× (cap 60,000)**: the Scythers died to the rifles near the south turrets, but breaks sent
+  two pawns wandering into the mechs, three downed pawns bled out untended over ~10,000–20,000 ticks,
+  and two full-health Centipedes plus the Centurion were left with the turrets dry; conceded.

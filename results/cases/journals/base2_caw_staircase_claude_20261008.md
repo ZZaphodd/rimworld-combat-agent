@@ -247,3 +247,28 @@ badness 32.2; 13 of 15 killed; traps 1,420 → 1,382.
   killed; Wayne 41 %, Howe 56 %. Pulled back; cap reached with two Centipedes (20 %, 49 %) left.
 - Observed: bolt-action rifles took ~1 % of a Centipede blaster's health per ~250 ticks for three
   rifles; the turrets' 30 slugs ran out before the last mechs.
+
+## 14 · base2_caw_mech_7p5x, third try (7.5×, mech; cap 60,000) — conceded (a loss)
+Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-070447.jsonl.gz` · harness: squad down at t47655 (graded unresolved); booked **conceded** (the
+user); lost 4 (Wayne, Mad, Hardin, Blake), downed 3, badness 83.2; 12 of 15 killed; traps 1,420 → 1,366.
+- The squad held south of the block until the assault (t7030); three Scythers came west fast; moved the
+  group 20 south of the turret line (130, 78) so that a chaser would stand in four turrets' reach.
+- t9700–13900: Wayne (wandering, a break) walked to (170, 141) and was cut down by Scythers and the
+  Centurion; four rifles at ~(150, 117) killed all seven Scythers (two in melee with Mad, who went down).
+- t13900–18500: Blake carried Mad south; Blake was shot down carrying him; Howe (wandering) shot down
+  at (118, 75). Fitz, Gates, Lewis, Hardin kited the two nearest Centipedes and the Lancer south across
+  the arc; the Lancer out at t19254.
+- t18500–31000: the two Centipedes followed the four west along the south field to the SW corner, then
+  north up the west side; Hardin's step-back cells were refused ("Go here" not offered) and he was shot
+  at t30623. Wayne (t20079), Mad (t27881) and Blake (t31018) died of blood loss, downed and untended.
+- t31049: six mechs left (three Centipedes 23–31 %, two 75–82 %, the Centurion 64 %); the west turrets
+  still had 26–30 slugs but had not fired at the two Centipedes beside them. The user booked it a loss.
+  The three standing were sent to the NE corner and the clock run to the cap; the mechs caught them
+  (squad down t47655).
+- Observed: with the cap at 60,000, downed pawns left untended bled out (three); turrets ran dry or did
+  not fire; bolt-action rifles did ~1 % to a Centipede per 250 ticks for three.
+
+## Rule change after battle 14 (the user)
+One multiplier still moves by 0.5×, but from here the step comes from a sliding window of the last 6
+counted battles (2 per raid kind): more wins than losses → up, more losses → down, a tie → hold.
+After 14: battles 7–11 won, 14 lost → 5 of 6 → up: next tribe 8×.
