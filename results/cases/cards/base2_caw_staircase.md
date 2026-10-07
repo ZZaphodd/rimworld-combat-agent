@@ -38,6 +38,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 19 | 10× | 44 pirates (7 sniper rifles, 3 rocket launchers, miniguns, shotguns, EMP, incinerator) from the SE corner | rifles to the sh 12–13 with short guns; the squad in the block's east room from the start | **repelled** (fled t5459) | 0 / 0 | 58 | **0.0** |
 | 20 | 10.5× | 16 mechs (8 Centipede blasters, 5 Lancers, a War queen, a Scyther, a Scorcher) from the south edge | the east room, out north at the assault; the last three from 31–38 | **invalid** (the War queen's urchins counted as intruders; fixed) | 0 / 0 | 25 | — |
 | 21 | 10.5× | the same | the same | **invalid** (a storyteller raid at t29529) | 0 / 0 | 30 | — |
+| 22 | 10.5× | the same (storyteller arrivals removed) | the east room, then most of the squad north of the block; the last three Centipedes from 28–34 | **decisive** | 0 / 1 | 33 | **10.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -103,3 +104,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
   at t3987 with 46 out. No hit taken.
 - **19 · t0–5459**: the squad in the east room from the start; the raid crossed the south arc's
   east end into the south and east turrets (58 traps); fled with 30 of 44 out. No hit taken.
+- **20–22 · mech 10.5×**: the War queen's urchins first ended a run as "intruders" (fixed), a storyteller
+  raid at t29529 the next (now removed); the third won: the turrets took the War queen and all but three
+  Centipedes, finished by the rifles from just outside their reach at t42415. The squad, drafted for
+  ~40,000 ticks, was starving (food 3–4 %) by the end.
