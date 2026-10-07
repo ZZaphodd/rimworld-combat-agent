@@ -320,3 +320,26 @@ Trace `results/human/traces/base2_caw_mech_9x_claude_20261008-074318.jsonl.gz` �
   out at t19400, no hit taken.
 - t19400–27868: two Lancers idle in the NW field (55–57, 214–223); the rifles stood 34–36 from them (outside
   the charge lances' 32.9) and fired; out at t22017 and t27868. Nobody of ours hit all battle.
+
+## 18 · base2_caw_tribe_9p5x (9.5×, tribe)
+Trace `results/human/traces/base2_caw_tribe_9p5x_claude_20261008-075328.jsonl.gz` · result **repelled** (fled t3987, cleared t7605), lost 0,
+downed 0, badness 0.0; raid 1 killed + 38 inferred of 76, 33 escaped; traps 1,421 → 1,358.
+- Card: Mathias 5, Yu 4, Carmelita 3 (rifles), the rest 0–2. Raid: 76 tribal archers (27 heavy archers,
+  26 recurves, 22 short bows, the chief) from the SE corner (210–229, 2–10).
+- Loadout: the good rifles to Mathias and Yu (from Ulfwin and Maverick).
+- t0–1430: a line behind the south turrets (z 106, x 128–152); the archers crossed the edge ring and the
+  south arc's east end (43 traps, 12 out by t1306) and reached z 72–80, 28–37 from the line.
+- t1430–3990: the squad went into the block's east room; an archer broke at its south door (132, 114)
+  (89 %) with others gathering at (124–139, 97–109); none came in. 46 out by t3987; fled.
+- Nobody of ours hit.
+
+## 19 · base2_caw_pirate_10x (10×, pirate)
+Trace `results/human/traces/base2_caw_pirate_10x_claude_20261008-080022.jsonl.gz` · result **repelled** (fled t5459, cleared t13276), lost 0,
+downed 0, badness 0.0; raid 2 killed + 28 inferred of 44, 9 escaped; traps 1,421 → 1,363.
+- Card: Mushinto 13, Braz 12 (an excellent revolver), Lissa 10 (a rifle); the rest 3–5. Raid: 44 pirates
+  from the SE corner (201–219, 1–9): 7 sniper rifles, 2 doomsday and 1 triple rocket launcher, 3 miniguns,
+  an LMG, hellcats, assault rifles, chain and pump shotguns, an EMP launcher, an incinerator.
+- Loadout: Ninjak's good rifle to Mushinto, Smith's rifle to Braz.
+- The squad in the block's east room from the start (battles 16–18). The raid crossed the edge ring and
+  the south arc's east end for the SE field and the south and east turrets; 30 out by t5867; fled at
+  t5459. A straggler broke at another room's door (125, 115). Nobody of ours hit.

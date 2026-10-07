@@ -33,6 +33,8 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 15 | 8× | 67 tribal archers from the north edge | a line just behind the north turrets, the block's north wall behind it; rifles on whoever came within 26 | **repelled** (fled t3501) | 0 / 0 | 69 | **0.0** |
 | 16 | 8.5× | 34 pirates (8 sniper rifles, 3 triple rocket launchers, 2 incendiary launchers, LMGs, miniguns) from the west edge | rifles to the sh 7–17 with a knife and a revolver; the squad inside the block's east room, out of the snipers' sight | **repelled** (fled t5528) | 0 / 0 | 70 | **0.0** |
 | 17 | 9× | 21 mechs (13 Lancers, 3 Pikemen, 3 Diabolus, a Cyclops, a Scorcher) from the north edge | the squad in the block's east room through the assault; then the Pikeman from 33 and the Lancers from 34–36 | **decisive** | 0 / 0 | 42 | **0.0** |
+| 18 | 9.5× | 76 tribal archers from the SE corner | good rifles to the sh 4–5; a line behind the south turrets, then the block's east room when the archers reached 28 | **repelled** (fled t3987) | 0 / 0 | 63 | **0.0** |
+| 19 | 10× | 44 pirates (7 sniper rifles, 3 rocket launchers, miniguns, shotguns, EMP, incinerator) from the SE corner | rifles to the sh 12–13 with short guns; the squad in the block's east room from the start | **repelled** (fled t5459) | 0 / 0 | 58 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -92,3 +94,8 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 - **17 · t0–27868**: the squad sheltered in the block's east room while the assault crossed the north arc
   and took the north turrets; 18 of 21 out to turrets and traps; the last three (a Pikeman, two idle
   Lancers) shot from just outside their reach. No hit taken.
+- **18 · t0–3987**: 76 archers crossed the south arc's east end into the south turrets (43 traps by
+  t1306); the squad went into the east room as they reached 28 of the line; one broke at its door; fled
+  at t3987 with 46 out. No hit taken.
+- **19 · t0–5459**: the squad in the east room from the start; the raid crossed the south arc's
+  east end into the south and east turrets (58 traps); fled with 30 of 44 out. No hit taken.
