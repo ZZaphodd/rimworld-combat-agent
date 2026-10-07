@@ -137,9 +137,19 @@ def strip_anomaly(rm, d, log=print):
         d.destroy_at(*at)
         removed.append(t.get("def") or t.get("kind"))
     d.close()
-    left = [t["id"] for t in rm.call("list_things", category="pawn", verbose=True,
-                                     confirm=True)["things"] if t.get("faction") == ENTITY_FACTION]
-    left += [t["id"] for name in ANOMALY_DEFS for t in things_of(rm, name)]
+
+    def remaining():
+        out = [t for t in rm.call("list_things", category="pawn", verbose=True,
+                                  confirm=True)["things"] if t.get("faction") == ENTITY_FACTION]
+        return out + [t for name in ANOMALY_DEFS for t in things_of(rm, name)]
+    for _ in range(2):                          # a click can miss (Cawalia's casket, 2026-10-07)
+        again = remaining()
+        if not again:
+            break
+        for t in again:
+            d.destroy_at(t["x"], t["z"])
+        d.close()
+    left = [t["id"] for t in remaining()]
     if left:
         raise RimMoltError(f"anomaly content left: {left}")
     log(f"stripped anomaly content: {removed}")

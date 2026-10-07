@@ -1,0 +1,173 @@
+{
+  "id": "base2_caw_pirate_2x",
+  "save": "scenario_base2_caw_pirate_2x",
+  "spec": {
+    "id": "base2_caw_pirate_2x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Debby Gilbert",
+      "weapon": "Steel knife (poor)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 98,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962100",
+      "name": "Kevin 'Fleetie' Franco",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962122",
+      "name": "Hibiki Sairenji",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962130",
+      "name": "Jonathan 'John' Medcalf",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 106,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962135",
+      "name": "Adam Denny",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962140",
+      "name": "Phillip Vector",
+      "weapon": "Steel knife (poor)",
+      "x": 98,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962146",
+      "name": "Steve 'Stoov' Warren",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962151",
+      "name": "Caroline 'Cap' Hardin",
+      "weapon": "Autopistol (good)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962161",
+      "def": "Grenadier_Destructive",
+      "x": 118,
+      "z": 7
+    },
+    {
+      "id": "Human1962167",
+      "def": "Scavenger",
+      "x": 119,
+      "z": 4
+    },
+    {
+      "id": "Human1962171",
+      "def": "Scavenger",
+      "x": 122,
+      "z": 8
+    },
+    {
+      "id": "Human1962178",
+      "def": "Mercenary_Gunner",
+      "x": 120,
+      "z": 9
+    },
+    {
+      "id": "Human1962186",
+      "def": "Mercenary_Gunner",
+      "x": 118,
+      "z": 6
+    },
+    {
+      "id": "Human1962194",
+      "def": "Grenadier_Destructive",
+      "x": 121,
+      "z": 6
+    },
+    {
+      "id": "Human1962200",
+      "def": "Pirate",
+      "x": 114,
+      "z": 3
+    },
+    {
+      "id": "Human1962206",
+      "def": "Mercenary_Gunner",
+      "x": 114,
+      "z": 4
+    },
+    {
+      "id": "Human1962213",
+      "def": "Scavenger",
+      "x": 126,
+      "z": 4
+    },
+    {
+      "id": "Human1962217",
+      "def": "Mercenary_Sniper",
+      "x": 118,
+      "z": 9
+    },
+    {
+      "id": "Human1962226",
+      "def": "Mercenary_Sniper",
+      "x": 114,
+      "z": 3
+    },
+    {
+      "id": "Human1962232",
+      "def": "Scavenger",
+      "x": 119,
+      "z": 3
+    }
+  ]
+}

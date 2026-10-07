@@ -1,0 +1,251 @@
+{
+  "id": "base2_caw_mech_8x",
+  "save": "scenario_base2_caw_mech_8x",
+  "spec": {
+    "id": "base2_caw_mech_8x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 4000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Lorenzo Delacruz",
+      "weapon": "Steel knife (poor 31%)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Diana Weaver",
+      "weapon": "Steel knife (poor)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962098",
+      "name": "Raisa Osborn",
+      "weapon": "Autopistol (poor)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962102",
+      "name": "Winnie Lopez",
+      "weapon": "Revolver (good)",
+      "x": 105,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962109",
+      "name": "Darya Malone",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962115",
+      "name": "Antoine Velazquez",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 97,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962120",
+      "name": "McFly McGee",
+      "weapon": "Autopistol (poor 59%)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962126",
+      "name": "Tomoko Burnett",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962131",
+      "name": "Paola Lyons",
+      "weapon": "Bolt-action rifle (good 70%)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Tesseron1962140",
+      "def": "Mech_Tesseron",
+      "x": 103,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1962142",
+      "def": "Mech_Lancer",
+      "x": 101,
+      "z": 8
+    },
+    {
+      "id": "Mech_Lancer1962144",
+      "def": "Mech_Lancer",
+      "x": 89,
+      "z": 4
+    },
+    {
+      "id": "Mech_Lancer1962146",
+      "def": "Mech_Lancer",
+      "x": 94,
+      "z": 9
+    },
+    {
+      "id": "Mech_Lancer1962148",
+      "def": "Mech_Lancer",
+      "x": 90,
+      "z": 2
+    },
+    {
+      "id": "Mech_Cyclops1962150",
+      "def": "Mech_Cyclops",
+      "x": 101,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1962152",
+      "def": "Mech_Lancer",
+      "x": 98,
+      "z": 6
+    },
+    {
+      "id": "Mech_Tesseron1962154",
+      "def": "Mech_Tesseron",
+      "x": 104,
+      "z": 3
+    },
+    {
+      "id": "Mech_Legionary1962156",
+      "def": "Mech_Legionary",
+      "x": 102,
+      "z": 3
+    },
+    {
+      "id": "Mech_Pikeman1962158",
+      "def": "Mech_Pikeman",
+      "x": 100,
+      "z": 5
+    },
+    {
+      "id": "Mech_Tesseron1962160",
+      "def": "Mech_Tesseron",
+      "x": 100,
+      "z": 5
+    },
+    {
+      "id": "Mech_Pikeman1962162",
+      "def": "Mech_Pikeman",
+      "x": 87,
+      "z": 2
+    },
+    {
+      "id": "Mech_Pikeman1962164",
+      "def": "Mech_Pikeman",
+      "x": 91,
+      "z": 6
+    },
+    {
+      "id": "Mech_Legionary1962166",
+      "def": "Mech_Legionary",
+      "x": 90,
+      "z": 4
+    },
+    {
+      "id": "Mech_Lancer1962168",
+      "def": "Mech_Lancer",
+      "x": 101,
+      "z": 2
+    },
+    {
+      "id": "Mech_Tesseron1962170",
+      "def": "Mech_Tesseron",
+      "x": 100,
+      "z": 3
+    },
+    {
+      "id": "Mech_Lancer1962172",
+      "def": "Mech_Lancer",
+      "x": 89,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1962174",
+      "def": "Mech_Lancer",
+      "x": 92,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1962176",
+      "def": "Mech_Lancer",
+      "x": 100,
+      "z": 9
+    },
+    {
+      "id": "Mech_Legionary1962178",
+      "def": "Mech_Legionary",
+      "x": 104,
+      "z": 2
+    },
+    {
+      "id": "Mech_Pikeman1962180",
+      "def": "Mech_Pikeman",
+      "x": 94,
+      "z": 5
+    },
+    {
+      "id": "Mech_Lancer1962182",
+      "def": "Mech_Lancer",
+      "x": 100,
+      "z": 7
+    },
+    {
+      "id": "Mech_Lancer1962184",
+      "def": "Mech_Lancer",
+      "x": 101,
+      "z": 8
+    },
+    {
+      "id": "Mech_Lancer1962186",
+      "def": "Mech_Lancer",
+      "x": 93,
+      "z": 8
+    },
+    {
+      "id": "Mech_Pikeman1962188",
+      "def": "Mech_Pikeman",
+      "x": 99,
+      "z": 2
+    }
+  ]
+}

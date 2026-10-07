@@ -1,0 +1,189 @@
+{
+  "id": "base2_caw_tribe_2x",
+  "save": "scenario_base2_caw_tribe_2x",
+  "spec": {
+    "id": "base2_caw_tribe_2x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 1000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Tammy Webster",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Linghao 'Trumpet' Zhang",
+      "weapon": "Revolver (good)",
+      "x": 98,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962100",
+      "name": "Anton 'Waltz' Walther",
+      "weapon": "Bolt-action rifle (normal 63%)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962107",
+      "name": "Haruto Ibarra",
+      "weapon": "Frag grenades (94%)",
+      "x": 100,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962112",
+      "name": "Rogerio 'Roger' de Leon",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 106,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962119",
+      "name": "Mikhail Peterson",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 99,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962125",
+      "name": "Andrea Decavite",
+      "weapon": "Bolt-action rifle (poor 80%)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962131",
+      "name": "Kjelt Karlsen",
+      "weapon": "Revolver (normal)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962138",
+      "def": "Tribal_Archer",
+      "x": 140,
+      "z": 269
+    },
+    {
+      "id": "Human1962143",
+      "def": "Tribal_Archer",
+      "x": 145,
+      "z": 267
+    },
+    {
+      "id": "Human1962147",
+      "def": "Tribal_ChiefRanged",
+      "x": 142,
+      "z": 267
+    },
+    {
+      "id": "Human1962152",
+      "def": "Tribal_Hunter",
+      "x": 147,
+      "z": 268
+    },
+    {
+      "id": "Human1962156",
+      "def": "Tribal_Hunter",
+      "x": 146,
+      "z": 265
+    },
+    {
+      "id": "Human57290",
+      "def": "Tribal_Archer",
+      "x": 144,
+      "z": 268
+    },
+    {
+      "id": "Human1962178",
+      "def": "Tribal_Hunter",
+      "x": 150,
+      "z": 265
+    },
+    {
+      "id": "Human1962194",
+      "def": "Tribal_Hunter",
+      "x": 150,
+      "z": 268
+    },
+    {
+      "id": "Human1962199",
+      "def": "Tribal_HeavyArcher",
+      "x": 151,
+      "z": 266
+    },
+    {
+      "id": "Human1962204",
+      "def": "Tribal_HeavyArcher",
+      "x": 140,
+      "z": 269
+    },
+    {
+      "id": "Human1962209",
+      "def": "Tribal_Hunter",
+      "x": 140,
+      "z": 272
+    },
+    {
+      "id": "Human1962213",
+      "def": "Tribal_HeavyArcher",
+      "x": 145,
+      "z": 269
+    },
+    {
+      "id": "Human1962218",
+      "def": "Tribal_Archer",
+      "x": 144,
+      "z": 270
+    },
+    {
+      "id": "Human1962224",
+      "def": "Tribal_Hunter",
+      "x": 146,
+      "z": 267
+    },
+    {
+      "id": "Human1962228",
+      "def": "Tribal_HeavyArcher",
+      "x": 144,
+      "z": 269
+    },
+    {
+      "id": "Human1962245",
+      "def": "Tribal_HeavyArcher",
+      "x": 150,
+      "z": 268
+    }
+  ]
+}

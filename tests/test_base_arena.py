@@ -122,5 +122,24 @@ class RemoveDefsTest(unittest.TestCase):
             base.remove_defs(["Monler Alliance"], ("Turret_Mortar",), log=lambda *_: None)
 
 
+class SetHostileInFileTest(unittest.TestCase):
+    XML = ("<?xml version='1.0' encoding='utf-8'?><savegame><game><world><factionManager><allFactions>"
+           "<li><def>OutlanderCivil</def><name>Itdio</name><relations>"
+           "<li><other>Faction_10</other><kind>Ally</kind><goodwill>95</goodwill></li></relations></li>"
+           "<li><def>PlayerColony</def><name>Us</name><loadID>10</loadID><relations>"
+           "<li><other>Faction_0</other><kind>Ally</kind><goodwill>95</goodwill></li></relations></li>"
+           "</allFactions></factionManager></world></game></savegame>")
+
+    def test_both_directions_hostile(self):
+        import tempfile
+        from pathlib import Path
+        p = Path(tempfile.mkdtemp()) / "arena_col_x.rws"
+        p.write_text(self.XML)
+        self.assertEqual(base.set_hostile_in_file(p, ("OutlanderCivil",), log=lambda *_: None), ["Itdio"])
+        text = p.read_text()
+        self.assertEqual(text.count("<kind>Hostile</kind>"), 2)
+        self.assertEqual(text.count("<goodwill>-100</goodwill>"), 2)
+
+
 if __name__ == "__main__":
     unittest.main()

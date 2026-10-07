@@ -140,6 +140,20 @@ turtle needs the strategic layer to mark where to hold, and rules can't pick yet
 Built: `arena_col_ithfunda` (from Ithfunda; observer (8,8); squad at (118,165), the walled
 valley yard below the mountain base) and `arena_col_monler` (from Monler Alliance; observer
 (240,240); squad at (125,130), the walled yard of a mountain base with tunnels).
+`arena_col_cawalia` (from Cawalia Union, 2026-10-07; observer (250,250); squad at (100,108), the
+open ground south of the walled block of rooms; 275×275, no mountain; 1,421 spike traps in a ring
+round the map edge and arcs ~50 cells out; 13 sniper and 7 mini-turrets kept, 5 mortars removed
+with `--remove-defs`). That build met three things the first two did not:
+- **Stop the overlay (and any other RimMolt client) while building.** Debug option lists and armed
+  tools close on any other call; the overlay polls every 3 s, so picks and clicks failed at random
+  ("No debug option list is open", a destroy click "no debug tool was armed").
+- **Colonists away in a caravan** are listed by `list_colonists` (with `inCaravan`) and fail the
+  scenario builder's colony check; the build kills them as world pawns (`remove_caravans`, debug
+  "Kill World Pawn"; "Remove world pawn" only drops them from the world list and leaves the caravan).
+- **Ally factions:** the squad's faction and the tribe were allies of the colony; when "Set Faction
+  Relations" opens no menu (it opened none while the overlay was polling; not retried without it),
+  the relations are set Hostile in the saved file (`set_hostile_in_file`). Pass every raid faction that is not hostile: `--hostile
+  OutlanderCivil,TribeRough`.
 Stored game conditions: a colony saved during one keeps it in the arena and every scenario built
 from it (Monler: a solar flare, power off for the first ~12,500 battle ticks). Remove them offline
 (the user, 2026-10-07): `python3 tools/make_base_arena.py --clear-conditions SolarFlare --saves

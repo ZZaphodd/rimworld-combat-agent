@@ -1,0 +1,149 @@
+{
+  "id": "base2_caw_mech_2x",
+  "save": "scenario_base2_caw_mech_2x",
+  "spec": {
+    "id": "base2_caw_mech_2x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 1000,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Zriatt Kadleck",
+      "weapon": "Steel knife (poor)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962094",
+      "name": "Kay 'Kaos' Stanley",
+      "weapon": "Autopistol (excellent)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962101",
+      "name": "Valentina Clayton",
+      "weapon": "Bolt-action rifle (normal 82%)",
+      "x": 103,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962107",
+      "name": "Cory 'Stomp' Gustafson",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962131",
+      "name": "Jack Lillie",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 106,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962135",
+      "name": "Kelly Macintosh",
+      "weapon": "Autopistol (normal)",
+      "x": 99,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962140",
+      "name": "Carlotta Zuniga",
+      "weapon": "Bolt-action rifle (good 93%)",
+      "x": 100,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962146",
+      "name": "Fauna 'Furr' Wells",
+      "weapon": "Bolt-action rifle (normal 75%)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962151",
+      "name": "Marat George",
+      "weapon": "Steel knife (poor 56%)",
+      "x": 104,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Pikeman1962159",
+      "def": "Mech_Pikeman",
+      "x": 147,
+      "z": 6
+    },
+    {
+      "id": "Mech_Scyther1962161",
+      "def": "Mech_Scyther",
+      "x": 147,
+      "z": 8
+    },
+    {
+      "id": "Mech_Pikeman1962162",
+      "def": "Mech_Pikeman",
+      "x": 142,
+      "z": 2
+    },
+    {
+      "id": "Mech_Scyther1962164",
+      "def": "Mech_Scyther",
+      "x": 143,
+      "z": 8
+    },
+    {
+      "id": "Mech_Scyther1962165",
+      "def": "Mech_Scyther",
+      "x": 144,
+      "z": 3
+    },
+    {
+      "id": "Mech_Pikeman1962166",
+      "def": "Mech_Pikeman",
+      "x": 143,
+      "z": 3
+    },
+    {
+      "id": "Mech_Pikeman1962168",
+      "def": "Mech_Pikeman",
+      "x": 143,
+      "z": 4
+    },
+    {
+      "id": "Mech_Pikeman1962170",
+      "def": "Mech_Pikeman",
+      "x": 146,
+      "z": 6
+    }
+  ]
+}
