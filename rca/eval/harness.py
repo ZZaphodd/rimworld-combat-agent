@@ -374,6 +374,8 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
     # text has another tick and still counts.
     stale = {(n.get("tick"), (n.get("text") or "")[:160])
              for n in (rm.call("get_alerts").get("recentMessages") or [])}
+    if trace is not None and hasattr(trace, "ready"):
+        trace.ready(rm)                         # a light trace's one read of every pawn, still paused
     log(f"   {manifest['id']} loaded and paused: play when ready (the harness only watches)")
     while True:
         time.sleep(poll_s)
