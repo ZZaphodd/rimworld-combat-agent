@@ -1,0 +1,274 @@
+{
+  "id": "base2_caw_tribe_3p5x",
+  "save": "scenario_base2_caw_tribe_3p5x",
+  "spec": {
+    "id": "base2_caw_tribe_3p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "TribeRough",
+      "points": 1750,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962088",
+      "name": "Robert 'Gnugfur' Krondorfer",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 96,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Whitney Clark",
+      "weapon": "Bolt-action rifle (poor 70%)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962098",
+      "name": "Zachary 'Zach' Gebheart",
+      "weapon": "Bolt-action rifle (normal 64%)",
+      "x": 98,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962104",
+      "name": "Peter 'Pete' Marshall",
+      "weapon": "Autopistol (good)",
+      "x": 105,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962113",
+      "name": "Nikki 'Syl' Eurydice",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 107,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962118",
+      "name": "Kelly Phospore",
+      "weapon": "Bolt-action rifle (normal 74%)",
+      "x": 94,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962125",
+      "name": "Nevil Reed",
+      "weapon": "Autopistol (poor 47%)",
+      "x": 98,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962130",
+      "name": "Akemi Hartman",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 99,
+      "z": 109,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1842379",
+      "def": "Tribal_Penitent",
+      "x": 6,
+      "z": 69
+    },
+    {
+      "id": "Human1962159",
+      "def": "Tribal_Hunter",
+      "x": 3,
+      "z": 66
+    },
+    {
+      "id": "Human1962164",
+      "def": "Tribal_HeavyArcher",
+      "x": 6,
+      "z": 73
+    },
+    {
+      "id": "Human1962169",
+      "def": "Tribal_Hunter",
+      "x": 3,
+      "z": 76
+    },
+    {
+      "id": "Human715007",
+      "def": "Tribal_Warrior",
+      "x": 4,
+      "z": 77
+    },
+    {
+      "id": "Human1962178",
+      "def": "Tribal_Hunter",
+      "x": 8,
+      "z": 68
+    },
+    {
+      "id": "Human1962182",
+      "def": "Tribal_Archer",
+      "x": 4,
+      "z": 74
+    },
+    {
+      "id": "Human1962187",
+      "def": "Tribal_Penitent",
+      "x": 3,
+      "z": 76
+    },
+    {
+      "id": "Human1962191",
+      "def": "Tribal_HeavyArcher",
+      "x": 7,
+      "z": 65
+    },
+    {
+      "id": "Human1962196",
+      "def": "Tribal_HeavyArcher",
+      "x": 8,
+      "z": 65
+    },
+    {
+      "id": "Human1962202",
+      "def": "Tribal_Archer",
+      "x": 8,
+      "z": 73
+    },
+    {
+      "id": "Human1962208",
+      "def": "Tribal_Berserker",
+      "x": 10,
+      "z": 72
+    },
+    {
+      "id": "Human1962213",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 70
+    },
+    {
+      "id": "Human1962217",
+      "def": "Tribal_Berserker",
+      "x": 6,
+      "z": 74
+    },
+    {
+      "id": "Human1962222",
+      "def": "Tribal_Penitent",
+      "x": 4,
+      "z": 74
+    },
+    {
+      "id": "Human1962226",
+      "def": "Tribal_Archer",
+      "x": 5,
+      "z": 75
+    },
+    {
+      "id": "Human1962231",
+      "def": "Tribal_Hunter",
+      "x": 3,
+      "z": 71
+    },
+    {
+      "id": "Human1962241",
+      "def": "Tribal_Hunter",
+      "x": 3,
+      "z": 76
+    },
+    {
+      "id": "Human1962246",
+      "def": "Tribal_Warrior",
+      "x": 5,
+      "z": 69
+    },
+    {
+      "id": "Human1962250",
+      "def": "Tribal_Warrior",
+      "x": 8,
+      "z": 67
+    },
+    {
+      "id": "Human1962255",
+      "def": "Tribal_Archer",
+      "x": 2,
+      "z": 75
+    },
+    {
+      "id": "Human1962260",
+      "def": "Tribal_Archer",
+      "x": 7,
+      "z": 75
+    },
+    {
+      "id": "Human1962278",
+      "def": "Tribal_Berserker",
+      "x": 3,
+      "z": 76
+    },
+    {
+      "id": "Human1962283",
+      "def": "Tribal_Warrior",
+      "x": 9,
+      "z": 74
+    },
+    {
+      "id": "Human1962290",
+      "def": "Tribal_HeavyArcher",
+      "x": 5,
+      "z": 75
+    },
+    {
+      "id": "Human1962294",
+      "def": "Tribal_Archer",
+      "x": 8,
+      "z": 65
+    },
+    {
+      "id": "Human1962299",
+      "def": "Tribal_Penitent",
+      "x": 2,
+      "z": 64
+    },
+    {
+      "id": "Human1842419",
+      "def": "Tribal_HeavyArcher",
+      "x": 3,
+      "z": 76
+    },
+    {
+      "id": "Human1962319",
+      "def": "Tribal_HeavyArcher",
+      "x": 2,
+      "z": 65
+    },
+    {
+      "id": "Human1962324",
+      "def": "Tribal_HeavyArcher",
+      "x": 7,
+      "z": 69
+    }
+  ]
+}
