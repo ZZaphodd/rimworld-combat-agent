@@ -1288,5 +1288,27 @@
    "arrival": "EdgeWalkIn"
   },
   "assault_ticks": 6000
+ },
+ {
+  "id": "base2_caw_pirate_2p5x",
+  "tier": "base",
+  "arena": "arena_col_cawalia2",
+  "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+  "squad": {
+   "faction": "OutlanderCivil",
+   "points": 500,
+   "place": [
+    100,
+    108
+   ]
+  },
+  "enemy": {
+   "faction": "Pirate",
+   "points": 1250,
+   "strategy": "ImmediateAttack",
+   "arrival": "EdgeWalkIn"
+  },
+  "assault_ticks": 6000,
+  "ladder": false
  }
 ]

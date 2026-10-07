@@ -1,0 +1,1 @@
+{"n": 1, "scenario": "base2_caw_tribe_2x", "kind": "tribe", "mult": 2.0, "grade": "repelled", "win": true, "badness": 0.7, "deaths": 0, "downed": 0, "enemies_seen": 16, "raid_fled_tick": 1932, "ticks": 4356, "traps_start": 1421, "traps_end": 1401, "traps_used": 20, "trace": "results/human/traces/base2_caw_tribe_2x_claude_20261008-045444.jsonl.gz", "time": 1791403061.878232}
