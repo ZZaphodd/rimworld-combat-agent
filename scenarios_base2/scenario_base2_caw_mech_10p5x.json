@@ -1,0 +1,198 @@
+{
+  "id": "base2_caw_mech_10p5x",
+  "save": "scenario_base2_caw_mech_10p5x",
+  "spec": {
+    "id": "base2_caw_mech_10p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 5250,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962088",
+      "name": "Raisa Rhodes",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Nico 'Night' LaCroix",
+      "weapon": "Autopistol (normal)",
+      "x": 100,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962113",
+      "name": "Penelope 'Stumpy' Ayala",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962120",
+      "name": "Emma Patel",
+      "weapon": "Steel knife (poor)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962137",
+      "name": "Merlin Potts",
+      "weapon": "Molotov cocktails",
+      "x": 107,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962144",
+      "name": "Megumi Mendez",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 96,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962150",
+      "name": "San Syco",
+      "weapon": "Bolt-action rifle (good 75%)",
+      "x": 98,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962171",
+      "name": "Lucya 'Squint' Castro",
+      "weapon": "Steel knife (awful)",
+      "x": 100,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962177",
+      "name": "Kiko Parker",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 102,
+      "z": 106,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_CentipedeBlaster1962199",
+      "def": "Mech_CentipedeBlaster",
+      "x": 140,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1962201",
+      "def": "Mech_Lancer",
+      "x": 149,
+      "z": 4
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962203",
+      "def": "Mech_CentipedeBlaster",
+      "x": 142,
+      "z": 4
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962205",
+      "def": "Mech_CentipedeBlaster",
+      "x": 135,
+      "z": 3
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962207",
+      "def": "Mech_CentipedeBlaster",
+      "x": 145,
+      "z": 1
+    },
+    {
+      "id": "Mech_Lancer1962209",
+      "def": "Mech_Lancer",
+      "x": 140,
+      "z": 10
+    },
+    {
+      "id": "Mech_Scyther1962211",
+      "def": "Mech_Scyther",
+      "x": 134,
+      "z": 1
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962212",
+      "def": "Mech_CentipedeBlaster",
+      "x": 132,
+      "z": 2
+    },
+    {
+      "id": "Mech_Lancer1962214",
+      "def": "Mech_Lancer",
+      "x": 134,
+      "z": 5
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962216",
+      "def": "Mech_CentipedeBlaster",
+      "x": 132,
+      "z": 2
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962218",
+      "def": "Mech_CentipedeBlaster",
+      "x": 132,
+      "z": 3
+    },
+    {
+      "id": "Mech_Warqueen1962220",
+      "def": "Mech_Warqueen",
+      "x": 145,
+      "z": 3
+    },
+    {
+      "id": "Mech_Lancer1962223",
+      "def": "Mech_Lancer",
+      "x": 146,
+      "z": 5
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962225",
+      "def": "Mech_CentipedeBlaster",
+      "x": 132,
+      "z": 3
+    },
+    {
+      "id": "Mech_Lancer1962227",
+      "def": "Mech_Lancer",
+      "x": 148,
+      "z": 3
+    },
+    {
+      "id": "Mech_Scorcher1962229",
+      "def": "Mech_Scorcher",
+      "x": 134,
+      "z": 5
+    }
+  ]
+}

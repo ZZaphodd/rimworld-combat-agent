@@ -1,0 +1,366 @@
+{
+  "id": "base2_caw_pirate_10x",
+  "save": "scenario_base2_caw_pirate_10x",
+  "spec": {
+    "id": "base2_caw_pirate_10x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 5000,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Lacey Perkins",
+      "weapon": "Steel knife (awful)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962096",
+      "name": "Ryan Smith",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 101,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962100",
+      "name": "Brazos 'Braz' Wheeler",
+      "weapon": "Revolver (excellent)",
+      "x": 103,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962106",
+      "name": "Alexander 'Alex' Pfitzenmeier",
+      "weapon": "Autopistol (poor 30%)",
+      "x": 104,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962112",
+      "name": "Mushinto Takamu",
+      "weapon": "Autopistol (normal 56%)",
+      "x": 107,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962118",
+      "name": "Aoi 'Stench' Higgins",
+      "weapon": "Molotov cocktails",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962132",
+      "name": "Hratli 'Ninjak' Skirata",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 98,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962138",
+      "name": "Semyon O'Donnell",
+      "weapon": "Autopistol (poor 93%)",
+      "x": 100,
+      "z": 104,
+      "health": 100
+    },
+    {
+      "id": "Human1962144",
+      "name": "Melissa 'Lissa' Archer",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 104,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962155",
+      "def": "Scavenger",
+      "x": 207,
+      "z": 9
+    },
+    {
+      "id": "Human1962161",
+      "def": "Mercenary_Elite",
+      "x": 218,
+      "z": 2
+    },
+    {
+      "id": "Human1962167",
+      "def": "Mercenary_Sniper",
+      "x": 215,
+      "z": 5
+    },
+    {
+      "id": "Human1962171",
+      "def": "Mercenary_Gunner",
+      "x": 204,
+      "z": 4
+    },
+    {
+      "id": "Human1962178",
+      "def": "Pirate",
+      "x": 204,
+      "z": 3
+    },
+    {
+      "id": "Human1962183",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962190",
+      "def": "Mercenary_Gunner",
+      "x": 210,
+      "z": 2
+    },
+    {
+      "id": "Human1962196",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 6
+    },
+    {
+      "id": "Human1962203",
+      "def": "Mercenary_Elite",
+      "x": 213,
+      "z": 5
+    },
+    {
+      "id": "Human1962212",
+      "def": "Mercenary_Sniper",
+      "x": 212,
+      "z": 9
+    },
+    {
+      "id": "Human1962218",
+      "def": "Mercenary_Gunner",
+      "x": 214,
+      "z": 2
+    },
+    {
+      "id": "Human1962225",
+      "def": "Mercenary_Elite",
+      "x": 201,
+      "z": 4
+    },
+    {
+      "id": "Human1962232",
+      "def": "Pirate",
+      "x": 208,
+      "z": 2
+    },
+    {
+      "id": "Human1962238",
+      "def": "Scavenger",
+      "x": 216,
+      "z": 2
+    },
+    {
+      "id": "Human1962242",
+      "def": "Mercenary_Gunner",
+      "x": 206,
+      "z": 7
+    },
+    {
+      "id": "Human1962248",
+      "def": "Grenadier_Destructive",
+      "x": 218,
+      "z": 4
+    },
+    {
+      "id": "Human1962256",
+      "def": "Mercenary_Elite",
+      "x": 201,
+      "z": 5
+    },
+    {
+      "id": "Human1962263",
+      "def": "Mercenary_Elite",
+      "x": 211,
+      "z": 1
+    },
+    {
+      "id": "Human1962270",
+      "def": "Mercenary_Heavy",
+      "x": 202,
+      "z": 5
+    },
+    {
+      "id": "Human1962277",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 2
+    },
+    {
+      "id": "Human1962296",
+      "def": "Pirate",
+      "x": 214,
+      "z": 8
+    },
+    {
+      "id": "Human1962303",
+      "def": "PirateBoss",
+      "x": 203,
+      "z": 3
+    },
+    {
+      "id": "Human1962312",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 2
+    },
+    {
+      "id": "Human1962321",
+      "def": "Mercenary_Slasher",
+      "x": 216,
+      "z": 2
+    },
+    {
+      "id": "Human1962328",
+      "def": "Mercenary_Heavy",
+      "x": 207,
+      "z": 5
+    },
+    {
+      "id": "Human1962349",
+      "def": "Mercenary_Gunner",
+      "x": 211,
+      "z": 7
+    },
+    {
+      "id": "Human1962356",
+      "def": "Mercenary_Elite",
+      "x": 208,
+      "z": 8
+    },
+    {
+      "id": "Human1962363",
+      "def": "Mercenary_Elite",
+      "x": 210,
+      "z": 4
+    },
+    {
+      "id": "Human1962373",
+      "def": "Mercenary_Heavy",
+      "x": 215,
+      "z": 3
+    },
+    {
+      "id": "Human1962377",
+      "def": "Mercenary_Gunner",
+      "x": 201,
+      "z": 2
+    },
+    {
+      "id": "Human1962383",
+      "def": "Mercenary_Elite",
+      "x": 218,
+      "z": 1
+    },
+    {
+      "id": "Human1962393",
+      "def": "Mercenary_Heavy",
+      "x": 213,
+      "z": 4
+    },
+    {
+      "id": "Human1962397",
+      "def": "Mercenary_Heavy",
+      "x": 204,
+      "z": 2
+    },
+    {
+      "id": "Human1962401",
+      "def": "Mercenary_Gunner",
+      "x": 201,
+      "z": 2
+    },
+    {
+      "id": "Human1962408",
+      "def": "Mercenary_Gunner",
+      "x": 201,
+      "z": 2
+    },
+    {
+      "id": "Human1962416",
+      "def": "Mercenary_Gunner",
+      "x": 215,
+      "z": 5
+    },
+    {
+      "id": "Human1962423",
+      "def": "Pirate",
+      "x": 219,
+      "z": 2
+    },
+    {
+      "id": "Human1962429",
+      "def": "Mercenary_Sniper",
+      "x": 215,
+      "z": 7
+    },
+    {
+      "id": "Human1962435",
+      "def": "Mercenary_Gunner",
+      "x": 202,
+      "z": 1
+    },
+    {
+      "id": "Human1962442",
+      "def": "Mercenary_Heavy",
+      "x": 204,
+      "z": 3
+    },
+    {
+      "id": "Human1962449",
+      "def": "Mercenary_Elite",
+      "x": 214,
+      "z": 1
+    },
+    {
+      "id": "Human1962460",
+      "def": "Mercenary_Elite",
+      "x": 204,
+      "z": 2
+    },
+    {
+      "id": "Human1962466",
+      "def": "Pirate",
+      "x": 206,
+      "z": 8
+    },
+    {
+      "id": "Human1962472",
+      "def": "Drifter",
+      "x": 202,
+      "z": 3
+    }
+  ]
+}
