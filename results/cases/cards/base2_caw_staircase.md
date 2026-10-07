@@ -32,6 +32,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 14 | 7.5× | the same (cap 60,000) | killed all seven Scythers near the south turrets; the rest kited south and west; downed pawns left untended | **conceded** (a loss; squad down t47655) | 4 / 3 | 54 | 83.2 |
 | 15 | 8× | 67 tribal archers from the north edge | a line just behind the north turrets, the block's north wall behind it; rifles on whoever came within 26 | **repelled** (fled t3501) | 0 / 0 | 69 | **0.0** |
 | 16 | 8.5× | 34 pirates (8 sniper rifles, 3 triple rocket launchers, 2 incendiary launchers, LMGs, miniguns) from the west edge | rifles to the sh 7–17 with a knife and a revolver; the squad inside the block's east room, out of the snipers' sight | **repelled** (fled t5528) | 0 / 0 | 70 | **0.0** |
+| 17 | 9× | 21 mechs (13 Lancers, 3 Pikemen, 3 Diabolus, a Cyclops, a Scorcher) from the north edge | the squad in the block's east room through the assault; then the Pikeman from 33 and the Lancers from 34–36 | **decisive** | 0 / 0 | 42 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -88,3 +89,6 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 - **16 · t0–9093**: the squad sheltered in the block's east room; the raid spent itself on the NW
   field, the west and north turrets and the block's west side (70 traps, the most so far); fled at
   t5528.
+- **17 · t0–27868**: the squad sheltered in the block's east room while the assault crossed the north arc
+  and took the north turrets; 18 of 21 out to turrets and traps; the last three (a Pikeman, two idle
+  Lancers) shot from just outside their reach. No hit taken.

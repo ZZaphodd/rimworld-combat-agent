@@ -303,3 +303,20 @@ inferred of 34, 7 escaped; traps 1,421 → 1,351.
   turrets and the block's west side; 15 out by t4374 (55 traps).
 - t4555–9093: the raid around the block's west and north; fled at t5528; the rest out by t9093.
   Nobody came into the room; two pawns lost 14–16 % inside it.
+
+## 17 · base2_caw_mech_9x (9×, mech; cap 60,000)
+Trace `results/human/traces/base2_caw_mech_9x_claude_20261008-074318.jsonl.gz` · result **decisive** (cleared t27868), lost 0, downed 0, badness 0.0;
+21 of 21 killed; traps 1,420 → 1,378.
+- Card: Small 15 (a poor revolver), Stench 5, Tremozite 5; the rest 0–3. Raid: 13 Lancers, 3 Pikemen,
+  3 Diabolus, a Cyclops, a Scorcher, from the north edge (178–192, 263–274).
+- Loadout: rifles to Small and Stench (from Boyd and Rice).
+- Plan: battle 16's shelter: the squad in the block's east room through the gathering and the assault;
+  then the stragglers from outside their reach.
+- t0–7000: the mechs gathered at ~(160, 254); moods 43 → 17 by t10529; no break all battle.
+- t7000–18200: the assault crossed the north arc (31 traps) and destroyed the four north turrets and
+  (73, 136); the Diabolus and Lancers came within 27–38 of the room's centre (z 150–165) and went west and
+  east; 18 of 21 out by t18227.
+- t18227–19400: the Pikeman (32 %) at (159, 167): five rifles at the block's NE corner, 33–35 from it;
+  out at t19400, no hit taken.
+- t19400–27868: two Lancers idle in the NW field (55–57, 214–223); the rifles stood 34–36 from them (outside
+  the charge lances' 32.9) and fired; out at t22017 and t27868. Nobody of ours hit all battle.
