@@ -79,6 +79,7 @@ class _GameLock:
 
 
 _LOCKS = {}
+SKIP_WARNED = []           # skip() says once per process that the game resumes at 1x
 
 
 def game_lock(path=None):
@@ -146,11 +147,15 @@ class RimMolt:
         threats: use it only where nothing needs an answer. Returns {start, end, ticks, early, rate}."""
         tick = lambda: self.call("get_status")["ticksGame"]      # noqa: E731
         start = tick()
-        target, early, rate = start + ticks, None, 0.0
+        target, early, rate, speed = start + ticks, None, 0.0, None
         last, t_last = start, time.monotonic()
         t0 = t_last
         if ticks > 0:
-            self.call("set_speed", action="unpause")
+            speed = self.call("set_speed", action="unpause").get("speed")
+            if speed == "Normal" and not SKIP_WARNED:      # the human left the game at 1x
+                SKIP_WARNED.append(1)
+                print("   skip: the game resumes at Normal (1x); press the fast-speed button once in the "
+                      "game, or set RimMolt's unpause speed in its mod settings", flush=True)
             try:
                 while True:
                     time.sleep(poll)
@@ -174,7 +179,8 @@ class RimMolt:
         while early is None and now < target:   # exact finish (the 1-tick setting: wait(n) = n)
             self.wait(target - now)
             now = tick()
-        return {"start": start, "end": now, "ticks": now - start, "early": early, "rate": round(rate)}
+        return {"start": start, "end": now, "ticks": now - start, "early": early, "rate": round(rate),
+                "speed": speed}
 
     def alive(self):
         """Liveness probe for the watchdog: get_status answers at all."""
