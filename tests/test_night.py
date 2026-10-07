@@ -13,11 +13,15 @@ def row(**k):
 
 class Ranking(unittest.TestCase):
     def test_components(self):
-        score, parts = badness(row(deaths=1, squad_kidnapped=1, downed_at_end=2,
+        score, parts = badness(row(deaths=2, squad_kidnapped=1, downed_at_end=2,
                                    new_permanent_injuries=3, hp_lost_pct=100, grade="defeat"))
         self.assertEqual(parts, {"lost": 20.0, "downed": 6.0, "permanent": 6.0, "hp": 4.0,
                                  "grade": 10.0})
         self.assertEqual(score, 46.0)
+
+    def test_a_kidnapped_pawn_counts_once(self):
+        # deaths already holds the kidnapped pawn (harness.measure: dead + kidnapped)
+        self.assertEqual(badness(row(deaths=1, squad_kidnapped=1))[1]["lost"], 10.0)
 
     def test_clean_win_is_zero_and_sorts_last(self):
         rows = [row(grade="decisive"), row(deaths=1, grade="repelled"), row(downed_at_end=4)]

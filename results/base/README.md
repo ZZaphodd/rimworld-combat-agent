@@ -121,8 +121,9 @@ hold (PROCEDURES §1c).
 
 Grade and badness as recorded, turtle → turtle_at (bold: the grade went up); ours lost (dead or
 kidnapped: the rows' `deaths`); raiders killed (incl. inferred) of those seen. The recorded badness
-counts a kidnapped pawn twice (`rca/eval/ranking.lost` adds `squad_kidnapped` to `deaths`, which
-already holds it; found 2026-10-07); the observations give both.
+counts a kidnapped pawn twice (`rca/eval/ranking.lost` added `squad_kidnapped` to `deaths`, which
+already holds it; found and fixed 2026-10-07, stored rows not rescored at the user's word); the
+observations give both.
 
 | base | raid | rung | turtle | turtle_at | ours lost | raiders killed |
 |---|---|---|---|---|---|---|
