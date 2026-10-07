@@ -175,10 +175,15 @@ def fire_at_will(name, on):
 def stop(name):
     """End <name>'s order where it stands: undraft and draft again. The float menu offers no
     Go here on the pawn's own cell, and drafting turns Fire at will back on (both measured
-    2026-10-06)."""
+    2026-10-06), so a pawn that had it off gets it switched off again (base2_ith_tribe_6x: a frag
+    thrower held off fire was turned back on by stop() and threw at raiders next to our own)."""
     i = ids()[name]
+    acts = rm.call("inspect_thing", id=i).get("actions") or []
+    was = next((a.get("active") for a in acts if a.get("label") == "Fire at will"), None)
     rm.call("draft", action="undraft", ids=i)
     rm.call("draft", action="draft", ids=i)
+    if was is False:
+        fire_at_will(name, False)
 
 
 def fireable(name, enemy):
