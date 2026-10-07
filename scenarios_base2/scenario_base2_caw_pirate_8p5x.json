@@ -1,0 +1,298 @@
+{
+  "id": "base2_caw_pirate_8p5x",
+  "save": "scenario_base2_caw_pirate_8p5x",
+  "spec": {
+    "id": "base2_caw_pirate_8p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 4250,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Kristina Leonard",
+      "weapon": "Revolver (good)",
+      "x": 96,
+      "z": 111,
+      "health": 100
+    },
+    {
+      "id": "Human1962094",
+      "name": "Chad 'Fitz' Fitzgerald",
+      "weapon": "Steel knife (awful)",
+      "x": 96,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962100",
+      "name": "Kjelt Karlsen",
+      "weapon": "Incendiary launcher (normal)",
+      "x": 103,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962106",
+      "name": "Theodore 'Theo' Imeson",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 105,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962112",
+      "name": "TJ 'Rads' Jenkins",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 104,
+      "z": 108,
+      "health": 82
+    },
+    {
+      "id": "Human1962118",
+      "name": "Tamara Davenport",
+      "weapon": "Bolt-action rifle (poor 76%)",
+      "x": 98,
+      "z": 108,
+      "health": 84
+    },
+    {
+      "id": "Human1962122",
+      "name": "Sly Braun",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962128",
+      "name": "Elena Yu",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 103,
+      "z": 106,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962139",
+      "def": "Mercenary_Slasher",
+      "x": 3,
+      "z": 189
+    },
+    {
+      "id": "Human1962145",
+      "def": "Mercenary_Heavy",
+      "x": 0,
+      "z": 200
+    },
+    {
+      "id": "Human1962150",
+      "def": "Mercenary_Heavy",
+      "x": 2,
+      "z": 205
+    },
+    {
+      "id": "Human1962156",
+      "def": "Mercenary_Sniper",
+      "x": 3,
+      "z": 188
+    },
+    {
+      "id": "Human1962163",
+      "def": "PirateBoss",
+      "x": 3,
+      "z": 198
+    },
+    {
+      "id": "Human1962169",
+      "def": "Mercenary_Sniper",
+      "x": 3,
+      "z": 187
+    },
+    {
+      "id": "Human1962175",
+      "def": "Mercenary_Sniper",
+      "x": 0,
+      "z": 199
+    },
+    {
+      "id": "Human1962184",
+      "def": "Mercenary_Sniper",
+      "x": 3,
+      "z": 196
+    },
+    {
+      "id": "Human1962190",
+      "def": "Mercenary_Elite",
+      "x": 2,
+      "z": 205
+    },
+    {
+      "id": "Human1962195",
+      "def": "Mercenary_Elite",
+      "x": 7,
+      "z": 188
+    },
+    {
+      "id": "Human1962204",
+      "def": "Mercenary_Elite",
+      "x": 6,
+      "z": 191
+    },
+    {
+      "id": "Human1962210",
+      "def": "Mercenary_Gunner",
+      "x": 7,
+      "z": 199
+    },
+    {
+      "id": "Human1962217",
+      "def": "Mercenary_Sniper",
+      "x": 4,
+      "z": 186
+    },
+    {
+      "id": "Human1962223",
+      "def": "Mercenary_Gunner",
+      "x": 3,
+      "z": 204
+    },
+    {
+      "id": "Human1962230",
+      "def": "Mercenary_Gunner",
+      "x": 3,
+      "z": 192
+    },
+    {
+      "id": "Human1962237",
+      "def": "Mercenary_Slasher",
+      "x": 3,
+      "z": 192
+    },
+    {
+      "id": "Human1962246",
+      "def": "Pirate",
+      "x": 4,
+      "z": 191
+    },
+    {
+      "id": "Human1962253",
+      "def": "Mercenary_Elite",
+      "x": 0,
+      "z": 194
+    },
+    {
+      "id": "Human1962259",
+      "def": "Pirate",
+      "x": 5,
+      "z": 194
+    },
+    {
+      "id": "Human1962265",
+      "def": "Mercenary_Sniper",
+      "x": 1,
+      "z": 197
+    },
+    {
+      "id": "Human1962273",
+      "def": "Mercenary_Elite",
+      "x": 7,
+      "z": 195
+    },
+    {
+      "id": "Human1962281",
+      "def": "Mercenary_Heavy",
+      "x": 7,
+      "z": 189
+    },
+    {
+      "id": "Human1962286",
+      "def": "Mercenary_Gunner",
+      "x": 1,
+      "z": 189
+    },
+    {
+      "id": "Human1962293",
+      "def": "Mercenary_Sniper",
+      "x": 3,
+      "z": 188
+    },
+    {
+      "id": "Human1962304",
+      "def": "Mercenary_Heavy",
+      "x": 2,
+      "z": 199
+    },
+    {
+      "id": "Human1962310",
+      "def": "Mercenary_Elite",
+      "x": 3,
+      "z": 191
+    },
+    {
+      "id": "Human1962319",
+      "def": "Mercenary_Sniper",
+      "x": 7,
+      "z": 193
+    },
+    {
+      "id": "Human1962325",
+      "def": "Mercenary_Elite",
+      "x": 4,
+      "z": 202
+    },
+    {
+      "id": "Human1962333",
+      "def": "Drifter",
+      "x": 4,
+      "z": 191
+    },
+    {
+      "id": "Human1962339",
+      "def": "Mercenary_Slasher",
+      "x": 2,
+      "z": 187
+    },
+    {
+      "id": "Human1962346",
+      "def": "Mercenary_Elite",
+      "x": 5,
+      "z": 202
+    },
+    {
+      "id": "Human1962354",
+      "def": "Mercenary_Heavy",
+      "x": 8,
+      "z": 193
+    },
+    {
+      "id": "Human1962359",
+      "def": "Mercenary_Heavy",
+      "x": 6,
+      "z": 190
+    },
+    {
+      "id": "Human1962365",
+      "def": "Mercenary_Elite",
+      "x": 5,
+      "z": 197
+    }
+  ]
+}
