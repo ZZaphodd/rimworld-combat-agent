@@ -122,7 +122,7 @@ def cmd_run(a):
     row["badness"], row["badness_parts"] = score, parts
     append_row(a.rows, row)
     log(f"{a.pid} {canonical(a.agent)} -> {row['outcome']} grade={row['grade']} lost="
-        f"{row['deaths'] + row.get('squad_kidnapped', 0)} downed={row['downed_at_end']} "
+        f"{row['deaths']} downed={row['downed_at_end']} "
         f"perm={row['new_permanent_injuries']} hp={row['hp_lost_pct']}% killed="
         f"{row['enemies_killed']}+{row['enemies_killed_inferred']}/{row['enemies_seen']} "
         f"escaped={row['enemies_escaped']} ticks={row['ticks']} wall={row['wall_s']}s "
@@ -144,7 +144,7 @@ def cmd_rank(a):
         lines.append(f"| {i} | {r['scenario']} | {p.get('arena', '').replace('arena_', '')} | "
                      f"{p.get('squad')} x{p.get('squad_n')} | {p.get('enemy')} x{p.get('enemy_n')} | "
                      f"{ro.get('agent')}{f' ({opts})' if opts else ''} | {r['grade']} | "
-                     f"{r['deaths'] + (r.get('squad_kidnapped') or 0)} | {r['downed_at_end']} | "
+                     f"{r['deaths']} | {r['downed_at_end']} | "
                      f"{r['new_permanent_injuries']} | {r['hp_lost_pct']} | {badness(r)[0]} |")
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "worst.md").write_text("\n".join(lines) + "\n")

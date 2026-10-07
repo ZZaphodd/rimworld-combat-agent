@@ -10,7 +10,10 @@ GRADE_PENALTY = {"defeat": 10.0, "pyrrhic": 4.0, "unresolved": 3.0}
 
 
 def lost(r):
-    return (r.get("deaths") or 0) + (r.get("squad_kidnapped") or 0)
+    """Squad pawns lost: a row's `deaths` is dead + kidnapped (rca/eval/harness.measure). Until
+    2026-10-07 this added `squad_kidnapped` again, so a kidnapped pawn counted twice; rows written
+    before then keep the badness they were stored with (the user: fix the logic, no rescoring)."""
+    return r.get("deaths") or 0
 
 
 def badness(r):
