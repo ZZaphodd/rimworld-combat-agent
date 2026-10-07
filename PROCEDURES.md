@@ -113,7 +113,10 @@ Moving furniture: the building action `Reinstall` with `targetX, targetZ` places
 haulers' undrafted float menu at the blueprint cell offers "Prioritize delivering to …". With
 Construction unassigned the delivery never finishes (the user). Observed 2026-10-07
 (base2_ith_tribe_6x): Construction 1 on every pawn with the area unrestricted sent three to build
-spike traps across the map; give it to the haulers only and draft the rest. Chairs from the dining
+spike traps across the map; give it to the haulers only and draft the rest. Things that skew a base
+battle are removed offline from the builder saves with a backup: `tools/make_base_arena.py
+--remove-defs <def,...> --saves ... --manifests ...` (Monler's mortars, 2026-10-07), like
+`--clear-conditions` for stored conditions. Chairs from the dining
 room west of the Ithfunda east room took the long way round through the yard and stalled; the
 user's chairs near the nook (117–124, 177–188) arrived in time.
 

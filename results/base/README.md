@@ -78,6 +78,14 @@ saves (`tools/make_base_arena.py --clear-conditions SolarFlare`, originals backe
 Saves folder). The 11 Monler turtle v2 rows moved to `ladder2_monler_flare.jsonl`; turtle reruns
 those rungs on the saves without the flare (in the turtle_at section below).
 
+Monler's three mortars (`Turret_Mortar`, steel, at (132–136, 97)) were removed the same evening
+(the user, 2026-10-07) from `arena_col_monler2` and its 14 v2 scenario saves
+(`tools/make_base_arena.py --remove-defs Turret_Mortar`; originals backed up outside the Saves
+folder; a colonist's `lastMannedThing` reference set to null). In the user's base2_mon_pirate_4x
+raiders were breaking and setting fire to them, and the user read part of the raid's losses as
+coming from that. Every Monler v2 row before this, the agents' and the direct plays, ran with the
+mortars on the map. Ithfunda has no mortar or turret on its map.
+
 Raid sizes v1 → v2 (our pawns / raiders):
 
 | base | raid | 2× | 3× | 4× | 6× | 8× |
