@@ -1,0 +1,250 @@
+{
+  "id": "base2_caw_pirate_7x",
+  "save": "scenario_base2_caw_pirate_7x",
+  "spec": {
+    "id": "base2_caw_pirate_7x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 3500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Tomas 'Abuela' Cruz",
+      "weapon": "Steel knife (poor 44%)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962092",
+      "name": "Calvin Barry",
+      "weapon": "Steel knife (poor)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962098",
+      "name": "Yuuka Montes",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 103,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962110",
+      "name": "Malvina Stafford",
+      "weapon": "Molotov cocktails (84%)",
+      "x": 100,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962115",
+      "name": "Jerry Lin",
+      "weapon": "Bolt-action rifle (normal 85%)",
+      "x": 102,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962119",
+      "name": "Maurizio Mezzatesta",
+      "weapon": "Bolt-action rifle (normal 79%)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962126",
+      "name": "Robert 'Robov' Turner",
+      "weapon": "Revolver (poor)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962130",
+      "name": "Calum Bittles",
+      "weapon": "Autopistol (good)",
+      "x": 102,
+      "z": 106,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Human1962141",
+      "def": "PirateBoss",
+      "x": 7,
+      "z": 5
+    },
+    {
+      "id": "Human1962158",
+      "def": "Mercenary_Slasher",
+      "x": 10,
+      "z": 5
+    },
+    {
+      "id": "Human1962164",
+      "def": "Thrasher",
+      "x": 20,
+      "z": 2
+    },
+    {
+      "id": "Human1962169",
+      "def": "Mercenary_Slasher",
+      "x": 17,
+      "z": 3
+    },
+    {
+      "id": "Human1962175",
+      "def": "Mercenary_Slasher",
+      "x": 20,
+      "z": 5
+    },
+    {
+      "id": "Human1962182",
+      "def": "Mercenary_Slasher",
+      "x": 21,
+      "z": 2
+    },
+    {
+      "id": "Human1962189",
+      "def": "Mercenary_Slasher",
+      "x": 11,
+      "z": 7
+    },
+    {
+      "id": "Human1962195",
+      "def": "Mercenary_Slasher",
+      "x": 15,
+      "z": 2
+    },
+    {
+      "id": "Human1962202",
+      "def": "Mercenary_Slasher",
+      "x": 19,
+      "z": 9
+    },
+    {
+      "id": "Human1962208",
+      "def": "Thrasher",
+      "x": 18,
+      "z": 7
+    },
+    {
+      "id": "Human1962215",
+      "def": "Mercenary_Slasher",
+      "x": 13,
+      "z": 2
+    },
+    {
+      "id": "Human1962221",
+      "def": "Mercenary_Slasher",
+      "x": 19,
+      "z": 7
+    },
+    {
+      "id": "Human1962226",
+      "def": "Mercenary_Slasher",
+      "x": 20,
+      "z": 5
+    },
+    {
+      "id": "Human1962233",
+      "def": "Mercenary_Slasher",
+      "x": 18,
+      "z": 5
+    },
+    {
+      "id": "Human1962239",
+      "def": "Mercenary_Slasher",
+      "x": 7,
+      "z": 1
+    },
+    {
+      "id": "Human1962246",
+      "def": "Mercenary_Slasher",
+      "x": 19,
+      "z": 4
+    },
+    {
+      "id": "Human1962252",
+      "def": "Mercenary_Slasher",
+      "x": 17,
+      "z": 8
+    },
+    {
+      "id": "Human1962259",
+      "def": "Mercenary_Slasher",
+      "x": 10,
+      "z": 7
+    },
+    {
+      "id": "Human1962266",
+      "def": "Mercenary_Slasher",
+      "x": 12,
+      "z": 6
+    },
+    {
+      "id": "Human1962273",
+      "def": "Mercenary_Slasher",
+      "x": 19,
+      "z": 5
+    },
+    {
+      "id": "Human1858295",
+      "def": "Mercenary_Slasher",
+      "x": 15,
+      "z": 10
+    },
+    {
+      "id": "Human1962286",
+      "def": "Mercenary_Slasher",
+      "x": 16,
+      "z": 4
+    },
+    {
+      "id": "Human1962292",
+      "def": "Mercenary_Slasher",
+      "x": 11,
+      "z": 9
+    },
+    {
+      "id": "Human1962298",
+      "def": "Mercenary_Slasher",
+      "x": 17,
+      "z": 8
+    },
+    {
+      "id": "Human1962304",
+      "def": "Mercenary_Slasher",
+      "x": 7,
+      "z": 6
+    },
+    {
+      "id": "Human1962310",
+      "def": "Thrasher",
+      "x": 8,
+      "z": 2
+    }
+  ]
+}

@@ -23,6 +23,7 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
 | 7 | 5× | 45 tribals (31 bows and pila, 13 melee) from the NW corner | a column south of the north arc's east part, then a row north of the arc (z 212) | **repelled** (fled t4383) | 0 / 0 | 43 | **0.0** |
 | 8 | 5.5× | 21 pirates (3 doomsday + 1 triple rocket launcher, 4 chain shotguns, 4 assault rifles, LMG, minigun, incinerator) from the NW corner | rifles to the sh 5–9 with short guns; a line south of the north arc, then north of it (z 226), 8 apart | **repelled** (fled t5924) | 0 / 0 | 26 | **0.0** |
 | 9 | 6× | 12 mechs (4 Centipede blasters, 3 Lancers, 3 Scythers, a Centurion, a Pikeman) from the west edge | a column north of the north arc through the gathering and assault; rifles to ~32–35 of the last three (outside their reach) | **decisive** | 0 / 0 | 26 | **0.0** |
+| 10 | 6.5× | 61 tribal melee from the SW corner | a group north of the south arc; a zigzag across the arc when a raider came within 22 (re-sent every 20 ticks: the group turned back and forth in the band and was caught); then stood and shot point blank | **repelled** (fled t4008) | 1 / 2 | 66 | **26.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -62,3 +63,6 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
 - **9 · t0–21435**: the mechs gathered west of the arc for ~10,000 ticks (moods 49 → 16–28; two broke
   later); the assault took four turrets west and north of the block ((73, 136), (110, 152), (132, 152),
   (73, 114)) and lost 9 of 12 there; the rifles finished the Centurion and two Centipedes from 32–35.
+- **10 · t1370–4255**: 61 melee; the rifles thinned the front from z 66 (15 out by t1841); the zigzag
+  controller re-sent its crossing every 20 ticks, so the group stayed in the band and six raiders reached
+  it (Prokop dead, two down); 66 traps used, the most so far; the raid fled at t4008.
