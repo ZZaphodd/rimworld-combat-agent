@@ -39,6 +39,13 @@ class Guard(unittest.TestCase):
         self.assertEqual(harness.unexpected_hostiles({"a", "b"}, enemies), {})
         self.assertEqual(list(harness.unexpected_hostiles({"a"}, enemies)), ["b"])
 
+    def test_war_queen_spawns_belong_to_the_raid(self):
+        enemies = {"q": {"kind": "Mech_Warqueen"}, "u": {"kind": "Mech_WarUrchin"},
+                   "s": {"kind": "Mech_Scyther"}}
+        self.assertEqual(list(harness.unexpected_hostiles({"q"}, enemies)), ["s"])
+        self.assertEqual(list(harness.unexpected_hostiles({"s"}, {"s": enemies["s"], "u": enemies["u"]})),
+                         ["u"])                     # no war queen at the start: an urchin is a stranger
+
     def _batch(self, outcomes):
         """run_batch with run_episode replaced by a script of outcomes."""
         p = Path(tempfile.mkdtemp()) / "r.jsonl"

@@ -43,10 +43,16 @@ class WrongDifficulty(RuntimeError):
     """The loaded save is not on the evaluation difficulty: stop the batch."""
 
 
+SPAWNED_BY = {"Mech_Warqueen": ("Mech_WarUrchin",)}   # a war queen gestates war urchins mid-battle
+
+
 def unexpected_hostiles(start_ids, enemies):
     """Hostiles the tracker has seen that were not on the map at the episode
-    start: a storyteller threat (raid, manhunter, mech cluster), not the scenario."""
-    return {eid: e for eid, e in enemies.items() if eid not in start_ids}
+    start: a storyteller threat (raid, manhunter, mech cluster), not the scenario.
+    Kinds a starting raider makes in battle (SPAWNED_BY) belong to the raid
+    (base2_caw_mech_10p5x, 2026-10-08: three war urchins ended it as invalid)."""
+    made = {k for i in start_ids if i in enemies for k in SPAWNED_BY.get(enemies[i]["kind"], ())}
+    return {eid: e for eid, e in enemies.items() if eid not in start_ids and e["kind"] not in made}
 
 
 STRANGER_KINDS = ("StrangerInBlack",)       # the man in black: help once every colonist is down
