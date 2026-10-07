@@ -1,5 +1,74 @@
 [
  {
+  "title": "base2_ith_tribe_3x · civil outlanders ×8 vs 18 tribals (15 melee) · Ithfunda base v2 — repelled",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-outnumbers"
+  ],
+  "plays": [
+   "mouth-hold",
+   "melee-lock",
+   "rotation",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "concave in the yard",
+    "result": "defeat",
+    "lost": "3 (1 dead, 2 kidnapped)",
+    "badness": "109.1"
+   },
+   {
+    "who": "agent `turtle_at` (plan base2_r1)",
+    "play": "door hold, plug + guns 2 back",
+    "result": "defeat",
+    "lost": "2",
+    "badness": "90.1"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "door hold, melee on the plug and diagonals, plug rotation",
+    "result": "**repelled** (fled t10419)",
+    "lost": "2 dead (one bled out after the raid left), 2 downed",
+    "badness": "**50.0**"
+   }
+  ],
+  "id": "base2_ith_tribe_3x",
+  "sites": [
+   "Ithfunda east room"
+  ],
+  "arena": "arena_col_ithfunda2",
+  "ours": "OutlanderCivil",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers",
+   "raid-strong-1v1"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 4,
+    "long": 2,
+    "support": 1,
+    "melee": 1
+   },
+   "enemy_n": 18,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
+   "count_ratio": 0.44,
+   "distance": 161.8,
+   "squad_range_median": 24.4,
+   "mech": false
+  }
+ },
+ {
   "title": "base2_mon_pirate_3x · civil outlanders ×8 vs 13 pirates (boss + Elites with Hellcats, snipers, rockets) · Monler base v2 — repelled",
   "situation": [
    "base-arena",
