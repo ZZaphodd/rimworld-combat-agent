@@ -35,6 +35,7 @@ SCEN = ROOT / "scenarios_base2"
 KINDS = ("tribe", "pirate", "mech")
 START, STEP, FLOOR = 2.0, 0.5, 0.5
 WINDOW, WINDOW_FROM = 2 * len(KINDS), 14       # the window rule decides the step after battle 14 on
+RATIONS_DAYS = 2              # survival meals by the squad's start in new builds (the user, battle 24)
 
 
 def rows():
@@ -82,6 +83,7 @@ def prepare(kind, mult, log=print):
         spec = json.loads(json.dumps(base))
         spec["id"] = p
         spec["enemy"]["points"] = int(round(500 * mult))
+        spec["rations_days"] = RATIONS_DAYS
         specs.append(spec)
         SPECS.write_text(json.dumps(specs, indent=1, ensure_ascii=False) + "\n")
         log(f"spec {p} added ({spec['enemy']['points']} pt)")

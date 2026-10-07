@@ -31,6 +31,13 @@ class StaircaseTest(unittest.TestCase):
         h.append({"n": 17, "mult": 7.5, "win": False, "grade": "defeat"})
         self.assertEqual(cawalia.next_step(h)[0], 7.0)            # 2 won, 4 lost: down
 
+    def test_ration_meals(self):
+        from rca.game.builders.scenario import ration_meals
+        from rca.game.debug import stack_count
+        self.assertEqual(ration_meals(2, 9), 36)              # 4 meals a pawn for 2 days
+        self.assertEqual(stack_count({"label": "Packaged survival meal x10"}), 10)
+        self.assertEqual(stack_count({"label": "Packaged survival meal"}), 1)
+
     def test_floor_and_ids(self):
         h = [{"mult": 0.5, "win": False, "grade": "defeat"}]
         self.assertEqual(cawalia.next_step(h)[0], 0.5)

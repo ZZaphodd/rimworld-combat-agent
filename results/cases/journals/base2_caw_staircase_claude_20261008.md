@@ -391,3 +391,25 @@ Trace `results/human/traces/base2_caw_mech_10p5x_claude_20261008-082536.jsonl.gz
 - Rhodes, in the room with no mech within 43, fell 81 → 22 % from t39566 and went down; no fire or
   projectile near him in the trace. At the end every pawn's food was 3–4 % (drafted ~40,000 ticks).
 - Observed: a 40,000-tick battle starves a squad kept drafted; Megumi lost a part ("shot off").
+
+## 23 · base2_caw_tribe_11x (11×, tribe)
+Trace `results/human/traces/base2_caw_tribe_11x_claude_20261008-083857.jsonl.gz` · result **repelled** (fled t3922, cleared t9478), lost 0, downed 0, badness 0.0; raid
+5 killed + 27 inferred of 82, 38 escaped; traps 1,413 → 1,337.
+- Card: Von 10/10, Barajas, Hairy 4, Zoya 3 (an autopistol), the rest 0–1. Raid: 82 tribals from the
+  west edge (0–19, 190–212): 61 bows and pila, 21 melee.
+- Loadout: Zoya took Fernand's rifle. Von and Cali (19 cells apart) dropped theirs to swap but had not
+  reached each other's in 300 ticks; drafting cancelled the walk and both played the battle unarmed.
+- The squad in the block's east room from t1988; the raid crossed the edge column, the west columns
+  and the arc's west end into the west and north turrets (76 traps, the most so far); fled at t3922
+  with 50 of 82 out. Nobody came into the room; nobody of ours hit.
+
+## 24 · base2_caw_pirate_11p5x (11.5×, pirate)
+Trace `results/human/traces/base2_caw_pirate_11p5x_claude_20261008-084620.jsonl.gz` · result **repelled** (fled t3684, cleared t7765), lost 0, downed 0, badness 0.0; raid
+24 inferred of 42, 13 escaped; traps 1,421 → 1,355.
+- Card: Mushinto 13/11 (a revolver), Hernandez 11 (an obsidian knife), Bait 6 (a knife), the rest 0–4.
+  Raid: 42 pirates from the south edge (33–51, 0–9): 41 melee (gladii, longswords, axes, spears) and
+  an assault rifle.
+- Loadout: rifles to Mushinto, Hernandez, Bait (from Rubick, Pyrarock, Mathews), each swap waited for.
+- Battle 11's zigzag across the south arc from (120, 66): seven crossings (S 140, N 160, S 180, N 160,
+  S 140, N 120, S 100, N 80) with the leading raider 30–6 behind; 42 → 2 standing by t7039; fled at
+  t3684. Nobody of ours hit.
