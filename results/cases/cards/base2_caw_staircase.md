@@ -20,6 +20,9 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
 | 4 | 3.5× | 30 tribals (~18 bows and pila, 12 melee) from the west edge | rifles to the two sh 4–15 with autopistols; a line just north of the SW patch, back south across it when the melee came | **repelled** (fled t3237) | 0 / 0 | 39 | **0.0** |
 | 5 | 4× | 16 pirates (2 doomsday + 1 triple rocket launcher, minigun, 2 snipers, chain shotguns, grenadiers) from the south edge | rifles to the sh 3–18 with short guns; line behind the south turrets, 10 apart, then back to the block's south wall; focus on the two that walked in | **repelled** (fled t3003) | 0 / 0 | 30 | **0.7** |
 | 6 | 4.5× | 8 mechs (2 Centurions, 3 Centipede blasters, 2 Lancers, a Pikeman) from the SE corner | line behind the south turrets; a 3-pawn poke from north of the arc; waited out the gathering (~12,000 ticks); kited back at 28 and focused the Centurions | **decisive** | 1 / 0 | 18 | **15.0** |
+| 7 | 5× | 45 tribals (31 bows and pila, 13 melee) from the NW corner | a column south of the north arc's east part, then a row north of the arc (z 212) | **repelled** (fled t4383) | 0 / 0 | 43 | **0.0** |
+| 8 | 5.5× | 21 pirates (3 doomsday + 1 triple rocket launcher, 4 chain shotguns, 4 assault rifles, LMG, minigun, incinerator) from the NW corner | rifles to the sh 5–9 with short guns; a line south of the north arc, then north of it (z 226), 8 apart | **repelled** (fled t5924) | 0 / 0 | 26 | **0.0** |
+| 9 | 6× | 12 mechs (4 Centipede blasters, 3 Lancers, 3 Scythers, a Centurion, a Pikeman) from the west edge | a column north of the north arc through the gathering and assault; rifles to ~32–35 of the last three (outside their reach) | **decisive** | 0 / 0 | 26 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -50,3 +53,12 @@ traps left reads as too little maneuvering). State: `results/base/cawalia_stairc
   and Pikeman out to the turrets; the Centurions felled that turret from inside its minimum range;
   Suhanmoo shot dead at 29.2 cells from a Centurion on a melee job (its own turret gun, likely) while the
   line kited at 28.
+- **7 · t0–4383**: the raid went for the NW field, the west turret (73, 136) and the north turret
+  (110, 152), never toward the line (57+ away); 25 of 45 out or down to the turrets and traps (26 traps
+  by t3456, 43 in all); fled at t4383. The line fired no shot.
+- **8 · t0–5924**: the pirates went for the NW field, the west turrets and the north turret (110, 152),
+  never toward the line (37+ away); 16 of 21 out to the turrets and traps; three fled north across the
+  arc. The line fired no shot.
+- **9 · t0–21435**: the mechs gathered west of the arc for ~10,000 ticks (moods 49 → 16–28; two broke
+  later); the assault took four turrets west and north of the block ((73, 136), (110, 152), (132, 152),
+  (73, 114)) and lost 9 of 12 there; the rifles finished the Centurion and two Centipedes from 32–35.

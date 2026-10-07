@@ -119,3 +119,59 @@ Trace `results/human/traces/base2_caw_mech_4p5x_claude_20261008-054242.jsonl.gz`
   within 44. Last Centipede out at t19414.
 - Observed: a Centurion's own turret gun (no weapon in the trace's `w`) is the likely shooter at 29.2
   cells; the 28-cell keep-away was short of it.
+
+## 7 · base2_caw_tribe_5x (5×, tribe)
+Trace `results/human/traces/base2_caw_tribe_5x_claude_20261008-055648.jsonl.gz` · result **repelled**
+(fled t4383, cleared t8503), lost 0, downed 0, badness 0.0; raid 23 inferred of 45, 17 escaped;
+traps 1,421 → 1,378.
+- Card: Syd 17/9, Petra 10, Keiko 9 with rifles; Patricia, Lazar 3; Insch 0 (rifle); Trina (revolver)
+  and Humberto (knife), both Brawlers, shooting 0. Raid: 45 tribals from the NW corner (0–7, 218–237):
+  31 bows and pila (12 recurve, 10 short bows, 9 heavy archers, the chief), 11 penitents, a berserker,
+  a warrior. No loadout change.
+- Plan: a column at x 165–170 (z 172–192) south of the north arc's east part: a raid coming from the
+  NW would cross the arc lengthwise over x 107–137, the archers' cells inside it.
+- t0–3460: the raid wrecked the NW field and went for the west turret (73, 136) and the north turret
+  (110, 152); 14 of 45 out by t3456 (26 traps).
+- t3460–4383: the line moved north of the arc (z 212, x 123–148) so that short bows and melee would
+  have to stand in the arc to reach it; the raid stayed at the turret (110, 152) (melee inside its
+  minimum range) and lost 11 more there; fled at t4383 with 25 of 45 out or down, west.
+- Observed: the raid never came within 57 of the line; the turrets and traps did all of it. Petra took
+  ~4000 ticks to walk ~110 cells (her path went through the block).
+
+## 8 · base2_caw_pirate_5p5x (5.5×, pirate)
+Trace `results/human/traces/base2_caw_pirate_5p5x_claude_20261008-060332.jsonl.gz` · result **repelled**
+(fled t5924, cleared t9990), lost 0, downed 0, badness 0.0; raid 1 killed + 13 inferred of 21, 6 escaped;
+traps 1,421 → 1,395.
+- Card: Swole 11/12 and Beri 9 (a knife) the shooters, Naoko 5, the rest 0–2; Muffins melee 11. Raid:
+  21 pirates from the NW corner (0–8, 247–264): 3 doomsday rocket launchers, a triple rocket launcher,
+  4 chain shotguns (3 in marine armour, the boss), 4 assault rifles (Zwetschke shooting 20), an LMG, a
+  minigun, an incinerator, a sniper, 2 slashers with shield belts.
+- Loadout: rifles to Beri and Naoko (from Jarmund and Lala), Muffins the normal knife (Bryce the rifle).
+- t0–2860: a line south of the north arc's east part (z 172, 8 apart), the knives at z 162; the raid
+  wrecked the NW field and went for the west turrets; 5 out by t2617 (18 traps).
+- t2860–5924: the line moved north of the arc (z 226, 8 apart; the knives at z 232) so that every gun
+  but the sniper rifle would have to stand in the arc to reach it. The raid went for the north turret
+  (110, 152) and the block's NW side instead; 16 of 21 out there by t6827; fled at t5924. Three fled
+  north across the arc and past the line (x 104–124).
+- Observed: two "Go here" orders gave no menu for cells (148, 226) and (149, 225) (blocked cells);
+  Bryce stayed alone at z 172 for ~2,000 ticks until a free cell was picked.
+
+## 9 · base2_caw_mech_6x (6×, mech)
+Trace `results/human/traces/base2_caw_mech_6x_claude_20261008-060756.jsonl.gz` · result **decisive**
+(cleared t21435), lost 0, downed 0, badness 0.0; 12 of 12 killed; traps 1,421 → 1,395.
+- Card: Bowman 12 (an autopistol), Vector 6, Josefsen, Nicole, Stomp 4, the rest 0–3. Raid: 4 Centipede
+  blasters, 3 Lancers, 3 Scythers, a Centurion, a Pikeman, from the west edge (1–5, 214–230).
+- Loadout: the two good rifles to Bowman and Josefsen (from Rosa and Eva).
+- t0–2650: a line between the north arc and the north turrets (z 168, 7 apart); the mechs gathered at
+  (34–57, 161–194), west of the arc's west end.
+- t2650–10400: the line moved north of the arc (a column at x 152, z 203–219; the short guns at x 160)
+  so that a path from the gathering to it would run ~40 cells inside the arc; moods fell 49 → 16–28 by
+  t10073 (the ideoligion's role thoughts, night owls in daytime, a tortured artist).
+- t10400–14440: the assault went for the ship parts west of the block and the turrets (73, 136),
+  (110, 152), (132, 152), (73, 114), all four destroyed; 9 of 12 out there by t13008; none came within
+  61 of the line.
+- t14440–21435: the rifles crossed the arc to ~35 from the Centurion (41 %) and ~32 from the Centipedes
+  (24 %, 26 %), stepping back when one came within 33 (later 28 with 8-cell steps); all three out by
+  t21435. Stomp and Rosa broke (wandering) during this.
+- Observed: stepping back every 30 ticks at 6 cells kept interrupting the rifles' aim (2,500 ticks on
+  a 24 % Centipede); with 8-cell steps it fell in ~1,000.
