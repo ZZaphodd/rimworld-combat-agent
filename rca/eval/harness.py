@@ -20,7 +20,7 @@ from collections import Counter
 
 from .. import ROOT
 from ..game import session
-from ..rimmolt import RimMoltError, player_pawns
+from ..rimmolt import RimMoltError, hostiles, player_pawns
 from ..terrain import Terrain
 from . import firelog, scoring
 from .kpis import CONTACT
@@ -53,6 +53,43 @@ def unexpected_hostiles(start_ids, enemies):
     (base2_caw_mech_10p5x, 2026-10-08: three war urchins ended it as invalid)."""
     made = {k for i in start_ids if i in enemies for k in SPAWNED_BY.get(enemies[i]["kind"], ())}
     return {eid: e for eid, e in enemies.items() if eid not in start_ids and e["kind"] not in made}
+
+
+REMOVE_TRIES = 10                # polls an arrival may survive removal before the episode goes invalid
+
+
+def remove_hostiles(rm, intruders, log=print):
+    """Destroy the storyteller's arrivals still on the map ("T: Destroy", dev mode on for the
+    call only). Returns the ids still standing (a pawn that moved off its cell is tried again
+    at the next poll). Asked for by the user for Cawalia's long battles (2026-10-08)."""
+    from ..game.debug import Debug
+    cur = {t["id"]: t for t in hostiles(rm, live_only=False)}
+    here = [cur[i] for i in intruders if i in cur]
+    if here:
+        rm.call("dev_mode", devMode=True)
+        d = Debug(rm, log=log)
+        try:
+            for t in here:
+                try:
+                    d.destroy_at(t["x"], t["z"])
+                except RimMoltError as e:
+                    log(f"   remove {t['id']}: {str(e)[:80]}")
+        finally:
+            d.close()
+            rm.call("dev_mode", devMode=False, godMode=False)
+    cur = {t["id"] for t in hostiles(rm, live_only=False)}
+    return {i for i in intruders if i in cur}
+
+
+def settle_removed(intruders, left, tries, ticks, removed):
+    """Book the arrivals that are gone in `removed` and count the tries of the rest; returns
+    the ones that have survived REMOVE_TRIES polls (they make the episode invalid)."""
+    for eid, e in intruders.items():
+        if eid in left:
+            tries[eid] = tries.get(eid, 0) + 1
+        elif not any(r["id"] == eid for r in removed):
+            removed.append({"id": eid, "tick": ticks, "kind": e.get("kind"), "name": e.get("name")})
+    return {eid: e for eid, e in intruders.items() if tries.get(eid, 0) >= REMOVE_TRIES}
 
 
 STRANGER_KINDS = ("StrangerInBlack",)       # the man in black: help once every colonist is down
@@ -368,14 +405,17 @@ def trap_census(rm):
 
 
 def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
-                         difficulty=STANDARD_DIFFICULTY, player="human", trace=None):
+                         difficulty=STANDARD_DIFFICULTY, player="human", trace=None,
+                         remove_intruders=False):
     """Observe-only episode: a person plays, the harness never pauses or
     advances time. It loads the scenario (paused; the player unpauses), then
     polls every poll_s seconds of wall time: fates, contact windows, the
     storyteller guard and the stop conditions, and writes the same row as
     run_episode (agent = player, cycle 'observed'). Game messages come from
     get_alerts' recent messages (there is no wait_for_event to carry them).
-    trace (rca.eval.trace.Trace) records every poll: positions, weapons, jobs."""
+    trace (rca.eval.trace.Trace) records every poll: positions, weapons, jobs.
+    remove_intruders: destroy the storyteller's arrivals (remove_hostiles) and play on instead of
+    ending the episode as invalid; they are listed in the row's `storyteller_removed`."""
     session.start_episode(rm, manifest["save"])
     found = (rm.call("get_status").get("difficulty") or "").lower()
     if difficulty and found != difficulty:
@@ -392,6 +432,7 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
     wall0, polls, ticks, last, outcome = time.time(), 0, 0, -1, "timeout"
     progress, avail_o, avail_t = ProgressMeter(), {}, {}
     messages, fled, satisfied = {}, None, None
+    removed, remove_tries = [], {}
     # Toasts from before the load (the previous battle's "... are fleeing") are still in
     # recentMessages; skip exactly those (tick, text) pairs. A new message with the same
     # text has another tick and still counts.
@@ -425,6 +466,17 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         if trace:
             trace.poll(rm, ticks, new)
         intruders = unexpected_hostiles(start_ids, tracker.enemy)
+        if intruders and remove_intruders:
+            left = remove_hostiles(rm, intruders, log)
+            gone = len(removed)
+            stuck = settle_removed(intruders, left, remove_tries, ticks, removed)
+            if len(removed) > gone:
+                log(f"   removed {len(removed) - gone} storyteller arrivals at tick {ticks}")
+            for eid in intruders:
+                if eid not in stuck:
+                    tracker.enemy.pop(eid, None)
+            live = [h for h in live if h["id"] not in intruders]
+            intruders = stuck
         if intruders:
             outcome = INVALID
             log(f"   invalid: {len(intruders)} unexpected hostiles at tick {ticks}")
@@ -474,6 +526,7 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         "raid_fled_tick": fled, "raid_satisfied_tick": satisfied,
         "game_messages": [{"tick": t, "text": x} for x, t in list(messages.items())[:60]],
         "strangers_removed": strangers, "end_rule": "raid_gone", "squad_down": squad_down,
+        "storyteller_removed": removed,
         "building_deltas": {}, "engaged_steps": 0, "engaged_ours": 0, "engaged_theirs": 0,
         "engagement_ratio": None,
         **engagement_kpis(tracker, avail_o, avail_t),

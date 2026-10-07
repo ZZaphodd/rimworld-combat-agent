@@ -214,8 +214,9 @@ traps 1,421 → 1,389.
   16, 29; 15 of 26 out by t2466; the raid fled at t2546.
 - t2748–4254: four went into the block and broke doors; the rest fled west. Nobody of ours hit.
 
-## 12 · base2_caw_mech_7p5x (7.5×, mech) — unresolved (not counted)
-Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-063735.jsonl.gz` · **unresolved** at the 30,000-tick cap; lost 0, downed 0; 14 of 15 mechs killed;
+## 12 · base2_caw_mech_7p5x (7.5×, mech) — invalid at t29529 (not counted)
+Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-063735.jsonl.gz` · **invalid** at t29529 (a storyteller raid: "7 unexpected hostiles"; first read as the 30,000-tick cap);
+lost 0, downed 0; 14 of 15 mechs killed;
 traps 1,420 → 1,390.
 - Card: Fitz 10 the one shooter; Blake, Wayne 5; the rest 0–2 (Hardin frags). Raid: 7 Scythers,
   5 Centipede blasters, 2 Lancers, a Centurion from the NE corner (264–273, 253–267).
@@ -227,10 +228,12 @@ traps 1,420 → 1,390.
   others later went into breaks the harness counted as hostile (it saw 22 "enemies").
 - t22272–30000: the last Centipede (57 %) at (51, 212); five rifles walked ~130 cells to it and shot
   with a step-back at 29 every 30 ticks: it kept walking at them and they fired 2–3 shots each in
-  4,000 ticks (57 → 36 %); stood and fired for the last 1,150 ticks (36 → 28 %). Cap reached.
+  4,000 ticks (57 → 36 %); stood and fired for the last 1,150 ticks (36 → 28 %). The harness had
+  stopped at t29529 on a storyteller raid (invalid), which Claude first reported as the cap.
 
-## 13 · base2_caw_mech_7p5x again (7.5×, mech) — unresolved (not counted)
-Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-065352.jsonl.gz` · **unresolved** at the 30,000-tick cap; lost 1 (Mad), downed 2 (Fitz, Blake),
+## 13 · base2_caw_mech_7p5x again (7.5×, mech) — invalid at t29529 (not counted)
+Trace `results/human/traces/base2_caw_mech_7p5x_claude_20261008-065352.jsonl.gz` · **invalid** at t29529 (the same storyteller raid; first read as the cap); lost 1 (Mad), downed 2
+(Fitz, Blake),
 badness 32.2; 13 of 15 killed; traps 1,420 → 1,382.
 - Same squad and raid. The squad stayed undrafted through the gathering (moods fell 50 → 27 anyway);
   drafted at t7030 when the assault began, south of the block (130, 105).
@@ -244,7 +247,8 @@ badness 32.2; 13 of 15 killed; traps 1,420 → 1,382.
   edge (5 traps); Blake down at (124, 180) before she moved; one Centipede out at t21645.
 - t21645–28364: the rifles at the block's north wall, then at 28.4–28.7 from the last NW Centipede
   (28 → 20 % in ~2,000 ticks, the rifles firing 12–34 shots each); it stepped 3 cells closer and Mad was
-  killed; Wayne 41 %, Howe 56 %. Pulled back; cap reached with two Centipedes (20 %, 49 %) left.
+  killed; Wayne 41 %, Howe 56 %. Pulled back; two Centipedes (20 %, 49 %) left when the harness's
+  t29529 stop (a storyteller raid) came up.
 - Observed: bolt-action rifles took ~1 % of a Centipede blaster's health per ~250 ticks for three
   rifles; the turrets' 30 slugs ran out before the last mechs.
 
@@ -358,3 +362,16 @@ queen made in battle counted as unexpected hostiles (invalid). Played on unobser
   them by t29287. Nobody of ours hit.
 - Fixed: `harness.unexpected_hostiles` counts kinds a starting raider makes in battle (`SPAWNED_BY`:
   War queen → War urchin) as the raid's. Replayed as battle 21.
+
+## 21 · base2_caw_mech_10p5x again (10.5×, mech) — invalid at t29529 (not counted)
+Trace `results/human/traces/base2_caw_mech_10p5x_claude_20261008-081715.jsonl.gz` · **invalid**: the storyteller's own raid (11 tribals at the north edge, 114–127,
+268–273) arrived at t29529, the tick that also ended battles 12 and 13; the harness saw them before the
+game paused on the letter. Lost 0, downed 0; by then 7 of the raid's pawns were left (the War queen
+29 %, two Centipedes 15–19 %, four War urchins).
+- Same play as battle 20 (east room, then out north at the assault); no break, nobody hit.
+- The user: remove storyteller arrivals and play on. Claude removed the 11 (dev mode on, "T: Destroy",
+  dev mode off) while paused, but the harness had already graded the run invalid.
+- Added `run_human.py --remove-intruders`: the observed harness destroys arrivals that are not the
+  scenario's (`harness.remove_hostiles`), books them in the row's `storyteller_removed`, and plays on;
+  an arrival that survives 10 polls still makes the run invalid. Battles 12 and 13 were **invalid at
+  t29529 for the same reason**, not stopped by the 30,000-tick cap as first reported.
