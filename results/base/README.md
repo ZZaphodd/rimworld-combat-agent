@@ -58,7 +58,8 @@ the colony's stockpile shelves still standing, are contaminated.
   pawns.
 - Runs: `turtle`, one run per rung, rows in `ladder2.jsonl`.
 
-v1 → v2 (– not run: two defeats below; bold: the grade went up):
+v1 → v2, the first v2 pass (– not run: two defeats below; bold: the grade went up; the Monler v2
+cells ran with the solar flare, rows in `ladder2_monler_flare.jsonl`):
 
 | base | raid | 2× | 3× | 4× | 6× | 8× |
 |---|---|---|---|---|---|---|
@@ -75,7 +76,7 @@ lights) for about the first 12,500 ticks ("The solar flare is ending." in 9 v1 a
 The user, 2026-10-07: remove it. It was removed from `arena_col_monler2` and its 14 v2 scenario
 saves (`tools/make_base_arena.py --clear-conditions SolarFlare`, originals backed up outside the
 Saves folder). The 11 Monler turtle v2 rows moved to `ladder2_monler_flare.jsonl`; turtle reruns
-those rungs on the saves without the flare.
+those rungs on the saves without the flare (in the turtle_at section below).
 
 Raid sizes v1 → v2 (our pawns / raiders):
 
@@ -101,6 +102,87 @@ Observations:
   - For example, Ithfunda pirates 2× were 25 raiders in v1 and 11 in v2, and v2 went worse
     (badness 103.1 against 57.4).
 - The direct plays below are on the v1 arenas.
+
+## turtle at the strategic layer's pick: `turtle_at` with plan `base2_r1` (2026-10-07)
+The user: v2 is the fair measurement, and even turtle needs the strategic layer to mark where to
+hold (PROCEDURES §1c).
+- Picks: Claude, by hand, from start information only (`results/base/plans/base2_r1.json`):
+  - every Ithfunda problem holds the east room behind its door (133, 187);
+  - every Monler problem holds R2 behind (145, 84), with the passage doors held open (the user's
+    attempt-2 layout);
+  - front cells (the plug and the doorway's diagonals) go to knives, then throwers with fire held,
+    then the weakest guns; the best guns sit on the corridor axis 2 cells back.
+- Agent `turtle_at` v1 (turtle v9 at the pick; in the room no sally and no attack orders that
+  walk: `rca/tactical/turtle_at.py`), rows in `ladder2_turtle_at.jsonl`.
+- Baseline: turtle v9 on the same 29 problems (`ladder2.jsonl`): the 8 Ithfunda rows of the first
+  v2 pass (2026-10-06) and 21 rows from 2026-10-07 (`--all-rungs`: the rungs the first pass
+  skipped, and every Monler rung again on the saves without the solar flare).
+- One run per problem on each side.
+
+Grade and badness as recorded, turtle → turtle_at (bold: the grade went up); ours lost (dead or
+kidnapped: the rows' `deaths`); raiders killed (incl. inferred) of those seen. The recorded badness
+counts a kidnapped pawn twice (`rca/eval/ranking.lost` adds `squad_kidnapped` to `deaths`, which
+already holds it; found 2026-10-07); the observations give both.
+
+| base | raid | rung | turtle | turtle_at | ours lost | raiders killed |
+|---|---|---|---|---|---|---|
+| Ithfunda | tribe | 2× | repelled 20.1 | **decisive 7.0** | 0 → 0 | 7 → 10 of 10 |
+| Ithfunda | tribe | 3× | defeat 129.1 | defeat 90.1 | 3 → 2 | 4 → 10 of 18 |
+| Ithfunda | tribe | 4× | defeat 140.2 | defeat 63.5 | 5 → 1 | 4 → 14 of 24 |
+| Ithfunda | tribe | 6× | defeat 119.3 | defeat 73.2 | 5 → 2 | 2 → 15 of 34 |
+| Ithfunda | tribe | 8× | defeat 89.1 | defeat 75.4 | 2 → 1 | 2 → 13 of 46 |
+| Ithfunda | pirate | 2× | defeat 103.1 | defeat 40.8 | 2 → 1 | 3 → 7 of 11 |
+| Ithfunda | pirate | 3× | defeat 62.1 | **repelled 26.2** | 0 → 1 | 3 → 4 of 13 |
+| Ithfunda | pirate | 4× | unresolved 64.5 | defeat 122.0 | 2 → 8 | 4 → 13 of 19 |
+| Ithfunda | pirate | 6× | defeat 106.9 | defeat 93.3 | 5 → 4 | 3 → 10 of 26 |
+| Ithfunda | pirate | 8× | defeat 84.8 | defeat 78.2 | 3 → 2 | 3 → 5 of 35 |
+| Ithfunda | mech | 2× | decisive 28.1 | decisive 2.1 | 0 → 0 | 6 → 6 of 6 |
+| Ithfunda | mech | 3× | defeat 91.2 | defeat 93.6 | 3 → 3 | 1 → 8 of 10 |
+| Ithfunda | mech | 4× | defeat 113.5 | **unresolved 34.4** | 7 → 2 | 4 → 11 of 14 |
+| Ithfunda | mech | 6× | defeat 120.6 | **unresolved 7.0** | 7 → 0 | 0 → 0 of 7 |
+| Ithfunda | mech | 8× | defeat 100.3 | **unresolved 53.0** | 5 → 0 | 0 → 0 of 13 |
+| Monler | tribe | 2× | repelled 8.0 | repelled 7.1 | 0 → 0 | 9 → 8 of 17 |
+| Monler | tribe | 3× | repelled 15.9 | unresolved 17.6 | 0 → 1 | 12 → 14 of 25 |
+| Monler | tribe | 4× | defeat 86.4 | **repelled 22.0** | 1 → 0 | 11 → 13 of 38 |
+| Monler | tribe | 6× | defeat 99.4 | **repelled 23.3** | 3 → 0 | 10 → 25 of 50 |
+| Monler | tribe | 8× | defeat 179.0 | defeat 78.4 | 7 → 1 | 11 → 18 of 66 |
+| Monler | pirate | 2× | repelled 22.2 | defeat 57.0 | 0 → 0 | 4 → 7 of 11 |
+| Monler | pirate | 3× | defeat 107.5 | defeat 90.4 | 4 → 4 | 5 → 3 of 13 |
+| Monler | pirate | 4× | repelled 0.0 | repelled 38.0 | 0 → 2 | 8 → 8 of 15 |
+| Monler | pirate | 6× | defeat 169.6 | defeat 143.3 | 6 → 7 | 6 → 10 of 28 |
+| Monler | pirate | 8× | defeat 115.5 | defeat 108.5 | 4 → 0 | 7 → 7 of 30 |
+| Monler | mech | 2× | defeat 85.8 | **decisive 12.1** | 3 → 0 | 12 → 22 of 22 |
+| Monler | mech | 3× | defeat 103.4 | **decisive 25.2** | 3 → 1 | 6 → 11 of 11 |
+| Monler | mech | 4× | defeat 94.3 | **decisive 9.4** | 2 → 0 | 4 → 13 of 13 |
+| Monler | mech | 8× | defeat 127.4 | defeat 110.5 | 6 → 6 | 4 → 8 of 20 |
+
+Observations:
+- Badness was lower with turtle_at on 24 of the 29 problems as recorded (mean 89.2 → 55.3); with
+  each kidnapped pawn counted once, on 22 (mean 79.6 → 52.5: Monler pirate 3× and 8× turn the
+  other way).
+  - Grades: up on 10, down on 3, the same on 16.
+  - Ours lost (dead or kidnapped): 88 → 49 in total, of them kidnapped 28 → 8. Raiders killed:
+    155 → 293.
+- Monler mechanoids 2×, 3× and 4× went from defeat to decisive, all 22, 11 and 13 mechs killed.
+- Four rows timed out at 30,000 ticks (unresolved): turtle_at does not sally.
+  - Ithfunda mech 6× (7 centipedes) never came to the room. Mech 8× (6 centipede blasters and
+    escorts) reached the doorway only from tick 25,622; 5 of ours were downed at the end. In both
+    none of ours and none of theirs died; turtle met them in the yard and lost 7 and 5.
+  - Ithfunda mech 4×: 11 of 14 killed when time ran out.
+  - Monler tribe 3×: the raid fled at tick 9107 and one raider stayed active to the limit.
+  - turtle's sally rule would have fired in 26 of the 29 turtle_at rows (recorded, not acted on).
+- The grade went down on 3:
+  - Ithfunda pirate 4×: all 8 of ours died (turtle lost 2).
+  - Monler pirate 2×: all 9 of ours were downed, none died. A pawn went on a fire starting spree
+    in the room and the squad was burned by superheated air.
+  - Monler tribe 3×: the timeout above (repelled 15.9 → unresolved 17.6).
+- Battles were longer: median 19,220 ticks against turtle's 12,542. turtle_at's first shot came at
+  a median tick of 5,877.
+  - Mental breaks showed up in 4 turtle_at battles (sad wander in Ithfunda mech 2×, an insulting
+    spree in Ithfunda pirate 2×, the fire starting spree above, sad wander and an ambrosia binge in
+    Monler tribe 3×) and in 2 of turtle's (sad wander in Ithfunda mech 2× and Monler tribe 2×).
+- Every plan door was set (Hold open read and pressed only to change it); no agent errors, no
+  invalid rows.
 
 ## Direct plays: Claude and the user (PROCEDURES §15–16)
 Scope (the user, 2026-10-06): win the battle using the base, by any method; furniture that takes
