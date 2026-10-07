@@ -45,10 +45,19 @@ pistol, 2 revolvers), 500 pt · raid 15 Pirate (4×: 2000 pt) · count ratio 0.6
 - **t7160–8816** `area-frags`: Lucya's molotovs on area orders up the passage (sightings (144–146,
   83–92)). Lady down on the front row by ~t7790 (31 %), crawled back, tended by Leister. Bashkire in the
   hall at (146, 92) 75 % → 23 % by ~t9330, pulled back; the raid wrecked the yard.
-- **t10142–13348**: frags from Kat by ~t13350 (Soda, the raid's frag grenadier, gone at (146, 96) at
-  t11493); Shinichi (Doomsday) down at (133, 95). **t12547 the raid fled** with 8 of 15 out.
+- **t10142–13348**: Kat picked up the frags of a dead raider (Soda, the raid's frag grenadier, gone at
+  (146, 96) at t11493); Shinichi (Doomsday) down at (133, 95). **t12547 the raid fled** with 8 of 15 out.
 - Result: repelled, none lost, Lady downed, HP 64 %, badness 5.6. Records: Kat 2,745 damage, Lucya
   1,029; kills credited Nytro 1, Zug 1.
+
+## What the play stood on (the user's reasons, 2026-10-07)
+- Our shooting is poor, but whatever we fire will hit raiders as they come in. With the chairs in
+  R2 there are extra firing cells one to each side of the passage line.
+- Molotovs and frags thrown at the end of their range, or onto cells that get in the raid's way in.
+- Kat took the frags from a dead raider.
+- The user's reading of the battle: most raider losses came from the spike traps and from raiders
+  breaking the mortars, not from the fight. The Doomsday and the triple rocket launchers were the real
+  threat, and they happened to pass by.
 
 ## What the play stood on (Claude's reasons)
 - turtle's row: the raid smashed buildings and barely fired; the plan was to stand where turtle stood
