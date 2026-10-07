@@ -1,0 +1,184 @@
+{
+  "id": "base2_caw_mech_7p5x",
+  "save": "scenario_base2_caw_mech_7p5x",
+  "spec": {
+    "id": "base2_caw_mech_7p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 3750,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Danish 'Mad' Sanzenin",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 94,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962093",
+      "name": "Aaron Hardin",
+      "weapon": "Frag grenades",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962100",
+      "name": "Sandra Lewis",
+      "weapon": "Revolver (good)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962107",
+      "name": "Blake Naleck",
+      "weapon": "Autopistol (poor 74%)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962112",
+      "name": "Wayne Ashton",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 106,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962137",
+      "name": "Chad 'Fitz' Fitzgerald",
+      "weapon": "Bolt-action rifle (normal 78%)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962143",
+      "name": "Naoko Howe",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 100,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962148",
+      "name": "Faina Gates",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 102,
+      "z": 108,
+      "health": 100
+    }
+  ],
+  "enemy": [
+    {
+      "id": "Mech_Scyther1962156",
+      "def": "Mech_Scyther",
+      "x": 270,
+      "z": 259
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962157",
+      "def": "Mech_CentipedeBlaster",
+      "x": 268,
+      "z": 257
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962159",
+      "def": "Mech_CentipedeBlaster",
+      "x": 267,
+      "z": 265
+    },
+    {
+      "id": "Mech_Centurion1962161",
+      "def": "Mech_Centurion",
+      "x": 273,
+      "z": 253
+    },
+    {
+      "id": "Mech_Scyther1962163",
+      "def": "Mech_Scyther",
+      "x": 269,
+      "z": 258
+    },
+    {
+      "id": "Mech_Scyther1962164",
+      "def": "Mech_Scyther",
+      "x": 264,
+      "z": 264
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962165",
+      "def": "Mech_CentipedeBlaster",
+      "x": 272,
+      "z": 261
+    },
+    {
+      "id": "Mech_Scyther1962167",
+      "def": "Mech_Scyther",
+      "x": 267,
+      "z": 265
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962168",
+      "def": "Mech_CentipedeBlaster",
+      "x": 273,
+      "z": 255
+    },
+    {
+      "id": "Mech_Lancer1962170",
+      "def": "Mech_Lancer",
+      "x": 269,
+      "z": 265
+    },
+    {
+      "id": "Mech_Scyther1962172",
+      "def": "Mech_Scyther",
+      "x": 268,
+      "z": 265
+    },
+    {
+      "id": "Mech_Scyther1962173",
+      "def": "Mech_Scyther",
+      "x": 267,
+      "z": 257
+    },
+    {
+      "id": "Mech_CentipedeBlaster1962174",
+      "def": "Mech_CentipedeBlaster",
+      "x": 271,
+      "z": 267
+    },
+    {
+      "id": "Mech_Scyther1962176",
+      "def": "Mech_Scyther",
+      "x": 268,
+      "z": 258
+    },
+    {
+      "id": "Mech_Lancer1962177",
+      "def": "Mech_Lancer",
+      "x": 268,
+      "z": 258
+    }
+  ]
+}
