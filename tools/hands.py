@@ -61,6 +61,12 @@ def wait(t):
     rm.wait(t)
 
 
+def skip(t, until=None):
+    """Fast-forward t ticks at the speed last chosen in the game, landing exactly on t (rm.skip);
+    for stretches where nothing needs an answer. Returns rm.skip's result."""
+    return rm.skip(t, until=until)
+
+
 def thing_at(x, z, d="Wall"):
     return [t for t in rm.call("list_things", category="all", nearX=x, nearZ=z, radius=0.5,
                                verbose=True, confirm=True).get("things", []) if t.get("def") == d]
