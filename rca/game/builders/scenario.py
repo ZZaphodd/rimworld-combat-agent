@@ -7,6 +7,16 @@ from .. import session
 from ..debug import Debug, formation
 
 
+RATION = "MealSurvivalPack"          # 0.9 nutrition; a pawn needs ~1.6 a day
+NUTRITION_PER_DAY, RATION_NUTRITION = 1.6, 0.9
+
+
+def ration_meals(days, pawns):
+    """Survival meals for `pawns` for `days` (spec "rations_days"; the user, 2026-10-08: the
+    40,000-tick Cawalia mech battles left a drafted squad starving)."""
+    return math.ceil(days * NUTRITION_PER_DAY / RATION_NUTRITION) * pawns
+
+
 def pawn_row(rm, pid):
     p = rm.call("get_pawn", id=pid)
     return {"id": pid, "name": p["name"], "weapon": p.get("weapon"), "x": p["x"], "z": p["z"],
@@ -43,12 +53,21 @@ def build(rm, spec, out_dir, log=print):
     ids = make_squad(d, d.spawn_raid(sq["faction"], sq["points"]), sq.get("place", [125, 125]),
                      sq.get("spacing", 2), sq.get("width", 5))
     d.remove_observers(observers, ids)
+    rations = None
+    if spec.get("rations_days"):
+        px, pz = sq.get("place", [125, 125])
+        n = ration_meals(spec["rations_days"], len(ids))
+        got = d.spawn_items(RATION, px, pz - 4, n)
+        if got < n:
+            raise RimMoltError(f"rations: {got} of {n} {RATION} near ({px}, {pz - 4})")
+        rations = {"def": RATION, "count": n, "x": px, "z": pz - 4}
+        log(f"   rations: {n} survival meals near ({px}, {pz - 4})")
     enemy = spawn_enemy(d, spec["enemy"])
     d.close()
     save = f"scenario_{sid}"
     session.save(rm, save)
     manifest = {"id": sid, "save": save, "spec": spec,
-                "squad": [pawn_row(rm, i) for i in ids],
+                "squad": [pawn_row(rm, i) for i in ids], "rations": rations,
                 "enemy": [{"id": p["id"], "def": p.get("kind") or p["def"], "x": p["x"],
                            "z": p["z"]} for p in enemy]}
     (out_dir / f"{save}.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False))

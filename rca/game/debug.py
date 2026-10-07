@@ -9,6 +9,14 @@ from ..rimmolt import RimMoltError, hostiles, things_of
 PODS = ("DropPodIncoming", "ActiveDropPod")
 
 
+def stack_count(t):
+    """A stack's size from list_things: `count` when given, else the label's "x15", else 1."""
+    if t.get("count"):
+        return t["count"]
+    tail = (t.get("label") or "").rsplit(" x", 1)
+    return int(tail[1]) if len(tail) == 2 and tail[1].isdigit() else 1
+
+
 def _held(f):
     """Run a debug sequence (run -> pick/click ...) with the game held exclusive: another
     client's call in between closes the option list or disarms the tool (rca/rimmolt.py)."""
@@ -181,6 +189,16 @@ class Debug:
             clicks = r.get("clicks") or [{}]
             if clicks[0].get("clicked", True) or k == tries - 1:   # "no debug tool was armed at
                 return r                                           # this point": arm again (2026-10-07)
+
+    @_held
+    def spawn_items(self, defname, x, z, n):
+        """n of `defname` placed at or near (x, z) ("Spawn thing..." places one per click and
+        disarms after it; stacks merge). Returns how many of that def lie within 6 cells."""
+        for _ in range(n):
+            self.run(f"Spawn thing... > {defname}")
+            self.dbg(action="click", x=x, z=z)
+        return sum(stack_count(t) for t in things_of(self.rm, defname)
+                   if abs(t["x"] - x) <= 6 and abs(t["z"] - z) <= 6)
 
     @_held
     def clear_area(self, x0, z0, x1, z1):

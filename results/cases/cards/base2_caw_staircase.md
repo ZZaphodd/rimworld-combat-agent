@@ -11,7 +11,8 @@ fields; +0.5× after a win, −0.5× after a loss; spike traps left is the secon
 traps left reads as too little maneuvering). State: `results/base/cawalia_staircase.jsonl`
 (`tools/cawalia.py show`). Tick cap 30,000; 60,000 for mech battles from battle 14 (the user; asked after battles 12–13, which
 Claude first reported as reaching 30,000 — they were stopped at t29529 by a storyteller raid). From
-battle 22 the storyteller's arrivals are removed and the battle plays on (`--remove-intruders`). From battle 15 the step comes from a sliding window of the last 6
+battle 22 the storyteller's arrivals are removed and the battle plays on (`--remove-intruders`).
+From battle 25 new builds carry 2 days of survival meals by the squad's start (the user). From battle 15 the step comes from a sliding window of the last 6
 counted battles (2 per raid kind): more wins → up 0.5×, more losses → down, a tie → hold (the user).
 
 ## Battles
@@ -39,6 +40,8 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 20 | 10.5× | 16 mechs (8 Centipede blasters, 5 Lancers, a War queen, a Scyther, a Scorcher) from the south edge | the east room, out north at the assault; the last three from 31–38 | **invalid** (the War queen's urchins counted as intruders; fixed) | 0 / 0 | 25 | — |
 | 21 | 10.5× | the same | the same | **invalid** (a storyteller raid at t29529) | 0 / 0 | 30 | — |
 | 22 | 10.5× | the same (storyteller arrivals removed) | the east room, then most of the squad north of the block; the last three Centipedes from 28–34 | **decisive** | 0 / 1 | 33 | **10.0** |
+| 23 | 11× | 82 tribals (61 bows and pila, 21 melee) from the west edge | the squad in the block's east room (two rifles lost in a failed swap) | **repelled** (fled t3922) | 0 / 0 | 76 | **0.0** |
+| 24 | 11.5× | 42 pirate melee (and an assault rifle) from the south edge | rifles to the sh 6–13; the zigzag across the south arc (seven crossings) | **repelled** (fled t3684) | 0 / 0 | 66 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -108,3 +111,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
   raid at t29529 the next (now removed); the third won: the turrets took the War queen and all but three
   Centipedes, finished by the rifles from just outside their reach at t42415. The squad, drafted for
   ~40,000 ticks, was starving (food 3–4 %) by the end.
+- **23 · t0–3922**: 82 tribals spent themselves on the west field, the west and north turrets and 76
+  traps while the squad sat in the east room; fled with 50 out. No hit taken.
+- **24 · t1041–7039** `arc-lure`: the zigzag across the south arc against 41 melee pirates: 40 out over
+  seven crossings, 66 traps; no hit taken.
