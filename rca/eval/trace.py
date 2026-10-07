@@ -12,9 +12,9 @@ poll; the first line is a header, the last an end line with the outcome:
 pawn = {"id", "n" name, "x", "z", "hp" health %, "w" weapon, "j" job, "d": 1 downed,
 "dr": 1 drafted}. Pawns that are gone (dead, kidnapped, left) are simply absent.
 
-Light mode (a human at the GUI): RimMolt's get_pawn changes the game's selection, so one call per
-pawn per poll makes the player's selection flicker through every pawn (the user, 2026-10-07; the
-overlay's per-pawn health reads did it). A light trace reads weapons once, at load while paused
+Light mode (a human at the GUI): with RimMolt's mod option "Mirror AI inspection" on, every pawn
+read changes the game's selection, so one call per pawn per poll makes the player's selection
+flicker through every pawn (the user, 2026-10-07; with the option off it does not). A light trace reads weapons once, at load while paused
 (a "weapons" line), and per poll only bulk calls: ours' health and job from list_colonists, the
 raiders' job from their targeting text, no raider health ("hp": null).
 """

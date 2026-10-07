@@ -137,7 +137,7 @@
   }
  },
  {
-  "title": "base2_ith_tribe_6x · civil outlanders ×8 vs 34 tribals (32 melee) · Ithfunda base v2 — pyrrhic",
+  "title": "base2_ith_tribe_6x · civil outlanders ×8 vs 34 tribals (32 melee) · Ithfunda base v2 — repelled (the user)",
   "situation": [
    "base-arena",
    "raid-far",
@@ -146,6 +146,9 @@
    "raid-strong-1v1"
   ],
   "plays": [
+   "closed-door-hold",
+   "furniture-bait",
+   "frag-at-rock",
    "mouth-hold",
    "melee-lock",
    "rotation",
@@ -175,6 +178,13 @@
     "result": "**pyrrhic** (fled t10042)",
     "lost": "3 dead (2 by our own frags), 3 downed, 7 permanent",
     "badness": "80.1"
+   },
+   {
+    "who": "**the user**",
+    "play": "Claude's loadout; chairs hauled into the east room; door (133, 187) left **closed** until the raid broke it; Jeyce on the plug, Felix and Elsie (frags, against the wall) on the diagonals, five guns packed 1–2 rows behind (Smith on the axis (133, 189)); frags at the rock beside the corridor while the door held, then down the corridor; Paulo took the frags when Elsie went down",
+    "result": "**repelled** (fled t9911)",
+    "lost": "1 dead (Felix), 2 downed",
+    "badness": "**44.9**"
    }
   ],
   "id": "base2_ith_tribe_6x",

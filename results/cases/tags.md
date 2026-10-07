@@ -87,6 +87,8 @@ A scene lists both for that moment.
 | `focus-fire` *(new, 2026-10-07)* | every pawn that can see it fires at one raider (a gas, rocket or incendiary holder at the doorway) |
 | `frag-into-queue` *(new, 2026-10-07)* | a frag thrower on the corridor axis behind the plug throws at the raid queued in the corridor below the doorway while the doorway fight holds it still (base2_ith_tribe_6x) |
 | `friendly-fire` *(new, 2026-10-07)* | our own explosive downs or kills our own (base2_ith_tribe_6x: a throw from off the axis struck the rock by the doorway; the thrower's own picks at raiders next to the plug) |
+| `furniture-bait` *(new, 2026-10-07)* | furniture hauled into the held room or onto the raid's way before it comes (the user's base2_ith_tribe_6x: dining chairs into the east room; the user said earlier that furniture buys time against the raid) |
+| `frag-at-rock` *(new, 2026-10-07)* | frags thrown at a rock or wall cell beside the corridor so the blast reaches raiders out of sight (the user's base2_ith_tribe_6x: Elsie's attack order on "the marble" while the door stood closed) |
 | `area-frags` *(new, 2026-10-06)* | a frag thrower on an "attack area" order keeps throwing at that area: the user's base_mon_tribe_3x: frags up the passage toward the outer door, held open so they would reach the raiders outside (the user); the furthest sightings (145–146, 94–96); most raiders nearby stood at z 98–105 |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
