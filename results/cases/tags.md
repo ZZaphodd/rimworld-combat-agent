@@ -83,6 +83,8 @@ A scene lists both for that moment.
 | `furniture-cleared` *(new, 2026-10-06)* | benches and furniture in the held room uninstalled before the raid comes so more guns fit near the door (the user's rule for base arenas; base_mon_tribe_3x) |
 | `off-axis-hold` *(new, 2026-10-07)* | inside a room behind an open door, every pawn on a cell that sees the doorway but not the approach corridor (save-map line of sight); raiders with long guns have to step into the doorway or the room to shoot (base2_mon_pirate_6x) |
 | `yard-line` *(new, 2026-10-07)* | a spread line in the open yard of a base, shooting raiders while they smash buildings (turtle's play on base2_mon_pirate_4x) |
+| `closed-door-hold` *(new, 2026-10-07)* | hold a room behind a closed door on cells that see the doorway but not the approach, so the raid must break the door before anyone can shoot (base2_ith_pirate_4x) |
+| `focus-fire` *(new, 2026-10-07)* | every pawn that can see it fires at one raider (a gas, rocket or incendiary holder at the doorway) |
 | `area-frags` *(new, 2026-10-06)* | a frag thrower on an "attack area" order keeps throwing at that area: the user's base_mon_tribe_3x: frags up the passage toward the outer door, held open so they would reach the raiders outside (the user); the furthest sightings (145–146, 94–96); most raiders nearby stood at z 98–105 |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |

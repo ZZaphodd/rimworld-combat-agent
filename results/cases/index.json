@@ -1,5 +1,73 @@
 [
  {
+  "title": "base2_ith_pirate_4x · civil outlanders ×8 (shooting 0–9) vs 19 Wasters with toxbombs, rockets, an incendiary · Ithfunda base v2 — repelled",
+  "situation": [
+   "base-arena",
+   "raid-far",
+   "raid-outranges",
+   "raid-throwers",
+   "us-low-skill",
+   "tox"
+  ],
+  "plays": [
+   "closed-door-hold",
+   "off-axis-hold",
+   "focus-fire",
+   "turtle"
+  ],
+  "results": [
+   {
+    "who": "agent `turtle`",
+    "play": "concave in the yard",
+    "result": "unresolved (timeout)",
+    "lost": "2",
+    "badness": "64.5"
+   },
+   {
+    "who": "agent `turtle_at` (plan base2_r1)",
+    "play": "door held open, plug + guns 2 back on the axis",
+    "result": "defeat",
+    "lost": "8 (all)",
+    "badness": "122.0"
+   },
+   {
+    "who": "Claude (alone)",
+    "play": "door **closed**, everyone off the axis; focus fire on gas/rocket/incendiary holders at the doorway",
+    "result": "**repelled** (fled t12223)",
+    "lost": "0 (0 downed)",
+    "badness": "**1.5**"
+   }
+  ],
+  "id": "base2_ith_pirate_4x",
+  "sites": [
+   "Ithfunda east room"
+  ],
+  "arena": "arena_col_ithfunda2",
+  "ours": "OutlanderCivil",
+  "raid": "PirateWaster",
+  "auto": [
+   "base-arena",
+   "raid-far",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "short": 6,
+    "long": 2
+   },
+   "enemy_n": 19,
+   "enemy_classes": null,
+   "enemy_melee_share": null,
+   "enemy_outrange_share": null,
+   "enemy_explosive_share": null,
+   "count_ratio": 0.42,
+   "distance": 160.0,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
   "title": "base2_ith_tribe_3x · civil outlanders ×8 vs 18 tribals (15 melee) · Ithfunda base v2 — repelled",
   "situation": [
    "base-arena",
