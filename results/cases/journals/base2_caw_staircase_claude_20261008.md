@@ -1,5 +1,7 @@
 # base2_caw_staircase — Claude, 2026-10-08
 
+The loops used here are saved in `results/cases/journals/base2_claude_loops/` (README there).
+
 ## 1 · base2_caw_tribe_2x (2×, tribe)
 Trace `results/human/traces/base2_caw_tribe_2x_claude_20261008-045444.jsonl.gz` · result **repelled**
 (fled t1932, cleared t4356), lost 0, downed 0, badness 0.7; raid 1 killed + 9 inferred of 16, 5 escaped;
