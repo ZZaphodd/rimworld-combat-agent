@@ -44,6 +44,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 24 | 11.5× | 42 pirate melee (and an assault rifle) from the south edge | rifles to the sh 6–13; the zigzag across the south arc (seven crossings) | **repelled** (fled t3684) | 0 / 0 | 66 | **0.0** |
 | 25 | 12× | 40 Scythers from the east edge | the zigzag across the south arc (Scythers kept pace), then a stand under the south turrets | **conceded** (7 lost; timeout t60095) | 7 / 0 | 72 | 101.0 |
 | 26 | 12.5× | 112 tribal melee from the north edge | the zigzag spot taken by the raid first; back to the block's north wall under the turrets, then the north room | **pyrrhic** (fled t4619) | 0 / 5 | 134 | 44.6 |
+| 27 | 13× | 53 pirates (11 sniper rifles, 5 rocket launchers, miniguns, shotguns) from the SW corner | the squad in the block's east room | **repelled** (fled t10578) | 0 / 0 | 77 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line

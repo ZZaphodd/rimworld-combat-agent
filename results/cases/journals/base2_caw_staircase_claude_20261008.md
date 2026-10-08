@@ -450,3 +450,13 @@ Trace `results/human/traces/base2_caw_tribe_12p5x_claude_20261008-091442.jsonl.g
   door and Elvee went down inside; Zach, Amanda and Furr shot whoever came in. The raid fled at t3930
   (t4619 by the harness) with 54 out; 16 down at the end.
 - t8551–11660: the standing three tended and rescued the downed; none died.
+
+## 27 · base2_caw_pirate_13x (13×, pirate)
+Trace `results/human/traces/base2_caw_pirate_13x_claude_20261008-092448.jsonl.gz` · result **repelled** (fled t10578, cleared t14956), lost 0, downed 0, badness 0.0; raid
+2 killed + 26 inferred of 53, 18 escaped; traps 1,421 → 1,344.
+- Card: everyone shooting 0–4 (rifles, an autopistol, knives, molotovs). Raid: 53 pirates from the SW
+  corner (20–40, 0–9): 11 sniper rifles, 3 doomsday and 2 triple rocket launchers, 2 miniguns, shotguns,
+  machine pistols, hellcats, heavy SMGs, EMP grenades.
+- Loadout: Michi's rifle to Butler.
+- The squad in the block's east room from t1650; the raid crossed the edge ring and the arc's west end
+  into the SW field, the south and west turrets; fled at t10578. Nobody came in; nobody of ours hit.
