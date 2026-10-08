@@ -48,6 +48,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 28 | 13.5× | 36 mechs (20 Lancers, 6 Tesserons, 4 Pikemen, 3 Diabolus, …) from the NW corner | the squad in the block's east room; the last Pikeman from a clear line south of the block | **decisive** | 0 / 0 | 59 | **0.0** |
 | 29 | 14× | 137 tribal melee from the south edge | the zigzag at the far side: south of the north arc, the raid passing two turret lines first; ten crossings | **repelled** (fled t7549) | 0 / 0 | 140 | **3.4** |
 | 30 | 14.5× | 60 pirates, all with sniper rifles, from the SE corner | the squad in the block's east room | **repelled** (fled t8715) | 0 / 0 | 87 | **0.0** |
+| 31 | 15× | 24 mechs (11 Centipede blasters, 5 Lancers, 2 Apocritons, …) from the south edge | the squad in the block's east room, fed from its rations; a try at the weak Centipedes | **conceded** (timeout t60084; 10 mechs left) | 3 / 0 | 62 | 47.4 |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -130,3 +131,6 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 - **29 · tribe 14×** `arc-lure`: the zigzag set up at the far side of the base from a south-edge raid:
   37 of 137 out before contact, then ten crossings of the north arc; 140 traps (the most so far); fled;
   four pawns scratched, none down.
+- **31 · mech 15×**: the room held and the rations fed the squad, but moods fell to 3 and three pawns
+  broke out of the room (one ran wild); the turrets were spent with 10 mechs (8 Centipedes, an Apocriton)
+  left; conceded.

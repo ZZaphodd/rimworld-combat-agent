@@ -499,3 +499,22 @@ Trace `results/human/traces/base2_caw_pirate_14p5x_claude_20261008-100510.jsonl.
 - Loadout: Le's good rifle to Lumenus.
 - The squad in the block's east room from the start: 60 sniper rifles (44.9) against the turrets (46)
   and the traps; fled at t8715 with 31 out. Kenta broke (wandering) but was not hit; nobody of ours hit.
+
+## 31 · base2_caw_mech_15x (15×, mech; cap 60,000; rations in the east room) — conceded (a loss)
+Trace `results/human/traces/base2_caw_mech_15x_claude_20261008-102734.jsonl.gz` · harness: timeout at t60084 (unresolved); booked **conceded** (as battles 14 and 25):
+lost 3 (Amara ran wild, Jess and Jane), downed 0, badness 47.4; 14 of 24 killed; traps 1,421 → 1,359;
+storyteller arrivals removed (8 at t29529).
+- Card: Danielos 15/17, Crim 9, Nikita 9, Houston 6/11 (a knife), the rest 0–4. Raid: 11 Centipede blasters,
+  5 Lancers, 3 Militors, 2 Apocritons, 2 Scorchers, a Scyther, from the south edge (44–59, 0–8).
+- Loadout: rifles to Danielos and Nikita (from Amara and Munevver).
+- The build: the first two attempts stalled or failed the assault check (mechs gather longer than 6,000
+  ticks; one check's waits ran no game time until the game was unpaused); fixed (15,000-tick check for
+  Cawalia mechs; the check unpauses when a wait runs no time); built on the third.
+- t0–29529: the squad in the block's east room; the mechs gathered at ~(25, 20) until ~t6000, then came
+  up the west side and around the block; 8 out by t29529. Fed at t18536 (food 12–28 % → 100 %) from the
+  room's 32 meals. Moods 46 → 3; Jess (sad wandering, t21911), Amara (ran wild, t38883), Jane (insane
+  ramblings, t41769) broke and left the room; Jess went down outside.
+- t36729–44732: four rifles tried the weak Centipedes from 29.5–36 (outside 26.9; 46 from the
+  Apocriton); 13 → 11 in 8,000 ticks; stopped.
+- t44732–60084: sheltered to the cap; fed again at ~t46000; ten mechs (8 Centipedes, the Apocriton,
+  a Lancer) still up; turrets mostly destroyed or dry.
