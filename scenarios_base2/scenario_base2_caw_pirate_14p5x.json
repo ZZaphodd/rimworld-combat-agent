@@ -1,0 +1,465 @@
+{
+  "id": "base2_caw_pirate_14p5x",
+  "save": "scenario_base2_caw_pirate_14p5x",
+  "spec": {
+    "id": "base2_caw_pirate_14p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 7250,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false,
+    "rations_days": 2,
+    "rations_at": [
+      138,
+      124
+    ]
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Hector Pope",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 96,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962094",
+      "name": "Timothy 'Lumenus' Flux",
+      "weapon": "Autopistol (poor 74%)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962116",
+      "name": "Ariana 'Ari' Jackson",
+      "weapon": "Revolver (good)",
+      "x": 103,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962122",
+      "name": "Kenta Burton",
+      "weapon": "Autopistol (poor 31%)",
+      "x": 100,
+      "z": 110,
+      "health": 100
+    },
+    {
+      "id": "Human1962128",
+      "name": "Er 'Le' Ling",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 107,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962134",
+      "name": "Newton 'Nag' Gallegos",
+      "weapon": "Bolt-action rifle (good)",
+      "x": 99,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962148",
+      "name": "Hratli 'Ninjak' Skirata",
+      "weapon": "Bolt-action rifle (normal 69%)",
+      "x": 98,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962155",
+      "name": "Diana 'Prissy' Krueger",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 99,
+      "z": 109,
+      "health": 100
+    }
+  ],
+  "rations": {
+    "def": "MealSurvivalPack",
+    "count": 32,
+    "x": 138,
+    "z": 124
+  },
+  "enemy": [
+    {
+      "id": "Human1962202",
+      "def": "Mercenary_Sniper",
+      "x": 208,
+      "z": 4
+    },
+    {
+      "id": "Human1962209",
+      "def": "Mercenary_Sniper",
+      "x": 211,
+      "z": 7
+    },
+    {
+      "id": "Human1962215",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 8
+    },
+    {
+      "id": "Human1962221",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 2
+    },
+    {
+      "id": "Human1962228",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 3
+    },
+    {
+      "id": "Human1962235",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 2
+    },
+    {
+      "id": "Human1962242",
+      "def": "Mercenary_Sniper",
+      "x": 216,
+      "z": 2
+    },
+    {
+      "id": "Human1962248",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962255",
+      "def": "Mercenary_Sniper",
+      "x": 203,
+      "z": 3
+    },
+    {
+      "id": "Human1962261",
+      "def": "Mercenary_Sniper",
+      "x": 216,
+      "z": 2
+    },
+    {
+      "id": "Human1962265",
+      "def": "Mercenary_Sniper",
+      "x": 208,
+      "z": 0
+    },
+    {
+      "id": "Human1858295",
+      "def": "Mercenary_Sniper",
+      "x": 205,
+      "z": 4
+    },
+    {
+      "id": "Human1962278",
+      "def": "Mercenary_Sniper",
+      "x": 208,
+      "z": 9
+    },
+    {
+      "id": "Human1962285",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 4
+    },
+    {
+      "id": "Human1962293",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 4
+    },
+    {
+      "id": "Human1962299",
+      "def": "Mercenary_Sniper",
+      "x": 205,
+      "z": 2
+    },
+    {
+      "id": "Human1962306",
+      "def": "Mercenary_Sniper",
+      "x": 216,
+      "z": 4
+    },
+    {
+      "id": "Human1962312",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962318",
+      "def": "Mercenary_Sniper",
+      "x": 215,
+      "z": 3
+    },
+    {
+      "id": "Human1962325",
+      "def": "Mercenary_Sniper",
+      "x": 219,
+      "z": 1
+    },
+    {
+      "id": "Human1962334",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 5
+    },
+    {
+      "id": "Human1962341",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 6
+    },
+    {
+      "id": "Human1962348",
+      "def": "Mercenary_Sniper",
+      "x": 218,
+      "z": 2
+    },
+    {
+      "id": "Human1962359",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 5
+    },
+    {
+      "id": "Human1962367",
+      "def": "Mercenary_Sniper",
+      "x": 205,
+      "z": 3
+    },
+    {
+      "id": "Human1962374",
+      "def": "Mercenary_Sniper",
+      "x": 215,
+      "z": 5
+    },
+    {
+      "id": "Human1962380",
+      "def": "Mercenary_Sniper",
+      "x": 207,
+      "z": 5
+    },
+    {
+      "id": "Human1962388",
+      "def": "Mercenary_Sniper",
+      "x": 209,
+      "z": 5
+    },
+    {
+      "id": "Human1962395",
+      "def": "Mercenary_Sniper",
+      "x": 216,
+      "z": 2
+    },
+    {
+      "id": "Human1962401",
+      "def": "Mercenary_Sniper",
+      "x": 213,
+      "z": 5
+    },
+    {
+      "id": "Human1962407",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 6
+    },
+    {
+      "id": "Human1962413",
+      "def": "Mercenary_Sniper",
+      "x": 205,
+      "z": 2
+    },
+    {
+      "id": "Human1962420",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 5
+    },
+    {
+      "id": "Human1962426",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 1
+    },
+    {
+      "id": "Human1962434",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 6
+    },
+    {
+      "id": "Human1962441",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 1
+    },
+    {
+      "id": "Human1962449",
+      "def": "Mercenary_Sniper",
+      "x": 204,
+      "z": 5
+    },
+    {
+      "id": "Human1962455",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962462",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 3
+    },
+    {
+      "id": "Human1962468",
+      "def": "Mercenary_Sniper",
+      "x": 205,
+      "z": 6
+    },
+    {
+      "id": "Human1962475",
+      "def": "Mercenary_Sniper",
+      "x": 216,
+      "z": 2
+    },
+    {
+      "id": "Human1962482",
+      "def": "Mercenary_Sniper",
+      "x": 204,
+      "z": 8
+    },
+    {
+      "id": "Human1962488",
+      "def": "Mercenary_Sniper",
+      "x": 215,
+      "z": 5
+    },
+    {
+      "id": "Human1962494",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 2
+    },
+    {
+      "id": "Human1962500",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 5
+    },
+    {
+      "id": "Human1962506",
+      "def": "Mercenary_Sniper",
+      "x": 214,
+      "z": 4
+    },
+    {
+      "id": "Human1962514",
+      "def": "Mercenary_Sniper",
+      "x": 217,
+      "z": 3
+    },
+    {
+      "id": "Human1962520",
+      "def": "Mercenary_Sniper",
+      "x": 201,
+      "z": 5
+    },
+    {
+      "id": "Human1962535",
+      "def": "Mercenary_Sniper",
+      "x": 217,
+      "z": 3
+    },
+    {
+      "id": "Human1962542",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962549",
+      "def": "Mercenary_Sniper",
+      "x": 213,
+      "z": 2
+    },
+    {
+      "id": "Human1962557",
+      "def": "Mercenary_Sniper",
+      "x": 206,
+      "z": 7
+    },
+    {
+      "id": "Human1962563",
+      "def": "Mercenary_Sniper",
+      "x": 216,
+      "z": 4
+    },
+    {
+      "id": "Human1962582",
+      "def": "Mercenary_Sniper",
+      "x": 206,
+      "z": 8
+    },
+    {
+      "id": "Human1962588",
+      "def": "Mercenary_Sniper",
+      "x": 212,
+      "z": 3
+    },
+    {
+      "id": "Human1962572",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962600",
+      "def": "Mercenary_Sniper",
+      "x": 210,
+      "z": 4
+    },
+    {
+      "id": "Human1962607",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 3
+    },
+    {
+      "id": "Human1962614",
+      "def": "Mercenary_Sniper",
+      "x": 218,
+      "z": 1
+    },
+    {
+      "id": "Human1962622",
+      "def": "Mercenary_Sniper",
+      "x": 202,
+      "z": 4
+    }
+  ]
+}
