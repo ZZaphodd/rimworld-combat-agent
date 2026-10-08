@@ -1,0 +1,427 @@
+{
+  "id": "base2_caw_pirate_13x",
+  "save": "scenario_base2_caw_pirate_13x",
+  "spec": {
+    "id": "base2_caw_pirate_13x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Pirate",
+      "points": 6500,
+      "strategy": "ImmediateAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 6000,
+    "ladder": false,
+    "rations_days": 2
+  },
+  "squad": [
+    {
+      "id": "Human1962088",
+      "name": "Diana Xocoryl",
+      "weapon": "Autopistol (good)",
+      "x": 96,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962094",
+      "name": "Michelle 'Michi' Tabares",
+      "weapon": "Bolt-action rifle (normal 74%)",
+      "x": 97,
+      "z": 111,
+      "health": 100
+    },
+    {
+      "id": "Human1962099",
+      "name": "Velius 'Veli' Ayalp",
+      "weapon": "Bolt-action rifle (poor)",
+      "x": 103,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962104",
+      "name": "Jennifer Butler",
+      "weapon": "Steel knife (poor 90%)",
+      "x": 105,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962110",
+      "name": "Samir 'Bouba' Boubalouta",
+      "weapon": "Steel knife (poor)",
+      "x": 106,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962115",
+      "name": "Annabel Novak",
+      "weapon": "Bolt-action rifle (normal 90%)",
+      "x": 99,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human181714",
+      "name": "Jonas Puisto",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 101,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962137",
+      "name": "Cyan Stein",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 103,
+      "z": 106,
+      "health": 100
+    },
+    {
+      "id": "Human1962141",
+      "name": "Estelle 'Freckles' Webster",
+      "weapon": "Molotov cocktails (86%)",
+      "x": 105,
+      "z": 107,
+      "health": 100
+    }
+  ],
+  "rations": {
+    "def": "MealSurvivalPack",
+    "count": 36,
+    "x": 100,
+    "z": 104
+  },
+  "enemy": [
+    {
+      "id": "Human1962186",
+      "def": "Mercenary_Sniper",
+      "x": 22,
+      "z": 0
+    },
+    {
+      "id": "Human1962194",
+      "def": "Mercenary_Heavy",
+      "x": 21,
+      "z": 1
+    },
+    {
+      "id": "Human1962199",
+      "def": "Mercenary_Heavy",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962204",
+      "def": "Mercenary_Heavy",
+      "x": 38,
+      "z": 7
+    },
+    {
+      "id": "Human1962209",
+      "def": "Mercenary_Elite",
+      "x": 31,
+      "z": 4
+    },
+    {
+      "id": "Human1962224",
+      "def": "Mercenary_Gunner",
+      "x": 34,
+      "z": 2
+    },
+    {
+      "id": "Human1962235",
+      "def": "Mercenary_Sniper",
+      "x": 40,
+      "z": 2
+    },
+    {
+      "id": "Human1962243",
+      "def": "Grenadier_EMP",
+      "x": 27,
+      "z": 2
+    },
+    {
+      "id": "Human1962249",
+      "def": "PirateBoss",
+      "x": 23,
+      "z": 0
+    },
+    {
+      "id": "Human1962257",
+      "def": "Mercenary_Gunner",
+      "x": 39,
+      "z": 2
+    },
+    {
+      "id": "Human1962265",
+      "def": "Pirate",
+      "x": 39,
+      "z": 4
+    },
+    {
+      "id": "Human1962271",
+      "def": "Mercenary_Heavy",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962277",
+      "def": "Mercenary_Sniper",
+      "x": 30,
+      "z": 6
+    },
+    {
+      "id": "Human1962284",
+      "def": "Scavenger",
+      "x": 38,
+      "z": 3
+    },
+    {
+      "id": "Human1962289",
+      "def": "Mercenary_Sniper",
+      "x": 30,
+      "z": 9
+    },
+    {
+      "id": "Human1962295",
+      "def": "Mercenary_Sniper",
+      "x": 31,
+      "z": 4
+    },
+    {
+      "id": "Human1962301",
+      "def": "Mercenary_Elite",
+      "x": 21,
+      "z": 1
+    },
+    {
+      "id": "Human1962309",
+      "def": "Mercenary_Elite",
+      "x": 37,
+      "z": 4
+    },
+    {
+      "id": "Human1962318",
+      "def": "Pirate",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962324",
+      "def": "Mercenary_Heavy",
+      "x": 32,
+      "z": 8
+    },
+    {
+      "id": "Human1962330",
+      "def": "Mercenary_Sniper",
+      "x": 39,
+      "z": 4
+    },
+    {
+      "id": "Human1962336",
+      "def": "Mercenary_Elite",
+      "x": 23,
+      "z": 1
+    },
+    {
+      "id": "Human1962340",
+      "def": "Mercenary_Gunner",
+      "x": 35,
+      "z": 1
+    },
+    {
+      "id": "Human1962346",
+      "def": "Mercenary_Gunner",
+      "x": 39,
+      "z": 3
+    },
+    {
+      "id": "Human1962353",
+      "def": "Pirate",
+      "x": 40,
+      "z": 6
+    },
+    {
+      "id": "Human1962358",
+      "def": "Mercenary_Sniper",
+      "x": 31,
+      "z": 4
+    },
+    {
+      "id": "Human1962364",
+      "def": "Mercenary_Heavy",
+      "x": 31,
+      "z": 7
+    },
+    {
+      "id": "Human1962370",
+      "def": "Mercenary_Elite",
+      "x": 34,
+      "z": 1
+    },
+    {
+      "id": "Human1962377",
+      "def": "Pirate",
+      "x": 27,
+      "z": 4
+    },
+    {
+      "id": "Human1962384",
+      "def": "Mercenary_Gunner",
+      "x": 26,
+      "z": 2
+    },
+    {
+      "id": "Human1962404",
+      "def": "Scavenger",
+      "x": 26,
+      "z": 3
+    },
+    {
+      "id": "Human1962409",
+      "def": "Mercenary_Gunner",
+      "x": 39,
+      "z": 6
+    },
+    {
+      "id": "Human1962415",
+      "def": "Mercenary_Elite",
+      "x": 20,
+      "z": 0
+    },
+    {
+      "id": "Human1962424",
+      "def": "Pirate",
+      "x": 35,
+      "z": 9
+    },
+    {
+      "id": "Human1962429",
+      "def": "Mercenary_Heavy",
+      "x": 31,
+      "z": 4
+    },
+    {
+      "id": "Human1962435",
+      "def": "Pirate",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962441",
+      "def": "Mercenary_Elite",
+      "x": 22,
+      "z": 2
+    },
+    {
+      "id": "Human1962448",
+      "def": "Mercenary_Elite",
+      "x": 39,
+      "z": 6
+    },
+    {
+      "id": "Human1962455",
+      "def": "Mercenary_Sniper",
+      "x": 38,
+      "z": 3
+    },
+    {
+      "id": "Human1962462",
+      "def": "Mercenary_Gunner",
+      "x": 38,
+      "z": 7
+    },
+    {
+      "id": "Human1962472",
+      "def": "Pirate",
+      "x": 37,
+      "z": 2
+    },
+    {
+      "id": "Human1962479",
+      "def": "Mercenary_Elite",
+      "x": 22,
+      "z": 1
+    },
+    {
+      "id": "Human1962486",
+      "def": "Mercenary_Sniper",
+      "x": 38,
+      "z": 3
+    },
+    {
+      "id": "Human1962493",
+      "def": "Mercenary_Gunner",
+      "x": 33,
+      "z": 8
+    },
+    {
+      "id": "Human1962501",
+      "def": "Mercenary_Elite",
+      "x": 30,
+      "z": 2
+    },
+    {
+      "id": "Human1962508",
+      "def": "Grenadier_Smoke",
+      "x": 38,
+      "z": 3
+    },
+    {
+      "id": "Human1962513",
+      "def": "Mercenary_Sniper",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962519",
+      "def": "Pirate",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962527",
+      "def": "Grenadier_Destructive",
+      "x": 23,
+      "z": 2
+    },
+    {
+      "id": "Human1962535",
+      "def": "Mercenary_Elite",
+      "x": 33,
+      "z": 2
+    },
+    {
+      "id": "Human1962543",
+      "def": "Mercenary_Sniper",
+      "x": 25,
+      "z": 2
+    },
+    {
+      "id": "Human1962550",
+      "def": "Mercenary_Elite",
+      "x": 38,
+      "z": 8
+    },
+    {
+      "id": "Human1962557",
+      "def": "Mercenary_Elite",
+      "x": 23,
+      "z": 3
+    }
+  ]
+}
