@@ -8,7 +8,9 @@ slug turret", minimum range 12, 30 shots before rearming) and 7 mini-turrets; sq
 
 The user's design (2026-10-08): Claude plays every battle directly, moving so the raid walks over trap
 fields; +0.5× after a win, −0.5× after a loss; spike traps left is the second measure (a loss with many
-traps left reads as too little maneuvering). State: `results/base/cawalia_staircase.jsonl`
+traps left reads as too little maneuvering). Claude's control loops (zigzag kite, room shelter and feeding, kite-and-shoot by
+weapon reach, weapon swap that waits): `results/cases/journals/base2_claude_loops/` (README there).
+State: `results/base/cawalia_staircase.jsonl`
 (`tools/cawalia.py show`). Tick cap 30,000; 60,000 for mech battles from battle 14 (the user; asked after battles 12–13, which
 Claude first reported as reaching 30,000 — they were stopped at t29529 by a storyteller raid). From
 battle 22 the storyteller's arrivals are removed and the battle plays on (`--remove-intruders`).
