@@ -45,6 +45,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 25 | 12× | 40 Scythers from the east edge | the zigzag across the south arc (Scythers kept pace), then a stand under the south turrets | **conceded** (7 lost; timeout t60095) | 7 / 0 | 72 | 101.0 |
 | 26 | 12.5× | 112 tribal melee from the north edge | the zigzag spot taken by the raid first; back to the block's north wall under the turrets, then the north room | **pyrrhic** (fled t4619) | 0 / 5 | 134 | 44.6 |
 | 27 | 13× | 53 pirates (11 sniper rifles, 5 rocket launchers, miniguns, shotguns) from the SW corner | the squad in the block's east room | **repelled** (fled t10578) | 0 / 0 | 77 | **0.0** |
+| 28 | 13.5× | 36 mechs (20 Lancers, 6 Tesserons, 4 Pikemen, 3 Diabolus, …) from the NW corner | the squad in the block's east room; the last Pikeman from a clear line south of the block | **decisive** | 0 / 0 | 59 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line

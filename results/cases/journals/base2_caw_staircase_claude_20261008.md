@@ -460,3 +460,21 @@ Trace `results/human/traces/base2_caw_pirate_13x_claude_20261008-092448.jsonl.gz
 - Loadout: Michi's rifle to Butler.
 - The squad in the block's east room from t1650; the raid crossed the edge ring and the arc's west end
   into the SW field, the south and west turrets; fled at t10578. Nobody came in; nobody of ours hit.
+
+## 28 · base2_caw_mech_13p5x (13.5×, mech; cap 60,000; rations)
+Trace `results/human/traces/base2_caw_mech_13p5x_claude_20261008-094322.jsonl.gz` · result **decisive** (cleared t31623), lost 0, downed 0, badness 0.0; 36 of 36 killed;
+traps 1,421 → 1,362; storyteller arrivals removed (1 at t30385, 7 at t31302).
+- Card: Raido 6, Sergei 5, Gumpy and Madden 4, the rest 0–1. Raid: 20 Lancers, 6 Tesserons, 4 Pikemen,
+  3 Diabolus, a Legionary, a Cyclops, a Scorcher, from the NW corner (0–12, 265–273).
+- Loadout: rifles to Raido and Gumpy (from Briggs and Anita).
+- The build stalled in its assault check (the save and manifest were already written); killed and
+  reused.
+- t0–9660: the squad in the block's east room; the mechs gathered at ~(258, 32)… then crossed the map;
+  moods 49 → 22; no break all battle.
+- t9660–26390: the assault came along the north side and down to the block; the north turrets were all
+  destroyed; 32 of 36 out by t26390.
+- t26390–31623: the 32 survival meals by the squad start (100, 104) were gone (food 14–19 %, no meal
+  on the map); four rifles killed the last Pikeman south of the block from (141–144, 89–98) once they had
+  a clear line (from the NE its cover was the ruined turret's barricades: 3–5 shots in 1,500 ticks);
+  a Lancer and the last two Pikemen died to the turrets (191, 136) and others. Nobody of ours hit.
+- Changed: new builds put the rations in the block's east room (`rations_at`, `cawalia.RATIONS_AT`).
