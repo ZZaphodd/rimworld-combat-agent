@@ -1,0 +1,723 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>찹쌀이 아바타</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap">
+<style>
+/* Layout: stage (3D avatar + speech bubble) left, control panel right; stacked on phones.
+   One committed pastel stream-studio look; battle mode fades a dusk overlay over the stage. */
+:root {
+  --stage-a: #e7e2fb;
+  --stage-b: #fde6dc;
+  --battle-a: #2a2142;
+  --battle-b: #7a2f3c;
+  --panel: #fffaf6;
+  --ink: #2f2838;
+  --muted: #6e6479;
+  --line: #ece3dc;
+  --peace: #6fb35f;
+  --battle: #e0443a;
+  --display: "Jua", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --body: "Gowun Dodum", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  color-scheme: light;
+}
+html, body { height: 100%; }
+body { background: var(--panel); color: var(--ink); font-family: var(--body); }
+.app { display: grid; grid-template-columns: minmax(0, 1fr) 340px; height: 100%; }
+.stage { position: relative; min-height: 0; overflow: hidden; background: linear-gradient(160deg, var(--stage-a), var(--stage-b)); touch-action: none; }
+.battle-bg { position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 100%, var(--battle-b), var(--battle-a)); opacity: 0; transition: opacity .6s ease; }
+.battle .battle-bg { opacity: 1; }
+#c { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: pointer; }
+.nameplate {
+  position: absolute; left: 16px; bottom: 16px; display: flex; align-items: baseline; gap: 10px;
+  background: rgba(255,255,255,.85); border: 1px solid rgba(47,40,56,.08);
+  padding: 8px 14px; border-radius: 14px; font-family: var(--display);
+}
+.nameplate b { font-weight: 400; font-size: 20px; }
+.nameplate span { font-size: 15px; color: var(--peace); }
+.battle .nameplate span { color: var(--battle); }
+.bubble {
+  position: absolute; left: 50%; top: 18px; transform: translateX(-50%);
+  width: min(78%, 420px); background: #fff; color: var(--ink);
+  border-radius: 20px; padding: 14px 18px; font-family: var(--display); font-size: 19px; line-height: 1.4;
+  box-shadow: 0 6px 0 rgba(47,40,56,.07); text-align: center; text-wrap: balance;
+}
+.battle .bubble { border-radius: 6px; box-shadow: 0 0 0 3px var(--battle), 0 6px 0 rgba(0,0,0,.25); }
+.bubble::after { content: ""; position: absolute; left: 50%; bottom: -10px; margin-left: -10px; border: 10px solid transparent; border-bottom: 0; border-top-color: #fff; }
+.bubble p { margin: 0; min-height: 1.4em; }
+.panel { background: var(--panel); border-left: 1px solid var(--line); overflow-y: auto; padding-inline: 18px; padding-block: 18px 24px; display: flex; flex-direction: column; gap: 18px; }
+.panel h2 { margin: 0 0 8px; font-family: var(--display); font-weight: 400; font-size: 15px; letter-spacing: .04em; color: var(--muted); }
+.flavors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.flavor {
+  font-family: var(--display); font-size: 15px; cursor: pointer; color: var(--ink);
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 6px 9px;
+  display: flex; flex-direction: column; align-items: center; gap: 6px; transition: border-color .2s, box-shadow .2s;
+}
+.flavor i { width: 30px; height: 26px; border-radius: 50% 50% 46% 46% / 58% 58% 42% 42%; background: var(--sw); box-shadow: inset 0 -4px 0 rgba(0,0,0,.06), 0 0 0 1px rgba(47,40,56,.1); }
+.flavor[aria-pressed="true"] { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
+.flavor:focus-visible { outline: 3px solid #f0708f; outline-offset: 2px; }
+.modes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; background: #f3ebe5; padding: 5px; border-radius: 16px; }
+.mode {
+  font-family: var(--display); font-size: 17px; cursor: pointer; border: 0; border-radius: 12px; padding: 11px 8px;
+  background: transparent; color: var(--muted); transition: background .2s, color .2s;
+}
+.mode[data-mode="peace"][aria-pressed="true"] { background: var(--peace); color: #fff; }
+.mode[data-mode="battle"][aria-pressed="true"] { background: var(--battle); color: #fff; }
+.chips { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.chip {
+  font: inherit; text-align: left; cursor: pointer; color: var(--ink);
+  background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 14px;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px; transition: transform .1s, background .2s, border-color .2s;
+}
+.chip b { font-family: var(--display); font-weight: 400; font-size: 17px; }
+.chip b i { font-style: normal; font-size: 13px; color: var(--muted); margin-left: 6px; }
+.chip small { font-size: 13px; color: var(--muted); }
+.chip:active { transform: scale(.97); }
+.chip[aria-pressed="true"] { background: var(--peace); border-color: var(--peace); color: #fff; }
+.battle-mode .chip[aria-pressed="true"] { background: var(--battle); border-color: var(--battle); }
+.chip[aria-pressed="true"] :is(small, i) { color: rgba(255,255,255,.88); }
+form { display: flex; gap: 8px; }
+input[type=text] { flex: 1; min-width: 0; font: inherit; font-size: 16px; color: var(--ink); background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.btn { font-family: var(--display); font-size: 16px; cursor: pointer; border-radius: 12px; padding: 10px 14px; background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.btn.primary { background: var(--ink); color: #fff; border-color: var(--ink); }
+.btn[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row .btn { flex: 1; }
+:is(.chip, .btn, .mode, input):focus-visible { outline: 3px solid #f0708f; outline-offset: 2px; }
+.hint { margin: 0; font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+@media (max-width: 760px) {
+  .app { grid-template-columns: 1fr; grid-template-rows: 56svh auto; height: auto; }
+  .panel { border-left: 0; border-top: 1px solid var(--line); overflow: visible; }
+  .bubble { font-size: 17px; }
+}
+.obs body, .obs .stage { background: transparent; }
+.obs .battle-bg { display: none; }
+.obs .app { grid-template-columns: 1fr; }
+.obs .panel, .obs .nameplate { display: none; }
+@media (prefers-reduced-motion: reduce) { .chip, .mode, .battle-bg { transition: none; } }
+</style>
+
+<div class="app" id="app">
+  <section class="stage" id="stage">
+    <div class="battle-bg"></div>
+    <canvas id="c" aria-label="찹쌀이 캐릭터. 누르면 말랑하게 눌립니다."></canvas>
+    <div class="bubble" id="bubble" hidden><p id="bubbleText"></p></div>
+    <div class="nameplate"><b id="nameText">평화 무색 찹쌀이</b><span id="emoLabel">평온</span></div>
+  </section>
+  <aside class="panel">
+    <div>
+      <h2>맛</h2>
+      <div class="flavors" id="flavors"></div>
+    </div>
+    <div>
+      <h2>모드</h2>
+      <div class="modes">
+        <button class="mode" type="button" data-mode="peace" aria-pressed="true">평화 · 내정</button>
+        <button class="mode" type="button" data-mode="battle" aria-pressed="false">전투</button>
+      </div>
+    </div>
+    <div>
+      <h2>감정</h2>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div>
+      <h2>말 시키기</h2>
+      <form id="sayForm">
+        <input type="text" id="sayInput" maxlength="80" placeholder="예: 성문 지켜! 한 놈도 못 들어와!" autocomplete="off">
+        <button class="btn primary" type="submit">말하기</button>
+      </form>
+    </div>
+    <div class="row">
+      <button class="btn" id="demo" aria-pressed="false">실황 데모: 마을 습격</button>
+      <button class="btn" id="voice" aria-pressed="true">목소리 켜짐</button>
+    </div>
+    <p class="hint">같은 감정이라도 모드에 따라 연기가 달라져요. 캐릭터를 톡 찌르면 눌리고, 연달아 세 번 찌르면 싫어합니다.</p>
+  </aside>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// 찹쌀이 아바타 (the user's artifact https://claude.ai/artifact/UgfXRFzz7n6yAJaSDWLq7H), served by
+// tools/overlay.py at /avatar for an OBS browser source. URL: obs (transparent, no panel),
+// flavor=white|matcha|strawberry, mode=peace|battle, emotion=calm|joy|surprise|anger|sad,
+// ws=ws://... (live {mode, emotion, text, flavor} messages).
+(function () {
+  const params = new URLSearchParams(location.search);
+  if (params.has('obs')) document.documentElement.classList.add('obs');
+
+  // ================= 5 sentiments x 2 modes =================
+  const EMO_KEYS = ['calm', 'joy', 'surprise', 'anger', 'sad'];
+  const SENT = { calm: '평온', joy: '기쁨', surprise: '놀람', anger: '화남', sad: '슬픔' };
+  const base = { eyes: 'dot', open: 1, brow: 0, browVis: 0, mouth: [.12, .04, 0, 0], blush: .2, tint: 0xfff4ef, hop: 0, hopF: 0, breath: .03, breathF: .35, sway: .03, swayF: .25, jitter: 0, bias: 0, puff: 0, tilt: 0, lean: 0, arms: 'rest', pad: 0, sprout: .15, stiff: 1, wob: .012, fx: [], pitch: 1, glow: 0, fang: 0, kick: 0 };
+  const P = o => Object.assign({}, base, o);
+  const EMO = {
+    peace: {
+      calm:     P({ label: '평온', motion: '숨쉬기' }),
+      joy:      P({ label: '기쁨', motion: '방방 점프', eyes: 'happy', mouth: [.17, .1, 0, .6], blush: .75, tint: 0xfff1f0, hop: .3, hopF: 2.2, breath: 0, sway: .07, swayF: 1.1, arms: 'wave', sprout: .1, stiff: .55, wob: .028, fx: ['sparkle', 'stars'], pitch: 1.25 }),
+      surprise: P({ label: '놀람', motion: '쭉 늘어남', eyes: 'wide', brow: -.15, browVis: .8, mouth: [.07, 0, 0, 1], blush: 0, breath: 0, sway: 0, jitter: .004, bias: .1, lean: -.08, arms: 'up', sprout: -.05, stiff: 1.6, wob: .01, fx: ['exclaim'], pitch: 1.25, kick: 9 }),
+      anger:    P({ label: '화남', motion: '볼 빵빵', open: .85, brow: .35, browVis: 1, mouth: [.06, -.05, 0, 0], blush: .9, tint: 0xffe3de, breath: .05, breathF: 1.1, sway: .02, swayF: .5, jitter: .01, bias: -.05, puff: .08, arms: 'down', sprout: .05, stiff: 1.3, fx: ['anger'], pitch: 1.05 }),
+      sad:      P({ label: '슬픔', motion: '축 처짐', open: .8, brow: -.45, browVis: 1, mouth: [.1, -.06, 0, 0], blush: 0, tint: 0xe9eefc, breath: .025, breathF: .22, sway: .02, swayF: .15, bias: -.14, tilt: -.05, lean: .12, arms: 'down', sprout: 1.25, stiff: .5, wob: .008, fx: ['tears'], pitch: .75 })
+    },
+    battle: {
+      calm:     P({ label: '전투태세', motion: '제자리 스텝', open: .85, brow: .3, browVis: 1, mouth: [.08, -.02, 0, 0], blush: 0, tint: 0xfff1ea, hop: .06, hopF: 2.3, breath: .015, breathF: .6, sway: .03, swayF: .5, bias: -.04, lean: .12, arms: 'pad', pad: 1, sprout: 0, stiff: 2.4, wob: .006, pitch: .85, fang: .6 }),
+      joy:      P({ label: '의기양양', motion: '주먹 번쩍', open: .8, brow: .25, browVis: 1, mouth: [.18, .11, 0, .55], blush: .3, tint: 0xfff0e6, hop: .2, hopF: 2.8, breath: 0, sway: .04, swayF: 1.4, lean: -.08, arms: 'pump', sprout: 0, stiff: 2, wob: .02, fx: ['sparks'], pitch: 1.05, fang: 1 }),
+      surprise: P({ label: '경계', motion: '가드 올림', eyes: 'wide', open: .9, brow: .45, browVis: 1, mouth: [.1, -.03, .015, .2], blush: 0, breath: 0, sway: 0, jitter: .006, bias: .04, lean: -.12, arms: 'guard', sprout: -.15, stiff: 2.5, fx: ['alert'], pitch: 1.0, fang: .8, kick: 7 }),
+      anger:    P({ label: '분노', motion: '불꽃 각성', open: .75, brow: .7, browVis: 1, mouth: [.16, -.04, .028, .12], blush: 0, tint: 0xffcfc6, breath: .03, breathF: 1.6, sway: 0, jitter: .03, bias: -.06, lean: .14, arms: 'pad', pad: 1, sprout: 0, stiff: 3, wob: .03, fx: ['flames', 'anger'], pitch: .78, glow: 1, fang: 1 }),
+      sad:      P({ label: '분함', motion: '이 악물기', open: .75, brow: .55, browVis: 1, mouth: [.15, -.06, .022, 0], blush: 0, tint: 0xf0ecf6, breath: .02, breathF: .9, sway: 0, jitter: .014, bias: -.1, lean: .16, arms: 'fists', sprout: .5, stiff: 1.4, wob: .015, fx: ['tears'], pitch: .8, fang: .7 })
+    }
+  };
+  const ARMS = {
+    rest:  [[-.98, -.38, .08], [.98, -.38, .08]],
+    wave:  [[-1.02, .55, .1], [1.02, .55, .1]],
+    up:    [[-1.1, .42, .15], [1.1, .42, .15]],
+    down:  [[-.86, -.6, .05], [.86, -.6, .05]],
+    pad:   [[-.42, -.6, .88], [.42, -.6, .88]],
+    pump:  [[-1.0, -.35, .12], [.9, .95, .2]],
+    guard: [[-.66, -.2, .9], [.66, -.2, .9]],
+    fists: [[-.9, -.5, .45], [.9, -.5, .45]]
+  };
+
+  // ================= flavors: peace color, and a stronger battle color =================
+  const FLAVORS = {
+    white:      { name: '무색', peace: 0xebe5df, battle: 0xb0a199, blush: 0xff8fa8, swatch: '#ebe5df' },
+    matcha:     { name: '말차', peace: 0xa6ca78, battle: 0x5c9a2e, blush: 0xff8f9e, swatch: '#a6ca78' },
+    strawberry: { name: '딸기', peace: 0xff9db2, battle: 0xe8456f, blush: 0xff4f7c, swatch: '#ff9db2' }
+  };
+  const EMO_BASE = new THREE.Color(0xfff4ef).convertSRGBToLinear();
+  let flavor = FLAVORS[params.get('flavor')] ? params.get('flavor') : 'white';
+  const flavCur = new THREE.Color(FLAVORS[flavor].peace).convertSRGBToLinear(), flavTgt = new THREE.Color(), flavA = new THREE.Color(), flavB = new THREE.Color(), blushTgt = new THREE.Color();
+
+  // ================= three.js setup =================
+  const canvas = document.getElementById('c'), stage = document.getElementById('stage'), app = document.getElementById('app');
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setClearColor(0x000000, 0);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(32, 1, .1, 50);
+
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const env = new THREE.Scene();
+  const envTex = (() => { const c = document.createElement('canvas'); c.width = 4; c.height = 128; const g = c.getContext('2d');
+    const lg = g.createLinearGradient(0, 0, 0, 128); lg.addColorStop(0, '#e9e3ff'); lg.addColorStop(.5, '#fff1ea'); lg.addColorStop(1, '#c9b9c4');
+    g.fillStyle = lg; g.fillRect(0, 0, 4, 128); const t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding; return t; })();
+  env.add(new THREE.Mesh(new THREE.SphereGeometry(30, 32, 16), new THREE.MeshBasicMaterial({ side: THREE.BackSide, map: envTex })));
+  const softbox = (x, y, z, s, k) => { const m = new THREE.Mesh(new THREE.SphereGeometry(s, 16, 8), new THREE.MeshBasicMaterial()); m.material.color.setRGB(k, k, k); m.position.set(x, y, z); env.add(m); };
+  softbox(6, 10, 10, 4, 5); softbox(-10, 4, 6, 3, 2.2);
+  scene.environment = pmrem.fromScene(env, .04).texture;
+  scene.add(new THREE.HemisphereLight(0xfff6f0, 0xd9c7d4, .5));
+  const key = new THREE.DirectionalLight(0xffffff, .9); key.position.set(3, 5, 6); scene.add(key);
+  const rim = new THREE.DirectionalLight(0xd8ccff, .5); rim.position.set(-5, 2, -3); scene.add(rim);
+  const rimPeace = new THREE.Color(0xd8ccff), rimBattle = new THREE.Color(0xff6a3d);
+
+  const gloss = (color, extra) => new THREE.MeshPhysicalMaterial(Object.assign({ color, roughness: .42, metalness: 0, clearcoat: .7, clearcoatRoughness: .15 }, extra || {}));
+  const M = {
+    body: gloss(0xfff4ef, { roughness: .5, clearcoat: .55 }),
+    eye: gloss(0x1c1420, { roughness: .15, clearcoat: 1, envMapIntensity: .25 }),
+    white: new THREE.MeshBasicMaterial({ color: 0xffffff }),
+    glow: new THREE.MeshBasicMaterial({ color: 0xff3b2f }),
+    line: gloss(0x3a2530, { roughness: .4, envMapIntensity: .3 }),
+    mouthIn: gloss(0x8a2f45, { roughness: .4 }),
+    tongue: gloss(0xff8fa6, { roughness: .4 }),
+    fang: gloss(0xffffff, { roughness: .2 }),
+    blush: new THREE.MeshBasicMaterial({ color: 0xff8fa8, transparent: true, opacity: .4, depthWrite: false }),
+    leaf: gloss(0x7cc46a, { roughness: .35, envMapIntensity: .4 }),
+    stem: gloss(0x5fa653, { roughness: .4, envMapIntensity: .4 }),
+    band: gloss(0xd93a30, { roughness: .6, clearcoat: 0, envMapIntensity: .15 }),
+    pad: gloss(0x403a52, { roughness: .35 }),
+    padA: gloss(0xff7a8f), padB: gloss(0x7ac8ff), padC: gloss(0xffd166),
+    tear: gloss(0x8fd0ff, { roughness: .05, transparent: true, opacity: .9 }),
+    ring: new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0, depthWrite: false })
+  };
+  // r128 reads hex as linear; convert so the colors on screen match the hex values
+  Object.values(M).forEach(m => m.color && m !== M.ring && m.color.convertSRGBToLinear());
+  const leafPeace = new THREE.Color(0x7cc46a).convertSRGBToLinear(), leafBattle = new THREE.Color(0x3f8f3a).convertSRGBToLinear();
+  const sph = (r, mat, a, b) => new THREE.Mesh(new THREE.SphereGeometry(r, a || 24, b || 16), mat);
+
+  // ================= mochi body (CPU-deformed jelly) =================
+  const rig = new THREE.Group(); scene.add(rig);
+  const bodyGeo = new THREE.SphereGeometry(1, 56, 40);
+  const basePos = bodyGeo.attributes.position.array.slice();
+  const posArr = bodyGeo.attributes.position.array;
+  bodyGeo.boundingSphere = new THREE.Sphere(new THREE.Vector3(), 1.8);
+  const body = new THREE.Mesh(bodyGeo, M.body); rig.add(body);
+  function deformBody(sx, sy, sz, shX, shZ, wob, t) {
+    const floor = -.86 * sy;
+    for (let i = 0; i < posArr.length; i += 3) {
+      const bx = basePos[i], by = basePos[i + 1], bz = basePos[i + 2];
+      const w = 1 + wob * (Math.sin(bx * 3 + t * 5) * Math.sin(by * 3.3 + t * 4.1) + Math.sin(bz * 2.7 - t * 3.6)) * .5;
+      let x = bx * sx * w, y = by * sy * w, z = bz * sz * w;
+      if (y < floor) { const d = floor - y; y = floor - d * .12; const sp = 1 + d * .7; x *= sp; z *= sp; }
+      const k = (by + 1) * .5, k2 = k * k;
+      posArr[i] = x + shX * k2; posArr[i + 1] = y; posArr[i + 2] = z + shZ * k2;
+    }
+    bodyGeo.attributes.position.needsUpdate = true;
+    bodyGeo.computeVertexNormals();
+  }
+
+  // ================= face =================
+  const face = new THREE.Group(); rig.add(face);
+  const surfZ = (x, y) => Math.sqrt(Math.max(0, 1 - x * x - y * y));
+  const onSurf = (obj, x, y, lift) => { obj.position.set(x, y, surfZ(x, y) + (lift || .01)); obj.rotation.set(-y * .95, x * .95, 0); face.add(obj); return obj; };
+  const eyes = [-1, 1].map(side => {
+    const holder = onSurf(new THREE.Group(), .3 * side, .12);
+    const look = new THREE.Group(); holder.add(look);
+    const dot = new THREE.Group(); look.add(dot);
+    const ball = sph(1, M.eye, 24, 16); ball.scale.set(.1, .14, .05); dot.add(ball);
+    const hl = sph(.03, M.white, 10, 8); hl.position.set(.02 - .035 * side, .05, .04); dot.add(hl);
+    const hl2 = sph(.014, M.white, 8, 6); hl2.position.set(-.03, -.04, .04); dot.add(hl2);
+    const glow = sph(1, M.glow, 14, 10); glow.scale.set(.045, .06, .02); glow.position.set(0, -.015, .045); dot.add(glow);
+    const arc = new THREE.Mesh(new THREE.TorusGeometry(.085, .022, 8, 24, Math.PI), M.line); arc.position.y = -.03; look.add(arc);
+    // battle lid: a slanted bit of mochi that cuts the top of the eye
+    const lid = sph(1, M.body, 20, 12); lid.scale.set(.17, .075, .045); lid.position.set(0, .115, .05); lid.rotation.z = .42 * side; holder.add(lid);
+    const browH = onSurf(new THREE.Group(), .3 * side, .36, .02);
+    const brow = new THREE.Mesh(new THREE.CylinderGeometry(.021, .021, .17, 10), M.line); brow.rotation.z = Math.PI / 2; browH.add(brow);
+    browH.userData.y0 = browH.position.y;
+    return { side, look, dot, arc, lid, glow, browH, w: { dot: 1, arc: 0 } };
+  });
+  const blushes = [-1, 1].map(side => { const b = sph(1, M.blush, 20, 12); b.scale.set(.13, .07, .02); return onSurf(b, .55 * side, -.1, .02); });
+
+  let mouthTube = null, mouthKey = '';
+  const mouthHole = onSurf(new THREE.Group(), 0, -.3, .015);
+  const hole = sph(1, M.mouthIn, 24, 14); hole.scale.set(.08, .1, .03); mouthHole.add(hole);
+  const tongue = sph(1, M.tongue, 16, 10); tongue.scale.set(.05, .03, .02); tongue.position.set(0, -.045, .012); mouthHole.add(tongue);
+  const mouthY = (u, c, wave) => -.24 + c * u * u - c * .35 + wave * Math.sin(u * 8);
+  function buildMouth(w, c, wave) {
+    const k = w.toFixed(3) + c.toFixed(3) + wave.toFixed(3);
+    if (k === mouthKey) return; mouthKey = k;
+    const pts = [];
+    for (let i = 0; i <= 22; i++) { const u = i / 11 - 1, x = u * w, y = mouthY(u, c, wave); pts.push(new THREE.Vector3(x, y, surfZ(x, y) + .012)); }
+    if (mouthTube) { face.remove(mouthTube); mouthTube.geometry.dispose(); }
+    mouthTube = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 40, .019, 8, false), M.line);
+    face.add(mouthTube);
+  }
+  const fang = new THREE.Mesh(new THREE.ConeGeometry(.026, .065, 10), M.fang); fang.rotation.x = Math.PI; face.add(fang);
+
+  // ================= sprout, headband, arms, gamepad =================
+  const sproutRoot = new THREE.Group(); rig.add(sproutRoot);
+  const sprout = []; let parent = sproutRoot;
+  for (let i = 0; i < 3; i++) {
+    const g = new THREE.Group(); if (i) g.position.y = .13; parent.add(g);
+    const st = new THREE.Mesh(new THREE.CylinderGeometry(.022 - i * .004, .026 - i * .004, .14, 8), M.stem); st.position.y = .07; g.add(st);
+    sprout.push({ g, a: 0, v: 0 }); parent = g;
+  }
+  const leaves = [-1, 1].map(s => { const leaf = sph(1, M.leaf, 20, 12); leaf.scale.set(.13, .05, .07); leaf.position.set(.1 * s, .16, 0); parent.add(leaf); return { leaf, s }; });
+
+  const BAND_Y = .55;
+  const band = new THREE.Group(); rig.add(band);
+  const bandRing = new THREE.Mesh(new THREE.TorusGeometry(Math.sqrt(1 - BAND_Y * BAND_Y) + .012, .07, 12, 64), M.band);
+  bandRing.rotation.x = Math.PI / 2; band.add(bandRing);
+  const knot = sph(.09, M.band, 16, 12); knot.scale.set(1, 1.1, .8); knot.position.set(0, 0, -.85); band.add(knot);
+  const tails = [-1, 1].map(side => {
+    const root = new THREE.Group(); root.position.set(.05 * side, 0, -.88); root.rotation.y = .75 * side; band.add(root);
+    const segs = []; let p = root;
+    for (let i = 0; i < 3; i++) {
+      const g = new THREE.Group(); if (i) g.position.x = .17 * side; p.add(g);
+      const r = new THREE.Mesh(new THREE.BoxGeometry(.18, .11 - i * .015, .018), M.band); r.position.x = .09 * side; g.add(r);
+      segs.push({ g, a: 0, v: 0 }); p = g;
+    }
+    return { side, segs };
+  });
+
+  const arms = [0, 1].map(i => { const a = sph(1, M.body, 24, 16); a.scale.set(.19, .22, .19); a.position.set(...ARMS.rest[i]); rig.add(a); return a; });
+  const pad = new THREE.Group(); rig.add(pad);
+  (() => {
+    const core = new THREE.Mesh(new THREE.BoxGeometry(.46, .16, .14), M.pad); pad.add(core);
+    [-1, 1].forEach(s => { const gr = sph(.11, M.pad, 16, 12); gr.position.set(.23 * s, -.03, 0); pad.add(gr); });
+    [[.16, .04, M.padA], [.2, 0, M.padB], [.12, 0, M.padC]].forEach(([x, y, m]) => { const b = sph(.026, m, 10, 8); b.position.set(x, y, .075); pad.add(b); });
+    const dp = new THREE.Mesh(new THREE.BoxGeometry(.08, .025, .02), M.white); dp.position.set(-.15, .01, .075); pad.add(dp);
+    const dp2 = dp.clone(); dp2.rotation.z = Math.PI / 2; pad.add(dp2);
+  })();
+  pad.rotation.x = -.5; pad.scale.setScalar(.001);
+
+  // ================= effect sprites =================
+  function tex(draw) { const c = document.createElement('canvas'); c.width = c.height = 128; draw(c.getContext('2d')); const t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding; return t; }
+  function sprite(t, size, blend) { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, transparent: true, depthWrite: false, blending: blend || THREE.NormalBlending })); s.scale.set(size, size, 1); s.visible = false; rig.add(s); return s; }
+  const glyph = (ch, fill) => tex(g => { g.font = '900 104px system-ui, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineWidth = 14; g.strokeStyle = '#fff'; g.lineJoin = 'round'; g.strokeText(ch, 64, 70); g.fillStyle = fill; g.fillText(ch, 64, 70); });
+  const starTex = col => tex(g => { g.fillStyle = col; g.strokeStyle = '#fff'; g.lineWidth = 8; g.beginPath(); for (let i = 0; i < 8; i++) { const r = i % 2 ? 16 : 56, a = i * Math.PI / 4 - Math.PI / 2; g.lineTo(64 + Math.cos(a) * r, 64 + Math.sin(a) * r); } g.closePath(); g.stroke(); g.fill(); });
+  const T = {
+    exclaim: glyph('!', '#ff6a5e'),
+    alert: glyph('!', '#e0443a'),
+    anger: tex(g => { g.strokeStyle = '#e8453c'; g.lineWidth = 14; g.lineCap = 'round';
+      [[1, 1], [-1, 1], [1, -1], [-1, -1]].forEach(([qx, qy]) => { const cx = 64 + qx * 46, cy = 64 + qy * 46, a0 = Math.atan2(-qy, -qx); g.beginPath(); g.arc(cx, cy, 34, a0 - .62, a0 + .62); g.stroke(); }); }),
+    star: starTex('#ffd34d'), spark: starTex('#ff8a3d'),
+    flame: tex(g => {
+      const rg = g.createRadialGradient(64, 84, 4, 64, 78, 56); rg.addColorStop(0, 'rgba(255,240,170,1)'); rg.addColorStop(.35, 'rgba(255,140,50,.95)'); rg.addColorStop(1, 'rgba(230,50,40,0)');
+      g.fillStyle = rg; g.beginPath(); g.moveTo(64, 6); g.bezierCurveTo(96, 46, 112, 70, 104, 96); g.arc(64, 96, 40, 0, Math.PI); g.bezierCurveTo(16, 70, 32, 46, 64, 6); g.fill();
+    })
+  };
+  const alertBack = tex(g => { g.fillStyle = '#ffd34d'; g.lineJoin = 'round'; g.beginPath(); g.moveTo(64, 10); g.lineTo(120, 116); g.lineTo(8, 116); g.closePath(); g.lineWidth = 10; g.strokeStyle = '#fff'; g.stroke(); g.fill(); });
+  const FX = {
+    exclaim: { w: 0, s: sprite(T.exclaim, .6) },
+    alert: { w: 0, back: sprite(alertBack, .62), s: sprite(T.alert, .36) },
+    anger: { w: 0, s: sprite(T.anger, .42) },
+    sparkle: { w: 0, list: [0, 1, 2, 3].map(() => sprite(T.star, .26)) },
+    stars: { w: 0, list: [0, 1, 2, 3, 4, 5].map(() => sprite(T.star, .18)) },
+    sparks: { w: 0, list: [0, 1, 2, 3, 4, 5, 6, 7].map(() => sprite(T.spark, .16)) },
+    flames: { w: 0, list: Array.from({ length: 14 }, () => sprite(T.flame, .5, THREE.AdditiveBlending)) },
+    tears: { w: 0, pool: [], timer: 0 }
+  };
+  FX.flames.list.forEach((f, i) => { f.userData.off = i / 14; f.userData.ang = i * 2.4; });
+  for (let i = 0; i < 18; i++) { const d = sph(.045, M.tear, 10, 8); d.scale.y = 1.3; d.visible = false; rig.add(d); FX.tears.pool.push({ m: d, life: 0, v: new THREE.Vector3() }); }
+
+  const shadowTex = tex(g => { const rg = g.createRadialGradient(64, 64, 4, 64, 64, 64); rg.addColorStop(0, 'rgba(60,30,70,.38)'); rg.addColorStop(1, 'rgba(60,30,70,0)'); g.fillStyle = rg; g.fillRect(0, 0, 128, 128); });
+  const shadow = new THREE.Mesh(new THREE.PlaneGeometry(3, 1.6), new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false }));
+  shadow.rotation.x = -Math.PI / 2; shadow.position.y = .005; scene.add(shadow);
+  const ring = new THREE.Mesh(new THREE.RingGeometry(.9, 1, 64), M.ring); ring.rotation.x = -Math.PI / 2; ring.position.y = .02; ring.visible = false; scene.add(ring);
+  let ringT = 1;
+
+  // ================= state =================
+  let mode = 'peace', emoKey = 'calm', E = EMO.peace.calm, mw = 0;
+  const NUM = ['open', 'brow', 'browVis', 'blush', 'hop', 'breath', 'sway', 'jitter', 'bias', 'puff', 'tilt', 'lean', 'pad', 'sprout', 'stiff', 'wob', 'pitch', 'glow', 'fang'];
+  const cur = {}; NUM.forEach(k => cur[k] = E[k]); cur.mouth = E.mouth.slice();
+  const curTint = new THREE.Color(E.tint).convertSRGBToLinear(), tgtTint = curTint.clone();
+  let sq = 0, sqv = 0, shX = 0, shV = 0, shZ = 0, shZV = 0;
+  let hopPhase = 0, prevHp = 0, swayT = 0;
+  let prevX = 0, prevY = .82, pvx = 0, pvy = 0, ax = 0, ay = 0;
+  let blink = 1, nextBlink = 2; const gaze = new THREE.Vector2(), gazeT = new THREE.Vector2(); let nextSaccade = 1;
+  let talkOpen = 0, talkTarget = 0;
+  const armPos = arms.map(a => a.position.clone());
+
+  // ================= sound =================
+  let actx = null, voiceOn = true;
+  function ensureAudio() { if (actx) { actx.state === 'suspended' && actx.resume(); return; } const AC = window.AudioContext || window.webkitAudioContext; if (AC) actx = new AC(); }
+  function tone(type, f0, f1, dur, vol, delay) {
+    if (!actx || !voiceOn) return;
+    const t = actx.currentTime + (delay || 0), o = actx.createOscillator(), g = actx.createGain(), f = actx.createBiquadFilter();
+    o.type = type; o.frequency.setValueAtTime(f0, t); if (f1) o.frequency.exponentialRampToValueAtTime(f1, t + dur);
+    f.type = 'lowpass'; f.frequency.value = 2400;
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol, t + .006); g.gain.exponentialRampToValueAtTime(.001, t + dur);
+    o.connect(f); f.connect(g); g.connect(actx.destination); o.start(t); o.stop(t + dur + .02);
+  }
+  const blip = () => tone(mode === 'battle' ? 'sawtooth' : 'square', 330 * cur.pitch * (.92 + Math.random() * .22), 0, .06, mode === 'battle' ? .045 : .05);
+  const boing = up => tone('sine', up ? 220 : 500, up ? 620 : 160, .2, .18);
+
+  // ================= UI and public API =================
+  const emoLabel = document.getElementById('emoLabel'), nameText = document.getElementById('nameText'), chipsEl = document.getElementById('chips');
+  function renderChips() {
+    chipsEl.innerHTML = '';
+    EMO_KEYS.forEach(k => {
+      const e = EMO[mode][k];
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'chip'; b.dataset.emo = k;
+      b.innerHTML = '<b>' + e.label + (e.label !== SENT[k] ? '<i>' + SENT[k] + '</i>' : '') + '</b><small>' + e.motion + '</small>';
+      b.setAttribute('aria-pressed', String(k === emoKey));
+      b.addEventListener('click', () => { ensureAudio(); stopDemo(); setEmotion(k); });
+      chipsEl.appendChild(b);
+    });
+  }
+  function applyPreset() {
+    E = EMO[mode][emoKey]; tgtTint.set(E.tint).convertSRGBToLinear();
+    emoLabel.textContent = E.label;
+    chipsEl.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', String(c.dataset.emo === emoKey)));
+  }
+  function resolveEmo(k) {
+    if (EMO_KEYS.includes(k)) return k;
+    for (const m of ['peace', 'battle']) { const f = EMO_KEYS.find(x => EMO[m][x].label === k || SENT[x] === k); if (f) return f; }
+    return null;
+  }
+  function setEmotion(k) { const key = resolveEmo(k); if (!key) return; emoKey = key; applyPreset(); sqv -= 3; sqv += E.kick || 0; }
+  function setMode(m) {
+    if (m !== 'peace' && m !== 'battle') m = (m === '전투') ? 'battle' : (m === '평화' ? 'peace' : null);
+    if (!m || m === mode) return;
+    mode = m;
+    app.classList.toggle('battle', mode === 'battle'); app.classList.toggle('battle-mode', mode === 'battle');
+    document.querySelectorAll('.mode').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+    updateName();
+    renderChips(); applyPreset();
+    sqv -= 9; ringT = 0; M.ring.color.set(mode === 'battle' ? 0xff6a3d : 0xffffff);
+    if (mode === 'battle') { tone('sawtooth', 120, 520, .25, .12); tone('square', 660, 0, .08, .06, .22); }
+    else { tone('sine', 880, 0, .14, .1); tone('sine', 1320, 0, .2, .08, .1); }
+  }
+  function updateName() {
+    const f = FLAVORS[flavor].name;
+    nameText.textContent = (mode === 'battle' ? '전투 ' : '평화 ') + f + ' ' + '찹쌀이';
+  }
+  const flavorsEl = document.getElementById('flavors');
+  Object.entries(FLAVORS).forEach(([k, f]) => {
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'flavor'; b.dataset.flavor = k;
+    b.style.setProperty('--sw', f.swatch);
+    b.innerHTML = '<i></i>' + f.name + ' 찹쌀이';
+    b.addEventListener('click', () => { ensureAudio(); setFlavor(k); });
+    flavorsEl.appendChild(b);
+  });
+  function setFlavor(k) {
+    const key = FLAVORS[k] ? k : Object.keys(FLAVORS).find(x => FLAVORS[x].name === k);
+    if (!key) return;
+    if (key !== flavor) { sqv -= 5; tone('sine', 660, 990, .12, .08); }
+    flavor = key; updateName();
+    flavorsEl.querySelectorAll('.flavor').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.flavor === flavor)));
+  }
+  setFlavor(flavor);
+  document.querySelectorAll('.mode').forEach(b => b.addEventListener('click', () => { ensureAudio(); stopDemo(); setMode(b.dataset.mode); }));
+  renderChips();
+
+  const bubble = document.getElementById('bubble'), bubbleText = document.getElementById('bubbleText');
+  let line = '', shown = 0, typeT = 0, holdT = 0;
+  function say(text, emo, m) {
+    if (m) setMode(m); if (emo) setEmotion(emo);
+    line = String(text || '').slice(0, 120); shown = 0; typeT = 0; holdT = 0;
+    bubbleText.textContent = ''; bubble.hidden = !line;
+  }
+  window.chapssal = { setMode, setEmotion, setFlavor, say, sentiments: EMO_KEYS, modes: ['peace', 'battle'], flavors: Object.keys(FLAVORS) };
+
+  // starting state from the URL, e.g. /avatar?obs&flavor=white&mode=battle&emotion=calm (overlay.py)
+  if (params.get('mode')) setMode(params.get('mode'));
+  if (params.get('emotion')) setEmotion(params.get('emotion'));
+
+  // optional link to an AI "brain": open with ?ws=ws://localhost:8765
+  // message: {"mode":"battle","emotion":"anger","text":"용서 못 해!"}
+  if (params.get('ws')) {
+    (function connect() {
+      try {
+        const ws = new WebSocket(params.get('ws'));
+        ws.onmessage = ev => { try { const m = JSON.parse(ev.data); if (m.flavor) setFlavor(m.flavor); if (m.text) say(m.text, m.emotion, m.mode); else { if (m.mode) setMode(m.mode); if (m.emotion) setEmotion(m.emotion); } } catch (e) {} };
+        ws.onclose = () => setTimeout(connect, 2000);
+      } catch (e) {}
+    })();
+  }
+
+  document.getElementById('sayForm').addEventListener('submit', e => {
+    e.preventDefault(); ensureAudio(); stopDemo();
+    const v = document.getElementById('sayInput').value.trim(); if (v) say(v);
+  });
+  const voiceBtn = document.getElementById('voice');
+  voiceBtn.addEventListener('click', () => { ensureAudio(); voiceOn = !voiceOn; voiceBtn.setAttribute('aria-pressed', String(voiceOn)); voiceBtn.textContent = voiceOn ? '목소리 켜짐' : '목소리 꺼짐'; });
+
+  // ================= demo: farming day, raid, back to farming =================
+  const SCRIPT = [
+    ['peace', 'calm', '오늘은 마을 밭 정리부터 할게요.'],
+    ['peace', 'joy', '당근 수확 대성공! 창고가 꽉 찼어요!'],
+    ['peace', 'surprise', '어? 성벽 밖에 저거 뭐예요?'],
+    ['peace', 'sad', '밭이… 우리 밭이 밟혔어…'],
+    ['peace', 'anger', '이건 진짜 너무하잖아요!'],
+    ['battle', 'anger', '…용서 못 해. 전투 준비!'],
+    ['battle', 'calm', '방어선 유지. 하나씩 끊어 갑니다.'],
+    ['battle', 'surprise', '뒤에서 온다! 가드 올려!'],
+    ['battle', 'sad', '큭… 성문이 뚫렸어. 아직 안 끝났어.'],
+    ['battle', 'joy', '이겼다!! 마을 지켰어요!'],
+    ['peace', 'calm', '자, 다시 밭 갈러 가볼까요.'],
+    ['peace', 'joy', '같이 지켜줘서 고마워요, 여러분!']
+  ];
+  const demoBtn = document.getElementById('demo');
+  let demo = -1;
+  function stopDemo() { demo = -1; demoBtn.setAttribute('aria-pressed', 'false'); demoBtn.textContent = '실황 데모: 마을 습격'; }
+  demoBtn.addEventListener('click', () => {
+    ensureAudio();
+    if (demo >= 0) { stopDemo(); return; }
+    demo = 0; demoBtn.setAttribute('aria-pressed', 'true'); demoBtn.textContent = '데모 멈추기';
+    say(SCRIPT[0][2], SCRIPT[0][1], SCRIPT[0][0]);
+  });
+
+  // ================= poking =================
+  const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
+  let pokes = [], sulk = 0, sulkPrev = null;
+  canvas.addEventListener('pointerdown', e => {
+    ensureAudio();
+    const r = canvas.getBoundingClientRect();
+    ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+    ray.setFromCamera(ndc, camera);
+    const hit = ray.intersectObject(body)[0]; if (!hit) return;
+    const local = rig.worldToLocal(hit.point.clone());
+    sqv -= 7; shV -= local.x * 6; shZV -= 3; blink = 0; boing(false);
+    const now = performance.now() / 1000;
+    pokes = pokes.filter(t => now - t < 2); pokes.push(now);
+    if (pokes.length >= 3 && !sulk) {
+      pokes = []; sulkPrev = emoKey; sulk = 2.6; stopDemo();
+      say(mode === 'battle' ? '지금 전투 중이라고요! 건드리지 마!' : '찌르지 마요! 말랑하다고 막 누르면 안 돼요!', 'anger');
+    }
+  });
+  canvas.addEventListener('pointermove', e => {
+    const r = canvas.getBoundingClientRect();
+    gazeT.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1).multiplyScalar(.5);
+    nextSaccade = 2.5;
+  });
+
+  function resize() {
+    const w = stage.clientWidth, h = stage.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    const narrow = w / h < 1;
+    camera.position.set(0, 1.35, narrow ? 7.8 : 6.4); camera.lookAt(0, narrow ? 1.3 : 1.2, 0);
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(resize).observe(stage); resize();
+
+  // ================= loop =================
+  const clock = new THREE.Clock();
+  const lerp = (a, b, k) => a + (b - a) * k;
+  const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+  let t = 0;
+  const tmpV = new THREE.Vector3();
+
+  function tick() {
+    const dt = Math.max(1 / 240, Math.min(clock.getDelta(), .05)); t += dt;
+    const k = Math.min(1, dt * 5);
+    NUM.forEach(n => cur[n] = lerp(cur[n], E[n], k));
+    for (let i = 0; i < 4; i++) cur.mouth[i] = lerp(cur.mouth[i], E.mouth[i], k);
+    curTint.lerp(tgtTint, k);
+    mw = lerp(mw, mode === 'battle' ? 1 : 0, Math.min(1, dt * 4));
+    const F = FLAVORS[flavor];
+    flavTgt.copy(flavA.set(F.peace).convertSRGBToLinear()).lerp(flavB.set(F.battle).convertSRGBToLinear(), mw);
+    flavCur.lerp(flavTgt, Math.min(1, dt * 4));
+    // emotion tints are stored against plain white, so apply them as a ratio on top of the flavor
+    M.body.color.setRGB(flavCur.r * curTint.r / EMO_BASE.r, flavCur.g * curTint.g / EMO_BASE.g, flavCur.b * curTint.b / EMO_BASE.b);
+    M.blush.color.lerp(blushTgt.set(F.blush).convertSRGBToLinear(), Math.min(1, dt * 4));
+    rim.color.copy(rimPeace).lerp(rimBattle, mw); rim.intensity = .5 + mw * .7;
+    M.leaf.color.copy(leafPeace).lerp(leafBattle, mw);
+
+    let hopY = 0;
+    if (E.hopF > 0 || cur.hop > .01) {
+      hopPhase += dt * (E.hopF || 2);
+      const hp = hopPhase % 1; hopY = cur.hop * 4 * hp * (1 - hp);
+      if (hp < prevHp && cur.hop > .03) { sqv -= cur.hop * 20; if (cur.hop > .15) boing(true); }
+      prevHp = hp;
+    }
+    const sqTarget = cur.bias + cur.breath * Math.sin(t * Math.PI * 2 * (E.breathF || .3));
+    sqv += (-130 * (sq - sqTarget) - 7 * sqv) * dt; sq = clamp(sq + sqv * dt, -.42, .42);
+    const s = 1 + sq, sy = .95 * s, sx = (1.08 + cur.puff) / Math.sqrt(s), sz = (1.02 + cur.puff * .5) / Math.sqrt(s);
+
+    swayT += dt * Math.PI * 2 * (E.swayF || .3);
+    const jit = cur.jitter * (Math.sin(t * 61) + Math.sin(t * 47 + 1)) * .5;
+    const x = cur.sway * Math.sin(swayT) + jit, y = .86 * sy + hopY;
+    const vx = (x - prevX) / dt, vy = (y - prevY) / dt;
+    ax = lerp(ax, clamp((vx - pvx) / dt, -60, 60), .4); ay = lerp(ay, clamp((vy - pvy) / dt, -80, 80), .4);
+    prevX = x; prevY = y; pvx = vx; pvy = vy;
+    shV += (-95 * (shX + vx * .09) - 6.5 * shV) * dt; shX += shV * dt;
+    shZV += (-90 * shZ - 6 * shZV) * dt; shZ += shZV * dt;
+
+    rig.position.set(x, y, 0);
+    rig.rotation.z = lerp(rig.rotation.z, cur.tilt + .02 * Math.sin(swayT), .2);
+    rig.rotation.x = lerp(rig.rotation.x, cur.lean, .2);
+    deformBody(sx, sy, sz, shX, shZ, cur.wob, t);
+
+    const faceK = Math.pow(.55, 2);
+    face.scale.set(sx, sy, sz); face.position.set(shX * faceK, 0, shZ * faceK);
+
+    // eyes: blink, gaze, battle lids and glow
+    nextBlink -= dt; if (nextBlink < 0) { blink = 0; nextBlink = 2 + Math.random() * 3.5; }
+    blink = Math.min(1, blink + dt * 7);
+    nextSaccade -= dt; if (nextSaccade < 0) { gazeT.set((Math.random() - .5) * .5, (Math.random() - .5) * .3); nextSaccade = 1 + Math.random() * 2.5; }
+    gaze.lerp(gazeT, Math.min(1, dt * 10));
+    const eyeMode = E.eyes === 'happy' ? 'arc' : 'dot';
+    const size = E.eyes === 'wide' ? 1.25 : 1, open = cur.open;
+    eyes.forEach(ey => {
+      ['dot', 'arc'].forEach(m => ey.w[m] = lerp(ey.w[m], m === eyeMode ? 1 : 0, Math.min(1, dt * 14)));
+      const bl = Math.max(.08, Math.min(1, Math.abs(blink * 2 - 1)));
+      ey.dot.scale.set(size * ey.w.dot + .001, size * open * bl * ey.w.dot + .001, 1);
+      ey.arc.scale.setScalar(ey.w.arc + .001);
+      ey.look.position.set(gaze.x * .06 * (1 - mw * .6), gaze.y * .05 * (1 - mw * .6), 0);
+      const lw = mw * ey.w.dot; ey.lid.visible = lw > .02; ey.lid.scale.set(.17 * lw + .001, .075 * lw + .001, .045);
+      ey.lid.position.y = .115 + (E.eyes === 'wide' ? .03 : 0);
+      ey.glow.visible = cur.glow > .05; ey.glow.scale.set(.045 * cur.glow + .001, (.06 + .01 * Math.sin(t * 20)) * cur.glow + .001, .02);
+      ey.browH.visible = cur.browVis > .04; ey.browH.scale.setScalar(Math.max(.001, cur.browVis));
+      ey.browH.rotation.z = ey.side * cur.brow * .9;
+      ey.browH.position.y = ey.browH.userData.y0 - Math.max(0, cur.brow) * .04 + (E.eyes === 'wide' ? .05 : 0);
+    });
+    blushes.forEach(b => { b.material.opacity = cur.blush * .55; });
+
+    // mouth and fang
+    talkOpen = lerp(talkOpen, talkTarget, Math.min(1, dt * 22)); talkTarget = lerp(talkTarget, 0, Math.min(1, dt * 9));
+    const mo = clamp(cur.mouth[3] + talkOpen, 0, 1.2);
+    buildMouth(cur.mouth[0], cur.mouth[1], cur.mouth[2] * (1 + .4 * Math.sin(t * 9)));
+    mouthHole.scale.set(Math.max(.6, cur.mouth[0] * 6.5), mo + .001, 1); mouthHole.visible = mo > .03;
+    const fw = Math.max(cur.fang, 0) * mw, fu = .55, fx = cur.mouth[0] * fu, fy = mouthY(fu, cur.mouth[1], 0) - .028;
+    fang.visible = fw > .03; fang.scale.setScalar(fw + .001); fang.position.set(fx, fy, surfZ(fx, fy) + .02);
+
+    // sprout springs; in battle the leaves stand up like a crest
+    sprout.forEach((sp, i) => {
+      const rest = cur.sprout * (i === 0 ? .45 : .35);
+      const f = -ax * .045 + ay * .012 * Math.sign(rest + .05) + shV * .4;
+      const kk = 70 * cur.stiff / (i + 1);
+      sp.v += (-kk * (sp.a - rest) - 5 * sp.v + f * (1 + i * .6)) * dt; sp.a = clamp(sp.a + sp.v * dt, -1.6, 1.6);
+      sp.g.rotation.z = -sp.a;
+    });
+    leaves.forEach(L => { L.leaf.rotation.z = (.5 + mw * .7) * L.s; L.leaf.scale.set(.13 + mw * .03, .05, .07 - mw * .02); });
+    sproutRoot.position.set(shX, sy * .97 - .02, shZ);
+
+    // headband with fluttering tails, battle only
+    const bandK = Math.pow((BAND_Y + 1) * .5, 2);
+    band.visible = mw > .02;
+    band.scale.set(sx * mw + .001, mw + .001, sz * mw + .001);
+    band.position.set(shX * bandK, BAND_Y * sy, shZ * bandK);
+    tails.forEach(tl => tl.segs.forEach((sg, i) => {
+      const flutter = Math.sin(t * 9 + i * 1.3 + tl.side) * (2.5 + cur.jitter * 80);
+      const f = ay * .02 + ax * .03 * tl.side + flutter;
+      sg.v += (-60 / (i + 1) * (sg.a - .35) - 4 * sg.v + f) * dt; sg.a = clamp(sg.a + sg.v * dt, -.6, 1.3);
+      sg.g.rotation.z = -sg.a * tl.side * (i ? .6 : 1);
+      sg.g.rotation.y = .25 * Math.sin(t * 7 + i * 1.7) * tl.side;
+    }));
+
+    // arms
+    const pose = ARMS[E.arms];
+    arms.forEach((a, i) => {
+      tmpV.set(pose[i][0] * sx, pose[i][1] * sy, pose[i][2]);
+      if (E.arms === 'wave') tmpV.y += .12 * Math.sin(t * 13 + i * Math.PI);
+      if (E.arms === 'pump' && i === 1) tmpV.y += .1 * Math.abs(Math.sin(t * 6));
+      if (cur.jitter > .008) { tmpV.x += Math.sin(t * 40 + i) * cur.jitter * .8; tmpV.y += Math.sin(t * 37 + i) * cur.jitter * .8; }
+      armPos[i].lerp(tmpV, Math.min(1, dt * 9));
+      a.position.copy(armPos[i]); a.position.x += shX * .3;
+      a.scale.set(.19 * (1 - sq * .4), .22 * (1 + sq * .6), .19);
+    });
+    const pt = lerp(pad.scale.x, cur.pad > .5 ? 1 : .001, Math.min(1, dt * 10));
+    pad.scale.setScalar(Math.max(.001, pt)); pad.position.set(shX * .25, -.64 * sy + .02 * Math.sin(t * 3), 1.0);
+
+    // effects
+    const on = n => E.fx.includes(n);
+    for (const n in FX) FX[n].w = lerp(FX[n].w, on(n) ? 1 : 0, Math.min(1, dt * 8));
+    const ex = FX.exclaim; ex.s.visible = ex.w > .02; ex.s.position.set(.35, 1.45 * sy, .2); ex.s.scale.setScalar(.6 * ex.w * (1 + .15 * Math.sin(t * 9)));
+    const al = FX.alert, alS = al.w * (1 + .12 * Math.sin(t * 14));
+    [al.back, al.s].forEach((sp, i) => { sp.visible = al.w > .02; sp.position.set(.6, 1.42 * sy - (i ? .02 : 0), .2 + i * .02); sp.scale.setScalar((i ? .36 : .62) * alS + .001); });
+    const an = FX.anger; an.s.visible = an.w > .02; an.s.position.set(.7, .8 * sy, .55); an.s.scale.setScalar(.42 * an.w * (1 + .18 * Math.max(0, Math.sin(t * 8))) + .001);
+    FX.sparkle.list.forEach((sp, i) => { const a = t * .8 + i * Math.PI / 2; sp.visible = FX.sparkle.w > .02; sp.position.set(Math.cos(a) * 1.45, .4 + Math.sin(a * 1.3) * .5, Math.sin(a) * .5 + .3); sp.scale.setScalar(.26 * FX.sparkle.w * (.6 + .4 * Math.abs(Math.sin(t * 4 + i))) + .001); });
+    FX.stars.list.forEach((sp, i) => { const p = (t * .9 + i / 6) % 1, a = i * 1.05; sp.visible = FX.stars.w > .02; sp.position.set(Math.cos(a) * (.9 + p * .9), .9 + p * 1.1, Math.sin(a) * .4 + .4); sp.scale.setScalar(.18 * FX.stars.w * Math.sin(p * Math.PI) + .001); sp.material.rotation = p * 3; });
+    FX.sparks.list.forEach((sp, i) => { const p = (t * 1.6 + i / 8) % 1, a = i * .79; sp.visible = FX.sparks.w > .02; sp.position.set(Math.cos(a) * (.7 + p * 1.3), .2 + Math.sin(a) * .2 + p * 1.2, .5); sp.scale.setScalar(.16 * FX.sparks.w * (1 - p) + .001); sp.material.rotation = p * 5; });
+    FX.flames.list.forEach(f => {
+      const p = (t * 1.3 + f.userData.off) % 1, a = f.userData.ang + t * .4;
+      f.visible = FX.flames.w > .02;
+      f.position.set(Math.cos(a) * 1.05 * sx, -.75 * sy + p * 2.0, Math.sin(a) * .9 - .25);
+      const sc = (.45 + .25 * Math.sin(f.userData.ang * 3)) * Math.sin(p * Math.PI) * FX.flames.w + .001;
+      f.scale.set(sc, sc * 1.4, 1); f.material.opacity = .85 * FX.flames.w;
+    });
+    const te = FX.tears;
+    if (on('tears')) {
+      te.timer -= dt;
+      if (te.timer < 0) {
+        te.timer = mode === 'battle' ? .3 : .14;
+        const d = te.pool.find(q => q.life <= 0);
+        if (d) { const side = Math.random() < .5 ? -1 : 1; d.life = 1.1; d.m.visible = true; d.m.position.set(.33 * side * sx, .02 * sy, .92); d.v.set(side * (.35 + Math.random() * .3), .5, .35); }
+      }
+    }
+    te.pool.forEach(d => { if (d.life <= 0) return; d.life -= dt; d.v.y -= 6 * dt; d.m.position.addScaledVector(d.v, dt); if (d.life <= 0 || d.m.position.y < -y) { d.life = 0; d.m.visible = false; } });
+
+    shadow.position.x = x; const shs = 1 - hopY * .6; shadow.scale.set(sx * shs, shs, 1); shadow.material.opacity = .9 - hopY;
+    if (ringT < 1) { ringT += dt * 1.6; const r = .8 + ringT * 2.6; ring.scale.set(r, r, 1); M.ring.opacity = Math.max(0, 1 - ringT) * .8; ring.visible = true; } else ring.visible = false;
+
+    // speech typing and the demo script
+    if (line) {
+      if (shown < line.length) {
+        typeT -= dt;
+        if (typeT <= 0) {
+          const ch = line[shown++]; bubbleText.textContent = line.slice(0, shown);
+          typeT = /[.,!?…~ ]/.test(ch) ? .11 : (mode === 'battle' ? .048 : .055);
+          if (!/[\s.,!?…~]/.test(ch)) { talkTarget = .45 + Math.random() * .55; blip(); sqv -= .8; }
+        }
+      } else {
+        holdT += dt;
+        if (holdT > 1.7 + line.length * .03) {
+          if (demo >= 0) {
+            demo++;
+            if (demo >= SCRIPT.length) { stopDemo(); line = ''; bubble.hidden = true; }
+            else say(SCRIPT[demo][2], SCRIPT[demo][1], SCRIPT[demo][0]);
+          } else { line = ''; bubble.hidden = true; }
+        }
+      }
+    }
+    if (sulk > 0) { sulk -= dt; if (sulk <= 0 && demo < 0) setEmotion(sulkPrev || 'calm'); }
+
+    renderer.render(scene, camera);
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+</script>
+
+</body></html>

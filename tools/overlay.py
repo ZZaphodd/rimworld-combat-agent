@@ -1,6 +1,7 @@
 """Stream overlay for OBS: a local page that shows the battle being played (read-only).
 
   python3 tools/overlay.py                  # http://127.0.0.1:8765/  -> OBS Browser source, 1920x1080
+  # avatar (찹쌀이, tools/avatar.html): http://127.0.0.1:8765/avatar?obs&flavor=white&mode=battle&emotion=calm
 
 It polls the game the way tools/watch.py does (status, both sides' strength, messages, the HUD's date; never
 orders, pauses or moves the camera). A battle is announced by session.start_episode through
@@ -27,6 +28,7 @@ from rca.game import defs, live
 from rca.rimmolt import RimMolt, RimMoltBusy
 
 PAGE = Path(__file__).with_name("overlay.html")
+AVATAR = Path(__file__).with_name("avatar.html")    # 찹쌀이: /avatar?obs&flavor=white&mode=battle&emotion=calm
 LADDER = ROOT / "results/base/ladder2.jsonl"
 STATE = {"ok": False, "note": "starting"}
 MODE = {"strength": "health"}                 # or "standing": switch live with /set?strength=standing
@@ -195,6 +197,8 @@ class Handler(BaseHTTPRequestHandler):
             body, kind = json.dumps(MODE).encode(), "application/json"
         elif self.path.startswith("/state.json"):
             body, kind = json.dumps(STATE, ensure_ascii=False).encode(), "application/json"
+        elif self.path.startswith("/avatar"):
+            body, kind = AVATAR.read_bytes(), "text/html; charset=utf-8"
         else:
             body, kind = PAGE.read_bytes(), "text/html; charset=utf-8"
         self.send_response(200)
