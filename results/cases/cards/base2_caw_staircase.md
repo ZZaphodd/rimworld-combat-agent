@@ -46,6 +46,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 26 | 12.5× | 112 tribal melee from the north edge | the zigzag spot taken by the raid first; back to the block's north wall under the turrets, then the north room | **pyrrhic** (fled t4619) | 0 / 5 | 134 | 44.6 |
 | 27 | 13× | 53 pirates (11 sniper rifles, 5 rocket launchers, miniguns, shotguns) from the SW corner | the squad in the block's east room | **repelled** (fled t10578) | 0 / 0 | 77 | **0.0** |
 | 28 | 13.5× | 36 mechs (20 Lancers, 6 Tesserons, 4 Pikemen, 3 Diabolus, …) from the NW corner | the squad in the block's east room; the last Pikeman from a clear line south of the block | **decisive** | 0 / 0 | 59 | **0.0** |
+| 29 | 14× | 137 tribal melee from the south edge | the zigzag at the far side: south of the north arc, the raid passing two turret lines first; ten crossings | **repelled** (fled t7549) | 0 / 0 | 140 | **3.4** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -125,3 +126,6 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 - **26 · tribe 12.5×**: 112 melee crossed the north arc (73 traps in the first 1,500 ticks, 134 in all)
   and reached the planned kite spot before the squad; fire orders stopped three pawns mid-retreat; five
   down, none dead; the raid broke on the north turrets and the block's north room.
+- **29 · tribe 14×** `arc-lure`: the zigzag set up at the far side of the base from a south-edge raid:
+  37 of 137 out before contact, then ten crossings of the north arc; 140 traps (the most so far); fled;
+  four pawns scratched, none down.

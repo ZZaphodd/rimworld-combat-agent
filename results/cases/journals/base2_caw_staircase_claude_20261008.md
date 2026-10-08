@@ -478,3 +478,15 @@ traps 1,421 → 1,362; storyteller arrivals removed (1 at t30385, 7 at t31302).
   a clear line (from the NE its cover was the ruined turret's barricades: 3–5 shots in 1,500 ticks);
   a Lancer and the last two Pikemen died to the turrets (191, 136) and others. Nobody of ours hit.
 - Changed: new builds put the rations in the block's east room (`rations_at`, `cawalia.RATIONS_AT`).
+
+## 29 · base2_caw_tribe_14x (14×, tribe)
+Trace `results/human/traces/base2_caw_tribe_14x_claude_20261008-095435.jsonl.gz` · result **repelled** (fled t7549, cleared t13199), lost 0, downed 0, badness 3.4; raid
+8 killed + 60 inferred of 137, 52 escaped; traps 1,421 → 1,281 (140, the most so far).
+- Card: Seagull 13/12, Nana 12, Westhrin 12/13 (rifles); Frogs 2, the rest 0–1. Raid: 137 tribal melee
+  (49 penitents, 47 warriors, 40 berserkers, the chief) from the south edge (92–113, 1–10).
+- Plan (after battle 26 lost the race to its spot): the zigzag at the far side of the base: the group
+  south of the north arc at (140, 183), the raid having to cross the edge ring, the south arc, the south
+  turrets, the block and the north turrets first.
+- t0–2341: 37 of 137 out at the south arc and the south turrets (69 traps) before any came within 54.
+- t2341–10342: ten crossings of the north arc (x 100–180), leaders 2–34 behind; 126 of 137 out or down
+  by t10342; fled at t7549. Boris 61 %, Nana 72 %, Ivisivine 88 %, Frogs 92 %; none down.
