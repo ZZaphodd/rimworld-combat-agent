@@ -536,3 +536,18 @@ badness 0.0; raid 14 inferred of 68, 48 escaped; traps 1,420 → 1,330.
 - Loadout: rifles to Kenta and Flebe (from Theo and Harms).
 - The squad in the block's east room from the start; the snipers fought the east and north turrets
   and the traps (90); fled. Nobody came in; nobody hit.
+
+## 34 · base2_caw_mech_16p5x (16.5×, mech; cap 60,000; rations in the east room)
+Trace `results/human/traces/base2_caw_mech_16p5x_claude_20261008-105925.jsonl.gz` · result **decisive** (cleared t49634), lost 1 (Yury, burned), downed 0, badness
+18.2; 42 of 42 killed; traps 1,421 → 1,332; storyteller arrivals removed (1 at t29529, 1 at t35802,
+7 at t38515).
+- Card: Sid 10, Xia 9 (a revolver), Vicky and De Chardin 5, the rest 3–4. Raid: 22 Lancers,
+  9 Tesserons, 3 Pikemen, 3 Diabolus, 3 Cyclops, 2 Legionaries, from the NW (1–9, 240–254).
+- Loadout: Anu's rifle to Xia.
+- t0–35580: the squad in the block's east room; the mechs gathered ~(256, 44) until ~t6000, came
+  across the north side and down the east side; 38 of 42 out to the turrets and traps by t35580. Fed at
+  t17697 (food 28 % → 99 %). Moods 47 → 10; Pansy and De Chardin broke.
+- t38515–48597: five rifles at (154–166, 104–112) killed the Diabolus (15 %), the Lancer and a Pikeman
+  from just outside their reach; Yury died of burns at t46336 (a fire there; two chicks burned too).
+- t48597–49634: the last Pikeman (48 %) at (151, 135) among the ship parts: no shot from the south or the
+  north; it died at t49634, not to the rifles (no shots fired).
