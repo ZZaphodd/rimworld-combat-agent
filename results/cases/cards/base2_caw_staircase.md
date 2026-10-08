@@ -50,6 +50,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 30 | 14.5× | 60 pirates, all with sniper rifles, from the SE corner | the squad in the block's east room | **repelled** (fled t8715) | 0 / 0 | 87 | **0.0** |
 | 31 | 15× | 24 mechs (11 Centipede blasters, 5 Lancers, 2 Apocritons, …) from the south edge | the squad in the block's east room, fed from its rations; a try at the weak Centipedes | **conceded** (timeout t60084; 10 mechs left) | 3 / 0 | 62 | 47.4 |
 | 32 | 15.5× | 134 tribals (93 bows and pila, 41 melee) from the west edge | the squad in the block's east room | **repelled** (fled t6445) | 0 / 0 | 117 | **0.0** |
+| 33 | 16× | 68 pirates (67 sniper rifles) from the east edge | the squad in the block's east room | **repelled** (fled t9679) | 0 / 0 | 90 | **0.0** |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
