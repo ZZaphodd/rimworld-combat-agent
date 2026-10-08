@@ -43,6 +43,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 23 | 11× | 82 tribals (61 bows and pila, 21 melee) from the west edge | the squad in the block's east room (two rifles lost in a failed swap) | **repelled** (fled t3922) | 0 / 0 | 76 | **0.0** |
 | 24 | 11.5× | 42 pirate melee (and an assault rifle) from the south edge | rifles to the sh 6–13; the zigzag across the south arc (seven crossings) | **repelled** (fled t3684) | 0 / 0 | 66 | **0.0** |
 | 25 | 12× | 40 Scythers from the east edge | the zigzag across the south arc (Scythers kept pace), then a stand under the south turrets | **conceded** (7 lost; timeout t60095) | 7 / 0 | 72 | 101.0 |
+| 26 | 12.5× | 112 tribal melee from the north edge | the zigzag spot taken by the raid first; back to the block's north wall under the turrets, then the north room | **pyrrhic** (fled t4619) | 0 / 5 | 134 | 44.6 |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -119,3 +120,6 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 - **25 · mech 12×**: 40 Scythers; 18 fell to traps and turrets before reaching the group; the zigzag
   could not open distance from Scythers (as fast as the pawns), three pawns broke, and the rest went down
   one by one; 38 of 40 Scythers out by the cap; conceded with 7 lost.
+- **26 · tribe 12.5×**: 112 melee crossed the north arc (73 traps in the first 1,500 ticks, 134 in all)
+  and reached the planned kite spot before the squad; fire orders stopped three pawns mid-retreat; five
+  down, none dead; the raid broke on the north turrets and the block's north room.

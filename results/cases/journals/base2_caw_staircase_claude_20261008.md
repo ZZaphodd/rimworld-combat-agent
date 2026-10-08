@@ -434,3 +434,19 @@ traps 1,421 → 1,349; badness 101.0.
   died; two Scythers were still up at the cap.
 - Observed: Scythers kept pace with the zigzag where shield-belted slashers (battles 11, 24) fell behind;
   three breaks took three pawns out of the group.
+
+## 26 · base2_caw_tribe_12p5x (12.5×, tribe) — pyrrhic (a loss for the staircase)
+Trace `results/human/traces/base2_caw_tribe_12p5x_claude_20261008-091442.jsonl.gz` · result **pyrrhic** (fled t4619, cleared t11660), lost 0, downed 5, badness 44.6; raid
+1 killed + 53 inferred of 112, 44 escaped; traps 1,419 → 1,285 (134, the most so far).
+- Card: Amanda 17/16 (an autopistol), Furr 11, Zach 4, Rennie 3, the rest 0–1. Raid: 112 tribal melee
+  (44 warriors, 41 berserkers, 26 penitents, the chief) from the north edge (131–149, 263–272).
+- Loadout: Nichols's rifle to Amanda.
+- Plan: the zigzag across the north arc from (140, 183) south of it. The raid crossed the arc and
+  reached (139–146, 181–187) at t1472, before the squad (still walking up from (100, 108), some through
+  the block); 73 traps used by then, 20 out or down.
+- t1472–2033: the squad turned back to the block's north wall (z 142) under the north turrets; orders
+  to fire at raiders within 8 stopped Chaz, Alo and Rennie mid-walk; all three went down at z 164–176.
+- t2033–3930: the rest went into the block's north room (132–143, 133–138); Nichols was caught at its
+  door and Elvee went down inside; Zach, Amanda and Furr shot whoever came in. The raid fled at t3930
+  (t4619 by the harness) with 54 out; 16 down at the end.
+- t8551–11660: the standing three tended and rescued the downed; none died.
