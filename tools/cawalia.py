@@ -36,6 +36,7 @@ KINDS = ("tribe", "pirate", "mech")
 START, STEP, FLOOR = 2.0, 0.5, 0.5
 WINDOW, WINDOW_FROM = 2 * len(KINDS), 14       # the window rule decides the step after battle 14 on
 RATIONS_DAYS = 2              # survival meals in new builds (the user, battle 24)
+MECH_ASSAULT_TICKS = 15000   # StageThenAttack mechs gather ~7,000-13,000 ticks before they come
 RATIONS_AT = [138, 124]       # in the block's east room (under a roof; battle 28's pile in the open was gone)
 
 
@@ -86,6 +87,8 @@ def prepare(kind, mult, log=print):
         spec["enemy"]["points"] = int(round(500 * mult))
         spec["rations_days"] = RATIONS_DAYS
         spec["rations_at"] = RATIONS_AT
+        if kind == "mech":
+            spec["assault_ticks"] = MECH_ASSAULT_TICKS
         specs.append(spec)
         SPECS.write_text(json.dumps(specs, indent=1, ensure_ascii=False) + "\n")
         log(f"spec {p} added ({spec['enemy']['points']} pt)")
