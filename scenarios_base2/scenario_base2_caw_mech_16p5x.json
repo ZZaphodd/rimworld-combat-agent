@@ -1,0 +1,357 @@
+{
+  "id": "base2_caw_mech_16p5x",
+  "save": "scenario_base2_caw_mech_16p5x",
+  "spec": {
+    "id": "base2_caw_mech_16p5x",
+    "tier": "base",
+    "arena": "arena_col_cawalia2",
+    "note": "base defense ladder (the user, 2026-10-06): buildings kept, items cleared, Phoebe / Strive to Survive; no mortar sieges; mechanoids have no ImmediateAttack: StageThenAttack (breaching left for a later ladder); v2 (2026-10-06): shelves, hydroponics basins and workbenches removed indoors and out; Cawalia Union (2026-10-07): open-ground base, 1,421 spike traps (a ring round the map edge and arcs ~50 cells out), 13 sniper and 7 mini-turrets kept, 5 mortars removed; no agent ladder: Claude plays it directly on a raid-size staircase (the user, 2026-10-08)",
+    "squad": {
+      "faction": "OutlanderCivil",
+      "points": 500,
+      "place": [
+        100,
+        108
+      ]
+    },
+    "enemy": {
+      "faction": "Mechanoid",
+      "points": 8250,
+      "strategy": "StageThenAttack",
+      "arrival": "EdgeWalkIn"
+    },
+    "assault_ticks": 15000,
+    "ladder": false,
+    "rations_days": 2,
+    "rations_at": [
+      138,
+      124
+    ]
+  },
+  "squad": [
+    {
+      "id": "Human1962087",
+      "name": "Yury Bradford",
+      "weapon": "Bolt-action rifle (normal 67%)",
+      "x": 99,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human96322",
+      "name": "Xia Qingyue",
+      "weapon": "Revolver (good)",
+      "x": 101,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962116",
+      "name": "Vicky Blanchard",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 100,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962122",
+      "name": "Cibelle de Chardin",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 105,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962128",
+      "name": "Anton 'Waltz' Walther",
+      "weapon": "Bolt-action rifle (normal 87%)",
+      "x": 107,
+      "z": 109,
+      "health": 100
+    },
+    {
+      "id": "Human1962132",
+      "name": "Damond 'Sid' Alexander",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 93,
+      "z": 107,
+      "health": 100
+    },
+    {
+      "id": "Human1962137",
+      "name": "Anurag 'Anu' Shivach",
+      "weapon": "Bolt-action rifle (normal)",
+      "x": 98,
+      "z": 108,
+      "health": 100
+    },
+    {
+      "id": "Human1962157",
+      "name": "Shiro 'Pansy' Leonard",
+      "weapon": "Molotov cocktails",
+      "x": 103,
+      "z": 106,
+      "health": 100
+    }
+  ],
+  "rations": {
+    "def": "MealSurvivalPack",
+    "count": 32,
+    "x": 138,
+    "z": 124
+  },
+  "enemy": [
+    {
+      "id": "Mech_Pikeman1962198",
+      "def": "Mech_Pikeman",
+      "x": 1,
+      "z": 240
+    },
+    {
+      "id": "Mech_Lancer1962200",
+      "def": "Mech_Lancer",
+      "x": 3,
+      "z": 248
+    },
+    {
+      "id": "Mech_Lancer1962202",
+      "def": "Mech_Lancer",
+      "x": 3,
+      "z": 242
+    },
+    {
+      "id": "Mech_Lancer1962204",
+      "def": "Mech_Lancer",
+      "x": 6,
+      "z": 250
+    },
+    {
+      "id": "Mech_Lancer1962206",
+      "def": "Mech_Lancer",
+      "x": 7,
+      "z": 248
+    },
+    {
+      "id": "Mech_Lancer1962208",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Pikeman1962210",
+      "def": "Mech_Pikeman",
+      "x": 6,
+      "z": 252
+    },
+    {
+      "id": "Mech_Lancer1962212",
+      "def": "Mech_Lancer",
+      "x": 6,
+      "z": 254
+    },
+    {
+      "id": "Mech_Diabolus1962214",
+      "def": "Mech_Diabolus",
+      "x": 3,
+      "z": 254
+    },
+    {
+      "id": "Mech_Lancer1962217",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Legionary1962219",
+      "def": "Mech_Legionary",
+      "x": 3,
+      "z": 240
+    },
+    {
+      "id": "Mech_Lancer1962221",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 242
+    },
+    {
+      "id": "Mech_Tesseron1962223",
+      "def": "Mech_Tesseron",
+      "x": 5,
+      "z": 250
+    },
+    {
+      "id": "Mech_Tesseron1962225",
+      "def": "Mech_Tesseron",
+      "x": 9,
+      "z": 250
+    },
+    {
+      "id": "Mech_Lancer1962227",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Cyclops1962229",
+      "def": "Mech_Cyclops",
+      "x": 2,
+      "z": 240
+    },
+    {
+      "id": "Mech_Diabolus1962231",
+      "def": "Mech_Diabolus",
+      "x": 3,
+      "z": 254
+    },
+    {
+      "id": "Mech_Lancer1962234",
+      "def": "Mech_Lancer",
+      "x": 3,
+      "z": 254
+    },
+    {
+      "id": "Mech_Diabolus1962236",
+      "def": "Mech_Diabolus",
+      "x": 1,
+      "z": 240
+    },
+    {
+      "id": "Mech_Lancer1962239",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Lancer1962241",
+      "def": "Mech_Lancer",
+      "x": 8,
+      "z": 251
+    },
+    {
+      "id": "Mech_Tesseron1962243",
+      "def": "Mech_Tesseron",
+      "x": 3,
+      "z": 247
+    },
+    {
+      "id": "Mech_Pikeman1962245",
+      "def": "Mech_Pikeman",
+      "x": 7,
+      "z": 253
+    },
+    {
+      "id": "Mech_Lancer1962247",
+      "def": "Mech_Lancer",
+      "x": 6,
+      "z": 254
+    },
+    {
+      "id": "Mech_Lancer1962249",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Lancer1962251",
+      "def": "Mech_Lancer",
+      "x": 6,
+      "z": 250
+    },
+    {
+      "id": "Mech_Lancer1962253",
+      "def": "Mech_Lancer",
+      "x": 5,
+      "z": 252
+    },
+    {
+      "id": "Mech_Legionary1962255",
+      "def": "Mech_Legionary",
+      "x": 4,
+      "z": 252
+    },
+    {
+      "id": "Mech_Lancer1962257",
+      "def": "Mech_Lancer",
+      "x": 8,
+      "z": 250
+    },
+    {
+      "id": "Mech_Tesseron1962259",
+      "def": "Mech_Tesseron",
+      "x": 2,
+      "z": 240
+    },
+    {
+      "id": "Mech_Lancer1962261",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Lancer1962263",
+      "def": "Mech_Lancer",
+      "x": 5,
+      "z": 254
+    },
+    {
+      "id": "Mech_Lancer1962265",
+      "def": "Mech_Lancer",
+      "x": 6,
+      "z": 250
+    },
+    {
+      "id": "Mech_Tesseron1962267",
+      "def": "Mech_Tesseron",
+      "x": 2,
+      "z": 240
+    },
+    {
+      "id": "Mech_Lancer1962269",
+      "def": "Mech_Lancer",
+      "x": 8,
+      "z": 248
+    },
+    {
+      "id": "Mech_Cyclops1962271",
+      "def": "Mech_Cyclops",
+      "x": 5,
+      "z": 246
+    },
+    {
+      "id": "Mech_Tesseron1962273",
+      "def": "Mech_Tesseron",
+      "x": 4,
+      "z": 252
+    },
+    {
+      "id": "Mech_Tesseron1962275",
+      "def": "Mech_Tesseron",
+      "x": 5,
+      "z": 252
+    },
+    {
+      "id": "Mech_Cyclops1962277",
+      "def": "Mech_Cyclops",
+      "x": 4,
+      "z": 252
+    },
+    {
+      "id": "Mech_Lancer1962279",
+      "def": "Mech_Lancer",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Tesseron1962281",
+      "def": "Mech_Tesseron",
+      "x": 2,
+      "z": 241
+    },
+    {
+      "id": "Mech_Tesseron1962283",
+      "def": "Mech_Tesseron",
+      "x": 2,
+      "z": 253
+    }
+  ]
+}
