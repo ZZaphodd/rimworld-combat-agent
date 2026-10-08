@@ -55,13 +55,13 @@ def build(rm, spec, out_dir, log=print):
     d.remove_observers(observers, ids)
     rations = None
     if spec.get("rations_days"):
-        px, pz = sq.get("place", [125, 125])
+        px, pz = spec.get("rations_at") or [sq.get("place", [125, 125])[0], sq.get("place", [125, 125])[1] - 4]
         n = ration_meals(spec["rations_days"], len(ids))
-        got = d.spawn_items(RATION, px, pz - 4, n)
+        got = d.spawn_items(RATION, px, pz, n)
         if got < n:
-            raise RimMoltError(f"rations: {got} of {n} {RATION} near ({px}, {pz - 4})")
-        rations = {"def": RATION, "count": n, "x": px, "z": pz - 4}
-        log(f"   rations: {n} survival meals near ({px}, {pz - 4})")
+            raise RimMoltError(f"rations: {got} of {n} {RATION} near ({px}, {pz})")
+        rations = {"def": RATION, "count": n, "x": px, "z": pz}
+        log(f"   rations: {n} survival meals near ({px}, {pz})")
     enemy = spawn_enemy(d, spec["enemy"])
     d.close()
     save = f"scenario_{sid}"
