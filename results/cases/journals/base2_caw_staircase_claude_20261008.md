@@ -518,3 +518,12 @@ storyteller arrivals removed (8 at t29529).
   Apocriton); 13 → 11 in 8,000 ticks; stopped.
 - t44732–60084: sheltered to the cap; fed again at ~t46000; ten mechs (8 Centipedes, the Apocriton,
   a Lancer) still up; turrets mostly destroyed or dry.
+
+## 32 · base2_caw_tribe_15p5x (15.5×, tribe)
+Trace `results/human/traces/base2_caw_tribe_15p5x_claude_20261008-104113.jsonl.gz` · result **repelled** (fled t6445, cleared t15184), lost 0, downed 0, badness 0.0; raid
+11 killed + 24 inferred of 134, 89 escaped; traps 1,420 → 1,303.
+- Card: Paddy 11 (a knife), Lissa 10 (a revolver), Keke 4, the rest 0–1; John melee 12. Raid: 134
+  tribals from the west edge (1–10, 133–152): 93 bows and pila, 41 melee.
+- Loadout: rifles to Paddy and Lissa (from John and Waltz); John the knife.
+- The squad in the block's east room from the start; the raid crossed the edge column and the west
+  columns into the west and north turrets (117 traps); fled at t6445. Nobody came in; nobody hit.
