@@ -527,3 +527,12 @@ Trace `results/human/traces/base2_caw_tribe_15p5x_claude_20261008-104113.jsonl.g
 - Loadout: rifles to Paddy and Lissa (from John and Waltz); John the knife.
 - The squad in the block's east room from the start; the raid crossed the edge column and the west
   columns into the west and north turrets (117 traps); fled at t6445. Nobody came in; nobody hit.
+
+## 33 · base2_caw_pirate_16x (16×, pirate)
+Trace `results/human/traces/base2_caw_pirate_16x_claude_20261008-104843.jsonl.gz` · result **repelled** (fled t9679, cleared t17777), lost 0, downed 0,
+badness 0.0; raid 14 inferred of 68, 48 escaped; traps 1,420 → 1,330.
+- Card: Poppy 6, Kenta and Flebe 4, Chavez 3, the rest 0–2. Raid: 68 pirates from the east edge
+  (264–274, 172–186), 67 with sniper rifles.
+- Loadout: rifles to Kenta and Flebe (from Theo and Harms).
+- The squad in the block's east room from the start; the snipers fought the east and north turrets
+  and the traps (90); fled. Nobody came in; nobody hit.
