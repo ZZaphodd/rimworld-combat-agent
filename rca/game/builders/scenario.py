@@ -1,6 +1,7 @@
 """Scenario saves from scenarios.json specs + the assault check (PROCEDURES §5-§6)."""
 import json
 import math
+import time
 
 from ...rimmolt import RimMoltError, hostiles
 from .. import session
@@ -92,7 +93,11 @@ def assaults(rm, save, squad_ids, ticks=3000, min_close=0.3, log=print):
     d0 = median_gap()
     t0 = rm.call("get_status")["ticksGame"]
     while (left := ticks - (rm.call("get_status")["ticksGame"] - t0)) > 0:   # a wait may end early
+        before = rm.call("get_status")["ticksGame"]
         rm.wait(min(left, 600), max_seconds=30)
+        if rm.call("get_status")["ticksGame"] == before:     # the wait ran no time (seen 2026-10-08
+            rm.call("set_speed", action="unpause")            # on Cawalia mech builds): run the game
+            time.sleep(2)
     rm.call("set_speed", action="pause")
     d1 = median_gap()
     aiming = any((t.get("targeting") or "").startswith(("targeting colonist", "attacking colonist"))
