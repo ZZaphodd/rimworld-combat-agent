@@ -413,3 +413,24 @@ Trace `results/human/traces/base2_caw_pirate_11p5x_claude_20261008-084620.jsonl.
 - Battle 11's zigzag across the south arc from (120, 66): seven crossings (S 140, N 160, S 180, N 160,
   S 140, N 120, S 100, N 80) with the leading raider 30–6 behind; 42 → 2 standing by t7039; fled at
   t3684. Nobody of ours hit.
+
+## 25 · base2_caw_mech_12x (12×, mech; cap 60,000; rations) — conceded (a loss)
+Trace `results/human/traces/base2_caw_mech_12x_claude_20261008-085627.jsonl.gz` · harness: timeout at t60095 (graded unresolved); booked **conceded** (as battle 14, the
+user's ruling there): lost 7, only Glass left (sheltered in the east room); 38 of 40 Scythers killed;
+traps 1,421 → 1,349; badness 101.0.
+- Card: Lissa 11 (a revolver), the rest 0–4 with rifles; Money (molotovs). Raid: 40 Scythers from the
+  east edge (263–272, 62–74). 32 survival meals by the squad start (100, 104) (first build with rations).
+- Loadout: Cordova's rifle to Lissa.
+- t0–5740: the group north of the south arc at (150, 66); the Scythers gathered at ~(241, 42); moods
+  46 → 31.
+- t5740–16300: one crossing (S at x 130); 18 Scythers out to traps and turrets; the rest went for the
+  block (ship parts, the west turrets), 72–92 from the group; Misaki broke (sad wandering).
+- t16300–23300: the zigzag resumed westward; Scythers (as fast as the pawns) came within 6–14 at most
+  crossings; Misaki, wandering at (130, 57), was cut down; Glass went into an aggressive tantrum
+  (attacking a spike trap); Lissa 51 %, then Orthonet down.
+- t23300–29640: the rest stood and fired, then moved to (118, 84) under the south turrets; one by one
+  down (Lissa, Yumi, Abang, Money); Cordova broke (psychotic wandering) and was cut down; 6 Scythers left.
+- t29640–60095: Glass (out of his tantrum, eating a survival meal) sent into the east room; the downed
+  died; two Scythers were still up at the cap.
+- Observed: Scythers kept pace with the zigzag where shield-belted slashers (battles 11, 24) fell behind;
+  three breaks took three pawns out of the group.

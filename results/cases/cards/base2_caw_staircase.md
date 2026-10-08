@@ -42,6 +42,7 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
 | 22 | 10.5× | the same (storyteller arrivals removed) | the east room, then most of the squad north of the block; the last three Centipedes from 28–34 | **decisive** | 0 / 1 | 33 | **10.0** |
 | 23 | 11× | 82 tribals (61 bows and pila, 21 melee) from the west edge | the squad in the block's east room (two rifles lost in a failed swap) | **repelled** (fled t3922) | 0 / 0 | 76 | **0.0** |
 | 24 | 11.5× | 42 pirate melee (and an assault rifle) from the south edge | rifles to the sh 6–13; the zigzag across the south arc (seven crossings) | **repelled** (fled t3684) | 0 / 0 | 66 | **0.0** |
+| 25 | 12× | 40 Scythers from the east edge | the zigzag across the south arc (Scythers kept pace), then a stand under the south turrets | **conceded** (7 lost; timeout t60095) | 7 / 0 | 72 | 101.0 |
 
 ## Scenes
 - **1 · t0–1450**: the archers wrecked the north fields (a ship casket, lamps) and walked south; the line
@@ -115,3 +116,6 @@ counted battles (2 per raid kind): more wins → up 0.5×, more losses → down,
   traps while the squad sat in the east room; fled with 50 out. No hit taken.
 - **24 · t1041–7039** `arc-lure`: the zigzag across the south arc against 41 melee pirates: 40 out over
   seven crossings, 66 traps; no hit taken.
+- **25 · mech 12×**: 40 Scythers; 18 fell to traps and turrets before reaching the group; the zigzag
+  could not open distance from Scythers (as fast as the pawns), three pawns broke, and the rest went down
+  one by one; 38 of 40 Scythers out by the cap; conceded with 7 lost.
