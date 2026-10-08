@@ -490,3 +490,12 @@ Trace `results/human/traces/base2_caw_tribe_14x_claude_20261008-095435.jsonl.gz`
 - t0–2341: 37 of 137 out at the south arc and the south turrets (69 traps) before any came within 54.
 - t2341–10342: ten crossings of the north arc (x 100–180), leaders 2–34 behind; 126 of 137 out or down
   by t10342; fled at t7549. Boris 61 %, Nana 72 %, Ivisivine 88 %, Frogs 92 %; none down.
+
+## 30 · base2_caw_pirate_14p5x (14.5×, pirate)
+Trace `results/human/traces/base2_caw_pirate_14p5x_claude_20261008-100510.jsonl.gz` · result **repelled** (fled t8715, cleared t15788), lost 0, downed 0, badness 0.0; raid
+1 killed + 21 inferred of 60, 29 escaped; traps 1,421 → 1,334.
+- Card: Lumenus 9 (an autopistol), Nag 7, Prissy 6 (rifles), the rest 0–4. Raid: 60 pirates from the SE
+  corner (201–219, 0–9), every one with a sniper rifle (46 plain, 14 biocoded).
+- Loadout: Le's good rifle to Lumenus.
+- The squad in the block's east room from the start: 60 sniper rifles (44.9) against the turrets (46)
+  and the traps; fled at t8715 with 31 out. Kenta broke (wandering) but was not hit; nobody of ours hit.
