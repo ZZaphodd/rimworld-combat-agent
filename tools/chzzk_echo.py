@@ -3,6 +3,7 @@
   python3 -m venv .venv-chzzk && .venv-chzzk/bin/pip install chzzkpy      # once (aiohttp comes with it)
   .venv-chzzk/bin/python tools/chzzk_echo.py <channel id>      # the 32-hex id in chzzk.naver.com/live/<id>
   .venv-chzzk/bin/python tools/chzzk_echo.py --demo            # no CHZZK: each stdin line is a chat line
+  --emotion: 찹쌀이's face follows each line (tools/kote_mlx.py: the KOTE classifier on MLX, ~8 ms a line)
 
 OBS browser source (one server for the page and its feed):
   http://127.0.0.1:8767/avatar?obs&flavor=white&mode=battle&emotion=calm&ws=ws://127.0.0.1:8767/ws
@@ -48,8 +49,9 @@ def hold_s(line):
 
 
 class Echo:
-    def __init__(self, names, max_len):
-        self.names, self.max_len = names, max_len
+    def __init__(self, names, max_len, mood=None):
+        """mood: text -> the avatar's emotion, asked only for lines that are shown."""
+        self.names, self.max_len, self.mood = names, max_len, mood
         self.queue = collections.deque(maxlen=BACKLOG)
         self.ready = asyncio.Event()
         self.sockets = set()
@@ -62,7 +64,7 @@ class Echo:
             return
         if self.names and nickname is not None:
             body = clean(f"{clean(nickname, 16)}: {body}", self.max_len + 18)
-        self.queue.append({"text": body})            # text only: the avatar keeps its mode and emotion
+        self.queue.append({"text": body, "said": clean(content, self.max_len)})
         self.ready.set()
 
     async def pace(self):
@@ -70,14 +72,18 @@ class Echo:
             await self.ready.wait()
             self.ready.clear()
             while self.queue:
-                msg = self.queue.popleft()
+                line = self.queue.popleft()
+                msg = {"text": line["text"]}           # no emotion: the avatar keeps its own
+                if self.mood:
+                    msg["emotion"] = self.mood(line["said"])
                 for ws in list(self.sockets):
                     try:
                         await ws.send_json(msg)
                     except (ConnectionError, RuntimeError):
                         self.sockets.discard(ws)
                 self.sent += 1
-                print(f"echo ({self.sent}/{self.seen}): {msg['text']}", flush=True)
+                print(f"echo ({self.sent}/{self.seen}){' ' + msg['emotion'] if self.mood else ''}: {msg['text']}",
+                      flush=True)
                 await asyncio.sleep(hold_s(msg["text"]))
 
     async def ws_handler(self, request):
@@ -137,10 +143,18 @@ async def main():
     ap.add_argument("--port", type=int, default=8767)
     ap.add_argument("--no-names", dest="names", action="store_false", help="echo the text without the nickname")
     ap.add_argument("--max-len", type=int, default=60)
+    ap.add_argument("--emotion", action="store_true", help="set the avatar's emotion per line (tools/kote_mlx.py)")
     a = ap.parse_args()
     if not a.demo and not a.channel:
         ap.error("give a channel id, or --demo")
-    echo = Echo(a.names, a.max_len)
+    mood = None
+    if a.emotion:
+        import kote_mlx
+        kote = kote_mlx.Kote()
+        kote.emotion("안녕하세요")                  # the first call loads the weights (~3 s)
+        mood = lambda text: kote.emotion(text)[0]
+        print("emotion: KOTE on MLX", flush=True)
+    echo = Echo(a.names, a.max_len, mood)
     app = web.Application()
     app.add_routes([web.get("/avatar", avatar), web.get("/ws", echo.ws_handler)])
     runner = web.AppRunner(app)

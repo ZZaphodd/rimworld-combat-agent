@@ -1,5 +1,6 @@
 """찹쌀이's CHZZK chat echo (tools/chzzk_echo.py): chat is cleaned to one short visible line,
 and a busy chat keeps only the newest few lines waiting."""
+import asyncio
 import sys
 import unittest
 
@@ -29,8 +30,8 @@ class EchoTest(unittest.TestCase):
         e.put("{:d_1:}", "누군가")                 # emoji only: nothing to say
         e.put("안녕", "닉\u202e네임")
         e.put("(후원) 감사", "익명")
-        self.assertEqual(list(e.queue), [{"text": "닉네임: 안녕"},
-                                         {"text": "익명: (후원) 감사"}])
+        self.assertEqual(list(e.queue), [{"text": "닉네임: 안녕", "said": "안녕"},
+                                         {"text": "익명: (후원) 감사", "said": "(후원) 감사"}])
         self.assertEqual(e.seen, 3)
 
     def test_no_names_and_backlog_keeps_newest(self):
@@ -42,6 +43,50 @@ class EchoTest(unittest.TestCase):
     def test_pacing_matches_the_avatar(self):
         self.assertLess(chzzk_echo.hold_s("짧다"), chzzk_echo.hold_s("가" * 60))
         self.assertGreater(chzzk_echo.hold_s(""), 1.7)
+
+
+
+class PaceTest(unittest.IsolatedAsyncioTestCase):
+    async def test_mood_is_asked_with_the_chat_text_only(self):
+        sent, asked = [], []
+
+        class Socket:
+            async def send_json(self, msg):
+                sent.append(msg)
+
+        e = chzzk_echo.Echo(names=True, max_len=60, mood=lambda t: asked.append(t) or "joy")
+        e.sockets.add(Socket())
+        hold, chzzk_echo.hold_s = chzzk_echo.hold_s, lambda line: 0
+        try:
+            e.put("ㅋㅋ 웃기다", "닉")
+            task = asyncio.create_task(e.pace())
+            while not sent:
+                await asyncio.sleep(0)
+            task.cancel()
+        finally:
+            chzzk_echo.hold_s = hold
+        self.assertEqual(sent, [{"text": "닉: ㅋㅋ 웃기다", "emotion": "joy"}])
+        self.assertEqual(asked, ["ㅋㅋ 웃기다"])
+
+    async def test_no_mood_sends_text_only(self):
+        sent = []
+
+        class Socket:
+            async def send_json(self, msg):
+                sent.append(msg)
+
+        e = chzzk_echo.Echo(names=False, max_len=60)
+        e.sockets.add(Socket())
+        hold, chzzk_echo.hold_s = chzzk_echo.hold_s, lambda line: 0
+        try:
+            e.put("안녕", "닉")
+            task = asyncio.create_task(e.pace())
+            while not sent:
+                await asyncio.sleep(0)
+            task.cancel()
+        finally:
+            chzzk_echo.hold_s = hold
+        self.assertEqual(sent, [{"text": "안녕"}])
 
 
 if __name__ == "__main__":
