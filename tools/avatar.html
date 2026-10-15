@@ -139,7 +139,8 @@ input[type=text] { flex: 1; min-width: 0; font: inherit; font-size: 16px; color:
 // 찹쌀이 아바타 (the user's artifact https://claude.ai/artifact/UgfXRFzz7n6yAJaSDWLq7H), served by
 // tools/overlay.py at /avatar for an OBS browser source. URL: obs (transparent, no panel),
 // flavor=white|matcha|strawberry, mode=peace|battle, emotion=calm|joy|surprise|anger|sad,
-// ws=ws://... (live {mode, emotion, text, flavor} messages).
+// ws=ws://... (live {mode, emotion, text, flavor} messages; tools/chzzk_echo.py serves this page with
+// a feed that echoes CHZZK chat).
 (function () {
   const params = new URLSearchParams(location.search);
   if (params.has('obs')) document.documentElement.classList.add('obs');

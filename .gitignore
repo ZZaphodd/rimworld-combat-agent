@@ -11,3 +11,4 @@ results/*.errors.jsonl
 legacy/logs/
 results/human/hands_*.jpg
 .rimmolt.lock
+.venv-chzzk/
