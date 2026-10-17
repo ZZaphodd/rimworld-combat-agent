@@ -50,10 +50,25 @@ def client(role="observer"):
     return _CLIENTS[role]
 
 
+FROZEN_DRAW_VERSIONS = ("0.2.0",)       # rimcockpit builds whose advance leaves on-screen pawns' draw position stale
+
+
+def _check_build():
+    """Warn once per process on a rimcockpit build whose advance is not vanilla-faithful: it ticks at
+    the Paused speed level, the draw-position tween of a pawn on screen stays put, and the game fires
+    projectiles from the drawn position (2026-10-17; results/model_ab/README.md)."""
+    if "build" not in _CLIENTS:
+        _CLIENTS["build"] = client().status(full_header=True).header.modVersion
+        if _CLIENTS["build"] in FROZEN_DRAW_VERSIONS:
+            print(f"   WARNING: rimcockpit {_CLIENTS['build']}: advance freezes the drawn position of pawns on "
+                  "screen and shots start there; battles timed with it are not vanilla-faithful", flush=True)
+
+
 def advance(n, pace=None):
     """Exactly n game ticks through rimcockpit, ending paused (a dialog that force-pauses the game is
     ticked through, as RimMolt's forced wait did). Prints a line when it stopped short or was not exact;
     returns the reply."""
+    _check_build()
     r = client("pilot").advance(n=n, pace=pace or PACE, onForcePause="continue")
     exact = getattr(r.exact, "ok", r.exact)          # {ok, ticksGameDelta, skipped}
     if r.stopReason != "done" or not exact or r.ticksAdvanced != n:
