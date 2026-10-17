@@ -1,0 +1,5 @@
+# a2 / rand_058 / opus55_ab — plan
+- Raid: 8 Outlander civil (3 pump shotguns, 2 autopistols, 2 revolvers, 1 knife), weak shooters, no explosives; from SW (30,3), ~150 cells out. Ours: 5 guns (2 shotguns, 2 autopistols, revolver) + frag + 2 molotovs.
+- Play: corner ambush. Walk the squad (~67 cells, ~1000 ticks) to the hidden pocket on the NE/E face of rock A (x170-185, z89-104). From cells (185-190, 98-102) the raid's first sight of us is only ~8-11 cells, at the S tip (184-187, 89-92) or the N corner (175-178, 105-106).
+- Slots: shotguns Poinlaoik (187,98), Paul (189,98); pistols Furr (186,100), Curly (190,100), Trev (187,102); throwers Poinis frag (188,100), Moinork molotov (189,102), Pigork molotov (185,102). No loadout swap (gains small).
+- Contact: everyone holds and fires at will; throwers aimed at raiders bunched at the corner (>=5 cells from ours), frag first; stop() throwers after their throw so they don't throw at raiders that close in. Focus fire on the nearest/most dangerous (shotguns, knife). Watch molotov grass fire; shift the pocket if it spreads in. No chasing beyond the pocket until the raid breaks.

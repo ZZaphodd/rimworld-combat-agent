@@ -1,0 +1,5 @@
+# b3 / rand_227 / sonnet55_ab plan
+- Squad 9 (6 guns, 3 knives; shooting skill 0-12, most poor) vs 8 raiders (3 bolt rifles range 37, rev, autopistol, 3 melee), 157 cells away, night, open forest. They outrange us.
+- Loadout (before drafting): give guns to better shooters. Mocha (sh12) <-> Barr: Mocha takes the good autopistol, Barr (flak vest+jacket, tank) takes the knife. Cowan (sh10) <-> Fernanda (sh0): Cowan takes the autopistol. Barr/Manning/Fernanda = melee screen, the rest shoot.
+- Site: the big rock blob (170-185, 89-104), ~60 cells ESE. Stand south of it so the rock blocks LOS and the rifles' 37-cell reach; raiders walk around it and meet us at ~10-13 cells. Time: ~1100 ticks to walk there, raid needs ~1900.
+- Play: drafted, hold in a loose arc (2-3 cells apart), screen in front, focus fire the rifle holders (Diver sh10, then Lynx) and kill runners as they come; guard() in small steps, adjust position if they pick the west side. Fire orders given once per target (no flip-flop).
