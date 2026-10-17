@@ -53,3 +53,28 @@ dominate this kind of long tool loop, so Sonnet's half price per token saved abo
 
 One battle per problem: the spread between tries of the same problem (rand_227: 19 to 112) is much
 larger than the difference between the two models here.
+
+## Mixed hands on rand_227 (run c3, same day)
+
+After rimcockpit 0.2.0 (time and observation; orders still only through RimMolt), a fresh Opus 5.5
+played rand_227 once more with [tools/hands_rc.py](../../tools/hands_rc.py): `tools/hands.py` with
+game time moved to rimcockpit's `advance` (wait at the normal pace, skip at batch, and through them
+guard and wait_safe) and `st()`/`wait_safe()` reading its snapshot, while orders and the grenade
+reflex's reads stayed on RimMolt. The briefing was [context_rc.md](context_rc.md): context.md with
+only the helpers swapped. A smoke test before it (scratch results, no row) checked exact advances of
+1, 120 and 180 ticks, 600 at batch in 0.9 s, snapshot ids equal to RimMolt's, and a RimMolt order
+between advances.
+
+| Run | Helpers | Result |
+|---|---|---|
+| a3 (Opus 5.5) | hands.py, RimMolt only | repelled, lost 1, downed 0, badness 21.7, 8,810 ticks |
+| b3 (Sonnet 5.5) | hands.py, RimMolt only | repelled, lost 0, downed 1, badness 26.7, 5,336 ticks |
+| c3 (Opus 5.5) | hands_rc.py, mixed | **decisive**, lost 0, downed 0, **badness 10.4**, 6,640 ticks |
+
+c3 took the same rock as a3 and b3, stood the squad where the rifles had to come round the tip, and
+fought the melee rush inside the group with the knife pawns. rimcockpit's advance never reported a
+short or inexact step. The player's remarks on the helpers: no line-of-sight read on either side (it
+probed `order_pawn` menus per pair, and its own grid check disagreed at rock corners); the snapshot
+has no stagger or stance field, so pawns slowed by hits looked stalled; and hands_rc's st() printed
+the raw game tick while hands.st() and the harness count from 383 (st() now prints both). One battle
+again: the helpers are not shown to be the cause of the better result.
