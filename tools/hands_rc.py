@@ -50,18 +50,19 @@ def client(role="observer"):
     return _CLIENTS[role]
 
 
-FROZEN_DRAW_VERSIONS = ("0.2.0",)       # rimcockpit builds whose advance leaves on-screen pawns' draw position stale
+FROZEN_DRAW_VERSIONS = ("0.2.0",)       # rimcockpit builds whose advance leaves pawns' draw position stale
 
 
 def _check_build():
     """Warn once per process on a rimcockpit build whose advance is not vanilla-faithful: it ticks at
-    the Paused speed level, the draw-position tween of a pawn on screen stays put, and the game fires
-    projectiles from the drawn position (2026-10-17; results/model_ab/README.md)."""
+    the Paused speed level, every pawn's draw-position tween stays put while the map is drawn, and the
+    game fires projectiles from the drawn position (2026-10-17/18; results/model_ab/README.md; fixed in
+    0.2.1, D80/D81)."""
     if "build" not in _CLIENTS:
         _CLIENTS["build"] = client().status(full_header=True).header.modVersion
         if _CLIENTS["build"] in FROZEN_DRAW_VERSIONS:
-            print(f"   WARNING: rimcockpit {_CLIENTS['build']}: advance freezes the drawn position of pawns on "
-                  "screen and shots start there; battles timed with it are not vanilla-faithful", flush=True)
+            print(f"   WARNING: rimcockpit {_CLIENTS['build']}: advance freezes every pawn's drawn position and "
+                  "shots start there; battles timed with it are not vanilla-faithful (use 0.2.1)", flush=True)
 
 
 def advance(n, pace=None):
