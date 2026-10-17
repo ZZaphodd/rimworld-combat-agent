@@ -1,4 +1,4 @@
-# rand_006 · savage bows ×8 vs 13 Drifters, all melee · open — repelled by Claude
+# rand_006 · savage bows ×8 vs 13 Drifters, all melee · open — repelled by Claude, then by the human with none hurt badly
 
 **Situation:** `open-arena` `raid-far` `raid-melee` `raid-outnumbers` `us-bows` `us-skill-mismatch`
 **Plays seen:** `loadout` `breach` (by deconstruction) `mouth-hold` `rotation` `carry-downed` (agent: `kite`)
@@ -16,6 +16,7 @@
 |---|---|---|---|---|---|
 | agent `kite` | pack kite | open ground | squad down, 0 kills | 0 dead, 8 downed, 9 permanent | 73.4 |
 | Claude (2026-10-18) | loadout (greatbow to Berro, ikwas to Cane and Llolou); the walled hall's south-wall corner cell (213, 167) deconstructed by Red, the job given at the start; one melee pawn then two on the cells touching it, the bows on the raider in it; rotations | NE ridge + walled hall, breach (213, 167) | **repelled** (t6727): 8 dead, 1 downed, 4 fled; raid fled t5826 | Berro dead, 1 permanent | **24.9** |
+| **human** (2026-10-18; Claude did the same loadout and opened the south wall's middle cell (209, 167) with Red, the squad waiting outside, handed over at t1950) | three melee-able pawns on the three cells touching the breach (Llolou (208, 168), Cane (209, 168), Hare (210, 168)), five bows packed behind in a 3×3 block (z 169–171); the middle front swapped once with the pawn right behind it | NE ridge + walled hall, breach (209, 167) | **repelled** (t6097): 7 dead, 3 downed, 3 fled; raid fled t4795 | 0 lost, 0 downed, 0 permanent, health lost 100% | **4.0** |
 
 ## Scenes
 - **t0–2025** `us-skill-mismatch` → `loadout` `breach`: the nook was out of reach in time (the raid
@@ -32,13 +33,25 @@
 - **t5266–5444** `rotation`: Berro (43%) was ordered out of (213, 168) and died there before he got
   out; front swaps took 100–240 ticks through the cells round a 2×2 table.
 - **t5826** `raid-breaking`: 9 of 13 out; four walked east off the map.
+- **Human, t1950–2122** `approach` → `mouth-hold`: from Claude's hand-over (wall open, the raid 71
+  cells out) all eight went in: Llolou, Cane and Hare on (208–210, 168), the bows on (208–210, 169),
+  (209–210, 170) and (209, 171).
+- **Human, t2900–4795** `melee-contact` → `mouth-hold` `rotation`: the raiders came into the breach
+  one at a time; Andy, Wes and Max went down there and five died in or just outside it. Only the
+  middle front cell, straight ahead of the breach, took real damage: Cane 100% → 50% (t4184), then
+  Toad from right behind took his cell (t4205–4341) and went to 70%. The diagonal front cells took
+  little (Llolou 13 damage, Hare none) and dealt much (melee: Llolou 123, Hare 91 with 2 shots
+  fired). Bows: Blue 178, Berro 170, Hawk 101, Toad 101, Red 92.
 
 ## What the play stood on (observed)
 - The one-cell breach fed a 13-raider melee raid in one at a time; the bows did most of the damage
   (Blue 189, Hawk 152, Hare 145, Toad 140, Red 125).
 - The losses came in the rotations: the front cell stood empty during them, and a front pawn at 43%
   died while leaving.
+- The human's breach in the middle of the wall had three cells touching it: the raider in it was hit
+  from all three and from the bows, while the hits it gave went to the middle one.
 
 ## Sources
 journal `journals/rand_006_claude_20261018.md` · trace `results/human/traces/rand_006_claude_20261018-052806.jsonl.gz` ·
+human: trace `results/human/traces/rand_006_human_20261018-055003.jsonl.gz` ·
 sheet `sheets/rand_006_start.md` · agent row `results/night/router.jsonl`
