@@ -29,6 +29,7 @@ TABLE = DATA / "combat_power.json"
 RANGES = DATA / "weapon_ranges.json"
 XENOS = DATA / "xenotypes.json"
 BUILDINGS = DATA / "buildings.json"
+COVER = DATA / "cover.json"
 
 
 def _all_nodes(data_dir, tags=None):
@@ -206,9 +207,46 @@ def extract_buildings(game=GAME):
     return dict(sorted(out.items()))
 
 
+def extract_cover(game=GAME):
+    """{defName: {fill, building, door, size}} for every concrete ThingDef with a fill percent of at
+    least 0.01 (ThingDef.Fillage above None): what rca.sight needs to answer the game's two questions
+    per cell. A building filled above 0.99 is a full-fill edifice and blocks the line of sight (a door
+    only while closed: GenGrid.CanBeSeenOver); anything with a fill is cover (CoverGrid), plants and
+    chunks included (a bush is 0.2, a tree 0.25, an urn 0.4, a stone chunk 0.5)."""
+    things = _Chain(_all_nodes(Path(game) / "Data", lambda t: t == "ThingDef"))
+    out = {}
+    for n in things.nodes:
+        name = n.findtext("defName")
+        if not name or n.get("Abstract", "").lower() == "true":
+            continue
+        fill = _num(things.text(n, "fillPercent")) or 0.0
+        if fill < 0.01:
+            continue
+        size = (things.text(n, "size") or "(1,1)").strip("() ").split(",")
+        out[name] = {"fill": fill, "building": (things.text(n, "category") or "") == "Building",
+                     "door": "Door" in (things.text(n, "thingClass") or ""),
+                     "size": [int(size[0]), int(size[1])] if len(size) == 2 else [1, 1]}
+    return dict(sorted(out.items()))
+
+
+def write_cover(game=GAME):
+    c = extract_cover(game)
+    COVER.write_text(json.dumps(c, indent=1) + "\n")
+    return len(c)
+
+
 _cache = None
 _xenos = None
 _buildings = None
+_cover = None
+
+
+def cover():
+    """data/cover.json (rca.sight's fill table), loaded once."""
+    global _cover
+    if _cover is None:
+        _cover = json.loads(COVER.read_text()) if COVER.exists() else {}
+    return _cover
 
 
 def buildings():

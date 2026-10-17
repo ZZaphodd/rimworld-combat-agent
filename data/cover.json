@@ -1,0 +1,5060 @@
+{
+ "ActivatorCountdown": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ActivatorProximity": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Altar_Grand": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "Altar_Large": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "Altar_Medium": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "Altar_Small": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientAPC": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "AncientATM": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientAirConditioner": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientAmmoStack": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientAntenna": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientArmchair": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientAutocannonTurret": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientBandNode": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientBarrel": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientBarrierLong": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientBasicRecharger": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientBathtub": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientBed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientBlastDoor": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientBox_ComponentIndustrial": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientBox_ComponentSpacer": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientBox_SteelSlag": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientCardboardBox": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientChembarrel": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientChembarrelPallet": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientChemfuelCanister": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientChemtruck": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientColdStorage": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientCommsConsole": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientConcreteBarrier": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientCraneArm": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientCraneArmSmall": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientCraneBase": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   5
+  ]
+ },
+ "AncientCraneColumn": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientCrate": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientCratePallet": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientCryptosleepCasket": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientCryptosleepPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientDisplayBank": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientDoubleBed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientDrillPlatform": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "AncientDropshipEngine": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientEmergencyLight_Blue": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientEmergencyLight_Green": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientEmergencyLight_Red": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientEnemyTerminal": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientEquipmentBlocks": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   2
+  ]
+ },
+ "AncientExcavator": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   4
+  ]
+ },
+ "AncientExostriderCannon": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientExostriderHead": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientExostriderLeg": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientExostriderRemains": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientExplosivesCrate": {
+  "fill": 0.9,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientFence": {
+  "fill": 0.55,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientFilingCabinet": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientForklift": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientFortifiedWall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientFuelNode": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientGenerator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientGiantWheel": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientGravEngine": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "AncientGravReactor": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   5
+  ]
+ },
+ "AncientHermeticCrate": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientHydrant": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientIndustrialShelf": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientIndustrialTruck": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientJetEngine": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientKitchenSink": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientLamp": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientLamppost": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientLargeContainer": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   5
+  ]
+ },
+ "AncientLargeCrate": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientLargeMechGestator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   3
+  ]
+ },
+ "AncientLargeRustedEngineBlock": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientLockerBank": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientLockers": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientLongCrate": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMachine": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "AncientMechDropBeacon": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMechGestator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientMechGestatorTank": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientMediumContainer": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientMegaCannonBarrel": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientMegaCannonTripod": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "AncientMetalCrate": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMicrowave": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMilitaryBarrier": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientMilitaryCrate": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMilitaryGeneratorSmall": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMiniWarwalkerRemains": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "AncientMiningCharge": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientMortar": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientOpenContainer": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   2
+  ]
+ },
+ "AncientOperatingTable": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientOven": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientPallet_SteelSlag": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientPipelineSection": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientPipes": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientPlantPot": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientPodCar": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientPostbox": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientRazorWire": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientRefrigerator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientRustedCar": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientRustedCarFrame": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   3
+  ]
+ },
+ "AncientRustedDropship": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   5
+  ]
+ },
+ "AncientRustedEngineBlock": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientRustedJeep": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   5
+  ]
+ },
+ "AncientRustedMicrowave": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientRustedTruck": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientSafe": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSealedContainer": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientSealedContainer_GravshipUpgrade": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientSealedCrate": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSealedCrate_Gravlite": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSealedCrate_Shells": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSecurityCrate": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientSecurityTerminal": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSecurityTurret": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientShelf": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientShipBeacon": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientShoppingCart": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientShower": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSimpleResearchBench": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientSingleBed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientSmallContainer": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientSmallCrate": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSmallShelf": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSpacerCrate": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientStandardRecharger": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "AncientStorageCylinder": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientStove": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientSystemRack": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   3
+  ]
+ },
+ "AncientTV": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientTableBrewery": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableButcher": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableDrugLab": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableMachining": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableSmithingElectric": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableSmithingFueled": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableStoveElectric": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableStoveFueled": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableTailorElectric": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTableTailorHand": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "AncientTank": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "AncientTankTrap": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientTerminal": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientTerminal_Worshipful": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientTerraformer": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   4
+  ]
+ },
+ "AncientToilet": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientToxifierGenerator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientTransportPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientTunnelerClaw": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "AncientTunnelerHusk": {
+  "fill": 0.7,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientUplink": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientUraniumSlugTurret": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientVendingMachine": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientWarspiderRemains": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   5
+  ]
+ },
+ "AncientWarwalkerClaw": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "AncientWarwalkerFoot": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "AncientWarwalkerLeg": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "AncientWarwalkerShell": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "AncientWarwalkerTorso": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   6
+  ]
+ },
+ "AncientWashingMachine": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientWheel": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AncientWindTurbineBody": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   2
+  ]
+ },
+ "AncientWoodenCrate": {
+  "fill": 0.1,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AnimalBed": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AnimalFlap": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AnimalSleepingBox": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AnimusStone": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AnticraftBeam": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   9,
+   9
+  ]
+ },
+ "ArchonexusCore": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   11,
+   11
+  ]
+ },
+ "ArchotechTower": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   5
+  ]
+ },
+ "Armchair": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "AtmosphericHeater": {
+  "fill": 0.75,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "Autobong": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Autodoor": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "BabyDecoration": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "BandNode": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Barricade": {
+  "fill": 0.55,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "BasicRecharger": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "Battery": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "Bed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "BilliardsTable": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   3
+  ]
+ },
+ "BioferriteGenerator": {
+  "fill": 0.75,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "BioferriteHarvester": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "BioferriteShaper": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "BiofuelRefinery": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "BiosculpterPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "Blackboard": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "Bookcase": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "BookcaseSmall": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Brazier": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Brewery": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "BroadshieldProjector": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Building_KidOutfitStand": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Building_OutfitStand": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "BurnedTree": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "BurningPowerCell": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "BurnoutMechlinkBooster": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "BurrowWall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Campfire": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CerebrexCore": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   7,
+   7
+  ]
+ },
+ "CerebrexCore_Destroyed": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   7,
+   7
+  ]
+ },
+ "CerebrexStabilizer": {
+  "fill": 0.7,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "ChemfuelPoweredGenerator": {
+  "fill": 0.9,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "ChemfuelTank": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "ChessTable": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump_Anima": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump_Archean": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump_Gauranlen": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump_Harbinger": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump_Polluted": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChoppedStump_Polux": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkGranite": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkLimestone": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkMarble": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkMechanoidSlag": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkSandstone": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkSlagSteel": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkSlate": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ChunkVacstone": {
+  "fill": 0.5,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ClimateAdjuster": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   6
+  ]
+ },
+ "CocoonLocust": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CocoonMegascarab": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CocoonMegaspider": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CocoonSpelopede": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CollapsedRocks": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Column": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CommsConsole": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "Cooler": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Couch": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "Crib": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "CryptosleepCasket": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "DarklightBrazier": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Darktorch": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "DarktorchFungus": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "DeathrestAccelerator": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "DeathrestCasket": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "DeepDrill": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Defoliator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "DefoliatorShipPart": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   3
+  ]
+ },
+ "DiningChair": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "DirtCubeSculpture": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Door": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "DoubleBed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Drape": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "Dresser": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "DrugLab": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "Drum": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "DryadCocoon": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "DryadHealingPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "EMIDynamo": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   4
+  ]
+ },
+ "EggBox": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "EggSac": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ElectricCrematorium": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "ElectricInhibitor": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "ElectricSmelter": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "ElectricSmithy": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "ElectricStove": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "ElectricTailoringBench": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "Electroharvester": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "EndTable": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FabricationBench": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   2
+  ]
+ },
+ "Fence": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FenceGate": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FermentingBarrel": {
+  "fill": 0.45,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FirefoamPopper": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FlatscreenTelevision": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "FleshSack": {
+  "fill": 0.75,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Fleshbulb": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Fleshmass": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FleshmassHeart": {
+  "fill": 0.75,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "FleshmassSpitter": {
+  "fill": 0.75,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Fleshmass_Active": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FloodLight": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FrenzyInducer": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "FuelOptimizer": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "FueledSmithy": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "FueledStove": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "GameOfUrBoard": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GaumakerCocoon": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GaussCannon": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   9,
+   9
+  ]
+ },
+ "GeneAssembler": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "GeneBank": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "GeneExtractor": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "GeneProcessor": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "GeothermalGenerator": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   6
+  ]
+ },
+ "GibbetCage": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Gloomlight": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GlowPod": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GlucosoidPump": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "GrandArchotechStructure": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   9,
+   9
+  ]
+ },
+ "GrandThrone": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "Granite": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GravAnchor": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   4
+  ]
+ },
+ "GravEngine": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "GravFieldExtender": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GravcorePowerCell": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GravshipHull": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GravshipShieldGenerator": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "GrayDoor": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GrayWall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "GroundPenetratingScanner": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "GrowthVat": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "HandTailoringBench": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "Heater": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "HemogenAmplifier": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "Hemopump": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "HiTechResearchBench": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   2
+  ]
+ },
+ "Hive": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "HoldingPlatform": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "Hopper": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "HospitalBed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "HydroponicsBasin": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   4
+  ]
+ },
+ "InfiniteChemreactor": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "KneelPillow": {
+  "fill": 0.05,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "KneelSheet": {
+  "fill": 0.05,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "LargeChemfuelTank": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "LargeMechGestator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   3
+  ]
+ },
+ "LargeThruster": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Lectern": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "LightBall": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Limestone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "LongRangeMineralScanner": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "Loudspeaker": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MajorArchotechStructure": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   7,
+   7
+  ]
+ },
+ "MajorArchotechStructureStudiable": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   7,
+   7
+  ]
+ },
+ "MalfunctioningTransportPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Marble": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MechAssembler": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "MechBooster": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "MechCapsule": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   3
+  ]
+ },
+ "MechDropBeacon": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MechGestator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "MechPylon": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MechRelay": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "MechRelay_Crashed": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "MechStabilizer": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "MechanoidDropPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MechanoidProcessor": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   4
+  ]
+ },
+ "MechbandDish": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "MechhiveAssembler": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   4
+  ]
+ },
+ "MegascreenTelevision": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "MineableComponentsIndustrial": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineableGold": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineableJade": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineableObsidian": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineablePlasteel": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineableSilver": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineableSteel": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MineableUranium": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MoisturePump": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "MultiAnalyzer": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "NatureShrine_Large": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "NatureShrine_Small": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "NerveBundle": {
+  "fill": 0.75,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "NeuralSupercharger": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   3
+  ]
+ },
+ "Noctolith": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "NutrientPasteDispenser": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   4
+  ]
+ },
+ "OrbitalAncientFortifiedWall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "OrbitalScanner": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "OrbitalTradeBeacon": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "OrnateDoor": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "Pallet_Medicine": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Pallet_SurvivalMeals": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "PassengerShuttle": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   5
+  ]
+ },
+ "PassiveCooler": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "PenMarker": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Pew": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "PilotConsole": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "PilotSubpersonaCore": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "PlantPot": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "PlantPot_Bonsai": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Agave": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Alocasia": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Berry": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Berry_Leafless": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Bush": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Bush_Leafless": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Clivia": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_NightRafflesia": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_PebbleCactus": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Rafflesia": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_RatPalm": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_SaguaroCactus": {
+  "fill": 0.35,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Timbershroom": {
+  "fill": 0.4,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeAnima": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeArchean": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeBamboo": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeBirch": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeBonsai": {
+  "fill": 0.01,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeCecropia": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeCocoa": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeCocoa_Wild": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeCypress": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeDrago": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeGauranlen": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeGrayPine": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeHarbinger": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeMaple": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeOak": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreePalm": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreePine": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreePolux": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreePoplar": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeSnagroot": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeTeak": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_TreeWillow": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Willowgill": {
+  "fill": 0.4,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Plant_Witchwood": {
+  "fill": 0.25,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "PodLauncher": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "PokerTable": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "PollutionPump": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ProximityDetector": {
+  "fill": 0.25,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "PsychicDroner": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   6
+  ]
+ },
+ "PsychicDronerShipPart": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   3
+  ]
+ },
+ "PsychicEmanator": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "PsychicSuppressor": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   6
+  ]
+ },
+ "PsychofluidPump": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "RaisedRocks": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Reliquary": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "RoyalBed": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "RubblePile": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SandCubeSculpture": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Sandbags": {
+  "fill": 0.55,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Sandstone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SanguphageMeetingTorch": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Sarcophagus": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "SchoolDesk": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "ScrapCubeSculpture": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SculptureGrand": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "SculptureLarge": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SculptureSmall": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SculptureTerror": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SealedCrate": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SecurityDoor": {
+  "fill": 1.0,
+  "building": true,
+  "door": true,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "SerumCentrifuge": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "ShardBeacon": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ShardInhibitor": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Shelf": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "ShelfSmall": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ShieldGeneratorBullets": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ShieldGeneratorMortar": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ShipChunk": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "ShipChunk_Mech": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "ShipLandingBeacon": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Ship_Beam": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   6
+  ]
+ },
+ "Ship_ComputerCore": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Ship_CryptosleepCasket": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "Ship_Engine": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   4
+  ]
+ },
+ "Ship_Reactor": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   7
+  ]
+ },
+ "Ship_SensorCluster": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Shuttle": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "ShuttleCrashed": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "ShuttleCrashed_Exitable": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "ShuttleCrashed_Exitable_Mechanitor": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "SignalJammer": {
+  "fill": 0.6,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "SimpleResearchBench": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "Skullspike": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SlabBed": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "SlabDoubleBed": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Slate": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SleepAccelerator": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SleepSuppressor": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "SmallThruster": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "SmashedStump": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmashedStump_Anima": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmashedStump_Archean": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmashedStump_Gauranlen": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmashedStump_Harbinger": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmashedStump_Polluted": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmashedStump_Polux": {
+  "fill": 0.2,
+  "building": false,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmokeSpewer": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   5
+  ]
+ },
+ "SmoothedGranite": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmoothedLimestone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmoothedMarble": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmoothedSandstone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmoothedSlate": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmoothedSolidIce": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SmoothedVacstone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Snowman": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SolarGenerator": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   4,
+   4
+  ]
+ },
+ "SolidIce": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Spacedrone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   3
+  ]
+ },
+ "StandardRecharger": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "StandingLamp": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Statue": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SteleGrand": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "SteleLarge": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "StoneCubeSculpture": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Stool": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "StylingStation": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "SubcoreEncoder": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "SubcoreRipscanner": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "SubcoreSoftscanner": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "SunBlocker": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   4
+  ]
+ },
+ "SunLamp": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "SurveyScanner": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "Table1x2c": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "Table2x2c": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Table2x4c": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   4
+  ]
+ },
+ "Table3x3c": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "TableButcher": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "TableMachining": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "TableSculpting": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "TableStonecutter": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "Telescope": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Throne": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ToolCabinet": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   1
+  ]
+ },
+ "TorchLamp": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "TorchWallLamp": {
+  "fill": 0.15,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "ToxicSpewer": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   5
+  ]
+ },
+ "ToxifierGenerator": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "ToyBox": {
+  "fill": 0.3,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "TransportPod": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "TubeTelevision": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Turret_AncientArmoredTurret": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Turret_AutoChargeBlaster": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_AutoInferno": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_AutoMiniTurret": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Turret_AutoMortar": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_Autocannon": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_FoamTurret": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Turret_MiniTurret": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Turret_Mortar": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_RocketswarmLauncher": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_Sniper": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "Turret_TacticalTurret": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "UnstablePowerCell": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Urn": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VacBarrier": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Vacstone": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VanometricPowerCell": {
+  "fill": 0.4,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   2
+  ]
+ },
+ "Vent": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VitalsMonitor": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VoidMonolith": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "VoidMonolithAttachmentBottomLeft": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VoidMonolithAttachmentBottomRight": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VoidMonolithAttachmentLeft": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   3
+  ]
+ },
+ "VoidMonolithAttachmentRight": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   3
+  ]
+ },
+ "VoidMonolithAttachmentTop": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   1
+  ]
+ },
+ "VoidSculpture": {
+  "fill": 0.35,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VoidStructure": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   5
+  ]
+ },
+ "VoidmetalMassLarge": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "VoidmetalMassMedium": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ },
+ "VoidmetalMassSmall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "VoidmetalWall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "Wall": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "WallLamp": {
+  "fill": 0.2,
+  "building": true,
+  "door": false,
+  "size": [
+   1,
+   1
+  ]
+ },
+ "WarpedObelisk_Abductor": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "WarpedObelisk_Duplicator": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "WarpedObelisk_Labyrinth": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "WarpedObelisk_Mutator": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   3
+  ]
+ },
+ "WastepackAtomizer": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   3,
+   2
+  ]
+ },
+ "WatermillGenerator": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   5,
+   6
+  ]
+ },
+ "WeatherController": {
+  "fill": 1.0,
+  "building": true,
+  "door": false,
+  "size": [
+   6,
+   6
+  ]
+ },
+ "WindTurbine": {
+  "fill": 0.5,
+  "building": true,
+  "door": false,
+  "size": [
+   7,
+   2
+  ]
+ },
+ "WoodFiredGenerator": {
+  "fill": 0.9,
+  "building": true,
+  "door": false,
+  "size": [
+   2,
+   2
+  ]
+ }
+}
