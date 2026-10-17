@@ -23,10 +23,15 @@ Bresenham line, kept unchanged for the frozen agents) in two ways that showed at
   shooter's cell, then from each of its lean cells toward the target, to any of the target's lean
   cells toward that source cell (ShootLeanUtility.CalcShootableCellsOf).
 
-The two checks by fuzzing against a literal transliteration of the decompiled code (2026-10-17,
-kept out of this repo): 450,107 random cases and 88,596 pairs on hand-made corner maps, 0 differences.
-Open in game: whether Unity's AngleFlat is exactly 90/180/270 for pawns on one row or column (the side
-flags are strict, so a float error there changes which lean cells count).
+Checked (2026-10-17) against a literal transliteration of the decompiled code, kept out of this repo
+(450,107 random cases, 88,596 pairs on hand-made corner maps, 6.5 M range boundaries: 0 differences),
+and against the game itself with tools/sight_probe.py, which teleports one of ours round a raider and
+reads the float menu's "Fire at": on rand_227's big rock 359 of 360 with get_area's legend (the miss: a
+bush beside the shooter, cover the legend shows as open ground) and 360 of 360 with ThingGrid; on the
+Cawalia base (walls, doors, a crashed ship) 446 of 450 until rotated multi-cell things were laid out
+(occupied()), then 450 of 450, and 300 of 300 on new cells round the wreck and an inner room. Pawns
+on one row or column (183 pairs) agreed, so Unity's AngleFlat is exact enough there. Prefer
+ThingGrid: the legend misses cover and turns.
 
 Not modelled: the weather's range cap (pass the range the weather leaves: VerbProperties.AdjustedRange),
 an effective range of 1.42 or less (the game then asks for touch reachability, not a line), verbs
@@ -98,6 +103,62 @@ class CharGrid:
         return self.ch(x, z) in "#%*+c"
 
 
+class ThingGrid:
+    """The rules' questions answered from the things on each cell, as the game does (preferred over the
+    legend: get_area's ascii shows a bush, an urn or a chunk as open ground). A cell blocks when a
+    building on it is filled above 0.99 (a full-fill edifice: natural rock, a wall, a closed door);
+    it is cover when anything on it has a fill (data/cover.json, rca.game.defs.extract_cover).
+    fetch(x0, z0, x1, z1) -> [{"def", "x", "z"}, ...] (get_area layer="things"), called per tile of
+    `tile` cells on first use. A thing larger than one cell covers its footprint (occupied()), turned
+    by rotations(def) -> {(x, z): "North"/"East"/"South"/"West"} (list_things by def name gives the
+    rotation, get_area does not); without it, or for a thing it does not list, north is assumed.
+    Cells outside size (x, z) are outside the map."""
+
+    def __init__(self, fetch, size=(250, 250), open_doors=False, tile=50, rotations=None):
+        from rca.game import defs
+        self.fetch, self.size, self.open_doors, self.tile = fetch, size, open_doors, tile
+        self.rotations, self.rots = rotations, {}
+        self.table, self.cells, self.tiles = defs.cover(), {}, set()
+
+    def _rot(self, def_name, x, z):
+        if self.rotations is None:
+            return "North"
+        if def_name not in self.rots:
+            self.rots[def_name] = self.rotations(def_name) or {}
+        return self.rots[def_name].get((x, z)) or "North"
+
+    def _load(self, x, z):
+        key = (x // self.tile, z // self.tile)
+        if key in self.tiles:
+            return
+        self.tiles.add(key)
+        x0, z0 = key[0] * self.tile, key[1] * self.tile
+        for t in self.fetch(x0, z0, min(x0 + self.tile, self.size[0]) - 1, min(z0 + self.tile, self.size[1]) - 1):
+            d = self.table.get(t.get("def"))
+            if not d:
+                continue
+            rot = "North" if d["size"] == [1, 1] else self._rot(t["def"], t["x"], t["z"])
+            for c in occupied(t["x"], t["z"], d["size"], rot):
+                self.cells.setdefault(c, []).append(d)
+
+    def _on(self, x, z):
+        self._load(x, z)
+        return self.cells.get((x, z), ())
+
+    def inside(self, x, z):
+        return 0 <= x < self.size[0] and 0 <= z < self.size[1]
+
+    def door(self, x, z):
+        return any(d["door"] for d in self._on(x, z))
+
+    def blocks(self, x, z):
+        return any(d["building"] and d["fill"] > 0.99 and not (d["door"] and self.open_doors)
+                   for d in self._on(x, z))
+
+    def cover(self, x, z):
+        return bool(self._on(x, z))
+
+
 class HeldOpen:
     """A grid with the doors under the given cells held open (a pawn standing in a doorway)."""
 
@@ -115,6 +176,26 @@ class HeldOpen:
 
     def cover(self, x, z):
         return self.g.cover(x, z)
+
+
+_ROT = {"North": 0, "East": 1, "South": 2, "West": 3}
+_ROT_SHIFT = {1: (0, -1), 2: (-1, -1), 3: (-1, 0)}       # GenAdj.AdjustForRotation, reference north
+
+
+def occupied(x, z, size, rotation="North"):
+    """The cells a thing of `size` (as its def gives it, north-facing) at (x, z) covers when turned to
+    `rotation` (GenAdj.OccupiedRect): an east or west turn swaps the sides, and an even side shifts
+    the centre by the turn's offset."""
+    sx, sz = size
+    if (sx, sz) == (1, 1):
+        return [(x, z)]
+    r = _ROT.get(rotation, 0)
+    if r in (1, 3):
+        sx, sz = sz, sx
+    dx, dz = _ROT_SHIFT.get(r, (0, 0))
+    cx, cz = x + (dx if sx % 2 == 0 else 0), z + (dz if sz % 2 == 0 else 0)
+    x0, z0 = cx - (sx - 1) // 2, cz - (sz - 1) // 2
+    return [(i, j) for i in range(x0, x0 + sx) for j in range(z0, z0 + sz)]
 
 
 def _seen_over(grid, x, z):

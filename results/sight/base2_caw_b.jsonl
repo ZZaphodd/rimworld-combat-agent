@@ -1,0 +1,300 @@
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [140, 145], "kind": "lean", "game": true, "why": "", "sight": [[141, 145], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [144, 140], "kind": "lean", "game": true, "why": "", "sight": [[145, 140], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [150, 130], "kind": "lean", "game": true, "why": "", "sight": [[149, 130], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [174, 140], "kind": "lean", "game": true, "why": "", "sight": [[173, 140], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [144, 113], "kind": "lean", "game": true, "why": "", "sight": [[145, 113], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [154, 120], "kind": "lean", "game": true, "why": "", "sight": [[153, 120], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [177, 136], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [119, 143], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [174, 125], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [165, 114], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [137, 108], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [139, 117], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [133, 104], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [159, 124], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [125, 136], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [158, 127], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [141, 136], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [161, 110], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [127, 153], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [133, 136], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [118, 152], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [174, 128], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [132, 123], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [117, 117], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [125, 140], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [160, 122], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [142, 142], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [138, 110], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [172, 110], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [128, 151], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [177, 126], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [143, 126], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [169, 125], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [141, 102], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [137, 148], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [125, 138], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 161], "kind": "aligned", "game": true, "why": "", "sight": [[148, 161], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 158], "kind": "aligned", "game": true, "why": "", "sight": [[148, 158], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 155], "kind": "aligned", "game": true, "why": "", "sight": [[148, 155], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 164], "kind": "aligned", "game": true, "why": "", "sight": [[148, 164], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [127, 134], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 130], "kind": "aligned", "game": true, "why": "", "sight": [[148, 130], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 168], "kind": "aligned", "game": true, "why": "", "sight": [[148, 168], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [133, 134], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 114], "kind": "aligned", "game": true, "why": "", "sight": [[148, 114], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 107], "kind": "aligned", "game": true, "why": "", "sight": [[148, 107], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 113], "kind": "aligned", "game": true, "why": "", "sight": [[148, 113], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [174, 134], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [175, 134], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 145], "kind": "aligned", "game": true, "why": "", "sight": [[148, 145], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [137, 134], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [142, 134], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [141, 171], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [118, 154], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [184, 140], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [112, 125], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [117, 113], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [112, 137], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [165, 166], "kind": "edge", "game": true, "why": "", "sight": [[165, 166], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [140, 98], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [147, 133], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 133], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [147, 134], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [149, 133], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [141, 105], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [150, 126], "kind": "other", "game": true, "why": "", "sight": [[150, 126], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [173, 111], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [121, 144], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [146, 157], "kind": "other", "game": true, "why": "", "sight": [[146, 157], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [176, 134], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [145, 99], "kind": "other", "game": true, "why": "", "sight": [[145, 99], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [149, 136], "kind": "other", "game": true, "why": "", "sight": [[149, 136], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [164, 124], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 124], "kind": "other", "game": true, "why": "", "sight": [[148, 124], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [130, 137], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [179, 139], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [177, 155], "kind": "other", "game": true, "why": "", "sight": [[177, 155], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [128, 118], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [173, 113], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [152, 123], "kind": "other", "game": true, "why": "", "sight": [[152, 123], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [132, 130], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [167, 138], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [132, 125], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [148, 146], "kind": "other", "game": true, "why": "", "sight": [[148, 146], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [153, 140], "kind": "other", "game": true, "why": "", "sight": [[153, 140], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [173, 130], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [142, 153], "kind": "other", "game": true, "why": "", "sight": [[142, 153], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [165, 118], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [154, 165], "kind": "other", "game": true, "why": "", "sight": [[154, 165], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [166, 152], "kind": "other", "game": true, "why": "", "sight": [[166, 152], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [168, 123], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [176, 151], "kind": "other", "game": true, "why": "", "sight": [[176, 151], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [121, 141], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [124, 140], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [142, 101], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [147, 117], "kind": "other", "game": true, "why": "", "sight": [[147, 117], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [172, 137], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [154, 102], "kind": "other", "game": true, "why": "", "sight": [[154, 102], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [134, 153], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [148, 134], "shooter": [175, 150], "kind": "other", "game": true, "why": "", "sight": [[175, 150], [148, 134]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [110, 136], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [117, 144], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [159, 113], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [129, 97], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [115, 151], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [123, 135], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [160, 137], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [163, 120], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [107, 140], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [120, 102], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [120, 140], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [152, 113], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [118, 103], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [139, 149], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [123, 104], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [113, 121], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [127, 148], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [119, 132], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [118, 154], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [167, 111], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [141, 145], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [141, 99], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [110, 108], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [122, 101], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [107, 105], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [154, 108], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [150, 147], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [138, 135], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 91], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [157, 146], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [110, 125], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 111], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [169, 125], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 154], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 92], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 146], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 107], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 157], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [153, 125], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 149], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 151], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 121], "kind": "aligned", "game": true, "why": "", "sight": [[136, 121], [136, 125]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 147], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 160], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 109], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [136, 150], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [109, 151], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 161], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [117, 93], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [111, 99], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [122, 91], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 162], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [169, 111], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [159, 96], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 124], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 126], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [137, 125], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 125], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [104, 111], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [160, 118], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [138, 91], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [151, 155], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [107, 116], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [115, 130], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [134, 160], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [166, 116], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [132, 137], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 100], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [105, 144], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [129, 123], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [131, 141], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [119, 137], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [110, 107], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [150, 105], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [113, 155], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [154, 156], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [150, 113], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [118, 158], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [128, 154], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [134, 134], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [153, 147], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [124, 132], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [106, 145], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [129, 119], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [151, 117], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [158, 147], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [104, 139], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [162, 99], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [145, 153], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [108, 145], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [173, 120], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [160, 121], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [143, 92], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [161, 106], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [113, 140], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [135, 92], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [146, 160], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [114, 103], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [111, 132], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [136, 125], "shooter": [167, 107], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [162, 122], "kind": "lean", "game": true, "why": "", "sight": [[161, 122], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [155, 129], "kind": "lean", "game": true, "why": "", "sight": [[155, 128], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [151, 130], "kind": "lean", "game": true, "why": "", "sight": [[151, 129], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [161, 124], "kind": "lean", "game": true, "why": "", "sight": [[160, 124], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [177, 151], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [142, 126], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [180, 121], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [175, 116], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [161, 155], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [141, 141], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [178, 140], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [150, 141], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [156, 139], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [156, 154], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [141, 143], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [145, 137], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [174, 150], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [151, 140], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [166, 148], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [170, 117], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [133, 116], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [175, 152], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [135, 116], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [166, 138], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [152, 146], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [166, 135], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [183, 110], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [161, 140], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [157, 144], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [132, 143], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [139, 156], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [167, 133], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [148, 134], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [155, 143], "kind": "blocked", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [194, 128], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 156], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [140, 128], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [167, 128], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [181, 128], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [145, 128], "kind": "aligned", "game": true, "why": "", "sight": [[145, 128], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 95], "kind": "aligned", "game": true, "why": "", "sight": [[159, 95], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [125, 128], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 97], "kind": "aligned", "game": true, "why": "", "sight": [[159, 97], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [154, 128], "kind": "aligned", "game": true, "why": "", "sight": [[154, 128], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 146], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 110], "kind": "aligned", "game": true, "why": "", "sight": [[159, 110], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 114], "kind": "aligned", "game": true, "why": "", "sight": [[159, 114], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [155, 128], "kind": "aligned", "game": true, "why": "", "sight": [[155, 128], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [185, 128], "kind": "aligned", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [147, 128], "kind": "aligned", "game": true, "why": "", "sight": [[147, 128], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [145, 95], "kind": "edge", "game": true, "why": "", "sight": [[145, 95], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [196, 120], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 90], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [193, 139], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [196, 123], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [149, 163], "kind": "edge", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [197, 127], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [122, 131], "kind": "edge", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [158, 128], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [160, 127], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [159, 127], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [160, 128], "kind": "adjacent", "game": false, "why": "Too close", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [194, 132], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [194, 131], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [135, 135], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [188, 116], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [169, 162], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [167, 117], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [164, 119], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [192, 119], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [142, 103], "kind": "other", "game": true, "why": "", "sight": [[142, 103], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [150, 153], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [194, 116], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [132, 131], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [154, 157], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [179, 127], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [131, 151], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [172, 127], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [173, 120], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [142, 131], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [140, 154], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [186, 150], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [196, 136], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [150, 122], "kind": "other", "game": true, "why": "", "sight": [[150, 122], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [179, 137], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [190, 106], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [172, 140], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [179, 107], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [158, 149], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [126, 144], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [156, 166], "kind": "other", "game": false, "why": "Out of range", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [186, 149], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [165, 111], "kind": "other", "game": true, "why": "", "sight": [[165, 111], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [176, 154], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [166, 113], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [137, 143], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [131, 146], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [148, 136], "kind": "other", "game": false, "why": "Cannot hit target", "sight": null, "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [142, 109], "kind": "other", "game": true, "why": "", "sight": [[142, 109], [159, 128]], "agree": true}
+{"save": "scenario_base2_caw_pirate_2p5x", "range": 36.9, "target": [159, 128], "shooter": [147, 124], "kind": "other", "game": true, "why": "", "sight": [[147, 124], [159, 128]], "agree": true}
