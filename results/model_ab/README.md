@@ -56,6 +56,16 @@ larger than the difference between the two models here.
 
 ## Mixed hands on rand_227 (run c3, same day)
 
+> **Not vanilla-faithful (found 2026-10-17 evening).** rimcockpit 0.2.0's advance ticks with the speed
+> level held at Paused, so the game's draw-position tween (PawnTweener, scaled by
+> TickManager.TickRateMultiplier = 0) does not follow a pawn that stays on screen, and the game fires a
+> projectile from the shooter's drawn position (Verb_LaunchProjectile.TryCastShot uses caster.DrawPos;
+> flight time, interception and explosions follow from it). The user saw the squad drawn in its start
+> formation while it stood elsewhere; the rimcockpit session confirmed the logic effect. c3's result
+> below depends on where the camera was and is kept only as a record; the run d2 (rand_058 with the
+> line-of-fire helpers, results/model_ab/context_los.md) was stopped at tick ~3100 for the same reason,
+> with no row, and will be played again after rimcockpit's fix.
+
 After rimcockpit 0.2.0 (time and observation; orders still only through RimMolt), a fresh Opus 5.5
 played rand_227 once more with [tools/hands_rc.py](../../tools/hands_rc.py): `tools/hands.py` with
 game time moved to rimcockpit's `advance` (wait at the normal pace, skip at batch, and through them
