@@ -8,6 +8,11 @@ Everything in tools/hands.py is here too; what changes is where time and some re
   wait() runs at the normal pace (60 ticks/s, as RimMolt's wait did, so the harness's 1 s polls see
   the same); skip() at the batch pace.
 - st() and wait_safe() read the pawns from rimcockpit's snapshot.
+- Line of fire without the float menu (rca.sight, checked against the game on 1,110 pairs):
+  can_hit(shooter, target) says whether and from where a shot goes (leaning round corners included),
+  targets(name) lists whom a pawn can fire at now, who_can_hit(cell or name) who could fire at a pawn
+  standing there (for picking spots). The melee lock is not in the answers (GAME_FACTS §8); a note
+  says when an enemy stands next to the shooter.
 - Orders (go, fire, attack, melee, hit, draft, manage_gear) and the reads rimcockpit does not have yet
   (projectiles and raiders' targeting for guard's grenade reflex, brief, fireable, the float menus)
   stay on RimMolt. Pawn ids are the game's thing ids on both sides.
@@ -16,6 +21,7 @@ The frozen 0.2.0 client is read from RIMCOCKPIT_CLIENT, by default a clone of th
 repo in ~/.cache/rimcockpit (never copied into this public repo). Reads use the observer token, time
 the pilot token. Claude's play never asks for concealed pawns (rimcockpit D68/D74).
 """
+import json
 import math
 import os
 import sys
@@ -148,3 +154,127 @@ def wait_safe(ticks, alarm=25, chunk=60):
 
 
 H.wait_safe = wait_safe
+
+
+# ------------------------------------------------------------ line of fire (rca.sight)
+from rca import sight  # noqa: E402
+
+_GRID = {}
+_WEAPONS = {}
+PROJECTILE_VERBS = ("Verb_Shoot", "Verb_ShootOneUse", "Verb_LaunchProjectile", "Verb_LaunchProjectileStatic")
+
+
+def fire_grid():
+    """The current map's line-of-fire grid (sight.ThingGrid: the things on each cell, rotations from
+    RimMolt), built once per process; the map size comes from rimcockpit's full header."""
+    if "g" not in _GRID:
+        size = client().status(full_header=True).header.mapSize
+
+        def fetch(x0, z0, x1, z1):
+            return rm.call("get_area", minX=x0, minZ=z0, maxX=x1, maxZ=z1, layer="things", confirm=True)["things"]
+
+        def rotations(name):
+            things = rm.call("list_things", category="all", defName=name, verbose=True, confirm=True,
+                             limit=2000).get("things") or []
+            return {(t["x"], t["z"]): t.get("rotation") for t in things}
+        _GRID["g"] = sight.ThingGrid(fetch, size=(size.w, size.h), rotations=rotations)
+    return _GRID["g"]
+
+
+def weapon_of(row):
+    """(range, min range, launches a projectile) of a snapshot row's weapon (include "weapon"), from
+    data/weapon_ranges.json; None for no ranged weapon."""
+    if not _WEAPONS:
+        _WEAPONS.update(json.loads((Path(H.ROOT) / "data/weapon_ranges.json").read_text())["weapons"])
+    w = _WEAPONS.get((row.get("weapon") or {}).get("def") or "")
+    if not w or not w.get("range"):
+        return None
+    return w["range"], w.get("min_range") or 0.0, w.get("verb") in PROJECTILE_VERBS
+
+
+def _pick(rows, who):
+    """A row by thing id, or by short name (case-insensitive; '#' suffixes may be left off)."""
+    for r in rows:
+        if r["id"] == who:
+            return r
+    hits = [r for r in rows if (r.get("shortName") or "").lower().split("#")[0] == str(who).lower().split("#")[0]]
+    if len(hits) != 1:
+        raise KeyError(f"{who}: {len(hits)} pawns match; use the id")
+    return hits[0]
+
+
+def _hostile(a, b):
+    return {a.get("side"), b.get("side")} == {"player", "hostile"}
+
+
+def _shot(rows, s, t, held):
+    """(answer, why) for row s shooting row t: answer is sight.shoot_line's (from, to) or None."""
+    w = weapon_of(s)
+    if not w:
+        return None, "no ranged weapon"
+    rng, low, projectile = w
+    adjacent_ok = t.get("downed") or not _hostile(s, t) or not projectile
+    a, b = (s["x"], s["z"]), (t["x"], t["z"])
+    if not sight.in_range(a, b, rng, low, adjacent_ok):
+        d = math.dist(a, b)
+        return None, f"out of range ({d:.1f} > {rng})" if d > rng else f"too close ({d:.1f})"
+    ans = sight.shoot_line(fire_grid(), a, b, rng, low, adjacent_ok, held)
+    return ans, "" if ans else "no line"
+
+
+def _melee_note(rows, s):
+    near = [r["shortName"] for r in rows if _hostile(r, s) and not r.get("downed") and not r.get("dead")
+            and max(abs(r["x"] - s["x"]), abs(r["z"] - s["z"])) == 1]
+    return f"  [melee: {', '.join(near)} adjacent]" if near else ""
+
+
+def can_hit(shooter, target, quiet=False):
+    """Can `shooter` fire at `target` now (names or ids)? Returns sight.shoot_line's (from, to) or None
+    and prints one line: the lean cells used, or why not (range, too close, no line). The melee lock
+    is not in the answer: a note says when an enemy stands next to the shooter (GAME_FACTS §8)."""
+    rows, _ = snap(include=("weapon",), life=["standing", "downed"])
+    s, t = _pick(rows, shooter), _pick(rows, target)
+    held = [(r["x"], r["z"]) for r in rows]
+    ans, why = _shot(rows, s, t, held)
+    if not quiet:
+        how = (f"yes, from {ans[0]} to {ans[1]}" + (" (lean)" if ans != ((s["x"], s["z"]), (t["x"], t["z"])) else "")
+               if ans else f"no: {why}")
+        print(f"{s['shortName']} -> {t['shortName']}: {how}{_melee_note(rows, s)}")
+    return ans
+
+
+def targets(name):
+    """The pawns of the other side `name` can fire at now, nearest first: [(short name, from, to)]."""
+    rows, _ = snap(include=("weapon",), life=["standing", "downed"])
+    s = _pick(rows, name)
+    held = [(r["x"], r["z"]) for r in rows]
+    out = []
+    for t in sorted((r for r in rows if _hostile(s, r) and not r.get("dead")),
+                    key=lambda r: math.dist((s["x"], s["z"]), (r["x"], r["z"]))):
+        ans, _ = _shot(rows, s, t, held)
+        if ans:
+            out.append((t["shortName"], ans[0], ans[1]))
+    print(f"{s['shortName']} can fire at: " + (", ".join(n for n, _, _ in out) or "nobody") + _melee_note(rows, s))
+    return out
+
+
+def who_can_hit(where, side="hostile"):
+    """Who of `side` could fire at a pawn standing on `where` (a cell, or a pawn's name or id: its
+    cell) with the weapons and positions they have now: [(short name, from, to)]. For picking a
+    spot: try the cells you might move to."""
+    rows, _ = snap(include=("weapon",), life=["standing", "downed"])
+    if isinstance(where, (tuple, list)):
+        cell, me = tuple(where), {"side": "player" if side == "hostile" else "hostile", "downed": False}
+    else:
+        r = _pick(rows, where)
+        cell, me = (r["x"], r["z"]), r
+    held = [(r["x"], r["z"]) for r in rows] + [cell]
+    out = []
+    for s in rows:
+        if s.get("side") != side or s.get("downed") or s.get("dead"):
+            continue
+        ans, _ = _shot(rows, s, {**me, "x": cell[0], "z": cell[1]}, held)
+        if ans:
+            out.append((s["shortName"], ans[0], ans[1]))
+    print(f"{cell}: " + (", ".join(f"{n} from {a}" for n, a, _ in out) or "nobody of " + side) + " can fire here")
+    return out

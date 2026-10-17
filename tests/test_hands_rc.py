@@ -35,6 +35,25 @@ class HandsRcTest(unittest.TestCase):
         self.assertIsNone(self.h.alarm_reason(ours + [row(3, "hostile", 20, 0, downed=True)], 25))
         self.assertEqual(self.h.alarm_reason([row(1, "player", 0, 0, downed=True)], 25), "down: P1")
 
+    def test_weapons_and_names(self):
+        rifle = self.h.weapon_of({"weapon": {"def": "Gun_BoltActionRifle"}})
+        self.assertEqual(rifle[0], 36.9)
+        self.assertTrue(rifle[2])                                     # a projectile: no adjacent shot
+        self.assertFalse(self.h.weapon_of({"weapon": {"def": "Gun_BeamGraser"}})[2])          # a beam: adjacent shots allowed
+        self.assertIsNone(self.h.weapon_of({"weapon": {"def": "MeleeWeapon_Knife"}}))
+        self.assertIsNone(self.h.weapon_of({"weapon": None}))
+        rows = [row(1, "player", 0, 0), {**row(2, "hostile", 5, 5), "shortName": "centipede#k3z9"}]
+        self.assertEqual(self.h._pick(rows, "Human1")["id"], "Human1")
+        self.assertEqual(self.h._pick(rows, "Centipede")["id"], "Human2")
+        with self.assertRaises(KeyError):
+            self.h._pick(rows + [{**row(3, "hostile", 9, 9), "shortName": "centipede#a1b2"}], "centipede")
+
+    def test_melee_note(self):
+        me = row(1, "player", 5, 5)
+        rows = [me, row(2, "hostile", 6, 6), row(3, "hostile", 7, 5), row(4, "hostile", 4, 5, downed=True)]
+        self.assertEqual(self.h._melee_note(rows, me), "  [melee: P2 adjacent]")
+        self.assertEqual(self.h._melee_note([me, row(3, "hostile", 7, 5)], me), "")
+
     def test_time_goes_through_rimcockpit(self):
         import hands
         self.assertIs(hands.wait, self.h.wait)
