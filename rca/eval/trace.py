@@ -7,10 +7,13 @@ poll; the first line is a header, the last an end line with the outcome:
   {"header": 1, "scenario": ..., "player": ..., "squad": [{"id", "n", "w"}], ...}
   {"t": 1185, "ours": [pawn], "them": [pawn], "fires": [[x, z]], "proj": [["frag", x, z]],
    "msg": ["..."]}
+  {"t": 1190, "rec": {"Butters": [dealt, shots, kills, taken, headshots]}}   (every few polls)
   {"end": "enemies_cleared", "grade": "decisive", "t": 4747, ...}
 
 pawn = {"id", "n" name, "x", "z", "hp" health %, "w" weapon, "j" job, "d": 1 downed,
 "dr": 1 drafted}. Pawns that are gone (dead, kidnapped, left) are simply absent.
+"rec" lines are our pawns' combat records since the load (rca/eval/records.py), for the pawns
+read at that moment; a pawn who died or was taken keeps its last line.
 
 Light mode (a human at the GUI): with RimMolt's mod option "Mirror AI inspection" on, every pawn
 read changes the game's selection, so one call per pawn per poll makes the player's selection
@@ -111,6 +114,10 @@ class Trace:
         if msgs:
             rec["msg"] = list(msgs)
         self._write(rec)
+
+    def records(self, ticks, rec):
+        """Our pawns' combat records ({name: [dealt, shots, kills, taken, headshots]})."""
+        self._write({"t": ticks, "rec": rec})
 
     def end(self, row):
         self._write({"end": row.get("outcome"), "t": row.get("ticks"),

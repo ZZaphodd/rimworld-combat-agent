@@ -58,6 +58,10 @@ def main():
         f"downed={row['downed_at_end']} | enemy seen {row['enemies_seen']} killed "
         f"{row['enemies_killed']}+{row['enemies_killed_inferred']}? escaped {row['enemies_escaped']} "
         f"| ticks={row['ticks']} wall={row['wall_s']}s -> {a.results}")
+    per = sorted(row.get("squad_records", {}).items(), key=lambda kv: -kv[1]["dealt"])
+    if per:
+        log(f"   damage dealt {row['damage_dealt']} (" + ", ".join(
+            f"{n} {r['dealt']}" for n, r in per) + f") | taken {row['damage_taken']}")
 
 
 if __name__ == "__main__":

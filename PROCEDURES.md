@@ -464,7 +464,7 @@ left from before the load) and writes the usual row with agent `human`, cycle `o
 `results/human/play.jsonl`. Every poll also goes to a trace (`rca/eval/trace.py`,
 `results/human/traces/`, named in the row's `trace`; `--no-trace` skips it): each pawn's
 position, health, weapon, job and drafted flag on both sides, fires, thrown projectiles and new
-messages, ~0.25 s per poll. Screenshots for a watcher: `screenshot(include_ui=false, x, z, w,
+messages, ~0.25 s per poll. Our pawns' combat records (`rca/eval/records.py`: damage dealt and taken, shots, kills, headshots, from each pawn's Records tab) are read at the load, every 5 polls and at the end, as `rec` lines in the trace and `squad_records` / `damage_dealt` / `damage_taken` in the row; a pawn who dies or is carried off keeps its last read (RimMolt cannot read a dead pawn), and "damage dealt" counts every thing hit, walls and urns included (2026-10-18). Screenshots for a watcher: `screenshot(include_ui=false, x, z, w,
 h)` renders offscreen and never moves the player's camera; `tools/watch.py` (in the background, one look per run) waits for game time or contact, prints both sides (position, health, weapon, job) and draws a labelled frame; copy its output to `results/human/raw/<id>/` for the report. A battle report
 (`results/human/reports/<id>.md`) uses them: `rca/eval/frames.annotate()` labels a screenshot
 with who stood where (blue ours, red enemies, dashed downed) and draws route maps (macOS:

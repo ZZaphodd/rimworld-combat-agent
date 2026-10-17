@@ -25,6 +25,7 @@ from ..terrain import Terrain
 from . import firelog, scoring
 from .kpis import CONTACT
 from .progress import ProgressMeter
+from .records import EVERY as RECORDS_EVERY, SquadRecords
 from .results import INVALID, SCHEMA, append_row, git_commit, row_config
 from .tracker import BattleTracker, short_name
 
@@ -414,6 +415,9 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
     run_episode (agent = player, cycle 'observed'). Game messages come from
     get_alerts' recent messages (there is no wait_for_event to carry them).
     trace (rca.eval.trace.Trace) records every poll: positions, weapons, jobs.
+    Our pawns' combat records (rca.eval.records: damage dealt and taken, shots, kills, headshots)
+    are read at the start, every few polls and at the end, so a pawn who dies or is carried off
+    keeps its last numbers; the row gets `squad_records`, `damage_dealt` and `damage_taken`.
     remove_intruders: destroy the storyteller's arrivals (remove_hostiles) and play on instead of
     ending the episode as invalid; they are listed in the row's `storyteller_removed`."""
     session.start_episode(rm, manifest["save"])
@@ -440,6 +444,9 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
              for n in (rm.call("get_alerts").get("recentMessages") or [])}
     if trace is not None and hasattr(trace, "ready"):
         trace.ready(rm)                         # a light trace's one read of every pawn, still paused
+    records = SquadRecords(rm, manifest["squad"], every=None if getattr(trace, "light", False)
+                           else RECORDS_EVERY)
+    records.start()                             # the baseline, still paused
     log(f"   {manifest['id']} loaded and paused: play when ready (the harness only watches)")
     while True:
         time.sleep(poll_s)
@@ -465,6 +472,9 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
         live = tracker.observe(ticks)
         if trace:
             trace.poll(rm, ticks, new)
+        rec = records.poll(ticks)
+        if rec and trace and hasattr(trace, "records"):
+            trace.records(ticks, rec)
         intruders = unexpected_hostiles(start_ids, tracker.enemy)
         if intruders and remove_intruders:
             left = remove_hostiles(rm, intruders, log)
@@ -511,6 +521,10 @@ def run_observed_episode(rm, manifest, max_ticks=15000, poll_s=1.0, log=print,
             not c.get("downed") for c in cols if c["id"] in ids):
         outcome = "squad_down"
     m = measure(before, squad_state(rm, ids), tracker.finish())
+    rec = records.poll(ticks, final=True)
+    if rec and trace and hasattr(trace, "records"):
+        trace.records(ticks, rec)
+    m.update(records.row())
     if m["squad_kidnapped"] and outcome != INVALID:
         outcome = "raid_left_with_captives"
     m.update({
