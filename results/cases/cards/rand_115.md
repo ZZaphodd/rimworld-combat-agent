@@ -35,6 +35,10 @@ Brackets: Claude's rows with today's badness (`rca.eval.ranking`, a kidnapped pa
 - **Attempt 3**: in the open the gas thinned (buildup ≤ 0.07). Ungassed Neanderthals kept up
   with the group and picked off one pawn at a time.
 - **Human, intents (told after the battle):**
+  - Before any tick passed the player checked the squad's construction skills and judged, roughly,
+    that they were enough to open a wall by deconstruction, so the wall was deconstructed. Had they
+    not been, the plan was Albert as a bait led round and about, and the three strongest in melee
+    breaking the weakest wall and going in.
   - The molotovs were deliberate. A raider set alight on impact moves about trying to put the fire
     out, breathing the gas, instead of attacking ours in melee, so the damage goes up. Burning
     ground takes the raid's way in away for a while, or makes it longer: again less potential
