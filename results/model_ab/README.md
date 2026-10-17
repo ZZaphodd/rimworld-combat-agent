@@ -67,7 +67,9 @@ larger than the difference between the two models here.
 > stale. So every battle timed by rimcockpit 0.2.0 with the map drawn is affected, whatever the camera:
 > c3's result below is kept only as a record, and the run d2 (rand_058 with the line-of-fire helpers,
 > results/model_ab/context_los.md) was stopped at tick ~3100 with no row and will be played again on
-> rimcockpit 0.2.1 (D80, D81: shots during rimcockpit's ticks start at the pawn's own cell).
+> rimcockpit 0.2.1 (D80: the tween follows the pawn during rimcockpit's ticks; D82: every pawn's lean
+> and jitter advance each of those ticks too, as for a watched pawn at speed 1, so a shot's origin no
+> longer depends on the camera, frame rate or pace).
 
 After rimcockpit 0.2.0 (time and observation; orders still only through RimMolt), a fresh Opus 5.5
 played rand_227 once more with [tools/hands_rc.py](../../tools/hands_rc.py): `tools/hands.py` with
