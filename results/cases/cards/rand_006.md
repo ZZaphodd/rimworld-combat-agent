@@ -1,7 +1,7 @@
 # rand_006 · savage bows ×8 vs 13 Drifters, all melee · open — repelled by Claude, then by the human with none hurt badly
 
 **Situation:** `open-arena` `raid-far` `raid-melee` `raid-outnumbers` `us-bows` `us-skill-mismatch`
-**Plays seen:** `loadout` `breach` (by deconstruction) `mouth-hold` `rotation` `carry-downed` (agent: `kite`)
+**Plays seen:** `loadout` `breach` (by deconstruction) `mouth-hold` `rotation` `carry-downed` (naive agent: `kite`)
 **Numbers:** ours 8 (bow 6 after the loadout, melee 2), range median 25.9 · raid 13 (melee 13), 455 pt, closer share 1.0 · count ratio 0.62 · raid from the south edge (175–187, 0–6), ~133 cells
 
 ## Sides
@@ -14,7 +14,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `kite` | pack kite | open ground | squad down, 0 kills | 0 dead, 8 downed, 9 permanent | 73.4 |
+| naive agent `kite` | pack kite | open ground | squad down, 0 kills | 0 dead, 8 downed, 9 permanent | 73.4 |
 | Claude (2026-10-18) | loadout (greatbow to Berro, ikwas to Cane and Llolou); the walled hall's south-wall corner cell (213, 167) deconstructed by Red, the job given at the start; one melee pawn then two on the cells touching it, the bows on the raider in it; rotations | NE ridge + walled hall, breach (213, 167) | **repelled** (t6727): 8 dead, 1 downed, 4 fled; raid fled t5826 | Berro dead, 1 permanent | **24.9** |
 | **human** (2026-10-18; Claude did the same loadout and opened the south wall's middle cell (209, 167) with Red, the squad waiting outside, handed over at t1950) | three melee-able pawns on the three cells touching the breach (Llolou (208, 168), Cane (209, 168), Hare (210, 168)), five bows packed behind in a 3×3 block (z 169–171); the middle front swapped once with the pawn right behind it | NE ridge + walled hall, breach (209, 167) | **repelled** (t6097): 7 dead, 3 downed, 3 fled; raid fled t4795 | 0 lost, 0 downed, 0 permanent, health lost 100% | **4.0** |
 
@@ -61,4 +61,4 @@
 ## Sources
 journal `journals/rand_006_claude_20261018.md` · trace `results/human/traces/rand_006_claude_20261018-052806.jsonl.gz` ·
 human: trace `results/human/traces/rand_006_human_20261018-055003.jsonl.gz` ·
-sheet `sheets/rand_006_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_006_start.md` · naive agent row `results/night/router.jsonl`

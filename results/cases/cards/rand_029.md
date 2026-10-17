@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` (`vs_throwers=stand_off`) | keep the throwers at 13–37 cells, focus fire | open ground | enemies cleared, graded defeat | 7 dead | 110.0 |
+| naive agent `doctrine` (`vs_throwers=stand_off`) | keep the throwers at 13–37 cells, focus fire | open ground | enemies cleared, graded defeat | 7 dead | 110.0 |
 | human (Claude's loadout) | a spaced line east of the start; chase the kidnappers | open ground | pyrrhic, raid fled t9429 | 2 dead, 0 kidnapped (both taken back) | 55.6 |
 
 ## Scenes
@@ -44,4 +44,4 @@
 
 ## Sources
 report `results/human/reports/rand_029.md` · traces `results/human/traces/rand_029_*` (attempt 1:
-`_try1`) · agent row `results/night/router.jsonl`
+`_try1`) · naive agent row `results/night/router.jsonl`

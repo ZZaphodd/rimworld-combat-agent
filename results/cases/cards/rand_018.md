@@ -14,7 +14,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `amove` | attack-move | open ground | won (t3364, 2 kills) | 0 lost, 4 downed, 23 permanent | 83.3 |
+| naive agent `amove` | attack-move | open ground | won (t3364, 2 kills) | 0 lost, 4 downed, 23 permanent | 83.3 |
 | Claude attempt 1 | tip ambush, up to 5 per raider | west rock pocket | defeat, 2 raiders killed | 3 dead + 4 kidnapped | 187.0 |
 | Claude attempt 2 | hold ruin rooms R1+R2 (five 1-cell entrances) | big ruin | defeat, 2 killed + 1 downed | 2 dead + 2 kidnapped | 153.0 |
 
@@ -29,9 +29,9 @@
 ## What the play stood on (observed)
 - Neanderthal melee vs baseline tribal melee: in both attempts our pawns went down at 30–60%
   health, while raiders at 25–36% kept fighting.
-- The agent's run ended with the raid gone after two kills; neither of Claude's runs saw the
+- The naive agent's run ended with the raid gone after two kills; neither of Claude's runs saw the
   raid leave before the squad was down (one draw each).
 
 ## Sources
 journal `journals/rand_018_claude_20261005.md` · traces `results/human/traces/rand_018_claude_20261005-{133618,134137}.jsonl.gz` ·
-sheet `sheets/rand_018_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_018_start.md` · naive agent row `results/night/router.jsonl`

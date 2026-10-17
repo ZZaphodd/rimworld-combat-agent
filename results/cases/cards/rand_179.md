@@ -14,7 +14,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` | focus fire | open ground | defeat (captives) | 9 | 132.0 |
+| naive agent `doctrine` | focus fire | open ground | defeat (captives) | 9 | 132.0 |
 | Claude (alone) | loadout (rifle to the best hand); west rock pocket east part; pistols, mace and molotovs at rock B's tip | west rock pocket | **repelled** | 1 dead | **15.8** |
 
 ## Scenes
@@ -31,4 +31,4 @@
 
 ## Sources
 journal `journals/rand_179_claude_20261005.md` · trace `results/human/traces/rand_179_claude_20261005-165233.jsonl.gz` ·
-sheet `sheets/rand_179_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_179_start.md` · naive agent row `results/night/router.jsonl`

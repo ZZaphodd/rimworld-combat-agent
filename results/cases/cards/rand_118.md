@@ -1,7 +1,7 @@
 # rand_118 · tribal bows ×9 vs Yttakin blades ×6 + 2 pistols + boar · open — repelled
 
 **Situation:** `open-arena` `raid-far` `raid-melee` `us-bows` `us-low-skill`
-**Plays seen:** `loadout` `breach` `mouth-hold` `rotation` (agent: `kite`)
+**Plays seen:** `loadout` `breach` `mouth-hold` `rotation` (naive agent: `kite`)
 **Numbers:** ours 9 (bow 7, long 1, thrown 1), range median 22.9 (max 29.9) · raid 8 (melee 6, short 2) + a wild boar, 360 pt, closer share 1.0, melee share 0.75, no explosives · count ratio 1.12 · raid from the NW corner (0–14, 242–249), ~170 cells
 
 ## Sides
@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `kite` | pack kite | open ground | squad down t4600, 1 killed | 0 dead, 9 downed, 16 permanent | 93.2 |
+| naive agent `kite` | pack kite | open ground | squad down t4600, 1 killed | 0 dead, 9 downed, 16 permanent | 93.2 |
 | Claude (alone), attempt 1 — discarded (compaction mid-battle) | nook: breach, mouth hold; bows at the least-visible cells | nook | defeat (3 kidnapped) | 3 kidnapped, 6 downed | (117.2) |
 | Claude (alone), attempt 2 | nook: breach at t2246, two front cells, every bow on the raider in the mouth, two rotations | nook | **repelled** (t7954) | 0 (2 downed, 6 permanent) | **28.2** |
 
@@ -40,4 +40,4 @@
 ## Sources
 journal `journals/rand_118_claude_20261005.md` · traces `results/human/traces/rand_118_claude_20261005-123236.jsonl.gz`
 (attempt 2), `..._121051_try1.jsonl.gz` (attempt 1, row in `results/human/discarded.jsonl`) ·
-sheet `sheets/rand_118_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_118_start.md` · naive agent row `results/night/router.jsonl`

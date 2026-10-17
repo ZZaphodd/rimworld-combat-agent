@@ -16,7 +16,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `close` | close in | – | defeat, raid left with 4 captives | 3 dead, 4 kidnapped | 173.3 |
+| naive agent `close` | close in | – | defeat, raid left with 4 captives | 3 dead, 4 kidnapped | 173.3 |
 | **human** (Claude's loadout) | Lercroi (the player's bait, picked for lowest melee damage, low value, sound legs) drew three raiders away on a long loop while the three spears broke one cell of the walled hall's east wall; all inside, the strongest at the breach; the bait came back with the other three | NE ridge + walled hall, breach (214, 177) | **repelled**, 4 dead, 2 fled | 0 lost, 3 downed, 15 permanent | **53.2** |
 | Claude | spears to the best three; west rock pocket; everyone on one raider at a time, overflow on a second; step back under 38% | west rock pocket | defeat, raid left with 3 captives (t9836) | 1 dead, 3 kidnapped, 5 downed | 124.7 |
 | **Claude, attempt 2** (the user's play, south wall) | bait paced like the user's; the spears on the south wall cell the user said they had marked (209, 167), then deconstruction when the attack orders started nothing; the whole raid followed the bait; four came into the breach one at a time, the last two waited outside and fled | NE ridge + walled hall, breach (209, 167) | **repelled**, 3 dead, 1 downed, 2 fled | 0 lost, 1 downed | **9.4** |
@@ -98,4 +98,4 @@
 
 ## Sources
 report `results/human/reports/rand_164.md` · journal `journals/rand_164_claude_20261005.md` (attempts 1–2) · sheet `sheets/rand_164_start.md` · traces
-`results/human/traces/rand_164_human_20261006-044240.jsonl.gz`, `rand_164_claude_20261005-210916.jsonl.gz`, `rand_164_claude_20261006-051406.jsonl.gz` · agent row `results/night/router.jsonl`
+`results/human/traces/rand_164_human_20261006-044240.jsonl.gz`, `rand_164_claude_20261005-210916.jsonl.gz`, `rand_164_claude_20261006-051406.jsonl.gz` · naive agent row `results/night/router.jsonl`

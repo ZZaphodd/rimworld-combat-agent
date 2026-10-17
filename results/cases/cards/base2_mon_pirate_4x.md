@@ -3,7 +3,7 @@
 > **Stale set (2026-10-08):** played on Monler v2 with its three mortars. The same problem without them is `base2_monp_pirate_4x` (Monler prime).
 
 **Situation:** `base-arena` `raid-far` `raid-throwers` `raid-outranges` `us-low-skill`
-**Plays seen:** `yard-line` `carry-downed` `chair-lean` `mouth-hold` `area-frags` (agents: `turtle`, `turtle_at`)
+**Plays seen:** `yard-line` `carry-downed` `chair-lean` `mouth-hold` `area-frags` (naive agents: `turtle`, `turtle_at`)
 **Numbers:** ours 9 (bolt-action rifle, pump shotgun, molotovs, steel knife, 2 autopistols, machine
 pistol, 2 revolvers), 500 pt · raid 15 Pirate (4×: 2000 pt) · count ratio 0.6 · raid from the north
 (82, 248) · base `arena_col_monler2` (no solar flare)
@@ -17,10 +17,10 @@ pistol, 2 revolvers), 500 pt · raid 15 Pirate (4×: 2000 pt) · count ratio 0.6
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | concave in the yard (plan centre (122, 136)) | Monler yard | **repelled** (fled t7532); enemy fire share 1.2 %, no frags | 0 (0 downed) | **0.0** |
-| agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis | Monler R2 | repelled (fled t12045); 6 frags, enemy fire share 18 % | 2 dead, 1 downed | 38.0 |
+| naive agent `turtle` | concave in the yard (plan centre (122, 136)) | Monler yard | **repelled** (fled t7532); enemy fire share 1.2 %, no frags | 0 (0 downed) | **0.0** |
+| naive agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis | Monler R2 | repelled (fled t12045); 6 frags, enemy fire share 18 % | 2 dead, 1 downed | 38.0 |
 | Claude (alone) | yard line near the start, spread; fall-back east | Monler yard | defeat: squad down t10222 | 3 dead, 6 downed | 86.5 |
-| agent `turtle_at` (plan base2_r1), repeat, watched by Claude | as the ladder row | Monler R2 | **repelled** (fled t10707) | 0 (0 downed) | 3.4 |
+| naive agent `turtle_at` (plan base2_r1), repeat, watched by Claude | as the ladder row | Monler R2 | **repelled** (fled t10707) | 0 (0 downed) | 3.4 |
 | **the user** | Claude's loadout (Kitty the bolt-action rifle, Lady the knife, Ison the shotgun); dining chairs into R2; all nine in three rows of three right behind R2's door, Lady (knife) on the cell inside the doorway; molotovs, later frags, on area orders up the passage | Monler R2 | **repelled** (fled t12547) | 0 (1 downed) | **5.6** |
 
 ## Scenes (Claude; trace ticks)

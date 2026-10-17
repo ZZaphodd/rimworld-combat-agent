@@ -16,7 +16,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `amove` | mass charge | near the start | squad down at t3051 | 2 dead, 8 downed, 9 permanent | 101.8 |
+| naive agent `amove` | mass charge | near the start | squad down at t3051 | 2 dead, 8 downed, 9 permanent | 101.8 |
 | **human** (Claude's loadout) | waited hidden and packed in the small ruin so the raid strung out (worst threat last); at contact one of ours on each shooter, two groups each led by a dealer (Whale, Hornet) with meat shields; Gorilla (low damage) locked the revolver ace; then all chased her | small ruin | **decisive**, all 8 dead | 1 dead, 0 downed | **25.6** |
 | **Claude (attempt 3, the user's start rules)** | as above, plus: held until the front raider was hitting ours, left when the exposed walk stopped shrinking, the pawns next to him stayed and ganged him, movers with longer hidden routes sent first | small ruin | **decisive**, all 8 out | **0 dead**, 5 downed | **41.0** |
 | Claude (replay of the user's play) | same loadout and ruin cells; marks went out when a raider was within 5 (the rest 9–18 away); dealers on locked raiders; Gorilla on Lissa | small ruin | enemies cleared, pyrrhic | 2 dead, 4 downed | 60.4 |
@@ -84,4 +84,4 @@
 
 ## Sources
 journal `journals/rand_023_claude_20261005.md` (attempts 1–3) · traces `results/human/traces/rand_023_claude_20261005-112931.jsonl.gz`, `rand_023_claude_20261005-191247.jsonl.gz`, `rand_023_claude_20261005-193154.jsonl.gz` ·
-agent row `results/night/router.jsonl`
+naive agent row `results/night/router.jsonl`

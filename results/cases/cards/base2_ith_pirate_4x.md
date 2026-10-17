@@ -1,7 +1,7 @@
 # base2_ith_pirate_4x · civil outlanders ×8 (shooting 0–9) vs 19 Wasters with toxbombs, rockets, an incendiary · Ithfunda base v2 — repelled
 
 **Situation:** `base-arena` `raid-far` `raid-outranges` `raid-throwers` `us-low-skill` `tox`
-**Plays seen:** `closed-door-hold` `off-axis-hold` `focus-fire` (agents: `turtle`, `turtle_at`)
+**Plays seen:** `closed-door-hold` `off-axis-hold` `focus-fire` (naive agents: `turtle`, `turtle_at`)
 **Numbers:** ours 8 (5 revolvers/autopistol, pump shotgun, 2 bolt-action rifles), 500 pt · raid 19
 PirateWaster (4×: 2000 pt) · count ratio 0.42 · raid from the south edge (~118, 4) · base `arena_col_ithfunda2`
 
@@ -15,8 +15,8 @@ PirateWaster (4×: 2000 pt) · count ratio 0.42 · raid from the south edge (~11
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | concave in the yard | Ithfunda yard | unresolved (timeout) | 2 | 64.5 |
-| agent `turtle_at` (plan base2_r1) | door held open, plug + guns 2 back on the axis | Ithfunda east room | defeat | 8 (all) | 122.0 |
+| naive agent `turtle` | concave in the yard | Ithfunda yard | unresolved (timeout) | 2 | 64.5 |
+| naive agent `turtle_at` (plan base2_r1) | door held open, plug + guns 2 back on the axis | Ithfunda east room | defeat | 8 (all) | 122.0 |
 | Claude (alone) | door **closed**, everyone off the axis; focus fire on gas/rocket/incendiary holders at the doorway | Ithfunda east room | **repelled** (fled t12223) | 0 (0 downed) | **1.5** |
 
 ## Scenes (Claude; trace ticks)

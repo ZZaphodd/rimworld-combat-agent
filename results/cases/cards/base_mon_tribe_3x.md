@@ -1,7 +1,7 @@
 # base_mon_tribe_3x · civil outlanders ×8 vs 27 tribals (half of them archers) · Monler base — repelled (the user)
 
 **Situation:** `base-arena` `raid-far` `raid-outnumbers` `us-low-skill`
-**Plays seen:** `furniture-cleared` `mouth-hold` `area-frags` `loadout` (agent: `turtle`)
+**Plays seen:** `furniture-cleared` `mouth-hold` `area-frags` `loadout` (naive agent: `turtle`)
 **Numbers:** ours 8 (shotgun, 2 bolt-action rifles, autopistol, revolver, heavy SMG, frag, knife),
 500 pt · raid 27 TribeRough (1500 pt budget, 3×): 6 short bows, 4 greatbows, 3 recurve bows, 2
 pila, 3 spears, 3 ikwas, 3 clubs, 3 knives · count ratio 0.3 · raid from the east edge
@@ -21,7 +21,7 @@ pila, 3 spears, 3 ikwas, 3 clubs, 3 knives · count ratio 0.3 · raid from the e
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | its planned hold near the start, firing | the yard | defeat: "decided to kidnap" t5921, fled t7152 with Sammy and Penny | 2 kidnapped (counted as deaths), 1 downed, 1 permanent | 69.8 |
+| naive agent `turtle` | its planned hold near the start, firing | the yard | defeat: "decided to kidnap" t5921, fled t7152 with Sammy and Penny | 2 kidnapped (counted as deaths), 1 downed, 1 permanent | 69.8 |
 | Claude, attempt — discarded (the user changed the scope mid-battle) | R2 door hold, benches left in place until the scope change (Ana began uninstalling the smelter at t7467); a loadout (Sammy the heavy SMG) | Monler R2 | stopped at t8186: none of ours down, 18 raiders listed | – | – |
 | the user, attempt 1 — discarded (the user restarted) | R2 door hold, benches uninstalled; Brianna's frag on an area order | Monler R2 | stopped at t7221: Cutillas 42%, Sammy 31% and downed (likely our own frag; no raider near the door) | – | – |
 | **the user, attempt 2** | uninstall R1/R2 furniture with everyone on Constructing; all eight in three rows behind the door (Philly away t10513–11242); frags on an area order up the passage; a mid-battle loadout | Monler R2 | **repelled** (raid fled t11437; cleared t19427) | 0 (0 downed, 0 permanent), HP 47% | **1.9** |
@@ -79,5 +79,5 @@ pila, 3 spears, 3 ikwas, 3 clubs, 3 knives · count ratio 0.3 · raid from the e
 trace `results/human/traces/base_mon_tribe_3x_human_20261006-184915.jsonl.gz` (attempt 2);
 `..._human_20261006-184203_try1.jsonl.gz` (the user's attempt 1) and
 `..._claude_20261006-182143_try1.jsonl.gz` (Claude's), rows in `results/human/discarded.jsonl` ·
-row `results/human/play.jsonl` (player `human`) · agent row `results/base/ladder.jsonl` ·
+row `results/human/play.jsonl` (player `human`) · naive agent row `results/base/ladder.jsonl` ·
 Claude's watch looks in this session (positions at ~t5416–11437)

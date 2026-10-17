@@ -30,14 +30,14 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "concave in the yard",
     "result": "unresolved (timeout)",
     "lost": "2",
     "badness": "64.5"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1)",
+    "who": "naive agent `turtle_at` (plan base2_r1)",
     "play": "door held open, plug + guns 2 back on the axis",
     "result": "defeat",
     "lost": "8 (all)",
@@ -96,14 +96,14 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "concave in the yard",
     "result": "defeat",
     "lost": "3 (1 dead, 2 kidnapped)",
     "badness": "109.1"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1)",
+    "who": "naive agent `turtle_at` (plan base2_r1)",
     "play": "door hold, plug + guns 2 back",
     "result": "defeat",
     "lost": "2",
@@ -172,14 +172,14 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "concave in the yard",
     "result": "defeat",
     "lost": "5",
     "badness": "99.3"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1)",
+    "who": "naive agent `turtle_at` (plan base2_r1)",
     "play": "door hold, plug + guns 2 back",
     "result": "defeat: squad down (10 killed + 5 inferred)",
     "lost": "2 dead, 6 downed",
@@ -254,14 +254,14 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "concave at the spawn in the yard",
     "result": "defeat: squad down",
     "lost": "4 (2 dead, 2 kidnapped)",
     "badness": "87.5"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1)",
+    "who": "naive agent `turtle_at` (plan base2_r1)",
     "play": "R2 door hold on the passage axis",
     "result": "defeat: squad down",
     "lost": "4",
@@ -323,14 +323,14 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "concave in the yard (plan centre (122, 136))",
     "result": "**repelled** (fled t7532); enemy fire share 1.2 %, no frags",
     "lost": "0 (0 downed)",
     "badness": "**0.0**"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1)",
+    "who": "naive agent `turtle_at` (plan base2_r1)",
     "play": "R2 door hold on the passage axis",
     "result": "repelled (fled t12045); 6 frags, enemy fire share 18 %",
     "lost": "2 dead, 1 downed",
@@ -344,7 +344,7 @@
     "badness": "86.5"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1), repeat, watched by Claude",
+    "who": "naive agent `turtle_at` (plan base2_r1), repeat, watched by Claude",
     "play": "as the ladder row",
     "result": "**repelled** (fled t10707)",
     "lost": "0 (0 downed)",
@@ -406,14 +406,14 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "concave at the spawn in the yard",
     "result": "defeat: raid left with captives (t11737)",
     "lost": "1 dead, 5 kidnapped, 2 downed",
     "badness": "119.6"
    },
    {
-    "who": "agent `turtle_at` (plan base2_r1)",
+    "who": "naive agent `turtle_at` (plan base2_r1)",
     "play": "R2 door hold on the passage axis (plug, guns 2 back)",
     "result": "defeat: raid left with captives (t17535); two burned by superheated air",
     "lost": "4 dead, 3 kidnapped, 1 downed",
@@ -476,7 +476,7 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "hold a planned concave ~11 cells west of the start and fire",
     "result": "defeat: squad down t5177, 9 of 25 out",
     "lost": "0 dead, 8 downed, 1 permanent",
@@ -544,7 +544,7 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "hold a planned concave ~14 cells south of the start (plan center (116, 151)) and fire",
     "result": "defeat: squad down t6436 with 3 of 10 out",
     "lost": "2 dead, 6 downed, 9 permanent",
@@ -607,7 +607,7 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "its planned hold near the start, firing",
     "result": "defeat: \"decided to kidnap\" t5921, fled t7152 with Sammy and Penny",
     "lost": "2 kidnapped (counted as deaths), 1 downed, 1 permanent",
@@ -687,7 +687,7 @@
   ],
   "results": [
    {
-    "who": "agent `kite`",
+    "who": "naive agent `kite`",
     "play": "pack kite",
     "result": "squad down, 0 kills",
     "lost": "0 dead, 8 downed, 9 permanent",
@@ -764,7 +764,7 @@
   ],
   "results": [
    {
-    "who": "agent `close` (no loadout)",
+    "who": "naive agent `close` (no loadout)",
     "play": "closed in by ~t1130, then held",
     "result": "defeat, captives (kidnapping from t4930)",
     "lost": "3 kidnapped, 4 downed",
@@ -834,7 +834,7 @@
   ],
   "results": [
    {
-    "who": "agent `amove`",
+    "who": "naive agent `amove`",
     "play": "attack-move",
     "result": "squad down t2725, 0 kills",
     "lost": "2 dead, 3 downed",
@@ -916,7 +916,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine` (no loadout)",
+    "who": "naive agent `doctrine` (no loadout)",
     "play": "melee holds until an enemy is within 20, then charges",
     "result": "defeat, captives",
     "lost": "3 dead, 2 kidnapped",
@@ -955,7 +955,7 @@
     "play": "big-ruin rooms R1/R2, melee beside the doors, Crica (the raid's target) inside",
     "result": "defeat (no row: harness crash; from the trace)",
     "lost": "4 dead, 2 kidnapped",
-    "badness": "≈ agent"
+    "badness": "≈ naive agent"
    }
   ],
   "id": "rand_015",
@@ -1012,7 +1012,7 @@
   ],
   "results": [
    {
-    "who": "agent `amove`",
+    "who": "naive agent `amove`",
     "play": "attack-move",
     "result": "won (t3364, 2 kills)",
     "lost": "0 lost, 4 downed, 23 permanent",
@@ -1088,7 +1088,7 @@
   ],
   "results": [
    {
-    "who": "agent `amove`",
+    "who": "naive agent `amove`",
     "play": "mass charge",
     "result": "squad down at t3051",
     "lost": "2 dead, 8 downed, 9 permanent",
@@ -1171,7 +1171,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine` (`vs_throwers=stand_off`)",
+    "who": "naive agent `doctrine` (`vs_throwers=stand_off`)",
     "play": "keep the throwers at 13–37 cells, focus fire",
     "result": "enemies cleared, graded defeat",
     "lost": "7 dead",
@@ -1242,7 +1242,7 @@
   ],
   "results": [
    {
-    "who": "agent `close`",
+    "who": "naive agent `close`",
     "play": "advance to close range in forest cover",
     "result": "defeat, captives",
     "lost": "7 (5 dead, 2 kidnapped)",
@@ -1319,7 +1319,7 @@
   ],
   "results": [
    {
-    "who": "agent `kite`",
+    "who": "naive agent `kite`",
     "play": "kite in a pack",
     "result": "defeat, captives",
     "lost": "5 (3 dead, 2 kidnapped)",
@@ -1393,7 +1393,7 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "hold a tree line",
     "result": "squad down",
     "lost": "5 dead, 3 downed",
@@ -1458,7 +1458,7 @@
   ],
   "results": [
    {
-    "who": "agent `close`",
+    "who": "naive agent `close`",
     "play": "charge with the knives (the best shooters held knives)",
     "result": "defeat, captives",
     "lost": "4 (1 dead, 3 kidnapped)",
@@ -1533,7 +1533,7 @@
   ],
   "results": [
    {
-    "who": "agent `kite`",
+    "who": "naive agent `kite`",
     "play": "kite",
     "result": "defeat, captives",
     "lost": "6 (3 dead, 3 kidnapped)",
@@ -1602,7 +1602,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine`",
+    "who": "naive agent `doctrine`",
     "play": "focus fire, spacing, in the open",
     "result": "defeat, captives",
     "lost": "6 (4 dead, 2 kidnapped)",
@@ -1677,7 +1677,7 @@
   ],
   "results": [
    {
-    "who": "agent `kite`",
+    "who": "naive agent `kite`",
     "play": "pack kite",
     "result": "squad down, 0 kills",
     "lost": "0 dead, 8 downed, 8 permanent",
@@ -1742,7 +1742,7 @@
   ],
   "results": [
    {
-    "who": "agent `turtle` (no loadout)",
+    "who": "naive agent `turtle` (no loadout)",
     "play": "hold a tree line",
     "result": "squad down",
     "lost": "4 dead, 4 downed, 8 permanent",
@@ -1811,7 +1811,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine`",
+    "who": "naive agent `doctrine`",
     "play": "focus fire, 3-cell spacing, in the open",
     "result": "defeat, captives",
     "lost": "6 (2 dead, 4 kidnapped)",
@@ -1877,7 +1877,7 @@
   ],
   "results": [
    {
-    "who": "agent `kite`",
+    "who": "naive agent `kite`",
     "play": "pack kite",
     "result": "squad down t7796, 0 kills",
     "lost": "1 dead, 7 downed",
@@ -1965,7 +1965,7 @@
   ],
   "results": [
    {
-    "who": "agent `kite`",
+    "who": "naive agent `kite`",
     "play": "pack kite",
     "result": "squad down t4600, 1 killed",
     "lost": "0 dead, 9 downed, 16 permanent",
@@ -2040,7 +2040,7 @@
   ],
   "results": [
    {
-    "who": "agent `close` (no loadout)",
+    "who": "naive agent `close` (no loadout)",
     "play": "close in",
     "result": "squad down at t4726, no raider out",
     "lost": "2 dead, 8 downed, 9 permanent",
@@ -2112,7 +2112,7 @@
   ],
   "results": [
    {
-    "who": "agent `amove`",
+    "who": "naive agent `amove`",
     "play": "bows shoot on approach, melee gangs up",
     "result": "all 10 downed",
     "lost": "0 dead, 10 down",
@@ -2198,7 +2198,7 @@
   ],
   "results": [
    {
-    "who": "agent `turtle`",
+    "who": "naive agent `turtle`",
     "play": "packed line receives the charge",
     "result": "defeat",
     "lost": "3 dead, 4 downed, 9 permanent",
@@ -2268,7 +2268,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine`",
+    "who": "naive agent `doctrine`",
     "play": "focus fire",
     "result": "defeat (captives)",
     "lost": "16 (incl. kidnap count)",
@@ -2335,7 +2335,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine`",
+    "who": "naive agent `doctrine`",
     "play": "focus fire",
     "result": "defeat (captives)",
     "lost": "12 (incl. kidnap count)",
@@ -2410,7 +2410,7 @@
   ],
   "results": [
    {
-    "who": "agent `close`",
+    "who": "naive agent `close`",
     "play": "close in",
     "result": "defeat, raid left with 4 captives",
     "lost": "3 dead, 4 kidnapped",
@@ -2490,7 +2490,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine`",
+    "who": "naive agent `doctrine`",
     "play": "focus fire",
     "result": "defeat (captives)",
     "lost": "9",
@@ -2563,7 +2563,7 @@
   ],
   "results": [
    {
-    "who": "agent `amove`",
+    "who": "naive agent `amove`",
     "play": "mass advance",
     "result": "defeat, raid left with 7 captives (t7496)",
     "lost": "1 dead, 7 kidnapped",
@@ -2645,7 +2645,7 @@
   ],
   "results": [
    {
-    "who": "agent `doctrine`",
+    "who": "naive agent `doctrine`",
     "play": "–",
     "result": "defeat, raid left with 5 captives",
     "lost": "1 dead, 5 kidnapped",

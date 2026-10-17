@@ -1,7 +1,7 @@
 # base2_ith_tribe_6x · civil outlanders ×8 vs 34 tribals (32 melee) · Ithfunda base v2 — repelled
 
 **Situation:** `base-arena` `raid-far` `raid-melee` `raid-outnumbers` `raid-strong-1v1`
-**Plays seen:** `closed-door-hold` `chair-lean` `frag-max-range` `mouth-hold` `melee-lock` `rotation` `frag-into-queue` `carry-downed` `friendly-fire` (agents: `turtle`, `turtle_at`)
+**Plays seen:** `closed-door-hold` `chair-lean` `frag-max-range` `mouth-hold` `melee-lock` `rotation` `frag-into-queue` `carry-downed` `friendly-fire` (naive agents: `turtle`, `turtle_at`)
 **Numbers:** ours 8 (heavy SMG, 2 revolvers, 2 machine pistols, 2 knives, frag grenades), 500 pt · raid 34
 TribeRoughNeanderthal (6×: 3000 pt) · count ratio 0.24 · raid from the east edge (~244, 132) · base
 `arena_col_ithfunda2`
@@ -16,8 +16,8 @@ TribeRoughNeanderthal (6×: 3000 pt) · count ratio 0.24 · raid from the east e
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | concave in the yard | Ithfunda yard | defeat | 5 | 99.3 |
-| agent `turtle_at` (plan base2_r1) | door hold, plug + guns 2 back | Ithfunda east room | defeat: squad down (10 killed + 5 inferred) | 2 dead, 6 downed | 73.2 |
+| naive agent `turtle` | concave in the yard | Ithfunda yard | defeat | 5 | 99.3 |
+| naive agent `turtle_at` (plan base2_r1) | door hold, plug + guns 2 back | Ithfunda east room | defeat: squad down (10 killed + 5 inferred) | 2 dead, 6 downed | 73.2 |
 | Claude (alone) | loadout (best shooter the heavy SMG, frags to the weakest), door hold, melee on the plug and diagonals, frags down the corridor axis, rotation; retreat behind the next door | Ithfunda east room | **pyrrhic** (fled t10042) | 3 dead (2 by our own frags), 3 downed, 7 permanent | 80.1 |
 | **the user** | Claude's loadout; chairs hauled into the east room; door (133, 187) left **closed** (forgotten: meant to hold it open) until the raid broke it; Jeyce on the plug, Felix and Elsie (frags, against the wall) on the diagonals, five guns packed 1–2 rows behind (Smith on the axis (133, 189)); frags at the far end of their range down the corridor, then into the queue; Paulo took the frags when Elsie went down | Ithfunda east room | **repelled** (fled t9911) | 1 dead (Felix), 2 downed | **44.9** |
 | Claude, attempt 2 (the user's play reviewed) | the user's cells and chairs, door **held open**, frags only at the ground at the far end of the straight corridor ((133, 177), then (133, 178)) | Ithfunda east room | **repelled** (fled t8785) | 1 dead (Felix, after the flee: a melee order on a fleeing raider), 1 downed, 0 permanent | **19.6** |

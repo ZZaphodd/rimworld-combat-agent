@@ -1,7 +1,7 @@
 # base_ith_pirate_2x · civil outlanders ×8 (guns + 3 throwers) vs 25 Waster melee · Ithfunda base — repelled
 
 **Situation:** `base-arena` `raid-far` `raid-melee` `raid-outnumbers` `us-low-skill`
-**Plays seen:** `mouth-hold` `rotation` `carry-downed` `molotov-into-group` (agent: `turtle`)
+**Plays seen:** `mouth-hold` `rotation` `carry-downed` `molotov-into-group` (naive agent: `turtle`)
 **Numbers:** ours 8 (shotgun, heavy SMG, revolver, 2 bolt-action rifles, frag, 2 molotov), 500 pt
 · raid 25 Drifters (knives, clubs; no gun, no throwable), 875 pt (2× budget: 1000) · count ratio 0.32 · raid
 from the west edge (2–9, 87–102), ~130 cells · base `arena_col_ithfunda` (PROCEDURES §1c)
@@ -16,7 +16,7 @@ from the west edge (2–9, 87–102), ~130 cells · base `arena_col_ithfunda` (P
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | hold a planned concave ~11 cells west of the start and fire | the yard's west side | defeat: squad down t5177, 9 of 25 out | 0 dead, 8 downed, 1 permanent | 57.4 |
+| naive agent `turtle` | hold a planned concave ~11 cells west of the start and fire | the yard's west side | defeat: squad down t5177, 9 of 25 out | 0 dead, 8 downed, 1 permanent | 57.4 |
 | Claude (alone), attempt 1 — discarded (compaction mid-battle) | door hold, guns 1–3 cells behind the plug | Ithfunda east room | stopped at t6663: 7 of 25 out, Jahames downed | – | – |
 | Claude (alone), attempt 2 | door hold: one plug on the cell inside the doorway, guns 2+ cells back (from ~t9900), rotation, throws into the corridor queue | Ithfunda east room | **repelled** (t15403) | 0 (1 downed, 1 permanent) | **12.3** |
 
@@ -62,4 +62,4 @@ from the west edge (2–9, 87–102), ~130 cells · base `arena_col_ithfunda` (P
 journal `journals/base_ith_pirate_2x_claude_20261006.md` · traces
 `results/human/traces/base_ith_pirate_2x_claude_20261006-170538.jsonl.gz` (attempt 2),
 `..._164110_try1.jsonl.gz` (attempt 1, row in `results/human/discarded.jsonl`) · sheet
-`sheets/base_ith_pirate_2x_start.md` · agent row `results/base/ladder.jsonl`
+`sheets/base_ith_pirate_2x_start.md` · naive agent row `results/base/ladder.jsonl`

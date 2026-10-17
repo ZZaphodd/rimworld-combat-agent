@@ -17,7 +17,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` (no loadout) | hold a tree line | forest near the start | squad down | 4 dead, 4 downed, 8 permanent | 105.5 |
+| naive agent `turtle` (no loadout) | hold a tree line | forest near the start | squad down | 4 dead, 4 downed, 8 permanent | 105.5 |
 | human (Claude's loadout) | one north–south line in the forest 24 cells west of the start; centre stepped back into an arc | forest, x 90–104, z 103–137 | decisive, raid fled t6457, 8 of 8 out | 2 dead, 2 downed, 1 permanent | 46.0 |
 | Claude (replay of the user's plan) | same line and loadout; early melee locks on Bishop and Cholaky | same | repelled, raid fled t4907, 6 of 8 out | 1 dead, 3 downed | 35.3 |
 
@@ -70,4 +70,4 @@
 
 ## Sources
 report `results/human/reports/rand_104.md` · trace `results/human/traces/rand_104_human_loadout_20261005-101114.jsonl.gz` ·
-watcher records `results/human/raw/rand_104/` · agent row `results/night/router.jsonl`
+watcher records `results/human/raw/rand_104/` · naive agent row `results/night/router.jsonl`

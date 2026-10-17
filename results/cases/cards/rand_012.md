@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `amove` | attack-move | open ground | squad down t2725, 0 kills | 2 dead, 3 downed | 84.4 |
+| naive agent `amove` | attack-move | open ground | squad down t2725, 0 kills | 2 dead, 3 downed | 84.4 |
 | Claude attempt 1 | wait SW, gang each arrival 5 v 1 | open ground | defeat (2 captives) | 2 dead + 2 kidnapped | 92.5 |
 | Claude attempt 2 | hold ruin room R2's doors, rotation | big ruin R2 | **won, pyrrhic** | 1 dead, 2 downed | **55.6** |
 
@@ -35,4 +35,4 @@
 
 ## Sources
 journal `journals/rand_012_claude_20261005.md` · traces `results/human/traces/rand_012_claude_20261005-{132222,132732}.jsonl.gz` ·
-sheet `sheets/rand_012_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_012_start.md` · naive agent row `results/night/router.jsonl`

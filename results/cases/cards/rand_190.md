@@ -20,7 +20,7 @@ long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid fr
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `amove` | mass advance | – | defeat, raid left with 7 captives (t7496) | 1 dead, 7 kidnapped | 192.0 |
+| naive agent `amove` | mass advance | – | defeat, raid left with 7 captives (t7496) | 1 dead, 7 kidnapped | 192.0 |
 | human | ~90 cells west to hide behind a ruin wall; all on the raid's front (Anfisa), then one or two of ours on each shooter, Ambas alone on the rifle; three lockers one after another at Kenny | west wall ruin | defeat, raid left with 2 captives (t13967) | 3 dead, 2 kidnapped, 3 downed | 129.9 |
 | human, attempt 2 | no loadout (melee locks decide, not bows); all eight in the big ruin's rooms R1/R2 as a choke point, hoping the raid splits between the sides | big-ruin rooms R1/R2 | defeat, raid left with 5 captives (t9479) | 3 dead, 5 kidnapped | 172.0 |
 | Claude | pilas to Eagle and Tarsier; hidden outside the big ruin's west wall (first sight at 10 cells, computed); every shooter marked at once, Eagle + Tarsier on Kenny, staggered start; then the melee weapons ganged one at a time and the bows shot | big ruin, west side | defeat, raid left with 6 captives (t6724) | 1 dead, 6 kidnapped, 1 downed | 173.6 |
@@ -108,4 +108,4 @@ long 1, explosive 1, melee 1), outrange share 0.12 · count ratio 1.0 · raid fr
 
 ## Sources
 report `results/human/reports/rand_190.md` (attempts 1–2) · Claude: journal `journals/rand_190_claude_20261005.md`, trace `results/human/traces/rand_190_claude_20261005-203523.jsonl.gz` · traces `results/human/traces/rand_190_human_20261005-194933.jsonl.gz`, `rand_190_human_20261005-201645.jsonl.gz` ·
-watcher `results/human/raw/rand_190/` · agent row `results/night/router.jsonl`
+watcher `results/human/raw/rand_190/` · naive agent row `results/night/router.jsonl`

@@ -17,7 +17,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `close` (no loadout) | closed in by ~t1130, then held | open ground | defeat, captives (kidnapping from t4930) | 3 kidnapped, 4 downed | 106.4 |
+| naive agent `close` (no loadout) | closed in by ~t1130, then held | open ground | defeat, captives (kidnapping from t4930) | 3 kidnapped, 4 downed | 106.4 |
 | human (Claude's loadout) | two lines on open ground west of the start, guns in front; small steps east | open ground (x 114–131, z 105–135) | decisive, raid broke t4666, 9 of 9 out | 1 dead (Bagad) | 25.8 |
 | Claude (replay of the user's plan) | same loadout and lines; bait; guns on the grenadiers early; melee-lock after Pablo | same | repelled, raid fled t4558, 7 of 9 out | 0 dead, 3 downed (Olaf, Strangler, Bagad) | 22.4 |
 
@@ -87,4 +87,4 @@ Boss's club condition (28%) as his health; its sites were not used.
 
 ## Sources
 report `results/human/reports/rand_011.md` · trace `results/human/traces/rand_011_human_loadout_20261005-092131.jsonl.gz` ·
-watcher records `results/human/raw/rand_011/` · agent row `results/night/router.jsonl`
+watcher records `results/human/raw/rand_011/` · naive agent row `results/night/router.jsonl`

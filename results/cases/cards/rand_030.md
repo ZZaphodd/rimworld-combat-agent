@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `close` | advance to close range in forest cover | towards the raid | defeat, captives | 7 (5 dead, 2 kidnapped) | 128.0 |
+| naive agent `close` | advance to close range in forest cover | towards the raid | defeat, captives | 7 (5 dead, 2 kidnapped) | 128.0 |
 | human (swap) | loadout; wait behind the rock hill; smoke + molotov at contact | rock hill E | decisive, 9 of 9 out | 1 dead | 21.1 |
 | Claude | the same loadout and hill | rock hill E | repelled t3824 | 1 dead, 1 downed, 7 permanent | 38.8 |
 
@@ -54,4 +54,4 @@
 ## Sources
 report `results/human/reports/rand_030.md` · Claude's turns `results/human/raw/rand_030/claude_turns.md` ·
 trace `results/human/traces/rand_030_claude_*` (the human's game has no trace: watcher records in
-`results/human/raw/rand_030/`) · agent row `results/night/router.jsonl`
+`results/human/raw/rand_030/`) · naive agent row `results/night/router.jsonl`

@@ -3,7 +3,7 @@
 > **Stale set (2026-10-08):** played on Monler v2 with its three mortars. The same problem without them is `base2_monp_pirate_3x` (Monler prime).
 
 **Situation:** `base-arena` `raid-far` `raid-outranges` `us-low-skill`
-**Plays seen:** `off-axis-hold` `melee-lock` (agents: `turtle`, `turtle_at`)
+**Plays seen:** `off-axis-hold` `melee-lock` (naive agents: `turtle`, `turtle_at`)
 **Numbers:** ours 8 (2 heavy SMGs, 3 revolvers, 2 pump shotguns, machine pistol), 500 pt · raid 13
 Pirate (3×: 1500 pt) · count ratio 0.62 · raid from the east edge (245, 185) · base `arena_col_monler2`
 (no solar flare)
@@ -19,8 +19,8 @@ Pirate (3×: 1500 pt) · count ratio 0.62 · raid from the east edge (245, 185) 
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | concave at the spawn in the yard | Monler yard | defeat: squad down | 4 (2 dead, 2 kidnapped) | 87.5 |
-| agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis | Monler R2 | defeat: squad down | 4 | 90.4 |
+| naive agent `turtle` | concave at the spawn in the yard | Monler yard | defeat: squad down | 4 (2 dead, 2 kidnapped) | 87.5 |
+| naive agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis | Monler R2 | defeat: squad down | 4 | 90.4 |
 | Claude (alone) | off-axis hold, John and Pete (melee 16, 20) on the doorway diagonals | Monler R2 | **repelled** (fled t10725) | 0 (0 downed) | **4.5** |
 
 ## Scenes (Claude; trace ticks)

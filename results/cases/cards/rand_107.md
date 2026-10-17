@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` | focus fire, 3-cell spacing, in the open | open ground | defeat, captives | 6 (2 dead, 4 kidnapped) | 142.2 |
+| naive agent `doctrine` | focus fire, 3-cell spacing, in the open | open ground | defeat, captives | 6 (2 dead, 4 kidnapped) | 142.2 |
 | human | hold the forest edge west of the cleared ground | W forest edge | defeat, captives | 4 (2 dead, 2 kidnapped); 4 raiders out | 96.4 |
 
 ## Scenes
@@ -39,4 +39,4 @@
 
 ## Sources
 report `results/human/reports/rand_107.md` · watcher records `results/human/raw/rand_107/` (no
-trace; the raid's positions only near the end) · agent row `results/night/router.jsonl`
+trace; the raid's positions only near the end) · naive agent row `results/night/router.jsonl`
