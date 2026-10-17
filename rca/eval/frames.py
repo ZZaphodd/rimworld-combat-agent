@@ -49,13 +49,14 @@ def svg(jpeg_b64, size, rect, pawns=(), notes=(), caption="", paths=()):
     w, h = size
     ppc = w / (rect[1] - rect[0])
     r, fs = max(5.0, ppc * 0.55), 11 if ppc >= 12 else 10
-    # Quick Look scales a drawing to fill the thumbnail's width, so the canvas is never
-    # narrower than it is tall; annotate() crops the padding on the right away again.
+    # Quick Look scales a drawing to fill the square thumbnail along its shorter side (a
+    # 1050×758 drawing came out 1.37× too large), so the canvas is square; annotate() crops
+    # the padding on the right or at the bottom away again.
     cw = max(w, h + BAR)
-    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}" height="{h + BAR}" '
-           f'viewBox="0 0 {cw} {h + BAR}" font-family="Helvetica, Arial, sans-serif" '
+    out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{cw}" height="{cw}" '
+           f'viewBox="0 0 {cw} {cw}" font-family="Helvetica, Arial, sans-serif" '
            f'font-weight="bold">',
-           f'<rect width="{cw}" height="{h + BAR}" fill="#151515"/>',
+           f'<rect width="{cw}" height="{cw}" fill="#151515"/>',
            f'<image href="data:image/jpeg;base64,{jpeg_b64}" width="{w}" height="{h}"/>']
     for side, pts, *dashed in paths:
         color = OURS if side == "ours" else THEM
