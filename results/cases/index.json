@@ -1584,6 +1584,73 @@
   }
  },
  {
+  "title": "rand_094 · Yttakin ×8 (4 melee, 3 short guns, a rifle) vs Neanderthal melee ×7 · open — repelled by Claude",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-melee-pawns",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "breach",
+   "mouth-hold",
+   "rotation",
+   "kite"
+  ],
+  "results": [
+   {
+    "who": "agent `kite`",
+    "play": "pack kite",
+    "result": "squad down, 0 kills",
+    "lost": "0 dead, 8 downed, 8 permanent",
+    "badness": "69.2"
+   },
+   {
+    "who": "Claude (2026-10-18)",
+    "play": "loadout (rifle to Woyon, mace to Yoen); the nook's mouth wall deconstructed by one undrafted pawn, the job given at the start; two melee pawns on the front cells, four guns on the raider in the mouth; one rotation",
+    "result": "**repelled** (t5515): 3 dead, 2 downed, 2 fled; raid fled t4640",
+    "lost": "0 lost, 0 downed, 0 permanent",
+    "badness": "**5.2**"
+   }
+  ],
+  "id": "rand_094",
+  "sites": [
+   "nook"
+  ],
+  "arena": "arena_open_night",
+  "ours": "PirateYttakin",
+  "raid": "TribeRoughNeanderthal",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-strong-1v1",
+   "us-melee-pawns"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "long": 1,
+    "short": 3,
+    "melee": 4
+   },
+   "enemy_n": 7,
+   "enemy_classes": {
+    "melee": 7
+   },
+   "enemy_melee_share": 1.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 1.14,
+   "distance": 121.3,
+   "squad_range_median": 8.7,
+   "mech": false
+  }
+ },
+ {
   "title": "rand_104 · savage tribe ×8 (bows) vs civil outlanders ×8 with three throwers · forest",
   "situation": [
    "forest-arena",
