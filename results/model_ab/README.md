@@ -58,13 +58,16 @@ larger than the difference between the two models here.
 
 > **Not vanilla-faithful (found 2026-10-17 evening).** rimcockpit 0.2.0's advance ticks with the speed
 > level held at Paused, so the game's draw-position tween (PawnTweener, scaled by
-> TickManager.TickRateMultiplier = 0) does not follow a pawn that stays on screen, and the game fires a
-> projectile from the shooter's drawn position (Verb_LaunchProjectile.TryCastShot uses caster.DrawPos;
-> flight time, interception and explosions follow from it). The user saw the squad drawn in its start
-> formation while it stood elsewhere; the rimcockpit session confirmed the logic effect. c3's result
-> below depends on where the camera was and is kept only as a record; the run d2 (rand_058 with the
-> line-of-fire helpers, results/model_ab/context_los.md) was stopped at tick ~3100 for the same reason,
-> with no row, and will be played again after rimcockpit's fix.
+> TickManager.TickRateMultiplier = 0) stays where it was, and the game fires a projectile from the
+> shooter's drawn position (Verb_LaunchProjectile.TryCastShot uses caster.DrawPos; flight time,
+> interception and explosions follow from it). The user saw the squad drawn in its start formation while
+> it stood elsewhere; the rimcockpit session confirmed the logic effect and then (2026-10-18) that it
+> holds for every pawn, on screen or not, whenever the map is drawn: the culling pass reads every
+> spawned pawn's DrawPos each frame (DynamicDrawManager.ComputeCulledThings), which keeps all tweeners
+> stale. So every battle timed by rimcockpit 0.2.0 with the map drawn is affected, whatever the camera:
+> c3's result below is kept only as a record, and the run d2 (rand_058 with the line-of-fire helpers,
+> results/model_ab/context_los.md) was stopped at tick ~3100 with no row and will be played again on
+> rimcockpit 0.2.1 (D80, D81: shots during rimcockpit's ticks start at the pawn's own cell).
 
 After rimcockpit 0.2.0 (time and observation; orders still only through RimMolt), a fresh Opus 5.5
 played rand_227 once more with [tools/hands_rc.py](../../tools/hands_rc.py): `tools/hands.py` with
