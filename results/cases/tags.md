@@ -93,6 +93,8 @@ A scene lists both for that moment.
 | `chair-lean` *(new, 2026-10-07)* | chairs placed in the held room so the back row can lean out and shoot down the straight approach (the user's base2_ith_tribe_6x: dining chairs in the east room for the corridor) |
 | `frag-max-range` *(new, 2026-10-07)* | frags thrown toward the far end of their range on the raid's way in, to hit whoever is coming, far from our own because the throw's scatter is hard to judge (the user's base2_ith_tribe_6x: the target cell was rock down the corridor) |
 | `area-frags` *(new, 2026-10-06)* | a frag thrower on an "attack area" order keeps throwing at that area: the user's base_mon_tribe_3x: frags up the passage toward the outer door, held open so they would reach the raiders outside (the user); the furthest sightings (145–146, 94–96); most raiders nearby stood at z 98–105 |
+| `area-tox` *(new, 2026-10-18)* | tox throwers on attack-area orders from before the raid reaches the entrance, kept through the fight (the user's rand_115: from ~600 ticks before the first raider reached the breach, with molotovs setting the breach alight; the target cells are not in the trace) |
+| `molotov-at-mouth` *(new, 2026-10-18)* | molotovs on the entrance the raid has to come through. The user's intent (rand_115): a raider set alight moves about putting itself out, in the gas, instead of attacking in melee, and burning ground closes or lengthens the way in for a while |
 | `chase-carrier` | pursue a kidnapper, stopping to shoot or catching it in melee |
 | `edge-block` | stand on a kidnapper's way to the edge |
 | `finish-downed` | kill downed raiders in melee |

@@ -25,6 +25,11 @@ class FramesTest(unittest.TestCase):
         self.assertIn('stroke-dasharray="8,6"', doc)
         self.assertIn(f'width="{864 + frames.BAR}"', doc)   # canvas never narrower than tall
 
+    def test_wide_canvas_is_square(self):
+        doc = frames.svg("AAAA", (1050, 700), (0, 210, 0, 140))
+        self.assertIn('width="1050" height="1050"', doc)    # not 1050 x 758: Quick Look would
+                                                            # fill the square's height, 1.37x
+
 
 if __name__ == "__main__":
     unittest.main()
