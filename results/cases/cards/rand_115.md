@@ -1,7 +1,7 @@
 # rand_115 · Waster tox throwers ×8 (no guns) vs Neanderthal melee ×6 · open — won by the human
 
 **Situation:** `open-arena` `raid-far` `raid-melee` `raid-strong-1v1` `us-outnumber` `us-low-skill`
-**Plays seen:** `tox-room` (new) `mouth-hold`-like door hold `kite` (agent; Claude attempt 3) `breach` (by deconstruction) `area-tox` `molotov-at-mouth` (new, the human)
+**Plays seen:** `tox-room` (new) `mouth-hold`-like door hold `kite` (naive agent; Claude attempt 3) `breach` (by deconstruction) `area-tox` `molotov-at-mouth` (new, the human)
 **Numbers:** ours 8 (explosive 8: 7 tox, 1 molotov), range 12.9 · raid 6 (melee 6), 285 pt, closer share 1.0 · count ratio 1.33 · raid from the NNW edge (37–49, 242–247), ~145 cells
 
 ## Sides
@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `kite` | pack kite | open ground | squad down t7796, 0 kills | 1 dead, 7 downed | 84.8 |
+| naive agent `kite` | pack kite | open ground | squad down t7796, 0 kills | 1 dead, 7 downed | 84.8 |
 | Claude attempt 1 | hold ruin room R2 (three 1-cell doors), tox at the raider in each door | big ruin R2 | defeat (1 captive); 5 of 6 raiders dead/down | 1 dead + 1 kidnapped, 3 downed | 80.8 (70.8) |
 | Claude attempt 2 | same room; non-immune Albert kept outside; throws from the north door before contact | big ruin R2 | defeat (2 captives); 4 raiders dead | 2 kidnapped, 3 downed | 88.8 (68.8) |
 | Claude attempt 3 | gas kite on open ground | open | defeat (3 captives); no raider lost | 3 dead + 3 kidnapped | 146.9 (116.9) |
@@ -100,5 +100,5 @@ Brackets: Claude's rows with today's badness (`rca.eval.ranking`, a kidnapped pa
 
 ## Sources
 journal `journals/rand_115_claude_20261005.md` · traces `results/human/traces/rand_115_claude_20261005-{124516,130226,131140}.jsonl.gz` ·
-sheet `sheets/rand_115_start.md` · agent row `results/night/router.jsonl` ·
+sheet `sheets/rand_115_start.md` · naive agent row `results/night/router.jsonl` ·
 human: report `results/human/reports/rand_115.md`, trace `results/human/traces/rand_115_human_20261018-043556.jsonl.gz`

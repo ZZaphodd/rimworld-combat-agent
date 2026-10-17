@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | packed line receives the charge | near the start | defeat | 3 dead, 4 downed, 9 permanent | 95.4 |
+| naive agent `turtle` | packed line receives the charge | near the start | defeat | 3 dead, 4 downed, 9 permanent | 95.4 |
 | Claude (alone) | focus + molotov + frag on each champion; bounds; kite the slow champion | open ground | defeat (captive); both champions dead | 4 dead, 1 kidnapped | 94.7 |
 
 ## Scenes
@@ -34,4 +34,4 @@
 
 ## Sources
 journal `journals/rand_128_claude_20261005.md` · trace `results/human/traces/rand_128_claude_20261005-115619.jsonl.gz` ·
-sheet `sheets/rand_128_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_128_start.md` · naive agent row `results/night/router.jsonl`

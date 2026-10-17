@@ -1,7 +1,7 @@
 # rand_094 · Yttakin ×8 (4 melee, 3 short guns, a rifle) vs Neanderthal melee ×7 · open — repelled by Claude
 
 **Situation:** `open-arena` `raid-far` `raid-melee` `raid-strong-1v1` `us-melee-pawns` `us-skill-mismatch`
-**Plays seen:** `loadout` `breach` (by deconstruction) `mouth-hold` `rotation` (agent: `kite`)
+**Plays seen:** `loadout` `breach` (by deconstruction) `mouth-hold` `rotation` (naive agent: `kite`)
 **Numbers:** ours 8 (melee 4, short 3, long 1), range median 8.7 (max 36.9) · raid 7 (melee 7), 300 pt, closer share 1.0 · count ratio 1.14 · raid from the north edge (130–140, 242–248), ~121 cells
 
 ## Sides
@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `kite` | pack kite | open ground | squad down, 0 kills | 0 dead, 8 downed, 8 permanent | 69.2 |
+| naive agent `kite` | pack kite | open ground | squad down, 0 kills | 0 dead, 8 downed, 8 permanent | 69.2 |
 | Claude (2026-10-18) | loadout (rifle to Woyon, mace to Yoen); the nook's mouth wall deconstructed by one undrafted pawn, the job given at the start; two melee pawns on the front cells, four guns on the raider in the mouth; one rotation | nook | **repelled** (t5515): 3 dead, 2 downed, 2 fled; raid fled t4640 | 0 lost, 0 downed, 0 permanent | **5.2** |
 
 ## Scenes
@@ -39,4 +39,4 @@
 
 ## Sources
 journal `journals/rand_094_claude_20261018.md` · trace `results/human/traces/rand_094_claude_20261018-051552.jsonl.gz` ·
-sheet `sheets/rand_094_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_094_start.md` · naive agent row `results/night/router.jsonl`

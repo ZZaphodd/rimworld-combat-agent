@@ -13,7 +13,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` | focus fire | open ground | defeat (captives) | 12 (incl. kidnap count) | 172.7 |
+| naive agent `doctrine` | focus fire | open ground | defeat (captives) | 12 (incl. kidnap count) | 172.7 |
 | Claude (alone) | loadout; two rows 40 cells east; knives and shotguns on whoever reached the line; a late rush on the holders | open ground | **repelled** | 2 dead | 36.4 |
 | Claude, re-measure 2026-10-06 | the same plan; ranged fire by `Keeper.assign` (one kept order per target, spread, Lawman and the rifles weighted, hold fire when nothing is worth it) | open ground | **repelled** | **0** | **6.4** |
 
@@ -43,4 +43,4 @@
 ## Sources
 journal `journals/rand_150_claude_20261005.md` · trace `results/human/traces/rand_150_claude_20261005-170343.jsonl.gz` ·
 re-measure: journal `journals/rand_150_claude_20261006.md` · trace `results/human/traces/rand_150_claude_20261006-092317.jsonl.gz` ·
-sheet `sheets/rand_150_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_150_start.md` · naive agent row `results/night/router.jsonl`

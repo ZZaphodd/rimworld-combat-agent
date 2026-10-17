@@ -504,7 +504,7 @@ Empire and the civil outlanders made hostile (debug goodwill), saved as `arena_*
 
 Claude fights the whole battle itself (strategic: loadout and site; tactical: the play; micro:
 each order), turn by turn through `tools/hands.py`, and looks back at past battles in
-`results/cases/` while doing it. The Python agents are frozen as the baseline. The library and
+`results/cases/` while doing it. The Python naive agents are frozen as the baseline. The library and
 the retrieval prompts are in `results/cases/README.md`.
 
 **After a context compaction, read first:** `results/cases/README.md`, this section,
@@ -535,7 +535,7 @@ the retrieval prompts are in `results/cases/README.md`.
    `shot(..., keep="<id>_t<tick>.jpg")`.
 7. **End:** the harness stops when the raid is gone (or 6000 ticks after squad down; the man in
    black is removed). Compute badness (`rca.eval.ranking.badness(row)`) and compare with the
-   agent's row in `results/night/router.jsonl` (the worst-list rows stopped at squad down:
+   naive agent's row in `results/night/router.jsonl` (the worst-list rows stopped at squad down:
    EVAL_SPEC §3).
 8. **Records:** the journal (`results/cases/journals/`, format in the README), the card (new,
    or a Claude row and scenes added), new sites in `sites.md`, new tags in `tags.md` marked

@@ -21,13 +21,14 @@ RimWorld enemy AI, not other players (see TODO.md, scope principle).
 | **commit / reset** | Fully engage / pull out, regroup and re-engage (doctrine transitions) | MOBA |
 | **asset layer** | Item and ability use next to doctrine: lances, smoke, EMP, psycasts ("cheese") | ours |
 | **viscosity** | A doctrine's threshold for leaving its position; applies to sustained threat, not burst | ours |
+| **naive agent** | The Python agents that play one doctrine each (amove, turtle, turtle_at, kite, close, doctrine, spread, …), frozen; kept as a cheap probe of how hard a problem is, next to the human's and Claude's plays. Called "agent" in older reports and in code (`--agent`, the row field `agent`, `rca/tactical`), which keep that name (2026-10-18, the user) | ours |
 
 ## Doctrines (code name → meaning)
 
 | Name | Meaning | Previous name |
 |---|---|---|
 | **amove** | Baseline: draft everyone, Auto attack the nearest enemy, no control | b1, aggressive |
-| **doctrine** | Rally, then focus fire by priority, avoiding **overkill**. Kept as the code name for now; in prose say "the `doctrine` agent" to keep it apart from doctrine the concept | — (briefly called focus in reports) |
+| **doctrine** | Rally, then focus fire by priority, avoiding **overkill**. Kept as the code name for now; in prose say "the `doctrine` naive agent" to keep it apart from doctrine the concept | — (briefly called focus in reports) |
 | **turtle** | Pick the battleground, man a **concave** behind a **choke**, high viscosity | hold |
 | **spread** | Keep spacing to mitigate **splash** (burst damage over a small area) | — |
 | **kite** | Shoot while backing off from melee (stutter step) | — |

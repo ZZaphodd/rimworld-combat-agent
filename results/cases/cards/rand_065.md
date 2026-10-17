@@ -16,7 +16,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `close` | charge with the knives (the best shooters held knives) | open ground | defeat, captives | 4 (1 dead, 3 kidnapped) | 114.3 |
+| naive agent `close` | charge with the knives (the best shooters held knives) | open ground | defeat, captives | 4 (1 dead, 3 kidnapped) | 114.3 |
 | human, attempt 1 (abandoned) | a ruin corner in sight of the raid | big ruin | – | – | – |
 | human (Claude's loadout) | wait in a walled room out of sight | big-ruin room | squad down (old rule: stopped there) | 0 dead; 3 being carried off at the stop | 64.4 (~94 with the three) |
 
@@ -42,4 +42,4 @@
 
 ## Sources
 report `results/human/reports/rand_065.md` · traces `results/human/traces/rand_065_*` (attempt 1:
-`_try1`) · agent row `results/night/router.jsonl`
+`_try1`) · naive agent row `results/night/router.jsonl`

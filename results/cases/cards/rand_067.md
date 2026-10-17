@@ -14,7 +14,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `kite` | kite | – | defeat, captives | 6 (3 dead, 3 kidnapped) | 130.5 |
+| naive agent `kite` | kite | – | defeat, captives | 6 (3 dead, 3 kidnapped) | 130.5 |
 | human | kite east in a pack, turn south; fight when the melee arrived | SE pocket | defeat, captives | 1 (Toad kidnapped); 4 dead + Hadyott downed | 58.7 |
 
 ## Scenes
@@ -39,4 +39,4 @@
 
 ## Sources
 report `results/human/reports/rand_067.md` · watcher records `results/human/raw/rand_067/` (no
-trace) · agent row `results/night/router.jsonl`
+trace) · naive agent row `results/night/router.jsonl`

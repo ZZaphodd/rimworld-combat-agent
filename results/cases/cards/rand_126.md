@@ -18,7 +18,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `close` (no loadout) | close in | near the start | squad down at t4726, no raider out | 2 dead, 8 downed, 9 permanent | 99.8 |
+| naive agent `close` (no loadout) | close in | near the start | squad down at t4726, no raider out | 2 dead, 8 downed, 9 permanent | 99.8 |
 | Claude (alone) | loadout; west rock pocket; tip ambush 3–4 on 1; rifle + Fire spew on the northern holders | west rock pocket | **repelled**, raid fled t6098, 6 dead | 0 (1 permanent) | **13.6** |
 
 ## Scenes
@@ -37,4 +37,4 @@
 
 ## Sources
 journal `journals/rand_126_claude_20261005.md` · trace `results/human/traces/rand_126_claude_20261005-113851.jsonl.gz` ·
-sheet `sheets/rand_126_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_126_start.md` · naive agent row `results/night/router.jsonl`

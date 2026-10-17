@@ -17,7 +17,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` | focus fire, spacing, in the open | open ground | defeat, captives | 6 (4 dead, 2 kidnapped) | 124.9 |
+| naive agent `doctrine` | focus fire, spacing, in the open | open ground | defeat, captives | 6 (4 dead, 2 kidnapped) | 124.9 |
 | human (Claude's loadout) | notch; gap slip when the grenadiers came close; knives on the flankers | west notch | repelled t4869, nobody downed | 0 | 1.8 |
 | Claude | the same loadout, notch, gap slip | west notch | repelled | 1 dead (Alo) | 20.5 |
 
@@ -54,4 +54,4 @@
 ## Sources
 report `results/human/reports/rand_084.md` · loadout notes `results/human/raw/rand_084/notes.md` ·
 Claude's turns `results/human/raw/rand_084/claude_turns.md` · traces `results/human/traces/rand_084_*` ·
-agent row `results/night/router.jsonl`
+naive agent row `results/night/router.jsonl`

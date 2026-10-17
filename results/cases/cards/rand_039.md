@@ -16,7 +16,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `kite` | kite in a pack | – | defeat, captives | 5 (3 dead, 2 kidnapped) | 108.0 |
+| naive agent `kite` | kite in a pack | – | defeat, captives | 5 (3 dead, 2 kidnapped) | 108.0 |
 | human (Claude's loadout) | small ruin, then fall back east in bounds, killing the followers; carry the downed | small ruin → rock hill E side | repelled | 0 (Elsie downed, carried along) | 8.0 |
 | Claude | the same loadout, ruin, three bounds east; carried the downed; chased three kidnappers | small ruin → rock hill E side, low | pyrrhic | 0 (5 downed, 7 permanent) | 48.4 |
 
@@ -58,4 +58,4 @@
 
 ## Sources
 report `results/human/reports/rand_039.md` · Claude's turns `results/human/raw/rand_039/claude_turns.md` ·
-traces `results/human/traces/rand_039_*` · agent row `results/night/router.jsonl`
+traces `results/human/traces/rand_039_*` · naive agent row `results/night/router.jsonl`

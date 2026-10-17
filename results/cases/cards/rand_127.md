@@ -15,7 +15,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `amove` | bows shoot on approach, melee gangs up | near the start | all 10 downed | 0 dead, 10 down | 116.9 |
+| naive agent `amove` | bows shoot on approach, melee gangs up | near the start | all 10 downed | 0 dead, 10 down | 116.9 |
 | human, attempt 2 (discarded) | loadout; packed squad in the open | open forest | squad down | 2 dead | 99.4 |
 | human | loadout; nook; mouth; rotation | nook | repelled t5258 | 0 (1 downed) | 26.0 |
 | Claude | the human's plan; breach with 6 pawns; urn cell; rotate below 45% | nook | repelled t6213 | 0 (1 downed) | 10.8 |
@@ -47,4 +47,4 @@
 ## Sources
 report `results/human/reports/rand_127.md` · Claude's turns `results/human/raw/rand_127/claude_turns.md` ·
 traces `results/human/traces/rand_127_*` (human attempts 1–3, Claude) · rows `results/human/play.jsonl`,
-`results/human/discarded.jsonl` · agent row `results/night/router.jsonl`
+`results/human/discarded.jsonl` · naive agent row `results/night/router.jsonl`

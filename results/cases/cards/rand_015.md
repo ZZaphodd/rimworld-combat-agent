@@ -17,12 +17,12 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `doctrine` (no loadout) | melee holds until an enemy is within 20, then charges | open ground | defeat, captives | 3 dead, 2 kidnapped | 105.2 |
+| naive agent `doctrine` (no loadout) | melee holds until an enemy is within 20, then charges | open ground | defeat, captives | 3 dead, 2 kidnapped | 105.2 |
 | **human** (Claude's loadout) | out through the pocket's south-west gap to meet the raid along rock B's south face; one of ours on each shooter in order of danger; the least useful pawn (Alpaca) sent at Seizz to draw his Fire spew; Mallard (bow) used as a locker | rock pocket's south side | **decisive**, all 9 dead | 1 dead, 2 downed | **33.2** |
 | Claude, attempt 4 (replaying the human's play) | same loadout and gap; out through it when Seizz neared; fixed markers on Seizz (bait), Horror, Tooth; the rest on the nearest dangerous unmarked shooter | rock pocket's south side | **repelled** | 1 dead, 1 downed | **25.5** |
 | Claude (alone) | loadout; west rock pocket; ambush at rock B's north tip; locks on the throwers | west rock pocket | defeat, captives (Bilegoda) | 1 dead, 1 kidnapped, 1 downed | 61.4 |
 | Claude, attempt 2 | same pocket, greatbow to Crica; a move to the south face done with a blind wait | west rock pocket | defeat, captives | 1 dead, 2 kidnapped | 79.9 |
-| Claude, attempt 3 | big-ruin rooms R1/R2, melee beside the doors, Crica (the raid's target) inside | big-ruin rooms | defeat (no row: harness crash; from the trace) | 4 dead, 2 kidnapped | ≈ agent |
+| Claude, attempt 3 | big-ruin rooms R1/R2, melee beside the doors, Crica (the raid's target) inside | big-ruin rooms | defeat (no row: harness crash; from the trace) | 4 dead, 2 kidnapped | ≈ naive agent |
 
 ## Scenes
 - **Human, intents (told after the battle):** the top threat was Seizz (Fire spew + good shooting):
@@ -62,4 +62,4 @@
 
 ## Sources
 journal `journals/rand_015_claude_20261005.md` · trace `results/human/traces/rand_015_claude_20261005-104313.jsonl.gz` ·
-sheet `sheets/rand_015_start.md` · agent row `results/night/router.jsonl`
+sheet `sheets/rand_015_start.md` · naive agent row `results/night/router.jsonl`

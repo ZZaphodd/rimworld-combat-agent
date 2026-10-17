@@ -3,7 +3,7 @@
 > **Stale set (2026-10-08):** played on Monler v2 with its three mortars. The same problem without them is `base2_monp_pirate_6x` (Monler prime).
 
 **Situation:** `base-arena` `raid-far` `raid-outnumbers` `raid-outranges` `us-low-skill`
-**Plays seen:** `off-axis-hold` `melee-lock` `carry-downed` (agents: `turtle`, `turtle_at`)
+**Plays seen:** `off-axis-hold` `melee-lock` `carry-downed` (naive agents: `turtle`, `turtle_at`)
 **Numbers:** ours 8 (2 pump shotguns, heavy SMG, machine pistol, revolver, autopistol + low-shield
 pack, bolt-action rifle, incendiary launcher), 500 pt · raid 28 Pirate (6×: 3000 pt) · count ratio
 0.29 · raid from the west edge (4, 124), ~150 cells by path · base `arena_col_monler2` (no solar flare)
@@ -20,8 +20,8 @@ pack, bolt-action rifle, incendiary launcher), 500 pt · raid 28 Pirate (6×: 30
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | concave at the spawn in the yard | Monler yard | defeat: raid left with captives (t11737) | 1 dead, 5 kidnapped, 2 downed | 119.6 |
-| agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis (plug, guns 2 back) | Monler R2 | defeat: raid left with captives (t17535); two burned by superheated air | 4 dead, 3 kidnapped, 1 downed | 113.3 |
+| naive agent `turtle` | concave at the spawn in the yard | Monler yard | defeat: raid left with captives (t11737) | 1 dead, 5 kidnapped, 2 downed | 119.6 |
+| naive agent `turtle_at` (plan base2_r1) | R2 door hold on the passage axis (plug, guns 2 back) | Monler R2 | defeat: raid left with captives (t17535); two burned by superheated air | 4 dead, 3 kidnapped, 1 downed | 113.3 |
 | Claude (alone) | off-axis hold in R2, doors as the user's attempt 2, nobody on x 145 | Monler R2 | **repelled** (fled t13165, cleared t20524) | 0 (4 downed at the end) | **24.9** |
 
 ## Scenes (Claude; trace ticks)

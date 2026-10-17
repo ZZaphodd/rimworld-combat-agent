@@ -1,7 +1,7 @@
 # Case library: battles to look back on while playing
 
 Claude plays battles directly — strategic, tactical and micro, through `tools/hands.py`. The
-Python agents stay as they are; they are the baseline (`results/night/router.jsonl`).
+Python naive agents (amove, turtle, kite, close, doctrine, …) stay as they are; they are the baseline (`results/night/router.jsonl`).
 
 The library keeps **what happened, not rules**. The user's reading (2026-10-05): the choice in
 a battle moves around in something like 20–30 dimensions as the situation changes, too many to
@@ -15,7 +15,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 
 | file | what |
 |---|---|
-| `cards/<id>.md` | one card per problem: situation tags, sides, every play of it (agent, human, Claude) with results, **scenes** (moment → tags → what was done → what followed), what the play stood on |
+| `cards/<id>.md` | one card per problem: situation tags, sides, every play of it (naive agent, human, Claude) with results, **scenes** (moment → tags → what was done → what followed), what the play stood on |
 | `journals/<id>_claude_<date>.md` | Claude's own battles: plan, then each decision as seen at the time (format below) |
 | `sheets/<id>_<moment>.md` | what retrieval returned for a battle (start, or a turning point) |
 | `sites.md` | sites on the shared night map with coordinates; a site from one problem is a candidate in all |
@@ -25,7 +25,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 
 ## Cards
 
-| card | arena | ours vs raid | situation | best play so far | badness: agent / human / Claude |
+| card | arena | ours vs raid | situation | best play so far | badness: naive agent / human / Claude |
 |---|---|---|---|---|---|
 | [rand_107](cards/rand_107.md) | open | low-skill gunners vs 3 grenadiers | `raid-throwers` `us-low-skill` | forest-edge hold (lost 4) | 142.2 / 96.4 / – |
 | [rand_067](cards/rand_067.md) | forest | tribal bows vs clubs + boar | `raid-melee` `us-bows` | kite, fight on arrival (lost 1) | 130.5 / 58.7 / – |
@@ -64,7 +64,7 @@ The procedure is PROCEDURES §16. Start there after a context compaction.
 | [base2_ith_pirate_4x](cards/base2_ith_pirate_4x.md) | Ithfunda base v2 | civil outlanders ×8 (shooting 0–9) vs 19 Wasters: toxbombs, Doomsday, incendiary, Hellcats (4×) | `base-arena` `raid-throwers` `raid-outranges` `us-low-skill` `tox` | **repelled**: east room behind a **closed** door, everyone off the axis, focus fire on the gas/rocket/incendiary holders at the doorway; one incendiary lit the room, put out | 64.5 (turtle), 122.0 (turtle_at) / – / **1.5** |
 | [base2_ith_tribe_6x](cards/base2_ith_tribe_6x.md) | Ithfunda base v2 | civil outlanders ×8 (Smith 15/9, Felix 0/13) vs 34 tribals, 32 melee (6×) | `base-arena` `raid-melee` `raid-outnumbers` `raid-strong-1v1` | **repelled**: the user's play — loadout, chairs in the east room for the back row to lean out, plug + diagonals with five guns packed behind, frags only at the ground at the far end of the corridor; the user 44.9 (door forgotten closed); Claude's review of it with the door open 19.6 (the one dead after the flee). Claude's own attempt 1: pyrrhic, two dead to our own frags | 99.3 (turtle), 73.2 (turtle_at) / 44.9 / 80.1, **19.6** |
 
-Comparing rows: the worst-list agent rows stopped at squad down (old rule); rows since
+Comparing rows: the worst-list naive agent rows stopped at squad down (old rule); rows since
 2026-10-05 run until the raid is gone (`end_rule: raid_gone`), so a battle where the whole
 squad went down compares by `squad_down.missing` (EVAL_SPEC §3).
 
@@ -117,7 +117,7 @@ compaction is discarded and replayed, not resumed).
 
 ```
 # <id> — Claude, <date>
-Trace … · row … · result: <grade>, lost …, downed …, permanent …, badness … (agent …)
+Trace … · row … · result: <grade>, lost …, downed …, permanent …, badness … (naive agent …)
 Sheets: sheets/<id>_start.md (cards A, B, C: what was used) · sheets/<id>_t….md
 
 ## Card at the start

@@ -16,7 +16,7 @@
 ## Plays and results
 | who | play | site | result | lost | badness |
 |---|---|---|---|---|---|
-| agent `turtle` | hold a tree line | near the start | squad down | 5 dead, 3 downed | 99.1 |
+| naive agent `turtle` | hold a tree line | near the start | squad down | 5 dead, 3 downed | 99.1 |
 | Claude (alone) | west rock pocket (east part, hidden from the south); throwables on the bunch at rock B's tip; locks | west rock pocket | **repelled**, fled t4595, 5 dead | 2 dead (one by our own frag), 2 downed | 47.3 |
 
 ## Scenes
@@ -34,4 +34,4 @@
 
 ## Sources
 journal `journals/rand_058_claude_20261005.md` · trace `results/human/traces/rand_058_claude_20261005-114731.jsonl.gz` ·
-agent row `results/night/router.jsonl`
+naive agent row `results/night/router.jsonl`
