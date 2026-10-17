@@ -71,7 +71,7 @@ Renames keep the old names as aliases so earlier result rows still read correctl
 | **scout** | Read the raid early (composition, gear); router input | RTS |
 | **dodge** | Step out of a skillshot's area (reflex layer) | RTS/MOBA |
 | **vs throwers: accept-and-dodge / stand off / close in** | The tactical option `vs_throwers` (doctrine, turtle, spread): stay put and let micro dodge frags / step back out of throw range (12.9) while staying in gun range / go kill the thrower. Positioning, so tactical, not micro | ours |
-| **melee lock / melee-locked time** | An enemy (or ours) adjacent to a ranged pawn blocks its ranged attack; KPI name `melee_locked_time_share`. Value is set by what gets locked, not by the attacker (a manhunter guinea pig on our minigunner) | ours |
+| **melee lock / melee-locked time** | An enemy (or ours) adjacent to a ranged pawn blocks its ranged attack; KPI name `melee_locked_time_share`. Value is set by what gets locked, not by the attacker (a manhunter guinea pig on our minigunner). How the game does it (no shot at an adjacent standing hostile; a raider swung at in melee loses its guns and grenades; our fire-at-will pawns melee instead): GAME_FACTS §8 | ours |
 | **cooldown trading** | Engage when the enemy's key weapon has just fired | MOBA |
 
 ## Outcomes and metrics
