@@ -668,6 +668,74 @@
   }
  },
  {
+  "title": "rand_006 · savage bows ×8 vs 13 Drifters, all melee · open — repelled by Claude",
+  "situation": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-outnumbers",
+   "us-bows",
+   "us-skill-mismatch"
+  ],
+  "plays": [
+   "loadout",
+   "breach",
+   "mouth-hold",
+   "rotation",
+   "carry-downed",
+   "kite"
+  ],
+  "results": [
+   {
+    "who": "agent `kite`",
+    "play": "pack kite",
+    "result": "squad down, 0 kills",
+    "lost": "0 dead, 8 downed, 9 permanent",
+    "badness": "73.4"
+   },
+   {
+    "who": "Claude (2026-10-18)",
+    "play": "loadout (greatbow to Berro, ikwas to Cane and Llolou); the walled hall's south-wall corner cell (213, 167) deconstructed by Red, the job given at the start; one melee pawn then two on the cells touching it, the bows on the raider in it; rotations",
+    "result": "**repelled** (t6727): 8 dead, 1 downed, 4 fled; raid fled t5826",
+    "lost": "Berro dead, 1 permanent",
+    "badness": "**24.9**"
+   }
+  ],
+  "id": "rand_006",
+  "sites": [
+   "nook",
+   "NE ridge + walled hall"
+  ],
+  "arena": "arena_open_night",
+  "ours": "TribeSavage",
+  "raid": "Pirate",
+  "auto": [
+   "open-arena",
+   "raid-far",
+   "raid-melee",
+   "raid-outnumbers"
+  ],
+  "features": {
+   "squad_n": 8,
+   "squad_classes": {
+    "melee": 2,
+    "long": 3,
+    "bow": 3
+   },
+   "enemy_n": 13,
+   "enemy_classes": {
+    "melee": 13
+   },
+   "enemy_melee_share": 1.0,
+   "enemy_outrange_share": 0.0,
+   "enemy_explosive_share": 0.0,
+   "count_ratio": 0.62,
+   "distance": 133.2,
+   "squad_range_median": 25.9,
+   "mech": false
+  }
+ },
+ {
   "title": "rand_011 · Waster pirates ×9 (four good shooters) vs low-skill outlanders ×9 with two grenadiers · open",
   "situation": [
    "open-arena",
