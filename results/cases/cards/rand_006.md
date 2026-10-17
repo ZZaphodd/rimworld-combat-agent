@@ -37,7 +37,8 @@
   cells out) all eight went in: Llolou, Cane and Hare on (208–210, 168), the bows on (208–210, 169),
   (209–210, 170) and (209, 171).
 - **Human, t2900–4795** `melee-contact` → `mouth-hold` `rotation`: the raiders came into the breach
-  one at a time; Andy, Wes and Max went down there and five died in or just outside it. Only the
+  one at a time; Andy, Wes and Max went down there. Of the seven dead, Kat, Wttytt and Lainey died in
+  it, Sly and Bryan just outside, Eva at (207, 164), and Zornie's corpse lay inside at (209, 169). Only the
   middle front cell, straight ahead of the breach, took real damage: Cane 100% → 50% (t4184), then
   Toad from right behind took his cell (t4205–4341) and went to 70%. The diagonal front cells took
   little (Llolou 13 damage, Hare none) and dealt much (melee: Llolou 123, Hare 91 with 2 shots
