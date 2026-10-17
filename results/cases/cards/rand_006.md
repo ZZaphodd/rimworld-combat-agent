@@ -24,7 +24,9 @@
   59 cells out and strung out.
 - **t2865–5826** `melee-contact` → `mouth-hold` `rotation`: eight raiders died one at a time on the
   breach cell (Zornie, Wes, Kat, Bryan, Moe, Andy, Sly, Max) under five to six bows. A limestone urn
-  on (213, 168) turned out to be passable, so two inside cells touched the breach.
+  on (213, 168) can be walked through but not stood on (the user; tested after the battle on another
+  urn); Llolou was caught on it in melee on his way, and it was gone by the end, so two inside
+  cells touched the breach in the fight.
 - **t3826–4787** `our-downed` → `carry-downed`: Llolou went down on (213, 168); Berro carried him
   deep in (~440 ticks). While that cell was empty Carson got in and was downed inside.
 - **t5266–5444** `rotation`: Berro (43%) was ordered out of (213, 168) and died there before he got
