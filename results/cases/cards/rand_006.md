@@ -33,6 +33,12 @@
 - **t5266–5444** `rotation`: Berro (43%) was ordered out of (213, 168) and died there before he got
   out; front swaps took 100–240 ticks through the cells round a 2×2 table.
 - **t5826** `raid-breaking`: 9 of 13 out; four walked east off the map.
+- **Human, intents (told after the battle):**
+  - Three cells touch the middle breach on purpose: the two diagonal ones hit for free.
+  - Hare holds a bow, but standing in the front row and hitting in melee does more damage than
+    shooting it.
+  - Had two front pawns looked better than three, the player would have used the bump on the inside
+    of the east wall's middle (a wall cell at (213, 175) inside the x 214 wall, by the terrain map).
 - **Human, t1950–2122** `approach` → `mouth-hold`: from Claude's hand-over (wall open, the raid 71
   cells out) all eight went in: Llolou, Cane and Hare on (208–210, 168), the bows on (208–210, 169),
   (209–210, 170) and (209, 171).
